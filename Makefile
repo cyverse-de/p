@@ -7,4 +7,5 @@ go:
 	@cd ./go && go mod tidy
 
 clean:
-	rm -rf ./go/*
+	rm -rf ./go/analysis
+	rm -rf ./go/user
