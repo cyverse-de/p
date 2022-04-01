@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/cyverse-de/pkg/go/analysis";
+option go_package = "github.com/cyverse-de/p/go/analysis";
 
 message InteractiveApps {
     string proxy_image = 1;

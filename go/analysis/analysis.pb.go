@@ -7,7 +7,6 @@
 package analysis
 
 import (
-	analysis "github.com/cyverse-de/pkg/go/analysis"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -1088,14 +1087,14 @@ type Step_Component struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Container     *analysis.Container `protobuf:"bytes,1,opt,name=container,proto3" json:"container,omitempty"`
-	Type          string              `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
-	Name          string              `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
-	Location      string              `protobuf:"bytes,4,opt,name=location,proto3" json:"location,omitempty"`
-	Description   string              `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"`
-	TimeLimit     int32               `protobuf:"varint,6,opt,name=time_limit,json=time_limit_seconds,proto3" json:"time_limit,omitempty"`
-	Restricted    bool                `protobuf:"varint,7,opt,name=restricted,proto3" json:"restricted,omitempty"`
-	IsInteractive bool                `protobuf:"varint,8,opt,name=is_interactive,json=interactive,proto3" json:"is_interactive,omitempty"`
+	Container     *Container `protobuf:"bytes,1,opt,name=container,proto3" json:"container,omitempty"`
+	Type          string     `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
+	Name          string     `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
+	Location      string     `protobuf:"bytes,4,opt,name=location,proto3" json:"location,omitempty"`
+	Description   string     `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"`
+	TimeLimit     int32      `protobuf:"varint,6,opt,name=time_limit,json=time_limit_seconds,proto3" json:"time_limit,omitempty"`
+	Restricted    bool       `protobuf:"varint,7,opt,name=restricted,proto3" json:"restricted,omitempty"`
+	IsInteractive bool       `protobuf:"varint,8,opt,name=is_interactive,json=interactive,proto3" json:"is_interactive,omitempty"`
 }
 
 func (x *Step_Component) Reset() {
@@ -1130,7 +1129,7 @@ func (*Step_Component) Descriptor() ([]byte, []int) {
 	return file_analysis_analysis_proto_rawDescGZIP(), []int{3, 0}
 }
 
-func (x *Step_Component) GetContainer() *analysis.Container {
+func (x *Step_Component) GetContainer() *Container {
 	if x != nil {
 		return x.Container
 	}
@@ -1865,7 +1864,7 @@ var file_analysis_analysis_proto_goTypes = []interface{}{
 	(*Step_Output)(nil),           // 10: Step.Output
 	nil,                           // 11: Step.EnvironmentEntry
 	(*timestamppb.Timestamp)(nil), // 12: google.protobuf.Timestamp
-	(*analysis.Container)(nil),    // 13: Container
+	(*Container)(nil),             // 13: Container
 }
 var file_analysis_analysis_proto_depIdxs = []int32{
 	0,  // 0: Extra.ht_condor:type_name -> HTCondorExtraInfo
@@ -1902,6 +1901,7 @@ func file_analysis_analysis_proto_init() {
 	if File_analysis_analysis_proto != nil {
 		return
 	}
+	file_analysis_container_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_analysis_analysis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*HTCondorExtraInfo); i {
