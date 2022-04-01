@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+option go_package = "github.com/cyverse-de/pkg/go/analysis";
+
+message InteractiveApps {
+    string proxy_image = 1;
+    string proxy_name = 2;
+    string frontend_url = 3;
+    string cas_url = 4;
+    string cas_validate = 5;
+    string ssl_cert_path = 6;
+    string ssl_key_path = 7;
+    string websocket_path = 8;
+    string websocket_port = 9;
+    string websocket_proto = 10;
+    string backend_url = 11;
+}
+
+message Container {
+    message Volume {
+        string host_path = 1 [json_name = "host_path"];
+        string container_path = 2 [json_name = "container_path"];
+        bool read_only = 3 [json_name = "read_only"];
+        string mode = 4;
+
+    }
+
+    message Port {
+        int32 host_port = 1 [json_name = "host_port"];
+        int32 container_port = 2 [json_name = "container_port"];
+        bool bind_to_host = 3 [json_name = "bind_to_host"];
+    }
+
+    message Device {
+        string host_path = 1 [json_name = "host_path"];
+        string container_path = 2 [json_name = "container_path"];
+        string cgroup_permissions = 3 [json_name = "cgroup_permissions"];
+    }
+
+    message VolumesFrom {
+        string tag = 1;
+        string name = 2;
+        string auth = 3;
+        string name_prefix = 4 [json_name = "name_prefix"];
+        string url = 5;
+        string host_path = 6 [json_name = "host_path"];
+        string container_path = 7 [json_name = "container_path"];
+        bool read_only = 8 [json_name = "read_only"];
+    }
+
+    message Image {
+        string id = 1;
+        string name = 2;
+        string tag = 3;
+        string auth = 4;
+        string url = 5;
+        string osg_image_path = 6 [json_name = "osg_image_path"];
+    }
+    
+    string id = 1;
+    repeated Volume volumes = 2 [json_name = "container_volumes"];
+    repeated Device devices = 3 [json_name = "container_devices"];
+    repeated VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];
+    string name = 5;
+    string network_mode = 6 [json_name = "network_mode"];
+    int64 cpu_shares = 7 [json_name = "cpu_shares"];
+    InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];
+    int64 memory_limit = 9 [json_name = "memory_limit"];
+    int64 min_memory_limit = 10 [json_name = "min_memory_limit"];
+    float max_cpu_cores = 11 [json_name = "max_cpu_cores"];
+    float min_cpu_cores = 12 [json_name = "min_cpu_cores"];
+    int64 min_disk_space = 13 [json_name = "min_disk_space"];
+    int64 pids_limit = 14 [json_name = "pids_limit"];
+    Image image = 15;
+    string entry_point = 16 [json_name = "entrypoint"];
+    string working_dir = 17 [json_name = "working_directory"];
+    repeated Port ports = 18;
+    bool skip_tmp_mount = 19 [json_name = "skip_tmp_mount"];
+    int32 uid = 20 [json_name = "uid"];
+}

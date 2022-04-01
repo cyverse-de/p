@@ -1,0 +1,177 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "analysis/container.proto";
+
+option go_package = "github.com/cyverse-de/pkg/go/analysis";
+
+message HTCondorExtraInfo {
+    string extra_requirements = 1;
+}
+
+message Extra {
+    HTCondorExtraInfo ht_condor = 1;
+}
+
+message FileMetadata {
+    string attribute = 1;
+    string value = 2;
+    string unit = 3;
+}
+
+message Step {
+    message Component {
+        Container container = 1;
+        string type = 2;
+        string name = 3;
+        string location = 4;
+        string description = 5;
+        int32 time_limit = 6 [json_name = "time_limit_seconds"];
+        bool restricted = 7;
+        bool is_interactive = 8 [json_name="interactive"];
+    }
+
+    message Param {
+        string id = 1;
+        string name = 2;
+        string value = 3;
+        int32 order = 4;
+        string type = 5;
+        string path = 6;
+    }
+
+    message Config {
+        repeated Param params = 1;
+        repeated Input inputs = 2 [json_name = "input"]; // Keep it singular in the JSON for backwards-compatibility.
+        repeated Output outputs = 3 [json_name = "output"]; // Keep it singular in the JSON for backwards-compatibility.
+    }
+
+    message Input {
+        string id = 1;
+        string ticket = 2;
+        string multiplicity = 3;
+        string name = 4;
+        string property = 5;
+        bool retain = 6;
+        string type = 7;
+        string value = 8;
+    }
+
+    message Output {
+        string multiplicity = 1;
+        string name = 2;
+        string property = 3;
+        string qual_id = 4 [json_name = "qual-id"];
+        bool retain = 5;
+        string type = 6;
+    }
+
+    Component component = 1;
+    Config config = 2;
+    string type = 3;
+    string stdin_path = 4 [json_name = "stdin"];
+    string stdout_path = 5 [json_name = "stdout"];
+    string stderr_path = 6 [json_name = "stderr"];
+    string log_file = 7 [json_name = "log-file"];
+    map<string, string> environment = 8;
+    repeated Input input = 9; // It's really annoying, but this is singular for backwards compatibility.
+    repeated Output output = 10; // It's really annoying, but this is singular for backwards compatibility.
+}
+
+message Analysis {
+    string app_description = 1 [json_name = "app_description"];
+    string app_id = 2 [json_name = "app_id"];
+    string app_name = 3 [json_name = "app_name"];
+    bool archive_logs = 4 [json_name = "archive_logs"];
+    string batch_id = 5 [json_name = "batch_id"];
+    string condor_id = 6 [json_name = "condor_id"];
+    string condor_log_path = 7 [json_name = "condor_log_path"];
+    bool create_output_subdir = 8 [json_name = "create_output_subdir"];
+    google.protobuf.Timestamp date_submitted = 9 [json_name = "date_submitted"];
+    google.protobuf.Timestamp date_started = 10 [json_name = "date_started"];
+    google.protobuf.Timestamp date_completed = 11 [json_name = "date_completed"];
+    string description = 12;
+    string email = 13;
+    Extra extra = 14; // read all about it
+    string execution_target = 15 [json_name = "execution_target"];
+    int32 exit_code = 16 [json_name = "exit_code"];
+    int64 failure_count = 17 [json_name = "failure_count"];
+    int64 failure_threshold = 18 [json_name = "failure_threshold"];
+    repeated FileMetadata file_metadata = 19 [json_name = "file-metadata"]; // The - is used instead of _ for backwards compatibility.
+    repeated string filter_files = 20 [json_name = "filter_files"];
+    string group = 21 ;
+    string input_path_list_file = 22 [json_name = "input_path_list"];
+    string input_tickets_file = 23 [json_name = "input_ticket_list"];
+    string invocation_id = 24 [json_name = "invocation_id"]; // AKA the external ID.
+    string irods_base = 25 [json_name = "irods_base"];
+    string name = 26;
+    string nfs_base = 27 [json_name = "nfs_base"];
+    bool notify = 28;
+    string now_date = 29 [json_name = "now_date"];
+    string output_dir = 30 [json_name = "output_dir"];
+    string output_dir_ticket = 31 [json_name = "output_dir_ticket"];
+    string output_ticket_file = 32 [json_name = "output_ticket_file"];
+    string request_type = 33 [json_name = "request_type"];
+    bool run_on_nfs = 34 [json_name = "run-on-nfs"]; // The - is on purpose.
+    bool skip_parent_metadata = 35 [json_name = "skip-parent-meta"]; // The - is on purpose. 
+    repeated Step steps = 36;
+    string submission_date = 37 [json_name = "submission_date"];
+    string submitter = 38 [json_name = "username"]; // Yup, the JSON name is completely different from the field name.
+    string type = 39;
+    string user_id = 40 [json_name = "user_id"]; 
+    repeated string user_groups = 41 [json_name = "user_groups"];
+    string user_home = 42 [json_name = "user_home"];
+    string wiki_url = 43 [json_name = "wiki_url"];
+    string config_file = 44 [json_name = "config_file"];
+}
+
+
+// Since protocol buffers don't have a way to alias messages, we're copying the Analysis definition into Job and deprecating it.
+message Job {
+    option deprecated = true;
+
+    string app_description = 1 [json_name = "app_description"];
+    string app_id = 2 [json_name = "app_id"];
+    string app_name = 3 [json_name = "app_name"];
+    bool archive_logs = 4 [json_name = "archive_logs"];
+    string batch_id = 5 [json_name = "batch_id"];
+    string condor_id = 6 [json_name = "condor_id"];
+    string condor_log_path = 7 [json_name = "condor_log_path"];
+    bool create_output_subdir = 8 [json_name = "create_output_subdir"];
+    google.protobuf.Timestamp date_submitted = 9 [json_name = "date_submitted"];
+    google.protobuf.Timestamp date_started = 10 [json_name = "date_started"];
+    google.protobuf.Timestamp date_completed = 11 [json_name = "date_completed"];
+    string description = 12;
+    string email = 13;
+    Extra extra = 14; // read all about it
+    string execution_target = 15 [json_name = "execution_target"];
+    int32 exit_code = 16 [json_name = "exit_code"];
+    int64 failure_count = 17 [json_name = "failure_count"];
+    int64 failure_threshold = 18 [json_name = "failure_threshold"];
+    repeated FileMetadata file_metadata = 19 [json_name = "file-metadata"]; // The - is used instead of _ for backwards compatibility.
+    repeated string filter_files = 20 [json_name = "filter_files"];
+    string group = 21 ;
+    string input_path_list_file = 22 [json_name = "input_path_list"];
+    string input_tickets_file = 23 [json_name = "input_ticket_list"];
+    string invocation_id = 24 [json_name = "invocation_id"]; // AKA the external ID.
+    string irods_base = 25 [json_name = "irods_base"];
+    string name = 26;
+    string nfs_base = 27 [json_name = "nfs_base"];
+    bool notify = 28;
+    string now_date = 29 [json_name = "now_date"];
+    string output_dir = 30 [json_name = "output_dir"];
+    string output_dir_ticket = 31 [json_name = "output_dir_ticket"];
+    string output_ticket_file = 32 [json_name = "output_ticket_file"];
+    string request_type = 33 [json_name = "request_type"];
+    bool run_on_nfs = 34 [json_name = "run-on-nfs"]; // The - is on purpose.
+    bool skip_parent_metadata = 35 [json_name = "skip-parent-meta"]; // The - is on purpose. 
+    repeated Step steps = 36;
+    string submission_date = 37 [json_name = "submission_date"];
+    string submitter = 38 [json_name = "username"]; // Yup, the JSON name is completely different from the field name.
+    string type = 39;
+    string user_id = 40 [json_name = "user_id"]; 
+    repeated string user_groups = 41 [json_name = "user_groups"];
+    string user_home = 42 [json_name = "user_home"];
+    string wiki_url = 43 [json_name = "wiki_url"];
+    string config_file = 44 [json_name = "config_file"];
+}
