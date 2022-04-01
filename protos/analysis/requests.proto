@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/cyverse-de/p/go/analysis";
+
+message AnalysisLookupRequest {
+    oneof lookup_ids {
+        string analysis_id = 1;
+        string external_id = 2;
+    }
+}
