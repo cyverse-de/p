@@ -7,6 +7,7 @@
 package analysis
 
 import (
+	analysis "github.com/cyverse-de/pkg/go/analysis"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -1087,14 +1088,14 @@ type Step_Component struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Container     *Container `protobuf:"bytes,1,opt,name=container,proto3" json:"container,omitempty"`
-	Type          string     `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
-	Name          string     `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
-	Location      string     `protobuf:"bytes,4,opt,name=location,proto3" json:"location,omitempty"`
-	Description   string     `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"`
-	TimeLimit     int32      `protobuf:"varint,6,opt,name=time_limit,json=time_limit_seconds,proto3" json:"time_limit,omitempty"`
-	Restricted    bool       `protobuf:"varint,7,opt,name=restricted,proto3" json:"restricted,omitempty"`
-	IsInteractive bool       `protobuf:"varint,8,opt,name=is_interactive,json=interactive,proto3" json:"is_interactive,omitempty"`
+	Container     *analysis.Container `protobuf:"bytes,1,opt,name=container,proto3" json:"container,omitempty"`
+	Type          string              `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
+	Name          string              `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
+	Location      string              `protobuf:"bytes,4,opt,name=location,proto3" json:"location,omitempty"`
+	Description   string              `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"`
+	TimeLimit     int32               `protobuf:"varint,6,opt,name=time_limit,json=time_limit_seconds,proto3" json:"time_limit,omitempty"`
+	Restricted    bool                `protobuf:"varint,7,opt,name=restricted,proto3" json:"restricted,omitempty"`
+	IsInteractive bool                `protobuf:"varint,8,opt,name=is_interactive,json=interactive,proto3" json:"is_interactive,omitempty"`
 }
 
 func (x *Step_Component) Reset() {
@@ -1129,7 +1130,7 @@ func (*Step_Component) Descriptor() ([]byte, []int) {
 	return file_analysis_analysis_proto_rawDescGZIP(), []int{3, 0}
 }
 
-func (x *Step_Component) GetContainer() *Container {
+func (x *Step_Component) GetContainer() *analysis.Container {
 	if x != nil {
 		return x.Container
 	}
@@ -1831,10 +1832,10 @@ var file_analysis_analysis_proto_rawDesc = []byte{
 	0x5f, 0x75, 0x72, 0x6c, 0x18, 0x2b, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x77, 0x69, 0x6b, 0x69,
 	0x5f, 0x75, 0x72, 0x6c, 0x12, 0x20, 0x0a, 0x0b, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x5f, 0x66,
 	0x69, 0x6c, 0x65, 0x18, 0x2c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x5f, 0x66, 0x69, 0x6c, 0x65, 0x3a, 0x02, 0x18, 0x01, 0x42, 0x27, 0x5a, 0x25, 0x67, 0x69,
+	0x67, 0x5f, 0x66, 0x69, 0x6c, 0x65, 0x3a, 0x02, 0x18, 0x01, 0x42, 0x25, 0x5a, 0x23, 0x67, 0x69,
 	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65,
-	0x2d, 0x64, 0x65, 0x2f, 0x70, 0x6b, 0x67, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x6e, 0x61, 0x6c, 0x79,
-	0x73, 0x69, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x6e, 0x61, 0x6c, 0x79, 0x73, 0x69,
+	0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1864,7 +1865,7 @@ var file_analysis_analysis_proto_goTypes = []interface{}{
 	(*Step_Output)(nil),           // 10: Step.Output
 	nil,                           // 11: Step.EnvironmentEntry
 	(*timestamppb.Timestamp)(nil), // 12: google.protobuf.Timestamp
-	(*Container)(nil),             // 13: Container
+	(*analysis.Container)(nil),    // 13: Container
 }
 var file_analysis_analysis_proto_depIdxs = []int32{
 	0,  // 0: Extra.ht_condor:type_name -> HTCondorExtraInfo
@@ -1901,7 +1902,6 @@ func file_analysis_analysis_proto_init() {
 	if File_analysis_analysis_proto != nil {
 		return
 	}
-	file_analysis_container_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_analysis_analysis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*HTCondorExtraInfo); i {

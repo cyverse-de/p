@@ -3,7 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 import "analysis/container.proto";
 
-option go_package = "github.com/cyverse-de/pkg/go/analysis";
+option go_package = "github.com/cyverse-de/p/go/analysis";
 
 message HTCondorExtraInfo {
     string extra_requirements = 1;
