@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/cyversede/p/go/user";
+
+message UserLookupRequest {
+    oneof lookup_ids {
+        string username = 1;
+        string user_id = 2;
+        string analysis_id = 3;
+    }
+    bool include_sessions = 4;
+    bool include_logins = 5;
+    bool include_preferences = 6;
+    bool include_saved_searches = 7;
+}
