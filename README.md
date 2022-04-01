@@ -1,7 +1,33 @@
-# p
+# pkg
 
 This repo contains the protocol buffer v3 definitions and generated modules for
 data types that cross service boundaries in the Discovery Environment.
+
+## Requirements
+
+### TL;DR
+
+You will need the following:
+
+- `protoc`
+- `protoc-gen-go`
+- A symlink to the protobuf `include/` directory in `/usr/local/include`
+
+### Installation
+
+On MacOS, you can install `protoc` and `protoc-gen-go` with `homebrew`.
+
+```
+brew install protobuf protoc-gen-go
+```
+
+Link the `google/` directory from `protobuf` into `/usr/local/include`,
+replacing the `3.19.4` in the directory path with whichever version got
+installed above:
+
+```
+sudo ln -sf $HOMEBREW_CELLAR/protobuf/3.19.4/include/google /usr/local/include/google
+```
 
 ## Repo Layout
 
