@@ -8,9 +8,9 @@ go:
 go-tidy:
 	cd ./go/analysis && go mod tidy
 	cd ./go/user && go mod tidy
-	cd ./go/error && go mod tidy
+	cd ./go/svcerror && go mod tidy
 
 clean:
 	rm -rf ./go/analysis
 	rm -rf ./go/user
-	rm -rf ./go/error
+	rm -rf ./go/svcerror

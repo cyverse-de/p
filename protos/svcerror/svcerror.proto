@@ -4,12 +4,13 @@ import "google/protobuf/any.proto";
 
 option go_package = "github.com/cyverse-de/p/go/svcerror";
 
+enum Code {
+    INTERNAL = 0;
+    NOT_FOUND = 1;
+    BAD_REQUEST = 2;
+}
+
 message Error {
-    enum Code {
-        INTERNAL = 0;
-        NOT_FOUND = 1;
-        BAD_REQUEST = 2;
-    }
     Code ErrorCode = 1;
     string Message = 2;
     google.protobuf.Any Details = 3;
