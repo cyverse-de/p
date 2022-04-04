@@ -1,11 +1,16 @@
-.PHONY: all go clean
+.PHONY: all go go-tidy clean
 
 all: go 
 
 go:
 	protoc -I /usr/local/include/ -I ./protos --go_opt=paths=source_relative --go_out=./go protos/**/*.proto
-	@cd ./go && go mod tidy
+
+go-tidy:
+	cd ./go/analysis && go mod tidy
+	cd ./go/user && go mod tidy
+	cd ./go/error && go mod tidy
 
 clean:
 	rm -rf ./go/analysis
 	rm -rf ./go/user
+	rm -rf ./go/error
