@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/cyversede/p/go/user";
+option go_package = "github.com/cyverse-de/p/go/user";
 
 message UserLookupRequest {
     oneof lookup_ids {
