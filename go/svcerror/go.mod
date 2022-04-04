@@ -1,4 +1,4 @@
-module github.com/cyverse-de/p/go/error
+module github.com/cyverse-de/p/go/svcerror
 
 go 1.18
 
