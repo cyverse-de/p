@@ -3,13 +3,18 @@ syntax = "proto3";
 option go_package = "github.com/cyverse-de/p/go/user";
 
 message UserLookupRequest {
+    reserved 4; // 4 was for sessions, which aren't used anymore.
+
     oneof lookup_ids {
         string username = 1;
         string user_id = 2;
         string analysis_id = 3;
     }
-    bool include_sessions = 4;
+
     bool include_logins = 5;
     bool include_preferences = 6;
     bool include_saved_searches = 7;
+
+    uint32 login_limit = 8;
+    uint32 login_offset = 9;
 }

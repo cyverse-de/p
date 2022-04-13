@@ -34,6 +34,7 @@ message User {
     repeated Login logins = 4;
     repeated Session sessions = 5;
     repeated SavedSearches saved_searches = 6;
+    uint32 login_count = 7;
 }
 
 
