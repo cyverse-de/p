@@ -28,14 +28,12 @@ message User {
         string saved_searches = 2;
     }
 
+    reserved 5, 6; // sessions is no longer used (5) and saved_searches (6) isn't repeated
+
     string uuid = 1;
     string username = 2;
     Preferences preferences = 3;
     repeated Login logins = 4;
-    repeated Session sessions = 5;
-    repeated SavedSearches saved_searches = 6;
     uint32 login_count = 7;
+    SavedSearches saved_searches = 8;
 }
-
-
-
