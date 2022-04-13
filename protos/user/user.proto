@@ -7,7 +7,7 @@ option go_package = "github.com/cyverse-de/p/go/user";
 message User {
     message Preferences {
         string uuid = 1;
-        bytes preferences = 2; // should come across as JSON.
+        string preferences = 2; // should come across as JSON.
     }
 
     message Login {
