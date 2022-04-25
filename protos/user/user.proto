@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
+import "header/header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/user";
 
@@ -18,11 +19,6 @@ message User {
         google.protobuf.Timestamp logout_time = 5;
     }
 
-    message Session {
-        string uuid = 1;
-        string session = 2;
-    }
-
     message SavedSearches {
         string uuid = 1;
         string saved_searches = 2;
@@ -36,4 +32,6 @@ message User {
     repeated Login logins = 4;
     uint32 login_count = 7;
     SavedSearches saved_searches = 8;
+    
+    Header header = 9;
 }
