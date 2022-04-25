@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "google/protobuf/any.proto";
+import "header/header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/svcerror";
 
@@ -14,4 +15,5 @@ message Error {
     Code ErrorCode = 1;
     string Message = 2;
     google.protobuf.Any Details = 3;
+    Header header = 4;
 }

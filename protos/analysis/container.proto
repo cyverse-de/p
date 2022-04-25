@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "header/header.proto";
+
 option go_package = "github.com/cyverse-de/p/go/analysis";
 
 message InteractiveApps {
@@ -14,6 +16,7 @@ message InteractiveApps {
     string websocket_port = 9;
     string websocket_proto = 10;
     string backend_url = 11;
+    Header header = 12;
 }
 
 message Container {
@@ -77,4 +80,5 @@ message Container {
     repeated Port ports = 18;
     bool skip_tmp_mount = 19 [json_name = "skip_tmp_mount"];
     int32 uid = 20 [json_name = "uid"];
+    Header header = 21;
 }
