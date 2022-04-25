@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/cyverse-de/p/go/header";
+
+message Header {
+    message Value {
+        repeated string value = 1;
+    }
+    map<string, Value> map = 1;
+}
