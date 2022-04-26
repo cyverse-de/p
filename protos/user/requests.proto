@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "header/header.proto";
+
 option go_package = "github.com/cyverse-de/p/go/user";
 
 message UserLookupRequest {
@@ -17,4 +19,6 @@ message UserLookupRequest {
 
     uint32 login_limit = 8;
     uint32 login_offset = 9;
+
+    Header header = 10;
 }
