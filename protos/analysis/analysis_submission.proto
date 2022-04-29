@@ -80,7 +80,7 @@ message Step {
     Header header = 11;
 }
 
-message Analysis {
+message AnalysisSubmission {
     string app_description = 1 [json_name = "app_description"];
     string app_id = 2 [json_name = "app_id"];
     string app_name = 3 [json_name = "app_name"];
