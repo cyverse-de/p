@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "header/header.proto";
+import "analysis/analysis_record.proto";
 
 option go_package = "github.com/cyverse-de/p/go/analysis";
 
@@ -15,4 +16,16 @@ message AnalysisRecordLookupRequest {
     Header header = 5;
     string requesting_user = 6;
 
+}
+
+message AnalysisRecordResponse {
+    message StatusCountRecord {
+        int64 Count = 1;
+        string Status = 2;
+    }
+    Header header = 1;
+    repeated AnalysisRecord Analyses = 2;
+    string Timestamp = 3;
+    int64 Total = 4;
+    repeated StatusCountRecord StatusCount = 5 [json_name = "status-count"];
 }
