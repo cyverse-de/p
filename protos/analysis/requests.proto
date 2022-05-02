@@ -29,3 +29,8 @@ message AnalysisRecordResponse {
     int64 Total = 4;
     repeated StatusCountRecord StatusCount = 5 [json_name = "status-count"];
 }
+
+message AnalysisRecordList {
+    Header header = 1;
+    repeated AnalysisRecord Analyses = 2;
+}
