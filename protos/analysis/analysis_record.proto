@@ -16,7 +16,7 @@ message AnalysisRecord {
     string id = 2;
     string description = 3;
     string name = 4;
-    string can_share = 5 [json_name = "can_share"];
+    bool can_share = 5 [json_name = "can_share"];
     string username = 6;
     string app_id = 7 [json_name = "app_id"];
     BatchStatus batch_status = 8 [json_name = "batch_status"];
