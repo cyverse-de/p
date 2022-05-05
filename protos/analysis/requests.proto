@@ -20,17 +20,17 @@ message AnalysisRecordLookupRequest {
 
 message AnalysisRecordResponse {
     message StatusCountRecord {
-        int64 Count = 1;
-        string Status = 2;
+        int64 count = 1;
+        string status = 2;
     }
     Header header = 1;
-    repeated AnalysisRecord Analyses = 2;
-    string Timestamp = 3;
-    int64 Total = 4;
-    repeated StatusCountRecord StatusCount = 5 [json_name = "status-count"];
+    repeated AnalysisRecord analyses = 2;
+    string timestamp = 3;
+    int64 total = 4;
+    repeated StatusCountRecord status_count = 5 [json_name = "status-count"];
 }
 
 message AnalysisRecordList {
     Header header = 1;
-    repeated AnalysisRecord Analyses = 2;
+    repeated AnalysisRecord analyses = 2;
 }
