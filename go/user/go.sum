@@ -1,5 +1,7 @@
 github.com/cyverse-de/p/go/header v0.0.0-20220425195333-bb985199c250 h1:KfgsRluWU4DqIwdJz19bDjc0oIq1aWfm1Ja9mmwhstE=
 github.com/cyverse-de/p/go/header v0.0.0-20220425195333-bb985199c250/go.mod h1:VHHZzBOwFQLfIrfIjK1FJlaKy00m4CFGufx4LhVXd8Q=
+github.com/cyverse-de/p/go/svcerror v0.0.5 h1:WbUcU4VjbNU0agfrHJOCy9orAY72WJWo92b1vR3+3sw=
+github.com/cyverse-de/p/go/svcerror v0.0.5/go.mod h1:WCGIrhW0KXtSu86YhjU/JXG8LrZs5wJPBCH4wvnFYcQ=
 github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
 github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=

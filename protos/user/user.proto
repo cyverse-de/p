@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 import "header/header.proto";
+import "svcerror/svcerror.proto";
 
 option go_package = "github.com/cyverse-de/p/go/user";
 
@@ -32,6 +33,8 @@ message User {
     repeated Login logins = 4;
     uint32 login_count = 7;
     SavedSearches saved_searches = 8;
-    
     Header header = 9;
+    ServiceError error = 10;
+
+    
 }
