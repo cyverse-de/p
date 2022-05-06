@@ -4,17 +4,21 @@ import "header/header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/svcerror";
 
-enum ServiceErrorCode {
-    SERVICE_ERROR_CODE_UNSET = 0;
-    SERVICE_ERROR_CODE_UNSPECIFIED = 1;
-    SERVICE_ERROR_CODE_INTERNAL = 2;
-    SERVICE_ERROR_CODE_NOT_FOUND = 3;
-    SERVICE_ERROR_CODE_BAD_REQUEST = 4;
+enum ErrorCode {
+    UNSET = 0;       // Default value for the error code. Don't set the error code to this. Use Unspecified if tempted.
+    UNSPECIFIED = 1; // An error occurred, but the kind wasn't specified or included in the list.
+    INTERNAL = 2;
+    NOT_FOUND = 3;
+    BAD_REQUEST = 4;
+    MARSHAL_FAILURE = 5;
+    UNMARSHAL_FAILURE = 6;
+    PARAMETER_MISSING = 7;
+    PARAMETER_INVALID = 8;
 }
 
 message ServiceError {
     Header header = 1;
-    ServiceErrorCode error_code = 2 [json_name = "error_code"];
+    ErrorCode error_code = 2 [json_name = "error_code"];
     int32 status_code = 3 [json_name = "status_code"];
     string message = 4;
 
