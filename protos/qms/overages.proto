@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "header/header.proto";
+import "svcerror/svcerror.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+message Overage {
+    Header header = 1;
+    ServiceError error = 2;
+    string resource_name = 3 [json_name = "resource_name"];
+    float quota = 4;
+    float usage = 5;
+}
+
+message OverageList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated Overage overages = 3;
+}
+
+message IsOverage {
+    Header header = 1;
+    ServiceError error = 2;
+    bool is_overage = 3 [json_name = "is_overage"];
+}

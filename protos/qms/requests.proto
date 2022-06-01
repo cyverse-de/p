@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "header/header.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+message AllUserOveragesRequest {
+    Header header = 1;
+    string username = 2;
+}
+
+message UserResourceOveragesRequest {
+    Header header = 1;
+    string username = 2;
+    string resource_name = 3 [json_name = "resource_name"];
+}
+
+message IsOverageRequest {
+    Header header = 1;
+    string username = 2;
+    string resource_name = 3 [json_name = "resource_name"];
+}
