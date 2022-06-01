@@ -5,5 +5,5 @@ use (
 	./header
 	./svcerror
 	./user
-	./init
+	./qms
 )
