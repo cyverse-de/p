@@ -4,7 +4,7 @@ import "header/header.proto";
 import "svcerror/svcerror.proto";
 import "qms/resource_types.proto";
 
-option go_package = "github.com/cyverse-de/p/gp/qms";
+option go_package = "github.com/cyverse-de/p/go/qms";
 
 message Quota {
     string uuid = 1;

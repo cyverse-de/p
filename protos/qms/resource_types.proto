@@ -3,7 +3,7 @@ syntax = "proto3";
 import "header/header.proto";
 import "svcerror/svcerror.proto";
 
-option go_package = "github.com/cyverse-de/p/gp/qms";
+option go_package = "github.com/cyverse-de/p/go/qms";
 
 message ResourceType {
     string uuid = 1;
