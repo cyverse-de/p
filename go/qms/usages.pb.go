@@ -9,7 +9,6 @@ package qms
 import (
 	header "github.com/cyverse-de/p/go/header"
 	svcerror "github.com/cyverse-de/p/go/svcerror"
-	qms "github.com/cyverse-de/p/gp/qms"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -28,10 +27,10 @@ type Usage struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uuid         string            `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	Usage        float32           `protobuf:"fixed32,2,opt,name=usage,proto3" json:"usage,omitempty"`
-	UserPlanId   string            `protobuf:"bytes,3,opt,name=user_plan_id,json=userPlanId,proto3" json:"user_plan_id,omitempty"`
-	ResourceType *qms.ResourceType `protobuf:"bytes,4,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
+	Uuid         string        `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Usage        float32       `protobuf:"fixed32,2,opt,name=usage,proto3" json:"usage,omitempty"`
+	UserPlanId   string        `protobuf:"bytes,3,opt,name=user_plan_id,json=userPlanId,proto3" json:"user_plan_id,omitempty"`
+	ResourceType *ResourceType `protobuf:"bytes,4,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
 }
 
 func (x *Usage) Reset() {
@@ -87,7 +86,7 @@ func (x *Usage) GetUserPlanId() string {
 	return ""
 }
 
-func (x *Usage) GetResourceType() *qms.ResourceType {
+func (x *Usage) GetResourceType() *ResourceType {
 	if x != nil {
 		return x.ResourceType
 	}
@@ -203,7 +202,7 @@ var file_qms_usages_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_qms_usages_proto_goTypes = []interface{}{
 	(*Usage)(nil),                 // 0: Usage
 	(*UsageList)(nil),             // 1: UsageList
-	(*qms.ResourceType)(nil),      // 2: ResourceType
+	(*ResourceType)(nil),          // 2: ResourceType
 	(*header.Header)(nil),         // 3: Header
 	(*svcerror.ServiceError)(nil), // 4: ServiceError
 }
@@ -224,6 +223,7 @@ func file_qms_usages_proto_init() {
 	if File_qms_usages_proto != nil {
 		return
 	}
+	file_qms_resource_types_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_qms_usages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Usage); i {

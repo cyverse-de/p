@@ -9,7 +9,6 @@ package qms
 import (
 	header "github.com/cyverse-de/p/go/header"
 	svcerror "github.com/cyverse-de/p/go/svcerror"
-	qms "github.com/cyverse-de/p/gp/qms"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -34,7 +33,7 @@ type UserPlan struct {
 	EffectiveEndDate   *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=effective_end_date,proto3" json:"effective_end_date,omitempty"`
 	User               *QMSUser               `protobuf:"bytes,4,opt,name=user,proto3" json:"user,omitempty"`
 	Plan               *Plan                  `protobuf:"bytes,5,opt,name=plan,proto3" json:"plan,omitempty"`
-	Quotas             []*qms.Quota           `protobuf:"bytes,6,rep,name=quotas,proto3" json:"quotas,omitempty"`
+	Quotas             []*Quota               `protobuf:"bytes,6,rep,name=quotas,proto3" json:"quotas,omitempty"`
 	Usages             []*Usage               `protobuf:"bytes,7,rep,name=usages,proto3" json:"usages,omitempty"`
 }
 
@@ -105,7 +104,7 @@ func (x *UserPlan) GetPlan() *Plan {
 	return nil
 }
 
-func (x *UserPlan) GetQuotas() []*qms.Quota {
+func (x *UserPlan) GetQuotas() []*Quota {
 	if x != nil {
 		return x.Quotas
 	}
@@ -319,7 +318,7 @@ var file_qms_user_plans_proto_goTypes = []interface{}{
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 	(*QMSUser)(nil),               // 4: QMSUser
 	(*Plan)(nil),                  // 5: Plan
-	(*qms.Quota)(nil),             // 6: Quota
+	(*Quota)(nil),                 // 6: Quota
 	(*Usage)(nil),                 // 7: Usage
 	(*header.Header)(nil),         // 8: Header
 	(*svcerror.ServiceError)(nil), // 9: ServiceError
@@ -351,6 +350,7 @@ func file_qms_user_plans_proto_init() {
 	}
 	file_qms_users_proto_init()
 	file_qms_plans_proto_init()
+	file_qms_quotas_proto_init()
 	file_qms_usages_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_qms_user_plans_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {

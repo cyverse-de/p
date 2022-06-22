@@ -9,7 +9,6 @@ package qms
 import (
 	header "github.com/cyverse-de/p/go/header"
 	svcerror "github.com/cyverse-de/p/go/svcerror"
-	qms "github.com/cyverse-de/p/gp/qms"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -28,9 +27,9 @@ type QuotaDefault struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uuid         string            `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	QuotaValue   float32           `protobuf:"fixed32,2,opt,name=quota_value,proto3" json:"quota_value,omitempty"`
-	ResourceType *qms.ResourceType `protobuf:"bytes,3,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
+	Uuid         string        `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	QuotaValue   float32       `protobuf:"fixed32,2,opt,name=quota_value,proto3" json:"quota_value,omitempty"`
+	ResourceType *ResourceType `protobuf:"bytes,3,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
 }
 
 func (x *QuotaDefault) Reset() {
@@ -79,7 +78,7 @@ func (x *QuotaDefault) GetQuotaValue() float32 {
 	return 0
 }
 
-func (x *QuotaDefault) GetResourceType() *qms.ResourceType {
+func (x *QuotaDefault) GetResourceType() *ResourceType {
 	if x != nil {
 		return x.ResourceType
 	}
@@ -492,7 +491,7 @@ var file_qms_plans_proto_goTypes = []interface{}{
 	(*Plan)(nil),                  // 3: Plan
 	(*PlanResponse)(nil),          // 4: PlanResponse
 	(*PlanList)(nil),              // 5: PlanList
-	(*qms.ResourceType)(nil),      // 6: ResourceType
+	(*ResourceType)(nil),          // 6: ResourceType
 	(*header.Header)(nil),         // 7: Header
 	(*svcerror.ServiceError)(nil), // 8: ServiceError
 }
@@ -523,6 +522,7 @@ func file_qms_plans_proto_init() {
 	if File_qms_plans_proto != nil {
 		return
 	}
+	file_qms_resource_types_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_qms_plans_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QuotaDefault); i {
