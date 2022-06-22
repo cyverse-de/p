@@ -20,3 +20,19 @@ message IsOverageRequest {
     string username = 2;
     string resource_name = 3 [json_name = "resource_name"];
 }
+
+message AddUsage {
+    Header header = 1;
+    string username = 2;
+    string resource_name = 3 [json_name = "resource_name"];
+
+    // Possible values are defined in the database, so we can't use an enum here
+    string update_type = 4 [json_name = "update_type"]; 
+    
+    float usage_value = 5 [json_name = "usage_value"];
+}
+
+message GetUsages {
+    Header header = 1;
+    string username = 2;
+}
