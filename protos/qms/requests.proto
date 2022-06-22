@@ -29,7 +29,7 @@ message AddUsage {
     // Possible values are defined in the database, so we can't use an enum here
     string update_type = 4 [json_name = "update_type"]; 
     
-    float usage_value = 5 [json_name = "usage_value"];
+    double usage_value = 5 [json_name = "usage_value"];
 }
 
 message GetUsages {
