@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+import "header/header.proto";
+import "svcerror/svcerror.proto";
+import "qms/resource_types.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+message QuotaDefault {
+    string uuid = 1;
+    float quota_value = 2 [json_name = "quota_value"];
+    ResourceType resource_type = 3 [json_name = "resource_type"];
+}
+
+message QuotaDefaultResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    QuotaDefault quota_default = 3 [json_name = "quota_default"];
+}
+
+message QuotaDefaultList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];
+}
+
+message Plan {
+    string uuid = 1;
+    string name = 2;
+    string description = 3;
+    repeated QuotaDefault plan_quota_defaults  = 4 [json_name = "plan_quota_defaults"];
+}
+
+message PlanResponse {
+    Header header = 1;
+    ServiceError error  = 2;
+    Plan plan = 3;
+}
+
+message PlanList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated Plan plans = 3;
+}

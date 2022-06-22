@@ -6,11 +6,15 @@ import "svcerror/svcerror.proto";
 option go_package = "github.com/cyverse-de/p/go/qms";
 
 message Overage {
+    string resource_name = 1 [json_name = "resource_name"];
+    float quota = 2;
+    float usage = 3;
+}
+
+message OverageResponse {
     Header header = 1;
     ServiceError error = 2;
-    string resource_name = 3 [json_name = "resource_name"];
-    float quota = 4;
-    float usage = 5;
+    Overage overage  = 3;
 }
 
 message OverageList {
