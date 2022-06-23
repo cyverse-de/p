@@ -8,7 +8,7 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 
 message Usage {
     string uuid = 1;
-    float usage = 2;
+    double usage = 2;
     string user_plan_id = 3;
     ResourceType resource_type = 4 [json_name = "resource_type"];
 }
