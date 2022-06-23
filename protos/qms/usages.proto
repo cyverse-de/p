@@ -13,6 +13,12 @@ message Usage {
     ResourceType resource_type = 4 [json_name = "resource_type"];
 }
 
+message UsageResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    Usage usage = 3;
+}
+
 message UsageList {
     Header header = 1;
     ServiceError error = 2;
