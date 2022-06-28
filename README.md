@@ -42,6 +42,17 @@ both work.
 
 `make clean` will delete the generated files, so it is not run by default.
 
+## NATS Subject Mapping
+
+| Subject                           | Accepts                                                                  | Response                                                        |
+| --------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `cyverse.qms.user.usages.add`     | [qms.AddUsages](./protos/qms/requests.proto)                             | [qms.UsageResponse](./protos/qms/usages.proto)                  |
+| `cyverse.qms.user.usages.get`     | [qms.GetUsages](./protos/qms/requests.proto)                             | [qms.UsageList](./protos/qms/usages.proto)                      |
+| `cyverse.qms.user.overages.get`   | [qms.AllOveragesRequest](./protos/qms/requests.proto)                    | [qms.OverageList](./protos/qms/overages.proto)                  |
+| `cyverse.qms.user.overages.check` | [qms.IsOverageRequest](./protos/qms/requests.proto)                      | [qms.IsOverage](./protos/qms/overages.proto)                    |
+| `cyverse.discoenv.analyses.>`     | [analysis.AnalysisRecordLookupRequest](./protos/analysis/requests.proto) | [analysis.AnalysisRecordList](./protos/analysis/requests.proto) |
+| `cyverse.discoenv.users.>`        | [users.UserLookupRequest](./protos/user/requests.proto)                  | [user.User](./protos/user/user.proto)                           |
+
 ## Hints/Tips/Notes
 
 ### Reload VScode Window after generating Go code.
