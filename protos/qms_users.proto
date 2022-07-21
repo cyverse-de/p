@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "header.proto";
+import "svcerror.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "QMSUSerProtobufs";
+
+message QMSUser {
+    string uuid = 1;
+    string username = 2;
+}
+
+message QMSUserResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    QMSUser user = 3;
+}
+
+message QMSUserList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated QMSUser users  = 3;
+}

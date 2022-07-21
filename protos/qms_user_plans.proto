@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "header.proto";
+import "svcerror.proto";
+import "qms_users.proto";
+import "qms_plans.proto";
+import "qms_quotas.proto";
+import "qms_usages.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "QMSUserPlanProtobufs";
+
+
+message UserPlan {
+    string uuid = 1;
+    google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];
+    google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];
+    QMSUser user = 4;
+    Plan plan = 5;
+    repeated Quota quotas = 6;
+    repeated Usage usages = 7;
+}
+
+message UserPlanResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    UserPlan user_plan = 3 [json_name = "user_plan"];
+}
+
+message UserPlanList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated UserPlan user_plans = 3 [json_name = "user_plans"];
+}

@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.0
 // 	protoc        v3.19.4
-// source: analysis/analysis_submission.proto
+// source: analysis_submission.proto
 
 package analysis
 
@@ -33,7 +33,7 @@ type HTCondorExtraInfo struct {
 func (x *HTCondorExtraInfo) Reset() {
 	*x = HTCondorExtraInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[0]
+		mi := &file_analysis_submission_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -46,7 +46,7 @@ func (x *HTCondorExtraInfo) String() string {
 func (*HTCondorExtraInfo) ProtoMessage() {}
 
 func (x *HTCondorExtraInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[0]
+	mi := &file_analysis_submission_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -59,7 +59,7 @@ func (x *HTCondorExtraInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTCondorExtraInfo.ProtoReflect.Descriptor instead.
 func (*HTCondorExtraInfo) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{0}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *HTCondorExtraInfo) GetExtraRequirements() string {
@@ -80,7 +80,7 @@ type Extra struct {
 func (x *Extra) Reset() {
 	*x = Extra{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[1]
+		mi := &file_analysis_submission_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -93,7 +93,7 @@ func (x *Extra) String() string {
 func (*Extra) ProtoMessage() {}
 
 func (x *Extra) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[1]
+	mi := &file_analysis_submission_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -106,7 +106,7 @@ func (x *Extra) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Extra.ProtoReflect.Descriptor instead.
 func (*Extra) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{1}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Extra) GetHtCondor() *HTCondorExtraInfo {
@@ -129,7 +129,7 @@ type FileMetadata struct {
 func (x *FileMetadata) Reset() {
 	*x = FileMetadata{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[2]
+		mi := &file_analysis_submission_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -142,7 +142,7 @@ func (x *FileMetadata) String() string {
 func (*FileMetadata) ProtoMessage() {}
 
 func (x *FileMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[2]
+	mi := &file_analysis_submission_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -155,7 +155,7 @@ func (x *FileMetadata) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FileMetadata.ProtoReflect.Descriptor instead.
 func (*FileMetadata) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{2}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *FileMetadata) GetAttribute() string {
@@ -200,7 +200,7 @@ type Step struct {
 func (x *Step) Reset() {
 	*x = Step{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[3]
+		mi := &file_analysis_submission_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -213,7 +213,7 @@ func (x *Step) String() string {
 func (*Step) ProtoMessage() {}
 
 func (x *Step) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[3]
+	mi := &file_analysis_submission_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -226,7 +226,7 @@ func (x *Step) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Step.ProtoReflect.Descriptor instead.
 func (*Step) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{3}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *Step) GetComponent() *Step_Component {
@@ -361,7 +361,7 @@ type AnalysisSubmission struct {
 func (x *AnalysisSubmission) Reset() {
 	*x = AnalysisSubmission{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[4]
+		mi := &file_analysis_submission_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -374,7 +374,7 @@ func (x *AnalysisSubmission) String() string {
 func (*AnalysisSubmission) ProtoMessage() {}
 
 func (x *AnalysisSubmission) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[4]
+	mi := &file_analysis_submission_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -387,7 +387,7 @@ func (x *AnalysisSubmission) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AnalysisSubmission.ProtoReflect.Descriptor instead.
 func (*AnalysisSubmission) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{4}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *AnalysisSubmission) GetAppDescription() string {
@@ -762,7 +762,7 @@ type Job struct {
 func (x *Job) Reset() {
 	*x = Job{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[5]
+		mi := &file_analysis_submission_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -775,7 +775,7 @@ func (x *Job) String() string {
 func (*Job) ProtoMessage() {}
 
 func (x *Job) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[5]
+	mi := &file_analysis_submission_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -788,7 +788,7 @@ func (x *Job) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Job.ProtoReflect.Descriptor instead.
 func (*Job) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{5}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *Job) GetAppDescription() string {
@@ -1117,7 +1117,7 @@ type Step_Component struct {
 func (x *Step_Component) Reset() {
 	*x = Step_Component{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[6]
+		mi := &file_analysis_submission_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1130,7 +1130,7 @@ func (x *Step_Component) String() string {
 func (*Step_Component) ProtoMessage() {}
 
 func (x *Step_Component) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[6]
+	mi := &file_analysis_submission_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1143,7 +1143,7 @@ func (x *Step_Component) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Step_Component.ProtoReflect.Descriptor instead.
 func (*Step_Component) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{3, 0}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{3, 0}
 }
 
 func (x *Step_Component) GetContainer() *Container {
@@ -1218,7 +1218,7 @@ type Step_Param struct {
 func (x *Step_Param) Reset() {
 	*x = Step_Param{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[7]
+		mi := &file_analysis_submission_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1231,7 +1231,7 @@ func (x *Step_Param) String() string {
 func (*Step_Param) ProtoMessage() {}
 
 func (x *Step_Param) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[7]
+	mi := &file_analysis_submission_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1244,7 +1244,7 @@ func (x *Step_Param) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Step_Param.ProtoReflect.Descriptor instead.
 func (*Step_Param) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{3, 1}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{3, 1}
 }
 
 func (x *Step_Param) GetId() string {
@@ -1302,7 +1302,7 @@ type Step_Config struct {
 func (x *Step_Config) Reset() {
 	*x = Step_Config{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[8]
+		mi := &file_analysis_submission_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1315,7 +1315,7 @@ func (x *Step_Config) String() string {
 func (*Step_Config) ProtoMessage() {}
 
 func (x *Step_Config) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[8]
+	mi := &file_analysis_submission_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1328,7 +1328,7 @@ func (x *Step_Config) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Step_Config.ProtoReflect.Descriptor instead.
 func (*Step_Config) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{3, 2}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{3, 2}
 }
 
 func (x *Step_Config) GetParams() []*Step_Param {
@@ -1370,7 +1370,7 @@ type Step_Input struct {
 func (x *Step_Input) Reset() {
 	*x = Step_Input{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[9]
+		mi := &file_analysis_submission_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1383,7 +1383,7 @@ func (x *Step_Input) String() string {
 func (*Step_Input) ProtoMessage() {}
 
 func (x *Step_Input) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[9]
+	mi := &file_analysis_submission_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1396,7 +1396,7 @@ func (x *Step_Input) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Step_Input.ProtoReflect.Descriptor instead.
 func (*Step_Input) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{3, 3}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{3, 3}
 }
 
 func (x *Step_Input) GetId() string {
@@ -1471,7 +1471,7 @@ type Step_Output struct {
 func (x *Step_Output) Reset() {
 	*x = Step_Output{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_analysis_analysis_submission_proto_msgTypes[10]
+		mi := &file_analysis_submission_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1484,7 +1484,7 @@ func (x *Step_Output) String() string {
 func (*Step_Output) ProtoMessage() {}
 
 func (x *Step_Output) ProtoReflect() protoreflect.Message {
-	mi := &file_analysis_analysis_submission_proto_msgTypes[10]
+	mi := &file_analysis_submission_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1497,7 +1497,7 @@ func (x *Step_Output) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Step_Output.ProtoReflect.Descriptor instead.
 func (*Step_Output) Descriptor() ([]byte, []int) {
-	return file_analysis_analysis_submission_proto_rawDescGZIP(), []int{3, 4}
+	return file_analysis_submission_proto_rawDescGZIP(), []int{3, 4}
 }
 
 func (x *Step_Output) GetMultiplicity() string {
@@ -1542,16 +1542,15 @@ func (x *Step_Output) GetType() string {
 	return ""
 }
 
-var File_analysis_analysis_submission_proto protoreflect.FileDescriptor
+var File_analysis_submission_proto protoreflect.FileDescriptor
 
-var file_analysis_analysis_submission_proto_rawDesc = []byte{
-	0x0a, 0x22, 0x61, 0x6e, 0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x2f, 0x61, 0x6e, 0x61, 0x6c, 0x79,
-	0x73, 0x69, 0x73, 0x5f, 0x73, 0x75, 0x62, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x61, 0x6e, 0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x2f,
-	0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a,
-	0x13, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x2f, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x2e, 0x70,
+var file_analysis_submission_proto_rawDesc = []byte{
+	0x0a, 0x19, 0x61, 0x6e, 0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x5f, 0x73, 0x75, 0x62, 0x6d, 0x69,
+	0x73, 0x73, 0x69, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1f, 0x67, 0x6f, 0x6f,
+	0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d,
+	0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x61, 0x6e,
+	0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x5f, 0x63, 0x6f, 0x6e, 0x74, 0x61, 0x69, 0x6e, 0x65, 0x72,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x0c, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x22, 0x42, 0x0a, 0x11, 0x48, 0x54, 0x43, 0x6f, 0x6e, 0x64, 0x6f, 0x72,
 	0x45, 0x78, 0x74, 0x72, 0x61, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2d, 0x0a, 0x12, 0x65, 0x78, 0x74,
 	0x72, 0x61, 0x5f, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x18,
@@ -1855,26 +1854,29 @@ var file_analysis_analysis_submission_proto_rawDesc = []byte{
 	0x18, 0x2b, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x77, 0x69, 0x6b, 0x69, 0x5f, 0x75, 0x72, 0x6c,
 	0x12, 0x20, 0x0a, 0x0b, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x5f, 0x66, 0x69, 0x6c, 0x65, 0x18,
 	0x2c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x5f, 0x66, 0x69,
-	0x6c, 0x65, 0x3a, 0x02, 0x18, 0x01, 0x42, 0x25, 0x5a, 0x23, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
-	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f,
-	0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x6e, 0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x62, 0x06, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6c, 0x65, 0x3a, 0x02, 0x18, 0x01, 0x42, 0x5e, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63, 0x79,
+	0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
+	0x66, 0x73, 0x42, 0x1b, 0x41, 0x6e, 0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x53, 0x75, 0x62, 0x6d,
+	0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50,
+	0x01, 0x5a, 0x23, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79,
+	0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x6e,
+	0x61, 0x6c, 0x79, 0x73, 0x69, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_analysis_analysis_submission_proto_rawDescOnce sync.Once
-	file_analysis_analysis_submission_proto_rawDescData = file_analysis_analysis_submission_proto_rawDesc
+	file_analysis_submission_proto_rawDescOnce sync.Once
+	file_analysis_submission_proto_rawDescData = file_analysis_submission_proto_rawDesc
 )
 
-func file_analysis_analysis_submission_proto_rawDescGZIP() []byte {
-	file_analysis_analysis_submission_proto_rawDescOnce.Do(func() {
-		file_analysis_analysis_submission_proto_rawDescData = protoimpl.X.CompressGZIP(file_analysis_analysis_submission_proto_rawDescData)
+func file_analysis_submission_proto_rawDescGZIP() []byte {
+	file_analysis_submission_proto_rawDescOnce.Do(func() {
+		file_analysis_submission_proto_rawDescData = protoimpl.X.CompressGZIP(file_analysis_submission_proto_rawDescData)
 	})
-	return file_analysis_analysis_submission_proto_rawDescData
+	return file_analysis_submission_proto_rawDescData
 }
 
-var file_analysis_analysis_submission_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
-var file_analysis_analysis_submission_proto_goTypes = []interface{}{
+var file_analysis_submission_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_analysis_submission_proto_goTypes = []interface{}{
 	(*HTCondorExtraInfo)(nil),     // 0: HTCondorExtraInfo
 	(*Extra)(nil),                 // 1: Extra
 	(*FileMetadata)(nil),          // 2: FileMetadata
@@ -1891,7 +1893,7 @@ var file_analysis_analysis_submission_proto_goTypes = []interface{}{
 	(*timestamppb.Timestamp)(nil), // 13: google.protobuf.Timestamp
 	(*Container)(nil),             // 14: Container
 }
-var file_analysis_analysis_submission_proto_depIdxs = []int32{
+var file_analysis_submission_proto_depIdxs = []int32{
 	0,  // 0: Extra.ht_condor:type_name -> HTCondorExtraInfo
 	6,  // 1: Step.component:type_name -> Step.Component
 	8,  // 2: Step.config:type_name -> Step.Config
@@ -1923,14 +1925,14 @@ var file_analysis_analysis_submission_proto_depIdxs = []int32{
 	0,  // [0:24] is the sub-list for field type_name
 }
 
-func init() { file_analysis_analysis_submission_proto_init() }
-func file_analysis_analysis_submission_proto_init() {
-	if File_analysis_analysis_submission_proto != nil {
+func init() { file_analysis_submission_proto_init() }
+func file_analysis_submission_proto_init() {
+	if File_analysis_submission_proto != nil {
 		return
 	}
 	file_analysis_container_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_analysis_analysis_submission_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*HTCondorExtraInfo); i {
 			case 0:
 				return &v.state
@@ -1942,7 +1944,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Extra); i {
 			case 0:
 				return &v.state
@@ -1954,7 +1956,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FileMetadata); i {
 			case 0:
 				return &v.state
@@ -1966,7 +1968,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Step); i {
 			case 0:
 				return &v.state
@@ -1978,7 +1980,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AnalysisSubmission); i {
 			case 0:
 				return &v.state
@@ -1990,7 +1992,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job); i {
 			case 0:
 				return &v.state
@@ -2002,7 +2004,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Step_Component); i {
 			case 0:
 				return &v.state
@@ -2014,7 +2016,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Step_Param); i {
 			case 0:
 				return &v.state
@@ -2026,7 +2028,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Step_Config); i {
 			case 0:
 				return &v.state
@@ -2038,7 +2040,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Step_Input); i {
 			case 0:
 				return &v.state
@@ -2050,7 +2052,7 @@ func file_analysis_analysis_submission_proto_init() {
 				return nil
 			}
 		}
-		file_analysis_analysis_submission_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_analysis_submission_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Step_Output); i {
 			case 0:
 				return &v.state
@@ -2067,18 +2069,18 @@ func file_analysis_analysis_submission_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_analysis_analysis_submission_proto_rawDesc,
+			RawDescriptor: file_analysis_submission_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_analysis_analysis_submission_proto_goTypes,
-		DependencyIndexes: file_analysis_analysis_submission_proto_depIdxs,
-		MessageInfos:      file_analysis_analysis_submission_proto_msgTypes,
+		GoTypes:           file_analysis_submission_proto_goTypes,
+		DependencyIndexes: file_analysis_submission_proto_depIdxs,
+		MessageInfos:      file_analysis_submission_proto_msgTypes,
 	}.Build()
-	File_analysis_analysis_submission_proto = out.File
-	file_analysis_analysis_submission_proto_rawDesc = nil
-	file_analysis_analysis_submission_proto_goTypes = nil
-	file_analysis_analysis_submission_proto_depIdxs = nil
+	File_analysis_submission_proto = out.File
+	file_analysis_submission_proto_rawDesc = nil
+	file_analysis_submission_proto_goTypes = nil
+	file_analysis_submission_proto_depIdxs = nil
 }

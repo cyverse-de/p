@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "header.proto";
+import "svcerror.proto";
+
+option go_package = "github.com/cyverse-de/p/go/user";
+
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "UserProtobufs";
+
+message User {
+    message Preferences {
+        string uuid = 1;
+        string preferences = 2; // should come across as JSON.
+    }
+
+    message Login {
+        string uuid = 1;
+        string ip_address = 2;
+        string user_agent = 3;
+        google.protobuf.Timestamp login_time = 4;
+        google.protobuf.Timestamp logout_time = 5;
+    }
+
+    message SavedSearches {
+        string uuid = 1;
+        string saved_searches = 2;
+    }
+
+    reserved 5, 6; // sessions is no longer used (5) and saved_searches (6) isn't repeated
+
+    string uuid = 1;
+    string username = 2;
+    Preferences preferences = 3;
+    repeated Login logins = 4;
+    uint32 login_count = 7;
+    SavedSearches saved_searches = 8;
+    Header header = 9;
+    ServiceError error = 10;
+
+    
+}

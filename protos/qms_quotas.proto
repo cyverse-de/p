@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "header.proto";
+import "svcerror.proto";
+import "qms_resource_types.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "QMSQuotaProtobufs";
+
+message Quota {
+    string uuid = 1;
+    float quota = 2;
+    ResourceType resource_type = 3 [json_name = "resource_type"];
+}
+
+message QuotaResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    Quota quota = 3;
+}
+
+message QuotaList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated Quota quotas = 3;
+}

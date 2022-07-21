@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "header.proto";
+import "svcerror.proto";
+import "qms_resource_types.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "QMSUsageProtobufs";
+
+message Usage {
+    string uuid = 1;
+    double usage = 2;
+    string user_plan_id = 3;
+    ResourceType resource_type = 4 [json_name = "resource_type"];
+}
+
+message UsageResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    Usage usage = 3;
+}
+
+message UsageList {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated Usage usages = 3;
+}

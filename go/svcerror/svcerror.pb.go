@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.0
 // 	protoc        v3.19.4
-// source: svcerror/svcerror.proto
+// source: svcerror.proto
 
 package svcerror
 
@@ -72,11 +72,11 @@ func (x ErrorCode) String() string {
 }
 
 func (ErrorCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_svcerror_svcerror_proto_enumTypes[0].Descriptor()
+	return file_svcerror_proto_enumTypes[0].Descriptor()
 }
 
 func (ErrorCode) Type() protoreflect.EnumType {
-	return &file_svcerror_svcerror_proto_enumTypes[0]
+	return &file_svcerror_proto_enumTypes[0]
 }
 
 func (x ErrorCode) Number() protoreflect.EnumNumber {
@@ -85,7 +85,7 @@ func (x ErrorCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ErrorCode.Descriptor instead.
 func (ErrorCode) EnumDescriptor() ([]byte, []int) {
-	return file_svcerror_svcerror_proto_rawDescGZIP(), []int{0}
+	return file_svcerror_proto_rawDescGZIP(), []int{0}
 }
 
 type ServiceError struct {
@@ -102,7 +102,7 @@ type ServiceError struct {
 func (x *ServiceError) Reset() {
 	*x = ServiceError{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_svcerror_svcerror_proto_msgTypes[0]
+		mi := &file_svcerror_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -115,7 +115,7 @@ func (x *ServiceError) String() string {
 func (*ServiceError) ProtoMessage() {}
 
 func (x *ServiceError) ProtoReflect() protoreflect.Message {
-	mi := &file_svcerror_svcerror_proto_msgTypes[0]
+	mi := &file_svcerror_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -128,7 +128,7 @@ func (x *ServiceError) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ServiceError.ProtoReflect.Descriptor instead.
 func (*ServiceError) Descriptor() ([]byte, []int) {
-	return file_svcerror_svcerror_proto_rawDescGZIP(), []int{0}
+	return file_svcerror_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ServiceError) GetHeader() *header.Header {
@@ -159,12 +159,11 @@ func (x *ServiceError) GetMessage() string {
 	return ""
 }
 
-var File_svcerror_svcerror_proto protoreflect.FileDescriptor
+var File_svcerror_proto protoreflect.FileDescriptor
 
-var file_svcerror_svcerror_proto_rawDesc = []byte{
-	0x0a, 0x17, 0x73, 0x76, 0x63, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x2f, 0x73, 0x76, 0x63, 0x65, 0x72,
-	0x72, 0x6f, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x13, 0x68, 0x65, 0x61, 0x64, 0x65,
-	0x72, 0x2f, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x97,
+var file_svcerror_proto_rawDesc = []byte{
+	0x0a, 0x0e, 0x73, 0x76, 0x63, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x1a, 0x0c, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x97,
 	0x01, 0x0a, 0x0c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x12,
 	0x1f, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
 	0x07, 0x2e, 0x48, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72,
@@ -185,32 +184,35 @@ var file_svcerror_svcerror_proto_rawDesc = []byte{
 	0x41, 0x4c, 0x5f, 0x46, 0x41, 0x49, 0x4c, 0x55, 0x52, 0x45, 0x10, 0x06, 0x12, 0x15, 0x0a, 0x11,
 	0x50, 0x41, 0x52, 0x41, 0x4d, 0x45, 0x54, 0x45, 0x52, 0x5f, 0x4d, 0x49, 0x53, 0x53, 0x49, 0x4e,
 	0x47, 0x10, 0x07, 0x12, 0x15, 0x0a, 0x11, 0x50, 0x41, 0x52, 0x41, 0x4d, 0x45, 0x54, 0x45, 0x52,
-	0x5f, 0x49, 0x4e, 0x56, 0x41, 0x4c, 0x49, 0x44, 0x10, 0x08, 0x42, 0x25, 0x5a, 0x23, 0x67, 0x69,
-	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65,
-	0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x73, 0x76, 0x63, 0x65, 0x72, 0x72, 0x6f,
-	0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x5f, 0x49, 0x4e, 0x56, 0x41, 0x4c, 0x49, 0x44, 0x10, 0x08, 0x42, 0x58, 0x0a, 0x18, 0x6f, 0x72,
+	0x67, 0x2e, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x42, 0x15, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x45,
+	0x72, 0x72, 0x6f, 0x72, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a,
+	0x23, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65,
+	0x72, 0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x73, 0x76, 0x63, 0x65,
+	0x72, 0x72, 0x6f, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_svcerror_svcerror_proto_rawDescOnce sync.Once
-	file_svcerror_svcerror_proto_rawDescData = file_svcerror_svcerror_proto_rawDesc
+	file_svcerror_proto_rawDescOnce sync.Once
+	file_svcerror_proto_rawDescData = file_svcerror_proto_rawDesc
 )
 
-func file_svcerror_svcerror_proto_rawDescGZIP() []byte {
-	file_svcerror_svcerror_proto_rawDescOnce.Do(func() {
-		file_svcerror_svcerror_proto_rawDescData = protoimpl.X.CompressGZIP(file_svcerror_svcerror_proto_rawDescData)
+func file_svcerror_proto_rawDescGZIP() []byte {
+	file_svcerror_proto_rawDescOnce.Do(func() {
+		file_svcerror_proto_rawDescData = protoimpl.X.CompressGZIP(file_svcerror_proto_rawDescData)
 	})
-	return file_svcerror_svcerror_proto_rawDescData
+	return file_svcerror_proto_rawDescData
 }
 
-var file_svcerror_svcerror_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_svcerror_svcerror_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_svcerror_svcerror_proto_goTypes = []interface{}{
+var file_svcerror_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_svcerror_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_svcerror_proto_goTypes = []interface{}{
 	(ErrorCode)(0),        // 0: ErrorCode
 	(*ServiceError)(nil),  // 1: ServiceError
 	(*header.Header)(nil), // 2: Header
 }
-var file_svcerror_svcerror_proto_depIdxs = []int32{
+var file_svcerror_proto_depIdxs = []int32{
 	2, // 0: ServiceError.header:type_name -> Header
 	0, // 1: ServiceError.error_code:type_name -> ErrorCode
 	2, // [2:2] is the sub-list for method output_type
@@ -220,13 +222,13 @@ var file_svcerror_svcerror_proto_depIdxs = []int32{
 	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_svcerror_svcerror_proto_init() }
-func file_svcerror_svcerror_proto_init() {
-	if File_svcerror_svcerror_proto != nil {
+func init() { file_svcerror_proto_init() }
+func file_svcerror_proto_init() {
+	if File_svcerror_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_svcerror_svcerror_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_svcerror_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ServiceError); i {
 			case 0:
 				return &v.state
@@ -243,19 +245,19 @@ func file_svcerror_svcerror_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_svcerror_svcerror_proto_rawDesc,
+			RawDescriptor: file_svcerror_proto_rawDesc,
 			NumEnums:      1,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_svcerror_svcerror_proto_goTypes,
-		DependencyIndexes: file_svcerror_svcerror_proto_depIdxs,
-		EnumInfos:         file_svcerror_svcerror_proto_enumTypes,
-		MessageInfos:      file_svcerror_svcerror_proto_msgTypes,
+		GoTypes:           file_svcerror_proto_goTypes,
+		DependencyIndexes: file_svcerror_proto_depIdxs,
+		EnumInfos:         file_svcerror_proto_enumTypes,
+		MessageInfos:      file_svcerror_proto_msgTypes,
 	}.Build()
-	File_svcerror_svcerror_proto = out.File
-	file_svcerror_svcerror_proto_rawDesc = nil
-	file_svcerror_svcerror_proto_goTypes = nil
-	file_svcerror_svcerror_proto_depIdxs = nil
+	File_svcerror_proto = out.File
+	file_svcerror_proto_rawDesc = nil
+	file_svcerror_proto_goTypes = nil
+	file_svcerror_proto_depIdxs = nil
 }

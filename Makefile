@@ -4,8 +4,9 @@ godirs: $(ls ./go/)
 
 all: go-compile go-tidy
 
-go-compile:
-	protoc -I /usr/local/include/ -I ./protos --go_opt=paths=source_relative --go_out=./go protos/**/*.proto
+compile:
+	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
+	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto 
 
 go-init:
 	cd ./go/analysis && go mod init github.com/cyverse-de/p/go/analysis
@@ -22,8 +23,5 @@ go-tidy:
 	cd ./go/qms && go mod tidy
 
 clean:
-	rm -rf ./go/analysis
-	rm -rf ./go/user
-	rm -rf ./go/svcerror
-	rm -rf ./go/header
-	rm -rf ./go/qms
+	rm -rf ./go/*
+	rm -rf ./java/*
