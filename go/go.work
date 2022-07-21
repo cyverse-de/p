@@ -1,0 +1,7 @@
+go 1.18
+
+use ./analysis
+use ./qms
+use ./header
+use ./svcerror
+use ./user
