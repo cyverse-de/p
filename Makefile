@@ -1,12 +1,15 @@
-.PHONY: all go-compile go-tidy go-init clean
+.PHONY: all compile go-tidy go-init clean java-jar
 
 godirs: $(ls ./go/)
 
-all: go-compile go-tidy
+all: clean compile go-init go-tidy java-jar
 
 compile:
 	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
-	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto 
+	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto
+
+java-jar:
+	lein jar
 
 go-init:
 	cd ./go/analysis && go mod init github.com/cyverse-de/p/go/analysis
@@ -25,3 +28,4 @@ go-tidy:
 clean:
 	rm -rf ./go/*
 	rm -rf ./java/*
+	lein clean
