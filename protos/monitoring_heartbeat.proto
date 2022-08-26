@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "header.proto";
+import "svcerror.proto";
+
+option go_package = "github.com/cyverse-de/p/go/monitoring";
+
+message Heartbeat {
+    Header header = 1;
+    ServiceError error = 2;
+    string node = 3;
+    string date_sent = 4 [json_name = "date_sent"];
+}

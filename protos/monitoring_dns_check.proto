@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "header.proto";
+import "svcerror.proto";
+
+option go_package = "github.com/cyverse-de/p/go/monitoring";
+
+enum LookupType {
+    UNSET_LOOKUP = 0;
+    INTERNAL_LOOKUP = 1;
+    EXTERNAL_LOOKUP = 2;
+}
+
+message DNSLookup {
+    string host = 1;
+    repeated string addresses = 2;
+    string type = 3;
+    string error = 4;
+}
+
+message DNSCheckResult {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated DNSLookup lookups = 3;
+}
