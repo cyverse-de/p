@@ -1276,6 +1276,30 @@ public final class MonitoringDnsCheck {
      */
     MonitoringDnsCheck.DNSLookupOrBuilder getLookupsOrBuilder(
         int index);
+
+    /**
+     * <code>string node = 4;</code>
+     * @return The node.
+     */
+    java.lang.String getNode();
+    /**
+     * <code>string node = 4;</code>
+     * @return The bytes for node.
+     */
+    com.google.protobuf.ByteString
+        getNodeBytes();
+
+    /**
+     * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+     * @return The dateSent.
+     */
+    java.lang.String getDateSent();
+    /**
+     * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+     * @return The bytes for dateSent.
+     */
+    com.google.protobuf.ByteString
+        getDateSentBytes();
   }
   /**
    * Protobuf type {@code DNSCheckResult}
@@ -1291,6 +1315,8 @@ public final class MonitoringDnsCheck {
     }
     private DNSCheckResult() {
       lookups_ = java.util.Collections.emptyList();
+      node_ = "";
+      dateSent_ = "";
     }
 
     @java.lang.Override
@@ -1357,6 +1383,18 @@ public final class MonitoringDnsCheck {
               }
               lookups_.add(
                   input.readMessage(MonitoringDnsCheck.DNSLookup.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              node_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dateSent_ = s;
               break;
             }
             default: {
@@ -1488,6 +1526,82 @@ public final class MonitoringDnsCheck {
       return lookups_.get(index);
     }
 
+    public static final int NODE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object node_;
+    /**
+     * <code>string node = 4;</code>
+     * @return The node.
+     */
+    @java.lang.Override
+    public java.lang.String getNode() {
+      java.lang.Object ref = node_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        node_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string node = 4;</code>
+     * @return The bytes for node.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeBytes() {
+      java.lang.Object ref = node_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        node_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATE_SENT_FIELD_NUMBER = 5;
+    private volatile java.lang.Object dateSent_;
+    /**
+     * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+     * @return The dateSent.
+     */
+    @java.lang.Override
+    public java.lang.String getDateSent() {
+      java.lang.Object ref = dateSent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dateSent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+     * @return The bytes for dateSent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDateSentBytes() {
+      java.lang.Object ref = dateSent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dateSent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1511,6 +1625,12 @@ public final class MonitoringDnsCheck {
       for (int i = 0; i < lookups_.size(); i++) {
         output.writeMessage(3, lookups_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(node_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, node_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateSent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, dateSent_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1531,6 +1651,12 @@ public final class MonitoringDnsCheck {
       for (int i = 0; i < lookups_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, lookups_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(node_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, node_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateSent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, dateSent_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1559,6 +1685,10 @@ public final class MonitoringDnsCheck {
       }
       if (!getLookupsList()
           .equals(other.getLookupsList())) return false;
+      if (!getNode()
+          .equals(other.getNode())) return false;
+      if (!getDateSent()
+          .equals(other.getDateSent())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1582,6 +1712,10 @@ public final class MonitoringDnsCheck {
         hash = (37 * hash) + LOOKUPS_FIELD_NUMBER;
         hash = (53 * hash) + getLookupsList().hashCode();
       }
+      hash = (37 * hash) + NODE_FIELD_NUMBER;
+      hash = (53 * hash) + getNode().hashCode();
+      hash = (37 * hash) + DATE_SENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDateSent().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1734,6 +1868,10 @@ public final class MonitoringDnsCheck {
         } else {
           lookupsBuilder_.clear();
         }
+        node_ = "";
+
+        dateSent_ = "";
+
         return this;
       }
 
@@ -1780,6 +1918,8 @@ public final class MonitoringDnsCheck {
         } else {
           result.lookups_ = lookupsBuilder_.build();
         }
+        result.node_ = node_;
+        result.dateSent_ = dateSent_;
         onBuilt();
         return result;
       }
@@ -1859,6 +1999,14 @@ public final class MonitoringDnsCheck {
               lookupsBuilder_.addAllMessages(other.lookups_);
             }
           }
+        }
+        if (!other.getNode().isEmpty()) {
+          node_ = other.node_;
+          onChanged();
+        }
+        if (!other.getDateSent().isEmpty()) {
+          dateSent_ = other.dateSent_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2367,6 +2515,158 @@ public final class MonitoringDnsCheck {
         }
         return lookupsBuilder_;
       }
+
+      private java.lang.Object node_ = "";
+      /**
+       * <code>string node = 4;</code>
+       * @return The node.
+       */
+      public java.lang.String getNode() {
+        java.lang.Object ref = node_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          node_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string node = 4;</code>
+       * @return The bytes for node.
+       */
+      public com.google.protobuf.ByteString
+          getNodeBytes() {
+        java.lang.Object ref = node_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          node_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string node = 4;</code>
+       * @param value The node to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        node_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNode() {
+        
+        node_ = getDefaultInstance().getNode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node = 4;</code>
+       * @param value The bytes for node to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        node_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dateSent_ = "";
+      /**
+       * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+       * @return The dateSent.
+       */
+      public java.lang.String getDateSent() {
+        java.lang.Object ref = dateSent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dateSent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+       * @return The bytes for dateSent.
+       */
+      public com.google.protobuf.ByteString
+          getDateSentBytes() {
+        java.lang.Object ref = dateSent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dateSent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+       * @param value The dateSent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateSent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dateSent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDateSent() {
+        
+        dateSent_ = getDefaultInstance().getDateSent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string date_sent = 5 [json_name = "date_sent"];</code>
+       * @param value The bytes for dateSent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateSentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dateSent_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2442,12 +2742,14 @@ public final class MonitoringDnsCheck {
       "\n\032monitoring_dns_check.proto\032\014header.pro" +
       "to\032\016svcerror.proto\"I\n\tDNSLookup\022\014\n\004host\030" +
       "\001 \001(\t\022\021\n\taddresses\030\002 \003(\t\022\014\n\004type\030\003 \001(\t\022\r" +
-      "\n\005error\030\004 \001(\t\"d\n\016DNSCheckResult\022\027\n\006heade" +
-      "r\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.Servic" +
-      "eError\022\033\n\007lookups\030\003 \003(\0132\n.DNSLookup*H\n\nL" +
-      "ookupType\022\020\n\014UNSET_LOOKUP\020\000\022\023\n\017INTERNAL_" +
-      "LOOKUP\020\001\022\023\n\017EXTERNAL_LOOKUP\020\002B\'Z%github." +
-      "com/cyverse-de/p/go/monitoringb\006proto3"
+      "\n\005error\030\004 \001(\t\"\220\001\n\016DNSCheckResult\022\027\n\006head" +
+      "er\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.Servi" +
+      "ceError\022\033\n\007lookups\030\003 \003(\0132\n.DNSLookup\022\014\n\004" +
+      "node\030\004 \001(\t\022\034\n\tdate_sent\030\005 \001(\tR\tdate_sent" +
+      "*H\n\nLookupType\022\020\n\014UNSET_LOOKUP\020\000\022\023\n\017INTE" +
+      "RNAL_LOOKUP\020\001\022\023\n\017EXTERNAL_LOOKUP\020\002B\'Z%gi" +
+      "thub.com/cyverse-de/p/go/monitoringb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2466,7 +2768,7 @@ public final class MonitoringDnsCheck {
     internal_static_DNSCheckResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DNSCheckResult_descriptor,
-        new java.lang.String[] { "Header", "Error", "Lookups", });
+        new java.lang.String[] { "Header", "Error", "Lookups", "Node", "DateSent", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
   }

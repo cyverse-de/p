@@ -22,4 +22,6 @@ message DNSCheckResult {
     Header header = 1;
     ServiceError error = 2;
     repeated DNSLookup lookups = 3;
+    string node = 4;
+    string date_sent = 5 [json_name = "date_sent"];
 }
