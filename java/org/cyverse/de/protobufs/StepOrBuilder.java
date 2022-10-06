@@ -121,11 +121,9 @@ public interface StepOrBuilder extends
    * <code>map&lt;string, string&gt; environment = 8;</code>
    */
 
-  /* nullable */
-java.lang.String getEnvironmentOrDefault(
+  java.lang.String getEnvironmentOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; environment = 8;</code>
    */

@@ -31,11 +31,9 @@ public interface HeaderOrBuilder extends
    * <code>map&lt;string, .Header.Value&gt; map = 1;</code>
    */
 
-  /* nullable */
-org.cyverse.de.protobufs.Header.Value getMapOrDefault(
+  org.cyverse.de.protobufs.Header.Value getMapOrDefault(
       java.lang.String key,
-      /* nullable */
-org.cyverse.de.protobufs.Header.Value defaultValue);
+      org.cyverse.de.protobufs.Header.Value defaultValue);
   /**
    * <code>map&lt;string, .Header.Value&gt; map = 1;</code>
    */

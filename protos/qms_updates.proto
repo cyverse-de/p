@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+import "header.proto";
+import "svcerror.proto";
+import "qms_resource_types.proto";
+import "qms_users.proto";
+
+option go_package = "github.com/cyverse-de/p/go/qms";
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "QMSUpdateProtobufs";
+
+message UpdateOperation {
+    string uuid = 1;
+    string name = 2;
+}
+
+message Update {
+    string uuid = 1;
+    string value_type = 2 [json_name = "value_type"];
+    double value = 3;
+    google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];
+    UpdateOperation operation = 5;
+    ResourceType resource_type = 6 [json_name = "resource_type"];
+    QMSUser user = 7;
+}
+
+message AddUpdateRequest {
+    Header header = 1;
+    Update update = 2;
+}
+
+message AddUpdateResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    Update update = 3;
+}
+
+message UpdateListRequest {
+    Header header = 1;
+    QMSUser user = 2;
+}
+
+message UpdateListResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    repeated Update updates = 3;
+}
