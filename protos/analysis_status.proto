@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "analysis_submission.proto";
+import "header.proto";
+import "svcerror.proto";
+
+option go_package = "github.com/cyverse-de/p/go/analysis";
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "AnalysisStatusProtobufs";
+
+message AnalysisStatus {
+    Header header = 1;
+    ServiceError error = 2;
+    AnalysisSubmission job = 3;
+    int32 version = 4;
+    string state = 5;
+    string message = 6;
+    string sent_on = 7 [json_name = "sent_on"];
+    string sender = 8;
+}
