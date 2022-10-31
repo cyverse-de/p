@@ -55,15 +55,16 @@ public final class QMSRequestProtobufs {
       "\020\n\010username\030\002 \001(\t\022$\n\rresource_name\030\003 \001(\t" +
       "R\rresource_name\"c\n\020IsOverageRequest\022\027\n\006h" +
       "eader\030\001 \001(\0132\007.Header\022\020\n\010username\030\002 \001(\t\022$" +
-      "\n\rresource_name\030\003 \001(\tR\rresource_name\"\237\001\n" +
+      "\n\rresource_name\030\003 \001(\tR\rresource_name\"\305\001\n" +
       "\010AddUsage\022\027\n\006header\030\001 \001(\0132\007.Header\022\020\n\010us" +
       "ername\030\002 \001(\t\022$\n\rresource_name\030\003 \001(\tR\rres" +
       "ource_name\022 \n\013update_type\030\004 \001(\tR\013update_" +
-      "type\022 \n\013usage_value\030\005 \001(\001R\013usage_value\"6" +
-      "\n\tGetUsages\022\027\n\006header\030\001 \001(\0132\007.Header\022\020\n\010" +
-      "username\030\002 \001(\tBQ\n\030org.cyverse.de.protobu" +
-      "fsB\023QMSRequestProtobufsP\001Z\036github.com/cy" +
-      "verse-de/p/go/qmsb\006proto3"
+      "type\022 \n\013usage_value\030\005 \001(\001R\013usage_value\022$" +
+      "\n\rresource_unit\030\006 \001(\tR\rresource_unit\"6\n\t" +
+      "GetUsages\022\027\n\006header\030\001 \001(\0132\007.Header\022\020\n\010us" +
+      "ername\030\002 \001(\tBQ\n\030org.cyverse.de.protobufs" +
+      "B\023QMSRequestProtobufsP\001Z\036github.com/cyve" +
+      "rse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -93,7 +94,7 @@ public final class QMSRequestProtobufs {
     internal_static_AddUsage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AddUsage_descriptor,
-        new java.lang.String[] { "Header", "Username", "ResourceName", "UpdateType", "UsageValue", });
+        new java.lang.String[] { "Header", "Username", "ResourceName", "UpdateType", "UsageValue", "ResourceUnit", });
     internal_static_GetUsages_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_GetUsages_fieldAccessorTable = new

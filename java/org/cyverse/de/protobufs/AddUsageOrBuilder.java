@@ -71,4 +71,16 @@ public interface AddUsageOrBuilder extends
    * @return The usageValue.
    */
   double getUsageValue();
+
+  /**
+   * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+   * @return The resourceUnit.
+   */
+  java.lang.String getResourceUnit();
+  /**
+   * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+   * @return The bytes for resourceUnit.
+   */
+  com.google.protobuf.ByteString
+      getResourceUnitBytes();
 }

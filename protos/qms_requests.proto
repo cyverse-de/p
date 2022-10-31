@@ -34,6 +34,8 @@ message AddUsage {
     string update_type = 4 [json_name = "update_type"]; 
     
     double usage_value = 5 [json_name = "usage_value"];
+
+    string resource_unit = 6 [json_name = "resource_unit"];
 }
 
 message GetUsages {

@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     username_ = "";
     resourceName_ = "";
     updateType_ = "";
+    resourceUnit_ = "";
   }
 
   @java.lang.Override
@@ -85,6 +86,12 @@ private static final long serialVersionUID = 0L;
           case 41: {
 
             usageValue_ = input.readDouble();
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            resourceUnit_ = s;
             break;
           }
           default: {
@@ -278,6 +285,44 @@ private static final long serialVersionUID = 0L;
     return usageValue_;
   }
 
+  public static final int RESOURCE_UNIT_FIELD_NUMBER = 6;
+  private volatile java.lang.Object resourceUnit_;
+  /**
+   * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+   * @return The resourceUnit.
+   */
+  @java.lang.Override
+  public java.lang.String getResourceUnit() {
+    java.lang.Object ref = resourceUnit_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resourceUnit_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+   * @return The bytes for resourceUnit.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResourceUnitBytes() {
+    java.lang.Object ref = resourceUnit_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resourceUnit_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -307,6 +352,9 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(usageValue_) != 0) {
       output.writeDouble(5, usageValue_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceUnit_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, resourceUnit_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -332,6 +380,9 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(usageValue_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(5, usageValue_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceUnit_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, resourceUnit_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -362,6 +413,8 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToLongBits(getUsageValue())
         != java.lang.Double.doubleToLongBits(
             other.getUsageValue())) return false;
+    if (!getResourceUnit()
+        .equals(other.getResourceUnit())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -386,6 +439,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + USAGE_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getUsageValue()));
+    hash = (37 * hash) + RESOURCE_UNIT_FIELD_NUMBER;
+    hash = (53 * hash) + getResourceUnit().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -533,6 +588,8 @@ private static final long serialVersionUID = 0L;
 
       usageValue_ = 0D;
 
+      resourceUnit_ = "";
+
       return this;
     }
 
@@ -568,6 +625,7 @@ private static final long serialVersionUID = 0L;
       result.resourceName_ = resourceName_;
       result.updateType_ = updateType_;
       result.usageValue_ = usageValue_;
+      result.resourceUnit_ = resourceUnit_;
       onBuilt();
       return result;
     }
@@ -633,6 +691,10 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getUsageValue() != 0D) {
         setUsageValue(other.getUsageValue());
+      }
+      if (!other.getResourceUnit().isEmpty()) {
+        resourceUnit_ = other.resourceUnit_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1057,6 +1119,82 @@ private static final long serialVersionUID = 0L;
     public Builder clearUsageValue() {
       
       usageValue_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object resourceUnit_ = "";
+    /**
+     * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+     * @return The resourceUnit.
+     */
+    public java.lang.String getResourceUnit() {
+      java.lang.Object ref = resourceUnit_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceUnit_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+     * @return The bytes for resourceUnit.
+     */
+    public com.google.protobuf.ByteString
+        getResourceUnitBytes() {
+      java.lang.Object ref = resourceUnit_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceUnit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+     * @param value The resourceUnit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceUnit(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      resourceUnit_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResourceUnit() {
+      
+      resourceUnit_ = getDefaultInstance().getResourceUnit();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string resource_unit = 6 [json_name = "resource_unit"];</code>
+     * @param value The bytes for resourceUnit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceUnitBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      resourceUnit_ = value;
       onChanged();
       return this;
     }
