@@ -39,6 +39,16 @@ public final class QMSRequestProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetUsages_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RequestByUsername_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_RequestByUsername_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RequestByUserID_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_RequestByUserID_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -62,9 +72,12 @@ public final class QMSRequestProtobufs {
       "type\022 \n\013usage_value\030\005 \001(\001R\013usage_value\022$" +
       "\n\rresource_unit\030\006 \001(\tR\rresource_unit\"6\n\t" +
       "GetUsages\022\027\n\006header\030\001 \001(\0132\007.Header\022\020\n\010us" +
-      "ername\030\002 \001(\tBQ\n\030org.cyverse.de.protobufs" +
-      "B\023QMSRequestProtobufsP\001Z\036github.com/cyve" +
-      "rse-de/p/go/qmsb\006proto3"
+      "ername\030\002 \001(\t\">\n\021RequestByUsername\022\027\n\006hea" +
+      "der\030\001 \001(\0132\007.Header\022\020\n\010username\030\002 \001(\t\"D\n\017" +
+      "RequestByUserID\022\027\n\006header\030\001 \001(\0132\007.Header" +
+      "\022\030\n\007user_id\030\002 \001(\tR\007user_idBQ\n\030org.cyvers" +
+      "e.de.protobufsB\023QMSRequestProtobufsP\001Z\036g" +
+      "ithub.com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -101,6 +114,18 @@ public final class QMSRequestProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetUsages_descriptor,
         new java.lang.String[] { "Header", "Username", });
+    internal_static_RequestByUsername_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_RequestByUsername_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_RequestByUsername_descriptor,
+        new java.lang.String[] { "Header", "Username", });
+    internal_static_RequestByUserID_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_RequestByUserID_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_RequestByUserID_descriptor,
+        new java.lang.String[] { "Header", "UserId", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
   }
 

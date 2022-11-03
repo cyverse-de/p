@@ -42,3 +42,13 @@ message GetUsages {
     Header header = 1;
     string username = 2;
 }
+
+message RequestByUsername {
+    Header header = 1;
+    string username = 2;
+}
+
+message RequestByUserID {
+    Header header = 1;
+    string user_id = 2 [json_name = "user_id"];
+}

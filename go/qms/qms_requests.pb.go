@@ -345,6 +345,116 @@ func (x *GetUsages) GetUsername() string {
 	return ""
 }
 
+type RequestByUsername struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header   *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Username string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+}
+
+func (x *RequestByUsername) Reset() {
+	*x = RequestByUsername{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_requests_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RequestByUsername) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RequestByUsername) ProtoMessage() {}
+
+func (x *RequestByUsername) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_requests_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RequestByUsername.ProtoReflect.Descriptor instead.
+func (*RequestByUsername) Descriptor() ([]byte, []int) {
+	return file_qms_requests_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *RequestByUsername) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *RequestByUsername) GetUsername() string {
+	if x != nil {
+		return x.Username
+	}
+	return ""
+}
+
+type RequestByUserID struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	UserId string         `protobuf:"bytes,2,opt,name=user_id,proto3" json:"user_id,omitempty"`
+}
+
+func (x *RequestByUserID) Reset() {
+	*x = RequestByUserID{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_requests_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RequestByUserID) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RequestByUserID) ProtoMessage() {}
+
+func (x *RequestByUserID) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_requests_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RequestByUserID.ProtoReflect.Descriptor instead.
+func (*RequestByUserID) Descriptor() ([]byte, []int) {
+	return file_qms_requests_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *RequestByUserID) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *RequestByUserID) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
 var File_qms_requests_proto protoreflect.FileDescriptor
 
 var file_qms_requests_proto_rawDesc = []byte{
@@ -389,7 +499,17 @@ var file_qms_requests_proto_rawDesc = []byte{
 	0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48, 0x65, 0x61,
 	0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x1a, 0x0a, 0x08, 0x75,
 	0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75,
-	0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x42, 0x51, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63,
+	0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0x50, 0x0a, 0x11, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x42, 0x79, 0x55, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1f, 0x0a, 0x06,
+	0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48,
+	0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x1a, 0x0a,
+	0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0x4c, 0x0a, 0x0f, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x42, 0x79, 0x55, 0x73, 0x65, 0x72, 0x49, 0x44, 0x12, 0x1f, 0x0a, 0x06,
+	0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48,
+	0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x18, 0x0a,
+	0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07,
+	0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x42, 0x51, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63,
 	0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
 	0x75, 0x66, 0x73, 0x42, 0x13, 0x51, 0x4d, 0x53, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50,
 	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68,
@@ -410,26 +530,30 @@ func file_qms_requests_proto_rawDescGZIP() []byte {
 	return file_qms_requests_proto_rawDescData
 }
 
-var file_qms_requests_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_qms_requests_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_qms_requests_proto_goTypes = []interface{}{
 	(*AllUserOveragesRequest)(nil),      // 0: AllUserOveragesRequest
 	(*UserResourceOveragesRequest)(nil), // 1: UserResourceOveragesRequest
 	(*IsOverageRequest)(nil),            // 2: IsOverageRequest
 	(*AddUsage)(nil),                    // 3: AddUsage
 	(*GetUsages)(nil),                   // 4: GetUsages
-	(*header.Header)(nil),               // 5: Header
+	(*RequestByUsername)(nil),           // 5: RequestByUsername
+	(*RequestByUserID)(nil),             // 6: RequestByUserID
+	(*header.Header)(nil),               // 7: Header
 }
 var file_qms_requests_proto_depIdxs = []int32{
-	5, // 0: AllUserOveragesRequest.header:type_name -> Header
-	5, // 1: UserResourceOveragesRequest.header:type_name -> Header
-	5, // 2: IsOverageRequest.header:type_name -> Header
-	5, // 3: AddUsage.header:type_name -> Header
-	5, // 4: GetUsages.header:type_name -> Header
-	5, // [5:5] is the sub-list for method output_type
-	5, // [5:5] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	7, // 0: AllUserOveragesRequest.header:type_name -> Header
+	7, // 1: UserResourceOveragesRequest.header:type_name -> Header
+	7, // 2: IsOverageRequest.header:type_name -> Header
+	7, // 3: AddUsage.header:type_name -> Header
+	7, // 4: GetUsages.header:type_name -> Header
+	7, // 5: RequestByUsername.header:type_name -> Header
+	7, // 6: RequestByUserID.header:type_name -> Header
+	7, // [7:7] is the sub-list for method output_type
+	7, // [7:7] is the sub-list for method input_type
+	7, // [7:7] is the sub-list for extension type_name
+	7, // [7:7] is the sub-list for extension extendee
+	0, // [0:7] is the sub-list for field type_name
 }
 
 func init() { file_qms_requests_proto_init() }
@@ -498,6 +622,30 @@ func file_qms_requests_proto_init() {
 				return nil
 			}
 		}
+		file_qms_requests_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RequestByUsername); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_qms_requests_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RequestByUserID); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -505,7 +653,7 @@ func file_qms_requests_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_qms_requests_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   5,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
