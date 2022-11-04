@@ -39,4 +39,58 @@ public interface QuotaOrBuilder extends
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
+
+  /**
+   * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+   * @return The createdBy.
+   */
+  java.lang.String getCreatedBy();
+  /**
+   * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+   * @return The bytes for createdBy.
+   */
+  com.google.protobuf.ByteString
+      getCreatedByBytes();
+
+  /**
+   * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+   * @return Whether the createdAt field is set.
+   */
+  boolean hasCreatedAt();
+  /**
+   * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+   * @return The createdAt.
+   */
+  com.google.protobuf.Timestamp getCreatedAt();
+  /**
+   * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+  /**
+   * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+   * @return The lastModifiedBy.
+   */
+  java.lang.String getLastModifiedBy();
+  /**
+   * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+   * @return The bytes for lastModifiedBy.
+   */
+  com.google.protobuf.ByteString
+      getLastModifiedByBytes();
+
+  /**
+   * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+   * @return Whether the lastModifiedAt field is set.
+   */
+  boolean hasLastModifiedAt();
+  /**
+   * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+   * @return The lastModifiedAt.
+   */
+  com.google.protobuf.Timestamp getLastModifiedAt();
+  /**
+   * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder();
 }

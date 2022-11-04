@@ -17,6 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private Quota() {
     uuid_ = "";
+    createdBy_ = "";
+    lastModifiedBy_ = "";
   }
 
   @java.lang.Override
@@ -69,6 +71,44 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(resourceType_);
               resourceType_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            createdBy_ = s;
+            break;
+          }
+          case 42: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (createdAt_ != null) {
+              subBuilder = createdAt_.toBuilder();
+            }
+            createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(createdAt_);
+              createdAt_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            lastModifiedBy_ = s;
+            break;
+          }
+          case 58: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (lastModifiedAt_ != null) {
+              subBuilder = lastModifiedAt_.toBuilder();
+            }
+            lastModifiedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastModifiedAt_);
+              lastModifiedAt_ = subBuilder.buildPartial();
             }
 
             break;
@@ -180,6 +220,134 @@ private static final long serialVersionUID = 0L;
     return getResourceType();
   }
 
+  public static final int CREATEDBY_FIELD_NUMBER = 4;
+  private volatile java.lang.Object createdBy_;
+  /**
+   * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+   * @return The createdBy.
+   */
+  @java.lang.Override
+  public java.lang.String getCreatedBy() {
+    java.lang.Object ref = createdBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      createdBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+   * @return The bytes for createdBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCreatedByBytes() {
+    java.lang.Object ref = createdBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      createdBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CREATEDAT_FIELD_NUMBER = 5;
+  private com.google.protobuf.Timestamp createdAt_;
+  /**
+   * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+   * @return Whether the createdAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasCreatedAt() {
+    return createdAt_ != null;
+  }
+  /**
+   * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+   * @return The createdAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getCreatedAt() {
+    return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+  }
+  /**
+   * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+    return getCreatedAt();
+  }
+
+  public static final int LASTMODIFIEDBY_FIELD_NUMBER = 6;
+  private volatile java.lang.Object lastModifiedBy_;
+  /**
+   * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+   * @return The lastModifiedBy.
+   */
+  @java.lang.Override
+  public java.lang.String getLastModifiedBy() {
+    java.lang.Object ref = lastModifiedBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lastModifiedBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+   * @return The bytes for lastModifiedBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLastModifiedByBytes() {
+    java.lang.Object ref = lastModifiedBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lastModifiedBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LASTMODIFIEDAT_FIELD_NUMBER = 7;
+  private com.google.protobuf.Timestamp lastModifiedAt_;
+  /**
+   * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+   * @return Whether the lastModifiedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastModifiedAt() {
+    return lastModifiedAt_ != null;
+  }
+  /**
+   * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+   * @return The lastModifiedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getLastModifiedAt() {
+    return lastModifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModifiedAt_;
+  }
+  /**
+   * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder() {
+    return getLastModifiedAt();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -203,6 +371,18 @@ private static final long serialVersionUID = 0L;
     if (resourceType_ != null) {
       output.writeMessage(3, getResourceType());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, createdBy_);
+    }
+    if (createdAt_ != null) {
+      output.writeMessage(5, getCreatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastModifiedBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lastModifiedBy_);
+    }
+    if (lastModifiedAt_ != null) {
+      output.writeMessage(7, getLastModifiedAt());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -222,6 +402,20 @@ private static final long serialVersionUID = 0L;
     if (resourceType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getResourceType());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, createdBy_);
+    }
+    if (createdAt_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getCreatedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastModifiedBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lastModifiedBy_);
+    }
+    if (lastModifiedAt_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getLastModifiedAt());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -248,6 +442,20 @@ private static final long serialVersionUID = 0L;
       if (!getResourceType()
           .equals(other.getResourceType())) return false;
     }
+    if (!getCreatedBy()
+        .equals(other.getCreatedBy())) return false;
+    if (hasCreatedAt() != other.hasCreatedAt()) return false;
+    if (hasCreatedAt()) {
+      if (!getCreatedAt()
+          .equals(other.getCreatedAt())) return false;
+    }
+    if (!getLastModifiedBy()
+        .equals(other.getLastModifiedBy())) return false;
+    if (hasLastModifiedAt() != other.hasLastModifiedAt()) return false;
+    if (hasLastModifiedAt()) {
+      if (!getLastModifiedAt()
+          .equals(other.getLastModifiedAt())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -267,6 +475,18 @@ private static final long serialVersionUID = 0L;
     if (hasResourceType()) {
       hash = (37 * hash) + RESOURCE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getResourceType().hashCode();
+    }
+    hash = (37 * hash) + CREATEDBY_FIELD_NUMBER;
+    hash = (53 * hash) + getCreatedBy().hashCode();
+    if (hasCreatedAt()) {
+      hash = (37 * hash) + CREATEDAT_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedAt().hashCode();
+    }
+    hash = (37 * hash) + LASTMODIFIEDBY_FIELD_NUMBER;
+    hash = (53 * hash) + getLastModifiedBy().hashCode();
+    if (hasLastModifiedAt()) {
+      hash = (37 * hash) + LASTMODIFIEDAT_FIELD_NUMBER;
+      hash = (53 * hash) + getLastModifiedAt().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -411,6 +631,22 @@ private static final long serialVersionUID = 0L;
         resourceType_ = null;
         resourceTypeBuilder_ = null;
       }
+      createdBy_ = "";
+
+      if (createdAtBuilder_ == null) {
+        createdAt_ = null;
+      } else {
+        createdAt_ = null;
+        createdAtBuilder_ = null;
+      }
+      lastModifiedBy_ = "";
+
+      if (lastModifiedAtBuilder_ == null) {
+        lastModifiedAt_ = null;
+      } else {
+        lastModifiedAt_ = null;
+        lastModifiedAtBuilder_ = null;
+      }
       return this;
     }
 
@@ -443,6 +679,18 @@ private static final long serialVersionUID = 0L;
         result.resourceType_ = resourceType_;
       } else {
         result.resourceType_ = resourceTypeBuilder_.build();
+      }
+      result.createdBy_ = createdBy_;
+      if (createdAtBuilder_ == null) {
+        result.createdAt_ = createdAt_;
+      } else {
+        result.createdAt_ = createdAtBuilder_.build();
+      }
+      result.lastModifiedBy_ = lastModifiedBy_;
+      if (lastModifiedAtBuilder_ == null) {
+        result.lastModifiedAt_ = lastModifiedAt_;
+      } else {
+        result.lastModifiedAt_ = lastModifiedAtBuilder_.build();
       }
       onBuilt();
       return result;
@@ -501,6 +749,20 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasResourceType()) {
         mergeResourceType(other.getResourceType());
+      }
+      if (!other.getCreatedBy().isEmpty()) {
+        createdBy_ = other.createdBy_;
+        onChanged();
+      }
+      if (other.hasCreatedAt()) {
+        mergeCreatedAt(other.getCreatedAt());
+      }
+      if (!other.getLastModifiedBy().isEmpty()) {
+        lastModifiedBy_ = other.lastModifiedBy_;
+        onChanged();
+      }
+      if (other.hasLastModifiedAt()) {
+        mergeLastModifiedAt(other.getLastModifiedAt());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -755,6 +1017,396 @@ private static final long serialVersionUID = 0L;
         resourceType_ = null;
       }
       return resourceTypeBuilder_;
+    }
+
+    private java.lang.Object createdBy_ = "";
+    /**
+     * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+     * @return The createdBy.
+     */
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+     * @return The bytes for createdBy.
+     */
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+     * @param value The createdBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedBy(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      createdBy_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreatedBy() {
+      
+      createdBy_ = getDefaultInstance().getCreatedBy();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
+     * @param value The bytes for createdBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      createdBy_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp createdAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    public boolean hasCreatedAt() {
+      return createdAtBuilder_ != null || createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     * @return The createdAt.
+     */
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      if (createdAtBuilder_ == null) {
+        return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+      } else {
+        return createdAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+      if (createdAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        createdAt_ = value;
+        onChanged();
+      } else {
+        createdAtBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    public Builder setCreatedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (createdAtBuilder_ == null) {
+        createdAt_ = builderForValue.build();
+        onChanged();
+      } else {
+        createdAtBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      if (createdAtBuilder_ == null) {
+        if (createdAt_ != null) {
+          createdAt_ =
+            com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+        } else {
+          createdAt_ = value;
+        }
+        onChanged();
+      } else {
+        createdAtBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    public Builder clearCreatedAt() {
+      if (createdAtBuilder_ == null) {
+        createdAt_ = null;
+        onChanged();
+      } else {
+        createdAt_ = null;
+        createdAtBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+      
+      onChanged();
+      return getCreatedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      if (createdAtBuilder_ != null) {
+        return createdAtBuilder_.getMessageOrBuilder();
+      } else {
+        return createdAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getCreatedAtFieldBuilder() {
+      if (createdAtBuilder_ == null) {
+        createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getCreatedAt(),
+                getParentForChildren(),
+                isClean());
+        createdAt_ = null;
+      }
+      return createdAtBuilder_;
+    }
+
+    private java.lang.Object lastModifiedBy_ = "";
+    /**
+     * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+     * @return The lastModifiedBy.
+     */
+    public java.lang.String getLastModifiedBy() {
+      java.lang.Object ref = lastModifiedBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastModifiedBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+     * @return The bytes for lastModifiedBy.
+     */
+    public com.google.protobuf.ByteString
+        getLastModifiedByBytes() {
+      java.lang.Object ref = lastModifiedBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastModifiedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+     * @param value The lastModifiedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastModifiedBy(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      lastModifiedBy_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastModifiedBy() {
+      
+      lastModifiedBy_ = getDefaultInstance().getLastModifiedBy();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
+     * @param value The bytes for lastModifiedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastModifiedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      lastModifiedBy_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp lastModifiedAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastModifiedAtBuilder_;
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     * @return Whether the lastModifiedAt field is set.
+     */
+    public boolean hasLastModifiedAt() {
+      return lastModifiedAtBuilder_ != null || lastModifiedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     * @return The lastModifiedAt.
+     */
+    public com.google.protobuf.Timestamp getLastModifiedAt() {
+      if (lastModifiedAtBuilder_ == null) {
+        return lastModifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModifiedAt_;
+      } else {
+        return lastModifiedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    public Builder setLastModifiedAt(com.google.protobuf.Timestamp value) {
+      if (lastModifiedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastModifiedAt_ = value;
+        onChanged();
+      } else {
+        lastModifiedAtBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    public Builder setLastModifiedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (lastModifiedAtBuilder_ == null) {
+        lastModifiedAt_ = builderForValue.build();
+        onChanged();
+      } else {
+        lastModifiedAtBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    public Builder mergeLastModifiedAt(com.google.protobuf.Timestamp value) {
+      if (lastModifiedAtBuilder_ == null) {
+        if (lastModifiedAt_ != null) {
+          lastModifiedAt_ =
+            com.google.protobuf.Timestamp.newBuilder(lastModifiedAt_).mergeFrom(value).buildPartial();
+        } else {
+          lastModifiedAt_ = value;
+        }
+        onChanged();
+      } else {
+        lastModifiedAtBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    public Builder clearLastModifiedAt() {
+      if (lastModifiedAtBuilder_ == null) {
+        lastModifiedAt_ = null;
+        onChanged();
+      } else {
+        lastModifiedAt_ = null;
+        lastModifiedAtBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getLastModifiedAtBuilder() {
+      
+      onChanged();
+      return getLastModifiedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder() {
+      if (lastModifiedAtBuilder_ != null) {
+        return lastModifiedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return lastModifiedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : lastModifiedAt_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getLastModifiedAtFieldBuilder() {
+      if (lastModifiedAtBuilder_ == null) {
+        lastModifiedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getLastModifiedAt(),
+                getParentForChildren(),
+                isClean());
+        lastModifiedAt_ = null;
+      }
+      return lastModifiedAtBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

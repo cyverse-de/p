@@ -38,22 +38,28 @@ public final class QMSQuotaProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020qms_quotas.proto\032\014header.proto\032\016svcerr" +
-      "or.proto\032\030qms_resource_types.proto\"Y\n\005Qu" +
-      "ota\022\014\n\004uuid\030\001 \001(\t\022\r\n\005quota\030\002 \001(\002\0223\n\rreso" +
-      "urce_type\030\003 \001(\0132\r.ResourceTypeR\rresource" +
-      "_type\"]\n\rQuotaResponse\022\027\n\006header\030\001 \001(\0132\007" +
-      ".Header\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\025\n" +
-      "\005quota\030\003 \001(\0132\006.Quota\"Z\n\tQuotaList\022\027\n\006hea" +
-      "der\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.Serv" +
-      "iceError\022\026\n\006quotas\030\003 \003(\0132\006.QuotaBO\n\030org." +
-      "cyverse.de.protobufsB\021QMSQuotaProtobufsP" +
-      "\001Z\036github.com/cyverse-de/p/go/qmsb\006proto" +
-      "3"
+      "\n\020qms_quotas.proto\032\037google/protobuf/time" +
+      "stamp.proto\032\014header.proto\032\016svcerror.prot" +
+      "o\032\030qms_resource_types.proto\"\243\002\n\005Quota\022\014\n" +
+      "\004uuid\030\001 \001(\t\022\r\n\005quota\030\002 \001(\002\0223\n\rresource_t" +
+      "ype\030\003 \001(\0132\r.ResourceTypeR\rresource_type\022" +
+      "\035\n\tCreatedBy\030\004 \001(\tR\ncreated_by\0229\n\tCreate" +
+      "dAt\030\005 \001(\0132\032.google.protobuf.TimestampR\nc" +
+      "reated_at\022(\n\016LastModifiedBy\030\006 \001(\tR\020last_" +
+      "modified_by\022D\n\016LastModifiedAt\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\020last_modified_a" +
+      "t\"]\n\rQuotaResponse\022\027\n\006header\030\001 \001(\0132\007.Hea" +
+      "der\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\025\n\005quo" +
+      "ta\030\003 \001(\0132\006.Quota\"Z\n\tQuotaList\022\027\n\006header\030" +
+      "\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.ServiceE" +
+      "rror\022\026\n\006quotas\030\003 \003(\0132\006.QuotaBO\n\030org.cyve" +
+      "rse.de.protobufsB\021QMSQuotaProtobufsP\001Z\036g" +
+      "ithub.com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor(),
@@ -63,7 +69,7 @@ public final class QMSQuotaProtobufs {
     internal_static_Quota_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Quota_descriptor,
-        new java.lang.String[] { "Uuid", "Quota", "ResourceType", });
+        new java.lang.String[] { "Uuid", "Quota", "ResourceType", "CreatedBy", "CreatedAt", "LastModifiedBy", "LastModifiedAt", });
     internal_static_QuotaResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_QuotaResponse_fieldAccessorTable = new
@@ -76,6 +82,7 @@ public final class QMSQuotaProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_QuotaList_descriptor,
         new java.lang.String[] { "Header", "Error", "Quotas", });
+    com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor();
