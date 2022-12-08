@@ -25,3 +25,18 @@ message QMSUserList {
     ServiceError error = 2;
     repeated QMSUser users  = 3;
 }
+
+message AddUserRequest {
+    Header header = 1;
+    string username = 3;
+    string plan_name = 4;
+}
+
+message AddUserResponse {
+    Header header = 1;
+    ServiceError error = 2;
+    string uuid = 3;
+    string username = 4;
+    string plan_name = 5;
+    string plan_uuid = 6;
+}

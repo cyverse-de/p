@@ -36,3 +36,13 @@ message UserPlanList {
     ServiceError error = 2;
     repeated UserPlan user_plans = 3 [json_name = "user_plans"];
 }
+
+message ChangeUserPlanRequest {
+    Header header = 1;
+    string username = 2;
+    oneof plan {
+        string uuid = 3;
+        string name = 4;
+    }
+}
+

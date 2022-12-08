@@ -244,6 +244,102 @@ func (x *UserPlanList) GetUserPlans() []*UserPlan {
 	return nil
 }
 
+type ChangeUserPlanRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header   *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Username string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	// Types that are assignable to Plan:
+	//	*ChangeUserPlanRequest_Uuid
+	//	*ChangeUserPlanRequest_Name
+	Plan isChangeUserPlanRequest_Plan `protobuf_oneof:"plan"`
+}
+
+func (x *ChangeUserPlanRequest) Reset() {
+	*x = ChangeUserPlanRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_user_plans_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ChangeUserPlanRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ChangeUserPlanRequest) ProtoMessage() {}
+
+func (x *ChangeUserPlanRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_user_plans_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ChangeUserPlanRequest.ProtoReflect.Descriptor instead.
+func (*ChangeUserPlanRequest) Descriptor() ([]byte, []int) {
+	return file_qms_user_plans_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ChangeUserPlanRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *ChangeUserPlanRequest) GetUsername() string {
+	if x != nil {
+		return x.Username
+	}
+	return ""
+}
+
+func (m *ChangeUserPlanRequest) GetPlan() isChangeUserPlanRequest_Plan {
+	if m != nil {
+		return m.Plan
+	}
+	return nil
+}
+
+func (x *ChangeUserPlanRequest) GetUuid() string {
+	if x, ok := x.GetPlan().(*ChangeUserPlanRequest_Uuid); ok {
+		return x.Uuid
+	}
+	return ""
+}
+
+func (x *ChangeUserPlanRequest) GetName() string {
+	if x, ok := x.GetPlan().(*ChangeUserPlanRequest_Name); ok {
+		return x.Name
+	}
+	return ""
+}
+
+type isChangeUserPlanRequest_Plan interface {
+	isChangeUserPlanRequest_Plan()
+}
+
+type ChangeUserPlanRequest_Uuid struct {
+	Uuid string `protobuf:"bytes,3,opt,name=uuid,proto3,oneof"`
+}
+
+type ChangeUserPlanRequest_Name struct {
+	Name string `protobuf:"bytes,4,opt,name=name,proto3,oneof"`
+}
+
+func (*ChangeUserPlanRequest_Uuid) isChangeUserPlanRequest_Plan() {}
+
+func (*ChangeUserPlanRequest_Name) isChangeUserPlanRequest_Plan() {}
+
 var File_qms_user_plans_proto protoreflect.FileDescriptor
 
 var file_qms_user_plans_proto_rawDesc = []byte{
@@ -292,13 +388,21 @@ var file_qms_user_plans_proto_rawDesc = []byte{
 	0x72, 0x72, 0x6f, 0x72, 0x52, 0x05, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x12, 0x29, 0x0a, 0x0a, 0x75,
 	0x73, 0x65, 0x72, 0x5f, 0x70, 0x6c, 0x61, 0x6e, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32,
 	0x09, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x50, 0x6c, 0x61, 0x6e, 0x52, 0x0a, 0x75, 0x73, 0x65, 0x72,
-	0x5f, 0x70, 0x6c, 0x61, 0x6e, 0x73, 0x42, 0x52, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63, 0x79,
-	0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
-	0x66, 0x73, 0x42, 0x14, 0x51, 0x4d, 0x53, 0x55, 0x73, 0x65, 0x72, 0x50, 0x6c, 0x61, 0x6e, 0x50,
-	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68,
-	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64,
-	0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x5f, 0x70, 0x6c, 0x61, 0x6e, 0x73, 0x22, 0x88, 0x01, 0x0a, 0x15, 0x43, 0x68, 0x61, 0x6e, 0x67,
+	0x65, 0x55, 0x73, 0x65, 0x72, 0x50, 0x6c, 0x61, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x1f, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x07, 0x2e, 0x48, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65,
+	0x72, 0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x14, 0x0a,
+	0x04, 0x75, 0x75, 0x69, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x04, 0x75,
+	0x75, 0x69, 0x64, 0x12, 0x14, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x09, 0x48, 0x00, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x42, 0x06, 0x0a, 0x04, 0x70, 0x6c, 0x61,
+	0x6e, 0x42, 0x52, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65,
+	0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x42, 0x14, 0x51,
+	0x4d, 0x53, 0x55, 0x73, 0x65, 0x72, 0x50, 0x6c, 0x61, 0x6e, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
+	0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67,
+	0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -313,37 +417,39 @@ func file_qms_user_plans_proto_rawDescGZIP() []byte {
 	return file_qms_user_plans_proto_rawDescData
 }
 
-var file_qms_user_plans_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_qms_user_plans_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_qms_user_plans_proto_goTypes = []interface{}{
 	(*UserPlan)(nil),              // 0: UserPlan
 	(*UserPlanResponse)(nil),      // 1: UserPlanResponse
 	(*UserPlanList)(nil),          // 2: UserPlanList
-	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
-	(*QMSUser)(nil),               // 4: QMSUser
-	(*Plan)(nil),                  // 5: Plan
-	(*Quota)(nil),                 // 6: Quota
-	(*Usage)(nil),                 // 7: Usage
-	(*header.Header)(nil),         // 8: Header
-	(*svcerror.ServiceError)(nil), // 9: ServiceError
+	(*ChangeUserPlanRequest)(nil), // 3: ChangeUserPlanRequest
+	(*timestamppb.Timestamp)(nil), // 4: google.protobuf.Timestamp
+	(*QMSUser)(nil),               // 5: QMSUser
+	(*Plan)(nil),                  // 6: Plan
+	(*Quota)(nil),                 // 7: Quota
+	(*Usage)(nil),                 // 8: Usage
+	(*header.Header)(nil),         // 9: Header
+	(*svcerror.ServiceError)(nil), // 10: ServiceError
 }
 var file_qms_user_plans_proto_depIdxs = []int32{
-	3,  // 0: UserPlan.effective_start_date:type_name -> google.protobuf.Timestamp
-	3,  // 1: UserPlan.effective_end_date:type_name -> google.protobuf.Timestamp
-	4,  // 2: UserPlan.user:type_name -> QMSUser
-	5,  // 3: UserPlan.plan:type_name -> Plan
-	6,  // 4: UserPlan.quotas:type_name -> Quota
-	7,  // 5: UserPlan.usages:type_name -> Usage
-	8,  // 6: UserPlanResponse.header:type_name -> Header
-	9,  // 7: UserPlanResponse.error:type_name -> ServiceError
+	4,  // 0: UserPlan.effective_start_date:type_name -> google.protobuf.Timestamp
+	4,  // 1: UserPlan.effective_end_date:type_name -> google.protobuf.Timestamp
+	5,  // 2: UserPlan.user:type_name -> QMSUser
+	6,  // 3: UserPlan.plan:type_name -> Plan
+	7,  // 4: UserPlan.quotas:type_name -> Quota
+	8,  // 5: UserPlan.usages:type_name -> Usage
+	9,  // 6: UserPlanResponse.header:type_name -> Header
+	10, // 7: UserPlanResponse.error:type_name -> ServiceError
 	0,  // 8: UserPlanResponse.user_plan:type_name -> UserPlan
-	8,  // 9: UserPlanList.header:type_name -> Header
-	9,  // 10: UserPlanList.error:type_name -> ServiceError
+	9,  // 9: UserPlanList.header:type_name -> Header
+	10, // 10: UserPlanList.error:type_name -> ServiceError
 	0,  // 11: UserPlanList.user_plans:type_name -> UserPlan
-	12, // [12:12] is the sub-list for method output_type
-	12, // [12:12] is the sub-list for method input_type
-	12, // [12:12] is the sub-list for extension type_name
-	12, // [12:12] is the sub-list for extension extendee
-	0,  // [0:12] is the sub-list for field type_name
+	9,  // 12: ChangeUserPlanRequest.header:type_name -> Header
+	13, // [13:13] is the sub-list for method output_type
+	13, // [13:13] is the sub-list for method input_type
+	13, // [13:13] is the sub-list for extension type_name
+	13, // [13:13] is the sub-list for extension extendee
+	0,  // [0:13] is the sub-list for field type_name
 }
 
 func init() { file_qms_user_plans_proto_init() }
@@ -392,6 +498,22 @@ func file_qms_user_plans_proto_init() {
 				return nil
 			}
 		}
+		file_qms_user_plans_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ChangeUserPlanRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+	}
+	file_qms_user_plans_proto_msgTypes[3].OneofWrappers = []interface{}{
+		(*ChangeUserPlanRequest_Uuid)(nil),
+		(*ChangeUserPlanRequest_Name)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -399,7 +521,7 @@ func file_qms_user_plans_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_qms_user_plans_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

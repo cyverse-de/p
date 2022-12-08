@@ -29,6 +29,11 @@ public final class QMSUserPlanProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_UserPlanList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ChangeUserPlanRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ChangeUserPlanRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -54,9 +59,12 @@ public final class QMSUserPlanProtobufs {
       "\003 \001(\0132\t.UserPlanR\tuser_plan\"p\n\014UserPlanL" +
       "ist\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 " +
       "\001(\0132\r.ServiceError\022)\n\nuser_plans\030\003 \003(\0132\t" +
-      ".UserPlanR\nuser_plansBR\n\030org.cyverse.de." +
-      "protobufsB\024QMSUserPlanProtobufsP\001Z\036githu" +
-      "b.com/cyverse-de/p/go/qmsb\006proto3"
+      ".UserPlanR\nuser_plans\"j\n\025ChangeUserPlanR" +
+      "equest\022\027\n\006header\030\001 \001(\0132\007.Header\022\020\n\010usern" +
+      "ame\030\002 \001(\t\022\016\n\004uuid\030\003 \001(\tH\000\022\016\n\004name\030\004 \001(\tH" +
+      "\000B\006\n\004planBR\n\030org.cyverse.de.protobufsB\024Q" +
+      "MSUserPlanProtobufsP\001Z\036github.com/cyvers" +
+      "e-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,6 +95,12 @@ public final class QMSUserPlanProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_UserPlanList_descriptor,
         new java.lang.String[] { "Header", "Error", "UserPlans", });
+    internal_static_ChangeUserPlanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ChangeUserPlanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ChangeUserPlanRequest_descriptor,
+        new java.lang.String[] { "Header", "Username", "Uuid", "Name", "Plan", });
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

@@ -29,6 +29,16 @@ public final class QMSUSerProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_QMSUserList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AddUserRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AddUserRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AddUserResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AddUserResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,9 +55,14 @@ public final class QMSUSerProtobufs {
       "rror\022\026\n\004user\030\003 \001(\0132\010.QMSUser\"]\n\013QMSUserL" +
       "ist\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 " +
       "\001(\0132\r.ServiceError\022\027\n\005users\030\003 \003(\0132\010.QMSU" +
-      "serBN\n\030org.cyverse.de.protobufsB\020QMSUSer" +
-      "ProtobufsP\001Z\036github.com/cyverse-de/p/go/" +
-      "qmsb\006proto3"
+      "ser\"N\n\016AddUserRequest\022\027\n\006header\030\001 \001(\0132\007." +
+      "Header\022\020\n\010username\030\003 \001(\t\022\021\n\tplan_name\030\004 " +
+      "\001(\t\"\216\001\n\017AddUserResponse\022\027\n\006header\030\001 \001(\0132" +
+      "\007.Header\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\014" +
+      "\n\004uuid\030\003 \001(\t\022\020\n\010username\030\004 \001(\t\022\021\n\tplan_n" +
+      "ame\030\005 \001(\t\022\021\n\tplan_uuid\030\006 \001(\tBN\n\030org.cyve" +
+      "rse.de.protobufsB\020QMSUSerProtobufsP\001Z\036gi" +
+      "thub.com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,6 +88,18 @@ public final class QMSUSerProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_QMSUserList_descriptor,
         new java.lang.String[] { "Header", "Error", "Users", });
+    internal_static_AddUserRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_AddUserRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AddUserRequest_descriptor,
+        new java.lang.String[] { "Header", "Username", "PlanName", });
+    internal_static_AddUserResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_AddUserResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AddUserResponse_descriptor,
+        new java.lang.String[] { "Header", "Error", "Uuid", "Username", "PlanName", "PlanUuid", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
   }
