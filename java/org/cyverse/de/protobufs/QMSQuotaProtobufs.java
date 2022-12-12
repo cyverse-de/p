@@ -29,6 +29,11 @@ public final class QMSQuotaProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_QuotaList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AddQuotaRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AddQuotaRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -52,9 +57,11 @@ public final class QMSQuotaProtobufs {
       "der\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\025\n\005quo" +
       "ta\030\003 \001(\0132\006.Quota\"Z\n\tQuotaList\022\027\n\006header\030" +
       "\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.ServiceE" +
-      "rror\022\026\n\006quotas\030\003 \003(\0132\006.QuotaBO\n\030org.cyve" +
-      "rse.de.protobufsB\021QMSQuotaProtobufsP\001Z\036g" +
-      "ithub.com/cyverse-de/p/go/qmsb\006proto3"
+      "rror\022\026\n\006quotas\030\003 \003(\0132\006.Quota\"A\n\017AddQuota" +
+      "Request\022\027\n\006header\030\001 \001(\0132\007.Header\022\025\n\005quot" +
+      "a\030\002 \001(\0132\006.QuotaBO\n\030org.cyverse.de.protob" +
+      "ufsB\021QMSQuotaProtobufsP\001Z\036github.com/cyv" +
+      "erse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -82,6 +89,12 @@ public final class QMSQuotaProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_QuotaList_descriptor,
         new java.lang.String[] { "Header", "Error", "Quotas", });
+    internal_static_AddQuotaRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_AddQuotaRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AddQuotaRequest_descriptor,
+        new java.lang.String[] { "Header", "Quota", });
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

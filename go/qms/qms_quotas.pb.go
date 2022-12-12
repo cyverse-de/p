@@ -244,6 +244,61 @@ func (x *QuotaList) GetQuotas() []*Quota {
 	return nil
 }
 
+type AddQuotaRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Quota  *Quota         `protobuf:"bytes,2,opt,name=quota,proto3" json:"quota,omitempty"`
+}
+
+func (x *AddQuotaRequest) Reset() {
+	*x = AddQuotaRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_quotas_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AddQuotaRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddQuotaRequest) ProtoMessage() {}
+
+func (x *AddQuotaRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_quotas_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddQuotaRequest.ProtoReflect.Descriptor instead.
+func (*AddQuotaRequest) Descriptor() ([]byte, []int) {
+	return file_qms_quotas_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *AddQuotaRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *AddQuotaRequest) GetQuota() *Quota {
+	if x != nil {
+		return x.Quota
+	}
+	return nil
+}
+
 var File_qms_quotas_proto protoreflect.FileDescriptor
 
 var file_qms_quotas_proto_rawDesc = []byte{
@@ -287,12 +342,18 @@ var file_qms_quotas_proto_rawDesc = []byte{
 	0x32, 0x0d, 0x2e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x52,
 	0x05, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x12, 0x1e, 0x0a, 0x06, 0x71, 0x75, 0x6f, 0x74, 0x61, 0x73,
 	0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x06, 0x2e, 0x51, 0x75, 0x6f, 0x74, 0x61, 0x52, 0x06,
-	0x71, 0x75, 0x6f, 0x74, 0x61, 0x73, 0x42, 0x4f, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63, 0x79,
-	0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75,
-	0x66, 0x73, 0x42, 0x11, 0x51, 0x4d, 0x53, 0x51, 0x75, 0x6f, 0x74, 0x61, 0x50, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e,
-	0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f, 0x70,
-	0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x71, 0x75, 0x6f, 0x74, 0x61, 0x73, 0x22, 0x50, 0x0a, 0x0f, 0x41, 0x64, 0x64, 0x51, 0x75, 0x6f,
+	0x74, 0x61, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a, 0x06, 0x68, 0x65, 0x61,
+	0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48, 0x65, 0x61, 0x64,
+	0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x1c, 0x0a, 0x05, 0x71, 0x75,
+	0x6f, 0x74, 0x61, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x06, 0x2e, 0x51, 0x75, 0x6f, 0x74,
+	0x61, 0x52, 0x05, 0x71, 0x75, 0x6f, 0x74, 0x61, 0x42, 0x4f, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e,
+	0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x62, 0x75, 0x66, 0x73, 0x42, 0x11, 0x51, 0x4d, 0x53, 0x51, 0x75, 0x6f, 0x74, 0x61, 0x50, 0x72,
+	0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68, 0x75,
+	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64, 0x65,
+	0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -307,31 +368,34 @@ func file_qms_quotas_proto_rawDescGZIP() []byte {
 	return file_qms_quotas_proto_rawDescData
 }
 
-var file_qms_quotas_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_qms_quotas_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_qms_quotas_proto_goTypes = []interface{}{
 	(*Quota)(nil),                 // 0: Quota
 	(*QuotaResponse)(nil),         // 1: QuotaResponse
 	(*QuotaList)(nil),             // 2: QuotaList
-	(*ResourceType)(nil),          // 3: ResourceType
-	(*timestamppb.Timestamp)(nil), // 4: google.protobuf.Timestamp
-	(*header.Header)(nil),         // 5: Header
-	(*svcerror.ServiceError)(nil), // 6: ServiceError
+	(*AddQuotaRequest)(nil),       // 3: AddQuotaRequest
+	(*ResourceType)(nil),          // 4: ResourceType
+	(*timestamppb.Timestamp)(nil), // 5: google.protobuf.Timestamp
+	(*header.Header)(nil),         // 6: Header
+	(*svcerror.ServiceError)(nil), // 7: ServiceError
 }
 var file_qms_quotas_proto_depIdxs = []int32{
-	3, // 0: Quota.resource_type:type_name -> ResourceType
-	4, // 1: Quota.CreatedAt:type_name -> google.protobuf.Timestamp
-	4, // 2: Quota.LastModifiedAt:type_name -> google.protobuf.Timestamp
-	5, // 3: QuotaResponse.header:type_name -> Header
-	6, // 4: QuotaResponse.error:type_name -> ServiceError
-	0, // 5: QuotaResponse.quota:type_name -> Quota
-	5, // 6: QuotaList.header:type_name -> Header
-	6, // 7: QuotaList.error:type_name -> ServiceError
-	0, // 8: QuotaList.quotas:type_name -> Quota
-	9, // [9:9] is the sub-list for method output_type
-	9, // [9:9] is the sub-list for method input_type
-	9, // [9:9] is the sub-list for extension type_name
-	9, // [9:9] is the sub-list for extension extendee
-	0, // [0:9] is the sub-list for field type_name
+	4,  // 0: Quota.resource_type:type_name -> ResourceType
+	5,  // 1: Quota.CreatedAt:type_name -> google.protobuf.Timestamp
+	5,  // 2: Quota.LastModifiedAt:type_name -> google.protobuf.Timestamp
+	6,  // 3: QuotaResponse.header:type_name -> Header
+	7,  // 4: QuotaResponse.error:type_name -> ServiceError
+	0,  // 5: QuotaResponse.quota:type_name -> Quota
+	6,  // 6: QuotaList.header:type_name -> Header
+	7,  // 7: QuotaList.error:type_name -> ServiceError
+	0,  // 8: QuotaList.quotas:type_name -> Quota
+	6,  // 9: AddQuotaRequest.header:type_name -> Header
+	0,  // 10: AddQuotaRequest.quota:type_name -> Quota
+	11, // [11:11] is the sub-list for method output_type
+	11, // [11:11] is the sub-list for method input_type
+	11, // [11:11] is the sub-list for extension type_name
+	11, // [11:11] is the sub-list for extension extendee
+	0,  // [0:11] is the sub-list for field type_name
 }
 
 func init() { file_qms_quotas_proto_init() }
@@ -377,6 +441,18 @@ func file_qms_quotas_proto_init() {
 				return nil
 			}
 		}
+		file_qms_quotas_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AddQuotaRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -384,7 +460,7 @@ func file_qms_quotas_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_qms_quotas_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
