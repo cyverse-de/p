@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     createdBy_ = "";
     lastModifiedBy_ = "";
+    userPlanId_ = "";
   }
 
   @java.lang.Override
@@ -111,6 +112,12 @@ private static final long serialVersionUID = 0L;
               lastModifiedAt_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            userPlanId_ = s;
             break;
           }
           default: {
@@ -348,6 +355,44 @@ private static final long serialVersionUID = 0L;
     return getLastModifiedAt();
   }
 
+  public static final int USER_PLAN_ID_FIELD_NUMBER = 8;
+  private volatile java.lang.Object userPlanId_;
+  /**
+   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+   * @return The userPlanId.
+   */
+  @java.lang.Override
+  public java.lang.String getUserPlanId() {
+    java.lang.Object ref = userPlanId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userPlanId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+   * @return The bytes for userPlanId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserPlanIdBytes() {
+    java.lang.Object ref = userPlanId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userPlanId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -383,6 +428,9 @@ private static final long serialVersionUID = 0L;
     if (lastModifiedAt_ != null) {
       output.writeMessage(7, getLastModifiedAt());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPlanId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, userPlanId_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -416,6 +464,9 @@ private static final long serialVersionUID = 0L;
     if (lastModifiedAt_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getLastModifiedAt());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPlanId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, userPlanId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -456,6 +507,8 @@ private static final long serialVersionUID = 0L;
       if (!getLastModifiedAt()
           .equals(other.getLastModifiedAt())) return false;
     }
+    if (!getUserPlanId()
+        .equals(other.getUserPlanId())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -488,6 +541,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LASTMODIFIEDAT_FIELD_NUMBER;
       hash = (53 * hash) + getLastModifiedAt().hashCode();
     }
+    hash = (37 * hash) + USER_PLAN_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserPlanId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -647,6 +702,8 @@ private static final long serialVersionUID = 0L;
         lastModifiedAt_ = null;
         lastModifiedAtBuilder_ = null;
       }
+      userPlanId_ = "";
+
       return this;
     }
 
@@ -692,6 +749,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.lastModifiedAt_ = lastModifiedAtBuilder_.build();
       }
+      result.userPlanId_ = userPlanId_;
       onBuilt();
       return result;
     }
@@ -763,6 +821,10 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasLastModifiedAt()) {
         mergeLastModifiedAt(other.getLastModifiedAt());
+      }
+      if (!other.getUserPlanId().isEmpty()) {
+        userPlanId_ = other.userPlanId_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1407,6 +1469,82 @@ private static final long serialVersionUID = 0L;
         lastModifiedAt_ = null;
       }
       return lastModifiedAtBuilder_;
+    }
+
+    private java.lang.Object userPlanId_ = "";
+    /**
+     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+     * @return The userPlanId.
+     */
+    public java.lang.String getUserPlanId() {
+      java.lang.Object ref = userPlanId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userPlanId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+     * @return The bytes for userPlanId.
+     */
+    public com.google.protobuf.ByteString
+        getUserPlanIdBytes() {
+      java.lang.Object ref = userPlanId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userPlanId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+     * @param value The userPlanId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserPlanId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      userPlanId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserPlanId() {
+      
+      userPlanId_ = getDefaultInstance().getUserPlanId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+     * @param value The bytes for userPlanId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserPlanIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      userPlanId_ = value;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

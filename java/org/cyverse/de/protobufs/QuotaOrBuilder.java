@@ -93,4 +93,16 @@ public interface QuotaOrBuilder extends
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder();
+
+  /**
+   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+   * @return The userPlanId.
+   */
+  java.lang.String getUserPlanId();
+  /**
+   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+   * @return The bytes for userPlanId.
+   */
+  com.google.protobuf.ByteString
+      getUserPlanIdBytes();
 }
