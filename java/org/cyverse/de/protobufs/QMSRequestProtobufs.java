@@ -49,6 +49,11 @@ public final class QMSRequestProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_RequestByUserID_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_NoParamsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_NoParamsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -75,9 +80,11 @@ public final class QMSRequestProtobufs {
       "ername\030\002 \001(\t\">\n\021RequestByUsername\022\027\n\006hea" +
       "der\030\001 \001(\0132\007.Header\022\020\n\010username\030\002 \001(\t\"D\n\017" +
       "RequestByUserID\022\027\n\006header\030\001 \001(\0132\007.Header" +
-      "\022\030\n\007user_id\030\002 \001(\tR\007user_idBQ\n\030org.cyvers" +
-      "e.de.protobufsB\023QMSRequestProtobufsP\001Z\036g" +
-      "ithub.com/cyverse-de/p/go/qmsb\006proto3"
+      "\022\030\n\007user_id\030\002 \001(\tR\007user_id\"*\n\017NoParamsRe" +
+      "quest\022\027\n\006header\030\001 \001(\0132\007.HeaderBQ\n\030org.cy" +
+      "verse.de.protobufsB\023QMSRequestProtobufsP" +
+      "\001Z\036github.com/cyverse-de/p/go/qmsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -126,6 +133,12 @@ public final class QMSRequestProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RequestByUserID_descriptor,
         new java.lang.String[] { "Header", "UserId", });
+    internal_static_NoParamsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_NoParamsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_NoParamsRequest_descriptor,
+        new java.lang.String[] { "Header", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
   }
 

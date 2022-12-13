@@ -52,3 +52,7 @@ message RequestByUserID {
     Header header = 1;
     string user_id = 2 [json_name = "user_id"];
 }
+
+message NoParamsRequest {
+    Header header = 1;
+}

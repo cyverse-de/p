@@ -455,6 +455,53 @@ func (x *RequestByUserID) GetUserId() string {
 	return ""
 }
 
+type NoParamsRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+}
+
+func (x *NoParamsRequest) Reset() {
+	*x = NoParamsRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_requests_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *NoParamsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*NoParamsRequest) ProtoMessage() {}
+
+func (x *NoParamsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_requests_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use NoParamsRequest.ProtoReflect.Descriptor instead.
+func (*NoParamsRequest) Descriptor() ([]byte, []int) {
+	return file_qms_requests_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *NoParamsRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
 var File_qms_requests_proto protoreflect.FileDescriptor
 
 var file_qms_requests_proto_rawDesc = []byte{
@@ -509,13 +556,16 @@ var file_qms_requests_proto_rawDesc = []byte{
 	0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48,
 	0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x18, 0x0a,
 	0x07, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07,
-	0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x42, 0x51, 0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63,
-	0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
-	0x75, 0x66, 0x73, 0x42, 0x13, 0x51, 0x4d, 0x53, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50,
-	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68,
-	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64,
-	0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x75, 0x73, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x22, 0x32, 0x0a, 0x0f, 0x4e, 0x6f, 0x50, 0x61, 0x72,
+	0x61, 0x6d, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a, 0x06, 0x68, 0x65,
+	0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48, 0x65, 0x61,
+	0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x42, 0x51, 0x0a, 0x18, 0x6f,
+	0x72, 0x67, 0x2e, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x42, 0x13, 0x51, 0x4d, 0x53, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72,
+	0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -530,7 +580,7 @@ func file_qms_requests_proto_rawDescGZIP() []byte {
 	return file_qms_requests_proto_rawDescData
 }
 
-var file_qms_requests_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_qms_requests_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_qms_requests_proto_goTypes = []interface{}{
 	(*AllUserOveragesRequest)(nil),      // 0: AllUserOveragesRequest
 	(*UserResourceOveragesRequest)(nil), // 1: UserResourceOveragesRequest
@@ -539,21 +589,23 @@ var file_qms_requests_proto_goTypes = []interface{}{
 	(*GetUsages)(nil),                   // 4: GetUsages
 	(*RequestByUsername)(nil),           // 5: RequestByUsername
 	(*RequestByUserID)(nil),             // 6: RequestByUserID
-	(*header.Header)(nil),               // 7: Header
+	(*NoParamsRequest)(nil),             // 7: NoParamsRequest
+	(*header.Header)(nil),               // 8: Header
 }
 var file_qms_requests_proto_depIdxs = []int32{
-	7, // 0: AllUserOveragesRequest.header:type_name -> Header
-	7, // 1: UserResourceOveragesRequest.header:type_name -> Header
-	7, // 2: IsOverageRequest.header:type_name -> Header
-	7, // 3: AddUsage.header:type_name -> Header
-	7, // 4: GetUsages.header:type_name -> Header
-	7, // 5: RequestByUsername.header:type_name -> Header
-	7, // 6: RequestByUserID.header:type_name -> Header
-	7, // [7:7] is the sub-list for method output_type
-	7, // [7:7] is the sub-list for method input_type
-	7, // [7:7] is the sub-list for extension type_name
-	7, // [7:7] is the sub-list for extension extendee
-	0, // [0:7] is the sub-list for field type_name
+	8, // 0: AllUserOveragesRequest.header:type_name -> Header
+	8, // 1: UserResourceOveragesRequest.header:type_name -> Header
+	8, // 2: IsOverageRequest.header:type_name -> Header
+	8, // 3: AddUsage.header:type_name -> Header
+	8, // 4: GetUsages.header:type_name -> Header
+	8, // 5: RequestByUsername.header:type_name -> Header
+	8, // 6: RequestByUserID.header:type_name -> Header
+	8, // 7: NoParamsRequest.header:type_name -> Header
+	8, // [8:8] is the sub-list for method output_type
+	8, // [8:8] is the sub-list for method input_type
+	8, // [8:8] is the sub-list for extension type_name
+	8, // [8:8] is the sub-list for extension extendee
+	0, // [0:8] is the sub-list for field type_name
 }
 
 func init() { file_qms_requests_proto_init() }
@@ -646,6 +698,18 @@ func file_qms_requests_proto_init() {
 				return nil
 			}
 		}
+		file_qms_requests_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*NoParamsRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -653,7 +717,7 @@ func file_qms_requests_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_qms_requests_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   7,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
