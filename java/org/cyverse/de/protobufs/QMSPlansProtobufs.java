@@ -44,6 +44,21 @@ public final class QMSPlansProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PlanList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PlanRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PlanRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AddPlanRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AddPlanRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AddPlanQuotaDefaultRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AddPlanQuotaDefaultRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -71,10 +86,16 @@ public final class QMSPlansProtobufs {
       "er\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.Servi" +
       "ceError\022\023\n\004plan\030\003 \001(\0132\005.Plan\"W\n\010PlanList" +
       "\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\013" +
-      "2\r.ServiceError\022\024\n\005plans\030\003 \003(\0132\005.PlanBO\n" +
-      "\030org.cyverse.de.protobufsB\021QMSPlansProto" +
-      "bufsP\001Z\036github.com/cyverse-de/p/go/qmsb\006" +
-      "proto3"
+      "2\r.ServiceError\022\024\n\005plans\030\003 \003(\0132\005.Plan\"@\n" +
+      "\013PlanRequest\022\027\n\006header\030\001 \001(\0132\007.Header\022\030\n" +
+      "\007plan_id\030\002 \001(\tR\007plan_id\">\n\016AddPlanReques" +
+      "t\022\027\n\006header\030\001 \001(\0132\007.Header\022\023\n\004plan\030\002 \001(\013" +
+      "2\005.Plan\"\210\001\n\032AddPlanQuotaDefaultRequest\022\027" +
+      "\n\006header\030\001 \001(\0132\007.Header\022\034\n\tplan_name\030\002 \001" +
+      "(\tR\tplan_name\0223\n\rquota_default\030\003 \001(\0132\r.Q" +
+      "uotaDefaultR\rquota_defaultBO\n\030org.cyvers" +
+      "e.de.protobufsB\021QMSPlansProtobufsP\001Z\036git" +
+      "hub.com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -119,6 +140,24 @@ public final class QMSPlansProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlanList_descriptor,
         new java.lang.String[] { "Header", "Error", "Plans", });
+    internal_static_PlanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_PlanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PlanRequest_descriptor,
+        new java.lang.String[] { "Header", "PlanId", });
+    internal_static_AddPlanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_AddPlanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AddPlanRequest_descriptor,
+        new java.lang.String[] { "Header", "Plan", });
+    internal_static_AddPlanQuotaDefaultRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_AddPlanQuotaDefaultRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AddPlanQuotaDefaultRequest_descriptor,
+        new java.lang.String[] { "Header", "PlanName", "QuotaDefault", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor();

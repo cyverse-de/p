@@ -408,6 +408,179 @@ func (x *PlanList) GetPlans() []*Plan {
 	return nil
 }
 
+type PlanRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	PlanId string         `protobuf:"bytes,2,opt,name=plan_id,proto3" json:"plan_id,omitempty"`
+}
+
+func (x *PlanRequest) Reset() {
+	*x = PlanRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_plans_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlanRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlanRequest) ProtoMessage() {}
+
+func (x *PlanRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_plans_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlanRequest.ProtoReflect.Descriptor instead.
+func (*PlanRequest) Descriptor() ([]byte, []int) {
+	return file_qms_plans_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *PlanRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *PlanRequest) GetPlanId() string {
+	if x != nil {
+		return x.PlanId
+	}
+	return ""
+}
+
+type AddPlanRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	Plan   *Plan          `protobuf:"bytes,2,opt,name=plan,proto3" json:"plan,omitempty"`
+}
+
+func (x *AddPlanRequest) Reset() {
+	*x = AddPlanRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_plans_proto_msgTypes[7]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AddPlanRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddPlanRequest) ProtoMessage() {}
+
+func (x *AddPlanRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_plans_proto_msgTypes[7]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddPlanRequest.ProtoReflect.Descriptor instead.
+func (*AddPlanRequest) Descriptor() ([]byte, []int) {
+	return file_qms_plans_proto_rawDescGZIP(), []int{7}
+}
+
+func (x *AddPlanRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *AddPlanRequest) GetPlan() *Plan {
+	if x != nil {
+		return x.Plan
+	}
+	return nil
+}
+
+type AddPlanQuotaDefaultRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Header       *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	PlanName     string         `protobuf:"bytes,2,opt,name=plan_name,proto3" json:"plan_name,omitempty"`
+	QuotaDefault *QuotaDefault  `protobuf:"bytes,3,opt,name=quota_default,proto3" json:"quota_default,omitempty"`
+}
+
+func (x *AddPlanQuotaDefaultRequest) Reset() {
+	*x = AddPlanQuotaDefaultRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_qms_plans_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *AddPlanQuotaDefaultRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AddPlanQuotaDefaultRequest) ProtoMessage() {}
+
+func (x *AddPlanQuotaDefaultRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_qms_plans_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AddPlanQuotaDefaultRequest.ProtoReflect.Descriptor instead.
+func (*AddPlanQuotaDefaultRequest) Descriptor() ([]byte, []int) {
+	return file_qms_plans_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *AddPlanQuotaDefaultRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *AddPlanQuotaDefaultRequest) GetPlanName() string {
+	if x != nil {
+		return x.PlanName
+	}
+	return ""
+}
+
+func (x *AddPlanQuotaDefaultRequest) GetQuotaDefault() *QuotaDefault {
+	if x != nil {
+		return x.QuotaDefault
+	}
+	return nil
+}
+
 var File_qms_plans_proto protoreflect.FileDescriptor
 
 var file_qms_plans_proto_rawDesc = []byte{
@@ -464,13 +637,32 @@ var file_qms_plans_proto_rawDesc = []byte{
 	0x65, 0x72, 0x72, 0x6f, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x53, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x52, 0x05, 0x65, 0x72, 0x72, 0x6f,
 	0x72, 0x12, 0x1b, 0x0a, 0x05, 0x70, 0x6c, 0x61, 0x6e, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b,
-	0x32, 0x05, 0x2e, 0x50, 0x6c, 0x61, 0x6e, 0x52, 0x05, 0x70, 0x6c, 0x61, 0x6e, 0x73, 0x42, 0x4f,
-	0x0a, 0x18, 0x6f, 0x72, 0x67, 0x2e, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x42, 0x11, 0x51, 0x4d, 0x53, 0x50,
-	0x6c, 0x61, 0x6e, 0x73, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a,
-	0x1e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65,
-	0x72, 0x73, 0x65, 0x2d, 0x64, 0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x32, 0x05, 0x2e, 0x50, 0x6c, 0x61, 0x6e, 0x52, 0x05, 0x70, 0x6c, 0x61, 0x6e, 0x73, 0x22, 0x48,
+	0x0a, 0x0b, 0x50, 0x6c, 0x61, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a,
+	0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e,
+	0x48, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x18,
+	0x0a, 0x07, 0x70, 0x6c, 0x61, 0x6e, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x07, 0x70, 0x6c, 0x61, 0x6e, 0x5f, 0x69, 0x64, 0x22, 0x4c, 0x0a, 0x0e, 0x41, 0x64, 0x64, 0x50,
+	0x6c, 0x61, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a, 0x06, 0x68, 0x65,
+	0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48, 0x65, 0x61,
+	0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x19, 0x0a, 0x04, 0x70,
+	0x6c, 0x61, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x05, 0x2e, 0x50, 0x6c, 0x61, 0x6e,
+	0x52, 0x04, 0x70, 0x6c, 0x61, 0x6e, 0x22, 0x90, 0x01, 0x0a, 0x1a, 0x41, 0x64, 0x64, 0x50, 0x6c,
+	0x61, 0x6e, 0x51, 0x75, 0x6f, 0x74, 0x61, 0x44, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x74, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x1f, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x07, 0x2e, 0x48, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06,
+	0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x1c, 0x0a, 0x09, 0x70, 0x6c, 0x61, 0x6e, 0x5f, 0x6e,
+	0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x70, 0x6c, 0x61, 0x6e, 0x5f,
+	0x6e, 0x61, 0x6d, 0x65, 0x12, 0x33, 0x0a, 0x0d, 0x71, 0x75, 0x6f, 0x74, 0x61, 0x5f, 0x64, 0x65,
+	0x66, 0x61, 0x75, 0x6c, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x51, 0x75,
+	0x6f, 0x74, 0x61, 0x44, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x74, 0x52, 0x0d, 0x71, 0x75, 0x6f, 0x74,
+	0x61, 0x5f, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x74, 0x42, 0x4f, 0x0a, 0x18, 0x6f, 0x72, 0x67,
+	0x2e, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2e, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x62, 0x75, 0x66, 0x73, 0x42, 0x11, 0x51, 0x4d, 0x53, 0x50, 0x6c, 0x61, 0x6e, 0x73, 0x50,
+	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x73, 0x50, 0x01, 0x5a, 0x1e, 0x67, 0x69, 0x74, 0x68,
+	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x63, 0x79, 0x76, 0x65, 0x72, 0x73, 0x65, 0x2d, 0x64,
+	0x65, 0x2f, 0x70, 0x2f, 0x67, 0x6f, 0x2f, 0x71, 0x6d, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
@@ -485,38 +677,46 @@ func file_qms_plans_proto_rawDescGZIP() []byte {
 	return file_qms_plans_proto_rawDescData
 }
 
-var file_qms_plans_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_qms_plans_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_qms_plans_proto_goTypes = []interface{}{
-	(*QuotaDefault)(nil),          // 0: QuotaDefault
-	(*QuotaDefaultResponse)(nil),  // 1: QuotaDefaultResponse
-	(*QuotaDefaultList)(nil),      // 2: QuotaDefaultList
-	(*Plan)(nil),                  // 3: Plan
-	(*PlanResponse)(nil),          // 4: PlanResponse
-	(*PlanList)(nil),              // 5: PlanList
-	(*ResourceType)(nil),          // 6: ResourceType
-	(*header.Header)(nil),         // 7: Header
-	(*svcerror.ServiceError)(nil), // 8: ServiceError
+	(*QuotaDefault)(nil),               // 0: QuotaDefault
+	(*QuotaDefaultResponse)(nil),       // 1: QuotaDefaultResponse
+	(*QuotaDefaultList)(nil),           // 2: QuotaDefaultList
+	(*Plan)(nil),                       // 3: Plan
+	(*PlanResponse)(nil),               // 4: PlanResponse
+	(*PlanList)(nil),                   // 5: PlanList
+	(*PlanRequest)(nil),                // 6: PlanRequest
+	(*AddPlanRequest)(nil),             // 7: AddPlanRequest
+	(*AddPlanQuotaDefaultRequest)(nil), // 8: AddPlanQuotaDefaultRequest
+	(*ResourceType)(nil),               // 9: ResourceType
+	(*header.Header)(nil),              // 10: Header
+	(*svcerror.ServiceError)(nil),      // 11: ServiceError
 }
 var file_qms_plans_proto_depIdxs = []int32{
-	6,  // 0: QuotaDefault.resource_type:type_name -> ResourceType
-	7,  // 1: QuotaDefaultResponse.header:type_name -> Header
-	8,  // 2: QuotaDefaultResponse.error:type_name -> ServiceError
+	9,  // 0: QuotaDefault.resource_type:type_name -> ResourceType
+	10, // 1: QuotaDefaultResponse.header:type_name -> Header
+	11, // 2: QuotaDefaultResponse.error:type_name -> ServiceError
 	0,  // 3: QuotaDefaultResponse.quota_default:type_name -> QuotaDefault
-	7,  // 4: QuotaDefaultList.header:type_name -> Header
-	8,  // 5: QuotaDefaultList.error:type_name -> ServiceError
+	10, // 4: QuotaDefaultList.header:type_name -> Header
+	11, // 5: QuotaDefaultList.error:type_name -> ServiceError
 	0,  // 6: QuotaDefaultList.quota_defaults:type_name -> QuotaDefault
 	0,  // 7: Plan.plan_quota_defaults:type_name -> QuotaDefault
-	7,  // 8: PlanResponse.header:type_name -> Header
-	8,  // 9: PlanResponse.error:type_name -> ServiceError
+	10, // 8: PlanResponse.header:type_name -> Header
+	11, // 9: PlanResponse.error:type_name -> ServiceError
 	3,  // 10: PlanResponse.plan:type_name -> Plan
-	7,  // 11: PlanList.header:type_name -> Header
-	8,  // 12: PlanList.error:type_name -> ServiceError
+	10, // 11: PlanList.header:type_name -> Header
+	11, // 12: PlanList.error:type_name -> ServiceError
 	3,  // 13: PlanList.plans:type_name -> Plan
-	14, // [14:14] is the sub-list for method output_type
-	14, // [14:14] is the sub-list for method input_type
-	14, // [14:14] is the sub-list for extension type_name
-	14, // [14:14] is the sub-list for extension extendee
-	0,  // [0:14] is the sub-list for field type_name
+	10, // 14: PlanRequest.header:type_name -> Header
+	10, // 15: AddPlanRequest.header:type_name -> Header
+	3,  // 16: AddPlanRequest.plan:type_name -> Plan
+	10, // 17: AddPlanQuotaDefaultRequest.header:type_name -> Header
+	0,  // 18: AddPlanQuotaDefaultRequest.quota_default:type_name -> QuotaDefault
+	19, // [19:19] is the sub-list for method output_type
+	19, // [19:19] is the sub-list for method input_type
+	19, // [19:19] is the sub-list for extension type_name
+	19, // [19:19] is the sub-list for extension extendee
+	0,  // [0:19] is the sub-list for field type_name
 }
 
 func init() { file_qms_plans_proto_init() }
@@ -598,6 +798,42 @@ func file_qms_plans_proto_init() {
 				return nil
 			}
 		}
+		file_qms_plans_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlanRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_qms_plans_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AddPlanRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_qms_plans_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AddPlanQuotaDefaultRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -605,7 +841,7 @@ func file_qms_plans_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_qms_plans_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   6,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
