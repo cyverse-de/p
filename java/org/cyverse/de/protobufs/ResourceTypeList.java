@@ -31,82 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ResourceTypeList(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            org.cyverse.de.protobufs.Header.Builder subBuilder = null;
-            if (header_ != null) {
-              subBuilder = header_.toBuilder();
-            }
-            header_ = input.readMessage(org.cyverse.de.protobufs.Header.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(header_);
-              header_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            org.cyverse.de.protobufs.ServiceError.Builder subBuilder = null;
-            if (error_ != null) {
-              subBuilder = error_.toBuilder();
-            }
-            error_ = input.readMessage(org.cyverse.de.protobufs.ServiceError.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(error_);
-              error_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              resourceTypes_ = new java.util.ArrayList<org.cyverse.de.protobufs.ResourceType>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            resourceTypes_.add(
-                input.readMessage(org.cyverse.de.protobufs.ResourceType.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        resourceTypes_ = java.util.Collections.unmodifiableList(resourceTypes_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_ResourceTypeList_descriptor;
@@ -143,7 +67,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-    return getHeader();
+    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
 
   public static final int ERROR_FIELD_NUMBER = 2;
@@ -169,10 +93,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
-    return getError();
+    return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
   }
 
   public static final int RESOURCE_TYPES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.ResourceType> resourceTypes_;
   /**
    * <code>repeated .ResourceType resource_types = 3 [json_name = "resource_types"];</code>
@@ -235,7 +160,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < resourceTypes_.size(); i++) {
       output.writeMessage(3, resourceTypes_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -256,7 +181,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, resourceTypes_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -283,7 +208,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getResourceTypesList()
         .equals(other.getResourceTypesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -306,7 +231,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RESOURCE_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + getResourceTypesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -423,41 +348,35 @@ private static final long serialVersionUID = 0L;
 
     // Construct using org.cyverse.de.protobufs.ResourceTypeList.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getResourceTypesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (headerBuilder_ == null) {
-        header_ = null;
-      } else {
-        header_ = null;
+      bitField0_ = 0;
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
-      if (errorBuilder_ == null) {
-        error_ = null;
-      } else {
-        error_ = null;
+      error_ = null;
+      if (errorBuilder_ != null) {
+        errorBuilder_.dispose();
         errorBuilder_ = null;
       }
       if (resourceTypesBuilder_ == null) {
         resourceTypes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        resourceTypes_ = null;
         resourceTypesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -484,28 +403,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.ResourceTypeList buildPartial() {
       org.cyverse.de.protobufs.ResourceTypeList result = new org.cyverse.de.protobufs.ResourceTypeList(this);
-      int from_bitField0_ = bitField0_;
-      if (headerBuilder_ == null) {
-        result.header_ = header_;
-      } else {
-        result.header_ = headerBuilder_.build();
-      }
-      if (errorBuilder_ == null) {
-        result.error_ = error_;
-      } else {
-        result.error_ = errorBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(org.cyverse.de.protobufs.ResourceTypeList result) {
       if (resourceTypesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           resourceTypes_ = java.util.Collections.unmodifiableList(resourceTypes_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.resourceTypes_ = resourceTypes_;
       } else {
         result.resourceTypes_ = resourceTypesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(org.cyverse.de.protobufs.ResourceTypeList result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.header_ = headerBuilder_ == null
+            ? header_
+            : headerBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.error_ = errorBuilder_ == null
+            ? error_
+            : errorBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -562,7 +489,7 @@ private static final long serialVersionUID = 0L;
         if (!other.resourceTypes_.isEmpty()) {
           if (resourceTypes_.isEmpty()) {
             resourceTypes_ = other.resourceTypes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureResourceTypesIsMutable();
             resourceTypes_.addAll(other.resourceTypes_);
@@ -575,7 +502,7 @@ private static final long serialVersionUID = 0L;
             resourceTypesBuilder_.dispose();
             resourceTypesBuilder_ = null;
             resourceTypes_ = other.resourceTypes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             resourceTypesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResourceTypesFieldBuilder() : null;
@@ -584,7 +511,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -599,17 +526,57 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.cyverse.de.protobufs.ResourceTypeList parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getHeaderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getErrorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              org.cyverse.de.protobufs.ResourceType m =
+                  input.readMessage(
+                      org.cyverse.de.protobufs.ResourceType.parser(),
+                      extensionRegistry);
+              if (resourceTypesBuilder_ == null) {
+                ensureResourceTypesIsMutable();
+                resourceTypes_.add(m);
+              } else {
+                resourceTypesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.cyverse.de.protobufs.ResourceTypeList) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -622,7 +589,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
-      return headerBuilder_ != null || header_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Header header = 1;</code>
@@ -644,11 +611,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         header_ = value;
-        onChanged();
       } else {
         headerBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -658,11 +625,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
       if (headerBuilder_ == null) {
         header_ = builderForValue.build();
-        onChanged();
       } else {
         headerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -670,38 +637,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
-        if (header_ != null) {
-          header_ =
-            org.cyverse.de.protobufs.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          header_ != null &&
+          header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
+          getHeaderBuilder().mergeFrom(value);
         } else {
           header_ = value;
         }
-        onChanged();
       } else {
         headerBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
-      if (headerBuilder_ == null) {
-        header_ = null;
-        onChanged();
-      } else {
-        header_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getHeaderFieldBuilder().getBuilder();
     }
@@ -741,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the error field is set.
      */
     public boolean hasError() {
-      return errorBuilder_ != null || error_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.ServiceError error = 2;</code>
@@ -763,11 +730,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         error_ = value;
-        onChanged();
       } else {
         errorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -777,11 +744,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
       if (errorBuilder_ == null) {
         error_ = builderForValue.build();
-        onChanged();
       } else {
         errorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -789,38 +756,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
-        if (error_ != null) {
-          error_ =
-            org.cyverse.de.protobufs.ServiceError.newBuilder(error_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          error_ != null &&
+          error_ != org.cyverse.de.protobufs.ServiceError.getDefaultInstance()) {
+          getErrorBuilder().mergeFrom(value);
         } else {
           error_ = value;
         }
-        onChanged();
       } else {
         errorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.ServiceError error = 2;</code>
      */
     public Builder clearError() {
-      if (errorBuilder_ == null) {
-        error_ = null;
-        onChanged();
-      } else {
-        error_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      error_ = null;
+      if (errorBuilder_ != null) {
+        errorBuilder_.dispose();
         errorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getErrorFieldBuilder().getBuilder();
     }
@@ -855,9 +822,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<org.cyverse.de.protobufs.ResourceType> resourceTypes_ =
       java.util.Collections.emptyList();
     private void ensureResourceTypesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         resourceTypes_ = new java.util.ArrayList<org.cyverse.de.protobufs.ResourceType>(resourceTypes_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1007,7 +974,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearResourceTypes() {
       if (resourceTypesBuilder_ == null) {
         resourceTypes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         resourceTypesBuilder_.clear();
@@ -1084,7 +1051,7 @@ private static final long serialVersionUID = 0L;
         resourceTypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder>(
                 resourceTypes_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         resourceTypes_ = null;
@@ -1124,7 +1091,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ResourceTypeList(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

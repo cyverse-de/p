@@ -41,122 +41,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private InteractiveApps(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            proxyImage_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            proxyName_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            frontendUrl_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            casUrl_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            casValidate_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            sslCertPath_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            sslKeyPath_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            websocketPath_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            websocketPort_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            websocketProto_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            backendUrl_ = s;
-            break;
-          }
-          case 98: {
-            org.cyverse.de.protobufs.Header.Builder subBuilder = null;
-            if (header_ != null) {
-              subBuilder = header_.toBuilder();
-            }
-            header_ = input.readMessage(org.cyverse.de.protobufs.Header.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(header_);
-              header_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_InteractiveApps_descriptor;
@@ -171,7 +55,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROXY_IMAGE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object proxyImage_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object proxyImage_ = "";
   /**
    * <code>string proxy_image = 1;</code>
    * @return The proxyImage.
@@ -209,7 +94,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROXY_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object proxyName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object proxyName_ = "";
   /**
    * <code>string proxy_name = 2;</code>
    * @return The proxyName.
@@ -247,7 +133,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FRONTEND_URL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object frontendUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object frontendUrl_ = "";
   /**
    * <code>string frontend_url = 3;</code>
    * @return The frontendUrl.
@@ -285,7 +172,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAS_URL_FIELD_NUMBER = 4;
-  private volatile java.lang.Object casUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object casUrl_ = "";
   /**
    * <code>string cas_url = 4;</code>
    * @return The casUrl.
@@ -323,7 +211,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAS_VALIDATE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object casValidate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object casValidate_ = "";
   /**
    * <code>string cas_validate = 5;</code>
    * @return The casValidate.
@@ -361,7 +250,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SSL_CERT_PATH_FIELD_NUMBER = 6;
-  private volatile java.lang.Object sslCertPath_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sslCertPath_ = "";
   /**
    * <code>string ssl_cert_path = 6;</code>
    * @return The sslCertPath.
@@ -399,7 +289,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SSL_KEY_PATH_FIELD_NUMBER = 7;
-  private volatile java.lang.Object sslKeyPath_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sslKeyPath_ = "";
   /**
    * <code>string ssl_key_path = 7;</code>
    * @return The sslKeyPath.
@@ -437,7 +328,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEBSOCKET_PATH_FIELD_NUMBER = 8;
-  private volatile java.lang.Object websocketPath_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object websocketPath_ = "";
   /**
    * <code>string websocket_path = 8;</code>
    * @return The websocketPath.
@@ -475,7 +367,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEBSOCKET_PORT_FIELD_NUMBER = 9;
-  private volatile java.lang.Object websocketPort_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object websocketPort_ = "";
   /**
    * <code>string websocket_port = 9;</code>
    * @return The websocketPort.
@@ -513,7 +406,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEBSOCKET_PROTO_FIELD_NUMBER = 10;
-  private volatile java.lang.Object websocketProto_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object websocketProto_ = "";
   /**
    * <code>string websocket_proto = 10;</code>
    * @return The websocketProto.
@@ -551,7 +445,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BACKEND_URL_FIELD_NUMBER = 11;
-  private volatile java.lang.Object backendUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object backendUrl_ = "";
   /**
    * <code>string backend_url = 11;</code>
    * @return The backendUrl.
@@ -611,7 +506,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-    return getHeader();
+    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -664,7 +559,7 @@ private static final long serialVersionUID = 0L;
     if (header_ != null) {
       output.writeMessage(12, getHeader());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -710,7 +605,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getHeader());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -752,7 +647,7 @@ private static final long serialVersionUID = 0L;
       if (!getHeader()
           .equals(other.getHeader())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -789,7 +684,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HEADER_FIELD_NUMBER;
       hash = (53 * hash) + getHeader().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -906,48 +801,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using org.cyverse.de.protobufs.InteractiveApps.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       proxyImage_ = "";
-
       proxyName_ = "";
-
       frontendUrl_ = "";
-
       casUrl_ = "";
-
       casValidate_ = "";
-
       sslCertPath_ = "";
-
       sslKeyPath_ = "";
-
       websocketPath_ = "";
-
       websocketPort_ = "";
-
       websocketProto_ = "";
-
       backendUrl_ = "";
-
-      if (headerBuilder_ == null) {
-        header_ = null;
-      } else {
-        header_ = null;
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
       return this;
@@ -976,24 +855,51 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.InteractiveApps buildPartial() {
       org.cyverse.de.protobufs.InteractiveApps result = new org.cyverse.de.protobufs.InteractiveApps(this);
-      result.proxyImage_ = proxyImage_;
-      result.proxyName_ = proxyName_;
-      result.frontendUrl_ = frontendUrl_;
-      result.casUrl_ = casUrl_;
-      result.casValidate_ = casValidate_;
-      result.sslCertPath_ = sslCertPath_;
-      result.sslKeyPath_ = sslKeyPath_;
-      result.websocketPath_ = websocketPath_;
-      result.websocketPort_ = websocketPort_;
-      result.websocketProto_ = websocketProto_;
-      result.backendUrl_ = backendUrl_;
-      if (headerBuilder_ == null) {
-        result.header_ = header_;
-      } else {
-        result.header_ = headerBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.cyverse.de.protobufs.InteractiveApps result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.proxyImage_ = proxyImage_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.proxyName_ = proxyName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.frontendUrl_ = frontendUrl_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.casUrl_ = casUrl_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.casValidate_ = casValidate_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.sslCertPath_ = sslCertPath_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.sslKeyPath_ = sslKeyPath_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.websocketPath_ = websocketPath_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.websocketPort_ = websocketPort_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.websocketProto_ = websocketProto_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.backendUrl_ = backendUrl_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.header_ = headerBuilder_ == null
+            ? header_
+            : headerBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1042,52 +948,63 @@ private static final long serialVersionUID = 0L;
       if (other == org.cyverse.de.protobufs.InteractiveApps.getDefaultInstance()) return this;
       if (!other.getProxyImage().isEmpty()) {
         proxyImage_ = other.proxyImage_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getProxyName().isEmpty()) {
         proxyName_ = other.proxyName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getFrontendUrl().isEmpty()) {
         frontendUrl_ = other.frontendUrl_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCasUrl().isEmpty()) {
         casUrl_ = other.casUrl_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getCasValidate().isEmpty()) {
         casValidate_ = other.casValidate_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getSslCertPath().isEmpty()) {
         sslCertPath_ = other.sslCertPath_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getSslKeyPath().isEmpty()) {
         sslKeyPath_ = other.sslKeyPath_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getWebsocketPath().isEmpty()) {
         websocketPath_ = other.websocketPath_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getWebsocketPort().isEmpty()) {
         websocketPort_ = other.websocketPort_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.getWebsocketProto().isEmpty()) {
         websocketProto_ = other.websocketProto_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getBackendUrl().isEmpty()) {
         backendUrl_ = other.backendUrl_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.hasHeader()) {
         mergeHeader(other.getHeader());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1102,19 +1019,95 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.cyverse.de.protobufs.InteractiveApps parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              proxyImage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              proxyName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              frontendUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              casUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              casValidate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              sslCertPath_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              sslKeyPath_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              websocketPath_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              websocketPort_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              websocketProto_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              backendUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getHeaderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.cyverse.de.protobufs.InteractiveApps) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object proxyImage_ = "";
     /**
@@ -1157,11 +1150,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProxyImage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       proxyImage_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1170,8 +1161,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProxyImage() {
-      
       proxyImage_ = getDefaultInstance().getProxyImage();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1182,12 +1173,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProxyImageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       proxyImage_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1233,11 +1222,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProxyName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       proxyName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1246,8 +1233,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProxyName() {
-      
       proxyName_ = getDefaultInstance().getProxyName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1258,12 +1245,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProxyNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       proxyName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1309,11 +1294,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFrontendUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       frontendUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1322,8 +1305,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFrontendUrl() {
-      
       frontendUrl_ = getDefaultInstance().getFrontendUrl();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1334,12 +1317,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFrontendUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       frontendUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1385,11 +1366,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCasUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       casUrl_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1398,8 +1377,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCasUrl() {
-      
       casUrl_ = getDefaultInstance().getCasUrl();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1410,12 +1389,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCasUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       casUrl_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1461,11 +1438,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCasValidate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       casValidate_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1474,8 +1449,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCasValidate() {
-      
       casValidate_ = getDefaultInstance().getCasValidate();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1486,12 +1461,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCasValidateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       casValidate_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1537,11 +1510,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSslCertPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       sslCertPath_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1550,8 +1521,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSslCertPath() {
-      
       sslCertPath_ = getDefaultInstance().getSslCertPath();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1562,12 +1533,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSslCertPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       sslCertPath_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1613,11 +1582,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSslKeyPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       sslKeyPath_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1626,8 +1593,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSslKeyPath() {
-      
       sslKeyPath_ = getDefaultInstance().getSslKeyPath();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1638,12 +1605,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSslKeyPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       sslKeyPath_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1689,11 +1654,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWebsocketPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       websocketPath_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1702,8 +1665,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWebsocketPath() {
-      
       websocketPath_ = getDefaultInstance().getWebsocketPath();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1714,12 +1677,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWebsocketPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       websocketPath_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1765,11 +1726,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWebsocketPort(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       websocketPort_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1778,8 +1737,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWebsocketPort() {
-      
       websocketPort_ = getDefaultInstance().getWebsocketPort();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1790,12 +1749,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWebsocketPortBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       websocketPort_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1841,11 +1798,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWebsocketProto(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       websocketProto_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1854,8 +1809,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWebsocketProto() {
-      
       websocketProto_ = getDefaultInstance().getWebsocketProto();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1866,12 +1821,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWebsocketProtoBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       websocketProto_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1917,11 +1870,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBackendUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       backendUrl_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1930,8 +1881,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBackendUrl() {
-      
       backendUrl_ = getDefaultInstance().getBackendUrl();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -1942,12 +1893,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBackendUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       backendUrl_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1960,7 +1909,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
-      return headerBuilder_ != null || header_ != null;
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>.Header header = 12;</code>
@@ -1982,11 +1931,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         header_ = value;
-        onChanged();
       } else {
         headerBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -1996,11 +1945,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
       if (headerBuilder_ == null) {
         header_ = builderForValue.build();
-        onChanged();
       } else {
         headerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -2008,38 +1957,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
-        if (header_ != null) {
-          header_ =
-            org.cyverse.de.protobufs.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000800) != 0) &&
+          header_ != null &&
+          header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
+          getHeaderBuilder().mergeFrom(value);
         } else {
           header_ = value;
         }
-        onChanged();
       } else {
         headerBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 12;</code>
      */
     public Builder clearHeader() {
-      if (headerBuilder_ == null) {
-        header_ = null;
-        onChanged();
-      } else {
-        header_ = null;
+      bitField0_ = (bitField0_ & ~0x00000800);
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 12;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-      
+      bitField0_ |= 0x00000800;
       onChanged();
       return getHeaderFieldBuilder().getBuilder();
     }
@@ -2103,7 +2052,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new InteractiveApps(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -31,75 +31,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AddPlanQuotaDefaultRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            org.cyverse.de.protobufs.Header.Builder subBuilder = null;
-            if (header_ != null) {
-              subBuilder = header_.toBuilder();
-            }
-            header_ = input.readMessage(org.cyverse.de.protobufs.Header.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(header_);
-              header_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            planName_ = s;
-            break;
-          }
-          case 26: {
-            org.cyverse.de.protobufs.QuotaDefault.Builder subBuilder = null;
-            if (quotaDefault_ != null) {
-              subBuilder = quotaDefault_.toBuilder();
-            }
-            quotaDefault_ = input.readMessage(org.cyverse.de.protobufs.QuotaDefault.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(quotaDefault_);
-              quotaDefault_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_AddPlanQuotaDefaultRequest_descriptor;
@@ -136,11 +67,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-    return getHeader();
+    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
 
   public static final int PLAN_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object planName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object planName_ = "";
   /**
    * <code>string plan_name = 2 [json_name = "plan_name"];</code>
    * @return The planName.
@@ -200,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultOrBuilder() {
-    return getQuotaDefault();
+    return quotaDefault_ == null ? org.cyverse.de.protobufs.QuotaDefault.getDefaultInstance() : quotaDefault_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -226,7 +158,7 @@ private static final long serialVersionUID = 0L;
     if (quotaDefault_ != null) {
       output.writeMessage(3, getQuotaDefault());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -246,7 +178,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getQuotaDefault());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -273,7 +205,7 @@ private static final long serialVersionUID = 0L;
       if (!getQuotaDefault()
           .equals(other.getQuotaDefault())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -294,7 +226,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + QUOTA_DEFAULT_FIELD_NUMBER;
       hash = (53 * hash) + getQuotaDefault().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -411,34 +343,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (headerBuilder_ == null) {
-        header_ = null;
-      } else {
-        header_ = null;
+      bitField0_ = 0;
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
       planName_ = "";
-
-      if (quotaDefaultBuilder_ == null) {
-        quotaDefault_ = null;
-      } else {
-        quotaDefault_ = null;
+      quotaDefault_ = null;
+      if (quotaDefaultBuilder_ != null) {
+        quotaDefaultBuilder_.dispose();
         quotaDefaultBuilder_ = null;
       }
       return this;
@@ -467,19 +392,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest buildPartial() {
       org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest result = new org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest(this);
-      if (headerBuilder_ == null) {
-        result.header_ = header_;
-      } else {
-        result.header_ = headerBuilder_.build();
-      }
-      result.planName_ = planName_;
-      if (quotaDefaultBuilder_ == null) {
-        result.quotaDefault_ = quotaDefault_;
-      } else {
-        result.quotaDefault_ = quotaDefaultBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.header_ = headerBuilder_ == null
+            ? header_
+            : headerBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.planName_ = planName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.quotaDefault_ = quotaDefaultBuilder_ == null
+            ? quotaDefault_
+            : quotaDefaultBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -531,12 +463,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPlanName().isEmpty()) {
         planName_ = other.planName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasQuotaDefault()) {
         mergeQuotaDefault(other.getQuotaDefault());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -551,19 +484,52 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getHeaderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              planName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getQuotaDefaultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private org.cyverse.de.protobufs.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -573,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
-      return headerBuilder_ != null || header_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.Header header = 1;</code>
@@ -595,11 +561,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         header_ = value;
-        onChanged();
       } else {
         headerBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -609,11 +575,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
       if (headerBuilder_ == null) {
         header_ = builderForValue.build();
-        onChanged();
       } else {
         headerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -621,38 +587,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
-        if (header_ != null) {
-          header_ =
-            org.cyverse.de.protobufs.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          header_ != null &&
+          header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
+          getHeaderBuilder().mergeFrom(value);
         } else {
           header_ = value;
         }
-        onChanged();
       } else {
         headerBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
-      if (headerBuilder_ == null) {
-        header_ = null;
-        onChanged();
-      } else {
-        header_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getHeaderFieldBuilder().getBuilder();
     }
@@ -725,11 +691,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlanName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       planName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -738,8 +702,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlanName() {
-      
       planName_ = getDefaultInstance().getPlanName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -750,12 +714,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlanNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       planName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -768,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the quotaDefault field is set.
      */
     public boolean hasQuotaDefault() {
-      return quotaDefaultBuilder_ != null || quotaDefault_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
@@ -790,11 +752,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         quotaDefault_ = value;
-        onChanged();
       } else {
         quotaDefaultBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -804,11 +766,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.QuotaDefault.Builder builderForValue) {
       if (quotaDefaultBuilder_ == null) {
         quotaDefault_ = builderForValue.build();
-        onChanged();
       } else {
         quotaDefaultBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -816,38 +778,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeQuotaDefault(org.cyverse.de.protobufs.QuotaDefault value) {
       if (quotaDefaultBuilder_ == null) {
-        if (quotaDefault_ != null) {
-          quotaDefault_ =
-            org.cyverse.de.protobufs.QuotaDefault.newBuilder(quotaDefault_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          quotaDefault_ != null &&
+          quotaDefault_ != org.cyverse.de.protobufs.QuotaDefault.getDefaultInstance()) {
+          getQuotaDefaultBuilder().mergeFrom(value);
         } else {
           quotaDefault_ = value;
         }
-        onChanged();
       } else {
         quotaDefaultBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public Builder clearQuotaDefault() {
-      if (quotaDefaultBuilder_ == null) {
-        quotaDefault_ = null;
-        onChanged();
-      } else {
-        quotaDefault_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      quotaDefault_ = null;
+      if (quotaDefaultBuilder_ != null) {
+        quotaDefaultBuilder_.dispose();
         quotaDefaultBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder getQuotaDefaultBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getQuotaDefaultFieldBuilder().getBuilder();
     }
@@ -911,7 +873,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AddPlanQuotaDefaultRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

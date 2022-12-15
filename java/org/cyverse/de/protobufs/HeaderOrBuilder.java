@@ -30,14 +30,14 @@ public interface HeaderOrBuilder extends
   /**
    * <code>map&lt;string, .Header.Value&gt; map = 1;</code>
    */
-
-  org.cyverse.de.protobufs.Header.Value getMapOrDefault(
+  /* nullable */
+org.cyverse.de.protobufs.Header.Value getMapOrDefault(
       java.lang.String key,
-      org.cyverse.de.protobufs.Header.Value defaultValue);
+      /* nullable */
+org.cyverse.de.protobufs.Header.Value defaultValue);
   /**
    * <code>map&lt;string, .Header.Value&gt; map = 1;</code>
    */
-
   org.cyverse.de.protobufs.Header.Value getMapOrThrow(
       java.lang.String key);
 }

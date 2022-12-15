@@ -30,99 +30,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private UserLookupRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-            lookupIdsCase_ = 1;
-            lookupIds_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            lookupIdsCase_ = 2;
-            lookupIds_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-            lookupIdsCase_ = 3;
-            lookupIds_ = s;
-            break;
-          }
-          case 40: {
-
-            includeLogins_ = input.readBool();
-            break;
-          }
-          case 48: {
-
-            includePreferences_ = input.readBool();
-            break;
-          }
-          case 56: {
-
-            includeSavedSearches_ = input.readBool();
-            break;
-          }
-          case 64: {
-
-            loginLimit_ = input.readUInt32();
-            break;
-          }
-          case 72: {
-
-            loginOffset_ = input.readUInt32();
-            break;
-          }
-          case 82: {
-            org.cyverse.de.protobufs.Header.Builder subBuilder = null;
-            if (header_ != null) {
-              subBuilder = header_.toBuilder();
-            }
-            header_ = input.readMessage(org.cyverse.de.protobufs.Header.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(header_);
-              header_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_UserLookupRequest_descriptor;
@@ -336,7 +243,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUDE_LOGINS_FIELD_NUMBER = 5;
-  private boolean includeLogins_;
+  private boolean includeLogins_ = false;
   /**
    * <code>bool include_logins = 5;</code>
    * @return The includeLogins.
@@ -347,7 +254,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUDE_PREFERENCES_FIELD_NUMBER = 6;
-  private boolean includePreferences_;
+  private boolean includePreferences_ = false;
   /**
    * <code>bool include_preferences = 6;</code>
    * @return The includePreferences.
@@ -358,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUDE_SAVED_SEARCHES_FIELD_NUMBER = 7;
-  private boolean includeSavedSearches_;
+  private boolean includeSavedSearches_ = false;
   /**
    * <code>bool include_saved_searches = 7;</code>
    * @return The includeSavedSearches.
@@ -369,7 +276,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGIN_LIMIT_FIELD_NUMBER = 8;
-  private int loginLimit_;
+  private int loginLimit_ = 0;
   /**
    * <code>uint32 login_limit = 8;</code>
    * @return The loginLimit.
@@ -380,7 +287,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGIN_OFFSET_FIELD_NUMBER = 9;
-  private int loginOffset_;
+  private int loginOffset_ = 0;
   /**
    * <code>uint32 login_offset = 9;</code>
    * @return The loginOffset.
@@ -413,7 +320,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-    return getHeader();
+    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -457,7 +364,7 @@ private static final long serialVersionUID = 0L;
     if (header_ != null) {
       output.writeMessage(10, getHeader());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -499,7 +406,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getHeader());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -546,7 +453,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -590,7 +497,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -707,36 +614,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using org.cyverse.de.protobufs.UserLookupRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       includeLogins_ = false;
-
       includePreferences_ = false;
-
       includeSavedSearches_ = false;
-
       loginLimit_ = 0;
-
       loginOffset_ = 0;
-
-      if (headerBuilder_ == null) {
-        header_ = null;
-      } else {
-        header_ = null;
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
       lookupIdsCase_ = 0;
@@ -767,28 +664,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.UserLookupRequest buildPartial() {
       org.cyverse.de.protobufs.UserLookupRequest result = new org.cyverse.de.protobufs.UserLookupRequest(this);
-      if (lookupIdsCase_ == 1) {
-        result.lookupIds_ = lookupIds_;
-      }
-      if (lookupIdsCase_ == 2) {
-        result.lookupIds_ = lookupIds_;
-      }
-      if (lookupIdsCase_ == 3) {
-        result.lookupIds_ = lookupIds_;
-      }
-      result.includeLogins_ = includeLogins_;
-      result.includePreferences_ = includePreferences_;
-      result.includeSavedSearches_ = includeSavedSearches_;
-      result.loginLimit_ = loginLimit_;
-      result.loginOffset_ = loginOffset_;
-      if (headerBuilder_ == null) {
-        result.header_ = header_;
-      } else {
-        result.header_ = headerBuilder_.build();
-      }
-      result.lookupIdsCase_ = lookupIdsCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.cyverse.de.protobufs.UserLookupRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.includeLogins_ = includeLogins_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.includePreferences_ = includePreferences_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.includeSavedSearches_ = includeSavedSearches_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.loginLimit_ = loginLimit_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.loginOffset_ = loginOffset_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.header_ = headerBuilder_ == null
+            ? header_
+            : headerBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(org.cyverse.de.protobufs.UserLookupRequest result) {
+      result.lookupIdsCase_ = lookupIdsCase_;
+      result.lookupIds_ = this.lookupIds_;
     }
 
     @java.lang.Override
@@ -876,7 +784,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -891,17 +799,80 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.cyverse.de.protobufs.UserLookupRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              lookupIdsCase_ = 1;
+              lookupIds_ = s;
+              break;
+            } // case 10
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              lookupIdsCase_ = 2;
+              lookupIds_ = s;
+              break;
+            } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              lookupIdsCase_ = 3;
+              lookupIds_ = s;
+              break;
+            } // case 26
+            case 40: {
+              includeLogins_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
+            case 48: {
+              includePreferences_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 48
+            case 56: {
+              includeSavedSearches_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 56
+            case 64: {
+              loginLimit_ = input.readUInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
+            case 72: {
+              loginOffset_ = input.readUInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 72
+            case 82: {
+              input.readMessage(
+                  getHeaderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 82
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.cyverse.de.protobufs.UserLookupRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int lookupIdsCase_ = 0;
@@ -919,6 +890,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     /**
      * <code>string username = 1;</code>
@@ -980,10 +952,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUsername(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  lookupIdsCase_ = 1;
+      if (value == null) { throw new NullPointerException(); }
+      lookupIdsCase_ = 1;
       lookupIds_ = value;
       onChanged();
       return this;
@@ -1007,10 +977,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUsernameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lookupIdsCase_ = 1;
       lookupIds_ = value;
       onChanged();
@@ -1077,10 +1045,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  lookupIdsCase_ = 2;
+      if (value == null) { throw new NullPointerException(); }
+      lookupIdsCase_ = 2;
       lookupIds_ = value;
       onChanged();
       return this;
@@ -1104,10 +1070,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lookupIdsCase_ = 2;
       lookupIds_ = value;
       onChanged();
@@ -1174,10 +1138,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnalysisId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  lookupIdsCase_ = 3;
+      if (value == null) { throw new NullPointerException(); }
+      lookupIdsCase_ = 3;
       lookupIds_ = value;
       onChanged();
       return this;
@@ -1201,10 +1163,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnalysisIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lookupIdsCase_ = 3;
       lookupIds_ = value;
       onChanged();
@@ -1228,6 +1188,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIncludeLogins(boolean value) {
       
       includeLogins_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1236,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeLogins() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       includeLogins_ = false;
       onChanged();
       return this;
@@ -1259,6 +1220,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIncludePreferences(boolean value) {
       
       includePreferences_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1267,7 +1229,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludePreferences() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       includePreferences_ = false;
       onChanged();
       return this;
@@ -1290,6 +1252,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIncludeSavedSearches(boolean value) {
       
       includeSavedSearches_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1298,7 +1261,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeSavedSearches() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       includeSavedSearches_ = false;
       onChanged();
       return this;
@@ -1321,6 +1284,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLoginLimit(int value) {
       
       loginLimit_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1329,7 +1293,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLoginLimit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       loginLimit_ = 0;
       onChanged();
       return this;
@@ -1352,6 +1316,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLoginOffset(int value) {
       
       loginOffset_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1360,7 +1325,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLoginOffset() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       loginOffset_ = 0;
       onChanged();
       return this;
@@ -1374,7 +1339,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
-      return headerBuilder_ != null || header_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>.Header header = 10;</code>
@@ -1396,11 +1361,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         header_ = value;
-        onChanged();
       } else {
         headerBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1410,11 +1375,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
       if (headerBuilder_ == null) {
         header_ = builderForValue.build();
-        onChanged();
       } else {
         headerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1422,38 +1387,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
-        if (header_ != null) {
-          header_ =
-            org.cyverse.de.protobufs.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          header_ != null &&
+          header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
+          getHeaderBuilder().mergeFrom(value);
         } else {
           header_ = value;
         }
-        onChanged();
       } else {
         headerBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 10;</code>
      */
     public Builder clearHeader() {
-      if (headerBuilder_ == null) {
-        header_ = null;
-        onChanged();
-      } else {
-        header_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      header_ = null;
+      if (headerBuilder_ != null) {
+        headerBuilder_.dispose();
         headerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.Header header = 10;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getHeaderFieldBuilder().getBuilder();
     }
@@ -1517,7 +1482,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UserLookupRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

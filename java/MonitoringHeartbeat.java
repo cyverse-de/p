@@ -99,81 +99,6 @@ public final class MonitoringHeartbeat {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Heartbeat(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              org.cyverse.de.protobufs.Header.Builder subBuilder = null;
-              if (header_ != null) {
-                subBuilder = header_.toBuilder();
-              }
-              header_ = input.readMessage(org.cyverse.de.protobufs.Header.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(header_);
-                header_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              org.cyverse.de.protobufs.ServiceError.Builder subBuilder = null;
-              if (error_ != null) {
-                subBuilder = error_.toBuilder();
-              }
-              error_ = input.readMessage(org.cyverse.de.protobufs.ServiceError.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(error_);
-                error_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              node_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dateSent_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return MonitoringHeartbeat.internal_static_Heartbeat_descriptor;
@@ -210,7 +135,7 @@ public final class MonitoringHeartbeat {
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-      return getHeader();
+      return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
     }
 
     public static final int ERROR_FIELD_NUMBER = 2;
@@ -236,11 +161,12 @@ public final class MonitoringHeartbeat {
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
-      return getError();
+      return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
     }
 
     public static final int NODE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object node_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object node_ = "";
     /**
      * <code>string node = 3;</code>
      * @return The node.
@@ -278,7 +204,8 @@ public final class MonitoringHeartbeat {
     }
 
     public static final int DATE_SENT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object dateSent_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dateSent_ = "";
     /**
      * <code>string date_sent = 4 [json_name = "date_sent"];</code>
      * @return The dateSent.
@@ -341,7 +268,7 @@ public final class MonitoringHeartbeat {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateSent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, dateSent_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -364,7 +291,7 @@ public final class MonitoringHeartbeat {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateSent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, dateSent_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -393,7 +320,7 @@ public final class MonitoringHeartbeat {
           .equals(other.getNode())) return false;
       if (!getDateSent()
           .equals(other.getDateSent())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -416,7 +343,7 @@ public final class MonitoringHeartbeat {
       hash = (53 * hash) + getNode().hashCode();
       hash = (37 * hash) + DATE_SENT_FIELD_NUMBER;
       hash = (53 * hash) + getDateSent().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -533,38 +460,30 @@ public final class MonitoringHeartbeat {
 
       // Construct using MonitoringHeartbeat.Heartbeat.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (headerBuilder_ == null) {
-          header_ = null;
-        } else {
-          header_ = null;
+        bitField0_ = 0;
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
           headerBuilder_ = null;
         }
-        if (errorBuilder_ == null) {
-          error_ = null;
-        } else {
-          error_ = null;
+        error_ = null;
+        if (errorBuilder_ != null) {
+          errorBuilder_.dispose();
           errorBuilder_ = null;
         }
         node_ = "";
-
         dateSent_ = "";
-
         return this;
       }
 
@@ -591,20 +510,29 @@ public final class MonitoringHeartbeat {
       @java.lang.Override
       public MonitoringHeartbeat.Heartbeat buildPartial() {
         MonitoringHeartbeat.Heartbeat result = new MonitoringHeartbeat.Heartbeat(this);
-        if (headerBuilder_ == null) {
-          result.header_ = header_;
-        } else {
-          result.header_ = headerBuilder_.build();
-        }
-        if (errorBuilder_ == null) {
-          result.error_ = error_;
-        } else {
-          result.error_ = errorBuilder_.build();
-        }
-        result.node_ = node_;
-        result.dateSent_ = dateSent_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(MonitoringHeartbeat.Heartbeat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.header_ = headerBuilder_ == null
+              ? header_
+              : headerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.error_ = errorBuilder_ == null
+              ? error_
+              : errorBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.node_ = node_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.dateSent_ = dateSent_;
+        }
       }
 
       @java.lang.Override
@@ -659,13 +587,15 @@ public final class MonitoringHeartbeat {
         }
         if (!other.getNode().isEmpty()) {
           node_ = other.node_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getDateSent().isEmpty()) {
           dateSent_ = other.dateSent_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -680,19 +610,57 @@ public final class MonitoringHeartbeat {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MonitoringHeartbeat.Heartbeat parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHeaderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                node_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                dateSent_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MonitoringHeartbeat.Heartbeat) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private org.cyverse.de.protobufs.Header header_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -702,7 +670,7 @@ public final class MonitoringHeartbeat {
        * @return Whether the header field is set.
        */
       public boolean hasHeader() {
-        return headerBuilder_ != null || header_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.Header header = 1;</code>
@@ -724,11 +692,11 @@ public final class MonitoringHeartbeat {
             throw new NullPointerException();
           }
           header_ = value;
-          onChanged();
         } else {
           headerBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -738,11 +706,11 @@ public final class MonitoringHeartbeat {
           org.cyverse.de.protobufs.Header.Builder builderForValue) {
         if (headerBuilder_ == null) {
           header_ = builderForValue.build();
-          onChanged();
         } else {
           headerBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -750,38 +718,38 @@ public final class MonitoringHeartbeat {
        */
       public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
         if (headerBuilder_ == null) {
-          if (header_ != null) {
-            header_ =
-              org.cyverse.de.protobufs.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            header_ != null &&
+            header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
+            getHeaderBuilder().mergeFrom(value);
           } else {
             header_ = value;
           }
-          onChanged();
         } else {
           headerBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.Header header = 1;</code>
        */
       public Builder clearHeader() {
-        if (headerBuilder_ == null) {
-          header_ = null;
-          onChanged();
-        } else {
-          header_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
           headerBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.Header header = 1;</code>
        */
       public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getHeaderFieldBuilder().getBuilder();
       }
@@ -821,7 +789,7 @@ public final class MonitoringHeartbeat {
        * @return Whether the error field is set.
        */
       public boolean hasError() {
-        return errorBuilder_ != null || error_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.ServiceError error = 2;</code>
@@ -843,11 +811,11 @@ public final class MonitoringHeartbeat {
             throw new NullPointerException();
           }
           error_ = value;
-          onChanged();
         } else {
           errorBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -857,11 +825,11 @@ public final class MonitoringHeartbeat {
           org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
         if (errorBuilder_ == null) {
           error_ = builderForValue.build();
-          onChanged();
         } else {
           errorBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -869,38 +837,38 @@ public final class MonitoringHeartbeat {
        */
       public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
         if (errorBuilder_ == null) {
-          if (error_ != null) {
-            error_ =
-              org.cyverse.de.protobufs.ServiceError.newBuilder(error_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            error_ != null &&
+            error_ != org.cyverse.de.protobufs.ServiceError.getDefaultInstance()) {
+            getErrorBuilder().mergeFrom(value);
           } else {
             error_ = value;
           }
-          onChanged();
         } else {
           errorBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.ServiceError error = 2;</code>
        */
       public Builder clearError() {
-        if (errorBuilder_ == null) {
-          error_ = null;
-          onChanged();
-        } else {
-          error_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        error_ = null;
+        if (errorBuilder_ != null) {
+          errorBuilder_.dispose();
           errorBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ServiceError error = 2;</code>
        */
       public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getErrorFieldBuilder().getBuilder();
       }
@@ -973,11 +941,9 @@ public final class MonitoringHeartbeat {
        */
       public Builder setNode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         node_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -986,8 +952,8 @@ public final class MonitoringHeartbeat {
        * @return This builder for chaining.
        */
       public Builder clearNode() {
-        
         node_ = getDefaultInstance().getNode();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -998,12 +964,10 @@ public final class MonitoringHeartbeat {
        */
       public Builder setNodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         node_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1049,11 +1013,9 @@ public final class MonitoringHeartbeat {
        */
       public Builder setDateSent(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         dateSent_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1062,8 +1024,8 @@ public final class MonitoringHeartbeat {
        * @return This builder for chaining.
        */
       public Builder clearDateSent() {
-        
         dateSent_ = getDefaultInstance().getDateSent();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1074,12 +1036,10 @@ public final class MonitoringHeartbeat {
        */
       public Builder setDateSentBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         dateSent_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1116,7 +1076,18 @@ public final class MonitoringHeartbeat {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Heartbeat(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

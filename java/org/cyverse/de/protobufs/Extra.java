@@ -30,56 +30,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Extra(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            org.cyverse.de.protobufs.HTCondorExtraInfo.Builder subBuilder = null;
-            if (htCondor_ != null) {
-              subBuilder = htCondor_.toBuilder();
-            }
-            htCondor_ = input.readMessage(org.cyverse.de.protobufs.HTCondorExtraInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(htCondor_);
-              htCondor_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Extra_descriptor;
@@ -116,7 +66,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HTCondorExtraInfoOrBuilder getHtCondorOrBuilder() {
-    return getHtCondor();
+    return htCondor_ == null ? org.cyverse.de.protobufs.HTCondorExtraInfo.getDefaultInstance() : htCondor_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -136,7 +86,7 @@ private static final long serialVersionUID = 0L;
     if (htCondor_ != null) {
       output.writeMessage(1, getHtCondor());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -149,7 +99,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getHtCondor());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -169,7 +119,7 @@ private static final long serialVersionUID = 0L;
       if (!getHtCondor()
           .equals(other.getHtCondor())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -184,7 +134,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HT_CONDOR_FIELD_NUMBER;
       hash = (53 * hash) + getHtCondor().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -301,26 +251,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using org.cyverse.de.protobufs.Extra.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (htCondorBuilder_ == null) {
-        htCondor_ = null;
-      } else {
-        htCondor_ = null;
+      bitField0_ = 0;
+      htCondor_ = null;
+      if (htCondorBuilder_ != null) {
+        htCondorBuilder_.dispose();
         htCondorBuilder_ = null;
       }
       return this;
@@ -349,13 +294,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.Extra buildPartial() {
       org.cyverse.de.protobufs.Extra result = new org.cyverse.de.protobufs.Extra(this);
-      if (htCondorBuilder_ == null) {
-        result.htCondor_ = htCondor_;
-      } else {
-        result.htCondor_ = htCondorBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.cyverse.de.protobufs.Extra result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.htCondor_ = htCondorBuilder_ == null
+            ? htCondor_
+            : htCondorBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -405,7 +355,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasHtCondor()) {
         mergeHtCondor(other.getHtCondor());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -420,19 +370,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.cyverse.de.protobufs.Extra parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getHtCondorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.cyverse.de.protobufs.Extra) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private org.cyverse.de.protobufs.HTCondorExtraInfo htCondor_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -442,7 +413,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the htCondor field is set.
      */
     public boolean hasHtCondor() {
-      return htCondorBuilder_ != null || htCondor_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.HTCondorExtraInfo ht_condor = 1;</code>
@@ -464,11 +435,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         htCondor_ = value;
-        onChanged();
       } else {
         htCondorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -478,11 +449,11 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.HTCondorExtraInfo.Builder builderForValue) {
       if (htCondorBuilder_ == null) {
         htCondor_ = builderForValue.build();
-        onChanged();
       } else {
         htCondorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -490,38 +461,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHtCondor(org.cyverse.de.protobufs.HTCondorExtraInfo value) {
       if (htCondorBuilder_ == null) {
-        if (htCondor_ != null) {
-          htCondor_ =
-            org.cyverse.de.protobufs.HTCondorExtraInfo.newBuilder(htCondor_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          htCondor_ != null &&
+          htCondor_ != org.cyverse.de.protobufs.HTCondorExtraInfo.getDefaultInstance()) {
+          getHtCondorBuilder().mergeFrom(value);
         } else {
           htCondor_ = value;
         }
-        onChanged();
       } else {
         htCondorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.HTCondorExtraInfo ht_condor = 1;</code>
      */
     public Builder clearHtCondor() {
-      if (htCondorBuilder_ == null) {
-        htCondor_ = null;
-        onChanged();
-      } else {
-        htCondor_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      htCondor_ = null;
+      if (htCondorBuilder_ != null) {
+        htCondorBuilder_.dispose();
         htCondorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.HTCondorExtraInfo ht_condor = 1;</code>
      */
     public org.cyverse.de.protobufs.HTCondorExtraInfo.Builder getHtCondorBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getHtCondorFieldBuilder().getBuilder();
     }
@@ -585,7 +556,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Extra(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

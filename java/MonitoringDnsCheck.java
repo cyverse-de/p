@@ -225,74 +225,6 @@ public final class MonitoringDnsCheck {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DNSLookup(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              host_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                addresses_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              addresses_.add(s);
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              type_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              error_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          addresses_ = addresses_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return MonitoringDnsCheck.internal_static_DNSLookup_descriptor;
@@ -307,7 +239,8 @@ public final class MonitoringDnsCheck {
     }
 
     public static final int HOST_FIELD_NUMBER = 1;
-    private volatile java.lang.Object host_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object host_ = "";
     /**
      * <code>string host = 1;</code>
      * @return The host.
@@ -345,6 +278,7 @@ public final class MonitoringDnsCheck {
     }
 
     public static final int ADDRESSES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList addresses_;
     /**
      * <code>repeated string addresses = 2;</code>
@@ -380,7 +314,8 @@ public final class MonitoringDnsCheck {
     }
 
     public static final int TYPE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 3;</code>
      * @return The type.
@@ -418,7 +353,8 @@ public final class MonitoringDnsCheck {
     }
 
     public static final int ERROR_FIELD_NUMBER = 4;
-    private volatile java.lang.Object error_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object error_ = "";
     /**
      * <code>string error = 4;</code>
      * @return The error.
@@ -481,7 +417,7 @@ public final class MonitoringDnsCheck {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, error_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -507,7 +443,7 @@ public final class MonitoringDnsCheck {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, error_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -530,7 +466,7 @@ public final class MonitoringDnsCheck {
           .equals(other.getType())) return false;
       if (!getError()
           .equals(other.getError())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -551,7 +487,7 @@ public final class MonitoringDnsCheck {
       hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
       hash = (53 * hash) + getError().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -668,30 +604,23 @@ public final class MonitoringDnsCheck {
 
       // Construct using MonitoringDnsCheck.DNSLookup.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         host_ = "";
-
         addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         type_ = "";
-
         error_ = "";
-
         return this;
       }
 
@@ -718,17 +647,31 @@ public final class MonitoringDnsCheck {
       @java.lang.Override
       public MonitoringDnsCheck.DNSLookup buildPartial() {
         MonitoringDnsCheck.DNSLookup result = new MonitoringDnsCheck.DNSLookup(this);
-        int from_bitField0_ = bitField0_;
-        result.host_ = host_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          addresses_ = addresses_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.addresses_ = addresses_;
-        result.type_ = type_;
-        result.error_ = error_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(MonitoringDnsCheck.DNSLookup result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          addresses_ = addresses_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.addresses_ = addresses_;
+      }
+
+      private void buildPartial0(MonitoringDnsCheck.DNSLookup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.host_ = host_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.error_ = error_;
+        }
       }
 
       @java.lang.Override
@@ -777,12 +720,13 @@ public final class MonitoringDnsCheck {
         if (other == MonitoringDnsCheck.DNSLookup.getDefaultInstance()) return this;
         if (!other.getHost().isEmpty()) {
           host_ = other.host_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.addresses_.isEmpty()) {
           if (addresses_.isEmpty()) {
             addresses_ = other.addresses_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAddressesIsMutable();
             addresses_.addAll(other.addresses_);
@@ -791,13 +735,15 @@ public final class MonitoringDnsCheck {
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getError().isEmpty()) {
           error_ = other.error_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -812,17 +758,51 @@ public final class MonitoringDnsCheck {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MonitoringDnsCheck.DNSLookup parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                host_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAddressesIsMutable();
+                addresses_.add(s);
+                break;
+              } // case 18
+              case 26: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                error_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MonitoringDnsCheck.DNSLookup) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -868,11 +848,9 @@ public final class MonitoringDnsCheck {
        */
       public Builder setHost(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         host_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -881,8 +859,8 @@ public final class MonitoringDnsCheck {
        * @return This builder for chaining.
        */
       public Builder clearHost() {
-        
         host_ = getDefaultInstance().getHost();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -893,21 +871,19 @@ public final class MonitoringDnsCheck {
        */
       public Builder setHostBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         host_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureAddressesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           addresses_ = new com.google.protobuf.LazyStringArrayList(addresses_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -950,10 +926,8 @@ public final class MonitoringDnsCheck {
        */
       public Builder setAddresses(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAddressesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAddressesIsMutable();
         addresses_.set(index, value);
         onChanged();
         return this;
@@ -965,10 +939,8 @@ public final class MonitoringDnsCheck {
        */
       public Builder addAddresses(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAddressesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureAddressesIsMutable();
         addresses_.add(value);
         onChanged();
         return this;
@@ -992,7 +964,7 @@ public final class MonitoringDnsCheck {
        */
       public Builder clearAddresses() {
         addresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1003,10 +975,8 @@ public final class MonitoringDnsCheck {
        */
       public Builder addAddressesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureAddressesIsMutable();
         addresses_.add(value);
         onChanged();
@@ -1054,11 +1024,9 @@ public final class MonitoringDnsCheck {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1067,8 +1035,8 @@ public final class MonitoringDnsCheck {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1079,12 +1047,10 @@ public final class MonitoringDnsCheck {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1130,11 +1096,9 @@ public final class MonitoringDnsCheck {
        */
       public Builder setError(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         error_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1143,8 +1107,8 @@ public final class MonitoringDnsCheck {
        * @return This builder for chaining.
        */
       public Builder clearError() {
-        
         error_ = getDefaultInstance().getError();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1155,12 +1119,10 @@ public final class MonitoringDnsCheck {
        */
       public Builder setErrorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         error_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1197,7 +1159,18 @@ public final class MonitoringDnsCheck {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DNSLookup(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1329,94 +1302,6 @@ public final class MonitoringDnsCheck {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DNSCheckResult(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              org.cyverse.de.protobufs.Header.Builder subBuilder = null;
-              if (header_ != null) {
-                subBuilder = header_.toBuilder();
-              }
-              header_ = input.readMessage(org.cyverse.de.protobufs.Header.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(header_);
-                header_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              org.cyverse.de.protobufs.ServiceError.Builder subBuilder = null;
-              if (error_ != null) {
-                subBuilder = error_.toBuilder();
-              }
-              error_ = input.readMessage(org.cyverse.de.protobufs.ServiceError.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(error_);
-                error_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                lookups_ = new java.util.ArrayList<MonitoringDnsCheck.DNSLookup>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              lookups_.add(
-                  input.readMessage(MonitoringDnsCheck.DNSLookup.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              node_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dateSent_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          lookups_ = java.util.Collections.unmodifiableList(lookups_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return MonitoringDnsCheck.internal_static_DNSCheckResult_descriptor;
@@ -1453,7 +1338,7 @@ public final class MonitoringDnsCheck {
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-      return getHeader();
+      return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
     }
 
     public static final int ERROR_FIELD_NUMBER = 2;
@@ -1479,10 +1364,11 @@ public final class MonitoringDnsCheck {
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
-      return getError();
+      return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
     }
 
     public static final int LOOKUPS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<MonitoringDnsCheck.DNSLookup> lookups_;
     /**
      * <code>repeated .DNSLookup lookups = 3;</code>
@@ -1523,7 +1409,8 @@ public final class MonitoringDnsCheck {
     }
 
     public static final int NODE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object node_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object node_ = "";
     /**
      * <code>string node = 4;</code>
      * @return The node.
@@ -1561,7 +1448,8 @@ public final class MonitoringDnsCheck {
     }
 
     public static final int DATE_SENT_FIELD_NUMBER = 5;
-    private volatile java.lang.Object dateSent_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dateSent_ = "";
     /**
      * <code>string date_sent = 5 [json_name = "date_sent"];</code>
      * @return The dateSent.
@@ -1627,7 +1515,7 @@ public final class MonitoringDnsCheck {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateSent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, dateSent_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1654,7 +1542,7 @@ public final class MonitoringDnsCheck {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateSent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, dateSent_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1685,7 +1573,7 @@ public final class MonitoringDnsCheck {
           .equals(other.getNode())) return false;
       if (!getDateSent()
           .equals(other.getDateSent())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1712,7 +1600,7 @@ public final class MonitoringDnsCheck {
       hash = (53 * hash) + getNode().hashCode();
       hash = (37 * hash) + DATE_SENT_FIELD_NUMBER;
       hash = (53 * hash) + getDateSent().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1829,45 +1717,37 @@ public final class MonitoringDnsCheck {
 
       // Construct using MonitoringDnsCheck.DNSCheckResult.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLookupsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (headerBuilder_ == null) {
-          header_ = null;
-        } else {
-          header_ = null;
+        bitField0_ = 0;
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
           headerBuilder_ = null;
         }
-        if (errorBuilder_ == null) {
-          error_ = null;
-        } else {
-          error_ = null;
+        error_ = null;
+        if (errorBuilder_ != null) {
+          errorBuilder_.dispose();
           errorBuilder_ = null;
         }
         if (lookupsBuilder_ == null) {
           lookups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          lookups_ = null;
           lookupsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         node_ = "";
-
         dateSent_ = "";
-
         return this;
       }
 
@@ -1894,30 +1774,42 @@ public final class MonitoringDnsCheck {
       @java.lang.Override
       public MonitoringDnsCheck.DNSCheckResult buildPartial() {
         MonitoringDnsCheck.DNSCheckResult result = new MonitoringDnsCheck.DNSCheckResult(this);
-        int from_bitField0_ = bitField0_;
-        if (headerBuilder_ == null) {
-          result.header_ = header_;
-        } else {
-          result.header_ = headerBuilder_.build();
-        }
-        if (errorBuilder_ == null) {
-          result.error_ = error_;
-        } else {
-          result.error_ = errorBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(MonitoringDnsCheck.DNSCheckResult result) {
         if (lookupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             lookups_ = java.util.Collections.unmodifiableList(lookups_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.lookups_ = lookups_;
         } else {
           result.lookups_ = lookupsBuilder_.build();
         }
-        result.node_ = node_;
-        result.dateSent_ = dateSent_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(MonitoringDnsCheck.DNSCheckResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.header_ = headerBuilder_ == null
+              ? header_
+              : headerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.error_ = errorBuilder_ == null
+              ? error_
+              : errorBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.node_ = node_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dateSent_ = dateSent_;
+        }
       }
 
       @java.lang.Override
@@ -1974,7 +1866,7 @@ public final class MonitoringDnsCheck {
           if (!other.lookups_.isEmpty()) {
             if (lookups_.isEmpty()) {
               lookups_ = other.lookups_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureLookupsIsMutable();
               lookups_.addAll(other.lookups_);
@@ -1987,7 +1879,7 @@ public final class MonitoringDnsCheck {
               lookupsBuilder_.dispose();
               lookupsBuilder_ = null;
               lookups_ = other.lookups_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               lookupsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLookupsFieldBuilder() : null;
@@ -1998,13 +1890,15 @@ public final class MonitoringDnsCheck {
         }
         if (!other.getNode().isEmpty()) {
           node_ = other.node_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getDateSent().isEmpty()) {
           dateSent_ = other.dateSent_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2019,17 +1913,67 @@ public final class MonitoringDnsCheck {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MonitoringDnsCheck.DNSCheckResult parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHeaderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                MonitoringDnsCheck.DNSLookup m =
+                    input.readMessage(
+                        MonitoringDnsCheck.DNSLookup.parser(),
+                        extensionRegistry);
+                if (lookupsBuilder_ == null) {
+                  ensureLookupsIsMutable();
+                  lookups_.add(m);
+                } else {
+                  lookupsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                node_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                dateSent_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MonitoringDnsCheck.DNSCheckResult) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2042,7 +1986,7 @@ public final class MonitoringDnsCheck {
        * @return Whether the header field is set.
        */
       public boolean hasHeader() {
-        return headerBuilder_ != null || header_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.Header header = 1;</code>
@@ -2064,11 +2008,11 @@ public final class MonitoringDnsCheck {
             throw new NullPointerException();
           }
           header_ = value;
-          onChanged();
         } else {
           headerBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2078,11 +2022,11 @@ public final class MonitoringDnsCheck {
           org.cyverse.de.protobufs.Header.Builder builderForValue) {
         if (headerBuilder_ == null) {
           header_ = builderForValue.build();
-          onChanged();
         } else {
           headerBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2090,38 +2034,38 @@ public final class MonitoringDnsCheck {
        */
       public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
         if (headerBuilder_ == null) {
-          if (header_ != null) {
-            header_ =
-              org.cyverse.de.protobufs.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            header_ != null &&
+            header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
+            getHeaderBuilder().mergeFrom(value);
           } else {
             header_ = value;
           }
-          onChanged();
         } else {
           headerBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.Header header = 1;</code>
        */
       public Builder clearHeader() {
-        if (headerBuilder_ == null) {
-          header_ = null;
-          onChanged();
-        } else {
-          header_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
           headerBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.Header header = 1;</code>
        */
       public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getHeaderFieldBuilder().getBuilder();
       }
@@ -2161,7 +2105,7 @@ public final class MonitoringDnsCheck {
        * @return Whether the error field is set.
        */
       public boolean hasError() {
-        return errorBuilder_ != null || error_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.ServiceError error = 2;</code>
@@ -2183,11 +2127,11 @@ public final class MonitoringDnsCheck {
             throw new NullPointerException();
           }
           error_ = value;
-          onChanged();
         } else {
           errorBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2197,11 +2141,11 @@ public final class MonitoringDnsCheck {
           org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
         if (errorBuilder_ == null) {
           error_ = builderForValue.build();
-          onChanged();
         } else {
           errorBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2209,38 +2153,38 @@ public final class MonitoringDnsCheck {
        */
       public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
         if (errorBuilder_ == null) {
-          if (error_ != null) {
-            error_ =
-              org.cyverse.de.protobufs.ServiceError.newBuilder(error_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            error_ != null &&
+            error_ != org.cyverse.de.protobufs.ServiceError.getDefaultInstance()) {
+            getErrorBuilder().mergeFrom(value);
           } else {
             error_ = value;
           }
-          onChanged();
         } else {
           errorBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.ServiceError error = 2;</code>
        */
       public Builder clearError() {
-        if (errorBuilder_ == null) {
-          error_ = null;
-          onChanged();
-        } else {
-          error_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        error_ = null;
+        if (errorBuilder_ != null) {
+          errorBuilder_.dispose();
           errorBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ServiceError error = 2;</code>
        */
       public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getErrorFieldBuilder().getBuilder();
       }
@@ -2275,9 +2219,9 @@ public final class MonitoringDnsCheck {
       private java.util.List<MonitoringDnsCheck.DNSLookup> lookups_ =
         java.util.Collections.emptyList();
       private void ensureLookupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           lookups_ = new java.util.ArrayList<MonitoringDnsCheck.DNSLookup>(lookups_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2427,7 +2371,7 @@ public final class MonitoringDnsCheck {
       public Builder clearLookups() {
         if (lookupsBuilder_ == null) {
           lookups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           lookupsBuilder_.clear();
@@ -2504,7 +2448,7 @@ public final class MonitoringDnsCheck {
           lookupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               MonitoringDnsCheck.DNSLookup, MonitoringDnsCheck.DNSLookup.Builder, MonitoringDnsCheck.DNSLookupOrBuilder>(
                   lookups_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           lookups_ = null;
@@ -2553,11 +2497,9 @@ public final class MonitoringDnsCheck {
        */
       public Builder setNode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         node_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2566,8 +2508,8 @@ public final class MonitoringDnsCheck {
        * @return This builder for chaining.
        */
       public Builder clearNode() {
-        
         node_ = getDefaultInstance().getNode();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2578,12 +2520,10 @@ public final class MonitoringDnsCheck {
        */
       public Builder setNodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         node_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2629,11 +2569,9 @@ public final class MonitoringDnsCheck {
        */
       public Builder setDateSent(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         dateSent_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2642,8 +2580,8 @@ public final class MonitoringDnsCheck {
        * @return This builder for chaining.
        */
       public Builder clearDateSent() {
-        
         dateSent_ = getDefaultInstance().getDateSent();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2654,12 +2592,10 @@ public final class MonitoringDnsCheck {
        */
       public Builder setDateSentBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         dateSent_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2696,7 +2632,18 @@ public final class MonitoringDnsCheck {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DNSCheckResult(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
