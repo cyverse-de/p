@@ -2,11 +2,19 @@
 
 godirs: $(ls ./go/)
 
-all: clean compile go-init go-tidy java-jar
+all: clean compile go-init go-tidy java-jar documentation
 
 compile:
 	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
 	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto
+
+documentation:
+	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,analysis.md protos/analysis_*.proto
+	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,monitoring.md protos/monitoring_*.proto
+	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,qms.md protos/qms_*.proto
+	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,common.md protos/header.proto protos/svcerror.proto
+	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,users.md protos/user.proto protos/user_requests.proto
+	
 
 java-jar:
 	lein jar
@@ -30,4 +38,5 @@ go-tidy:
 clean:
 	rm -rf ./go/*
 	rm -rf ./java/*
+	rm -rf ./docs/*
 	lein clean

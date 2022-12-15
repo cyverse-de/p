@@ -11,6 +11,7 @@ You will need the following:
 
 - `protoc`
 - `protoc-gen-go`
+- `protoc-gen-doc`
 - A symlink to the protobuf `include/` directory in `/usr/local/include`
 
 ### Installation
@@ -27,6 +28,12 @@ installed above:
 
 ```
 sudo ln -sf $HOMEBREW_CELLAR/protobuf/3.19.4/include/google /usr/local/include/google
+```
+
+You can install `protoc-gen-doc` with the `go install` command:
+
+```
+go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
 ```
 
 ## Repo Layout
