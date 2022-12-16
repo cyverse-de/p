@@ -9,20 +9,45 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSResourceTypeProtobufs";
 
+/**
+ * Representation of a resource type.
+ */
 message ResourceType {
+    // The unique identifier.
     string uuid = 1;
+
+    // The name of the resource. Will usually be "data.size" and "cpu.hours".
     string name = 2;
+
+    // The units used for the resource. Usually "bytes" or "cpu hours".
     string unit = 3;
 }
 
+/**
+ * A response type for resource type requests.
+ */
 message ResourceTypeResponse {
+     // Contains telemetry information
     Header header = 1;
+
+    // Error information returned by the request handler.
     ServiceError error = 2;
+
+    // The resource type returned by the request handler.
     ResourceType resource_type  = 3 [json_name = "resource_type"];
 }
 
+/**
+ * A response type for the resource type requests that contains a list of 
+ * resource type definitions.
+ */
 message ResourceTypeList {
+     // Contains telemetry information
     Header header = 1;
+
+    // Error information returned by the request handler.
     ServiceError error = 2;
+
+    // A list of resource types returned by the request handler.
     repeated ResourceType resource_types = 3 [json_name = "resource_types"];
 }

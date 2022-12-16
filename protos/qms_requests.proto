@@ -8,24 +8,51 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSRequestProtobufs";
 
+/**
+ * A request for all of a user's current resource type overages.
+ */
 message AllUserOveragesRequest {
+    // Contains telemetry data.
     Header header = 1;
+
+    // The user's username in the QMS system.
     string username = 2;
 }
 
+/**
+ * A request for a user's overages specific to a particular resource type.
+ */
 message UserResourceOveragesRequest {
+    // Contains telemetry data.
     Header header = 1;
+
+    // A user's username.
     string username = 2;
+
+    // The name of the resource type to look up overages for.
     string resource_name = 3 [json_name = "resource_name"];
 }
 
+/**
+ * A request to check if a user is in overage for a particular resource.
+ */
 message IsOverageRequest {
+    // Contains telemetry information
     Header header = 1;
+
+    // A username.
     string username = 2;
+
+    // The name of the resource type to check for usage overages by the user.
     string resource_name = 3 [json_name = "resource_name"];
 }
 
+/**
+ * A request to add a usage to the system for a resource type consumed by the
+ * specified user.
+ */
 message AddUsage {
+     // Contains telemetry information
     Header header = 1;
     string username = 2;
     string resource_name = 3 [json_name = "resource_name"];
@@ -39,20 +66,24 @@ message AddUsage {
 }
 
 message GetUsages {
+     // Contains telemetry information
     Header header = 1;
     string username = 2;
 }
 
 message RequestByUsername {
+     // Contains telemetry information
     Header header = 1;
     string username = 2;
 }
 
 message RequestByUserID {
+     // Contains telemetry information
     Header header = 1;
     string user_id = 2 [json_name = "user_id"];
 }
 
 message NoParamsRequest {
+     // Contains telemetry information
     Header header = 1;
 }

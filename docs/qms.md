@@ -427,12 +427,13 @@ A response to a quota request. Contains a single quota object.
 <a name="-AddUsage"></a>
 
 ### AddUsage
-
+A request to add a usage to the system for a resource type consumed by the
+specified user.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 | resource_name | [string](#string) |  |  |
 | update_type | [string](#string) |  | Possible values are defined in the database, so we can&#39;t use an enum here |
@@ -447,13 +448,13 @@ A response to a quota request. Contains a single quota object.
 <a name="-AllUserOveragesRequest"></a>
 
 ### AllUserOveragesRequest
-
+A request for all of a user&#39;s current resource type overages.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| username | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry data. |
+| username | [string](#string) |  | The user&#39;s username in the QMS system. |
 
 
 
@@ -468,7 +469,7 @@ A response to a quota request. Contains a single quota object.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 
 
@@ -479,14 +480,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-IsOverageRequest"></a>
 
 ### IsOverageRequest
-
+A request to check if a user is in overage for a particular resource.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| username | [string](#string) |  |  |
-| resource_name | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| username | [string](#string) |  | A username. |
+| resource_name | [string](#string) |  | The name of the resource type to check for usage overages by the user. |
 
 
 
@@ -501,7 +502,7 @@ A response to a quota request. Contains a single quota object.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
 
 
 
@@ -516,7 +517,7 @@ A response to a quota request. Contains a single quota object.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
 | user_id | [string](#string) |  |  |
 
 
@@ -532,7 +533,7 @@ A response to a quota request. Contains a single quota object.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 
 
@@ -543,14 +544,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-UserResourceOveragesRequest"></a>
 
 ### UserResourceOveragesRequest
-
+A request for a user&#39;s overages specific to a particular resource type.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| username | [string](#string) |  |  |
-| resource_name | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry data. |
+| username | [string](#string) |  | A user&#39;s username. |
+| resource_name | [string](#string) |  | The name of the resource type to look up overages for. |
 
 
 
@@ -576,14 +577,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-ResourceType"></a>
 
 ### ResourceType
-
+Representation of a resource type.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| name | [string](#string) |  |  |
-| unit | [string](#string) |  |  |
+| uuid | [string](#string) |  | The unique identifier. |
+| name | [string](#string) |  | The name of the resource. Will usually be &#34;data.size&#34; and &#34;cpu.hours&#34;. |
+| unit | [string](#string) |  | The units used for the resource. Usually &#34;bytes&#34; or &#34;cpu hours&#34;. |
 
 
 
@@ -593,14 +594,15 @@ A response to a quota request. Contains a single quota object.
 <a name="-ResourceTypeList"></a>
 
 ### ResourceTypeList
-
+A response type for the resource type requests that contains a list of 
+resource type definitions.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| resource_types | [ResourceType](#ResourceType) | repeated |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| resource_types | [ResourceType](#ResourceType) | repeated | A list of resource types returned by the request handler. |
 
 
 
@@ -610,14 +612,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-ResourceTypeResponse"></a>
 
 ### ResourceTypeResponse
-
+A response type for resource type requests.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| resource_type | [ResourceType](#ResourceType) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| resource_type | [ResourceType](#ResourceType) |  | The resource type returned by the request handler. |
 
 
 
@@ -643,13 +645,13 @@ A response to a quota request. Contains a single quota object.
 <a name="-AddUpdateRequest"></a>
 
 ### AddUpdateRequest
-
+A request to add an update to the system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| update | [Update](#Update) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| update | [Update](#Update) |  | The update being added to the system. |
 
 
 
@@ -659,14 +661,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-AddUpdateResponse"></a>
 
 ### AddUpdateResponse
-
+A response to requests to add an update to the system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| update | [Update](#Update) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| update | [Update](#Update) |  | The update added to the system. |
 
 
 
@@ -676,18 +678,18 @@ A response to a quota request. Contains a single quota object.
 <a name="-Update"></a>
 
 ### Update
-
+A representation of an update to a quota or usage value.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| value_type | [string](#string) |  |  |
-| value | [double](#double) |  |  |
-| effective_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
-| operation | [UpdateOperation](#UpdateOperation) |  |  |
-| resource_type | [ResourceType](#ResourceType) |  |  |
-| user | [QMSUser](#QMSUser) |  |  |
+| uuid | [string](#string) |  | The unique identifier |
+| value_type | [string](#string) |  | Determines whether the update is for a &#34;quota&#34; or &#34;usage&#34;. |
+| value | [double](#double) |  | The value being applied to the usage or quota. |
+| effective_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the update takes effect. |
+| operation | [UpdateOperation](#UpdateOperation) |  | The type of operation being done. |
+| resource_type | [ResourceType](#ResourceType) |  | The resource type for the quota or usage being updated. |
+| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the update is for. |
 
 
 
@@ -697,13 +699,13 @@ A response to a quota request. Contains a single quota object.
 <a name="-UpdateListRequest"></a>
 
 ### UpdateListRequest
-
+A request to get the list of updates generated by the specified user.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| user | [QMSUser](#QMSUser) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| user | [QMSUser](#QMSUser) |  | The user whose updates have been requested. |
 
 
 
@@ -713,14 +715,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-UpdateListResponse"></a>
 
 ### UpdateListResponse
-
+A response containing the requested list of updates generated by a user.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| updates | [Update](#Update) | repeated |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| updates | [Update](#Update) | repeated | The list of updates returned by the request handler. |
 
 
 
@@ -730,13 +732,14 @@ A response to a quota request. Contains a single quota object.
 <a name="-UpdateOperation"></a>
 
 ### UpdateOperation
-
+A representation of update operations, which are ways calling code can change
+quota and usage value.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| name | [string](#string) |  |  |
+| uuid | [string](#string) |  | The unique identifier |
+| name | [string](#string) |  | The name of the update operation |
 
 
 
