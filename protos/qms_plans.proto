@@ -10,55 +10,128 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSPlansProtobufs";
 
+/**
+ * Represents a default quota value used in plans. Can be overridden on a
+ * per-user basis for a user plan to provide customized quotas. Also referred to
+ * as plan quota defaults.
+ */
 message QuotaDefault {
+    // The unique identifier/primary key for the quota default.
     string uuid = 1;
+
+    // The value of the quota default.
     float quota_value = 2 [json_name = "quota_value"];
+
+    // The resource type the quota applies to.
     ResourceType resource_type = 3 [json_name = "resource_type"];
 }
 
+/**
+ * A response type for quota default requests.
+ */
 message QuotaDefaultResponse {
+    // Can container telemetry data.
     Header header = 1;
+
+    // Contains error info from the request handler.
     ServiceError error = 2;
+
+    // The quota default object returned by the request handler.
     QuotaDefault quota_default = 3 [json_name = "quota_default"];
 }
 
+/**
+ * A response type for quota default requests that contains a list of quota
+ * defaults.
+ */
 message QuotaDefaultList {
+    // Can contain telemetry data.
     Header header = 1;
+
+    // Contains error info from the request handler.
     ServiceError error = 2;
+
+    // The list of quota default objkects returned by the request handler.
     repeated QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];
 }
 
+/**
+ * Represents a subscription plan available to users.
+ */
 message Plan {
+    // Unique identifier for the plan.
     string uuid = 1;
+
+    // The name of the plan.
     string name = 2;
+
+    // A description of the plan.
     string description = 3;
+
+    // A list of quota defaults associated with the plan.
     repeated QuotaDefault plan_quota_defaults  = 4 [json_name = "plan_quota_defaults"];
 }
 
+/**
+ * A response to a plan request. Contains a single plan.
+ */
 message PlanResponse {
+    // Contains telemtry data.
     Header header = 1;
+
+    // Contains error data returned by the request handler.
     ServiceError error  = 2;
+
+    // The plan returned by the request handler.
     Plan plan = 3;
 }
 
+/**
+ * A response to a plan request. Contains a list of plans.
+ */
 message PlanList {
+    // Contains telemetry data.
     Header header = 1;
+
+    // Contains error data returned by the request handler.
     ServiceError error = 2;
+
+    // A list of plans returned by the request handler.
     repeated Plan plans = 3;
 }
 
+/**
+ * A request for plan information specified by the plan's unique identifier.
+ */
 message PlanRequest {
+    // Contains telemetry data.
     Header header = 1;
+
+    // The unique identifier of the plan being requested.
     string plan_id = 2 [json_name = "plan_id"];
 }
 
+/**
+ * A request to add a new plan to the system.
+ */
 message AddPlanRequest {
+    // Contains telemetry data.
     Header header = 1;
+
+    // The plan to add to the system.
     Plan plan = 2;
 }
 
+/**
+ * A request to add a quota default to an existing plan.
+ */
 message AddPlanQuotaDefaultRequest {
+    // Contains telemetry data.
     Header header = 1;
+
+    // The name of the plan to add the quota default to.
     string plan_name = 2 [json_name = "plan_name"];
+
+    // The quota default to add to the plan specified by the plan_name field.
     QuotaDefault quota_default = 3 [json_name = "quota_default"];
 }

@@ -166,14 +166,14 @@ Returned by handlers in response to overage requests.
 <a name="-AddPlanQuotaDefaultRequest"></a>
 
 ### AddPlanQuotaDefaultRequest
-
+A request to add a quota default to an existing plan.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| plan_name | [string](#string) |  |  |
-| quota_default | [QuotaDefault](#QuotaDefault) |  |  |
+| header | [Header](#Header) |  | Contains telemetry data. |
+| plan_name | [string](#string) |  | The name of the plan to add the quota default to. |
+| quota_default | [QuotaDefault](#QuotaDefault) |  | The quota default to add to the plan specified by the plan_name field. |
 
 
 
@@ -183,13 +183,13 @@ Returned by handlers in response to overage requests.
 <a name="-AddPlanRequest"></a>
 
 ### AddPlanRequest
-
+A request to add a new plan to the system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| plan | [Plan](#Plan) |  |  |
+| header | [Header](#Header) |  | Contains telemetry data. |
+| plan | [Plan](#Plan) |  | The plan to add to the system. |
 
 
 
@@ -199,15 +199,15 @@ Returned by handlers in response to overage requests.
 <a name="-Plan"></a>
 
 ### Plan
-
+Represents a subscription plan available to users.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| name | [string](#string) |  |  |
-| description | [string](#string) |  |  |
-| plan_quota_defaults | [QuotaDefault](#QuotaDefault) | repeated |  |
+| uuid | [string](#string) |  | Unique identifier for the plan. |
+| name | [string](#string) |  | The name of the plan. |
+| description | [string](#string) |  | A description of the plan. |
+| plan_quota_defaults | [QuotaDefault](#QuotaDefault) | repeated | A list of quota defaults associated with the plan. |
 
 
 
@@ -217,14 +217,14 @@ Returned by handlers in response to overage requests.
 <a name="-PlanList"></a>
 
 ### PlanList
-
+A response to a plan request. Contains a list of plans.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| plans | [Plan](#Plan) | repeated |  |
+| header | [Header](#Header) |  | Contains telemetry data. |
+| error | [ServiceError](#ServiceError) |  | Contains error data returned by the request handler. |
+| plans | [Plan](#Plan) | repeated | A list of plans returned by the request handler. |
 
 
 
@@ -234,13 +234,13 @@ Returned by handlers in response to overage requests.
 <a name="-PlanRequest"></a>
 
 ### PlanRequest
-
+A request for plan information specified by the plan&#39;s unique identifier.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| plan_id | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry data. |
+| plan_id | [string](#string) |  | The unique identifier of the plan being requested. |
 
 
 
@@ -250,14 +250,14 @@ Returned by handlers in response to overage requests.
 <a name="-PlanResponse"></a>
 
 ### PlanResponse
-
+A response to a plan request. Contains a single plan.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| plan | [Plan](#Plan) |  |  |
+| header | [Header](#Header) |  | Contains telemtry data. |
+| error | [ServiceError](#ServiceError) |  | Contains error data returned by the request handler. |
+| plan | [Plan](#Plan) |  | The plan returned by the request handler. |
 
 
 
@@ -267,14 +267,16 @@ Returned by handlers in response to overage requests.
 <a name="-QuotaDefault"></a>
 
 ### QuotaDefault
-
+Represents a default quota value used in plans. Can be overridden on a
+per-user basis for a user plan to provide customized quotas. Also referred to
+as plan quota defaults.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| quota_value | [float](#float) |  |  |
-| resource_type | [ResourceType](#ResourceType) |  |  |
+| uuid | [string](#string) |  | The unique identifier/primary key for the quota default. |
+| quota_value | [float](#float) |  | The value of the quota default. |
+| resource_type | [ResourceType](#ResourceType) |  | The resource type the quota applies to. |
 
 
 
@@ -284,14 +286,15 @@ Returned by handlers in response to overage requests.
 <a name="-QuotaDefaultList"></a>
 
 ### QuotaDefaultList
-
+A response type for quota default requests that contains a list of quota
+defaults.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| quota_defaults | [QuotaDefault](#QuotaDefault) | repeated |  |
+| header | [Header](#Header) |  | Can contain telemetry data. |
+| error | [ServiceError](#ServiceError) |  | Contains error info from the request handler. |
+| quota_defaults | [QuotaDefault](#QuotaDefault) | repeated | The list of quota default objkects returned by the request handler. |
 
 
 
@@ -301,14 +304,14 @@ Returned by handlers in response to overage requests.
 <a name="-QuotaDefaultResponse"></a>
 
 ### QuotaDefaultResponse
-
+A response type for quota default requests.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| quota_default | [QuotaDefault](#QuotaDefault) |  |  |
+| header | [Header](#Header) |  | Can container telemetry data. |
+| error | [ServiceError](#ServiceError) |  | Contains error info from the request handler. |
+| quota_default | [QuotaDefault](#QuotaDefault) |  | The quota default object returned by the request handler. |
 
 
 
