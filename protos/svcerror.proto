@@ -8,22 +8,35 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "ServiceErrorProtobufs";
 
+/**
+ * The types of errors that can be retuned by message handlers.
+ */
 enum ErrorCode {
     UNSET = 0;       // Default value for the error code. Don't set the error code to this. Use Unspecified if tempted.
     UNSPECIFIED = 1; // An error occurred, but the kind wasn't specified or included in the list.
-    INTERNAL = 2;
-    NOT_FOUND = 3;
-    BAD_REQUEST = 4;
-    MARSHAL_FAILURE = 5;
-    UNMARSHAL_FAILURE = 6;
-    PARAMETER_MISSING = 7;
-    PARAMETER_INVALID = 8;
+    INTERNAL = 2;    // Internal error.
+    NOT_FOUND = 3;   // The requested resource wasn't found.
+    BAD_REQUEST = 4; // The request was bad/wrong is some way.
+    MARSHAL_FAILURE = 5; // A failure to marshal a response.
+    UNMARSHAL_FAILURE = 6; // A failure to unmarshal a request.
+    PARAMETER_MISSING = 7; // A parameter is missing.
+    PARAMETER_INVALID = 8; /// A parameter is invalid.
 }
 
+/**
+ * An error returned by a request handler.
+ */
 message ServiceError {
+     // Contains telemetry information
     Header header = 1;
+    
+    // The numeric error code from the error code enum.
     ErrorCode error_code = 2 [json_name = "error_code"];
+
+    // The status code for the error.
     int32 status_code = 3 [json_name = "status_code"];
+
+    // The error's message.
     string message = 4;
 
 }

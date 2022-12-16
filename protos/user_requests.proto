@@ -8,21 +8,34 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "UserRequestsProtobufs";
 
+/**
+ * A request for user information.
+ */
 message UserLookupRequest {
     reserved 4; // 4 was for sessions, which aren't used anymore.
 
+    // How to uniquely identify the user being looked up.
     oneof lookup_ids {
         string username = 1;
         string user_id = 2;
         string analysis_id = 3;
     }
 
+    // Whether to include user logins in the response.
     bool include_logins = 5;
+
+    // Whether to include user preferences in the response.
     bool include_preferences = 6;
+
+    // Whether to include saved searches in the response.
     bool include_saved_searches = 7;
 
+    // Paging limit.
     uint32 login_limit = 8;
+
+    // Paging offset
     uint32 login_offset = 9;
 
+     // Contains telemetry information
     Header header = 10;
 }

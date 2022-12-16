@@ -89,15 +89,15 @@
 <a name="-ServiceError"></a>
 
 ### ServiceError
-
+An error returned by a request handler.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error_code | [ErrorCode](#ErrorCode) |  |  |
-| status_code | [int32](#int32) |  |  |
-| message | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error_code | [ErrorCode](#ErrorCode) |  | The numeric error code from the error code enum. |
+| status_code | [int32](#int32) |  | The status code for the error. |
+| message | [string](#string) |  | The error&#39;s message. |
 
 
 
@@ -109,19 +109,19 @@
 <a name="-ErrorCode"></a>
 
 ### ErrorCode
-
+The types of errors that can be retuned by message handlers.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | UNSET | 0 | Default value for the error code. Don&#39;t set the error code to this. Use Unspecified if tempted. |
 | UNSPECIFIED | 1 | An error occurred, but the kind wasn&#39;t specified or included in the list. |
-| INTERNAL | 2 |  |
-| NOT_FOUND | 3 |  |
-| BAD_REQUEST | 4 |  |
-| MARSHAL_FAILURE | 5 |  |
-| UNMARSHAL_FAILURE | 6 |  |
-| PARAMETER_MISSING | 7 |  |
-| PARAMETER_INVALID | 8 |  |
+| INTERNAL | 2 | Internal error. |
+| NOT_FOUND | 3 | The requested resource wasn&#39;t found. |
+| BAD_REQUEST | 4 | The request was bad/wrong is some way. |
+| MARSHAL_FAILURE | 5 | A failure to marshal a response. |
+| UNMARSHAL_FAILURE | 6 | A failure to unmarshal a request. |
+| PARAMETER_MISSING | 7 | A parameter is missing. |
+| PARAMETER_INVALID | 8 | A parameter is invalid. |
 
 
  

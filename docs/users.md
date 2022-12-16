@@ -26,7 +26,7 @@
 <a name="-User"></a>
 
 ### User
-
+A user&#39;s information.
 
 
 | Field | Type | Label | Description |
@@ -115,7 +115,7 @@
 <a name="-UserLookupRequest"></a>
 
 ### UserLookupRequest
-
+A request for user information.
 
 
 | Field | Type | Label | Description |
@@ -123,12 +123,12 @@
 | username | [string](#string) |  |  |
 | user_id | [string](#string) |  |  |
 | analysis_id | [string](#string) |  |  |
-| include_logins | [bool](#bool) |  |  |
-| include_preferences | [bool](#bool) |  |  |
-| include_saved_searches | [bool](#bool) |  |  |
-| login_limit | [uint32](#uint32) |  |  |
-| login_offset | [uint32](#uint32) |  |  |
-| header | [Header](#Header) |  |  |
+| include_logins | [bool](#bool) |  | Whether to include user logins in the response. |
+| include_preferences | [bool](#bool) |  | Whether to include user preferences in the response. |
+| include_saved_searches | [bool](#bool) |  | Whether to include saved searches in the response. |
+| login_limit | [uint32](#uint32) |  | Paging limit. |
+| login_offset | [uint32](#uint32) |  | Paging offset |
+| header | [Header](#Header) |  | Contains telemetry information |
 
 
 
