@@ -765,19 +765,19 @@ quota and usage value.
 <a name="-Usage"></a>
 
 ### Usage
-
+A representation of how much a user has used a resource type.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| usage | [double](#double) |  |  |
-| user_plan_id | [string](#string) |  |  |
-| resource_type | [ResourceType](#ResourceType) |  |  |
-| CreatedBy | [string](#string) |  |  |
-| CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
-| LastModifiedBy | [string](#string) |  |  |
-| LastModifiedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
+| uuid | [string](#string) |  | The unique identifier |
+| usage | [double](#double) |  | How much the resource has been used. |
+| user_plan_id | [string](#string) |  | The unique identifier for the user plan the usage is associated with. |
+| resource_type | [ResourceType](#ResourceType) |  | The resource type the usage applies to. |
+| CreatedBy | [string](#string) |  | Who created the usage record. Probably not the name of a user. |
+| CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the usage record was created. |
+| LastModifiedBy | [string](#string) |  | Who last modified the usage record. Probably not the name of a user. |
+| LastModifiedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the usage record was last modified. |
 
 
 
@@ -787,14 +787,14 @@ quota and usage value.
 <a name="-UsageList"></a>
 
 ### UsageList
-
+A response to a request for usage info containing multiple usage records.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| usages | [Usage](#Usage) | repeated |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| usages | [Usage](#Usage) | repeated | A list of usages returned by the request handler. |
 
 
 
@@ -804,14 +804,14 @@ quota and usage value.
 <a name="-UsageResponse"></a>
 
 ### UsageResponse
-
+A response to a request for a usage record.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| usage | [Usage](#Usage) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| usage | [Usage](#Usage) |  | Contains the usage info returned by the request handler. |
 
 
 
@@ -837,13 +837,13 @@ quota and usage value.
 <a name="-ChangeUserPlanRequest"></a>
 
 ### ChangeUserPlanRequest
-
+A request to change a user&#39;s assigned plan/subscription.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| username | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| username | [string](#string) |  | A username for the user whose subscription plan is being changed. |
 | uuid | [string](#string) |  |  |
 | name | [string](#string) |  |  |
 
@@ -855,18 +855,18 @@ quota and usage value.
 <a name="-UserPlan"></a>
 
 ### UserPlan
-
+Representation of a user&#39;s assigned plan. AKA a subscription.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
-| effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
-| user | [QMSUser](#QMSUser) |  |  |
-| plan | [Plan](#Plan) |  |  |
-| quotas | [Quota](#Quota) | repeated |  |
-| usages | [Usage](#Usage) | repeated |  |
+| uuid | [string](#string) |  | The unique identifier |
+| effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription activates. |
+| effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription deactivates/expires. |
+| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the user plan is for. |
+| plan | [Plan](#Plan) |  | The plan the user is subscribed to. |
+| quotas | [Quota](#Quota) | repeated | The list of quotas applied to the user&#39;s subscription. Initially populated by quota defaults, but can be overridden. |
+| usages | [Usage](#Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
 
 
 
@@ -876,14 +876,14 @@ quota and usage value.
 <a name="-UserPlanList"></a>
 
 ### UserPlanList
-
+A response to a request for a list of user plans/subscriptions.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| user_plans | [UserPlan](#UserPlan) | repeated |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| user_plans | [UserPlan](#UserPlan) | repeated | The user plan/subscription list returned by the request handler. |
 
 
 
@@ -893,14 +893,14 @@ quota and usage value.
 <a name="-UserPlanResponse"></a>
 
 ### UserPlanResponse
-
+A response to a request for a user subscription.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| user_plan | [UserPlan](#UserPlan) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| user_plan | [UserPlan](#UserPlan) |  | The user plan/subscription returned by the request handler. |
 
 
 
@@ -926,14 +926,14 @@ quota and usage value.
 <a name="-AddUserRequest"></a>
 
 ### AddUserRequest
-
+A request to add a user to the QMS system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| username | [string](#string) |  |  |
-| plan_name | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| username | [string](#string) |  | The username for the user being added to the system. |
+| plan_name | [string](#string) |  | The name of the plan the user should be subscribed to. |
 
 
 
@@ -943,17 +943,17 @@ quota and usage value.
 <a name="-AddUserResponse"></a>
 
 ### AddUserResponse
-
+A response to a request to add a user to the QMS system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| uuid | [string](#string) |  |  |
-| username | [string](#string) |  |  |
-| plan_name | [string](#string) |  |  |
-| plan_uuid | [string](#string) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
+| uuid | [string](#string) |  | The unique identfier of the newly added user. |
+| username | [string](#string) |  | The username of the newly added user. |
+| plan_name | [string](#string) |  | The name of the plan the newly added user is subscribed to. |
+| plan_uuid | [string](#string) |  | The unique identifier for the plan the newly added user is subscribed to. |
 
 
 
@@ -963,13 +963,13 @@ quota and usage value.
 <a name="-QMSUser"></a>
 
 ### QMSUser
-
+A representation of a user in the QMS system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| username | [string](#string) |  |  |
+| uuid | [string](#string) |  | A user&#39;s unique identifier in QMS. |
+| username | [string](#string) |  | A user&#39;s username in QMS. |
 
 
 
@@ -979,14 +979,14 @@ quota and usage value.
 <a name="-QMSUserList"></a>
 
 ### QMSUserList
-
+A response to a request for info about a list of users.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| users | [QMSUser](#QMSUser) | repeated |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
+| users | [QMSUser](#QMSUser) | repeated | The user list returned by the request handler. |
 
 
 
@@ -996,14 +996,14 @@ quota and usage value.
 <a name="-QMSUserResponse"></a>
 
 ### QMSUserResponse
-
+A response to a request for info about a QMS user.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| user | [QMSUser](#QMSUser) |  |  |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
+| user | [QMSUser](#QMSUser) |  | The user returned by the request handler. |
 
 
 

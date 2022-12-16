@@ -12,25 +12,59 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSUsageProtobufs";
 
+/**
+ * A representation of how much a user has used a resource type.
+ */
 message Usage {
+    // The unique identifier
     string uuid = 1;
+
+    // How much the resource has been used.
     double usage = 2;
+
+    // The unique identifier for the user plan the usage is associated with.
     string user_plan_id = 3;
+
+    // The resource type the usage applies to.
     ResourceType resource_type = 4 [json_name = "resource_type"];
+
+    // Who created the usage record. Probably not the name of a user.
     string CreatedBy = 5 [json_name = "created_by"];
+
+    // When the usage record was created.
     google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];
+
+    // Who last modified the usage record. Probably not the name of a user.
     string LastModifiedBy = 7 [json_name = "last_modified_by"];
+
+    // When the usage record was last modified.
     google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];
 }
 
+/**
+ * A response to a request for a usage record.
+ */
 message UsageResponse {
+     // Contains telemetry information
     Header header = 1;
+
+    // Error information returned by the request handler.
     ServiceError error = 2;
+
+    // Contains the usage info returned by the request handler.
     Usage usage = 3;
 }
 
+/**
+ * A response to a request for usage info containing multiple usage records.
+ */
 message UsageList {
+     // Contains telemetry information
     Header header = 1;
+
+    // Error information returned by the request handler.
     ServiceError error = 2;
+
+    // A list of usages returned by the request handler.
     repeated Usage usages = 3;
 }

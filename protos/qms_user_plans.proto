@@ -14,32 +14,72 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSUserPlanProtobufs";
 
-
+/**
+ * Representation of a user's assigned plan. AKA a subscription.
+ */
 message UserPlan {
+    // The unique identifier 
     string uuid = 1;
+
+    // The date the user's subscription activates.
     google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];
+
+    // The date the user's subscription deactivates/expires.
     google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];
+    
+    // The user in the QMS system that the user plan is for.
     QMSUser user = 4;
+
+    // The plan the user is subscribed to.
     Plan plan = 5;
+
+    // The list of quotas applied to the user's subscription. Initially populated
+    // by quota defaults, but can be overridden.
     repeated Quota quotas = 6;
+
+    // The list of resource usages that the user has generated while this plan was active.
     repeated Usage usages = 7;
 }
 
+/**
+ * A response to a request for a user subscription.
+ */
 message UserPlanResponse {
+     // Contains telemetry information
     Header header = 1;
+
+    // Error information returned by the request handler.
     ServiceError error = 2;
+
+    // The user plan/subscription returned by the request handler.
     UserPlan user_plan = 3 [json_name = "user_plan"];
 }
 
+/**
+ * A response to a request for a list of user plans/subscriptions.
+ */
 message UserPlanList {
+     // Contains telemetry information
     Header header = 1;
+
+    // Error information returned by the request handler.
     ServiceError error = 2;
+
+    // The user plan/subscription list returned by the request handler.
     repeated UserPlan user_plans = 3 [json_name = "user_plans"];
 }
 
+/**
+ * A request to change a user's assigned plan/subscription.
+ */
 message ChangeUserPlanRequest {
+     // Contains telemetry information
     Header header = 1;
+
+    // A username for the user whose subscription plan is being changed.
     string username = 2;
+
+    // Either a plan's unique identifier or name.
     oneof plan {
         string uuid = 3;
         string name = 4;
