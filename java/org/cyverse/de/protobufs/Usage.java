@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A representation of how much a user has used a resource type.
+ * </pre>
+ *
  * Protobuf type {@code Usage}
  */
 public final class Usage extends
@@ -17,7 +22,7 @@ private static final long serialVersionUID = 0L;
   }
   private Usage() {
     uuid_ = "";
-    userPlanId_ = "";
+    subscriptionId_ = "";
     createdBy_ = "";
     lastModifiedBy_ = "";
   }
@@ -51,6 +56,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * The unique identifier
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -68,6 +77,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The unique identifier
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -89,6 +102,10 @@ private static final long serialVersionUID = 0L;
   public static final int USAGE_FIELD_NUMBER = 2;
   private double usage_ = 0D;
   /**
+   * <pre>
+   * How much the resource has been used.
+   * </pre>
+   *
    * <code>double usage = 2;</code>
    * @return The usage.
    */
@@ -97,39 +114,47 @@ private static final long serialVersionUID = 0L;
     return usage_;
   }
 
-  public static final int USER_PLAN_ID_FIELD_NUMBER = 3;
+  public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object userPlanId_ = "";
+  private volatile java.lang.Object subscriptionId_ = "";
   /**
-   * <code>string user_plan_id = 3;</code>
-   * @return The userPlanId.
+   * <pre>
+   * The unique identifier for the user pl""an the usage is associated with.
+   * </pre>
+   *
+   * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+   * @return The subscriptionId.
    */
   @java.lang.Override
-  public java.lang.String getUserPlanId() {
-    java.lang.Object ref = userPlanId_;
+  public java.lang.String getSubscriptionId() {
+    java.lang.Object ref = subscriptionId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      userPlanId_ = s;
+      subscriptionId_ = s;
       return s;
     }
   }
   /**
-   * <code>string user_plan_id = 3;</code>
-   * @return The bytes for userPlanId.
+   * <pre>
+   * The unique identifier for the user pl""an the usage is associated with.
+   * </pre>
+   *
+   * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+   * @return The bytes for subscriptionId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUserPlanIdBytes() {
-    java.lang.Object ref = userPlanId_;
+      getSubscriptionIdBytes() {
+    java.lang.Object ref = subscriptionId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      userPlanId_ = b;
+      subscriptionId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -139,6 +164,10 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 4;
   private org.cyverse.de.protobufs.ResourceType resourceType_;
   /**
+   * <pre>
+   * The resource type the usage applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
@@ -147,6 +176,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ != null;
   }
   /**
+   * <pre>
+   * The resource type the usage applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
@@ -155,6 +188,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ == null ? org.cyverse.de.protobufs.ResourceType.getDefaultInstance() : resourceType_;
   }
   /**
+   * <pre>
+   * The resource type the usage applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
@@ -166,6 +203,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object createdBy_ = "";
   /**
+   * <pre>
+   * Who created the usage record. Probably not the name of a user.
+   * </pre>
+   *
    * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
    * @return The createdBy.
    */
@@ -183,6 +224,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Who created the usage record. Probably not the name of a user.
+   * </pre>
+   *
    * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
    * @return The bytes for createdBy.
    */
@@ -204,6 +249,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREATEDAT_FIELD_NUMBER = 6;
   private com.google.protobuf.Timestamp createdAt_;
   /**
+   * <pre>
+   * When the usage record was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
    * @return Whether the createdAt field is set.
    */
@@ -212,6 +261,10 @@ private static final long serialVersionUID = 0L;
     return createdAt_ != null;
   }
   /**
+   * <pre>
+   * When the usage record was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
    * @return The createdAt.
    */
@@ -220,6 +273,10 @@ private static final long serialVersionUID = 0L;
     return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
   }
   /**
+   * <pre>
+   * When the usage record was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
    */
   @java.lang.Override
@@ -231,6 +288,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object lastModifiedBy_ = "";
   /**
+   * <pre>
+   * Who last modified the usage record. Probably not the name of a user.
+   * </pre>
+   *
    * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
    * @return The lastModifiedBy.
    */
@@ -248,6 +309,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Who last modified the usage record. Probably not the name of a user.
+   * </pre>
+   *
    * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
    * @return The bytes for lastModifiedBy.
    */
@@ -269,6 +334,10 @@ private static final long serialVersionUID = 0L;
   public static final int LASTMODIFIEDAT_FIELD_NUMBER = 8;
   private com.google.protobuf.Timestamp lastModifiedAt_;
   /**
+   * <pre>
+   * When the usage record was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
    * @return Whether the lastModifiedAt field is set.
    */
@@ -277,6 +346,10 @@ private static final long serialVersionUID = 0L;
     return lastModifiedAt_ != null;
   }
   /**
+   * <pre>
+   * When the usage record was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
    * @return The lastModifiedAt.
    */
@@ -285,6 +358,10 @@ private static final long serialVersionUID = 0L;
     return lastModifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModifiedAt_;
   }
   /**
+   * <pre>
+   * When the usage record was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
    */
   @java.lang.Override
@@ -312,8 +389,8 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
       output.writeDouble(2, usage_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPlanId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userPlanId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subscriptionId_);
     }
     if (resourceType_ != null) {
       output.writeMessage(4, getResourceType());
@@ -346,8 +423,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, usage_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPlanId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userPlanId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subscriptionId_);
     }
     if (resourceType_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -387,8 +464,8 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToLongBits(getUsage())
         != java.lang.Double.doubleToLongBits(
             other.getUsage())) return false;
-    if (!getUserPlanId()
-        .equals(other.getUserPlanId())) return false;
+    if (!getSubscriptionId()
+        .equals(other.getSubscriptionId())) return false;
     if (hasResourceType() != other.hasResourceType()) return false;
     if (hasResourceType()) {
       if (!getResourceType()
@@ -424,8 +501,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + USAGE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getUsage()));
-    hash = (37 * hash) + USER_PLAN_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getUserPlanId().hashCode();
+    hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getSubscriptionId().hashCode();
     if (hasResourceType()) {
       hash = (37 * hash) + RESOURCE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getResourceType().hashCode();
@@ -538,6 +615,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A representation of how much a user has used a resource type.
+   * </pre>
+   *
    * Protobuf type {@code Usage}
    */
   public static final class Builder extends
@@ -573,7 +655,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       uuid_ = "";
       usage_ = 0D;
-      userPlanId_ = "";
+      subscriptionId_ = "";
       resourceType_ = null;
       if (resourceTypeBuilder_ != null) {
         resourceTypeBuilder_.dispose();
@@ -631,7 +713,7 @@ private static final long serialVersionUID = 0L;
         result.usage_ = usage_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.userPlanId_ = userPlanId_;
+        result.subscriptionId_ = subscriptionId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.resourceType_ = resourceTypeBuilder_ == null
@@ -708,8 +790,8 @@ private static final long serialVersionUID = 0L;
       if (other.getUsage() != 0D) {
         setUsage(other.getUsage());
       }
-      if (!other.getUserPlanId().isEmpty()) {
-        userPlanId_ = other.userPlanId_;
+      if (!other.getSubscriptionId().isEmpty()) {
+        subscriptionId_ = other.subscriptionId_;
         bitField0_ |= 0x00000004;
         onChanged();
       }
@@ -769,7 +851,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 17
             case 26: {
-              userPlanId_ = input.readStringRequireUtf8();
+              subscriptionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
@@ -823,6 +905,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -839,6 +925,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -856,6 +946,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -869,6 +963,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -879,6 +977,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -895,6 +997,10 @@ private static final long serialVersionUID = 0L;
 
     private double usage_ ;
     /**
+     * <pre>
+     * How much the resource has been used.
+     * </pre>
+     *
      * <code>double usage = 2;</code>
      * @return The usage.
      */
@@ -903,6 +1009,10 @@ private static final long serialVersionUID = 0L;
       return usage_;
     }
     /**
+     * <pre>
+     * How much the resource has been used.
+     * </pre>
+     *
      * <code>double usage = 2;</code>
      * @param value The usage to set.
      * @return This builder for chaining.
@@ -915,6 +1025,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * How much the resource has been used.
+     * </pre>
+     *
      * <code>double usage = 2;</code>
      * @return This builder for chaining.
      */
@@ -925,73 +1039,93 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object userPlanId_ = "";
+    private java.lang.Object subscriptionId_ = "";
     /**
-     * <code>string user_plan_id = 3;</code>
-     * @return The userPlanId.
+     * <pre>
+     * The unique identifier for the user pl""an the usage is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @return The subscriptionId.
      */
-    public java.lang.String getUserPlanId() {
-      java.lang.Object ref = userPlanId_;
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        userPlanId_ = s;
+        subscriptionId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string user_plan_id = 3;</code>
-     * @return The bytes for userPlanId.
+     * <pre>
+     * The unique identifier for the user pl""an the usage is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @return The bytes for subscriptionId.
      */
     public com.google.protobuf.ByteString
-        getUserPlanIdBytes() {
-      java.lang.Object ref = userPlanId_;
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        userPlanId_ = b;
+        subscriptionId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string user_plan_id = 3;</code>
-     * @param value The userPlanId to set.
+     * <pre>
+     * The unique identifier for the user pl""an the usage is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @param value The subscriptionId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserPlanId(
+    public Builder setSubscriptionId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      userPlanId_ = value;
+      subscriptionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string user_plan_id = 3;</code>
+     * <pre>
+     * The unique identifier for the user pl""an the usage is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUserPlanId() {
-      userPlanId_ = getDefaultInstance().getUserPlanId();
+    public Builder clearSubscriptionId() {
+      subscriptionId_ = getDefaultInstance().getSubscriptionId();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string user_plan_id = 3;</code>
-     * @param value The bytes for userPlanId to set.
+     * <pre>
+     * The unique identifier for the user pl""an the usage is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @param value The bytes for subscriptionId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserPlanIdBytes(
+    public Builder setSubscriptionIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      userPlanId_ = value;
+      subscriptionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
@@ -1001,6 +1135,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> resourceTypeBuilder_;
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
@@ -1008,6 +1146,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
@@ -1019,6 +1161,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -1035,6 +1181,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
@@ -1049,6 +1199,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -1068,6 +1222,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
@@ -1081,6 +1239,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
@@ -1089,6 +1251,10 @@ private static final long serialVersionUID = 0L;
       return getResourceTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -1100,6 +1266,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type the usage applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1118,6 +1288,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createdBy_ = "";
     /**
+     * <pre>
+     * Who created the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
      * @return The createdBy.
      */
@@ -1134,6 +1308,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Who created the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
      * @return The bytes for createdBy.
      */
@@ -1151,6 +1329,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Who created the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
      * @param value The createdBy to set.
      * @return This builder for chaining.
@@ -1164,6 +1346,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Who created the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
      * @return This builder for chaining.
      */
@@ -1174,6 +1360,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Who created the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string CreatedBy = 5 [json_name = "created_by"];</code>
      * @param value The bytes for createdBy to set.
      * @return This builder for chaining.
@@ -1192,6 +1382,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      * @return Whether the createdAt field is set.
      */
@@ -1199,6 +1393,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      * @return The createdAt.
      */
@@ -1210,6 +1408,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1226,6 +1428,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     public Builder setCreatedAt(
@@ -1240,6 +1446,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1259,6 +1469,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     public Builder clearCreatedAt() {
@@ -1272,6 +1486,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1280,6 +1498,10 @@ private static final long serialVersionUID = 0L;
       return getCreatedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1291,6 +1513,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the usage record was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 6 [json_name = "created_at"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1309,6 +1535,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object lastModifiedBy_ = "";
     /**
+     * <pre>
+     * Who last modified the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
      * @return The lastModifiedBy.
      */
@@ -1325,6 +1555,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Who last modified the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
      * @return The bytes for lastModifiedBy.
      */
@@ -1342,6 +1576,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Who last modified the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
      * @param value The lastModifiedBy to set.
      * @return This builder for chaining.
@@ -1355,6 +1593,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Who last modified the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
      * @return This builder for chaining.
      */
@@ -1365,6 +1607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Who last modified the usage record. Probably not the name of a user.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 7 [json_name = "last_modified_by"];</code>
      * @param value The bytes for lastModifiedBy to set.
      * @return This builder for chaining.
@@ -1383,6 +1629,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastModifiedAtBuilder_;
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      * @return Whether the lastModifiedAt field is set.
      */
@@ -1390,6 +1640,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      * @return The lastModifiedAt.
      */
@@ -1401,6 +1655,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     public Builder setLastModifiedAt(com.google.protobuf.Timestamp value) {
@@ -1417,6 +1675,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     public Builder setLastModifiedAt(
@@ -1431,6 +1693,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     public Builder mergeLastModifiedAt(com.google.protobuf.Timestamp value) {
@@ -1450,6 +1716,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     public Builder clearLastModifiedAt() {
@@ -1463,6 +1733,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastModifiedAtBuilder() {
@@ -1471,6 +1745,10 @@ private static final long serialVersionUID = 0L;
       return getLastModifiedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder() {
@@ -1482,6 +1760,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the usage record was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 8 [json_name = "last_modified_at"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

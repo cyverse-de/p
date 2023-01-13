@@ -8,11 +8,19 @@ public interface UpdateOperationOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier 
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * The unique identifier 
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,11 +28,19 @@ public interface UpdateOperationOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * The name of the update operation
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * The name of the update operation
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The bytes for name.
    */

@@ -8,31 +8,55 @@ public interface AddQuotaRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The quota to be added to the system.
+   * </pre>
+   *
    * <code>.Quota quota = 2;</code>
    * @return Whether the quota field is set.
    */
   boolean hasQuota();
   /**
+   * <pre>
+   * The quota to be added to the system.
+   * </pre>
+   *
    * <code>.Quota quota = 2;</code>
    * @return The quota.
    */
   org.cyverse.de.protobufs.Quota getQuota();
   /**
+   * <pre>
+   * The quota to be added to the system.
+   * </pre>
+   *
    * <code>.Quota quota = 2;</code>
    */
   org.cyverse.de.protobufs.QuotaOrBuilder getQuotaOrBuilder();

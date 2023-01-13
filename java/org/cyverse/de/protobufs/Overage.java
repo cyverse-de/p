@@ -4,6 +4,12 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * Represents when a user's resource type usage exceeds their configured
+ * quota. Usually embedded in request and response message types.
+ * </pre>
+ *
  * Protobuf type {@code Overage}
  */
 public final class Overage extends
@@ -48,6 +54,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
   /**
+   * <pre>
+   * The type of resource that is in overage. Usually data.size of cpu.hours.
+   * </pre>
+   *
    * <code>string resource_name = 1 [json_name = "resource_name"];</code>
    * @return The resourceName.
    */
@@ -65,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The type of resource that is in overage. Usually data.size of cpu.hours.
+   * </pre>
+   *
    * <code>string resource_name = 1 [json_name = "resource_name"];</code>
    * @return The bytes for resourceName.
    */
@@ -86,6 +100,10 @@ private static final long serialVersionUID = 0L;
   public static final int QUOTA_FIELD_NUMBER = 2;
   private float quota_ = 0F;
   /**
+   * <pre>
+   * The configured quota value for the resource type.
+   * </pre>
+   *
    * <code>float quota = 2;</code>
    * @return The quota.
    */
@@ -97,6 +115,10 @@ private static final long serialVersionUID = 0L;
   public static final int USAGE_FIELD_NUMBER = 3;
   private float usage_ = 0F;
   /**
+   * <pre>
+   * The actual usage value for the resource type.
+   * </pre>
+   *
    * <code>float usage = 3;</code>
    * @return The usage.
    */
@@ -286,6 +308,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * Represents when a user's resource type usage exceeds their configured
+   * quota. Usually embedded in request and response message types.
+   * </pre>
+   *
    * Protobuf type {@code Overage}
    */
   public static final class Builder extends
@@ -481,6 +509,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object resourceName_ = "";
     /**
+     * <pre>
+     * The type of resource that is in overage. Usually data.size of cpu.hours.
+     * </pre>
+     *
      * <code>string resource_name = 1 [json_name = "resource_name"];</code>
      * @return The resourceName.
      */
@@ -497,6 +529,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The type of resource that is in overage. Usually data.size of cpu.hours.
+     * </pre>
+     *
      * <code>string resource_name = 1 [json_name = "resource_name"];</code>
      * @return The bytes for resourceName.
      */
@@ -514,6 +550,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The type of resource that is in overage. Usually data.size of cpu.hours.
+     * </pre>
+     *
      * <code>string resource_name = 1 [json_name = "resource_name"];</code>
      * @param value The resourceName to set.
      * @return This builder for chaining.
@@ -527,6 +567,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of resource that is in overage. Usually data.size of cpu.hours.
+     * </pre>
+     *
      * <code>string resource_name = 1 [json_name = "resource_name"];</code>
      * @return This builder for chaining.
      */
@@ -537,6 +581,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of resource that is in overage. Usually data.size of cpu.hours.
+     * </pre>
+     *
      * <code>string resource_name = 1 [json_name = "resource_name"];</code>
      * @param value The bytes for resourceName to set.
      * @return This builder for chaining.
@@ -553,6 +601,10 @@ private static final long serialVersionUID = 0L;
 
     private float quota_ ;
     /**
+     * <pre>
+     * The configured quota value for the resource type.
+     * </pre>
+     *
      * <code>float quota = 2;</code>
      * @return The quota.
      */
@@ -561,6 +613,10 @@ private static final long serialVersionUID = 0L;
       return quota_;
     }
     /**
+     * <pre>
+     * The configured quota value for the resource type.
+     * </pre>
+     *
      * <code>float quota = 2;</code>
      * @param value The quota to set.
      * @return This builder for chaining.
@@ -573,6 +629,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The configured quota value for the resource type.
+     * </pre>
+     *
      * <code>float quota = 2;</code>
      * @return This builder for chaining.
      */
@@ -585,6 +645,10 @@ private static final long serialVersionUID = 0L;
 
     private float usage_ ;
     /**
+     * <pre>
+     * The actual usage value for the resource type.
+     * </pre>
+     *
      * <code>float usage = 3;</code>
      * @return The usage.
      */
@@ -593,6 +657,10 @@ private static final long serialVersionUID = 0L;
       return usage_;
     }
     /**
+     * <pre>
+     * The actual usage value for the resource type.
+     * </pre>
+     *
      * <code>float usage = 3;</code>
      * @param value The usage to set.
      * @return This builder for chaining.
@@ -605,6 +673,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The actual usage value for the resource type.
+     * </pre>
+     *
      * <code>float usage = 3;</code>
      * @return This builder for chaining.
      */

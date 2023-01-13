@@ -8,11 +8,19 @@ public interface QuotaDefaultOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier/primary key for the quota default.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * The unique identifier/primary key for the quota default.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,22 +28,38 @@ public interface QuotaDefaultOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * The value of the quota default.
+   * </pre>
+   *
    * <code>float quota_value = 2 [json_name = "quota_value"];</code>
    * @return The quotaValue.
    */
   float getQuotaValue();
 
   /**
+   * <pre>
+   * The resource type the quota applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
   /**
+   * <pre>
+   * The resource type the quota applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
   /**
+   * <pre>
+   * The resource type the quota applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();

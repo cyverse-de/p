@@ -4,6 +4,12 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A request to add a usage to the system for a resource type consumed by the
+ * specified user.
+ * </pre>
+ *
  * Protobuf type {@code AddUsage}
  */
 public final class AddUsage extends
@@ -50,6 +56,10 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
@@ -58,6 +68,10 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
@@ -66,6 +80,10 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   @java.lang.Override
@@ -462,6 +480,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A request to add a usage to the system for a resource type consumed by the
+   * specified user.
+   * </pre>
+   *
    * Protobuf type {@code AddUsage}
    */
   public static final class Builder extends
@@ -709,6 +733,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return Whether the header field is set.
      */
@@ -716,6 +744,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return The header.
      */
@@ -727,6 +759,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
@@ -743,6 +779,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(
@@ -757,6 +797,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
@@ -776,6 +820,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
@@ -789,6 +837,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
@@ -797,6 +849,10 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -808,6 +864,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

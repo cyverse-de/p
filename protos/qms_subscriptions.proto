@@ -12,12 +12,12 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
-option java_outer_classname = "QMSUserPlanProtobufs";
+option java_outer_classname = "QMSSubscriptionProtobufs";
 
 /**
- * Representation of a user's assigned plan. AKA a subscription.
+ * Representation of a user's subscription.
  */
-message UserPlan {
+message Subscription {
     // The unique identifier 
     string uuid = 1;
 
@@ -44,7 +44,7 @@ message UserPlan {
 /**
  * A response to a request for a user subscription.
  */
-message UserPlanResponse {
+message SubscriptionResponse {
      // Contains telemetry information
     Header header = 1;
 
@@ -52,27 +52,27 @@ message UserPlanResponse {
     ServiceError error = 2;
 
     // The user plan/subscription returned by the request handler.
-    UserPlan user_plan = 3 [json_name = "user_plan"];
+    Subscription subscription = 3 [json_name = "subscription"];
 }
 
 /**
- * A response to a request for a list of user plans/subscriptions.
+ * A response to a request for a list of subscriptions.
  */
-message UserPlanList {
+message SubscriptionList {
      // Contains telemetry information
     Header header = 1;
 
     // Error information returned by the request handler.
     ServiceError error = 2;
 
-    // The user plan/subscription list returned by the request handler.
-    repeated UserPlan user_plans = 3 [json_name = "user_plans"];
+    // The subscription list returned by the request handler.
+    repeated Subscription subscriptions = 3 [json_name = "subscriptions"];
 }
 
 /**
- * A request to change a user's assigned plan/subscription.
+ * A request to change a user's subscription.
  */
-message ChangeUserPlanRequest {
+message ChangeSubscriptionRequest {
      // Contains telemetry information
     Header header = 1;
 

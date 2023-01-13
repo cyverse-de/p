@@ -21,18 +21,20 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// *
+// The types of errors that can be retuned by message handlers.
 type ErrorCode int32
 
 const (
 	ErrorCode_UNSET             ErrorCode = 0 // Default value for the error code. Don't set the error code to this. Use Unspecified if tempted.
 	ErrorCode_UNSPECIFIED       ErrorCode = 1 // An error occurred, but the kind wasn't specified or included in the list.
-	ErrorCode_INTERNAL          ErrorCode = 2
-	ErrorCode_NOT_FOUND         ErrorCode = 3
-	ErrorCode_BAD_REQUEST       ErrorCode = 4
-	ErrorCode_MARSHAL_FAILURE   ErrorCode = 5
-	ErrorCode_UNMARSHAL_FAILURE ErrorCode = 6
-	ErrorCode_PARAMETER_MISSING ErrorCode = 7
-	ErrorCode_PARAMETER_INVALID ErrorCode = 8
+	ErrorCode_INTERNAL          ErrorCode = 2 // Internal error.
+	ErrorCode_NOT_FOUND         ErrorCode = 3 // The requested resource wasn't found.
+	ErrorCode_BAD_REQUEST       ErrorCode = 4 // The request was bad/wrong is some way.
+	ErrorCode_MARSHAL_FAILURE   ErrorCode = 5 // A failure to marshal a response.
+	ErrorCode_UNMARSHAL_FAILURE ErrorCode = 6 // A failure to unmarshal a request.
+	ErrorCode_PARAMETER_MISSING ErrorCode = 7 // A parameter is missing.
+	ErrorCode_PARAMETER_INVALID ErrorCode = 8 /// A parameter is invalid.
 )
 
 // Enum value maps for ErrorCode.
@@ -88,15 +90,21 @@ func (ErrorCode) EnumDescriptor() ([]byte, []int) {
 	return file_svcerror_proto_rawDescGZIP(), []int{0}
 }
 
+// *
+// An error returned by a request handler.
 type ServiceError struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header     *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	ErrorCode  ErrorCode      `protobuf:"varint,2,opt,name=error_code,proto3,enum=ErrorCode" json:"error_code,omitempty"`
-	StatusCode int32          `protobuf:"varint,3,opt,name=status_code,proto3" json:"status_code,omitempty"`
-	Message    string         `protobuf:"bytes,4,opt,name=message,proto3" json:"message,omitempty"`
+	// Contains telemetry information
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// The numeric error code from the error code enum.
+	ErrorCode ErrorCode `protobuf:"varint,2,opt,name=error_code,proto3,enum=ErrorCode" json:"error_code,omitempty"`
+	// The status code for the error.
+	StatusCode int32 `protobuf:"varint,3,opt,name=status_code,proto3" json:"status_code,omitempty"`
+	// The error's message.
+	Message string `protobuf:"bytes,4,opt,name=message,proto3" json:"message,omitempty"`
 }
 
 func (x *ServiceError) Reset() {

@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A representation of a user in the QMS system.
+ * </pre>
+ *
  * Protobuf type {@code QMSUser}
  */
 public final class QMSUser extends
@@ -49,6 +54,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * A user's unique identifier in QMS.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -66,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A user's unique identifier in QMS.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -88,6 +101,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object username_ = "";
   /**
+   * <pre>
+   * A user's username in QMS.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The username.
    */
@@ -105,6 +122,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A user's username in QMS.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The bytes for username.
    */
@@ -288,6 +309,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A representation of a user in the QMS system.
+   * </pre>
+   *
    * Protobuf type {@code QMSUser}
    */
   public static final class Builder extends
@@ -473,6 +499,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * A user's unique identifier in QMS.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -489,6 +519,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A user's unique identifier in QMS.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -506,6 +540,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A user's unique identifier in QMS.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -519,6 +557,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A user's unique identifier in QMS.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -529,6 +571,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A user's unique identifier in QMS.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -545,6 +591,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object username_ = "";
     /**
+     * <pre>
+     * A user's username in QMS.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @return The username.
      */
@@ -561,6 +611,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A user's username in QMS.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @return The bytes for username.
      */
@@ -578,6 +632,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A user's username in QMS.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @param value The username to set.
      * @return This builder for chaining.
@@ -591,6 +649,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A user's username in QMS.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @return This builder for chaining.
      */
@@ -601,6 +663,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A user's username in QMS.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @param value The bytes for username to set.
      * @return This builder for chaining.

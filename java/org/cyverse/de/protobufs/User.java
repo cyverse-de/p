@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A user's information.
+ * </pre>
+ *
  * Protobuf type {@code User}
  */
 public final class User extends
@@ -3218,6 +3223,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A user's information.
+   * </pre>
+   *
    * Protobuf type {@code User}
    */
   public static final class Builder extends

@@ -8,54 +8,98 @@ public interface QuotaDefaultListOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Can contain telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Can contain telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Can contain telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.QuotaDefault> 
       getQuotaDefaultsList();
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefault getQuotaDefaults(int index);
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   int getQuotaDefaultsCount();
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
       getQuotaDefaultsOrBuilderList();
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultsOrBuilder(

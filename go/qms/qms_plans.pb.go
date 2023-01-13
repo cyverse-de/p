@@ -22,13 +22,20 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// *
+// Represents a default quota value used in plans. Can be overridden on a
+// per-user basis for a user plan to provide customized quotas. Also referred to
+// as plan quota defaults.
 type QuotaDefault struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uuid         string        `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	QuotaValue   float32       `protobuf:"fixed32,2,opt,name=quota_value,proto3" json:"quota_value,omitempty"`
+	// The unique identifier/primary key for the quota default.
+	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	// The value of the quota default.
+	QuotaValue float32 `protobuf:"fixed32,2,opt,name=quota_value,proto3" json:"quota_value,omitempty"`
+	// The resource type the quota applies to.
 	ResourceType *ResourceType `protobuf:"bytes,3,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
 }
 
@@ -85,14 +92,19 @@ func (x *QuotaDefault) GetResourceType() *ResourceType {
 	return nil
 }
 
+// *
+// A response type for quota default requests.
 type QuotaDefaultResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *header.Header         `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Error        *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	QuotaDefault *QuotaDefault          `protobuf:"bytes,3,opt,name=quota_default,proto3" json:"quota_default,omitempty"`
+	// Can container telemetry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// Contains error info from the request handler.
+	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	// The quota default object returned by the request handler.
+	QuotaDefault *QuotaDefault `protobuf:"bytes,3,opt,name=quota_default,proto3" json:"quota_default,omitempty"`
 }
 
 func (x *QuotaDefaultResponse) Reset() {
@@ -148,14 +160,20 @@ func (x *QuotaDefaultResponse) GetQuotaDefault() *QuotaDefault {
 	return nil
 }
 
+// *
+// A response type for quota default requests that contains a list of quota
+// defaults.
 type QuotaDefaultList struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header        *header.Header         `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Error         *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	QuotaDefaults []*QuotaDefault        `protobuf:"bytes,3,rep,name=quota_defaults,proto3" json:"quota_defaults,omitempty"`
+	// Can contain telemetry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// Contains error info from the request handler.
+	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	// The list of quota default objkects returned by the request handler.
+	QuotaDefaults []*QuotaDefault `protobuf:"bytes,3,rep,name=quota_defaults,proto3" json:"quota_defaults,omitempty"`
 }
 
 func (x *QuotaDefaultList) Reset() {
@@ -211,14 +229,20 @@ func (x *QuotaDefaultList) GetQuotaDefaults() []*QuotaDefault {
 	return nil
 }
 
+// *
+// Represents a subscription plan available to users.
 type Plan struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Uuid              string          `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	Name              string          `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Description       string          `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	// Unique identifier for the plan.
+	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	// The name of the plan.
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	// A description of the plan.
+	Description string `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
+	// A list of quota defaults associated with the plan.
 	PlanQuotaDefaults []*QuotaDefault `protobuf:"bytes,4,rep,name=plan_quota_defaults,proto3" json:"plan_quota_defaults,omitempty"`
 }
 
@@ -282,14 +306,19 @@ func (x *Plan) GetPlanQuotaDefaults() []*QuotaDefault {
 	return nil
 }
 
+// *
+// A response to a plan request. Contains a single plan.
 type PlanResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *header.Header         `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Error  *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	Plan   *Plan                  `protobuf:"bytes,3,opt,name=plan,proto3" json:"plan,omitempty"`
+	// Contains telemtry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// Contains error data returned by the request handler.
+	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	// The plan returned by the request handler.
+	Plan *Plan `protobuf:"bytes,3,opt,name=plan,proto3" json:"plan,omitempty"`
 }
 
 func (x *PlanResponse) Reset() {
@@ -345,14 +374,19 @@ func (x *PlanResponse) GetPlan() *Plan {
 	return nil
 }
 
+// *
+// A response to a plan request. Contains a list of plans.
 type PlanList struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header *header.Header         `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Error  *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	Plans  []*Plan                `protobuf:"bytes,3,rep,name=plans,proto3" json:"plans,omitempty"`
+	// Contains telemetry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// Contains error data returned by the request handler.
+	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	// A list of plans returned by the request handler.
+	Plans []*Plan `protobuf:"bytes,3,rep,name=plans,proto3" json:"plans,omitempty"`
 }
 
 func (x *PlanList) Reset() {
@@ -408,13 +442,17 @@ func (x *PlanList) GetPlans() []*Plan {
 	return nil
 }
 
+// *
+// A request for plan information specified by the plan's unique identifier.
 type PlanRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry data.
 	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	PlanId string         `protobuf:"bytes,2,opt,name=plan_id,proto3" json:"plan_id,omitempty"`
+	// The unique identifier of the plan being requested.
+	PlanId string `protobuf:"bytes,2,opt,name=plan_id,proto3" json:"plan_id,omitempty"`
 }
 
 func (x *PlanRequest) Reset() {
@@ -463,13 +501,17 @@ func (x *PlanRequest) GetPlanId() string {
 	return ""
 }
 
+// *
+// A request to add a new plan to the system.
 type AddPlanRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry data.
 	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Plan   *Plan          `protobuf:"bytes,2,opt,name=plan,proto3" json:"plan,omitempty"`
+	// The plan to add to the system.
+	Plan *Plan `protobuf:"bytes,2,opt,name=plan,proto3" json:"plan,omitempty"`
 }
 
 func (x *AddPlanRequest) Reset() {
@@ -518,14 +560,19 @@ func (x *AddPlanRequest) GetPlan() *Plan {
 	return nil
 }
 
+// *
+// A request to add a quota default to an existing plan.
 type AddPlanQuotaDefaultRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	PlanName     string         `protobuf:"bytes,2,opt,name=plan_name,proto3" json:"plan_name,omitempty"`
-	QuotaDefault *QuotaDefault  `protobuf:"bytes,3,opt,name=quota_default,proto3" json:"quota_default,omitempty"`
+	// Contains telemetry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// The name of the plan to add the quota default to.
+	PlanName string `protobuf:"bytes,2,opt,name=plan_name,proto3" json:"plan_name,omitempty"`
+	// The quota default to add to the plan specified by the plan_name field.
+	QuotaDefault *QuotaDefault `protobuf:"bytes,3,opt,name=quota_default,proto3" json:"quota_default,omitempty"`
 }
 
 func (x *AddPlanQuotaDefaultRequest) Reset() {

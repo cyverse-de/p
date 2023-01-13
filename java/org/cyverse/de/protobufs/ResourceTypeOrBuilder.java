@@ -8,11 +8,19 @@ public interface ResourceTypeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,11 +28,19 @@ public interface ResourceTypeOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * The name of the resource. Will usually be "data.size" and "cpu.hours".
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * The name of the resource. Will usually be "data.size" and "cpu.hours".
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The bytes for name.
    */
@@ -32,11 +48,19 @@ public interface ResourceTypeOrBuilder extends
       getNameBytes();
 
   /**
+   * <pre>
+   * The units used for the resource. Usually "bytes" or "cpu hours".
+   * </pre>
+   *
    * <code>string unit = 3;</code>
    * @return The unit.
    */
   java.lang.String getUnit();
   /**
+   * <pre>
+   * The units used for the resource. Usually "bytes" or "cpu hours".
+   * </pre>
+   *
    * <code>string unit = 3;</code>
    * @return The bytes for unit.
    */

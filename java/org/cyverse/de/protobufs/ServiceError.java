@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * An error returned by a request handler.
+ * </pre>
+ *
  * Protobuf type {@code ServiceError}
  */
 public final class ServiceError extends
@@ -48,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
@@ -56,6 +65,10 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
@@ -64,6 +77,10 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   @java.lang.Override
@@ -74,6 +91,10 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_CODE_FIELD_NUMBER = 2;
   private int errorCode_ = 0;
   /**
+   * <pre>
+   * The numeric error code from the error code enum.
+   * </pre>
+   *
    * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
    * @return The enum numeric value on the wire for errorCode.
    */
@@ -81,6 +102,10 @@ private static final long serialVersionUID = 0L;
     return errorCode_;
   }
   /**
+   * <pre>
+   * The numeric error code from the error code enum.
+   * </pre>
+   *
    * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
    * @return The errorCode.
    */
@@ -92,6 +117,10 @@ private static final long serialVersionUID = 0L;
   public static final int STATUS_CODE_FIELD_NUMBER = 3;
   private int statusCode_ = 0;
   /**
+   * <pre>
+   * The status code for the error.
+   * </pre>
+   *
    * <code>int32 status_code = 3 [json_name = "status_code"];</code>
    * @return The statusCode.
    */
@@ -104,6 +133,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object message_ = "";
   /**
+   * <pre>
+   * The error's message.
+   * </pre>
+   *
    * <code>string message = 4;</code>
    * @return The message.
    */
@@ -121,6 +154,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The error's message.
+   * </pre>
+   *
    * <code>string message = 4;</code>
    * @return The bytes for message.
    */
@@ -331,6 +368,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * An error returned by a request handler.
+   * </pre>
+   *
    * Protobuf type {@code ServiceError}
    */
   public static final class Builder extends
@@ -548,6 +590,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return Whether the header field is set.
      */
@@ -555,6 +601,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return The header.
      */
@@ -566,6 +616,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
@@ -582,6 +636,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(
@@ -596,6 +654,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
@@ -615,6 +677,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
@@ -628,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
@@ -636,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -647,6 +721,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -665,6 +743,10 @@ private static final long serialVersionUID = 0L;
 
     private int errorCode_ = 0;
     /**
+     * <pre>
+     * The numeric error code from the error code enum.
+     * </pre>
+     *
      * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
      * @return The enum numeric value on the wire for errorCode.
      */
@@ -672,6 +754,10 @@ private static final long serialVersionUID = 0L;
       return errorCode_;
     }
     /**
+     * <pre>
+     * The numeric error code from the error code enum.
+     * </pre>
+     *
      * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
      * @param value The enum numeric value on the wire for errorCode to set.
      * @return This builder for chaining.
@@ -683,6 +769,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The numeric error code from the error code enum.
+     * </pre>
+     *
      * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
      * @return The errorCode.
      */
@@ -692,6 +782,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? org.cyverse.de.protobufs.ErrorCode.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The numeric error code from the error code enum.
+     * </pre>
+     *
      * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
      * @param value The errorCode to set.
      * @return This builder for chaining.
@@ -706,6 +800,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The numeric error code from the error code enum.
+     * </pre>
+     *
      * <code>.ErrorCode error_code = 2 [json_name = "error_code"];</code>
      * @return This builder for chaining.
      */
@@ -718,6 +816,10 @@ private static final long serialVersionUID = 0L;
 
     private int statusCode_ ;
     /**
+     * <pre>
+     * The status code for the error.
+     * </pre>
+     *
      * <code>int32 status_code = 3 [json_name = "status_code"];</code>
      * @return The statusCode.
      */
@@ -726,6 +828,10 @@ private static final long serialVersionUID = 0L;
       return statusCode_;
     }
     /**
+     * <pre>
+     * The status code for the error.
+     * </pre>
+     *
      * <code>int32 status_code = 3 [json_name = "status_code"];</code>
      * @param value The statusCode to set.
      * @return This builder for chaining.
@@ -738,6 +844,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The status code for the error.
+     * </pre>
+     *
      * <code>int32 status_code = 3 [json_name = "status_code"];</code>
      * @return This builder for chaining.
      */
@@ -750,6 +860,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object message_ = "";
     /**
+     * <pre>
+     * The error's message.
+     * </pre>
+     *
      * <code>string message = 4;</code>
      * @return The message.
      */
@@ -766,6 +880,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The error's message.
+     * </pre>
+     *
      * <code>string message = 4;</code>
      * @return The bytes for message.
      */
@@ -783,6 +901,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The error's message.
+     * </pre>
+     *
      * <code>string message = 4;</code>
      * @param value The message to set.
      * @return This builder for chaining.
@@ -796,6 +918,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The error's message.
+     * </pre>
+     *
      * <code>string message = 4;</code>
      * @return This builder for chaining.
      */
@@ -806,6 +932,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The error's message.
+     * </pre>
+     *
      * <code>string message = 4;</code>
      * @param value The bytes for message to set.
      * @return This builder for chaining.

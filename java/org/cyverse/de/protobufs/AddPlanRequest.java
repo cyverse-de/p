@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A request to add a new plan to the system.
+ * </pre>
+ *
  * Protobuf type {@code AddPlanRequest}
  */
 public final class AddPlanRequest extends
@@ -46,6 +51,10 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
@@ -54,6 +63,10 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
@@ -62,6 +75,10 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   @java.lang.Override
@@ -72,6 +89,10 @@ private static final long serialVersionUID = 0L;
   public static final int PLAN_FIELD_NUMBER = 2;
   private org.cyverse.de.protobufs.Plan plan_;
   /**
+   * <pre>
+   * The plan to add to the system.
+   * </pre>
+   *
    * <code>.Plan plan = 2;</code>
    * @return Whether the plan field is set.
    */
@@ -80,6 +101,10 @@ private static final long serialVersionUID = 0L;
     return plan_ != null;
   }
   /**
+   * <pre>
+   * The plan to add to the system.
+   * </pre>
+   *
    * <code>.Plan plan = 2;</code>
    * @return The plan.
    */
@@ -88,6 +113,10 @@ private static final long serialVersionUID = 0L;
     return plan_ == null ? org.cyverse.de.protobufs.Plan.getDefaultInstance() : plan_;
   }
   /**
+   * <pre>
+   * The plan to add to the system.
+   * </pre>
+   *
    * <code>.Plan plan = 2;</code>
    */
   @java.lang.Override
@@ -272,6 +301,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A request to add a new plan to the system.
+   * </pre>
+   *
    * Protobuf type {@code AddPlanRequest}
    */
   public static final class Builder extends
@@ -471,6 +505,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return Whether the header field is set.
      */
@@ -478,6 +516,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return The header.
      */
@@ -489,6 +531,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
@@ -505,6 +551,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(
@@ -519,6 +569,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
@@ -538,6 +592,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
@@ -551,6 +609,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
@@ -559,6 +621,10 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -570,6 +636,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -590,6 +660,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Plan, org.cyverse.de.protobufs.Plan.Builder, org.cyverse.de.protobufs.PlanOrBuilder> planBuilder_;
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      * @return Whether the plan field is set.
      */
@@ -597,6 +671,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      * @return The plan.
      */
@@ -608,6 +686,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     public Builder setPlan(org.cyverse.de.protobufs.Plan value) {
@@ -624,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     public Builder setPlan(
@@ -638,6 +724,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     public Builder mergePlan(org.cyverse.de.protobufs.Plan value) {
@@ -657,6 +747,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     public Builder clearPlan() {
@@ -670,6 +764,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     public org.cyverse.de.protobufs.Plan.Builder getPlanBuilder() {
@@ -678,6 +776,10 @@ private static final long serialVersionUID = 0L;
       return getPlanFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     public org.cyverse.de.protobufs.PlanOrBuilder getPlanOrBuilder() {
@@ -689,6 +791,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The plan to add to the system.
+     * </pre>
+     *
      * <code>.Plan plan = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

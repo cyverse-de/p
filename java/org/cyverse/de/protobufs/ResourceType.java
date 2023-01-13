@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * Representation of a resource type.
+ * </pre>
+ *
  * Protobuf type {@code ResourceType}
  */
 public final class ResourceType extends
@@ -50,6 +55,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -67,6 +76,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -89,6 +102,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * The name of the resource. Will usually be "data.size" and "cpu.hours".
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The name.
    */
@@ -106,6 +123,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the resource. Will usually be "data.size" and "cpu.hours".
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The bytes for name.
    */
@@ -128,6 +149,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object unit_ = "";
   /**
+   * <pre>
+   * The units used for the resource. Usually "bytes" or "cpu hours".
+   * </pre>
+   *
    * <code>string unit = 3;</code>
    * @return The unit.
    */
@@ -145,6 +170,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The units used for the resource. Usually "bytes" or "cpu hours".
+   * </pre>
+   *
    * <code>string unit = 3;</code>
    * @return The bytes for unit.
    */
@@ -338,6 +367,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * Representation of a resource type.
+   * </pre>
+   *
    * Protobuf type {@code ResourceType}
    */
   public static final class Builder extends
@@ -537,6 +571,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -553,6 +591,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -570,6 +612,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -583,6 +629,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -593,6 +643,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -609,6 +663,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The name of the resource. Will usually be "data.size" and "cpu.hours".
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -625,6 +683,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the resource. Will usually be "data.size" and "cpu.hours".
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -642,6 +704,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the resource. Will usually be "data.size" and "cpu.hours".
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -655,6 +721,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the resource. Will usually be "data.size" and "cpu.hours".
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return This builder for chaining.
      */
@@ -665,6 +735,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the resource. Will usually be "data.size" and "cpu.hours".
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -681,6 +755,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object unit_ = "";
     /**
+     * <pre>
+     * The units used for the resource. Usually "bytes" or "cpu hours".
+     * </pre>
+     *
      * <code>string unit = 3;</code>
      * @return The unit.
      */
@@ -697,6 +775,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The units used for the resource. Usually "bytes" or "cpu hours".
+     * </pre>
+     *
      * <code>string unit = 3;</code>
      * @return The bytes for unit.
      */
@@ -714,6 +796,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The units used for the resource. Usually "bytes" or "cpu hours".
+     * </pre>
+     *
      * <code>string unit = 3;</code>
      * @param value The unit to set.
      * @return This builder for chaining.
@@ -727,6 +813,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The units used for the resource. Usually "bytes" or "cpu hours".
+     * </pre>
+     *
      * <code>string unit = 3;</code>
      * @return This builder for chaining.
      */
@@ -737,6 +827,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The units used for the resource. Usually "bytes" or "cpu hours".
+     * </pre>
+     *
      * <code>string unit = 3;</code>
      * @param value The bytes for unit to set.
      * @return This builder for chaining.

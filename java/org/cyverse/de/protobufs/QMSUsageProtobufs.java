@@ -40,22 +40,22 @@ public final class QMSUsageProtobufs {
     java.lang.String[] descriptorData = {
       "\n\020qms_usages.proto\032\037google/protobuf/time" +
       "stamp.proto\032\014header.proto\032\016svcerror.prot" +
-      "o\032\030qms_resource_types.proto\"\271\002\n\005Usage\022\014\n" +
-      "\004uuid\030\001 \001(\t\022\r\n\005usage\030\002 \001(\001\022\024\n\014user_plan_" +
-      "id\030\003 \001(\t\0223\n\rresource_type\030\004 \001(\0132\r.Resour" +
-      "ceTypeR\rresource_type\022\035\n\tCreatedBy\030\005 \001(\t" +
-      "R\ncreated_by\0229\n\tCreatedAt\030\006 \001(\0132\032.google" +
-      ".protobuf.TimestampR\ncreated_at\022(\n\016LastM" +
-      "odifiedBy\030\007 \001(\tR\020last_modified_by\022D\n\016Las" +
-      "tModifiedAt\030\010 \001(\0132\032.google.protobuf.Time" +
-      "stampR\020last_modified_at\"]\n\rUsageResponse" +
-      "\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\013" +
-      "2\r.ServiceError\022\025\n\005usage\030\003 \001(\0132\006.Usage\"Z" +
-      "\n\tUsageList\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005" +
-      "error\030\002 \001(\0132\r.ServiceError\022\026\n\006usages\030\003 \003" +
-      "(\0132\006.UsageBO\n\030org.cyverse.de.protobufsB\021" +
-      "QMSUsageProtobufsP\001Z\036github.com/cyverse-" +
-      "de/p/go/qmsb\006proto3"
+      "o\032\030qms_resource_types.proto\"\315\002\n\005Usage\022\014\n" +
+      "\004uuid\030\001 \001(\t\022\r\n\005usage\030\002 \001(\001\022(\n\017subscripti" +
+      "on_id\030\003 \001(\tR\017subscription_id\0223\n\rresource" +
+      "_type\030\004 \001(\0132\r.ResourceTypeR\rresource_typ" +
+      "e\022\035\n\tCreatedBy\030\005 \001(\tR\ncreated_by\0229\n\tCrea" +
+      "tedAt\030\006 \001(\0132\032.google.protobuf.TimestampR" +
+      "\ncreated_at\022(\n\016LastModifiedBy\030\007 \001(\tR\020las" +
+      "t_modified_by\022D\n\016LastModifiedAt\030\010 \001(\0132\032." +
+      "google.protobuf.TimestampR\020last_modified" +
+      "_at\"]\n\rUsageResponse\022\027\n\006header\030\001 \001(\0132\007.H" +
+      "eader\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\025\n\005u" +
+      "sage\030\003 \001(\0132\006.Usage\"Z\n\tUsageList\022\027\n\006heade" +
+      "r\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.Servic" +
+      "eError\022\026\n\006usages\030\003 \003(\0132\006.UsageBO\n\030org.cy" +
+      "verse.de.protobufsB\021QMSUsageProtobufsP\001Z" +
+      "\036github.com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -70,7 +70,7 @@ public final class QMSUsageProtobufs {
     internal_static_Usage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Usage_descriptor,
-        new java.lang.String[] { "Uuid", "Usage", "UserPlanId", "ResourceType", "CreatedBy", "CreatedAt", "LastModifiedBy", "LastModifiedAt", });
+        new java.lang.String[] { "Uuid", "Usage", "SubscriptionId", "ResourceType", "CreatedBy", "CreatedAt", "LastModifiedBy", "LastModifiedAt", });
     internal_static_UsageResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_UsageResponse_fieldAccessorTable = new

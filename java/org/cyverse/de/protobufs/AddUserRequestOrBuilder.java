@@ -8,26 +8,46 @@ public interface AddUserRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The username for the user being added to the system.
+   * </pre>
+   *
    * <code>string username = 3;</code>
    * @return The username.
    */
   java.lang.String getUsername();
   /**
+   * <pre>
+   * The username for the user being added to the system.
+   * </pre>
+   *
    * <code>string username = 3;</code>
    * @return The bytes for username.
    */
@@ -35,11 +55,19 @@ public interface AddUserRequestOrBuilder extends
       getUsernameBytes();
 
   /**
+   * <pre>
+   * The name of the plan the user should be subscribed to.
+   * </pre>
+   *
    * <code>string plan_name = 4;</code>
    * @return The planName.
    */
   java.lang.String getPlanName();
   /**
+   * <pre>
+   * The name of the plan the user should be subscribed to.
+   * </pre>
+   *
    * <code>string plan_name = 4;</code>
    * @return The bytes for planName.
    */

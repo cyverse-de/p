@@ -22,8 +22,8 @@ message Usage {
     // How much the resource has been used.
     double usage = 2;
 
-    // The unique identifier for the user plan the usage is associated with.
-    string user_plan_id = 3;
+    // The unique identifier for the user pl""an the usage is associated with.
+    string subscription_id = 3 [json_name = "subscription_id"];
 
     // The resource type the usage applies to.
     ResourceType resource_type = 4 [json_name = "resource_type"];

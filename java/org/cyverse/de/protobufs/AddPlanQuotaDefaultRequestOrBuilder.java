@@ -8,26 +8,46 @@ public interface AddPlanQuotaDefaultRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The name of the plan to add the quota default to.
+   * </pre>
+   *
    * <code>string plan_name = 2 [json_name = "plan_name"];</code>
    * @return The planName.
    */
   java.lang.String getPlanName();
   /**
+   * <pre>
+   * The name of the plan to add the quota default to.
+   * </pre>
+   *
    * <code>string plan_name = 2 [json_name = "plan_name"];</code>
    * @return The bytes for planName.
    */
@@ -35,16 +55,28 @@ public interface AddPlanQuotaDefaultRequestOrBuilder extends
       getPlanNameBytes();
 
   /**
+   * <pre>
+   * The quota default to add to the plan specified by the plan_name field.
+   * </pre>
+   *
    * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    * @return Whether the quotaDefault field is set.
    */
   boolean hasQuotaDefault();
   /**
+   * <pre>
+   * The quota default to add to the plan specified by the plan_name field.
+   * </pre>
+   *
    * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    * @return The quotaDefault.
    */
   org.cyverse.de.protobufs.QuotaDefault getQuotaDefault();
   /**
+   * <pre>
+   * The quota default to add to the plan specified by the plan_name field.
+   * </pre>
+   *
    * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultOrBuilder();

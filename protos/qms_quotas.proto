@@ -40,7 +40,7 @@ message Quota {
     google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];
 
     // The unique identifier of the user plan that the quota is associated with.
-    string user_plan_id = 8 [json_name = "user_plan_id"];
+    string subscription_id = 8 [json_name = "subscription_id"];
 }
 
 /**

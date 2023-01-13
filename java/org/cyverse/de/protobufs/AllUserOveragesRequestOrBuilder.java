@@ -8,26 +8,46 @@ public interface AllUserOveragesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The user's username in the QMS system.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The username.
    */
   java.lang.String getUsername();
   /**
+   * <pre>
+   * The user's username in the QMS system.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The bytes for username.
    */

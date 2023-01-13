@@ -8,11 +8,19 @@ public interface UpdateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * The unique identifier
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,11 +28,19 @@ public interface UpdateOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * Determines whether the update is for a "quota" or "usage". 
+   * </pre>
+   *
    * <code>string value_type = 2 [json_name = "value_type"];</code>
    * @return The valueType.
    */
   java.lang.String getValueType();
   /**
+   * <pre>
+   * Determines whether the update is for a "quota" or "usage". 
+   * </pre>
+   *
    * <code>string value_type = 2 [json_name = "value_type"];</code>
    * @return The bytes for valueType.
    */
@@ -32,67 +48,119 @@ public interface UpdateOrBuilder extends
       getValueTypeBytes();
 
   /**
+   * <pre>
+   * The value being applied to the usage or quota.
+   * </pre>
+   *
    * <code>double value = 3;</code>
    * @return The value.
    */
   double getValue();
 
   /**
+   * <pre>
+   * The date the update takes effect.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
    * @return Whether the effectiveDate field is set.
    */
   boolean hasEffectiveDate();
   /**
+   * <pre>
+   * The date the update takes effect.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
    * @return The effectiveDate.
    */
   com.google.protobuf.Timestamp getEffectiveDate();
   /**
+   * <pre>
+   * The date the update takes effect.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getEffectiveDateOrBuilder();
 
   /**
+   * <pre>
+   * The type of operation being done.
+   * </pre>
+   *
    * <code>.UpdateOperation operation = 5;</code>
    * @return Whether the operation field is set.
    */
   boolean hasOperation();
   /**
+   * <pre>
+   * The type of operation being done.
+   * </pre>
+   *
    * <code>.UpdateOperation operation = 5;</code>
    * @return The operation.
    */
   org.cyverse.de.protobufs.UpdateOperation getOperation();
   /**
+   * <pre>
+   * The type of operation being done.
+   * </pre>
+   *
    * <code>.UpdateOperation operation = 5;</code>
    */
   org.cyverse.de.protobufs.UpdateOperationOrBuilder getOperationOrBuilder();
 
   /**
+   * <pre>
+   * The resource type for the quota or usage being updated.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
   /**
+   * <pre>
+   * The resource type for the quota or usage being updated.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
   /**
+   * <pre>
+   * The resource type for the quota or usage being updated.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
 
   /**
+   * <pre>
+   * The user in the QMS system that the update is for.
+   * </pre>
+   *
    * <code>.QMSUser user = 7;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
   /**
+   * <pre>
+   * The user in the QMS system that the update is for.
+   * </pre>
+   *
    * <code>.QMSUser user = 7;</code>
    * @return The user.
    */
   org.cyverse.de.protobufs.QMSUser getUser();
   /**
+   * <pre>
+   * The user in the QMS system that the update is for.
+   * </pre>
+   *
    * <code>.QMSUser user = 7;</code>
    */
   org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder();

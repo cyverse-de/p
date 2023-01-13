@@ -8,11 +8,19 @@ public interface PlanOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Unique identifier for the plan.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * Unique identifier for the plan.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,11 +28,19 @@ public interface PlanOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * The name of the plan.
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * The name of the plan.
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The bytes for name.
    */
@@ -32,11 +48,19 @@ public interface PlanOrBuilder extends
       getNameBytes();
 
   /**
+   * <pre>
+   * A description of the plan.
+   * </pre>
+   *
    * <code>string description = 3;</code>
    * @return The description.
    */
   java.lang.String getDescription();
   /**
+   * <pre>
+   * A description of the plan.
+   * </pre>
+   *
    * <code>string description = 3;</code>
    * @return The bytes for description.
    */
@@ -44,24 +68,44 @@ public interface PlanOrBuilder extends
       getDescriptionBytes();
 
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.QuotaDefault> 
       getPlanQuotaDefaultsList();
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefault getPlanQuotaDefaults(int index);
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   int getPlanQuotaDefaultsCount();
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
       getPlanQuotaDefaultsOrBuilderList();
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefaultOrBuilder getPlanQuotaDefaultsOrBuilder(

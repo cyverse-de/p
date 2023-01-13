@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A representation of an update to a quota or usage value.
+ * </pre>
+ *
  * Protobuf type {@code Update}
  */
 public final class Update extends
@@ -49,6 +54,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * The unique identifier
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -66,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The unique identifier
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -88,6 +101,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object valueType_ = "";
   /**
+   * <pre>
+   * Determines whether the update is for a "quota" or "usage". 
+   * </pre>
+   *
    * <code>string value_type = 2 [json_name = "value_type"];</code>
    * @return The valueType.
    */
@@ -105,6 +122,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Determines whether the update is for a "quota" or "usage". 
+   * </pre>
+   *
    * <code>string value_type = 2 [json_name = "value_type"];</code>
    * @return The bytes for valueType.
    */
@@ -126,6 +147,10 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_FIELD_NUMBER = 3;
   private double value_ = 0D;
   /**
+   * <pre>
+   * The value being applied to the usage or quota.
+   * </pre>
+   *
    * <code>double value = 3;</code>
    * @return The value.
    */
@@ -137,6 +162,10 @@ private static final long serialVersionUID = 0L;
   public static final int EFFECTIVE_DATE_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp effectiveDate_;
   /**
+   * <pre>
+   * The date the update takes effect.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
    * @return Whether the effectiveDate field is set.
    */
@@ -145,6 +174,10 @@ private static final long serialVersionUID = 0L;
     return effectiveDate_ != null;
   }
   /**
+   * <pre>
+   * The date the update takes effect.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
    * @return The effectiveDate.
    */
@@ -153,6 +186,10 @@ private static final long serialVersionUID = 0L;
     return effectiveDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveDate_;
   }
   /**
+   * <pre>
+   * The date the update takes effect.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
    */
   @java.lang.Override
@@ -163,6 +200,10 @@ private static final long serialVersionUID = 0L;
   public static final int OPERATION_FIELD_NUMBER = 5;
   private org.cyverse.de.protobufs.UpdateOperation operation_;
   /**
+   * <pre>
+   * The type of operation being done.
+   * </pre>
+   *
    * <code>.UpdateOperation operation = 5;</code>
    * @return Whether the operation field is set.
    */
@@ -171,6 +212,10 @@ private static final long serialVersionUID = 0L;
     return operation_ != null;
   }
   /**
+   * <pre>
+   * The type of operation being done.
+   * </pre>
+   *
    * <code>.UpdateOperation operation = 5;</code>
    * @return The operation.
    */
@@ -179,6 +224,10 @@ private static final long serialVersionUID = 0L;
     return operation_ == null ? org.cyverse.de.protobufs.UpdateOperation.getDefaultInstance() : operation_;
   }
   /**
+   * <pre>
+   * The type of operation being done.
+   * </pre>
+   *
    * <code>.UpdateOperation operation = 5;</code>
    */
   @java.lang.Override
@@ -189,6 +238,10 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 6;
   private org.cyverse.de.protobufs.ResourceType resourceType_;
   /**
+   * <pre>
+   * The resource type for the quota or usage being updated.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
@@ -197,6 +250,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ != null;
   }
   /**
+   * <pre>
+   * The resource type for the quota or usage being updated.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
@@ -205,6 +262,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ == null ? org.cyverse.de.protobufs.ResourceType.getDefaultInstance() : resourceType_;
   }
   /**
+   * <pre>
+   * The resource type for the quota or usage being updated.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
@@ -215,6 +276,10 @@ private static final long serialVersionUID = 0L;
   public static final int USER_FIELD_NUMBER = 7;
   private org.cyverse.de.protobufs.QMSUser user_;
   /**
+   * <pre>
+   * The user in the QMS system that the update is for.
+   * </pre>
+   *
    * <code>.QMSUser user = 7;</code>
    * @return Whether the user field is set.
    */
@@ -223,6 +288,10 @@ private static final long serialVersionUID = 0L;
     return user_ != null;
   }
   /**
+   * <pre>
+   * The user in the QMS system that the update is for.
+   * </pre>
+   *
    * <code>.QMSUser user = 7;</code>
    * @return The user.
    */
@@ -231,6 +300,10 @@ private static final long serialVersionUID = 0L;
     return user_ == null ? org.cyverse.de.protobufs.QMSUser.getDefaultInstance() : user_;
   }
   /**
+   * <pre>
+   * The user in the QMS system that the update is for.
+   * </pre>
+   *
    * <code>.QMSUser user = 7;</code>
    */
   @java.lang.Override
@@ -480,6 +553,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A representation of an update to a quota or usage value.
+   * </pre>
+   *
    * Protobuf type {@code Update}
    */
   public static final class Builder extends
@@ -757,6 +835,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -773,6 +855,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -790,6 +876,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -803,6 +893,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -813,6 +907,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -829,6 +927,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object valueType_ = "";
     /**
+     * <pre>
+     * Determines whether the update is for a "quota" or "usage". 
+     * </pre>
+     *
      * <code>string value_type = 2 [json_name = "value_type"];</code>
      * @return The valueType.
      */
@@ -845,6 +947,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Determines whether the update is for a "quota" or "usage". 
+     * </pre>
+     *
      * <code>string value_type = 2 [json_name = "value_type"];</code>
      * @return The bytes for valueType.
      */
@@ -862,6 +968,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Determines whether the update is for a "quota" or "usage". 
+     * </pre>
+     *
      * <code>string value_type = 2 [json_name = "value_type"];</code>
      * @param value The valueType to set.
      * @return This builder for chaining.
@@ -875,6 +985,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Determines whether the update is for a "quota" or "usage". 
+     * </pre>
+     *
      * <code>string value_type = 2 [json_name = "value_type"];</code>
      * @return This builder for chaining.
      */
@@ -885,6 +999,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Determines whether the update is for a "quota" or "usage". 
+     * </pre>
+     *
      * <code>string value_type = 2 [json_name = "value_type"];</code>
      * @param value The bytes for valueType to set.
      * @return This builder for chaining.
@@ -901,6 +1019,10 @@ private static final long serialVersionUID = 0L;
 
     private double value_ ;
     /**
+     * <pre>
+     * The value being applied to the usage or quota.
+     * </pre>
+     *
      * <code>double value = 3;</code>
      * @return The value.
      */
@@ -909,6 +1031,10 @@ private static final long serialVersionUID = 0L;
       return value_;
     }
     /**
+     * <pre>
+     * The value being applied to the usage or quota.
+     * </pre>
+     *
      * <code>double value = 3;</code>
      * @param value The value to set.
      * @return This builder for chaining.
@@ -921,6 +1047,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value being applied to the usage or quota.
+     * </pre>
+     *
      * <code>double value = 3;</code>
      * @return This builder for chaining.
      */
@@ -935,6 +1065,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveDateBuilder_;
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      * @return Whether the effectiveDate field is set.
      */
@@ -942,6 +1076,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      * @return The effectiveDate.
      */
@@ -953,6 +1091,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     public Builder setEffectiveDate(com.google.protobuf.Timestamp value) {
@@ -969,6 +1111,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     public Builder setEffectiveDate(
@@ -983,6 +1129,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     public Builder mergeEffectiveDate(com.google.protobuf.Timestamp value) {
@@ -1002,6 +1152,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     public Builder clearEffectiveDate() {
@@ -1015,6 +1169,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEffectiveDateBuilder() {
@@ -1023,6 +1181,10 @@ private static final long serialVersionUID = 0L;
       return getEffectiveDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getEffectiveDateOrBuilder() {
@@ -1034,6 +1196,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The date the update takes effect.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1054,6 +1220,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.UpdateOperation, org.cyverse.de.protobufs.UpdateOperation.Builder, org.cyverse.de.protobufs.UpdateOperationOrBuilder> operationBuilder_;
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      * @return Whether the operation field is set.
      */
@@ -1061,6 +1231,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      * @return The operation.
      */
@@ -1072,6 +1246,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     public Builder setOperation(org.cyverse.de.protobufs.UpdateOperation value) {
@@ -1088,6 +1266,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     public Builder setOperation(
@@ -1102,6 +1284,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     public Builder mergeOperation(org.cyverse.de.protobufs.UpdateOperation value) {
@@ -1121,6 +1307,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     public Builder clearOperation() {
@@ -1134,6 +1324,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     public org.cyverse.de.protobufs.UpdateOperation.Builder getOperationBuilder() {
@@ -1142,6 +1336,10 @@ private static final long serialVersionUID = 0L;
       return getOperationFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     public org.cyverse.de.protobufs.UpdateOperationOrBuilder getOperationOrBuilder() {
@@ -1153,6 +1351,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The type of operation being done.
+     * </pre>
+     *
      * <code>.UpdateOperation operation = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1173,6 +1375,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> resourceTypeBuilder_;
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
@@ -1180,6 +1386,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
@@ -1191,6 +1401,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -1207,6 +1421,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
@@ -1221,6 +1439,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -1240,6 +1462,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
@@ -1253,6 +1479,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
@@ -1261,6 +1491,10 @@ private static final long serialVersionUID = 0L;
       return getResourceTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -1272,6 +1506,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type for the quota or usage being updated.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1292,6 +1530,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.QMSUser, org.cyverse.de.protobufs.QMSUser.Builder, org.cyverse.de.protobufs.QMSUserOrBuilder> userBuilder_;
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      * @return Whether the user field is set.
      */
@@ -1299,6 +1541,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      * @return The user.
      */
@@ -1310,6 +1556,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     public Builder setUser(org.cyverse.de.protobufs.QMSUser value) {
@@ -1326,6 +1576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     public Builder setUser(
@@ -1340,6 +1594,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     public Builder mergeUser(org.cyverse.de.protobufs.QMSUser value) {
@@ -1359,6 +1617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     public Builder clearUser() {
@@ -1372,6 +1634,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     public org.cyverse.de.protobufs.QMSUser.Builder getUserBuilder() {
@@ -1380,6 +1646,10 @@ private static final long serialVersionUID = 0L;
       return getUserFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     public org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder() {
@@ -1391,6 +1661,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The user in the QMS system that the update is for.
+     * </pre>
+     *
      * <code>.QMSUser user = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

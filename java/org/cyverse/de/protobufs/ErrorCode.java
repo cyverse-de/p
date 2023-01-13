@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * The types of errors that can be retuned by message handlers.
+ * </pre>
+ *
  * Protobuf enum {@code ErrorCode}
  */
 public enum ErrorCode
@@ -25,30 +30,58 @@ public enum ErrorCode
    */
   UNSPECIFIED(1),
   /**
+   * <pre>
+   * Internal error.
+   * </pre>
+   *
    * <code>INTERNAL = 2;</code>
    */
   INTERNAL(2),
   /**
+   * <pre>
+   * The requested resource wasn't found.
+   * </pre>
+   *
    * <code>NOT_FOUND = 3;</code>
    */
   NOT_FOUND(3),
   /**
+   * <pre>
+   * The request was bad/wrong is some way.
+   * </pre>
+   *
    * <code>BAD_REQUEST = 4;</code>
    */
   BAD_REQUEST(4),
   /**
+   * <pre>
+   * A failure to marshal a response.
+   * </pre>
+   *
    * <code>MARSHAL_FAILURE = 5;</code>
    */
   MARSHAL_FAILURE(5),
   /**
+   * <pre>
+   * A failure to unmarshal a request.
+   * </pre>
+   *
    * <code>UNMARSHAL_FAILURE = 6;</code>
    */
   UNMARSHAL_FAILURE(6),
   /**
+   * <pre>
+   * A parameter is missing.
+   * </pre>
+   *
    * <code>PARAMETER_MISSING = 7;</code>
    */
   PARAMETER_MISSING(7),
   /**
+   * <pre>
+   *&#47; A parameter is invalid.
+   * </pre>
+   *
    * <code>PARAMETER_INVALID = 8;</code>
    */
   PARAMETER_INVALID(8),
@@ -72,30 +105,58 @@ public enum ErrorCode
    */
   public static final int UNSPECIFIED_VALUE = 1;
   /**
+   * <pre>
+   * Internal error.
+   * </pre>
+   *
    * <code>INTERNAL = 2;</code>
    */
   public static final int INTERNAL_VALUE = 2;
   /**
+   * <pre>
+   * The requested resource wasn't found.
+   * </pre>
+   *
    * <code>NOT_FOUND = 3;</code>
    */
   public static final int NOT_FOUND_VALUE = 3;
   /**
+   * <pre>
+   * The request was bad/wrong is some way.
+   * </pre>
+   *
    * <code>BAD_REQUEST = 4;</code>
    */
   public static final int BAD_REQUEST_VALUE = 4;
   /**
+   * <pre>
+   * A failure to marshal a response.
+   * </pre>
+   *
    * <code>MARSHAL_FAILURE = 5;</code>
    */
   public static final int MARSHAL_FAILURE_VALUE = 5;
   /**
+   * <pre>
+   * A failure to unmarshal a request.
+   * </pre>
+   *
    * <code>UNMARSHAL_FAILURE = 6;</code>
    */
   public static final int UNMARSHAL_FAILURE_VALUE = 6;
   /**
+   * <pre>
+   * A parameter is missing.
+   * </pre>
+   *
    * <code>PARAMETER_MISSING = 7;</code>
    */
   public static final int PARAMETER_MISSING_VALUE = 7;
   /**
+   * <pre>
+   *&#47; A parameter is invalid.
+   * </pre>
+   *
    * <code>PARAMETER_INVALID = 8;</code>
    */
   public static final int PARAMETER_INVALID_VALUE = 8;

@@ -21,13 +21,17 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// *
+// A request for all of a user's current resource type overages.
 type AllUserOveragesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header   *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Username string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	// Contains telemetry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// The user's username in the QMS system.
+	Username string `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
 }
 
 func (x *AllUserOveragesRequest) Reset() {
@@ -76,14 +80,19 @@ func (x *AllUserOveragesRequest) GetUsername() string {
 	return ""
 }
 
+// *
+// A request for a user's overages specific to a particular resource type.
 type UserResourceOveragesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Username     string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	ResourceName string         `protobuf:"bytes,3,opt,name=resource_name,proto3" json:"resource_name,omitempty"`
+	// Contains telemetry data.
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// A user's username.
+	Username string `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	// The name of the resource type to look up overages for.
+	ResourceName string `protobuf:"bytes,3,opt,name=resource_name,proto3" json:"resource_name,omitempty"`
 }
 
 func (x *UserResourceOveragesRequest) Reset() {
@@ -139,14 +148,19 @@ func (x *UserResourceOveragesRequest) GetResourceName() string {
 	return ""
 }
 
+// *
+// A request to check if a user is in overage for a particular resource.
 type IsOverageRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Username     string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	ResourceName string         `protobuf:"bytes,3,opt,name=resource_name,proto3" json:"resource_name,omitempty"`
+	// Contains telemetry information
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// A username.
+	Username string `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
+	// The name of the resource type to check for usage overages by the user.
+	ResourceName string `protobuf:"bytes,3,opt,name=resource_name,proto3" json:"resource_name,omitempty"`
 }
 
 func (x *IsOverageRequest) Reset() {
@@ -202,11 +216,15 @@ func (x *IsOverageRequest) GetResourceName() string {
 	return ""
 }
 
+// *
+// A request to add a usage to the system for a resource type consumed by the
+// specified user.
 type AddUsage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry information
 	Header       *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 	Username     string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
 	ResourceName string         `protobuf:"bytes,3,opt,name=resource_name,proto3" json:"resource_name,omitempty"`
@@ -295,6 +313,7 @@ type GetUsages struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry information
 	Header   *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 	Username string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
 }
@@ -350,6 +369,7 @@ type RequestByUsername struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry information
 	Header   *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 	Username string         `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
 }
@@ -405,6 +425,7 @@ type RequestByUserID struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry information
 	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 	UserId string         `protobuf:"bytes,2,opt,name=user_id,proto3" json:"user_id,omitempty"`
 }
@@ -460,6 +481,7 @@ type NoParamsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Contains telemetry information
 	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 }
 

@@ -4,6 +4,12 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A response type for quota default requests that contains a list of quota
+ * defaults.
+ * </pre>
+ *
  * Protobuf type {@code QuotaDefaultList}
  */
 public final class QuotaDefaultList extends
@@ -47,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
+   * <pre>
+   * Can contain telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
@@ -55,6 +65,10 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
+   * <pre>
+   * Can contain telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
@@ -63,6 +77,10 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
+   * <pre>
+   * Can contain telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   @java.lang.Override
@@ -73,6 +91,10 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 2;
   private org.cyverse.de.protobufs.ServiceError error_;
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
@@ -81,6 +103,10 @@ private static final long serialVersionUID = 0L;
     return error_ != null;
   }
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    * @return The error.
    */
@@ -89,6 +115,10 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
   }
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    */
   @java.lang.Override
@@ -100,6 +130,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.QuotaDefault> quotaDefaults_;
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   @java.lang.Override
@@ -107,6 +141,10 @@ private static final long serialVersionUID = 0L;
     return quotaDefaults_;
   }
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   @java.lang.Override
@@ -115,6 +153,10 @@ private static final long serialVersionUID = 0L;
     return quotaDefaults_;
   }
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   @java.lang.Override
@@ -122,6 +164,10 @@ private static final long serialVersionUID = 0L;
     return quotaDefaults_.size();
   }
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   @java.lang.Override
@@ -129,6 +175,10 @@ private static final long serialVersionUID = 0L;
     return quotaDefaults_.get(index);
   }
   /**
+   * <pre>
+   * The list of quota default objkects returned by the request handler.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   @java.lang.Override
@@ -327,6 +377,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A response type for quota default requests that contains a list of quota
+   * defaults.
+   * </pre>
+   *
    * Protobuf type {@code QuotaDefaultList}
    */
   public static final class Builder extends
@@ -585,6 +641,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return Whether the header field is set.
      */
@@ -592,6 +652,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return The header.
      */
@@ -603,6 +667,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
@@ -619,6 +687,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(
@@ -633,6 +705,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
@@ -652,6 +728,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
@@ -665,6 +745,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -684,6 +772,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Can contain telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -704,6 +796,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> errorBuilder_;
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      * @return Whether the error field is set.
      */
@@ -711,6 +807,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      * @return The error.
      */
@@ -722,6 +822,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
@@ -738,6 +842,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     public Builder setError(
@@ -752,6 +860,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
@@ -771,6 +883,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     public Builder clearError() {
@@ -784,6 +900,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
@@ -792,6 +912,10 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -803,6 +927,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains error info from the request handler.
+     * </pre>
+     *
      * <code>.ServiceError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -832,6 +960,10 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.QuotaDefault, org.cyverse.de.protobufs.QuotaDefault.Builder, org.cyverse.de.protobufs.QuotaDefaultOrBuilder> quotaDefaultsBuilder_;
 
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.QuotaDefault> getQuotaDefaultsList() {
@@ -842,6 +974,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public int getQuotaDefaultsCount() {
@@ -852,6 +988,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault getQuotaDefaults(int index) {
@@ -862,6 +1002,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder setQuotaDefaults(
@@ -879,6 +1023,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder setQuotaDefaults(
@@ -893,6 +1041,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder addQuotaDefaults(org.cyverse.de.protobufs.QuotaDefault value) {
@@ -909,6 +1061,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder addQuotaDefaults(
@@ -926,6 +1082,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder addQuotaDefaults(
@@ -940,6 +1100,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder addQuotaDefaults(
@@ -954,6 +1118,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder addAllQuotaDefaults(
@@ -969,6 +1137,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder clearQuotaDefaults() {
@@ -982,6 +1154,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public Builder removeQuotaDefaults(int index) {
@@ -995,6 +1171,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder getQuotaDefaultsBuilder(
@@ -1002,6 +1182,10 @@ private static final long serialVersionUID = 0L;
       return getQuotaDefaultsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultsOrBuilder(
@@ -1012,6 +1196,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
@@ -1023,6 +1211,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder addQuotaDefaultsBuilder() {
@@ -1030,6 +1222,10 @@ private static final long serialVersionUID = 0L;
           org.cyverse.de.protobufs.QuotaDefault.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder addQuotaDefaultsBuilder(
@@ -1038,6 +1234,10 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.QuotaDefault.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of quota default objkects returned by the request handler.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.QuotaDefault.Builder> 

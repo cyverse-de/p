@@ -8,11 +8,19 @@ public interface QMSUserOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * A user's unique identifier in QMS.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * A user's unique identifier in QMS.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,11 +28,19 @@ public interface QMSUserOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * A user's username in QMS.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The username.
    */
   java.lang.String getUsername();
   /**
+   * <pre>
+   * A user's username in QMS.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The bytes for username.
    */

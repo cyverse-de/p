@@ -4,6 +4,13 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * Represents a quota in the system, which is the currently configured limit on
+ * a resource type a user has associated with their plan. Overrides the quota
+ * default associated with the plan the user has.
+ * </pre>
+ *
  * Protobuf type {@code Quota}
  */
 public final class Quota extends
@@ -19,7 +26,7 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     createdBy_ = "";
     lastModifiedBy_ = "";
-    userPlanId_ = "";
+    subscriptionId_ = "";
   }
 
   @java.lang.Override
@@ -51,6 +58,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -68,6 +79,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -89,6 +104,10 @@ private static final long serialVersionUID = 0L;
   public static final int QUOTA_FIELD_NUMBER = 2;
   private float quota_ = 0F;
   /**
+   * <pre>
+   * The quota value (aka limit).
+   * </pre>
+   *
    * <code>float quota = 2;</code>
    * @return The quota.
    */
@@ -100,6 +119,10 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 3;
   private org.cyverse.de.protobufs.ResourceType resourceType_;
   /**
+   * <pre>
+   * The resource type the quota value applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
@@ -108,6 +131,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ != null;
   }
   /**
+   * <pre>
+   * The resource type the quota value applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
@@ -116,6 +143,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ == null ? org.cyverse.de.protobufs.ResourceType.getDefaultInstance() : resourceType_;
   }
   /**
+   * <pre>
+   * The resource type the quota value applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
@@ -127,6 +158,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object createdBy_ = "";
   /**
+   * <pre>
+   * A freeform text field containing info about who created the quota.
+   * </pre>
+   *
    * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
    * @return The createdBy.
    */
@@ -144,6 +179,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A freeform text field containing info about who created the quota.
+   * </pre>
+   *
    * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
    * @return The bytes for createdBy.
    */
@@ -165,6 +204,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREATEDAT_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp createdAt_;
   /**
+   * <pre>
+   * When the quota was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
    * @return Whether the createdAt field is set.
    */
@@ -173,6 +216,10 @@ private static final long serialVersionUID = 0L;
     return createdAt_ != null;
   }
   /**
+   * <pre>
+   * When the quota was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
    * @return The createdAt.
    */
@@ -181,6 +228,10 @@ private static final long serialVersionUID = 0L;
     return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
   }
   /**
+   * <pre>
+   * When the quota was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
    */
   @java.lang.Override
@@ -192,6 +243,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object lastModifiedBy_ = "";
   /**
+   * <pre>
+   * A freeform text field containing info about who last modified the quota.
+   * </pre>
+   *
    * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
    * @return The lastModifiedBy.
    */
@@ -209,6 +264,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A freeform text field containing info about who last modified the quota.
+   * </pre>
+   *
    * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
    * @return The bytes for lastModifiedBy.
    */
@@ -230,6 +289,10 @@ private static final long serialVersionUID = 0L;
   public static final int LASTMODIFIEDAT_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp lastModifiedAt_;
   /**
+   * <pre>
+   * When the quota was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    * @return Whether the lastModifiedAt field is set.
    */
@@ -238,6 +301,10 @@ private static final long serialVersionUID = 0L;
     return lastModifiedAt_ != null;
   }
   /**
+   * <pre>
+   * When the quota was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    * @return The lastModifiedAt.
    */
@@ -246,6 +313,10 @@ private static final long serialVersionUID = 0L;
     return lastModifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModifiedAt_;
   }
   /**
+   * <pre>
+   * When the quota was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    */
   @java.lang.Override
@@ -253,39 +324,47 @@ private static final long serialVersionUID = 0L;
     return lastModifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModifiedAt_;
   }
 
-  public static final int USER_PLAN_ID_FIELD_NUMBER = 8;
+  public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object userPlanId_ = "";
+  private volatile java.lang.Object subscriptionId_ = "";
   /**
-   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-   * @return The userPlanId.
+   * <pre>
+   * The unique identifier of the user plan that the quota is associated with.
+   * </pre>
+   *
+   * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+   * @return The subscriptionId.
    */
   @java.lang.Override
-  public java.lang.String getUserPlanId() {
-    java.lang.Object ref = userPlanId_;
+  public java.lang.String getSubscriptionId() {
+    java.lang.Object ref = subscriptionId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      userPlanId_ = s;
+      subscriptionId_ = s;
       return s;
     }
   }
   /**
-   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-   * @return The bytes for userPlanId.
+   * <pre>
+   * The unique identifier of the user plan that the quota is associated with.
+   * </pre>
+   *
+   * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+   * @return The bytes for subscriptionId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUserPlanIdBytes() {
-    java.lang.Object ref = userPlanId_;
+      getSubscriptionIdBytes() {
+    java.lang.Object ref = subscriptionId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      userPlanId_ = b;
+      subscriptionId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -327,8 +406,8 @@ private static final long serialVersionUID = 0L;
     if (lastModifiedAt_ != null) {
       output.writeMessage(7, getLastModifiedAt());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPlanId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, userPlanId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, subscriptionId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -364,8 +443,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getLastModifiedAt());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userPlanId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, userPlanId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, subscriptionId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -406,8 +485,8 @@ private static final long serialVersionUID = 0L;
       if (!getLastModifiedAt()
           .equals(other.getLastModifiedAt())) return false;
     }
-    if (!getUserPlanId()
-        .equals(other.getUserPlanId())) return false;
+    if (!getSubscriptionId()
+        .equals(other.getSubscriptionId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -440,8 +519,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LASTMODIFIEDAT_FIELD_NUMBER;
       hash = (53 * hash) + getLastModifiedAt().hashCode();
     }
-    hash = (37 * hash) + USER_PLAN_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getUserPlanId().hashCode();
+    hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getSubscriptionId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -538,6 +617,13 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * Represents a quota in the system, which is the currently configured limit on
+   * a resource type a user has associated with their plan. Overrides the quota
+   * default associated with the plan the user has.
+   * </pre>
+   *
    * Protobuf type {@code Quota}
    */
   public static final class Builder extends
@@ -590,7 +676,7 @@ private static final long serialVersionUID = 0L;
         lastModifiedAtBuilder_.dispose();
         lastModifiedAtBuilder_ = null;
       }
-      userPlanId_ = "";
+      subscriptionId_ = "";
       return this;
     }
 
@@ -652,7 +738,7 @@ private static final long serialVersionUID = 0L;
             : lastModifiedAtBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.userPlanId_ = userPlanId_;
+        result.subscriptionId_ = subscriptionId_;
       }
     }
 
@@ -727,8 +813,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastModifiedAt()) {
         mergeLastModifiedAt(other.getLastModifiedAt());
       }
-      if (!other.getUserPlanId().isEmpty()) {
-        userPlanId_ = other.userPlanId_;
+      if (!other.getSubscriptionId().isEmpty()) {
+        subscriptionId_ = other.subscriptionId_;
         bitField0_ |= 0x00000080;
         onChanged();
       }
@@ -800,7 +886,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 58
             case 66: {
-              userPlanId_ = input.readStringRequireUtf8();
+              subscriptionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000080;
               break;
             } // case 66
@@ -823,6 +909,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -839,6 +929,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -856,6 +950,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -869,6 +967,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -879,6 +981,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -895,6 +1001,10 @@ private static final long serialVersionUID = 0L;
 
     private float quota_ ;
     /**
+     * <pre>
+     * The quota value (aka limit).
+     * </pre>
+     *
      * <code>float quota = 2;</code>
      * @return The quota.
      */
@@ -903,6 +1013,10 @@ private static final long serialVersionUID = 0L;
       return quota_;
     }
     /**
+     * <pre>
+     * The quota value (aka limit).
+     * </pre>
+     *
      * <code>float quota = 2;</code>
      * @param value The quota to set.
      * @return This builder for chaining.
@@ -915,6 +1029,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The quota value (aka limit).
+     * </pre>
+     *
      * <code>float quota = 2;</code>
      * @return This builder for chaining.
      */
@@ -929,6 +1047,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> resourceTypeBuilder_;
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
@@ -936,6 +1058,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
@@ -947,6 +1073,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -963,6 +1093,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
@@ -977,6 +1111,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -996,6 +1134,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
@@ -1009,6 +1151,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
@@ -1017,6 +1163,10 @@ private static final long serialVersionUID = 0L;
       return getResourceTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -1028,6 +1178,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type the quota value applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1046,6 +1200,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createdBy_ = "";
     /**
+     * <pre>
+     * A freeform text field containing info about who created the quota.
+     * </pre>
+     *
      * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
      * @return The createdBy.
      */
@@ -1062,6 +1220,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who created the quota.
+     * </pre>
+     *
      * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
      * @return The bytes for createdBy.
      */
@@ -1079,6 +1241,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who created the quota.
+     * </pre>
+     *
      * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
      * @param value The createdBy to set.
      * @return This builder for chaining.
@@ -1092,6 +1258,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who created the quota.
+     * </pre>
+     *
      * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
      * @return This builder for chaining.
      */
@@ -1102,6 +1272,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who created the quota.
+     * </pre>
+     *
      * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
      * @param value The bytes for createdBy to set.
      * @return This builder for chaining.
@@ -1120,6 +1294,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      * @return Whether the createdAt field is set.
      */
@@ -1127,6 +1305,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      * @return The createdAt.
      */
@@ -1138,6 +1320,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1154,6 +1340,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     public Builder setCreatedAt(
@@ -1168,6 +1358,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1187,6 +1381,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     public Builder clearCreatedAt() {
@@ -1200,6 +1398,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1208,6 +1410,10 @@ private static final long serialVersionUID = 0L;
       return getCreatedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1219,6 +1425,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the quota was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1237,6 +1447,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object lastModifiedBy_ = "";
     /**
+     * <pre>
+     * A freeform text field containing info about who last modified the quota.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
      * @return The lastModifiedBy.
      */
@@ -1253,6 +1467,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who last modified the quota.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
      * @return The bytes for lastModifiedBy.
      */
@@ -1270,6 +1488,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who last modified the quota.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
      * @param value The lastModifiedBy to set.
      * @return This builder for chaining.
@@ -1283,6 +1505,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who last modified the quota.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
      * @return This builder for chaining.
      */
@@ -1293,6 +1519,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A freeform text field containing info about who last modified the quota.
+     * </pre>
+     *
      * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
      * @param value The bytes for lastModifiedBy to set.
      * @return This builder for chaining.
@@ -1311,6 +1541,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastModifiedAtBuilder_;
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      * @return Whether the lastModifiedAt field is set.
      */
@@ -1318,6 +1552,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      * @return The lastModifiedAt.
      */
@@ -1329,6 +1567,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     public Builder setLastModifiedAt(com.google.protobuf.Timestamp value) {
@@ -1345,6 +1587,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     public Builder setLastModifiedAt(
@@ -1359,6 +1605,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     public Builder mergeLastModifiedAt(com.google.protobuf.Timestamp value) {
@@ -1378,6 +1628,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     public Builder clearLastModifiedAt() {
@@ -1391,6 +1645,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastModifiedAtBuilder() {
@@ -1399,6 +1657,10 @@ private static final long serialVersionUID = 0L;
       return getLastModifiedAtFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder() {
@@ -1410,6 +1672,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * When the quota was last modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1426,73 +1692,93 @@ private static final long serialVersionUID = 0L;
       return lastModifiedAtBuilder_;
     }
 
-    private java.lang.Object userPlanId_ = "";
+    private java.lang.Object subscriptionId_ = "";
     /**
-     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-     * @return The userPlanId.
+     * <pre>
+     * The unique identifier of the user plan that the quota is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+     * @return The subscriptionId.
      */
-    public java.lang.String getUserPlanId() {
-      java.lang.Object ref = userPlanId_;
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        userPlanId_ = s;
+        subscriptionId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-     * @return The bytes for userPlanId.
+     * <pre>
+     * The unique identifier of the user plan that the quota is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+     * @return The bytes for subscriptionId.
      */
     public com.google.protobuf.ByteString
-        getUserPlanIdBytes() {
-      java.lang.Object ref = userPlanId_;
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        userPlanId_ = b;
+        subscriptionId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-     * @param value The userPlanId to set.
+     * <pre>
+     * The unique identifier of the user plan that the quota is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+     * @param value The subscriptionId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserPlanId(
+    public Builder setSubscriptionId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      userPlanId_ = value;
+      subscriptionId_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
+     * <pre>
+     * The unique identifier of the user plan that the quota is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUserPlanId() {
-      userPlanId_ = getDefaultInstance().getUserPlanId();
+    public Builder clearSubscriptionId() {
+      subscriptionId_ = getDefaultInstance().getSubscriptionId();
       bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
-     * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-     * @param value The bytes for userPlanId to set.
+     * <pre>
+     * The unique identifier of the user plan that the quota is associated with.
+     * </pre>
+     *
+     * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+     * @param value The bytes for subscriptionId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserPlanIdBytes(
+    public Builder setSubscriptionIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      userPlanId_ = value;
+      subscriptionId_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;

@@ -21,23 +21,33 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// *
+// A request for user information.
 type UserLookupRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// How to uniquely identify the user being looked up.
+	//
 	// Types that are assignable to LookupIds:
 	//
 	//	*UserLookupRequest_Username
 	//	*UserLookupRequest_UserId
 	//	*UserLookupRequest_AnalysisId
-	LookupIds            isUserLookupRequest_LookupIds `protobuf_oneof:"lookup_ids"`
-	IncludeLogins        bool                          `protobuf:"varint,5,opt,name=include_logins,json=includeLogins,proto3" json:"include_logins,omitempty"`
-	IncludePreferences   bool                          `protobuf:"varint,6,opt,name=include_preferences,json=includePreferences,proto3" json:"include_preferences,omitempty"`
-	IncludeSavedSearches bool                          `protobuf:"varint,7,opt,name=include_saved_searches,json=includeSavedSearches,proto3" json:"include_saved_searches,omitempty"`
-	LoginLimit           uint32                        `protobuf:"varint,8,opt,name=login_limit,json=loginLimit,proto3" json:"login_limit,omitempty"`
-	LoginOffset          uint32                        `protobuf:"varint,9,opt,name=login_offset,json=loginOffset,proto3" json:"login_offset,omitempty"`
-	Header               *header.Header                `protobuf:"bytes,10,opt,name=header,proto3" json:"header,omitempty"`
+	LookupIds isUserLookupRequest_LookupIds `protobuf_oneof:"lookup_ids"`
+	// Whether to include user logins in the response.
+	IncludeLogins bool `protobuf:"varint,5,opt,name=include_logins,json=includeLogins,proto3" json:"include_logins,omitempty"`
+	// Whether to include user preferences in the response.
+	IncludePreferences bool `protobuf:"varint,6,opt,name=include_preferences,json=includePreferences,proto3" json:"include_preferences,omitempty"`
+	// Whether to include saved searches in the response.
+	IncludeSavedSearches bool `protobuf:"varint,7,opt,name=include_saved_searches,json=includeSavedSearches,proto3" json:"include_saved_searches,omitempty"`
+	// Paging limit.
+	LoginLimit uint32 `protobuf:"varint,8,opt,name=login_limit,json=loginLimit,proto3" json:"login_limit,omitempty"`
+	// Paging offset
+	LoginOffset uint32 `protobuf:"varint,9,opt,name=login_offset,json=loginOffset,proto3" json:"login_offset,omitempty"`
+	// Contains telemetry information
+	Header *header.Header `protobuf:"bytes,10,opt,name=header,proto3" json:"header,omitempty"`
 }
 
 func (x *UserLookupRequest) Reset() {

@@ -23,6 +23,8 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// *
+// A user's information.
 type User struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

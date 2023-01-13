@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A request for user information.
+ * </pre>
+ *
  * Protobuf type {@code UserLookupRequest}
  */
 public final class UserLookupRequest extends
@@ -245,6 +250,10 @@ private static final long serialVersionUID = 0L;
   public static final int INCLUDE_LOGINS_FIELD_NUMBER = 5;
   private boolean includeLogins_ = false;
   /**
+   * <pre>
+   * Whether to include user logins in the response.
+   * </pre>
+   *
    * <code>bool include_logins = 5;</code>
    * @return The includeLogins.
    */
@@ -256,6 +265,10 @@ private static final long serialVersionUID = 0L;
   public static final int INCLUDE_PREFERENCES_FIELD_NUMBER = 6;
   private boolean includePreferences_ = false;
   /**
+   * <pre>
+   * Whether to include user preferences in the response.
+   * </pre>
+   *
    * <code>bool include_preferences = 6;</code>
    * @return The includePreferences.
    */
@@ -267,6 +280,10 @@ private static final long serialVersionUID = 0L;
   public static final int INCLUDE_SAVED_SEARCHES_FIELD_NUMBER = 7;
   private boolean includeSavedSearches_ = false;
   /**
+   * <pre>
+   * Whether to include saved searches in the response.
+   * </pre>
+   *
    * <code>bool include_saved_searches = 7;</code>
    * @return The includeSavedSearches.
    */
@@ -278,6 +295,10 @@ private static final long serialVersionUID = 0L;
   public static final int LOGIN_LIMIT_FIELD_NUMBER = 8;
   private int loginLimit_ = 0;
   /**
+   * <pre>
+   * Paging limit.
+   * </pre>
+   *
    * <code>uint32 login_limit = 8;</code>
    * @return The loginLimit.
    */
@@ -289,6 +310,10 @@ private static final long serialVersionUID = 0L;
   public static final int LOGIN_OFFSET_FIELD_NUMBER = 9;
   private int loginOffset_ = 0;
   /**
+   * <pre>
+   * Paging offset
+   * </pre>
+   *
    * <code>uint32 login_offset = 9;</code>
    * @return The loginOffset.
    */
@@ -300,6 +325,10 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 10;
   private org.cyverse.de.protobufs.Header header_;
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 10;</code>
    * @return Whether the header field is set.
    */
@@ -308,6 +337,10 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 10;</code>
    * @return The header.
    */
@@ -316,6 +349,10 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 10;</code>
    */
   @java.lang.Override
@@ -593,6 +630,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A request for user information.
+   * </pre>
+   *
    * Protobuf type {@code UserLookupRequest}
    */
   public static final class Builder extends
@@ -1173,6 +1215,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean includeLogins_ ;
     /**
+     * <pre>
+     * Whether to include user logins in the response.
+     * </pre>
+     *
      * <code>bool include_logins = 5;</code>
      * @return The includeLogins.
      */
@@ -1181,6 +1227,10 @@ private static final long serialVersionUID = 0L;
       return includeLogins_;
     }
     /**
+     * <pre>
+     * Whether to include user logins in the response.
+     * </pre>
+     *
      * <code>bool include_logins = 5;</code>
      * @param value The includeLogins to set.
      * @return This builder for chaining.
@@ -1193,6 +1243,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Whether to include user logins in the response.
+     * </pre>
+     *
      * <code>bool include_logins = 5;</code>
      * @return This builder for chaining.
      */
@@ -1205,6 +1259,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean includePreferences_ ;
     /**
+     * <pre>
+     * Whether to include user preferences in the response.
+     * </pre>
+     *
      * <code>bool include_preferences = 6;</code>
      * @return The includePreferences.
      */
@@ -1213,6 +1271,10 @@ private static final long serialVersionUID = 0L;
       return includePreferences_;
     }
     /**
+     * <pre>
+     * Whether to include user preferences in the response.
+     * </pre>
+     *
      * <code>bool include_preferences = 6;</code>
      * @param value The includePreferences to set.
      * @return This builder for chaining.
@@ -1225,6 +1287,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Whether to include user preferences in the response.
+     * </pre>
+     *
      * <code>bool include_preferences = 6;</code>
      * @return This builder for chaining.
      */
@@ -1237,6 +1303,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean includeSavedSearches_ ;
     /**
+     * <pre>
+     * Whether to include saved searches in the response.
+     * </pre>
+     *
      * <code>bool include_saved_searches = 7;</code>
      * @return The includeSavedSearches.
      */
@@ -1245,6 +1315,10 @@ private static final long serialVersionUID = 0L;
       return includeSavedSearches_;
     }
     /**
+     * <pre>
+     * Whether to include saved searches in the response.
+     * </pre>
+     *
      * <code>bool include_saved_searches = 7;</code>
      * @param value The includeSavedSearches to set.
      * @return This builder for chaining.
@@ -1257,6 +1331,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Whether to include saved searches in the response.
+     * </pre>
+     *
      * <code>bool include_saved_searches = 7;</code>
      * @return This builder for chaining.
      */
@@ -1269,6 +1347,10 @@ private static final long serialVersionUID = 0L;
 
     private int loginLimit_ ;
     /**
+     * <pre>
+     * Paging limit.
+     * </pre>
+     *
      * <code>uint32 login_limit = 8;</code>
      * @return The loginLimit.
      */
@@ -1277,6 +1359,10 @@ private static final long serialVersionUID = 0L;
       return loginLimit_;
     }
     /**
+     * <pre>
+     * Paging limit.
+     * </pre>
+     *
      * <code>uint32 login_limit = 8;</code>
      * @param value The loginLimit to set.
      * @return This builder for chaining.
@@ -1289,6 +1375,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Paging limit.
+     * </pre>
+     *
      * <code>uint32 login_limit = 8;</code>
      * @return This builder for chaining.
      */
@@ -1301,6 +1391,10 @@ private static final long serialVersionUID = 0L;
 
     private int loginOffset_ ;
     /**
+     * <pre>
+     * Paging offset
+     * </pre>
+     *
      * <code>uint32 login_offset = 9;</code>
      * @return The loginOffset.
      */
@@ -1309,6 +1403,10 @@ private static final long serialVersionUID = 0L;
       return loginOffset_;
     }
     /**
+     * <pre>
+     * Paging offset
+     * </pre>
+     *
      * <code>uint32 login_offset = 9;</code>
      * @param value The loginOffset to set.
      * @return This builder for chaining.
@@ -1321,6 +1419,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Paging offset
+     * </pre>
+     *
      * <code>uint32 login_offset = 9;</code>
      * @return This builder for chaining.
      */
@@ -1335,6 +1437,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      * @return Whether the header field is set.
      */
@@ -1342,6 +1448,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000100) != 0);
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      * @return The header.
      */
@@ -1353,6 +1463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
@@ -1369,6 +1483,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     public Builder setHeader(
@@ -1383,6 +1501,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
@@ -1402,6 +1524,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     public Builder clearHeader() {
@@ -1415,6 +1541,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
@@ -1423,6 +1553,10 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -1434,6 +1568,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry information
+     * </pre>
+     *
      * <code>.Header header = 10;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

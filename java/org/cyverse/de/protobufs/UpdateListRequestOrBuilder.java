@@ -8,31 +8,55 @@ public interface UpdateListRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The user whose updates have been requested.
+   * </pre>
+   *
    * <code>.QMSUser user = 2;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
   /**
+   * <pre>
+   * The user whose updates have been requested.
+   * </pre>
+   *
    * <code>.QMSUser user = 2;</code>
    * @return The user.
    */
   org.cyverse.de.protobufs.QMSUser getUser();
   /**
+   * <pre>
+   * The user whose updates have been requested.
+   * </pre>
+   *
    * <code>.QMSUser user = 2;</code>
    */
   org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder();

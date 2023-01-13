@@ -8,26 +8,46 @@ public interface PlanRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The unique identifier of the plan being requested.
+   * </pre>
+   *
    * <code>string plan_id = 2 [json_name = "plan_id"];</code>
    * @return The planId.
    */
   java.lang.String getPlanId();
   /**
+   * <pre>
+   * The unique identifier of the plan being requested.
+   * </pre>
+   *
    * <code>string plan_id = 2 [json_name = "plan_id"];</code>
    * @return The bytes for planId.
    */

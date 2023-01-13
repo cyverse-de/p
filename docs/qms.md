@@ -41,6 +41,12 @@
     - [ResourceTypeList](#-ResourceTypeList)
     - [ResourceTypeResponse](#-ResourceTypeResponse)
   
+- [qms_subscriptions.proto](#qms_subscriptions-proto)
+    - [ChangeSubscriptionRequest](#-ChangeSubscriptionRequest)
+    - [Subscription](#-Subscription)
+    - [SubscriptionList](#-SubscriptionList)
+    - [SubscriptionResponse](#-SubscriptionResponse)
+  
 - [qms_updates.proto](#qms_updates-proto)
     - [AddUpdateRequest](#-AddUpdateRequest)
     - [AddUpdateResponse](#-AddUpdateResponse)
@@ -53,12 +59,6 @@
     - [Usage](#-Usage)
     - [UsageList](#-UsageList)
     - [UsageResponse](#-UsageResponse)
-  
-- [qms_user_plans.proto](#qms_user_plans-proto)
-    - [ChangeUserPlanRequest](#-ChangeUserPlanRequest)
-    - [UserPlan](#-UserPlan)
-    - [UserPlanList](#-UserPlanList)
-    - [UserPlanResponse](#-UserPlanResponse)
   
 - [qms_users.proto](#qms_users-proto)
     - [AddUserRequest](#-AddUserRequest)
@@ -367,7 +367,7 @@ default associated with the plan the user has.
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the quota was created. |
 | LastModifiedBy | [string](#string) |  | A freeform text field containing info about who last modified the quota. |
 | LastModifiedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the quota was last modified. |
-| user_plan_id | [string](#string) |  | The unique identifier of the user plan that the quota is associated with. |
+| subscription_id | [string](#string) |  | The unique identifier of the user plan that the quota is associated with. |
 
 
 
@@ -635,6 +635,95 @@ A response type for resource type requests.
 
 
 
+<a name="qms_subscriptions-proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## qms_subscriptions.proto
+
+
+
+<a name="-ChangeSubscriptionRequest"></a>
+
+### ChangeSubscriptionRequest
+A request to change a user&#39;s subscription.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [Header](#Header) |  | Contains telemetry information |
+| username | [string](#string) |  | A username for the user whose subscription plan is being changed. |
+| uuid | [string](#string) |  |  |
+| name | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="-Subscription"></a>
+
+### Subscription
+Representation of a user&#39;s subscription.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) |  | The unique identifier |
+| effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription activates. |
+| effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription deactivates/expires. |
+| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the user plan is for. |
+| plan | [Plan](#Plan) |  | The plan the user is subscribed to. |
+| quotas | [Quota](#Quota) | repeated | The list of quotas applied to the user&#39;s subscription. Initially populated by quota defaults, but can be overridden. |
+| usages | [Usage](#Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
+
+
+
+
+
+
+<a name="-SubscriptionList"></a>
+
+### SubscriptionList
+A response to a request for a list of subscriptions.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| subscriptions | [Subscription](#Subscription) | repeated | The subscription list returned by the request handler. |
+
+
+
+
+
+
+<a name="-SubscriptionResponse"></a>
+
+### SubscriptionResponse
+A response to a request for a user subscription.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [Header](#Header) |  | Contains telemetry information |
+| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
+| subscription | [Subscription](#Subscription) |  | The user plan/subscription returned by the request handler. |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
 <a name="qms_updates-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
@@ -772,7 +861,7 @@ A representation of how much a user has used a resource type.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier |
 | usage | [double](#double) |  | How much the resource has been used. |
-| user_plan_id | [string](#string) |  | The unique identifier for the user plan the usage is associated with. |
+| subscription_id | [string](#string) |  | The unique identifier for the user pl&#34;&#34;an the usage is associated with. |
 | resource_type | [ResourceType](#ResourceType) |  | The resource type the usage applies to. |
 | CreatedBy | [string](#string) |  | Who created the usage record. Probably not the name of a user. |
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the usage record was created. |
@@ -812,95 +901,6 @@ A response to a request for a usage record.
 | header | [Header](#Header) |  | Contains telemetry information |
 | error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
 | usage | [Usage](#Usage) |  | Contains the usage info returned by the request handler. |
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
-
-
-<a name="qms_user_plans-proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## qms_user_plans.proto
-
-
-
-<a name="-ChangeUserPlanRequest"></a>
-
-### ChangeUserPlanRequest
-A request to change a user&#39;s assigned plan/subscription.
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| username | [string](#string) |  | A username for the user whose subscription plan is being changed. |
-| uuid | [string](#string) |  |  |
-| name | [string](#string) |  |  |
-
-
-
-
-
-
-<a name="-UserPlan"></a>
-
-### UserPlan
-Representation of a user&#39;s assigned plan. AKA a subscription.
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  | The unique identifier |
-| effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription activates. |
-| effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription deactivates/expires. |
-| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the user plan is for. |
-| plan | [Plan](#Plan) |  | The plan the user is subscribed to. |
-| quotas | [Quota](#Quota) | repeated | The list of quotas applied to the user&#39;s subscription. Initially populated by quota defaults, but can be overridden. |
-| usages | [Usage](#Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
-
-
-
-
-
-
-<a name="-UserPlanList"></a>
-
-### UserPlanList
-A response to a request for a list of user plans/subscriptions.
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| user_plans | [UserPlan](#UserPlan) | repeated | The user plan/subscription list returned by the request handler. |
-
-
-
-
-
-
-<a name="-UserPlanResponse"></a>
-
-### UserPlanResponse
-A response to a request for a user subscription.
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| user_plan | [UserPlan](#UserPlan) |  | The user plan/subscription returned by the request handler. |
 
 
 

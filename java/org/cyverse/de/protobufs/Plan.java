@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * Represents a subscription plan available to users.
+ * </pre>
+ *
  * Protobuf type {@code Plan}
  */
 public final class Plan extends
@@ -51,6 +56,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * Unique identifier for the plan.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -68,6 +77,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Unique identifier for the plan.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -90,6 +103,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * The name of the plan.
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The name.
    */
@@ -107,6 +124,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the plan.
+   * </pre>
+   *
    * <code>string name = 2;</code>
    * @return The bytes for name.
    */
@@ -129,6 +150,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * A description of the plan.
+   * </pre>
+   *
    * <code>string description = 3;</code>
    * @return The description.
    */
@@ -146,6 +171,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A description of the plan.
+   * </pre>
+   *
    * <code>string description = 3;</code>
    * @return The bytes for description.
    */
@@ -168,6 +197,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.QuotaDefault> planQuotaDefaults_;
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
@@ -175,6 +208,10 @@ private static final long serialVersionUID = 0L;
     return planQuotaDefaults_;
   }
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
@@ -183,6 +220,10 @@ private static final long serialVersionUID = 0L;
     return planQuotaDefaults_;
   }
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
@@ -190,6 +231,10 @@ private static final long serialVersionUID = 0L;
     return planQuotaDefaults_.size();
   }
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
@@ -197,6 +242,10 @@ private static final long serialVersionUID = 0L;
     return planQuotaDefaults_.get(index);
   }
   /**
+   * <pre>
+   * A list of quota defaults associated with the plan.
+   * </pre>
+   *
    * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
@@ -393,6 +442,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * Represents a subscription plan available to users.
+   * </pre>
+   *
    * Protobuf type {@code Plan}
    */
   public static final class Builder extends
@@ -651,6 +705,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * Unique identifier for the plan.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -667,6 +725,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier for the plan.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -684,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier for the plan.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -697,6 +763,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier for the plan.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -707,6 +777,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier for the plan.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -723,6 +797,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The name of the plan.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -739,6 +817,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the plan.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -756,6 +838,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the plan.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -769,6 +855,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the plan.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return This builder for chaining.
      */
@@ -779,6 +869,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the plan.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -795,6 +889,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * A description of the plan.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -811,6 +909,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A description of the plan.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -828,6 +930,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A description of the plan.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -841,6 +947,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A description of the plan.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return This builder for chaining.
      */
@@ -851,6 +961,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A description of the plan.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -878,6 +992,10 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.QuotaDefault, org.cyverse.de.protobufs.QuotaDefault.Builder, org.cyverse.de.protobufs.QuotaDefaultOrBuilder> planQuotaDefaultsBuilder_;
 
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.QuotaDefault> getPlanQuotaDefaultsList() {
@@ -888,6 +1006,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public int getPlanQuotaDefaultsCount() {
@@ -898,6 +1020,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault getPlanQuotaDefaults(int index) {
@@ -908,6 +1034,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder setPlanQuotaDefaults(
@@ -925,6 +1055,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder setPlanQuotaDefaults(
@@ -939,6 +1073,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(org.cyverse.de.protobufs.QuotaDefault value) {
@@ -955,6 +1093,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(
@@ -972,6 +1114,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(
@@ -986,6 +1132,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(
@@ -1000,6 +1150,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addAllPlanQuotaDefaults(
@@ -1015,6 +1169,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder clearPlanQuotaDefaults() {
@@ -1028,6 +1186,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder removePlanQuotaDefaults(int index) {
@@ -1041,6 +1203,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder getPlanQuotaDefaultsBuilder(
@@ -1048,6 +1214,10 @@ private static final long serialVersionUID = 0L;
       return getPlanQuotaDefaultsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getPlanQuotaDefaultsOrBuilder(
@@ -1058,6 +1228,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
@@ -1069,6 +1243,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder addPlanQuotaDefaultsBuilder() {
@@ -1076,6 +1254,10 @@ private static final long serialVersionUID = 0L;
           org.cyverse.de.protobufs.QuotaDefault.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder addPlanQuotaDefaultsBuilder(
@@ -1084,6 +1266,10 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.QuotaDefault.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A list of quota defaults associated with the plan.
+     * </pre>
+     *
      * <code>repeated .QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.QuotaDefault.Builder> 

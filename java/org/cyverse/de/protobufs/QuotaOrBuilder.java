@@ -8,11 +8,19 @@ public interface QuotaOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
+   * <pre>
+   * The unique identifier.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -20,32 +28,56 @@ public interface QuotaOrBuilder extends
       getUuidBytes();
 
   /**
+   * <pre>
+   * The quota value (aka limit).
+   * </pre>
+   *
    * <code>float quota = 2;</code>
    * @return The quota.
    */
   float getQuota();
 
   /**
+   * <pre>
+   * The resource type the quota value applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
   /**
+   * <pre>
+   * The resource type the quota value applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
   /**
+   * <pre>
+   * The resource type the quota value applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
 
   /**
+   * <pre>
+   * A freeform text field containing info about who created the quota.
+   * </pre>
+   *
    * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
    * @return The createdBy.
    */
   java.lang.String getCreatedBy();
   /**
+   * <pre>
+   * A freeform text field containing info about who created the quota.
+   * </pre>
+   *
    * <code>string CreatedBy = 4 [json_name = "created_by"];</code>
    * @return The bytes for createdBy.
    */
@@ -53,26 +85,46 @@ public interface QuotaOrBuilder extends
       getCreatedByBytes();
 
   /**
+   * <pre>
+   * When the quota was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
    * @return Whether the createdAt field is set.
    */
   boolean hasCreatedAt();
   /**
+   * <pre>
+   * When the quota was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
    * @return The createdAt.
    */
   com.google.protobuf.Timestamp getCreatedAt();
   /**
+   * <pre>
+   * When the quota was created.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp CreatedAt = 5 [json_name = "created_at"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
   /**
+   * <pre>
+   * A freeform text field containing info about who last modified the quota.
+   * </pre>
+   *
    * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
    * @return The lastModifiedBy.
    */
   java.lang.String getLastModifiedBy();
   /**
+   * <pre>
+   * A freeform text field containing info about who last modified the quota.
+   * </pre>
+   *
    * <code>string LastModifiedBy = 6 [json_name = "last_modified_by"];</code>
    * @return The bytes for lastModifiedBy.
    */
@@ -80,29 +132,49 @@ public interface QuotaOrBuilder extends
       getLastModifiedByBytes();
 
   /**
+   * <pre>
+   * When the quota was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    * @return Whether the lastModifiedAt field is set.
    */
   boolean hasLastModifiedAt();
   /**
+   * <pre>
+   * When the quota was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    * @return The lastModifiedAt.
    */
   com.google.protobuf.Timestamp getLastModifiedAt();
   /**
+   * <pre>
+   * When the quota was last modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp LastModifiedAt = 7 [json_name = "last_modified_at"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastModifiedAtOrBuilder();
 
   /**
-   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-   * @return The userPlanId.
+   * <pre>
+   * The unique identifier of the user plan that the quota is associated with.
+   * </pre>
+   *
+   * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+   * @return The subscriptionId.
    */
-  java.lang.String getUserPlanId();
+  java.lang.String getSubscriptionId();
   /**
-   * <code>string user_plan_id = 8 [json_name = "user_plan_id"];</code>
-   * @return The bytes for userPlanId.
+   * <pre>
+   * The unique identifier of the user plan that the quota is associated with.
+   * </pre>
+   *
+   * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
+   * @return The bytes for subscriptionId.
    */
   com.google.protobuf.ByteString
-      getUserPlanIdBytes();
+      getSubscriptionIdBytes();
 }

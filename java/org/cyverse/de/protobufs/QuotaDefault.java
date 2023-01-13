@@ -4,6 +4,13 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * Represents a default quota value used in plans. Can be overridden on a
+ * per-user basis for a user plan to provide customized quotas. Also referred to
+ * as plan quota defaults.
+ * </pre>
+ *
  * Protobuf type {@code QuotaDefault}
  */
 public final class QuotaDefault extends
@@ -48,6 +55,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
   /**
+   * <pre>
+   * The unique identifier/primary key for the quota default.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The uuid.
    */
@@ -65,6 +76,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The unique identifier/primary key for the quota default.
+   * </pre>
+   *
    * <code>string uuid = 1;</code>
    * @return The bytes for uuid.
    */
@@ -86,6 +101,10 @@ private static final long serialVersionUID = 0L;
   public static final int QUOTA_VALUE_FIELD_NUMBER = 2;
   private float quotaValue_ = 0F;
   /**
+   * <pre>
+   * The value of the quota default.
+   * </pre>
+   *
    * <code>float quota_value = 2 [json_name = "quota_value"];</code>
    * @return The quotaValue.
    */
@@ -97,6 +116,10 @@ private static final long serialVersionUID = 0L;
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 3;
   private org.cyverse.de.protobufs.ResourceType resourceType_;
   /**
+   * <pre>
+   * The resource type the quota applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
@@ -105,6 +128,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ != null;
   }
   /**
+   * <pre>
+   * The resource type the quota applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
@@ -113,6 +140,10 @@ private static final long serialVersionUID = 0L;
     return resourceType_ == null ? org.cyverse.de.protobufs.ResourceType.getDefaultInstance() : resourceType_;
   }
   /**
+   * <pre>
+   * The resource type the quota applies to.
+   * </pre>
+   *
    * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
@@ -304,6 +335,13 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * Represents a default quota value used in plans. Can be overridden on a
+   * per-user basis for a user plan to provide customized quotas. Also referred to
+   * as plan quota defaults.
+   * </pre>
+   *
    * Protobuf type {@code QuotaDefault}
    */
   public static final class Builder extends
@@ -507,6 +545,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
+     * <pre>
+     * The unique identifier/primary key for the quota default.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The uuid.
      */
@@ -523,6 +565,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier/primary key for the quota default.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return The bytes for uuid.
      */
@@ -540,6 +586,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier/primary key for the quota default.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
@@ -553,6 +603,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier/primary key for the quota default.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @return This builder for chaining.
      */
@@ -563,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier/primary key for the quota default.
+     * </pre>
+     *
      * <code>string uuid = 1;</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
@@ -579,6 +637,10 @@ private static final long serialVersionUID = 0L;
 
     private float quotaValue_ ;
     /**
+     * <pre>
+     * The value of the quota default.
+     * </pre>
+     *
      * <code>float quota_value = 2 [json_name = "quota_value"];</code>
      * @return The quotaValue.
      */
@@ -587,6 +649,10 @@ private static final long serialVersionUID = 0L;
       return quotaValue_;
     }
     /**
+     * <pre>
+     * The value of the quota default.
+     * </pre>
+     *
      * <code>float quota_value = 2 [json_name = "quota_value"];</code>
      * @param value The quotaValue to set.
      * @return This builder for chaining.
@@ -599,6 +665,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value of the quota default.
+     * </pre>
+     *
      * <code>float quota_value = 2 [json_name = "quota_value"];</code>
      * @return This builder for chaining.
      */
@@ -613,6 +683,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> resourceTypeBuilder_;
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
@@ -620,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
@@ -631,6 +709,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -647,6 +729,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
@@ -661,6 +747,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
@@ -680,6 +770,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
@@ -693,6 +787,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
@@ -701,6 +799,10 @@ private static final long serialVersionUID = 0L;
       return getResourceTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -712,6 +814,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The resource type the quota applies to.
+     * </pre>
+     *
      * <code>.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -8,46 +8,82 @@ public interface QuotaDefaultResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Can container telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Can container telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Can container telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
   /**
+   * <pre>
+   * Contains error info from the request handler.
+   * </pre>
+   *
    * <code>.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
   /**
+   * <pre>
+   * The quota default object returned by the request handler.
+   * </pre>
+   *
    * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    * @return Whether the quotaDefault field is set.
    */
   boolean hasQuotaDefault();
   /**
+   * <pre>
+   * The quota default object returned by the request handler.
+   * </pre>
+   *
    * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    * @return The quotaDefault.
    */
   org.cyverse.de.protobufs.QuotaDefault getQuotaDefault();
   /**
+   * <pre>
+   * The quota default object returned by the request handler.
+   * </pre>
+   *
    * <code>.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultOrBuilder();

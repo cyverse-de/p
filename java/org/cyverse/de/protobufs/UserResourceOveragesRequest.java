@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ **
+ * A request for a user's overages specific to a particular resource type.
+ * </pre>
+ *
  * Protobuf type {@code UserResourceOveragesRequest}
  */
 public final class UserResourceOveragesRequest extends
@@ -48,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
@@ -56,6 +65,10 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
@@ -64,6 +77,10 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
+   * <pre>
+   * Contains telemetry data.
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   @java.lang.Override
@@ -75,6 +92,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object username_ = "";
   /**
+   * <pre>
+   * A user's username.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The username.
    */
@@ -92,6 +113,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A user's username.
+   * </pre>
+   *
    * <code>string username = 2;</code>
    * @return The bytes for username.
    */
@@ -114,6 +139,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceName_ = "";
   /**
+   * <pre>
+   * The name of the resource type to look up overages for.
+   * </pre>
+   *
    * <code>string resource_name = 3 [json_name = "resource_name"];</code>
    * @return The resourceName.
    */
@@ -131,6 +160,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the resource type to look up overages for.
+   * </pre>
+   *
    * <code>string resource_name = 3 [json_name = "resource_name"];</code>
    * @return The bytes for resourceName.
    */
@@ -330,6 +363,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   * A request for a user's overages specific to a particular resource type.
+   * </pre>
+   *
    * Protobuf type {@code UserResourceOveragesRequest}
    */
   public static final class Builder extends
@@ -537,6 +575,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return Whether the header field is set.
      */
@@ -544,6 +586,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      * @return The header.
      */
@@ -555,6 +601,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
@@ -571,6 +621,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder setHeader(
@@ -585,6 +639,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
@@ -604,6 +662,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public Builder clearHeader() {
@@ -617,6 +679,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
@@ -625,6 +691,10 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -636,6 +706,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Contains telemetry data.
+     * </pre>
+     *
      * <code>.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -654,6 +728,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object username_ = "";
     /**
+     * <pre>
+     * A user's username.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @return The username.
      */
@@ -670,6 +748,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A user's username.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @return The bytes for username.
      */
@@ -687,6 +769,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A user's username.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @param value The username to set.
      * @return This builder for chaining.
@@ -700,6 +786,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A user's username.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @return This builder for chaining.
      */
@@ -710,6 +800,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A user's username.
+     * </pre>
+     *
      * <code>string username = 2;</code>
      * @param value The bytes for username to set.
      * @return This builder for chaining.
@@ -726,6 +820,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object resourceName_ = "";
     /**
+     * <pre>
+     * The name of the resource type to look up overages for.
+     * </pre>
+     *
      * <code>string resource_name = 3 [json_name = "resource_name"];</code>
      * @return The resourceName.
      */
@@ -742,6 +840,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the resource type to look up overages for.
+     * </pre>
+     *
      * <code>string resource_name = 3 [json_name = "resource_name"];</code>
      * @return The bytes for resourceName.
      */
@@ -759,6 +861,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the resource type to look up overages for.
+     * </pre>
+     *
      * <code>string resource_name = 3 [json_name = "resource_name"];</code>
      * @param value The resourceName to set.
      * @return This builder for chaining.
@@ -772,6 +878,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the resource type to look up overages for.
+     * </pre>
+     *
      * <code>string resource_name = 3 [json_name = "resource_name"];</code>
      * @return This builder for chaining.
      */
@@ -782,6 +892,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the resource type to look up overages for.
+     * </pre>
+     *
      * <code>string resource_name = 3 [json_name = "resource_name"];</code>
      * @param value The bytes for resourceName to set.
      * @return This builder for chaining.

@@ -8,31 +8,55 @@ public interface AddUpdateRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
+   * <pre>
+   * The update being added to the system.
+   * </pre>
+   *
    * <code>.Update update = 2;</code>
    * @return Whether the update field is set.
    */
   boolean hasUpdate();
   /**
+   * <pre>
+   * The update being added to the system.
+   * </pre>
+   *
    * <code>.Update update = 2;</code>
    * @return The update.
    */
   org.cyverse.de.protobufs.Update getUpdate();
   /**
+   * <pre>
+   * The update being added to the system.
+   * </pre>
+   *
    * <code>.Update update = 2;</code>
    */
   org.cyverse.de.protobufs.UpdateOrBuilder getUpdateOrBuilder();

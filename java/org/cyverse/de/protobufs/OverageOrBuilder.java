@@ -8,11 +8,19 @@ public interface OverageOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The type of resource that is in overage. Usually data.size of cpu.hours.
+   * </pre>
+   *
    * <code>string resource_name = 1 [json_name = "resource_name"];</code>
    * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
+   * <pre>
+   * The type of resource that is in overage. Usually data.size of cpu.hours.
+   * </pre>
+   *
    * <code>string resource_name = 1 [json_name = "resource_name"];</code>
    * @return The bytes for resourceName.
    */
@@ -20,12 +28,20 @@ public interface OverageOrBuilder extends
       getResourceNameBytes();
 
   /**
+   * <pre>
+   * The configured quota value for the resource type.
+   * </pre>
+   *
    * <code>float quota = 2;</code>
    * @return The quota.
    */
   float getQuota();
 
   /**
+   * <pre>
+   * The actual usage value for the resource type.
+   * </pre>
+   *
    * <code>float usage = 3;</code>
    * @return The usage.
    */

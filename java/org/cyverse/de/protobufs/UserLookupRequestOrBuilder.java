@@ -59,46 +59,78 @@ public interface UserLookupRequestOrBuilder extends
       getAnalysisIdBytes();
 
   /**
+   * <pre>
+   * Whether to include user logins in the response.
+   * </pre>
+   *
    * <code>bool include_logins = 5;</code>
    * @return The includeLogins.
    */
   boolean getIncludeLogins();
 
   /**
+   * <pre>
+   * Whether to include user preferences in the response.
+   * </pre>
+   *
    * <code>bool include_preferences = 6;</code>
    * @return The includePreferences.
    */
   boolean getIncludePreferences();
 
   /**
+   * <pre>
+   * Whether to include saved searches in the response.
+   * </pre>
+   *
    * <code>bool include_saved_searches = 7;</code>
    * @return The includeSavedSearches.
    */
   boolean getIncludeSavedSearches();
 
   /**
+   * <pre>
+   * Paging limit.
+   * </pre>
+   *
    * <code>uint32 login_limit = 8;</code>
    * @return The loginLimit.
    */
   int getLoginLimit();
 
   /**
+   * <pre>
+   * Paging offset
+   * </pre>
+   *
    * <code>uint32 login_offset = 9;</code>
    * @return The loginOffset.
    */
   int getLoginOffset();
 
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 10;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 10;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
+   * <pre>
+   * Contains telemetry information
+   * </pre>
+   *
    * <code>.Header header = 10;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();

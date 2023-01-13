@@ -22,13 +22,18 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// *
+// Representation of a resource type.
 type ResourceType struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The unique identifier.
 	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	// The name of the resource. Will usually be "data.size" and "cpu.hours".
 	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	// The units used for the resource. Usually "bytes" or "cpu hours".
 	Unit string `protobuf:"bytes,3,opt,name=unit,proto3" json:"unit,omitempty"`
 }
 
@@ -85,14 +90,19 @@ func (x *ResourceType) GetUnit() string {
 	return ""
 }
 
+// *
+// A response type for resource type requests.
 type ResourceTypeResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header       *header.Header         `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Error        *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	ResourceType *ResourceType          `protobuf:"bytes,3,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
+	// Contains telemetry information
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// Error information returned by the request handler.
+	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	// The resource type returned by the request handler.
+	ResourceType *ResourceType `protobuf:"bytes,3,opt,name=resource_type,proto3" json:"resource_type,omitempty"`
 }
 
 func (x *ResourceTypeResponse) Reset() {
@@ -148,14 +158,20 @@ func (x *ResourceTypeResponse) GetResourceType() *ResourceType {
 	return nil
 }
 
+// *
+// A response type for the resource type requests that contains a list of
+// resource type definitions.
 type ResourceTypeList struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Header        *header.Header         `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	Error         *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	ResourceTypes []*ResourceType        `protobuf:"bytes,3,rep,name=resource_types,proto3" json:"resource_types,omitempty"`
+	// Contains telemetry information
+	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
+	// Error information returned by the request handler.
+	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	// A list of resource types returned by the request handler.
+	ResourceTypes []*ResourceType `protobuf:"bytes,3,rep,name=resource_types,proto3" json:"resource_types,omitempty"`
 }
 
 func (x *ResourceTypeList) Reset() {
