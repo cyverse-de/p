@@ -6,7 +6,7 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  **
- * A response to a request for a user subscription.
+ * A response to a request for a subscription.
  * </pre>
  *
  * Protobuf type {@code SubscriptionResponse}
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   private org.cyverse.de.protobufs.Subscription subscription_;
   /**
    * <pre>
-   * The user plan/subscription returned by the request handler.
+   * The subscription returned by the request handler.
    * </pre>
    *
    * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The user plan/subscription returned by the request handler.
+   * The subscription returned by the request handler.
    * </pre>
    *
    * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The user plan/subscription returned by the request handler.
+   * The subscription returned by the request handler.
    * </pre>
    *
    * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    **
-   * A response to a request for a user subscription.
+   * A response to a request for a subscription.
    * </pre>
    *
    * Protobuf type {@code SubscriptionResponse}
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Subscription, org.cyverse.de.protobufs.Subscription.Builder, org.cyverse.de.protobufs.SubscriptionOrBuilder> subscriptionBuilder_;
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -936,7 +936,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -1006,7 +1006,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user plan/subscription returned by the request handler.
+     * The subscription returned by the request handler.
      * </pre>
      *
      * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>

@@ -6,7 +6,7 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  **
- * A request to change a user's subscription.
+ * A request to change a subscription.
  * </pre>
  *
  * Protobuf type {@code ChangeSubscriptionRequest}
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object username_ = "";
   /**
    * <pre>
-   * A username for the user whose subscription plan is being changed.
+   * A username for the user whose subscription is being changed.
    * </pre>
    *
    * <code>string username = 2;</code>
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A username for the user whose subscription plan is being changed.
+   * A username for the user whose subscription is being changed.
    * </pre>
    *
    * <code>string username = 2;</code>
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    **
-   * A request to change a user's subscription.
+   * A request to change a subscription.
    * </pre>
    *
    * Protobuf type {@code ChangeSubscriptionRequest}
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object username_ = "";
     /**
      * <pre>
-     * A username for the user whose subscription plan is being changed.
+     * A username for the user whose subscription is being changed.
      * </pre>
      *
      * <code>string username = 2;</code>
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A username for the user whose subscription plan is being changed.
+     * A username for the user whose subscription is being changed.
      * </pre>
      *
      * <code>string username = 2;</code>
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A username for the user whose subscription plan is being changed.
+     * A username for the user whose subscription is being changed.
      * </pre>
      *
      * <code>string username = 2;</code>
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A username for the user whose subscription plan is being changed.
+     * A username for the user whose subscription is being changed.
      * </pre>
      *
      * <code>string username = 2;</code>
@@ -963,7 +963,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A username for the user whose subscription plan is being changed.
+     * A username for the user whose subscription is being changed.
      * </pre>
      *
      * <code>string username = 2;</code>

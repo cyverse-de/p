@@ -6,7 +6,7 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  **
- * Representation of a user's subscription.
+ * Representation of a subscription.
  * </pre>
  *
  * Protobuf type {@code Subscription}
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp effectiveStartDate_;
   /**
    * <pre>
-   * The date the user's subscription activates.
+   * The date the subscription activates.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The date the user's subscription activates.
+   * The date the subscription activates.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The date the user's subscription activates.
+   * The date the subscription activates.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp effectiveEndDate_;
   /**
    * <pre>
-   * The date the user's subscription deactivates/expires.
+   * The date the subscription deactivates/expires.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The date the user's subscription deactivates/expires.
+   * The date the subscription deactivates/expires.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -164,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The date the user's subscription deactivates/expires.
+   * The date the subscription deactivates/expires.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
   private org.cyverse.de.protobufs.QMSUser user_;
   /**
    * <pre>
-   * The user in the QMS system that the user plan is for.
+   * The user in the QMS system that the subscription is for.
    * </pre>
    *
    * <code>.QMSUser user = 4;</code>
@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The user in the QMS system that the user plan is for.
+   * The user in the QMS system that the subscription is for.
    * </pre>
    *
    * <code>.QMSUser user = 4;</code>
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The user in the QMS system that the user plan is for.
+   * The user in the QMS system that the subscription is for.
    * </pre>
    *
    * <code>.QMSUser user = 4;</code>
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<org.cyverse.de.protobufs.Quota> quotas_;
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -624,7 +624,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    **
-   * Representation of a user's subscription.
+   * Representation of a subscription.
    * </pre>
    *
    * Protobuf type {@code Subscription}
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveStartDateBuilder_;
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1098,7 +1098,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1133,7 +1133,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1151,7 +1151,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1174,7 +1174,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1191,7 +1191,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1203,7 +1203,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription activates.
+     * The date the subscription activates.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -1242,7 +1242,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveEndDateBuilder_;
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1253,7 +1253,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1268,7 +1268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1288,7 +1288,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1306,7 +1306,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1329,7 +1329,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1346,7 +1346,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1358,7 +1358,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1373,7 +1373,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The date the user's subscription deactivates/expires.
+     * The date the subscription deactivates/expires.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -1397,7 +1397,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.QMSUser, org.cyverse.de.protobufs.QMSUser.Builder, org.cyverse.de.protobufs.QMSUserOrBuilder> userBuilder_;
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1408,7 +1408,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1423,7 +1423,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1443,7 +1443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1461,7 +1461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1484,7 +1484,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1501,7 +1501,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1513,7 +1513,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1528,7 +1528,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The user in the QMS system that the user plan is for.
+     * The user in the QMS system that the subscription is for.
      * </pre>
      *
      * <code>.QMSUser user = 4;</code>
@@ -1716,7 +1716,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1731,7 +1731,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1746,7 +1746,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1761,7 +1761,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1783,7 +1783,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1802,7 +1802,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1823,7 +1823,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1864,7 +1864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1883,7 +1883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1903,7 +1903,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1921,7 +1921,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1939,7 +1939,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1951,7 +1951,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1966,7 +1966,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1982,7 +1982,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -1994,7 +1994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *
@@ -2007,7 +2007,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of quotas applied to the user's subscription. Initially populated
+     * The list of quotas applied to the subscription. Initially populated
      * by quota defaults, but can be overridden.
      * </pre>
      *

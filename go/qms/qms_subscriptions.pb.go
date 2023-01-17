@@ -24,7 +24,7 @@ const (
 )
 
 // *
-// Representation of a user's subscription.
+// Representation of a subscription.
 type Subscription struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -32,15 +32,15 @@ type Subscription struct {
 
 	// The unique identifier
 	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	// The date the user's subscription activates.
+	// The date the subscription activates.
 	EffectiveStartDate *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=effective_start_date,proto3" json:"effective_start_date,omitempty"`
-	// The date the user's subscription deactivates/expires.
+	// The date the subscription deactivates/expires.
 	EffectiveEndDate *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=effective_end_date,proto3" json:"effective_end_date,omitempty"`
-	// The user in the QMS system that the user plan is for.
+	// The user in the QMS system that the subscription is for.
 	User *QMSUser `protobuf:"bytes,4,opt,name=user,proto3" json:"user,omitempty"`
 	// The plan the user is subscribed to.
 	Plan *Plan `protobuf:"bytes,5,opt,name=plan,proto3" json:"plan,omitempty"`
-	// The list of quotas applied to the user's subscription. Initially populated
+	// The list of quotas applied to the subscription. Initially populated
 	// by quota defaults, but can be overridden.
 	Quotas []*Quota `protobuf:"bytes,6,rep,name=quotas,proto3" json:"quotas,omitempty"`
 	// The list of resource usages that the user has generated while this plan was active.
@@ -129,7 +129,7 @@ func (x *Subscription) GetUsages() []*Usage {
 }
 
 // *
-// A response to a request for a user subscription.
+// A response to a request for a subscription.
 type SubscriptionResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -139,7 +139,7 @@ type SubscriptionResponse struct {
 	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
 	// Error information returned by the request handler.
 	Error *svcerror.ServiceError `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	// The user plan/subscription returned by the request handler.
+	// The subscription returned by the request handler.
 	Subscription *Subscription `protobuf:"bytes,3,opt,name=subscription,proto3" json:"subscription,omitempty"`
 }
 
@@ -265,7 +265,7 @@ func (x *SubscriptionList) GetSubscriptions() []*Subscription {
 }
 
 // *
-// A request to change a user's subscription.
+// A request to change a subscription.
 type ChangeSubscriptionRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -273,7 +273,7 @@ type ChangeSubscriptionRequest struct {
 
 	// Contains telemetry information
 	Header *header.Header `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	// A username for the user whose subscription plan is being changed.
+	// A username for the user whose subscription is being changed.
 	Username string `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
 	// Either a plan's unique identifier or name.
 	//

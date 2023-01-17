@@ -36,7 +36,7 @@ public interface ChangeSubscriptionRequestOrBuilder extends
 
   /**
    * <pre>
-   * A username for the user whose subscription plan is being changed.
+   * A username for the user whose subscription is being changed.
    * </pre>
    *
    * <code>string username = 2;</code>
@@ -45,7 +45,7 @@ public interface ChangeSubscriptionRequestOrBuilder extends
   java.lang.String getUsername();
   /**
    * <pre>
-   * A username for the user whose subscription plan is being changed.
+   * A username for the user whose subscription is being changed.
    * </pre>
    *
    * <code>string username = 2;</code>

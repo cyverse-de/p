@@ -6,7 +6,7 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  **
- * A request to add a quota to a user plan.
+ * A request to add a quota to a subscription.
  * </pre>
  *
  * Protobuf type {@code AddQuotaRequest}
@@ -303,7 +303,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    **
-   * A request to add a quota to a user plan.
+   * A request to add a quota to a subscription.
    * </pre>
    *
    * Protobuf type {@code AddQuotaRequest}

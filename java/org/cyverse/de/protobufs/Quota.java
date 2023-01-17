@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object subscriptionId_ = "";
   /**
    * <pre>
-   * The unique identifier of the user plan that the quota is associated with.
+   * The unique identifier of the subscription that the quota is associated with.
    * </pre>
    *
    * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -350,7 +350,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The unique identifier of the user plan that the quota is associated with.
+   * The unique identifier of the subscription that the quota is associated with.
    * </pre>
    *
    * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object subscriptionId_ = "";
     /**
      * <pre>
-     * The unique identifier of the user plan that the quota is associated with.
+     * The unique identifier of the subscription that the quota is associated with.
      * </pre>
      *
      * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -1715,7 +1715,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier of the user plan that the quota is associated with.
+     * The unique identifier of the subscription that the quota is associated with.
      * </pre>
      *
      * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -1736,7 +1736,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier of the user plan that the quota is associated with.
+     * The unique identifier of the subscription that the quota is associated with.
      * </pre>
      *
      * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -1753,7 +1753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier of the user plan that the quota is associated with.
+     * The unique identifier of the subscription that the quota is associated with.
      * </pre>
      *
      * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier of the user plan that the quota is associated with.
+     * The unique identifier of the subscription that the quota is associated with.
      * </pre>
      *
      * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>

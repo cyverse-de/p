@@ -7,7 +7,7 @@ package org.cyverse.de.protobufs;
  * <pre>
  **
  * Represents a default quota value used in plans. Can be overridden on a
- * per-user basis for a user plan to provide customized quotas. Also referred to
+ * per-user basis for a subscription to provide customized quotas. Also referred to
  * as plan quota defaults.
  * </pre>
  *
@@ -338,7 +338,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    **
    * Represents a default quota value used in plans. Can be overridden on a
-   * per-user basis for a user plan to provide customized quotas. Also referred to
+   * per-user basis for a subscription to provide customized quotas. Also referred to
    * as plan quota defaults.
    * </pre>
    *

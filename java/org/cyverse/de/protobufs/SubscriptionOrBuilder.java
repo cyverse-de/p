@@ -29,7 +29,7 @@ public interface SubscriptionOrBuilder extends
 
   /**
    * <pre>
-   * The date the user's subscription activates.
+   * The date the subscription activates.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -38,7 +38,7 @@ public interface SubscriptionOrBuilder extends
   boolean hasEffectiveStartDate();
   /**
    * <pre>
-   * The date the user's subscription activates.
+   * The date the subscription activates.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -47,7 +47,7 @@ public interface SubscriptionOrBuilder extends
   com.google.protobuf.Timestamp getEffectiveStartDate();
   /**
    * <pre>
-   * The date the user's subscription activates.
+   * The date the subscription activates.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_start_date = 2 [json_name = "effective_start_date"];</code>
@@ -56,7 +56,7 @@ public interface SubscriptionOrBuilder extends
 
   /**
    * <pre>
-   * The date the user's subscription deactivates/expires.
+   * The date the subscription deactivates/expires.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -65,7 +65,7 @@ public interface SubscriptionOrBuilder extends
   boolean hasEffectiveEndDate();
   /**
    * <pre>
-   * The date the user's subscription deactivates/expires.
+   * The date the subscription deactivates/expires.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -74,7 +74,7 @@ public interface SubscriptionOrBuilder extends
   com.google.protobuf.Timestamp getEffectiveEndDate();
   /**
    * <pre>
-   * The date the user's subscription deactivates/expires.
+   * The date the subscription deactivates/expires.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];</code>
@@ -83,7 +83,7 @@ public interface SubscriptionOrBuilder extends
 
   /**
    * <pre>
-   * The user in the QMS system that the user plan is for.
+   * The user in the QMS system that the subscription is for.
    * </pre>
    *
    * <code>.QMSUser user = 4;</code>
@@ -92,7 +92,7 @@ public interface SubscriptionOrBuilder extends
   boolean hasUser();
   /**
    * <pre>
-   * The user in the QMS system that the user plan is for.
+   * The user in the QMS system that the subscription is for.
    * </pre>
    *
    * <code>.QMSUser user = 4;</code>
@@ -101,7 +101,7 @@ public interface SubscriptionOrBuilder extends
   org.cyverse.de.protobufs.QMSUser getUser();
   /**
    * <pre>
-   * The user in the QMS system that the user plan is for.
+   * The user in the QMS system that the subscription is for.
    * </pre>
    *
    * <code>.QMSUser user = 4;</code>
@@ -137,7 +137,7 @@ public interface SubscriptionOrBuilder extends
 
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -147,7 +147,7 @@ public interface SubscriptionOrBuilder extends
       getQuotasList();
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -156,7 +156,7 @@ public interface SubscriptionOrBuilder extends
   org.cyverse.de.protobufs.Quota getQuotas(int index);
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -165,7 +165,7 @@ public interface SubscriptionOrBuilder extends
   int getQuotasCount();
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *
@@ -175,7 +175,7 @@ public interface SubscriptionOrBuilder extends
       getQuotasOrBuilderList();
   /**
    * <pre>
-   * The list of quotas applied to the user's subscription. Initially populated
+   * The list of quotas applied to the subscription. Initially populated
    * by quota defaults, but can be overridden.
    * </pre>
    *

@@ -46,7 +46,7 @@ type Quota struct {
 	LastModifiedBy string `protobuf:"bytes,6,opt,name=LastModifiedBy,json=last_modified_by,proto3" json:"LastModifiedBy,omitempty"`
 	// When the quota was last modified.
 	LastModifiedAt *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=LastModifiedAt,json=last_modified_at,proto3" json:"LastModifiedAt,omitempty"`
-	// The unique identifier of the user plan that the quota is associated with.
+	// The unique identifier of the subscription that the quota is associated with.
 	SubscriptionId string `protobuf:"bytes,8,opt,name=subscription_id,proto3" json:"subscription_id,omitempty"`
 }
 
@@ -275,7 +275,7 @@ func (x *QuotaList) GetQuotas() []*Quota {
 }
 
 // *
-// A request to add a quota to a user plan.
+// A request to add a quota to a subscription.
 type AddQuotaRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

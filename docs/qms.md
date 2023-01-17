@@ -268,7 +268,7 @@ A response to a plan request. Contains a single plan.
 
 ### QuotaDefault
 Represents a default quota value used in plans. Can be overridden on a
-per-user basis for a user plan to provide customized quotas. Also referred to
+per-user basis for a subscription to provide customized quotas. Also referred to
 as plan quota defaults.
 
 
@@ -337,7 +337,7 @@ A response type for quota default requests.
 <a name="-AddQuotaRequest"></a>
 
 ### AddQuotaRequest
-A request to add a quota to a user plan.
+A request to add a quota to a subscription.
 
 
 | Field | Type | Label | Description |
@@ -367,7 +367,7 @@ default associated with the plan the user has.
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the quota was created. |
 | LastModifiedBy | [string](#string) |  | A freeform text field containing info about who last modified the quota. |
 | LastModifiedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the quota was last modified. |
-| subscription_id | [string](#string) |  | The unique identifier of the user plan that the quota is associated with. |
+| subscription_id | [string](#string) |  | The unique identifier of the subscription that the quota is associated with. |
 
 
 
@@ -645,13 +645,13 @@ A response type for resource type requests.
 <a name="-ChangeSubscriptionRequest"></a>
 
 ### ChangeSubscriptionRequest
-A request to change a user&#39;s subscription.
+A request to change a subscription.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | header | [Header](#Header) |  | Contains telemetry information |
-| username | [string](#string) |  | A username for the user whose subscription plan is being changed. |
+| username | [string](#string) |  | A username for the user whose subscription is being changed. |
 | uuid | [string](#string) |  |  |
 | name | [string](#string) |  |  |
 
@@ -663,17 +663,17 @@ A request to change a user&#39;s subscription.
 <a name="-Subscription"></a>
 
 ### Subscription
-Representation of a user&#39;s subscription.
+Representation of a subscription.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier |
-| effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription activates. |
-| effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the user&#39;s subscription deactivates/expires. |
-| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the user plan is for. |
+| effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the subscription activates. |
+| effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the subscription deactivates/expires. |
+| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the subscription is for. |
 | plan | [Plan](#Plan) |  | The plan the user is subscribed to. |
-| quotas | [Quota](#Quota) | repeated | The list of quotas applied to the user&#39;s subscription. Initially populated by quota defaults, but can be overridden. |
+| quotas | [Quota](#Quota) | repeated | The list of quotas applied to the subscription. Initially populated by quota defaults, but can be overridden. |
 | usages | [Usage](#Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
 
 
@@ -701,14 +701,14 @@ A response to a request for a list of subscriptions.
 <a name="-SubscriptionResponse"></a>
 
 ### SubscriptionResponse
-A response to a request for a user subscription.
+A response to a request for a subscription.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | header | [Header](#Header) |  | Contains telemetry information |
 | error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| subscription | [Subscription](#Subscription) |  | The user plan/subscription returned by the request handler. |
+| subscription | [Subscription](#Subscription) |  | The subscription returned by the request handler. |
 
 
 
@@ -861,7 +861,7 @@ A representation of how much a user has used a resource type.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier |
 | usage | [double](#double) |  | How much the resource has been used. |
-| subscription_id | [string](#string) |  | The unique identifier for the user pl&#34;&#34;an the usage is associated with. |
+| subscription_id | [string](#string) |  | The unique identifier for the subscription the usage is associated with. |
 | resource_type | [ResourceType](#ResourceType) |  | The resource type the usage applies to. |
 | CreatedBy | [string](#string) |  | Who created the usage record. Probably not the name of a user. |
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the usage record was created. |

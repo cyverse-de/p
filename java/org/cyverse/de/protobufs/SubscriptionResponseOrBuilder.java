@@ -63,7 +63,7 @@ public interface SubscriptionResponseOrBuilder extends
 
   /**
    * <pre>
-   * The user plan/subscription returned by the request handler.
+   * The subscription returned by the request handler.
    * </pre>
    *
    * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -72,7 +72,7 @@ public interface SubscriptionResponseOrBuilder extends
   boolean hasSubscription();
   /**
    * <pre>
-   * The user plan/subscription returned by the request handler.
+   * The subscription returned by the request handler.
    * </pre>
    *
    * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>
@@ -81,7 +81,7 @@ public interface SubscriptionResponseOrBuilder extends
   org.cyverse.de.protobufs.Subscription getSubscription();
   /**
    * <pre>
-   * The user plan/subscription returned by the request handler.
+   * The subscription returned by the request handler.
    * </pre>
    *
    * <code>.Subscription subscription = 3 [json_name = "subscription"];</code>

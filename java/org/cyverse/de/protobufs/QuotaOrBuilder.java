@@ -160,7 +160,7 @@ public interface QuotaOrBuilder extends
 
   /**
    * <pre>
-   * The unique identifier of the user plan that the quota is associated with.
+   * The unique identifier of the subscription that the quota is associated with.
    * </pre>
    *
    * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
@@ -169,7 +169,7 @@ public interface QuotaOrBuilder extends
   java.lang.String getSubscriptionId();
   /**
    * <pre>
-   * The unique identifier of the user plan that the quota is associated with.
+   * The unique identifier of the subscription that the quota is associated with.
    * </pre>
    *
    * <code>string subscription_id = 8 [json_name = "subscription_id"];</code>
