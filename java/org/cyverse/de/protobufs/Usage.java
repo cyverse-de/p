@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object subscriptionId_ = "";
   /**
    * <pre>
-   * The unique identifier for the user pl""an the usage is associated with.
+   * The unique identifier for the user plan the usage is associated with.
    * </pre>
    *
    * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The unique identifier for the user pl""an the usage is associated with.
+   * The unique identifier for the user plan the usage is associated with.
    * </pre>
    *
    * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -1042,7 +1042,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object subscriptionId_ = "";
     /**
      * <pre>
-     * The unique identifier for the user pl""an the usage is associated with.
+     * The unique identifier for the user plan the usage is associated with.
      * </pre>
      *
      * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -1062,7 +1062,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier for the user pl""an the usage is associated with.
+     * The unique identifier for the user plan the usage is associated with.
      * </pre>
      *
      * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -1083,7 +1083,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier for the user pl""an the usage is associated with.
+     * The unique identifier for the user plan the usage is associated with.
      * </pre>
      *
      * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -1100,7 +1100,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier for the user pl""an the usage is associated with.
+     * The unique identifier for the user plan the usage is associated with.
      * </pre>
      *
      * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -1114,7 +1114,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique identifier for the user pl""an the usage is associated with.
+     * The unique identifier for the user plan the usage is associated with.
      * </pre>
      *
      * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>

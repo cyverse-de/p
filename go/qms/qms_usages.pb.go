@@ -34,7 +34,7 @@ type Usage struct {
 	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
 	// How much the resource has been used.
 	Usage float64 `protobuf:"fixed64,2,opt,name=usage,proto3" json:"usage,omitempty"`
-	// The unique identifier for the user pl""an the usage is associated with.
+	// The unique identifier for the user plan the usage is associated with.
 	SubscriptionId string `protobuf:"bytes,3,opt,name=subscription_id,proto3" json:"subscription_id,omitempty"`
 	// The resource type the usage applies to.
 	ResourceType *ResourceType `protobuf:"bytes,4,opt,name=resource_type,proto3" json:"resource_type,omitempty"`

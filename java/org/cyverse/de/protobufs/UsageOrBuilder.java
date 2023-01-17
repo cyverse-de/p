@@ -39,7 +39,7 @@ public interface UsageOrBuilder extends
 
   /**
    * <pre>
-   * The unique identifier for the user pl""an the usage is associated with.
+   * The unique identifier for the user plan the usage is associated with.
    * </pre>
    *
    * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
@@ -48,7 +48,7 @@ public interface UsageOrBuilder extends
   java.lang.String getSubscriptionId();
   /**
    * <pre>
-   * The unique identifier for the user pl""an the usage is associated with.
+   * The unique identifier for the user plan the usage is associated with.
    * </pre>
    *
    * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
