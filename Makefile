@@ -1,7 +1,5 @@
 .PHONY: all compile go-tidy go-init clean java-jar
 
-godirs: $(ls ./go/)
-
 all: clean compile go-init go-tidy java-jar documentation
 
 compile:
@@ -40,3 +38,5 @@ clean:
 	rm -rf ./java/*
 	rm -rf ./docs/*
 	lein clean
+
+godirs: $(ls ./go/)
