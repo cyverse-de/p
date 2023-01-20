@@ -786,6 +786,7 @@ Representation of a subscription.
 | plan | [Plan](#Plan) |  | The plan the user is subscribed to. |
 | quotas | [Quota](#Quota) | repeated | The list of quotas applied to the subscription. Initially populated by quota defaults, but can be overridden. |
 | usages | [Usage](#Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
+| paid | [bool](#bool) |  | A flag indicating whether or not the user paid for the subscription. |
 
 
 
