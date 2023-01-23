@@ -227,4 +227,14 @@ public interface SubscriptionOrBuilder extends
    */
   org.cyverse.de.protobufs.UsageOrBuilder getUsagesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * A flag indicating whether or not the user paid for the subscription.
+   * </pre>
+   *
+   * <code>bool paid = 8;</code>
+   * @return The paid.
+   */
+  boolean getPaid();
 }

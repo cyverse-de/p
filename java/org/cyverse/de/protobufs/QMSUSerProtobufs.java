@@ -55,14 +55,15 @@ public final class QMSUSerProtobufs {
       "rror\022\026\n\004user\030\003 \001(\0132\010.QMSUser\"]\n\013QMSUserL" +
       "ist\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 " +
       "\001(\0132\r.ServiceError\022\027\n\005users\030\003 \003(\0132\010.QMSU" +
-      "ser\"N\n\016AddUserRequest\022\027\n\006header\030\001 \001(\0132\007." +
+      "ser\"\\\n\016AddUserRequest\022\027\n\006header\030\001 \001(\0132\007." +
       "Header\022\020\n\010username\030\003 \001(\t\022\021\n\tplan_name\030\004 " +
-      "\001(\t\"\216\001\n\017AddUserResponse\022\027\n\006header\030\001 \001(\0132" +
-      "\007.Header\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\014" +
-      "\n\004uuid\030\003 \001(\t\022\020\n\010username\030\004 \001(\t\022\021\n\tplan_n" +
-      "ame\030\005 \001(\t\022\021\n\tplan_uuid\030\006 \001(\tBN\n\030org.cyve" +
-      "rse.de.protobufsB\020QMSUSerProtobufsP\001Z\036gi" +
-      "thub.com/cyverse-de/p/go/qmsb\006proto3"
+      "\001(\t\022\014\n\004paid\030\005 \001(\010\"\216\001\n\017AddUserResponse\022\027\n" +
+      "\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r." +
+      "ServiceError\022\014\n\004uuid\030\003 \001(\t\022\020\n\010username\030\004" +
+      " \001(\t\022\021\n\tplan_name\030\005 \001(\t\022\021\n\tplan_uuid\030\006 \001" +
+      "(\tBN\n\030org.cyverse.de.protobufsB\020QMSUSerP" +
+      "rotobufsP\001Z\036github.com/cyverse-de/p/go/q" +
+      "msb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -93,7 +94,7 @@ public final class QMSUSerProtobufs {
     internal_static_AddUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AddUserRequest_descriptor,
-        new java.lang.String[] { "Header", "Username", "PlanName", });
+        new java.lang.String[] { "Header", "Username", "PlanName", "Paid", });
     internal_static_AddUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_AddUserResponse_fieldAccessorTable = new

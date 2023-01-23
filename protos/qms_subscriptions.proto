@@ -39,6 +39,9 @@ message Subscription {
 
     // The list of resource usages that the user has generated while this plan was active.
     repeated Usage usages = 7;
+
+    // A flag indicating whether or not the user paid for the subscription.
+    bool paid = 8;
 }
 
 /**

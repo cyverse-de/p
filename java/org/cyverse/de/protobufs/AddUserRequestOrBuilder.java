@@ -73,4 +73,14 @@ public interface AddUserRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPlanNameBytes();
+
+  /**
+   * <pre>
+   * True if the user paid for the subscription.
+   * </pre>
+   *
+   * <code>bool paid = 5;</code>
+   * @return The paid.
+   */
+  boolean getPaid();
 }
