@@ -1046,6 +1046,7 @@ A request to add a user to the QMS system.
 | header | [Header](#Header) |  | Contains telemetry information |
 | username | [string](#string) |  | The username for the user being added to the system. |
 | plan_name | [string](#string) |  | The name of the plan the user should be subscribed to. |
+| paid | [bool](#bool) |  | True if the user paid for the subscription. |
 
 
 

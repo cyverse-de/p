@@ -182,6 +182,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PAID_FIELD_NUMBER = 5;
+  private boolean paid_ = false;
+  /**
+   * <pre>
+   * True if the user paid for the subscription.
+   * </pre>
+   *
+   * <code>bool paid = 5;</code>
+   * @return The paid.
+   */
+  @java.lang.Override
+  public boolean getPaid() {
+    return paid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -205,6 +220,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(planName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, planName_);
     }
+    if (paid_ != false) {
+      output.writeBool(5, paid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -223,6 +241,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(planName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, planName_);
+    }
+    if (paid_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, paid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -248,6 +270,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUsername())) return false;
     if (!getPlanName()
         .equals(other.getPlanName())) return false;
+    if (getPaid()
+        != other.getPaid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -267,6 +291,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUsername().hashCode();
     hash = (37 * hash) + PLAN_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getPlanName().hashCode();
+    hash = (37 * hash) + PAID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPaid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -408,6 +435,7 @@ private static final long serialVersionUID = 0L;
       }
       username_ = "";
       planName_ = "";
+      paid_ = false;
       return this;
     }
 
@@ -451,6 +479,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.planName_ = planName_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.paid_ = paid_;
       }
     }
 
@@ -511,6 +542,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.getPaid() != false) {
+        setPaid(other.getPaid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -554,6 +588,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 34
+            case 40: {
+              paid_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -906,6 +945,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       planName_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private boolean paid_ ;
+    /**
+     * <pre>
+     * True if the user paid for the subscription.
+     * </pre>
+     *
+     * <code>bool paid = 5;</code>
+     * @return The paid.
+     */
+    @java.lang.Override
+    public boolean getPaid() {
+      return paid_;
+    }
+    /**
+     * <pre>
+     * True if the user paid for the subscription.
+     * </pre>
+     *
+     * <code>bool paid = 5;</code>
+     * @param value The paid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPaid(boolean value) {
+      
+      paid_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if the user paid for the subscription.
+     * </pre>
+     *
+     * <code>bool paid = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPaid() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      paid_ = false;
       onChanged();
       return this;
     }

@@ -60,6 +60,9 @@ message AddUserRequest {
 
     // The name of the plan the user should be subscribed to.
     string plan_name = 4;
+
+    // True if the user paid for the subscription.
+    bool paid = 5;
 }
 
 /**
