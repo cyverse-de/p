@@ -87,3 +87,31 @@ message AddAddonRequest {
     }
 }
 
+/**
+ * A request to update an add-on. The boolean fields are needed because Go (and
+ * probably other languages) needs a way to tell when to set a field to an empty
+ * string, since that's the zero value for a string.
+ */
+ message UpdateAddonRequest {
+    // Contains telemetry information.
+    Header header = 1;
+
+    // The values to set in the update.
+    Addon addon = 2;
+
+    // Whether to update the name of the addon.
+    bool update_name = 3;
+
+    // Whether to update the description of the addon.
+    bool update_description = 4;
+
+    // Whether to update the resource type of the addon.
+    bool update_resource_type = 5;
+
+    // Whether to update the default amount of the addon.
+    bool update_default_amount = 6;
+
+    // Whether to update the default paid field of the addon.
+    bool uypdate_default_paid = 7;
+ }
+

@@ -39,6 +39,11 @@ public final class QMSAddonProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_AddonLookupRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_UpdateAddonRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_UpdateAddonRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,9 +68,14 @@ public final class QMSAddonProtobufs {
       "header\030\001 \001(\0132\007.Header\022\025\n\005addon\030\002 \001(\0132\006.A" +
       "ddon\"V\n\022AddonLookupRequest\022\027\n\006header\030\001 \001" +
       "(\0132\007.Header\022\016\n\004uuid\030\002 \001(\tH\000\022\016\n\004name\030\003 \001(" +
-      "\tH\000B\007\n\005addonBO\n\030org.cyverse.de.protobufs" +
-      "B\021QMSAddonProtobufsP\001Z\036github.com/cyvers" +
-      "e-de/p/go/qmsb\006proto3"
+      "\tH\000B\007\n\005addon\"\320\001\n\022UpdateAddonRequest\022\027\n\006h" +
+      "eader\030\001 \001(\0132\007.Header\022\025\n\005addon\030\002 \001(\0132\006.Ad" +
+      "don\022\023\n\013update_name\030\003 \001(\010\022\032\n\022update_descr" +
+      "iption\030\004 \001(\010\022\034\n\024update_resource_type\030\005 \001" +
+      "(\010\022\035\n\025update_default_amount\030\006 \001(\010\022\034\n\024uyp" +
+      "date_default_paid\030\007 \001(\010BO\n\030org.cyverse.d" +
+      "e.protobufsB\021QMSAddonProtobufsP\001Z\036github" +
+      ".com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -104,6 +114,12 @@ public final class QMSAddonProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AddonLookupRequest_descriptor,
         new java.lang.String[] { "Header", "Uuid", "Name", "Addon", });
+    internal_static_UpdateAddonRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_UpdateAddonRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_UpdateAddonRequest_descriptor,
+        new java.lang.String[] { "Header", "Addon", "UpdateName", "UpdateDescription", "UpdateResourceType", "UpdateDefaultAmount", "UypdateDefaultPaid", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor();
