@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+import "header.proto";
+
+option go_package = "github.com/cyverse-de/p/go/requests";
+
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "Requests";
+
+/**
+ * Request a resource by the username of a user.
+ **/
+message ByUsername {
+     // Contains telemetry information
+    Header header = 1;
+    string username = 2;
+}
+
+/**
+ * Request a resource by the user ID of a user.
+ */
+message ByUserID {
+     // Contains telemetry information
+    Header header = 1;
+    string user_id = 2 [json_name = "user_id"];
+}
+
+/**
+ * Send a message that does not request any parameters. Common for triggering
+ * side-effects or for retrieving lists of resources as an administrator.
+ */
+message NoParams {
+     // Contains telemetry information
+    Header header = 1;
+}
+
+/**
+ * Request a resource by its UUID.
+ */
+message ByUUID {
+    // Contains telemetry information
+    Header header = 1;
+
+    // The UUID of the resource being requested.
+    string uuid = 2;
+}
+
+/**
+ * Request a resource by its UUID and a username. Useful in situations where a
+ * user's ability to access a resource needs to be checked as part of the 
+ * request handler logic.
+ */
+message ByUUIDAndUsername {
+    // Contains telemetry information
+    Header header = 1;
+
+    // The UUID of the resource being requested
+    string uuid = 2;
+
+    // The username associated with the request.
+    string username = 3;
+}
+
+/**
+ * Request a resource by its UUID and a user's UUID. Useful when the user's 
+ * access to the resource must be verified.
+ */
+message ByUUIDAndUserID {
+    // Contains telemetry information
+    Header header = 1;
+
+    // The UUID of the resource being requested
+    string uuid = 2;
+
+    // The user ID of the user associated with the request.
+    string user_id = 3 [json_name = "user_id"];
+
+}

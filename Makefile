@@ -12,6 +12,7 @@ documentation:
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,qms.md protos/qms_*.proto
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,common.md protos/header.proto protos/svcerror.proto
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,users.md protos/user.proto protos/user_requests.proto
+	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,requests.md protos/requests.proto
 	
 
 java-jar:
@@ -24,6 +25,7 @@ go-init:
 	cd ./go/header && go mod init github.com/cyverse-de/p/go/header
 	cd ./go/qms && go mod init github.com/cyverse-de/p/go/qms
 	cd ./go/monitoring && go mod init github.com/cyverse-de/p/go/monitoring
+	cd ./go/requests && go mod init github.com/cyverse-de/p/go/requests
 
 go-tidy:
 	cd ./go/analysis && go mod tidy
@@ -32,6 +34,7 @@ go-tidy:
 	cd ./go/header && go mod tidy
 	cd ./go/qms && go mod tidy
 	cd ./go/monitoring && go mod tidy
+	cd ./go/requests && go mod tidy
 
 clean:
 	rm -rf ./go/*
