@@ -112,6 +112,6 @@ message AddAddonRequest {
     bool update_default_amount = 6;
 
     // Whether to update the default paid field of the addon.
-    bool uypdate_default_paid = 7;
+    bool update_default_paid = 7;
  }
 

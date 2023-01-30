@@ -190,7 +190,7 @@ string, since that&#39;s the zero value for a string.
 | update_description | [bool](#bool) |  | Whether to update the description of the addon. |
 | update_resource_type | [bool](#bool) |  | Whether to update the resource type of the addon. |
 | update_default_amount | [bool](#bool) |  | Whether to update the default amount of the addon. |
-| uypdate_default_paid | [bool](#bool) |  | Whether to update the default paid field of the addon. |
+| update_default_paid | [bool](#bool) |  | Whether to update the default paid field of the addon. |
 
 
 

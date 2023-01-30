@@ -106,8 +106,8 @@ public interface UpdateAddonRequestOrBuilder extends
    * Whether to update the default paid field of the addon.
    * </pre>
    *
-   * <code>bool uypdate_default_paid = 7;</code>
-   * @return The uypdateDefaultPaid.
+   * <code>bool update_default_paid = 7;</code>
+   * @return The updateDefaultPaid.
    */
-  boolean getUypdateDefaultPaid();
+  boolean getUpdateDefaultPaid();
 }

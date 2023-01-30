@@ -186,19 +186,19 @@ private static final long serialVersionUID = 0L;
     return updateDefaultAmount_;
   }
 
-  public static final int UYPDATE_DEFAULT_PAID_FIELD_NUMBER = 7;
-  private boolean uypdateDefaultPaid_ = false;
+  public static final int UPDATE_DEFAULT_PAID_FIELD_NUMBER = 7;
+  private boolean updateDefaultPaid_ = false;
   /**
    * <pre>
    * Whether to update the default paid field of the addon.
    * </pre>
    *
-   * <code>bool uypdate_default_paid = 7;</code>
-   * @return The uypdateDefaultPaid.
+   * <code>bool update_default_paid = 7;</code>
+   * @return The updateDefaultPaid.
    */
   @java.lang.Override
-  public boolean getUypdateDefaultPaid() {
-    return uypdateDefaultPaid_;
+  public boolean getUpdateDefaultPaid() {
+    return updateDefaultPaid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -233,8 +233,8 @@ private static final long serialVersionUID = 0L;
     if (updateDefaultAmount_ != false) {
       output.writeBool(6, updateDefaultAmount_);
     }
-    if (uypdateDefaultPaid_ != false) {
-      output.writeBool(7, uypdateDefaultPaid_);
+    if (updateDefaultPaid_ != false) {
+      output.writeBool(7, updateDefaultPaid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -269,9 +269,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, updateDefaultAmount_);
     }
-    if (uypdateDefaultPaid_ != false) {
+    if (updateDefaultPaid_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(7, uypdateDefaultPaid_);
+        .computeBoolSize(7, updateDefaultPaid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -306,8 +306,8 @@ private static final long serialVersionUID = 0L;
         != other.getUpdateResourceType()) return false;
     if (getUpdateDefaultAmount()
         != other.getUpdateDefaultAmount()) return false;
-    if (getUypdateDefaultPaid()
-        != other.getUypdateDefaultPaid()) return false;
+    if (getUpdateDefaultPaid()
+        != other.getUpdateDefaultPaid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -339,9 +339,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + UPDATE_DEFAULT_AMOUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getUpdateDefaultAmount());
-    hash = (37 * hash) + UYPDATE_DEFAULT_PAID_FIELD_NUMBER;
+    hash = (37 * hash) + UPDATE_DEFAULT_PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getUypdateDefaultPaid());
+        getUpdateDefaultPaid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
       updateDescription_ = false;
       updateResourceType_ = false;
       updateDefaultAmount_ = false;
-      uypdateDefaultPaid_ = false;
+      updateDefaultPaid_ = false;
       return this;
     }
 
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
         result.updateDefaultAmount_ = updateDefaultAmount_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.uypdateDefaultPaid_ = uypdateDefaultPaid_;
+        result.updateDefaultPaid_ = updateDefaultPaid_;
       }
     }
 
@@ -615,8 +615,8 @@ private static final long serialVersionUID = 0L;
       if (other.getUpdateDefaultAmount() != false) {
         setUpdateDefaultAmount(other.getUpdateDefaultAmount());
       }
-      if (other.getUypdateDefaultPaid() != false) {
-        setUypdateDefaultPaid(other.getUypdateDefaultPaid());
+      if (other.getUpdateDefaultPaid() != false) {
+        setUpdateDefaultPaid(other.getUpdateDefaultPaid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 48
             case 56: {
-              uypdateDefaultPaid_ = input.readBool();
+              updateDefaultPaid_ = input.readBool();
               bitField0_ |= 0x00000040;
               break;
             } // case 56
@@ -1186,31 +1186,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean uypdateDefaultPaid_ ;
+    private boolean updateDefaultPaid_ ;
     /**
      * <pre>
      * Whether to update the default paid field of the addon.
      * </pre>
      *
-     * <code>bool uypdate_default_paid = 7;</code>
-     * @return The uypdateDefaultPaid.
+     * <code>bool update_default_paid = 7;</code>
+     * @return The updateDefaultPaid.
      */
     @java.lang.Override
-    public boolean getUypdateDefaultPaid() {
-      return uypdateDefaultPaid_;
+    public boolean getUpdateDefaultPaid() {
+      return updateDefaultPaid_;
     }
     /**
      * <pre>
      * Whether to update the default paid field of the addon.
      * </pre>
      *
-     * <code>bool uypdate_default_paid = 7;</code>
-     * @param value The uypdateDefaultPaid to set.
+     * <code>bool update_default_paid = 7;</code>
+     * @param value The updateDefaultPaid to set.
      * @return This builder for chaining.
      */
-    public Builder setUypdateDefaultPaid(boolean value) {
+    public Builder setUpdateDefaultPaid(boolean value) {
       
-      uypdateDefaultPaid_ = value;
+      updateDefaultPaid_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
@@ -1220,12 +1220,12 @@ private static final long serialVersionUID = 0L;
      * Whether to update the default paid field of the addon.
      * </pre>
      *
-     * <code>bool uypdate_default_paid = 7;</code>
+     * <code>bool update_default_paid = 7;</code>
      * @return This builder for chaining.
      */
-    public Builder clearUypdateDefaultPaid() {
+    public Builder clearUpdateDefaultPaid() {
       bitField0_ = (bitField0_ & ~0x00000040);
-      uypdateDefaultPaid_ = false;
+      updateDefaultPaid_ = false;
       onChanged();
       return this;
     }
