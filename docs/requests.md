@@ -4,6 +4,7 @@
 ## Table of Contents
 
 - [requests.proto](#requests-proto)
+    - [AssociateByUUIDs](#-AssociateByUUIDs)
     - [ByUUID](#-ByUUID)
     - [ByUUIDAndUserID](#-ByUUIDAndUserID)
     - [ByUUIDAndUsername](#-ByUUIDAndUsername)
@@ -19,6 +20,23 @@
 <p align="right"><a href="#top">Top</a></p>
 
 ## requests.proto
+
+
+
+<a name="-AssociateByUUIDs"></a>
+
+### AssociateByUUIDs
+Request that two resources be associated.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [Header](#Header) |  | Contains telemetry information. |
+| parent_uuid | [string](#string) |  | The UUID of the parent/owner/primary resource. |
+| child_uuid | [string](#string) |  | The UUID of the child/object/secondary resource. |
+
+
+
 
 
 

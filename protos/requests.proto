@@ -75,5 +75,18 @@ message ByUUIDAndUserID {
 
     // The user ID of the user associated with the request.
     string user_id = 3 [json_name = "user_id"];
+}
 
+/**
+ * Request that two resources be associated.
+ */
+message AssociateByUUIDs {
+    // Contains telemetry information.
+    Header header = 1;
+
+    // The UUID of the parent/owner/primary resource.
+    string parent_uuid = 2 [json_name = "parent_uuid"];
+
+    // The UUID of the child/object/secondary resource.
+    string child_uuid = 3 [json_name = "child_uuid"];
 }
