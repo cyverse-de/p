@@ -266,8 +266,8 @@ Contains the information needed to update a subscription add-on.
 | ----- | ---- | ----- | ----------- |
 | header | [Header](#Header) |  | Contains telemetry information. |
 | subscription_addon | [SubscriptionAddon](#SubscriptionAddon) |  | The subscription add-on information being updated. Does not necessarily have all fields set and the UUID field should not be set. |
-| update_addon_id | [bool](#bool) |  | Whether to update the addon_id with the value contained in the subscription addon. |
-| update_subscription_id | [bool](#bool) |  | Whether to update the subscription_id field with the value contained in the subscription addon. |
+| update_addon_id | [bool](#bool) |  | Whether to update the addon_id with the value contained in the subscription addon. The DE backend currently does not support this. Do a delete-&gt;add instead. |
+| update_subscription_id | [bool](#bool) |  | Whether to update the subscription_id field with the value contained in the subscription addon. The DE backend currently does not support this. Do a delete-&gt;add instead. |
 | update_amount | [bool](#bool) |  | Whether to update the amount field with the value contained in the subscription addon. |
 | update_paid | [bool](#bool) |  | Whether to update the paid fields with the value contained in the subscription addon. |
 
