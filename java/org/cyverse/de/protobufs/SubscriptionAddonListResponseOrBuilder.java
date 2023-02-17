@@ -66,7 +66,7 @@ public interface SubscriptionAddonListResponseOrBuilder extends
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> 
       getSubscriptionAddonsList();
@@ -75,7 +75,7 @@ public interface SubscriptionAddonListResponseOrBuilder extends
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   org.cyverse.de.protobufs.SubscriptionAddon getSubscriptionAddons(int index);
   /**
@@ -83,7 +83,7 @@ public interface SubscriptionAddonListResponseOrBuilder extends
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   int getSubscriptionAddonsCount();
   /**
@@ -91,7 +91,7 @@ public interface SubscriptionAddonListResponseOrBuilder extends
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
       getSubscriptionAddonsOrBuilderList();
@@ -100,7 +100,7 @@ public interface SubscriptionAddonListResponseOrBuilder extends
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getSubscriptionAddonsOrBuilder(
       int index);

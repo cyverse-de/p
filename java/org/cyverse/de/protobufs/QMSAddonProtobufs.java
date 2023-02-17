@@ -108,13 +108,13 @@ public final class QMSAddonProtobufs {
       "riptionAddonResponse\022\027\n\006header\030\001 \001(\0132\007.H" +
       "eader\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022B\n\022s" +
       "ubscription_addon\030\003 \001(\0132\022.SubscriptionAd" +
-      "donR\022subscription_addon\"\235\001\n\035Subscription" +
+      "donR\022subscription_addon\"\234\001\n\035Subscription" +
       "AddonListResponse\022\027\n\006header\030\001 \001(\0132\007.Head" +
-      "er\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022E\n\023subs" +
+      "er\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022D\n\023subs" +
       "cription_addons\030\003 \003(\0132\022.SubscriptionAddo" +
-      "nR\024subscriptions_addonsBO\n\030org.cyverse.d" +
-      "e.protobufsB\021QMSAddonProtobufsP\001Z\036github" +
-      ".com/cyverse-de/p/go/qmsb\006proto3"
+      "nR\023subscription_addonsBO\n\030org.cyverse.de" +
+      ".protobufsB\021QMSAddonProtobufsP\001Z\036github." +
+      "com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

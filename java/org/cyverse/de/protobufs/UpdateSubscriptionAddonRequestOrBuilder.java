@@ -67,7 +67,8 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
   /**
    * <pre>
    * Whether to update the addon_id with the value contained in the subscription
-   * addon.
+   * addon. The DE backend currently does not support this. Do a delete-&gt;add
+   * instead.
    * </pre>
    *
    * <code>bool update_addon_id = 3 [json_name = "update_addon_id"];</code>
@@ -78,7 +79,8 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
   /**
    * <pre>
    * Whether to update the subscription_id field with the value contained
-   * in the subscription addon.
+   * in the subscription addon. The DE backend currently does not support this.
+   * Do a delete-&gt;add instead.
    * </pre>
    *
    * <code>bool update_subscription_id = 4 [json_name = "update_subscription_id"];</code>

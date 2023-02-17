@@ -199,5 +199,5 @@ message SubscriptionAddonListResponse {
     ServiceError error = 2;
 
     // The list of subscription add-ons returned by the request handler.
-    repeated SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];
+    repeated SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];
 }

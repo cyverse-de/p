@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> getSubscriptionAddonsList() {
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   @java.lang.Override
   public int getSubscriptionAddonsCount() {
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.SubscriptionAddon getSubscriptionAddons(int index) {
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * The list of subscription add-ons returned by the request handler.
    * </pre>
    *
-   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+   * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getSubscriptionAddonsOrBuilder(
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> getSubscriptionAddonsList() {
       if (subscriptionAddonsBuilder_ == null) {
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public int getSubscriptionAddonsCount() {
       if (subscriptionAddonsBuilder_ == null) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddon getSubscriptionAddons(int index) {
       if (subscriptionAddonsBuilder_ == null) {
@@ -1004,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder setSubscriptionAddons(
         int index, org.cyverse.de.protobufs.SubscriptionAddon value) {
@@ -1025,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder setSubscriptionAddons(
         int index, org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder addSubscriptionAddons(org.cyverse.de.protobufs.SubscriptionAddon value) {
       if (subscriptionAddonsBuilder_ == null) {
@@ -1063,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder addSubscriptionAddons(
         int index, org.cyverse.de.protobufs.SubscriptionAddon value) {
@@ -1084,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder addSubscriptionAddons(
         org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
@@ -1102,7 +1102,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder addSubscriptionAddons(
         int index, org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder addAllSubscriptionAddons(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.SubscriptionAddon> values) {
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder clearSubscriptionAddons() {
       if (subscriptionAddonsBuilder_ == null) {
@@ -1156,7 +1156,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public Builder removeSubscriptionAddons(int index) {
       if (subscriptionAddonsBuilder_ == null) {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddon.Builder getSubscriptionAddonsBuilder(
         int index) {
@@ -1184,7 +1184,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getSubscriptionAddonsOrBuilder(
         int index) {
@@ -1198,7 +1198,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
          getSubscriptionAddonsOrBuilderList() {
@@ -1213,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddon.Builder addSubscriptionAddonsBuilder() {
       return getSubscriptionAddonsFieldBuilder().addBuilder(
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddon.Builder addSubscriptionAddonsBuilder(
         int index) {
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      * The list of subscription add-ons returned by the request handler.
      * </pre>
      *
-     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscriptions_addons"];</code>
+     * <code>repeated .SubscriptionAddon subscription_addons = 3 [json_name = "subscription_addons"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.SubscriptionAddon.Builder> 
          getSubscriptionAddonsBuilderList() {
