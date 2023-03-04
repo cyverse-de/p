@@ -15,25 +15,25 @@ public final class QMSQuotaProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Quota_descriptor;
+    internal_static_debuff_Quota_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Quota_fieldAccessorTable;
+      internal_static_debuff_Quota_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_QuotaResponse_descriptor;
+    internal_static_debuff_QuotaResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_QuotaResponse_fieldAccessorTable;
+      internal_static_debuff_QuotaResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_QuotaList_descriptor;
+    internal_static_debuff_QuotaList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_QuotaList_fieldAccessorTable;
+      internal_static_debuff_QuotaList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AddQuotaRequest_descriptor;
+    internal_static_debuff_AddQuotaRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AddQuotaRequest_fieldAccessorTable;
+      internal_static_debuff_AddQuotaRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -43,26 +43,28 @@ public final class QMSQuotaProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020qms_quotas.proto\032\037google/protobuf/time" +
-      "stamp.proto\032\014header.proto\032\016svcerror.prot" +
-      "o\032\030qms_resource_types.proto\"\315\002\n\005Quota\022\014\n" +
-      "\004uuid\030\001 \001(\t\022\r\n\005quota\030\002 \001(\002\0223\n\rresource_t" +
-      "ype\030\003 \001(\0132\r.ResourceTypeR\rresource_type\022" +
-      "\035\n\tCreatedBy\030\004 \001(\tR\ncreated_by\0229\n\tCreate" +
-      "dAt\030\005 \001(\0132\032.google.protobuf.TimestampR\nc" +
-      "reated_at\022(\n\016LastModifiedBy\030\006 \001(\tR\020last_" +
-      "modified_by\022D\n\016LastModifiedAt\030\007 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\020last_modified_a" +
-      "t\022(\n\017subscription_id\030\010 \001(\tR\017subscription" +
-      "_id\"]\n\rQuotaResponse\022\027\n\006header\030\001 \001(\0132\007.H" +
-      "eader\022\034\n\005error\030\002 \001(\0132\r.ServiceError\022\025\n\005q" +
-      "uota\030\003 \001(\0132\006.Quota\"Z\n\tQuotaList\022\027\n\006heade" +
-      "r\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.Servic" +
-      "eError\022\026\n\006quotas\030\003 \003(\0132\006.Quota\"A\n\017AddQuo" +
-      "taRequest\022\027\n\006header\030\001 \001(\0132\007.Header\022\025\n\005qu" +
-      "ota\030\002 \001(\0132\006.QuotaBO\n\030org.cyverse.de.prot" +
-      "obufsB\021QMSQuotaProtobufsP\001Z\036github.com/c" +
-      "yverse-de/p/go/qmsb\006proto3"
+      "\n\020qms_quotas.proto\022\006debuff\032\037google/proto" +
+      "buf/timestamp.proto\032\014header.proto\032\016svcer" +
+      "ror.proto\032\030qms_resource_types.proto\"\324\002\n\005" +
+      "Quota\022\014\n\004uuid\030\001 \001(\t\022\r\n\005quota\030\002 \001(\002\022:\n\rre" +
+      "source_type\030\003 \001(\0132\024.debuff.ResourceTypeR" +
+      "\rresource_type\022\035\n\tCreatedBy\030\004 \001(\tR\ncreat" +
+      "ed_by\0229\n\tCreatedAt\030\005 \001(\0132\032.google.protob" +
+      "uf.TimestampR\ncreated_at\022(\n\016LastModified" +
+      "By\030\006 \001(\tR\020last_modified_by\022D\n\016LastModifi" +
+      "edAt\030\007 \001(\0132\032.google.protobuf.TimestampR\020" +
+      "last_modified_at\022(\n\017subscription_id\030\010 \001(" +
+      "\tR\017subscription_id\"r\n\rQuotaResponse\022\036\n\006h" +
+      "eader\030\001 \001(\0132\016.debuff.Header\022#\n\005error\030\002 \001" +
+      "(\0132\024.debuff.ServiceError\022\034\n\005quota\030\003 \001(\0132" +
+      "\r.debuff.Quota\"o\n\tQuotaList\022\036\n\006header\030\001 " +
+      "\001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(\0132\024.deb" +
+      "uff.ServiceError\022\035\n\006quotas\030\003 \003(\0132\r.debuf" +
+      "f.Quota\"O\n\017AddQuotaRequest\022\036\n\006header\030\001 \001" +
+      "(\0132\016.debuff.Header\022\034\n\005quota\030\002 \001(\0132\r.debu" +
+      "ff.QuotaBO\n\030org.cyverse.de.protobufsB\021QM" +
+      "SQuotaProtobufsP\001Z\036github.com/cyverse-de" +
+      "/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,29 +74,29 @@ public final class QMSQuotaProtobufs {
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor(),
         });
-    internal_static_Quota_descriptor =
+    internal_static_debuff_Quota_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_Quota_fieldAccessorTable = new
+    internal_static_debuff_Quota_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Quota_descriptor,
+        internal_static_debuff_Quota_descriptor,
         new java.lang.String[] { "Uuid", "Quota", "ResourceType", "CreatedBy", "CreatedAt", "LastModifiedBy", "LastModifiedAt", "SubscriptionId", });
-    internal_static_QuotaResponse_descriptor =
+    internal_static_debuff_QuotaResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_QuotaResponse_fieldAccessorTable = new
+    internal_static_debuff_QuotaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_QuotaResponse_descriptor,
+        internal_static_debuff_QuotaResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "Quota", });
-    internal_static_QuotaList_descriptor =
+    internal_static_debuff_QuotaList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_QuotaList_fieldAccessorTable = new
+    internal_static_debuff_QuotaList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_QuotaList_descriptor,
+        internal_static_debuff_QuotaList_descriptor,
         new java.lang.String[] { "Header", "Error", "Quotas", });
-    internal_static_AddQuotaRequest_descriptor =
+    internal_static_debuff_AddQuotaRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_AddQuotaRequest_fieldAccessorTable = new
+    internal_static_debuff_AddQuotaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AddQuotaRequest_descriptor,
+        internal_static_debuff_AddQuotaRequest_descriptor,
         new java.lang.String[] { "Header", "Quota", });
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();

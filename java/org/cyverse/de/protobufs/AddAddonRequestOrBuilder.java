@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface AddAddonRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:AddAddonRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.AddAddonRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface AddAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface AddAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface AddAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface AddAddonRequestOrBuilder extends
    * The add-on to be added.
    * </pre>
    *
-   * <code>.Addon addon = 2;</code>
+   * <code>.debuff.Addon addon = 2;</code>
    * @return Whether the addon field is set.
    */
   boolean hasAddon();
@@ -48,7 +48,7 @@ public interface AddAddonRequestOrBuilder extends
    * The add-on to be added.
    * </pre>
    *
-   * <code>.Addon addon = 2;</code>
+   * <code>.debuff.Addon addon = 2;</code>
    * @return The addon.
    */
   org.cyverse.de.protobufs.Addon getAddon();
@@ -57,7 +57,7 @@ public interface AddAddonRequestOrBuilder extends
    * The add-on to be added.
    * </pre>
    *
-   * <code>.Addon addon = 2;</code>
+   * <code>.debuff.Addon addon = 2;</code>
    */
   org.cyverse.de.protobufs.AddonOrBuilder getAddonOrBuilder();
 }

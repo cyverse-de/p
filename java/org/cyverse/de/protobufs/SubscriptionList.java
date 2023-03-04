@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A response to a request for a list of subscriptions.
  * </pre>
  *
- * Protobuf type {@code SubscriptionList}
+ * Protobuf type {@code debuff.SubscriptionList}
  */
 public final class SubscriptionList extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:SubscriptionList)
+    // @@protoc_insertion_point(message_implements:debuff.SubscriptionList)
     SubscriptionListOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use SubscriptionList.newBuilder() to construct.
@@ -38,13 +38,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_SubscriptionList_descriptor;
+    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_SubscriptionList_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_SubscriptionList_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_SubscriptionList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.SubscriptionList.class, org.cyverse.de.protobufs.SubscriptionList.Builder.class);
   }
@@ -56,7 +56,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The subscription list returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+   * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Subscription> getSubscriptionsList() {
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * The subscription list returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+   * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.SubscriptionOrBuilder> 
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * The subscription list returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+   * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
    */
   @java.lang.Override
   public int getSubscriptionsCount() {
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * The subscription list returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+   * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Subscription getSubscriptions(int index) {
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * The subscription list returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+   * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionsOrBuilder(
@@ -381,21 +381,21 @@ private static final long serialVersionUID = 0L;
    * A response to a request for a list of subscriptions.
    * </pre>
    *
-   * Protobuf type {@code SubscriptionList}
+   * Protobuf type {@code debuff.SubscriptionList}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:SubscriptionList)
+      // @@protoc_insertion_point(builder_implements:debuff.SubscriptionList)
       org.cyverse.de.protobufs.SubscriptionListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_SubscriptionList_descriptor;
+      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_SubscriptionList_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_SubscriptionList_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_SubscriptionList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.SubscriptionList.class, org.cyverse.de.protobufs.SubscriptionList.Builder.class);
     }
@@ -437,7 +437,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_SubscriptionList_descriptor;
+      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_SubscriptionList_descriptor;
     }
 
     @java.lang.Override
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -885,7 +885,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -902,7 +902,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000002;
@@ -914,7 +914,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Subscription> getSubscriptionsList() {
       if (subscriptionsBuilder_ == null) {
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public int getSubscriptionsCount() {
       if (subscriptionsBuilder_ == null) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public org.cyverse.de.protobufs.Subscription getSubscriptions(int index) {
       if (subscriptionsBuilder_ == null) {
@@ -1004,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder setSubscriptions(
         int index, org.cyverse.de.protobufs.Subscription value) {
@@ -1025,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder setSubscriptions(
         int index, org.cyverse.de.protobufs.Subscription.Builder builderForValue) {
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder addSubscriptions(org.cyverse.de.protobufs.Subscription value) {
       if (subscriptionsBuilder_ == null) {
@@ -1063,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder addSubscriptions(
         int index, org.cyverse.de.protobufs.Subscription value) {
@@ -1084,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder addSubscriptions(
         org.cyverse.de.protobufs.Subscription.Builder builderForValue) {
@@ -1102,7 +1102,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder addSubscriptions(
         int index, org.cyverse.de.protobufs.Subscription.Builder builderForValue) {
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder addAllSubscriptions(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Subscription> values) {
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder clearSubscriptions() {
       if (subscriptionsBuilder_ == null) {
@@ -1156,7 +1156,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public Builder removeSubscriptions(int index) {
       if (subscriptionsBuilder_ == null) {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public org.cyverse.de.protobufs.Subscription.Builder getSubscriptionsBuilder(
         int index) {
@@ -1184,7 +1184,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionsOrBuilder(
         int index) {
@@ -1198,7 +1198,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.SubscriptionOrBuilder> 
          getSubscriptionsOrBuilderList() {
@@ -1213,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public org.cyverse.de.protobufs.Subscription.Builder addSubscriptionsBuilder() {
       return getSubscriptionsFieldBuilder().addBuilder(
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public org.cyverse.de.protobufs.Subscription.Builder addSubscriptionsBuilder(
         int index) {
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      * The subscription list returned by the request handler.
      * </pre>
      *
-     * <code>repeated .Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
+     * <code>repeated .debuff.Subscription subscriptions = 3 [json_name = "subscriptions"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Subscription.Builder> 
          getSubscriptionsBuilderList() {
@@ -1269,10 +1269,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:SubscriptionList)
+    // @@protoc_insertion_point(builder_scope:debuff.SubscriptionList)
   }
 
-  // @@protoc_insertion_point(class_scope:SubscriptionList)
+  // @@protoc_insertion_point(class_scope:debuff.SubscriptionList)
   private static final org.cyverse.de.protobufs.SubscriptionList DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.SubscriptionList();

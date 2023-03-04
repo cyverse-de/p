@@ -8,6 +8,8 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisContainerProtobufs";
 
+package debuff;
+
 message InteractiveApps {
     string proxy_image = 1;
     string proxy_name = 2;

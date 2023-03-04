@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface AddUpdateRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:AddUpdateRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.AddUpdateRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface AddUpdateRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface AddUpdateRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface AddUpdateRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface AddUpdateRequestOrBuilder extends
    * The update being added to the system.
    * </pre>
    *
-   * <code>.Update update = 2;</code>
+   * <code>.debuff.Update update = 2;</code>
    * @return Whether the update field is set.
    */
   boolean hasUpdate();
@@ -48,7 +48,7 @@ public interface AddUpdateRequestOrBuilder extends
    * The update being added to the system.
    * </pre>
    *
-   * <code>.Update update = 2;</code>
+   * <code>.debuff.Update update = 2;</code>
    * @return The update.
    */
   org.cyverse.de.protobufs.Update getUpdate();
@@ -57,7 +57,7 @@ public interface AddUpdateRequestOrBuilder extends
    * The update being added to the system.
    * </pre>
    *
-   * <code>.Update update = 2;</code>
+   * <code>.debuff.Update update = 2;</code>
    */
   org.cyverse.de.protobufs.UpdateOrBuilder getUpdateOrBuilder();
 }

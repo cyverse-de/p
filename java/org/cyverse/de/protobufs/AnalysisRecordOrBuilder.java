@@ -4,21 +4,21 @@
 package org.cyverse.de.protobufs;
 
 public interface AnalysisRecordOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:AnalysisRecord)
+    // @@protoc_insertion_point(interface_extends:debuff.AnalysisRecord)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -89,17 +89,17 @@ public interface AnalysisRecordOrBuilder extends
       getAppIdBytes();
 
   /**
-   * <code>.AnalysisRecord.BatchStatus batch_status = 8 [json_name = "batch_status"];</code>
+   * <code>.debuff.AnalysisRecord.BatchStatus batch_status = 8 [json_name = "batch_status"];</code>
    * @return Whether the batchStatus field is set.
    */
   boolean hasBatchStatus();
   /**
-   * <code>.AnalysisRecord.BatchStatus batch_status = 8 [json_name = "batch_status"];</code>
+   * <code>.debuff.AnalysisRecord.BatchStatus batch_status = 8 [json_name = "batch_status"];</code>
    * @return The batchStatus.
    */
   org.cyverse.de.protobufs.AnalysisRecord.BatchStatus getBatchStatus();
   /**
-   * <code>.AnalysisRecord.BatchStatus batch_status = 8 [json_name = "batch_status"];</code>
+   * <code>.debuff.AnalysisRecord.BatchStatus batch_status = 8 [json_name = "batch_status"];</code>
    */
   org.cyverse.de.protobufs.AnalysisRecord.BatchStatusOrBuilder getBatchStatusOrBuilder();
 

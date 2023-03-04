@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 @java.lang.Deprecated public interface JobOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Job)
+    // @@protoc_insertion_point(interface_extends:debuff.Job)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -165,7 +165,7 @@ package org.cyverse.de.protobufs;
    * read all about it
    * </pre>
    *
-   * <code>.Extra extra = 14;</code>
+   * <code>.debuff.Extra extra = 14;</code>
    * @return Whether the extra field is set.
    */
   boolean hasExtra();
@@ -174,7 +174,7 @@ package org.cyverse.de.protobufs;
    * read all about it
    * </pre>
    *
-   * <code>.Extra extra = 14;</code>
+   * <code>.debuff.Extra extra = 14;</code>
    * @return The extra.
    */
   org.cyverse.de.protobufs.Extra getExtra();
@@ -183,7 +183,7 @@ package org.cyverse.de.protobufs;
    * read all about it
    * </pre>
    *
-   * <code>.Extra extra = 14;</code>
+   * <code>.debuff.Extra extra = 14;</code>
    */
   org.cyverse.de.protobufs.ExtraOrBuilder getExtraOrBuilder();
 
@@ -222,7 +222,7 @@ package org.cyverse.de.protobufs;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.FileMetadata> 
       getFileMetadataList();
@@ -231,7 +231,7 @@ package org.cyverse.de.protobufs;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   org.cyverse.de.protobufs.FileMetadata getFileMetadata(int index);
   /**
@@ -239,7 +239,7 @@ package org.cyverse.de.protobufs;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   int getFileMetadataCount();
   /**
@@ -247,7 +247,7 @@ package org.cyverse.de.protobufs;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.FileMetadataOrBuilder> 
       getFileMetadataOrBuilderList();
@@ -256,7 +256,7 @@ package org.cyverse.de.protobufs;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   org.cyverse.de.protobufs.FileMetadataOrBuilder getFileMetadataOrBuilder(
       int index);
@@ -465,25 +465,25 @@ package org.cyverse.de.protobufs;
   boolean getSkipParentMetadata();
 
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Step> 
       getStepsList();
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   org.cyverse.de.protobufs.Step getSteps(int index);
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   int getStepsCount();
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.StepOrBuilder> 
       getStepsOrBuilderList();
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   org.cyverse.de.protobufs.StepOrBuilder getStepsOrBuilder(
       int index);

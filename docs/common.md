@@ -4,14 +4,14 @@
 ## Table of Contents
 
 - [header.proto](#header-proto)
-    - [Header](#-Header)
-    - [Header.MapEntry](#-Header-MapEntry)
-    - [Header.Value](#-Header-Value)
+    - [Header](#debuff-Header)
+    - [Header.MapEntry](#debuff-Header-MapEntry)
+    - [Header.Value](#debuff-Header-Value)
   
 - [svcerror.proto](#svcerror-proto)
-    - [ServiceError](#-ServiceError)
+    - [ServiceError](#debuff-ServiceError)
   
-    - [ErrorCode](#-ErrorCode)
+    - [ErrorCode](#debuff-ErrorCode)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -24,7 +24,7 @@
 
 
 
-<a name="-Header"></a>
+<a name="debuff-Header"></a>
 
 ### Header
 
@@ -32,14 +32,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| map | [Header.MapEntry](#Header-MapEntry) | repeated |  |
+| map | [Header.MapEntry](#debuff-Header-MapEntry) | repeated |  |
 
 
 
 
 
 
-<a name="-Header-MapEntry"></a>
+<a name="debuff-Header-MapEntry"></a>
 
 ### Header.MapEntry
 
@@ -48,14 +48,14 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [Header.Value](#Header-Value) |  |  |
+| value | [Header.Value](#debuff-Header-Value) |  |  |
 
 
 
 
 
 
-<a name="-Header-Value"></a>
+<a name="debuff-Header-Value"></a>
 
 ### Header.Value
 
@@ -86,7 +86,7 @@
 
 
 
-<a name="-ServiceError"></a>
+<a name="debuff-ServiceError"></a>
 
 ### ServiceError
 An error returned by a request handler.
@@ -94,8 +94,8 @@ An error returned by a request handler.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error_code | [ErrorCode](#ErrorCode) |  | The numeric error code from the error code enum. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error_code | [ErrorCode](#debuff-ErrorCode) |  | The numeric error code from the error code enum. |
 | status_code | [int32](#int32) |  | The status code for the error. |
 | message | [string](#string) |  | The error&#39;s message. |
 
@@ -106,7 +106,7 @@ An error returned by a request handler.
  
 
 
-<a name="-ErrorCode"></a>
+<a name="debuff-ErrorCode"></a>
 
 ### ErrorCode
 The types of errors that can be retuned by message handlers.

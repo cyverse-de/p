@@ -5,7 +5,7 @@ all: clean compile go-init go-tidy java-jar documentation
 compile:
 	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
 	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto
-	protoc -I ./protos -I /usr/local/include --prost_opt=default_package_filename=gen.rs --prost_out=./debuff/src/ protos/*.proto
+	protoc -I ./protos -I /usr/local/include --prost_opt=default_package_filename=gen.rs --prost_opt=compile_well_known_types --prost_opt=extern_path=.google.protobuf=::pbjson_types --prost_out=debuff/src/ --prost-serde_out=debuff/src protos/*.proto
 
 documentation:
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,analysis.md protos/analysis_*.proto
@@ -41,7 +41,8 @@ clean:
 	rm -rf ./go/*
 	rm -rf ./java/*
 	rm -rf ./docs/*
-	rm ./debuff/src/gen.rs
+	rm ./debuff/src/debuff.rs
+	rm ./debuff/src/debuff.serde.rs
 	lein clean
 
 godirs: $(ls ./go/)

@@ -11,6 +11,8 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSAddonProtobufs";
 
+package debuff;
+
 /**
  * Represents an add-on that can be applied to a subscription to provide a user
  * with a change in a resource quota.

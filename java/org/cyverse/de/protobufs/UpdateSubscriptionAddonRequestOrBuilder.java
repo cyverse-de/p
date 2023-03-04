@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UpdateSubscriptionAddonRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:UpdateSubscriptionAddonRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.UpdateSubscriptionAddonRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -40,7 +40,7 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * have all fields set and the UUID field should not be set.
    * </pre>
    *
-   * <code>.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+   * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
    * @return Whether the subscriptionAddon field is set.
    */
   boolean hasSubscriptionAddon();
@@ -50,7 +50,7 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * have all fields set and the UUID field should not be set.
    * </pre>
    *
-   * <code>.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+   * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
    * @return The subscriptionAddon.
    */
   org.cyverse.de.protobufs.SubscriptionAddon getSubscriptionAddon();
@@ -60,7 +60,7 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * have all fields set and the UUID field should not be set.
    * </pre>
    *
-   * <code>.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+   * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
    */
   org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getSubscriptionAddonOrBuilder();
 

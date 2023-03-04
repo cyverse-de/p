@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface OverageOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Overage)
+    // @@protoc_insertion_point(interface_extends:debuff.Overage)
     com.google.protobuf.MessageOrBuilder {
 
   /**

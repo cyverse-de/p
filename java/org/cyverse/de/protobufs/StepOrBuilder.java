@@ -4,36 +4,36 @@
 package org.cyverse.de.protobufs;
 
 public interface StepOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Step)
+    // @@protoc_insertion_point(interface_extends:debuff.Step)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.Step.Component component = 1;</code>
+   * <code>.debuff.Step.Component component = 1;</code>
    * @return Whether the component field is set.
    */
   boolean hasComponent();
   /**
-   * <code>.Step.Component component = 1;</code>
+   * <code>.debuff.Step.Component component = 1;</code>
    * @return The component.
    */
   org.cyverse.de.protobufs.Step.Component getComponent();
   /**
-   * <code>.Step.Component component = 1;</code>
+   * <code>.debuff.Step.Component component = 1;</code>
    */
   org.cyverse.de.protobufs.Step.ComponentOrBuilder getComponentOrBuilder();
 
   /**
-   * <code>.Step.Config config = 2;</code>
+   * <code>.debuff.Step.Config config = 2;</code>
    * @return Whether the config field is set.
    */
   boolean hasConfig();
   /**
-   * <code>.Step.Config config = 2;</code>
+   * <code>.debuff.Step.Config config = 2;</code>
    * @return The config.
    */
   org.cyverse.de.protobufs.Step.Config getConfig();
   /**
-   * <code>.Step.Config config = 2;</code>
+   * <code>.debuff.Step.Config config = 2;</code>
    */
   org.cyverse.de.protobufs.Step.ConfigOrBuilder getConfigOrBuilder();
 
@@ -136,7 +136,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Step.Input> 
       getInputList();
@@ -145,7 +145,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   org.cyverse.de.protobufs.Step.Input getInput(int index);
   /**
@@ -153,7 +153,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   int getInputCount();
   /**
@@ -161,7 +161,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.Step.InputOrBuilder> 
       getInputOrBuilderList();
@@ -170,7 +170,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   org.cyverse.de.protobufs.Step.InputOrBuilder getInputOrBuilder(
       int index);
@@ -180,7 +180,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Step.Output> 
       getOutputList();
@@ -189,7 +189,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   org.cyverse.de.protobufs.Step.Output getOutput(int index);
   /**
@@ -197,7 +197,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   int getOutputCount();
   /**
@@ -205,7 +205,7 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.Step.OutputOrBuilder> 
       getOutputOrBuilderList();
@@ -214,23 +214,23 @@ java.lang.String defaultValue);
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputOrBuilder(
       int index);
 
   /**
-   * <code>.Header header = 11;</code>
+   * <code>.debuff.Header header = 11;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.Header header = 11;</code>
+   * <code>.debuff.Header header = 11;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.Header header = 11;</code>
+   * <code>.debuff.Header header = 11;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }

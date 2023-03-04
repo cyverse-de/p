@@ -8,6 +8,8 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSRequestProtobufs";
 
+package debuff;
+
 /**
  * A request for all of a user's current resource type overages.
  */

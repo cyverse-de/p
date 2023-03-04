@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A representation of a user in the QMS system.
  * </pre>
  *
- * Protobuf type {@code QMSUser}
+ * Protobuf type {@code debuff.QMSUser}
  */
 public final class QMSUser extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:QMSUser)
+    // @@protoc_insertion_point(message_implements:debuff.QMSUser)
     QMSUserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use QMSUser.newBuilder() to construct.
@@ -39,13 +39,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_QMSUser_descriptor;
+    return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_debuff_QMSUser_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_QMSUser_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_debuff_QMSUser_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.QMSUser.class, org.cyverse.de.protobufs.QMSUser.Builder.class);
   }
@@ -314,21 +314,21 @@ private static final long serialVersionUID = 0L;
    * A representation of a user in the QMS system.
    * </pre>
    *
-   * Protobuf type {@code QMSUser}
+   * Protobuf type {@code debuff.QMSUser}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:QMSUser)
+      // @@protoc_insertion_point(builder_implements:debuff.QMSUser)
       org.cyverse.de.protobufs.QMSUserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_QMSUser_descriptor;
+      return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_debuff_QMSUser_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_QMSUser_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_debuff_QMSUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.QMSUser.class, org.cyverse.de.protobufs.QMSUser.Builder.class);
     }
@@ -355,7 +355,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_QMSUser_descriptor;
+      return org.cyverse.de.protobufs.QMSUSerProtobufs.internal_static_debuff_QMSUser_descriptor;
     }
 
     @java.lang.Override
@@ -693,10 +693,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:QMSUser)
+    // @@protoc_insertion_point(builder_scope:debuff.QMSUser)
   }
 
-  // @@protoc_insertion_point(class_scope:QMSUser)
+  // @@protoc_insertion_point(class_scope:debuff.QMSUser)
   private static final org.cyverse.de.protobufs.QMSUser DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.QMSUser();

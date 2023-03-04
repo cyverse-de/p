@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code Step}
+ * Protobuf type {@code debuff.Step}
  */
 public final class Step extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Step)
+    // @@protoc_insertion_point(message_implements:debuff.Step)
     StepOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Step.newBuilder() to construct.
@@ -39,7 +39,7 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_descriptor;
+    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -57,27 +57,27 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Step.class, org.cyverse.de.protobufs.Step.Builder.class);
   }
 
   public interface ComponentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Step.Component)
+      // @@protoc_insertion_point(interface_extends:debuff.Step.Component)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Container container = 1;</code>
+     * <code>.debuff.Container container = 1;</code>
      * @return Whether the container field is set.
      */
     boolean hasContainer();
     /**
-     * <code>.Container container = 1;</code>
+     * <code>.debuff.Container container = 1;</code>
      * @return The container.
      */
     org.cyverse.de.protobufs.Container getContainer();
     /**
-     * <code>.Container container = 1;</code>
+     * <code>.debuff.Container container = 1;</code>
      */
     org.cyverse.de.protobufs.ContainerOrBuilder getContainerOrBuilder();
 
@@ -148,11 +148,11 @@ private static final long serialVersionUID = 0L;
     boolean getIsInteractive();
   }
   /**
-   * Protobuf type {@code Step.Component}
+   * Protobuf type {@code debuff.Step.Component}
    */
   public static final class Component extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Step.Component)
+      // @@protoc_insertion_point(message_implements:debuff.Step.Component)
       ComponentOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Component.newBuilder() to construct.
@@ -180,13 +180,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Component_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Component_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Component_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Component_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Step.Component.class, org.cyverse.de.protobufs.Step.Component.Builder.class);
     }
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
     public static final int CONTAINER_FIELD_NUMBER = 1;
     private org.cyverse.de.protobufs.Container container_;
     /**
-     * <code>.Container container = 1;</code>
+     * <code>.debuff.Container container = 1;</code>
      * @return Whether the container field is set.
      */
     @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
       return container_ != null;
     }
     /**
-     * <code>.Container container = 1;</code>
+     * <code>.debuff.Container container = 1;</code>
      * @return The container.
      */
     @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
       return container_ == null ? org.cyverse.de.protobufs.Container.getDefaultInstance() : container_;
     }
     /**
-     * <code>.Container container = 1;</code>
+     * <code>.debuff.Container container = 1;</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.ContainerOrBuilder getContainerOrBuilder() {
@@ -642,21 +642,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Step.Component}
+     * Protobuf type {@code debuff.Step.Component}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Step.Component)
+        // @@protoc_insertion_point(builder_implements:debuff.Step.Component)
         org.cyverse.de.protobufs.Step.ComponentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Component_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Component_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Component_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Component_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Step.Component.class, org.cyverse.de.protobufs.Step.Component.Builder.class);
       }
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Component_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Component_descriptor;
       }
 
       @java.lang.Override
@@ -913,14 +913,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.cyverse.de.protobufs.Container, org.cyverse.de.protobufs.Container.Builder, org.cyverse.de.protobufs.ContainerOrBuilder> containerBuilder_;
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        * @return Whether the container field is set.
        */
       public boolean hasContainer() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        * @return The container.
        */
       public org.cyverse.de.protobufs.Container getContainer() {
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       public Builder setContainer(org.cyverse.de.protobufs.Container value) {
         if (containerBuilder_ == null) {
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       public Builder setContainer(
           org.cyverse.de.protobufs.Container.Builder builderForValue) {
@@ -961,7 +961,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       public Builder mergeContainer(org.cyverse.de.protobufs.Container value) {
         if (containerBuilder_ == null) {
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       public Builder clearContainer() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -993,7 +993,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       public org.cyverse.de.protobufs.Container.Builder getContainerBuilder() {
         bitField0_ |= 0x00000001;
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
         return getContainerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       public org.cyverse.de.protobufs.ContainerOrBuilder getContainerOrBuilder() {
         if (containerBuilder_ != null) {
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.Container container = 1;</code>
+       * <code>.debuff.Container container = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.cyverse.de.protobufs.Container, org.cyverse.de.protobufs.Container.Builder, org.cyverse.de.protobufs.ContainerOrBuilder> 
@@ -1424,10 +1424,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Step.Component)
+      // @@protoc_insertion_point(builder_scope:debuff.Step.Component)
     }
 
-    // @@protoc_insertion_point(class_scope:Step.Component)
+    // @@protoc_insertion_point(class_scope:debuff.Step.Component)
     private static final org.cyverse.de.protobufs.Step.Component DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Step.Component();
@@ -1476,7 +1476,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ParamOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Step.Param)
+      // @@protoc_insertion_point(interface_extends:debuff.Step.Param)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1546,11 +1546,11 @@ private static final long serialVersionUID = 0L;
         getPathBytes();
   }
   /**
-   * Protobuf type {@code Step.Param}
+   * Protobuf type {@code debuff.Step.Param}
    */
   public static final class Param extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Step.Param)
+      // @@protoc_insertion_point(message_implements:debuff.Step.Param)
       ParamOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Param.newBuilder() to construct.
@@ -1579,13 +1579,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Param_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Param_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Param_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Param_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Step.Param.class, org.cyverse.de.protobufs.Step.Param.Builder.class);
     }
@@ -2002,21 +2002,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Step.Param}
+     * Protobuf type {@code debuff.Step.Param}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Step.Param)
+        // @@protoc_insertion_point(builder_implements:debuff.Step.Param)
         org.cyverse.de.protobufs.Step.ParamOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Param_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Param_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Param_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Param_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Step.Param.class, org.cyverse.de.protobufs.Step.Param.Builder.class);
       }
@@ -2047,7 +2047,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Param_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Param_descriptor;
       }
 
       @java.lang.Override
@@ -2643,10 +2643,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Step.Param)
+      // @@protoc_insertion_point(builder_scope:debuff.Step.Param)
     }
 
-    // @@protoc_insertion_point(class_scope:Step.Param)
+    // @@protoc_insertion_point(class_scope:debuff.Step.Param)
     private static final org.cyverse.de.protobufs.Step.Param DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Step.Param();
@@ -2695,29 +2695,29 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ConfigOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Step.Config)
+      // @@protoc_insertion_point(interface_extends:debuff.Step.Config)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     java.util.List<org.cyverse.de.protobufs.Step.Param> 
         getParamsList();
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     org.cyverse.de.protobufs.Step.Param getParams(int index);
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     int getParamsCount();
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     java.util.List<? extends org.cyverse.de.protobufs.Step.ParamOrBuilder> 
         getParamsOrBuilderList();
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     org.cyverse.de.protobufs.Step.ParamOrBuilder getParamsOrBuilder(
         int index);
@@ -2727,7 +2727,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     java.util.List<org.cyverse.de.protobufs.Step.Input> 
         getInputsList();
@@ -2736,7 +2736,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     org.cyverse.de.protobufs.Step.Input getInputs(int index);
     /**
@@ -2744,7 +2744,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     int getInputsCount();
     /**
@@ -2752,7 +2752,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     java.util.List<? extends org.cyverse.de.protobufs.Step.InputOrBuilder> 
         getInputsOrBuilderList();
@@ -2761,7 +2761,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     org.cyverse.de.protobufs.Step.InputOrBuilder getInputsOrBuilder(
         int index);
@@ -2771,7 +2771,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     java.util.List<org.cyverse.de.protobufs.Step.Output> 
         getOutputsList();
@@ -2780,7 +2780,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     org.cyverse.de.protobufs.Step.Output getOutputs(int index);
     /**
@@ -2788,7 +2788,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     int getOutputsCount();
     /**
@@ -2796,7 +2796,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     java.util.List<? extends org.cyverse.de.protobufs.Step.OutputOrBuilder> 
         getOutputsOrBuilderList();
@@ -2805,17 +2805,17 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code Step.Config}
+   * Protobuf type {@code debuff.Step.Config}
    */
   public static final class Config extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Step.Config)
+      // @@protoc_insertion_point(message_implements:debuff.Step.Config)
       ConfigOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Config.newBuilder() to construct.
@@ -2842,13 +2842,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Config_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Config_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Config_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Config_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Step.Config.class, org.cyverse.de.protobufs.Step.Config.Builder.class);
     }
@@ -2857,14 +2857,14 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private java.util.List<org.cyverse.de.protobufs.Step.Param> params_;
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     @java.lang.Override
     public java.util.List<org.cyverse.de.protobufs.Step.Param> getParamsList() {
       return params_;
     }
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends org.cyverse.de.protobufs.Step.ParamOrBuilder> 
@@ -2872,21 +2872,21 @@ private static final long serialVersionUID = 0L;
       return params_;
     }
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     @java.lang.Override
     public int getParamsCount() {
       return params_.size();
     }
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Step.Param getParams(int index) {
       return params_.get(index);
     }
     /**
-     * <code>repeated .Step.Param params = 1;</code>
+     * <code>repeated .debuff.Step.Param params = 1;</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Step.ParamOrBuilder getParamsOrBuilder(
@@ -2902,7 +2902,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public java.util.List<org.cyverse.de.protobufs.Step.Input> getInputsList() {
@@ -2913,7 +2913,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends org.cyverse.de.protobufs.Step.InputOrBuilder> 
@@ -2925,7 +2925,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public int getInputsCount() {
@@ -2936,7 +2936,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Step.Input getInputs(int index) {
@@ -2947,7 +2947,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+     * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Step.InputOrBuilder getInputsOrBuilder(
@@ -2963,7 +2963,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     @java.lang.Override
     public java.util.List<org.cyverse.de.protobufs.Step.Output> getOutputsList() {
@@ -2974,7 +2974,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends org.cyverse.de.protobufs.Step.OutputOrBuilder> 
@@ -2986,7 +2986,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     @java.lang.Override
     public int getOutputsCount() {
@@ -2997,7 +2997,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Step.Output getOutputs(int index) {
@@ -3008,7 +3008,7 @@ private static final long serialVersionUID = 0L;
      * Keep it singular in the JSON for backwards-compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+     * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputsOrBuilder(
@@ -3200,21 +3200,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Step.Config}
+     * Protobuf type {@code debuff.Step.Config}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Step.Config)
+        // @@protoc_insertion_point(builder_implements:debuff.Step.Config)
         org.cyverse.de.protobufs.Step.ConfigOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Config_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Config_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Config_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Config_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Step.Config.class, org.cyverse.de.protobufs.Step.Config.Builder.class);
       }
@@ -3260,7 +3260,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Config_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Config_descriptor;
       }
 
       @java.lang.Override
@@ -3537,7 +3537,7 @@ private static final long serialVersionUID = 0L;
           org.cyverse.de.protobufs.Step.Param, org.cyverse.de.protobufs.Step.Param.Builder, org.cyverse.de.protobufs.Step.ParamOrBuilder> paramsBuilder_;
 
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public java.util.List<org.cyverse.de.protobufs.Step.Param> getParamsList() {
         if (paramsBuilder_ == null) {
@@ -3547,7 +3547,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public int getParamsCount() {
         if (paramsBuilder_ == null) {
@@ -3557,7 +3557,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public org.cyverse.de.protobufs.Step.Param getParams(int index) {
         if (paramsBuilder_ == null) {
@@ -3567,7 +3567,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder setParams(
           int index, org.cyverse.de.protobufs.Step.Param value) {
@@ -3584,7 +3584,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder setParams(
           int index, org.cyverse.de.protobufs.Step.Param.Builder builderForValue) {
@@ -3598,7 +3598,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder addParams(org.cyverse.de.protobufs.Step.Param value) {
         if (paramsBuilder_ == null) {
@@ -3614,7 +3614,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder addParams(
           int index, org.cyverse.de.protobufs.Step.Param value) {
@@ -3631,7 +3631,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder addParams(
           org.cyverse.de.protobufs.Step.Param.Builder builderForValue) {
@@ -3645,7 +3645,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder addParams(
           int index, org.cyverse.de.protobufs.Step.Param.Builder builderForValue) {
@@ -3659,7 +3659,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder addAllParams(
           java.lang.Iterable<? extends org.cyverse.de.protobufs.Step.Param> values) {
@@ -3674,7 +3674,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder clearParams() {
         if (paramsBuilder_ == null) {
@@ -3687,7 +3687,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public Builder removeParams(int index) {
         if (paramsBuilder_ == null) {
@@ -3700,14 +3700,14 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public org.cyverse.de.protobufs.Step.Param.Builder getParamsBuilder(
           int index) {
         return getParamsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public org.cyverse.de.protobufs.Step.ParamOrBuilder getParamsOrBuilder(
           int index) {
@@ -3717,7 +3717,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public java.util.List<? extends org.cyverse.de.protobufs.Step.ParamOrBuilder> 
            getParamsOrBuilderList() {
@@ -3728,14 +3728,14 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public org.cyverse.de.protobufs.Step.Param.Builder addParamsBuilder() {
         return getParamsFieldBuilder().addBuilder(
             org.cyverse.de.protobufs.Step.Param.getDefaultInstance());
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public org.cyverse.de.protobufs.Step.Param.Builder addParamsBuilder(
           int index) {
@@ -3743,7 +3743,7 @@ private static final long serialVersionUID = 0L;
             index, org.cyverse.de.protobufs.Step.Param.getDefaultInstance());
       }
       /**
-       * <code>repeated .Step.Param params = 1;</code>
+       * <code>repeated .debuff.Step.Param params = 1;</code>
        */
       public java.util.List<org.cyverse.de.protobufs.Step.Param.Builder> 
            getParamsBuilderList() {
@@ -3781,7 +3781,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public java.util.List<org.cyverse.de.protobufs.Step.Input> getInputsList() {
         if (inputsBuilder_ == null) {
@@ -3795,7 +3795,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -3809,7 +3809,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public org.cyverse.de.protobufs.Step.Input getInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3823,7 +3823,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder setInputs(
           int index, org.cyverse.de.protobufs.Step.Input value) {
@@ -3844,7 +3844,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder setInputs(
           int index, org.cyverse.de.protobufs.Step.Input.Builder builderForValue) {
@@ -3862,7 +3862,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder addInputs(org.cyverse.de.protobufs.Step.Input value) {
         if (inputsBuilder_ == null) {
@@ -3882,7 +3882,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder addInputs(
           int index, org.cyverse.de.protobufs.Step.Input value) {
@@ -3903,7 +3903,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder addInputs(
           org.cyverse.de.protobufs.Step.Input.Builder builderForValue) {
@@ -3921,7 +3921,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder addInputs(
           int index, org.cyverse.de.protobufs.Step.Input.Builder builderForValue) {
@@ -3939,7 +3939,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder addAllInputs(
           java.lang.Iterable<? extends org.cyverse.de.protobufs.Step.Input> values) {
@@ -3958,7 +3958,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -3975,7 +3975,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3992,7 +3992,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public org.cyverse.de.protobufs.Step.Input.Builder getInputsBuilder(
           int index) {
@@ -4003,7 +4003,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public org.cyverse.de.protobufs.Step.InputOrBuilder getInputsOrBuilder(
           int index) {
@@ -4017,7 +4017,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public java.util.List<? extends org.cyverse.de.protobufs.Step.InputOrBuilder> 
            getInputsOrBuilderList() {
@@ -4032,7 +4032,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public org.cyverse.de.protobufs.Step.Input.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
@@ -4043,7 +4043,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public org.cyverse.de.protobufs.Step.Input.Builder addInputsBuilder(
           int index) {
@@ -4055,7 +4055,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Input inputs = 2 [json_name = "input"];</code>
+       * <code>repeated .debuff.Step.Input inputs = 2 [json_name = "input"];</code>
        */
       public java.util.List<org.cyverse.de.protobufs.Step.Input.Builder> 
            getInputsBuilderList() {
@@ -4093,7 +4093,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public java.util.List<org.cyverse.de.protobufs.Step.Output> getOutputsList() {
         if (outputsBuilder_ == null) {
@@ -4107,7 +4107,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public int getOutputsCount() {
         if (outputsBuilder_ == null) {
@@ -4121,7 +4121,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public org.cyverse.de.protobufs.Step.Output getOutputs(int index) {
         if (outputsBuilder_ == null) {
@@ -4135,7 +4135,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder setOutputs(
           int index, org.cyverse.de.protobufs.Step.Output value) {
@@ -4156,7 +4156,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder setOutputs(
           int index, org.cyverse.de.protobufs.Step.Output.Builder builderForValue) {
@@ -4174,7 +4174,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder addOutputs(org.cyverse.de.protobufs.Step.Output value) {
         if (outputsBuilder_ == null) {
@@ -4194,7 +4194,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder addOutputs(
           int index, org.cyverse.de.protobufs.Step.Output value) {
@@ -4215,7 +4215,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder addOutputs(
           org.cyverse.de.protobufs.Step.Output.Builder builderForValue) {
@@ -4233,7 +4233,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder addOutputs(
           int index, org.cyverse.de.protobufs.Step.Output.Builder builderForValue) {
@@ -4251,7 +4251,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder addAllOutputs(
           java.lang.Iterable<? extends org.cyverse.de.protobufs.Step.Output> values) {
@@ -4270,7 +4270,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder clearOutputs() {
         if (outputsBuilder_ == null) {
@@ -4287,7 +4287,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public Builder removeOutputs(int index) {
         if (outputsBuilder_ == null) {
@@ -4304,7 +4304,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public org.cyverse.de.protobufs.Step.Output.Builder getOutputsBuilder(
           int index) {
@@ -4315,7 +4315,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputsOrBuilder(
           int index) {
@@ -4329,7 +4329,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public java.util.List<? extends org.cyverse.de.protobufs.Step.OutputOrBuilder> 
            getOutputsOrBuilderList() {
@@ -4344,7 +4344,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public org.cyverse.de.protobufs.Step.Output.Builder addOutputsBuilder() {
         return getOutputsFieldBuilder().addBuilder(
@@ -4355,7 +4355,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public org.cyverse.de.protobufs.Step.Output.Builder addOutputsBuilder(
           int index) {
@@ -4367,7 +4367,7 @@ private static final long serialVersionUID = 0L;
        * Keep it singular in the JSON for backwards-compatibility.
        * </pre>
        *
-       * <code>repeated .Step.Output outputs = 3 [json_name = "output"];</code>
+       * <code>repeated .debuff.Step.Output outputs = 3 [json_name = "output"];</code>
        */
       public java.util.List<org.cyverse.de.protobufs.Step.Output.Builder> 
            getOutputsBuilderList() {
@@ -4400,10 +4400,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Step.Config)
+      // @@protoc_insertion_point(builder_scope:debuff.Step.Config)
     }
 
-    // @@protoc_insertion_point(class_scope:Step.Config)
+    // @@protoc_insertion_point(class_scope:debuff.Step.Config)
     private static final org.cyverse.de.protobufs.Step.Config DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Step.Config();
@@ -4452,7 +4452,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface InputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Step.Input)
+      // @@protoc_insertion_point(interface_extends:debuff.Step.Input)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4546,11 +4546,11 @@ private static final long serialVersionUID = 0L;
         getValueBytes();
   }
   /**
-   * Protobuf type {@code Step.Input}
+   * Protobuf type {@code debuff.Step.Input}
    */
   public static final class Input extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Step.Input)
+      // @@protoc_insertion_point(message_implements:debuff.Step.Input)
       InputOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Input.newBuilder() to construct.
@@ -4581,13 +4581,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Input_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Input_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Input_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Input_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Step.Input.class, org.cyverse.de.protobufs.Step.Input.Builder.class);
     }
@@ -5103,21 +5103,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Step.Input}
+     * Protobuf type {@code debuff.Step.Input}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Step.Input)
+        // @@protoc_insertion_point(builder_implements:debuff.Step.Input)
         org.cyverse.de.protobufs.Step.InputOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Input_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Input_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Input_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Input_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Step.Input.class, org.cyverse.de.protobufs.Step.Input.Builder.class);
       }
@@ -5150,7 +5150,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Input_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Input_descriptor;
       }
 
       @java.lang.Override
@@ -5916,10 +5916,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Step.Input)
+      // @@protoc_insertion_point(builder_scope:debuff.Step.Input)
     }
 
-    // @@protoc_insertion_point(class_scope:Step.Input)
+    // @@protoc_insertion_point(class_scope:debuff.Step.Input)
     private static final org.cyverse.de.protobufs.Step.Input DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Step.Input();
@@ -5968,7 +5968,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OutputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Step.Output)
+      // @@protoc_insertion_point(interface_extends:debuff.Step.Output)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6038,11 +6038,11 @@ private static final long serialVersionUID = 0L;
         getTypeBytes();
   }
   /**
-   * Protobuf type {@code Step.Output}
+   * Protobuf type {@code debuff.Step.Output}
    */
   public static final class Output extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Step.Output)
+      // @@protoc_insertion_point(message_implements:debuff.Step.Output)
       OutputOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Output.newBuilder() to construct.
@@ -6071,13 +6071,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Output_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Output_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Output_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Output_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Step.Output.class, org.cyverse.de.protobufs.Step.Output.Builder.class);
     }
@@ -6495,21 +6495,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Step.Output}
+     * Protobuf type {@code debuff.Step.Output}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Step.Output)
+        // @@protoc_insertion_point(builder_implements:debuff.Step.Output)
         org.cyverse.de.protobufs.Step.OutputOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Output_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Output_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Output_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Output_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Step.Output.class, org.cyverse.de.protobufs.Step.Output.Builder.class);
       }
@@ -6540,7 +6540,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_Output_descriptor;
+        return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_Output_descriptor;
       }
 
       @java.lang.Override
@@ -7136,10 +7136,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Step.Output)
+      // @@protoc_insertion_point(builder_scope:debuff.Step.Output)
     }
 
-    // @@protoc_insertion_point(class_scope:Step.Output)
+    // @@protoc_insertion_point(class_scope:debuff.Step.Output)
     private static final org.cyverse.de.protobufs.Step.Output DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Step.Output();
@@ -7190,7 +7190,7 @@ private static final long serialVersionUID = 0L;
   public static final int COMPONENT_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Step.Component component_;
   /**
-   * <code>.Step.Component component = 1;</code>
+   * <code>.debuff.Step.Component component = 1;</code>
    * @return Whether the component field is set.
    */
   @java.lang.Override
@@ -7198,7 +7198,7 @@ private static final long serialVersionUID = 0L;
     return component_ != null;
   }
   /**
-   * <code>.Step.Component component = 1;</code>
+   * <code>.debuff.Step.Component component = 1;</code>
    * @return The component.
    */
   @java.lang.Override
@@ -7206,7 +7206,7 @@ private static final long serialVersionUID = 0L;
     return component_ == null ? org.cyverse.de.protobufs.Step.Component.getDefaultInstance() : component_;
   }
   /**
-   * <code>.Step.Component component = 1;</code>
+   * <code>.debuff.Step.Component component = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step.ComponentOrBuilder getComponentOrBuilder() {
@@ -7216,7 +7216,7 @@ private static final long serialVersionUID = 0L;
   public static final int CONFIG_FIELD_NUMBER = 2;
   private org.cyverse.de.protobufs.Step.Config config_;
   /**
-   * <code>.Step.Config config = 2;</code>
+   * <code>.debuff.Step.Config config = 2;</code>
    * @return Whether the config field is set.
    */
   @java.lang.Override
@@ -7224,7 +7224,7 @@ private static final long serialVersionUID = 0L;
     return config_ != null;
   }
   /**
-   * <code>.Step.Config config = 2;</code>
+   * <code>.debuff.Step.Config config = 2;</code>
    * @return The config.
    */
   @java.lang.Override
@@ -7232,7 +7232,7 @@ private static final long serialVersionUID = 0L;
     return config_ == null ? org.cyverse.de.protobufs.Step.Config.getDefaultInstance() : config_;
   }
   /**
-   * <code>.Step.Config config = 2;</code>
+   * <code>.debuff.Step.Config config = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step.ConfigOrBuilder getConfigOrBuilder() {
@@ -7440,7 +7440,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, java.lang.String> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, java.lang.String>newDefaultInstance(
-                org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_EnvironmentEntry_descriptor, 
+                org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_EnvironmentEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.STRING,
@@ -7521,7 +7521,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Step.Input> getInputList() {
@@ -7532,7 +7532,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.Step.InputOrBuilder> 
@@ -7544,7 +7544,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   @java.lang.Override
   public int getInputCount() {
@@ -7555,7 +7555,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step.Input getInput(int index) {
@@ -7566,7 +7566,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Input input = 9;</code>
+   * <code>repeated .debuff.Step.Input input = 9;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step.InputOrBuilder getInputOrBuilder(
@@ -7582,7 +7582,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Step.Output> getOutputList() {
@@ -7593,7 +7593,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.Step.OutputOrBuilder> 
@@ -7605,7 +7605,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   @java.lang.Override
   public int getOutputCount() {
@@ -7616,7 +7616,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step.Output getOutput(int index) {
@@ -7627,7 +7627,7 @@ java.lang.String defaultValue) {
    * It's really annoying, but this is singular for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .Step.Output output = 10;</code>
+   * <code>repeated .debuff.Step.Output output = 10;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputOrBuilder(
@@ -7638,7 +7638,7 @@ java.lang.String defaultValue) {
   public static final int HEADER_FIELD_NUMBER = 11;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.Header header = 11;</code>
+   * <code>.debuff.Header header = 11;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -7646,7 +7646,7 @@ java.lang.String defaultValue) {
     return header_ != null;
   }
   /**
-   * <code>.Header header = 11;</code>
+   * <code>.debuff.Header header = 11;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -7654,7 +7654,7 @@ java.lang.String defaultValue) {
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.Header header = 11;</code>
+   * <code>.debuff.Header header = 11;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -7952,15 +7952,15 @@ java.lang.String defaultValue) {
     return builder;
   }
   /**
-   * Protobuf type {@code Step}
+   * Protobuf type {@code debuff.Step}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Step)
+      // @@protoc_insertion_point(builder_implements:debuff.Step)
       org.cyverse.de.protobufs.StepOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -7988,7 +7988,7 @@ java.lang.String defaultValue) {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Step.class, org.cyverse.de.protobufs.Step.Builder.class);
     }
@@ -8048,7 +8048,7 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Step_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Step_descriptor;
     }
 
     @java.lang.Override
@@ -8394,14 +8394,14 @@ java.lang.String defaultValue) {
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Step.Component, org.cyverse.de.protobufs.Step.Component.Builder, org.cyverse.de.protobufs.Step.ComponentOrBuilder> componentBuilder_;
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      * @return Whether the component field is set.
      */
     public boolean hasComponent() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      * @return The component.
      */
     public org.cyverse.de.protobufs.Step.Component getComponent() {
@@ -8412,7 +8412,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     public Builder setComponent(org.cyverse.de.protobufs.Step.Component value) {
       if (componentBuilder_ == null) {
@@ -8428,7 +8428,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     public Builder setComponent(
         org.cyverse.de.protobufs.Step.Component.Builder builderForValue) {
@@ -8442,7 +8442,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     public Builder mergeComponent(org.cyverse.de.protobufs.Step.Component value) {
       if (componentBuilder_ == null) {
@@ -8461,7 +8461,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     public Builder clearComponent() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -8474,7 +8474,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     public org.cyverse.de.protobufs.Step.Component.Builder getComponentBuilder() {
       bitField0_ |= 0x00000001;
@@ -8482,7 +8482,7 @@ java.lang.String defaultValue) {
       return getComponentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     public org.cyverse.de.protobufs.Step.ComponentOrBuilder getComponentOrBuilder() {
       if (componentBuilder_ != null) {
@@ -8493,7 +8493,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>.Step.Component component = 1;</code>
+     * <code>.debuff.Step.Component component = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Step.Component, org.cyverse.de.protobufs.Step.Component.Builder, org.cyverse.de.protobufs.Step.ComponentOrBuilder> 
@@ -8513,14 +8513,14 @@ java.lang.String defaultValue) {
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Step.Config, org.cyverse.de.protobufs.Step.Config.Builder, org.cyverse.de.protobufs.Step.ConfigOrBuilder> configBuilder_;
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      * @return Whether the config field is set.
      */
     public boolean hasConfig() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      * @return The config.
      */
     public org.cyverse.de.protobufs.Step.Config getConfig() {
@@ -8531,7 +8531,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     public Builder setConfig(org.cyverse.de.protobufs.Step.Config value) {
       if (configBuilder_ == null) {
@@ -8547,7 +8547,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     public Builder setConfig(
         org.cyverse.de.protobufs.Step.Config.Builder builderForValue) {
@@ -8561,7 +8561,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     public Builder mergeConfig(org.cyverse.de.protobufs.Step.Config value) {
       if (configBuilder_ == null) {
@@ -8580,7 +8580,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     public Builder clearConfig() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -8593,7 +8593,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     public org.cyverse.de.protobufs.Step.Config.Builder getConfigBuilder() {
       bitField0_ |= 0x00000002;
@@ -8601,7 +8601,7 @@ java.lang.String defaultValue) {
       return getConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     public org.cyverse.de.protobufs.Step.ConfigOrBuilder getConfigOrBuilder() {
       if (configBuilder_ != null) {
@@ -8612,7 +8612,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>.Step.Config config = 2;</code>
+     * <code>.debuff.Step.Config config = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Step.Config, org.cyverse.de.protobufs.Step.Config.Builder, org.cyverse.de.protobufs.Step.ConfigOrBuilder> 
@@ -9132,7 +9132,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Step.Input> getInputList() {
       if (inputBuilder_ == null) {
@@ -9146,7 +9146,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public int getInputCount() {
       if (inputBuilder_ == null) {
@@ -9160,7 +9160,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public org.cyverse.de.protobufs.Step.Input getInput(int index) {
       if (inputBuilder_ == null) {
@@ -9174,7 +9174,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder setInput(
         int index, org.cyverse.de.protobufs.Step.Input value) {
@@ -9195,7 +9195,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder setInput(
         int index, org.cyverse.de.protobufs.Step.Input.Builder builderForValue) {
@@ -9213,7 +9213,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder addInput(org.cyverse.de.protobufs.Step.Input value) {
       if (inputBuilder_ == null) {
@@ -9233,7 +9233,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder addInput(
         int index, org.cyverse.de.protobufs.Step.Input value) {
@@ -9254,7 +9254,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder addInput(
         org.cyverse.de.protobufs.Step.Input.Builder builderForValue) {
@@ -9272,7 +9272,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder addInput(
         int index, org.cyverse.de.protobufs.Step.Input.Builder builderForValue) {
@@ -9290,7 +9290,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder addAllInput(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Step.Input> values) {
@@ -9309,7 +9309,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder clearInput() {
       if (inputBuilder_ == null) {
@@ -9326,7 +9326,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public Builder removeInput(int index) {
       if (inputBuilder_ == null) {
@@ -9343,7 +9343,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public org.cyverse.de.protobufs.Step.Input.Builder getInputBuilder(
         int index) {
@@ -9354,7 +9354,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public org.cyverse.de.protobufs.Step.InputOrBuilder getInputOrBuilder(
         int index) {
@@ -9368,7 +9368,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.Step.InputOrBuilder> 
          getInputOrBuilderList() {
@@ -9383,7 +9383,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public org.cyverse.de.protobufs.Step.Input.Builder addInputBuilder() {
       return getInputFieldBuilder().addBuilder(
@@ -9394,7 +9394,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public org.cyverse.de.protobufs.Step.Input.Builder addInputBuilder(
         int index) {
@@ -9406,7 +9406,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Input input = 9;</code>
+     * <code>repeated .debuff.Step.Input input = 9;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Step.Input.Builder> 
          getInputBuilderList() {
@@ -9444,7 +9444,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Step.Output> getOutputList() {
       if (outputBuilder_ == null) {
@@ -9458,7 +9458,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public int getOutputCount() {
       if (outputBuilder_ == null) {
@@ -9472,7 +9472,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public org.cyverse.de.protobufs.Step.Output getOutput(int index) {
       if (outputBuilder_ == null) {
@@ -9486,7 +9486,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder setOutput(
         int index, org.cyverse.de.protobufs.Step.Output value) {
@@ -9507,7 +9507,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder setOutput(
         int index, org.cyverse.de.protobufs.Step.Output.Builder builderForValue) {
@@ -9525,7 +9525,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder addOutput(org.cyverse.de.protobufs.Step.Output value) {
       if (outputBuilder_ == null) {
@@ -9545,7 +9545,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder addOutput(
         int index, org.cyverse.de.protobufs.Step.Output value) {
@@ -9566,7 +9566,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder addOutput(
         org.cyverse.de.protobufs.Step.Output.Builder builderForValue) {
@@ -9584,7 +9584,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder addOutput(
         int index, org.cyverse.de.protobufs.Step.Output.Builder builderForValue) {
@@ -9602,7 +9602,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder addAllOutput(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Step.Output> values) {
@@ -9621,7 +9621,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder clearOutput() {
       if (outputBuilder_ == null) {
@@ -9638,7 +9638,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public Builder removeOutput(int index) {
       if (outputBuilder_ == null) {
@@ -9655,7 +9655,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public org.cyverse.de.protobufs.Step.Output.Builder getOutputBuilder(
         int index) {
@@ -9666,7 +9666,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputOrBuilder(
         int index) {
@@ -9680,7 +9680,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.Step.OutputOrBuilder> 
          getOutputOrBuilderList() {
@@ -9695,7 +9695,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public org.cyverse.de.protobufs.Step.Output.Builder addOutputBuilder() {
       return getOutputFieldBuilder().addBuilder(
@@ -9706,7 +9706,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public org.cyverse.de.protobufs.Step.Output.Builder addOutputBuilder(
         int index) {
@@ -9718,7 +9718,7 @@ java.lang.String defaultValue) {
      * It's really annoying, but this is singular for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .Step.Output output = 10;</code>
+     * <code>repeated .debuff.Step.Output output = 10;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Step.Output.Builder> 
          getOutputBuilderList() {
@@ -9743,14 +9743,14 @@ java.lang.String defaultValue) {
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00000400) != 0);
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -9761,7 +9761,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -9777,7 +9777,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -9791,7 +9791,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -9810,7 +9810,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000400);
@@ -9823,7 +9823,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000400;
@@ -9831,7 +9831,7 @@ java.lang.String defaultValue) {
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -9842,7 +9842,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>.Header header = 11;</code>
+     * <code>.debuff.Header header = 11;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -9870,10 +9870,10 @@ java.lang.String defaultValue) {
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Step)
+    // @@protoc_insertion_point(builder_scope:debuff.Step)
   }
 
-  // @@protoc_insertion_point(class_scope:Step)
+  // @@protoc_insertion_point(class_scope:debuff.Step)
   private static final org.cyverse.de.protobufs.Step DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Step();

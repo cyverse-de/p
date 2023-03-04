@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A representation of how much a user has used a resource type.
  * </pre>
  *
- * Protobuf type {@code Usage}
+ * Protobuf type {@code debuff.Usage}
  */
 public final class Usage extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Usage)
+    // @@protoc_insertion_point(message_implements:debuff.Usage)
     UsageOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Usage.newBuilder() to construct.
@@ -41,13 +41,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_Usage_descriptor;
+    return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_debuff_Usage_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_Usage_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_debuff_Usage_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Usage.class, org.cyverse.de.protobufs.Usage.Builder.class);
   }
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * The resource type the usage applies to.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * The resource type the usage applies to.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   @java.lang.Override
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    * The resource type the usage applies to.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -620,21 +620,21 @@ private static final long serialVersionUID = 0L;
    * A representation of how much a user has used a resource type.
    * </pre>
    *
-   * Protobuf type {@code Usage}
+   * Protobuf type {@code debuff.Usage}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Usage)
+      // @@protoc_insertion_point(builder_implements:debuff.Usage)
       org.cyverse.de.protobufs.UsageOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_Usage_descriptor;
+      return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_debuff_Usage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_Usage_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_debuff_Usage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Usage.class, org.cyverse.de.protobufs.Usage.Builder.class);
     }
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_Usage_descriptor;
+      return org.cyverse.de.protobufs.QMSUsageProtobufs.internal_static_debuff_Usage_descriptor;
     }
 
     @java.lang.Override
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
     public boolean hasResourceType() {
@@ -1150,7 +1150,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
     public org.cyverse.de.protobufs.ResourceType getResourceType() {
@@ -1165,7 +1165,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypeBuilder_ == null) {
@@ -1185,7 +1185,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
         org.cyverse.de.protobufs.ResourceType.Builder builderForValue) {
@@ -1203,7 +1203,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypeBuilder_ == null) {
@@ -1226,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -1243,7 +1243,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
       bitField0_ |= 0x00000008;
@@ -1255,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
       if (resourceTypeBuilder_ != null) {
@@ -1270,7 +1270,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the usage applies to.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> 
@@ -1792,10 +1792,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Usage)
+    // @@protoc_insertion_point(builder_scope:debuff.Usage)
   }
 
-  // @@protoc_insertion_point(class_scope:Usage)
+  // @@protoc_insertion_point(class_scope:debuff.Usage)
   private static final org.cyverse.de.protobufs.Usage DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Usage();

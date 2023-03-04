@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface AddQuotaRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:AddQuotaRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.AddQuotaRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface AddQuotaRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface AddQuotaRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface AddQuotaRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface AddQuotaRequestOrBuilder extends
    * The quota to be added to the system.
    * </pre>
    *
-   * <code>.Quota quota = 2;</code>
+   * <code>.debuff.Quota quota = 2;</code>
    * @return Whether the quota field is set.
    */
   boolean hasQuota();
@@ -48,7 +48,7 @@ public interface AddQuotaRequestOrBuilder extends
    * The quota to be added to the system.
    * </pre>
    *
-   * <code>.Quota quota = 2;</code>
+   * <code>.debuff.Quota quota = 2;</code>
    * @return The quota.
    */
   org.cyverse.de.protobufs.Quota getQuota();
@@ -57,7 +57,7 @@ public interface AddQuotaRequestOrBuilder extends
    * The quota to be added to the system.
    * </pre>
    *
-   * <code>.Quota quota = 2;</code>
+   * <code>.debuff.Quota quota = 2;</code>
    */
   org.cyverse.de.protobufs.QuotaOrBuilder getQuotaOrBuilder();
 }

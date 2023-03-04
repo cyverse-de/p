@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code HTCondorExtraInfo}
+ * Protobuf type {@code debuff.HTCondorExtraInfo}
  */
 public final class HTCondorExtraInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:HTCondorExtraInfo)
+    // @@protoc_insertion_point(message_implements:debuff.HTCondorExtraInfo)
     HTCondorExtraInfoOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use HTCondorExtraInfo.newBuilder() to construct.
@@ -33,13 +33,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_HTCondorExtraInfo_descriptor;
+    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_HTCondorExtraInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_HTCondorExtraInfo_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_HTCondorExtraInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.HTCondorExtraInfo.class, org.cyverse.de.protobufs.HTCondorExtraInfo.Builder.class);
   }
@@ -238,21 +238,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code HTCondorExtraInfo}
+   * Protobuf type {@code debuff.HTCondorExtraInfo}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:HTCondorExtraInfo)
+      // @@protoc_insertion_point(builder_implements:debuff.HTCondorExtraInfo)
       org.cyverse.de.protobufs.HTCondorExtraInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_HTCondorExtraInfo_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_HTCondorExtraInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_HTCondorExtraInfo_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_HTCondorExtraInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.HTCondorExtraInfo.class, org.cyverse.de.protobufs.HTCondorExtraInfo.Builder.class);
     }
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_HTCondorExtraInfo_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_HTCondorExtraInfo_descriptor;
     }
 
     @java.lang.Override
@@ -491,10 +491,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:HTCondorExtraInfo)
+    // @@protoc_insertion_point(builder_scope:debuff.HTCondorExtraInfo)
   }
 
-  // @@protoc_insertion_point(class_scope:HTCondorExtraInfo)
+  // @@protoc_insertion_point(class_scope:debuff.HTCondorExtraInfo)
   private static final org.cyverse.de.protobufs.HTCondorExtraInfo DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.HTCondorExtraInfo();

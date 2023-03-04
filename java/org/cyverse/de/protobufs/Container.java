@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code Container}
+ * Protobuf type {@code debuff.Container}
  */
 public final class Container extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Container)
+    // @@protoc_insertion_point(message_implements:debuff.Container)
     ContainerOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Container.newBuilder() to construct.
@@ -41,19 +41,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_descriptor;
+    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Container.class, org.cyverse.de.protobufs.Container.Builder.class);
   }
 
   public interface VolumeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Container.Volume)
+      // @@protoc_insertion_point(interface_extends:debuff.Container.Volume)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -99,11 +99,11 @@ private static final long serialVersionUID = 0L;
         getModeBytes();
   }
   /**
-   * Protobuf type {@code Container.Volume}
+   * Protobuf type {@code debuff.Container.Volume}
    */
   public static final class Volume extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Container.Volume)
+      // @@protoc_insertion_point(message_implements:debuff.Container.Volume)
       VolumeOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Volume.newBuilder() to construct.
@@ -130,13 +130,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Volume_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Volume_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Volume_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Volume_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Container.Volume.class, org.cyverse.de.protobufs.Container.Volume.Builder.class);
     }
@@ -456,21 +456,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Container.Volume}
+     * Protobuf type {@code debuff.Container.Volume}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Container.Volume)
+        // @@protoc_insertion_point(builder_implements:debuff.Container.Volume)
         org.cyverse.de.protobufs.Container.VolumeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Volume_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Volume_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Volume_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Volume_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Container.Volume.class, org.cyverse.de.protobufs.Container.Volume.Builder.class);
       }
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Volume_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Volume_descriptor;
       }
 
       @java.lang.Override
@@ -925,10 +925,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Container.Volume)
+      // @@protoc_insertion_point(builder_scope:debuff.Container.Volume)
     }
 
-    // @@protoc_insertion_point(class_scope:Container.Volume)
+    // @@protoc_insertion_point(class_scope:debuff.Container.Volume)
     private static final org.cyverse.de.protobufs.Container.Volume DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Container.Volume();
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface PortOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Container.Port)
+      // @@protoc_insertion_point(interface_extends:debuff.Container.Port)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -999,11 +999,11 @@ private static final long serialVersionUID = 0L;
     boolean getBindToHost();
   }
   /**
-   * Protobuf type {@code Container.Port}
+   * Protobuf type {@code debuff.Container.Port}
    */
   public static final class Port extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Container.Port)
+      // @@protoc_insertion_point(message_implements:debuff.Container.Port)
       PortOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Port.newBuilder() to construct.
@@ -1027,13 +1027,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Port_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Port_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Port_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Port_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Container.Port.class, org.cyverse.de.protobufs.Container.Port.Builder.class);
     }
@@ -1250,21 +1250,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Container.Port}
+     * Protobuf type {@code debuff.Container.Port}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Container.Port)
+        // @@protoc_insertion_point(builder_implements:debuff.Container.Port)
         org.cyverse.de.protobufs.Container.PortOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Port_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Port_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Port_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Port_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Container.Port.class, org.cyverse.de.protobufs.Container.Port.Builder.class);
       }
@@ -1292,7 +1292,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Port_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Port_descriptor;
       }
 
       @java.lang.Override
@@ -1549,10 +1549,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Container.Port)
+      // @@protoc_insertion_point(builder_scope:debuff.Container.Port)
     }
 
-    // @@protoc_insertion_point(class_scope:Container.Port)
+    // @@protoc_insertion_point(class_scope:debuff.Container.Port)
     private static final org.cyverse.de.protobufs.Container.Port DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Container.Port();
@@ -1601,7 +1601,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface DeviceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Container.Device)
+      // @@protoc_insertion_point(interface_extends:debuff.Container.Device)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1641,11 +1641,11 @@ private static final long serialVersionUID = 0L;
         getCgroupPermissionsBytes();
   }
   /**
-   * Protobuf type {@code Container.Device}
+   * Protobuf type {@code debuff.Container.Device}
    */
   public static final class Device extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Container.Device)
+      // @@protoc_insertion_point(message_implements:debuff.Container.Device)
       DeviceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Device.newBuilder() to construct.
@@ -1672,13 +1672,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Device_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Device_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Device_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Device_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Container.Device.class, org.cyverse.de.protobufs.Container.Device.Builder.class);
     }
@@ -1975,21 +1975,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Container.Device}
+     * Protobuf type {@code debuff.Container.Device}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Container.Device)
+        // @@protoc_insertion_point(builder_implements:debuff.Container.Device)
         org.cyverse.de.protobufs.Container.DeviceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Device_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Device_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Device_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Device_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Container.Device.class, org.cyverse.de.protobufs.Container.Device.Builder.class);
       }
@@ -2017,7 +2017,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Device_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Device_descriptor;
       }
 
       @java.lang.Override
@@ -2400,10 +2400,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Container.Device)
+      // @@protoc_insertion_point(builder_scope:debuff.Container.Device)
     }
 
-    // @@protoc_insertion_point(class_scope:Container.Device)
+    // @@protoc_insertion_point(class_scope:debuff.Container.Device)
     private static final org.cyverse.de.protobufs.Container.Device DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Container.Device();
@@ -2452,7 +2452,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface VolumesFromOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Container.VolumesFrom)
+      // @@protoc_insertion_point(interface_extends:debuff.Container.VolumesFrom)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2546,11 +2546,11 @@ private static final long serialVersionUID = 0L;
     boolean getReadOnly();
   }
   /**
-   * Protobuf type {@code Container.VolumesFrom}
+   * Protobuf type {@code debuff.Container.VolumesFrom}
    */
   public static final class VolumesFrom extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Container.VolumesFrom)
+      // @@protoc_insertion_point(message_implements:debuff.Container.VolumesFrom)
       VolumesFromOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use VolumesFrom.newBuilder() to construct.
@@ -2581,13 +2581,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_VolumesFrom_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_VolumesFrom_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_VolumesFrom_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_VolumesFrom_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Container.VolumesFrom.class, org.cyverse.de.protobufs.Container.VolumesFrom.Builder.class);
     }
@@ -3103,21 +3103,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Container.VolumesFrom}
+     * Protobuf type {@code debuff.Container.VolumesFrom}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Container.VolumesFrom)
+        // @@protoc_insertion_point(builder_implements:debuff.Container.VolumesFrom)
         org.cyverse.de.protobufs.Container.VolumesFromOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_VolumesFrom_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_VolumesFrom_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_VolumesFrom_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_VolumesFrom_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Container.VolumesFrom.class, org.cyverse.de.protobufs.Container.VolumesFrom.Builder.class);
       }
@@ -3150,7 +3150,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_VolumesFrom_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_VolumesFrom_descriptor;
       }
 
       @java.lang.Override
@@ -3916,10 +3916,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Container.VolumesFrom)
+      // @@protoc_insertion_point(builder_scope:debuff.Container.VolumesFrom)
     }
 
-    // @@protoc_insertion_point(class_scope:Container.VolumesFrom)
+    // @@protoc_insertion_point(class_scope:debuff.Container.VolumesFrom)
     private static final org.cyverse.de.protobufs.Container.VolumesFrom DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Container.VolumesFrom();
@@ -3968,7 +3968,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ImageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Container.Image)
+      // @@protoc_insertion_point(interface_extends:debuff.Container.Image)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4044,11 +4044,11 @@ private static final long serialVersionUID = 0L;
         getOsgImagePathBytes();
   }
   /**
-   * Protobuf type {@code Container.Image}
+   * Protobuf type {@code debuff.Container.Image}
    */
   public static final class Image extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Container.Image)
+      // @@protoc_insertion_point(message_implements:debuff.Container.Image)
       ImageOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Image.newBuilder() to construct.
@@ -4078,13 +4078,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Image_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Image_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Image_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Image_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Container.Image.class, org.cyverse.de.protobufs.Container.Image.Builder.class);
     }
@@ -4528,21 +4528,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code Container.Image}
+     * Protobuf type {@code debuff.Container.Image}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Container.Image)
+        // @@protoc_insertion_point(builder_implements:debuff.Container.Image)
         org.cyverse.de.protobufs.Container.ImageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Image_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Image_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Image_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Image_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Container.Image.class, org.cyverse.de.protobufs.Container.Image.Builder.class);
       }
@@ -4573,7 +4573,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_Image_descriptor;
+        return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_Image_descriptor;
       }
 
       @java.lang.Override
@@ -5211,10 +5211,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:Container.Image)
+      // @@protoc_insertion_point(builder_scope:debuff.Container.Image)
     }
 
-    // @@protoc_insertion_point(class_scope:Container.Image)
+    // @@protoc_insertion_point(class_scope:debuff.Container.Image)
     private static final org.cyverse.de.protobufs.Container.Image DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Container.Image();
@@ -5305,14 +5305,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.Container.Volume> volumes_;
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Container.Volume> getVolumesList() {
     return volumes_;
   }
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.Container.VolumeOrBuilder> 
@@ -5320,21 +5320,21 @@ private static final long serialVersionUID = 0L;
     return volumes_;
   }
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   @java.lang.Override
   public int getVolumesCount() {
     return volumes_.size();
   }
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.Volume getVolumes(int index) {
     return volumes_.get(index);
   }
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.VolumeOrBuilder getVolumesOrBuilder(
@@ -5346,14 +5346,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.Container.Device> devices_;
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Container.Device> getDevicesList() {
     return devices_;
   }
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.Container.DeviceOrBuilder> 
@@ -5361,21 +5361,21 @@ private static final long serialVersionUID = 0L;
     return devices_;
   }
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   @java.lang.Override
   public int getDevicesCount() {
     return devices_.size();
   }
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.Device getDevices(int index) {
     return devices_.get(index);
   }
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.DeviceOrBuilder getDevicesOrBuilder(
@@ -5387,14 +5387,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.Container.VolumesFrom> volumesFrom_;
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Container.VolumesFrom> getVolumesFromList() {
     return volumesFrom_;
   }
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.Container.VolumesFromOrBuilder> 
@@ -5402,21 +5402,21 @@ private static final long serialVersionUID = 0L;
     return volumesFrom_;
   }
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   @java.lang.Override
   public int getVolumesFromCount() {
     return volumesFrom_.size();
   }
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.VolumesFrom getVolumesFrom(int index) {
     return volumesFrom_.get(index);
   }
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.VolumesFromOrBuilder getVolumesFromOrBuilder(
@@ -5516,7 +5516,7 @@ private static final long serialVersionUID = 0L;
   public static final int INTERACTIVE_APPS_FIELD_NUMBER = 8;
   private org.cyverse.de.protobufs.InteractiveApps interactiveApps_;
   /**
-   * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+   * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
    * @return Whether the interactiveApps field is set.
    */
   @java.lang.Override
@@ -5524,7 +5524,7 @@ private static final long serialVersionUID = 0L;
     return interactiveApps_ != null;
   }
   /**
-   * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+   * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
    * @return The interactiveApps.
    */
   @java.lang.Override
@@ -5532,7 +5532,7 @@ private static final long serialVersionUID = 0L;
     return interactiveApps_ == null ? org.cyverse.de.protobufs.InteractiveApps.getDefaultInstance() : interactiveApps_;
   }
   /**
-   * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+   * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.InteractiveAppsOrBuilder getInteractiveAppsOrBuilder() {
@@ -5608,7 +5608,7 @@ private static final long serialVersionUID = 0L;
   public static final int IMAGE_FIELD_NUMBER = 15;
   private org.cyverse.de.protobufs.Container.Image image_;
   /**
-   * <code>.Container.Image image = 15;</code>
+   * <code>.debuff.Container.Image image = 15;</code>
    * @return Whether the image field is set.
    */
   @java.lang.Override
@@ -5616,7 +5616,7 @@ private static final long serialVersionUID = 0L;
     return image_ != null;
   }
   /**
-   * <code>.Container.Image image = 15;</code>
+   * <code>.debuff.Container.Image image = 15;</code>
    * @return The image.
    */
   @java.lang.Override
@@ -5624,7 +5624,7 @@ private static final long serialVersionUID = 0L;
     return image_ == null ? org.cyverse.de.protobufs.Container.Image.getDefaultInstance() : image_;
   }
   /**
-   * <code>.Container.Image image = 15;</code>
+   * <code>.debuff.Container.Image image = 15;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.ImageOrBuilder getImageOrBuilder() {
@@ -5713,14 +5713,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.Container.Port> ports_;
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Container.Port> getPortsList() {
     return ports_;
   }
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.Container.PortOrBuilder> 
@@ -5728,21 +5728,21 @@ private static final long serialVersionUID = 0L;
     return ports_;
   }
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   @java.lang.Override
   public int getPortsCount() {
     return ports_.size();
   }
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.Port getPorts(int index) {
     return ports_.get(index);
   }
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Container.PortOrBuilder getPortsOrBuilder(
@@ -5775,7 +5775,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 21;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.Header header = 21;</code>
+   * <code>.debuff.Header header = 21;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -5783,7 +5783,7 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
-   * <code>.Header header = 21;</code>
+   * <code>.debuff.Header header = 21;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -5791,7 +5791,7 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.Header header = 21;</code>
+   * <code>.debuff.Header header = 21;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -6202,21 +6202,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code Container}
+   * Protobuf type {@code debuff.Container}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Container)
+      // @@protoc_insertion_point(builder_implements:debuff.Container)
       org.cyverse.de.protobufs.ContainerOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Container.class, org.cyverse.de.protobufs.Container.Builder.class);
     }
@@ -6298,7 +6298,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_Container_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_Container_descriptor;
     }
 
     @java.lang.Override
@@ -6904,7 +6904,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Container.Volume, org.cyverse.de.protobufs.Container.Volume.Builder, org.cyverse.de.protobufs.Container.VolumeOrBuilder> volumesBuilder_;
 
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.Volume> getVolumesList() {
       if (volumesBuilder_ == null) {
@@ -6914,7 +6914,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public int getVolumesCount() {
       if (volumesBuilder_ == null) {
@@ -6924,7 +6924,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public org.cyverse.de.protobufs.Container.Volume getVolumes(int index) {
       if (volumesBuilder_ == null) {
@@ -6934,7 +6934,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder setVolumes(
         int index, org.cyverse.de.protobufs.Container.Volume value) {
@@ -6951,7 +6951,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder setVolumes(
         int index, org.cyverse.de.protobufs.Container.Volume.Builder builderForValue) {
@@ -6965,7 +6965,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder addVolumes(org.cyverse.de.protobufs.Container.Volume value) {
       if (volumesBuilder_ == null) {
@@ -6981,7 +6981,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder addVolumes(
         int index, org.cyverse.de.protobufs.Container.Volume value) {
@@ -6998,7 +6998,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder addVolumes(
         org.cyverse.de.protobufs.Container.Volume.Builder builderForValue) {
@@ -7012,7 +7012,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder addVolumes(
         int index, org.cyverse.de.protobufs.Container.Volume.Builder builderForValue) {
@@ -7026,7 +7026,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder addAllVolumes(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Container.Volume> values) {
@@ -7041,7 +7041,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder clearVolumes() {
       if (volumesBuilder_ == null) {
@@ -7054,7 +7054,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public Builder removeVolumes(int index) {
       if (volumesBuilder_ == null) {
@@ -7067,14 +7067,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public org.cyverse.de.protobufs.Container.Volume.Builder getVolumesBuilder(
         int index) {
       return getVolumesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public org.cyverse.de.protobufs.Container.VolumeOrBuilder getVolumesOrBuilder(
         int index) {
@@ -7084,7 +7084,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.Container.VolumeOrBuilder> 
          getVolumesOrBuilderList() {
@@ -7095,14 +7095,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public org.cyverse.de.protobufs.Container.Volume.Builder addVolumesBuilder() {
       return getVolumesFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.Container.Volume.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public org.cyverse.de.protobufs.Container.Volume.Builder addVolumesBuilder(
         int index) {
@@ -7110,7 +7110,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.Container.Volume.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+     * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.Volume.Builder> 
          getVolumesBuilderList() {
@@ -7144,7 +7144,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Container.Device, org.cyverse.de.protobufs.Container.Device.Builder, org.cyverse.de.protobufs.Container.DeviceOrBuilder> devicesBuilder_;
 
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.Device> getDevicesList() {
       if (devicesBuilder_ == null) {
@@ -7154,7 +7154,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public int getDevicesCount() {
       if (devicesBuilder_ == null) {
@@ -7164,7 +7164,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public org.cyverse.de.protobufs.Container.Device getDevices(int index) {
       if (devicesBuilder_ == null) {
@@ -7174,7 +7174,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder setDevices(
         int index, org.cyverse.de.protobufs.Container.Device value) {
@@ -7191,7 +7191,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder setDevices(
         int index, org.cyverse.de.protobufs.Container.Device.Builder builderForValue) {
@@ -7205,7 +7205,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder addDevices(org.cyverse.de.protobufs.Container.Device value) {
       if (devicesBuilder_ == null) {
@@ -7221,7 +7221,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder addDevices(
         int index, org.cyverse.de.protobufs.Container.Device value) {
@@ -7238,7 +7238,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder addDevices(
         org.cyverse.de.protobufs.Container.Device.Builder builderForValue) {
@@ -7252,7 +7252,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder addDevices(
         int index, org.cyverse.de.protobufs.Container.Device.Builder builderForValue) {
@@ -7266,7 +7266,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder addAllDevices(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Container.Device> values) {
@@ -7281,7 +7281,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder clearDevices() {
       if (devicesBuilder_ == null) {
@@ -7294,7 +7294,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public Builder removeDevices(int index) {
       if (devicesBuilder_ == null) {
@@ -7307,14 +7307,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public org.cyverse.de.protobufs.Container.Device.Builder getDevicesBuilder(
         int index) {
       return getDevicesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public org.cyverse.de.protobufs.Container.DeviceOrBuilder getDevicesOrBuilder(
         int index) {
@@ -7324,7 +7324,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.Container.DeviceOrBuilder> 
          getDevicesOrBuilderList() {
@@ -7335,14 +7335,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public org.cyverse.de.protobufs.Container.Device.Builder addDevicesBuilder() {
       return getDevicesFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.Container.Device.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public org.cyverse.de.protobufs.Container.Device.Builder addDevicesBuilder(
         int index) {
@@ -7350,7 +7350,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.Container.Device.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+     * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.Device.Builder> 
          getDevicesBuilderList() {
@@ -7384,7 +7384,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Container.VolumesFrom, org.cyverse.de.protobufs.Container.VolumesFrom.Builder, org.cyverse.de.protobufs.Container.VolumesFromOrBuilder> volumesFromBuilder_;
 
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.VolumesFrom> getVolumesFromList() {
       if (volumesFromBuilder_ == null) {
@@ -7394,7 +7394,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public int getVolumesFromCount() {
       if (volumesFromBuilder_ == null) {
@@ -7404,7 +7404,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public org.cyverse.de.protobufs.Container.VolumesFrom getVolumesFrom(int index) {
       if (volumesFromBuilder_ == null) {
@@ -7414,7 +7414,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder setVolumesFrom(
         int index, org.cyverse.de.protobufs.Container.VolumesFrom value) {
@@ -7431,7 +7431,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder setVolumesFrom(
         int index, org.cyverse.de.protobufs.Container.VolumesFrom.Builder builderForValue) {
@@ -7445,7 +7445,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder addVolumesFrom(org.cyverse.de.protobufs.Container.VolumesFrom value) {
       if (volumesFromBuilder_ == null) {
@@ -7461,7 +7461,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder addVolumesFrom(
         int index, org.cyverse.de.protobufs.Container.VolumesFrom value) {
@@ -7478,7 +7478,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder addVolumesFrom(
         org.cyverse.de.protobufs.Container.VolumesFrom.Builder builderForValue) {
@@ -7492,7 +7492,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder addVolumesFrom(
         int index, org.cyverse.de.protobufs.Container.VolumesFrom.Builder builderForValue) {
@@ -7506,7 +7506,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder addAllVolumesFrom(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Container.VolumesFrom> values) {
@@ -7521,7 +7521,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder clearVolumesFrom() {
       if (volumesFromBuilder_ == null) {
@@ -7534,7 +7534,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public Builder removeVolumesFrom(int index) {
       if (volumesFromBuilder_ == null) {
@@ -7547,14 +7547,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public org.cyverse.de.protobufs.Container.VolumesFrom.Builder getVolumesFromBuilder(
         int index) {
       return getVolumesFromFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public org.cyverse.de.protobufs.Container.VolumesFromOrBuilder getVolumesFromOrBuilder(
         int index) {
@@ -7564,7 +7564,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.Container.VolumesFromOrBuilder> 
          getVolumesFromOrBuilderList() {
@@ -7575,14 +7575,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public org.cyverse.de.protobufs.Container.VolumesFrom.Builder addVolumesFromBuilder() {
       return getVolumesFromFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.Container.VolumesFrom.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public org.cyverse.de.protobufs.Container.VolumesFrom.Builder addVolumesFromBuilder(
         int index) {
@@ -7590,7 +7590,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.Container.VolumesFrom.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+     * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.VolumesFrom.Builder> 
          getVolumesFromBuilderList() {
@@ -7791,14 +7791,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.InteractiveApps, org.cyverse.de.protobufs.InteractiveApps.Builder, org.cyverse.de.protobufs.InteractiveAppsOrBuilder> interactiveAppsBuilder_;
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      * @return Whether the interactiveApps field is set.
      */
     public boolean hasInteractiveApps() {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      * @return The interactiveApps.
      */
     public org.cyverse.de.protobufs.InteractiveApps getInteractiveApps() {
@@ -7809,7 +7809,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     public Builder setInteractiveApps(org.cyverse.de.protobufs.InteractiveApps value) {
       if (interactiveAppsBuilder_ == null) {
@@ -7825,7 +7825,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     public Builder setInteractiveApps(
         org.cyverse.de.protobufs.InteractiveApps.Builder builderForValue) {
@@ -7839,7 +7839,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     public Builder mergeInteractiveApps(org.cyverse.de.protobufs.InteractiveApps value) {
       if (interactiveAppsBuilder_ == null) {
@@ -7858,7 +7858,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     public Builder clearInteractiveApps() {
       bitField0_ = (bitField0_ & ~0x00000080);
@@ -7871,7 +7871,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     public org.cyverse.de.protobufs.InteractiveApps.Builder getInteractiveAppsBuilder() {
       bitField0_ |= 0x00000080;
@@ -7879,7 +7879,7 @@ private static final long serialVersionUID = 0L;
       return getInteractiveAppsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     public org.cyverse.de.protobufs.InteractiveAppsOrBuilder getInteractiveAppsOrBuilder() {
       if (interactiveAppsBuilder_ != null) {
@@ -7890,7 +7890,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+     * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.InteractiveApps, org.cyverse.de.protobufs.InteractiveApps.Builder, org.cyverse.de.protobufs.InteractiveAppsOrBuilder> 
@@ -8102,14 +8102,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Container.Image, org.cyverse.de.protobufs.Container.Image.Builder, org.cyverse.de.protobufs.Container.ImageOrBuilder> imageBuilder_;
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      * @return Whether the image field is set.
      */
     public boolean hasImage() {
       return ((bitField0_ & 0x00004000) != 0);
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      * @return The image.
      */
     public org.cyverse.de.protobufs.Container.Image getImage() {
@@ -8120,7 +8120,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     public Builder setImage(org.cyverse.de.protobufs.Container.Image value) {
       if (imageBuilder_ == null) {
@@ -8136,7 +8136,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     public Builder setImage(
         org.cyverse.de.protobufs.Container.Image.Builder builderForValue) {
@@ -8150,7 +8150,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     public Builder mergeImage(org.cyverse.de.protobufs.Container.Image value) {
       if (imageBuilder_ == null) {
@@ -8169,7 +8169,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     public Builder clearImage() {
       bitField0_ = (bitField0_ & ~0x00004000);
@@ -8182,7 +8182,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     public org.cyverse.de.protobufs.Container.Image.Builder getImageBuilder() {
       bitField0_ |= 0x00004000;
@@ -8190,7 +8190,7 @@ private static final long serialVersionUID = 0L;
       return getImageFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     public org.cyverse.de.protobufs.Container.ImageOrBuilder getImageOrBuilder() {
       if (imageBuilder_ != null) {
@@ -8201,7 +8201,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Container.Image image = 15;</code>
+     * <code>.debuff.Container.Image image = 15;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Container.Image, org.cyverse.de.protobufs.Container.Image.Builder, org.cyverse.de.protobufs.Container.ImageOrBuilder> 
@@ -8374,7 +8374,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Container.Port, org.cyverse.de.protobufs.Container.Port.Builder, org.cyverse.de.protobufs.Container.PortOrBuilder> portsBuilder_;
 
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.Port> getPortsList() {
       if (portsBuilder_ == null) {
@@ -8384,7 +8384,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public int getPortsCount() {
       if (portsBuilder_ == null) {
@@ -8394,7 +8394,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public org.cyverse.de.protobufs.Container.Port getPorts(int index) {
       if (portsBuilder_ == null) {
@@ -8404,7 +8404,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder setPorts(
         int index, org.cyverse.de.protobufs.Container.Port value) {
@@ -8421,7 +8421,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder setPorts(
         int index, org.cyverse.de.protobufs.Container.Port.Builder builderForValue) {
@@ -8435,7 +8435,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder addPorts(org.cyverse.de.protobufs.Container.Port value) {
       if (portsBuilder_ == null) {
@@ -8451,7 +8451,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder addPorts(
         int index, org.cyverse.de.protobufs.Container.Port value) {
@@ -8468,7 +8468,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder addPorts(
         org.cyverse.de.protobufs.Container.Port.Builder builderForValue) {
@@ -8482,7 +8482,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder addPorts(
         int index, org.cyverse.de.protobufs.Container.Port.Builder builderForValue) {
@@ -8496,7 +8496,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder addAllPorts(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Container.Port> values) {
@@ -8511,7 +8511,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder clearPorts() {
       if (portsBuilder_ == null) {
@@ -8524,7 +8524,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public Builder removePorts(int index) {
       if (portsBuilder_ == null) {
@@ -8537,14 +8537,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public org.cyverse.de.protobufs.Container.Port.Builder getPortsBuilder(
         int index) {
       return getPortsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public org.cyverse.de.protobufs.Container.PortOrBuilder getPortsOrBuilder(
         int index) {
@@ -8554,7 +8554,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.Container.PortOrBuilder> 
          getPortsOrBuilderList() {
@@ -8565,14 +8565,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public org.cyverse.de.protobufs.Container.Port.Builder addPortsBuilder() {
       return getPortsFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.Container.Port.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public org.cyverse.de.protobufs.Container.Port.Builder addPortsBuilder(
         int index) {
@@ -8580,7 +8580,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.Container.Port.getDefaultInstance());
     }
     /**
-     * <code>repeated .Container.Port ports = 18;</code>
+     * <code>repeated .debuff.Container.Port ports = 18;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Container.Port.Builder> 
          getPortsBuilderList() {
@@ -8669,14 +8669,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00100000) != 0);
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -8687,7 +8687,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -8703,7 +8703,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -8717,7 +8717,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -8736,7 +8736,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00100000);
@@ -8749,7 +8749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00100000;
@@ -8757,7 +8757,7 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -8768,7 +8768,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Header header = 21;</code>
+     * <code>.debuff.Header header = 21;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -8796,10 +8796,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Container)
+    // @@protoc_insertion_point(builder_scope:debuff.Container)
   }
 
-  // @@protoc_insertion_point(class_scope:Container)
+  // @@protoc_insertion_point(class_scope:debuff.Container)
   private static final org.cyverse.de.protobufs.Container DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Container();

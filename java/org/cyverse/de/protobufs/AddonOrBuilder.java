@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface AddonOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Addon)
+    // @@protoc_insertion_point(interface_extends:debuff.Addon)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -72,7 +72,7 @@ public interface AddonOrBuilder extends
    * The resource type of the add-on.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
@@ -81,7 +81,7 @@ public interface AddonOrBuilder extends
    * The resource type of the add-on.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
@@ -90,7 +90,7 @@ public interface AddonOrBuilder extends
    * The resource type of the add-on.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
 

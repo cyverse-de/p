@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface ChangeSubscriptionRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ChangeSubscriptionRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.ChangeSubscriptionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface ChangeSubscriptionRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface ChangeSubscriptionRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface ChangeSubscriptionRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 

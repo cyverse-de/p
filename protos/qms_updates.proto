@@ -12,6 +12,8 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSUpdateProtobufs";
 
+package debuff;
+
 /**
  * A representation of update operations, which are ways calling code can change
  * quota and usage value.

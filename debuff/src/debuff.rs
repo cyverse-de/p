@@ -511,11 +511,11 @@ pub struct AnalysisSubmission {
     #[prost(bool, tag="8")]
     pub create_output_subdir: bool,
     #[prost(message, optional, tag="9")]
-    pub date_submitted: ::core::option::Option<::prost_types::Timestamp>,
+    pub date_submitted: ::core::option::Option<::pbjson_types::Timestamp>,
     #[prost(message, optional, tag="10")]
-    pub date_started: ::core::option::Option<::prost_types::Timestamp>,
+    pub date_started: ::core::option::Option<::pbjson_types::Timestamp>,
     #[prost(message, optional, tag="11")]
-    pub date_completed: ::core::option::Option<::prost_types::Timestamp>,
+    pub date_completed: ::core::option::Option<::pbjson_types::Timestamp>,
     #[prost(string, tag="12")]
     pub description: ::prost::alloc::string::String,
     #[prost(string, tag="13")]
@@ -612,11 +612,11 @@ pub struct Job {
     #[prost(bool, tag="8")]
     pub create_output_subdir: bool,
     #[prost(message, optional, tag="9")]
-    pub date_submitted: ::core::option::Option<::prost_types::Timestamp>,
+    pub date_submitted: ::core::option::Option<::pbjson_types::Timestamp>,
     #[prost(message, optional, tag="10")]
-    pub date_started: ::core::option::Option<::prost_types::Timestamp>,
+    pub date_started: ::core::option::Option<::pbjson_types::Timestamp>,
     #[prost(message, optional, tag="11")]
-    pub date_completed: ::core::option::Option<::prost_types::Timestamp>,
+    pub date_completed: ::core::option::Option<::pbjson_types::Timestamp>,
     #[prost(string, tag="12")]
     pub description: ::prost::alloc::string::String,
     #[prost(string, tag="13")]
@@ -1063,13 +1063,13 @@ pub struct Quota {
     pub created_by: ::prost::alloc::string::String,
     /// When the quota was created.
     #[prost(message, optional, tag="5")]
-    pub created_at: ::core::option::Option<::prost_types::Timestamp>,
+    pub created_at: ::core::option::Option<::pbjson_types::Timestamp>,
     /// A freeform text field containing info about who last modified the quota.
     #[prost(string, tag="6")]
     pub last_modified_by: ::prost::alloc::string::String,
     /// When the quota was last modified.
     #[prost(message, optional, tag="7")]
-    pub last_modified_at: ::core::option::Option<::prost_types::Timestamp>,
+    pub last_modified_at: ::core::option::Option<::pbjson_types::Timestamp>,
     /// The unique identifier of the subscription that the quota is associated with.
     #[prost(string, tag="8")]
     pub subscription_id: ::prost::alloc::string::String,
@@ -1138,13 +1138,13 @@ pub struct Usage {
     pub created_by: ::prost::alloc::string::String,
     /// When the usage record was created.
     #[prost(message, optional, tag="6")]
-    pub created_at: ::core::option::Option<::prost_types::Timestamp>,
+    pub created_at: ::core::option::Option<::pbjson_types::Timestamp>,
     /// Who last modified the usage record. Probably not the name of a user.
     #[prost(string, tag="7")]
     pub last_modified_by: ::prost::alloc::string::String,
     /// When the usage record was last modified.
     #[prost(message, optional, tag="8")]
-    pub last_modified_at: ::core::option::Option<::prost_types::Timestamp>,
+    pub last_modified_at: ::core::option::Option<::pbjson_types::Timestamp>,
 }
 /// *
 /// A response to a request for a usage record.
@@ -1186,10 +1186,10 @@ pub struct Subscription {
     pub uuid: ::prost::alloc::string::String,
     /// The date the subscription activates.
     #[prost(message, optional, tag="2")]
-    pub effective_start_date: ::core::option::Option<::prost_types::Timestamp>,
+    pub effective_start_date: ::core::option::Option<::pbjson_types::Timestamp>,
     /// The date the subscription deactivates/expires.
     #[prost(message, optional, tag="3")]
-    pub effective_end_date: ::core::option::Option<::prost_types::Timestamp>,
+    pub effective_end_date: ::core::option::Option<::pbjson_types::Timestamp>,
     /// The user in the QMS system that the subscription is for.
     #[prost(message, optional, tag="4")]
     pub user: ::core::option::Option<QmsUser>,
@@ -1661,7 +1661,7 @@ pub struct Update {
     pub value: f64,
     /// The date the update takes effect.
     #[prost(message, optional, tag="4")]
-    pub effective_date: ::core::option::Option<::prost_types::Timestamp>,
+    pub effective_date: ::core::option::Option<::pbjson_types::Timestamp>,
     /// The type of operation being done.
     #[prost(message, optional, tag="5")]
     pub operation: ::core::option::Option<UpdateOperation>,
@@ -1861,9 +1861,9 @@ pub mod user {
         #[prost(string, tag="3")]
         pub user_agent: ::prost::alloc::string::String,
         #[prost(message, optional, tag="4")]
-        pub login_time: ::core::option::Option<::prost_types::Timestamp>,
+        pub login_time: ::core::option::Option<::pbjson_types::Timestamp>,
         #[prost(message, optional, tag="5")]
-        pub logout_time: ::core::option::Option<::prost_types::Timestamp>,
+        pub logout_time: ::core::option::Option<::pbjson_types::Timestamp>,
     }
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1915,4 +1915,5 @@ pub mod user_lookup_request {
         AnalysisId(::prost::alloc::string::String),
     }
 }
+include!("debuff.serde.rs");
 // @@protoc_insertion_point(module)

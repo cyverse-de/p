@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface QuotaDefaultListOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:QuotaDefaultList)
+    // @@protoc_insertion_point(interface_extends:debuff.QuotaDefaultList)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface QuotaDefaultListOrBuilder extends
    * Can contain telemetry data.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface QuotaDefaultListOrBuilder extends
    * Can contain telemetry data.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface QuotaDefaultListOrBuilder extends
    * Can contain telemetry data.
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface QuotaDefaultListOrBuilder extends
    * Contains error info from the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
@@ -48,7 +48,7 @@ public interface QuotaDefaultListOrBuilder extends
    * Contains error info from the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
@@ -57,7 +57,7 @@ public interface QuotaDefaultListOrBuilder extends
    * Contains error info from the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
@@ -66,7 +66,7 @@ public interface QuotaDefaultListOrBuilder extends
    * The list of quota default objkects returned by the request handler.
    * </pre>
    *
-   * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
+   * <code>repeated .debuff.QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.QuotaDefault> 
       getQuotaDefaultsList();
@@ -75,7 +75,7 @@ public interface QuotaDefaultListOrBuilder extends
    * The list of quota default objkects returned by the request handler.
    * </pre>
    *
-   * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
+   * <code>repeated .debuff.QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefault getQuotaDefaults(int index);
   /**
@@ -83,7 +83,7 @@ public interface QuotaDefaultListOrBuilder extends
    * The list of quota default objkects returned by the request handler.
    * </pre>
    *
-   * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
+   * <code>repeated .debuff.QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   int getQuotaDefaultsCount();
   /**
@@ -91,7 +91,7 @@ public interface QuotaDefaultListOrBuilder extends
    * The list of quota default objkects returned by the request handler.
    * </pre>
    *
-   * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
+   * <code>repeated .debuff.QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
       getQuotaDefaultsOrBuilderList();
@@ -100,7 +100,7 @@ public interface QuotaDefaultListOrBuilder extends
    * The list of quota default objkects returned by the request handler.
    * </pre>
    *
-   * <code>repeated .QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
+   * <code>repeated .debuff.QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultsOrBuilder(
       int index);

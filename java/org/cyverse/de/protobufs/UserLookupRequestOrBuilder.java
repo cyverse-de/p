@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UserLookupRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:UserLookupRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.UserLookupRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -113,7 +113,7 @@ public interface UserLookupRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 10;</code>
+   * <code>.debuff.Header header = 10;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -122,7 +122,7 @@ public interface UserLookupRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 10;</code>
+   * <code>.debuff.Header header = 10;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -131,7 +131,7 @@ public interface UserLookupRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 10;</code>
+   * <code>.debuff.Header header = 10;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 

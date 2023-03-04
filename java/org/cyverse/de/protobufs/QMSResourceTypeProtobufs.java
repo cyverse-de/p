@@ -15,20 +15,20 @@ public final class QMSResourceTypeProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ResourceType_descriptor;
+    internal_static_debuff_ResourceType_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ResourceType_fieldAccessorTable;
+      internal_static_debuff_ResourceType_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ResourceTypeResponse_descriptor;
+    internal_static_debuff_ResourceTypeResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ResourceTypeResponse_fieldAccessorTable;
+      internal_static_debuff_ResourceTypeResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ResourceTypeList_descriptor;
+    internal_static_debuff_ResourceTypeList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ResourceTypeList_fieldAccessorTable;
+      internal_static_debuff_ResourceTypeList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,18 +38,20 @@ public final class QMSResourceTypeProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030qms_resource_types.proto\032\014header.proto" +
-      "\032\016svcerror.proto\"8\n\014ResourceType\022\014\n\004uuid" +
-      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001(\t\"\202\001\n\024R" +
-      "esourceTypeResponse\022\027\n\006header\030\001 \001(\0132\007.He" +
-      "ader\022\034\n\005error\030\002 \001(\0132\r.ServiceError\0223\n\rre" +
-      "source_type\030\003 \001(\0132\r.ResourceTypeR\rresour" +
-      "ce_type\"\200\001\n\020ResourceTypeList\022\027\n\006header\030\001" +
-      " \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r.ServiceEr" +
-      "ror\0225\n\016resource_types\030\003 \003(\0132\r.ResourceTy" +
-      "peR\016resource_typesBV\n\030org.cyverse.de.pro" +
-      "tobufsB\030QMSResourceTypeProtobufsP\001Z\036gith" +
-      "ub.com/cyverse-de/p/go/qmsb\006proto3"
+      "\n\030qms_resource_types.proto\022\006debuff\032\014head" +
+      "er.proto\032\016svcerror.proto\"8\n\014ResourceType" +
+      "\022\014\n\004uuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001" +
+      "(\t\"\227\001\n\024ResourceTypeResponse\022\036\n\006header\030\001 " +
+      "\001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(\0132\024.deb" +
+      "uff.ServiceError\022:\n\rresource_type\030\003 \001(\0132" +
+      "\024.debuff.ResourceTypeR\rresource_type\"\225\001\n" +
+      "\020ResourceTypeList\022\036\n\006header\030\001 \001(\0132\016.debu" +
+      "ff.Header\022#\n\005error\030\002 \001(\0132\024.debuff.Servic" +
+      "eError\022<\n\016resource_types\030\003 \003(\0132\024.debuff." +
+      "ResourceTypeR\016resource_typesBV\n\030org.cyve" +
+      "rse.de.protobufsB\030QMSResourceTypeProtobu" +
+      "fsP\001Z\036github.com/cyverse-de/p/go/qmsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57,23 +59,23 @@ public final class QMSResourceTypeProtobufs {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
         });
-    internal_static_ResourceType_descriptor =
+    internal_static_debuff_ResourceType_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_ResourceType_fieldAccessorTable = new
+    internal_static_debuff_ResourceType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ResourceType_descriptor,
+        internal_static_debuff_ResourceType_descriptor,
         new java.lang.String[] { "Uuid", "Name", "Unit", });
-    internal_static_ResourceTypeResponse_descriptor =
+    internal_static_debuff_ResourceTypeResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ResourceTypeResponse_fieldAccessorTable = new
+    internal_static_debuff_ResourceTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ResourceTypeResponse_descriptor,
+        internal_static_debuff_ResourceTypeResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "ResourceType", });
-    internal_static_ResourceTypeList_descriptor =
+    internal_static_debuff_ResourceTypeList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_ResourceTypeList_fieldAccessorTable = new
+    internal_static_debuff_ResourceTypeList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ResourceTypeList_descriptor,
+        internal_static_debuff_ResourceTypeList_descriptor,
         new java.lang.String[] { "Header", "Error", "ResourceTypes", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

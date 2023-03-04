@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A response to requests to add an update to the system.
  * </pre>
  *
- * Protobuf type {@code AddUpdateResponse}
+ * Protobuf type {@code debuff.AddUpdateResponse}
  */
 public final class AddUpdateResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:AddUpdateResponse)
+    // @@protoc_insertion_point(message_implements:debuff.AddUpdateResponse)
     AddUpdateResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AddUpdateResponse.newBuilder() to construct.
@@ -37,13 +37,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_AddUpdateResponse_descriptor;
+    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_AddUpdateResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_AddUpdateResponse_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_AddUpdateResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.AddUpdateResponse.class, org.cyverse.de.protobufs.AddUpdateResponse.Builder.class);
   }
@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -67,7 +67,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
    * The update added to the system.
    * </pre>
    *
-   * <code>.Update update = 3;</code>
+   * <code>.debuff.Update update = 3;</code>
    * @return Whether the update field is set.
    */
   @java.lang.Override
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
    * The update added to the system.
    * </pre>
    *
-   * <code>.Update update = 3;</code>
+   * <code>.debuff.Update update = 3;</code>
    * @return The update.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * The update added to the system.
    * </pre>
    *
-   * <code>.Update update = 3;</code>
+   * <code>.debuff.Update update = 3;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.UpdateOrBuilder getUpdateOrBuilder() {
@@ -360,21 +360,21 @@ private static final long serialVersionUID = 0L;
    * A response to requests to add an update to the system.
    * </pre>
    *
-   * Protobuf type {@code AddUpdateResponse}
+   * Protobuf type {@code debuff.AddUpdateResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:AddUpdateResponse)
+      // @@protoc_insertion_point(builder_implements:debuff.AddUpdateResponse)
       org.cyverse.de.protobufs.AddUpdateResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_AddUpdateResponse_descriptor;
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_AddUpdateResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_AddUpdateResponse_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_AddUpdateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.AddUpdateResponse.class, org.cyverse.de.protobufs.AddUpdateResponse.Builder.class);
     }
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_AddUpdateResponse_descriptor;
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_AddUpdateResponse_descriptor;
     }
 
     @java.lang.Override
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -647,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -670,7 +670,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -784,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000002;
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.ServiceError error = 2;</code>
+     * <code>.debuff.ServiceError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      * @return Whether the update field is set.
      */
     public boolean hasUpdate() {
@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      * @return The update.
      */
     public org.cyverse.de.protobufs.Update getUpdate() {
@@ -919,7 +919,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     public Builder setUpdate(org.cyverse.de.protobufs.Update value) {
       if (updateBuilder_ == null) {
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     public Builder setUpdate(
         org.cyverse.de.protobufs.Update.Builder builderForValue) {
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     public Builder mergeUpdate(org.cyverse.de.protobufs.Update value) {
       if (updateBuilder_ == null) {
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     public Builder clearUpdate() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     public org.cyverse.de.protobufs.Update.Builder getUpdateBuilder() {
       bitField0_ |= 0x00000004;
@@ -1009,7 +1009,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     public org.cyverse.de.protobufs.UpdateOrBuilder getUpdateOrBuilder() {
       if (updateBuilder_ != null) {
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      * The update added to the system.
      * </pre>
      *
-     * <code>.Update update = 3;</code>
+     * <code>.debuff.Update update = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Update, org.cyverse.de.protobufs.Update.Builder, org.cyverse.de.protobufs.UpdateOrBuilder> 
@@ -1052,10 +1052,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:AddUpdateResponse)
+    // @@protoc_insertion_point(builder_scope:debuff.AddUpdateResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:AddUpdateResponse)
+  // @@protoc_insertion_point(class_scope:debuff.AddUpdateResponse)
   private static final org.cyverse.de.protobufs.AddUpdateResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.AddUpdateResponse();

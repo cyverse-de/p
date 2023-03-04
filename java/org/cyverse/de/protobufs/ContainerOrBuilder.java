@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface ContainerOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Container)
+    // @@protoc_insertion_point(interface_extends:debuff.Container)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -20,73 +20,73 @@ public interface ContainerOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.Container.Volume> 
       getVolumesList();
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   org.cyverse.de.protobufs.Container.Volume getVolumes(int index);
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   int getVolumesCount();
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.Container.VolumeOrBuilder> 
       getVolumesOrBuilderList();
   /**
-   * <code>repeated .Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
+   * <code>repeated .debuff.Container.Volume volumes = 2 [json_name = "container_volumes"];</code>
    */
   org.cyverse.de.protobufs.Container.VolumeOrBuilder getVolumesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.Container.Device> 
       getDevicesList();
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   org.cyverse.de.protobufs.Container.Device getDevices(int index);
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   int getDevicesCount();
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.Container.DeviceOrBuilder> 
       getDevicesOrBuilderList();
   /**
-   * <code>repeated .Container.Device devices = 3 [json_name = "container_devices"];</code>
+   * <code>repeated .debuff.Container.Device devices = 3 [json_name = "container_devices"];</code>
    */
   org.cyverse.de.protobufs.Container.DeviceOrBuilder getDevicesOrBuilder(
       int index);
 
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.Container.VolumesFrom> 
       getVolumesFromList();
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   org.cyverse.de.protobufs.Container.VolumesFrom getVolumesFrom(int index);
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   int getVolumesFromCount();
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.Container.VolumesFromOrBuilder> 
       getVolumesFromOrBuilderList();
   /**
-   * <code>repeated .Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
+   * <code>repeated .debuff.Container.VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];</code>
    */
   org.cyverse.de.protobufs.Container.VolumesFromOrBuilder getVolumesFromOrBuilder(
       int index);
@@ -122,17 +122,17 @@ public interface ContainerOrBuilder extends
   long getCpuShares();
 
   /**
-   * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+   * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
    * @return Whether the interactiveApps field is set.
    */
   boolean hasInteractiveApps();
   /**
-   * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+   * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
    * @return The interactiveApps.
    */
   org.cyverse.de.protobufs.InteractiveApps getInteractiveApps();
   /**
-   * <code>.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
+   * <code>.debuff.InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];</code>
    */
   org.cyverse.de.protobufs.InteractiveAppsOrBuilder getInteractiveAppsOrBuilder();
 
@@ -173,17 +173,17 @@ public interface ContainerOrBuilder extends
   long getPidsLimit();
 
   /**
-   * <code>.Container.Image image = 15;</code>
+   * <code>.debuff.Container.Image image = 15;</code>
    * @return Whether the image field is set.
    */
   boolean hasImage();
   /**
-   * <code>.Container.Image image = 15;</code>
+   * <code>.debuff.Container.Image image = 15;</code>
    * @return The image.
    */
   org.cyverse.de.protobufs.Container.Image getImage();
   /**
-   * <code>.Container.Image image = 15;</code>
+   * <code>.debuff.Container.Image image = 15;</code>
    */
   org.cyverse.de.protobufs.Container.ImageOrBuilder getImageOrBuilder();
 
@@ -212,25 +212,25 @@ public interface ContainerOrBuilder extends
       getWorkingDirBytes();
 
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Container.Port> 
       getPortsList();
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   org.cyverse.de.protobufs.Container.Port getPorts(int index);
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   int getPortsCount();
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.Container.PortOrBuilder> 
       getPortsOrBuilderList();
   /**
-   * <code>repeated .Container.Port ports = 18;</code>
+   * <code>repeated .debuff.Container.Port ports = 18;</code>
    */
   org.cyverse.de.protobufs.Container.PortOrBuilder getPortsOrBuilder(
       int index);
@@ -248,17 +248,17 @@ public interface ContainerOrBuilder extends
   int getUid();
 
   /**
-   * <code>.Header header = 21;</code>
+   * <code>.debuff.Header header = 21;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.Header header = 21;</code>
+   * <code>.debuff.Header header = 21;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.Header header = 21;</code>
+   * <code>.debuff.Header header = 21;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }

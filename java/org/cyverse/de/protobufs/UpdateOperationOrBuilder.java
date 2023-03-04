@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UpdateOperationOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:UpdateOperation)
+    // @@protoc_insertion_point(interface_extends:debuff.UpdateOperation)
     com.google.protobuf.MessageOrBuilder {
 
   /**

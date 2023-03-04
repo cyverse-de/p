@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface QMSUserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:QMSUser)
+    // @@protoc_insertion_point(interface_extends:debuff.QMSUser)
     com.google.protobuf.MessageOrBuilder {
 
   /**

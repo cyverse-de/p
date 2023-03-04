@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code AnalysisRecordResponse}
+ * Protobuf type {@code debuff.AnalysisRecordResponse}
  */
 public final class AnalysisRecordResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:AnalysisRecordResponse)
+    // @@protoc_insertion_point(message_implements:debuff.AnalysisRecordResponse)
     AnalysisRecordResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AnalysisRecordResponse.newBuilder() to construct.
@@ -35,19 +35,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_descriptor;
+    return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.AnalysisRecordResponse.class, org.cyverse.de.protobufs.AnalysisRecordResponse.Builder.class);
   }
 
   public interface StatusCountRecordOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AnalysisRecordResponse.StatusCountRecord)
+      // @@protoc_insertion_point(interface_extends:debuff.AnalysisRecordResponse.StatusCountRecord)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -69,11 +69,11 @@ private static final long serialVersionUID = 0L;
         getStatusBytes();
   }
   /**
-   * Protobuf type {@code AnalysisRecordResponse.StatusCountRecord}
+   * Protobuf type {@code debuff.AnalysisRecordResponse.StatusCountRecord}
    */
   public static final class StatusCountRecord extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AnalysisRecordResponse.StatusCountRecord)
+      // @@protoc_insertion_point(message_implements:debuff.AnalysisRecordResponse.StatusCountRecord)
       StatusCountRecordOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use StatusCountRecord.newBuilder() to construct.
@@ -98,13 +98,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_StatusCountRecord_descriptor;
+      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.class, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder.class);
     }
@@ -326,21 +326,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code AnalysisRecordResponse.StatusCountRecord}
+     * Protobuf type {@code debuff.AnalysisRecordResponse.StatusCountRecord}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AnalysisRecordResponse.StatusCountRecord)
+        // @@protoc_insertion_point(builder_implements:debuff.AnalysisRecordResponse.StatusCountRecord)
         org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_StatusCountRecord_descriptor;
+        return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable
+        return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.class, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder.class);
       }
@@ -367,7 +367,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_StatusCountRecord_descriptor;
+        return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_descriptor;
       }
 
       @java.lang.Override
@@ -623,10 +623,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:AnalysisRecordResponse.StatusCountRecord)
+      // @@protoc_insertion_point(builder_scope:debuff.AnalysisRecordResponse.StatusCountRecord)
     }
 
-    // @@protoc_insertion_point(class_scope:AnalysisRecordResponse.StatusCountRecord)
+    // @@protoc_insertion_point(class_scope:debuff.AnalysisRecordResponse.StatusCountRecord)
     private static final org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord();
@@ -677,7 +677,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -704,14 +704,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.AnalysisRecord> analyses_;
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.AnalysisRecord> getAnalysesList() {
     return analyses_;
   }
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
@@ -719,21 +719,21 @@ private static final long serialVersionUID = 0L;
     return analyses_;
   }
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   @java.lang.Override
   public int getAnalysesCount() {
     return analyses_.size();
   }
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index) {
     return analyses_.get(index);
   }
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
@@ -795,14 +795,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord> statusCount_;
   /**
-   * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord> getStatusCountList() {
     return statusCount_;
   }
   /**
-   * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder> 
@@ -810,21 +810,21 @@ private static final long serialVersionUID = 0L;
     return statusCount_;
   }
   /**
-   * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   @java.lang.Override
   public int getStatusCountCount() {
     return statusCount_.size();
   }
   /**
-   * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord getStatusCount(int index) {
     return statusCount_.get(index);
   }
   /**
-   * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder getStatusCountOrBuilder(
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 6;
   private org.cyverse.de.protobufs.ServiceError error_;
   /**
-   * <code>.ServiceError error = 6;</code>
+   * <code>.debuff.ServiceError error = 6;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
     return error_ != null;
   }
   /**
-   * <code>.ServiceError error = 6;</code>
+   * <code>.debuff.ServiceError error = 6;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
   }
   /**
-   * <code>.ServiceError error = 6;</code>
+   * <code>.debuff.ServiceError error = 6;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -1083,21 +1083,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code AnalysisRecordResponse}
+   * Protobuf type {@code debuff.AnalysisRecordResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:AnalysisRecordResponse)
+      // @@protoc_insertion_point(builder_implements:debuff.AnalysisRecordResponse)
       org.cyverse.de.protobufs.AnalysisRecordResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_descriptor;
+      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.AnalysisRecordResponse.class, org.cyverse.de.protobufs.AnalysisRecordResponse.Builder.class);
     }
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_AnalysisRecordResponse_descriptor;
+      return org.cyverse.de.protobufs.AnalysisRequestProtobufs.internal_static_debuff_AnalysisRecordResponse_descriptor;
     }
 
     @java.lang.Override
@@ -1422,14 +1422,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -1440,7 +1440,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -1456,7 +1456,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -1470,7 +1470,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -1489,7 +1489,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -1502,7 +1502,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -1521,7 +1521,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.Header header = 1;</code>
+     * <code>.debuff.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -1550,7 +1550,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.AnalysisRecord, org.cyverse.de.protobufs.AnalysisRecord.Builder, org.cyverse.de.protobufs.AnalysisRecordOrBuilder> analysesBuilder_;
 
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.AnalysisRecord> getAnalysesList() {
       if (analysesBuilder_ == null) {
@@ -1560,7 +1560,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public int getAnalysesCount() {
       if (analysesBuilder_ == null) {
@@ -1570,7 +1570,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index) {
       if (analysesBuilder_ == null) {
@@ -1580,7 +1580,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder setAnalyses(
         int index, org.cyverse.de.protobufs.AnalysisRecord value) {
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder setAnalyses(
         int index, org.cyverse.de.protobufs.AnalysisRecord.Builder builderForValue) {
@@ -1611,7 +1611,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder addAnalyses(org.cyverse.de.protobufs.AnalysisRecord value) {
       if (analysesBuilder_ == null) {
@@ -1627,7 +1627,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder addAnalyses(
         int index, org.cyverse.de.protobufs.AnalysisRecord value) {
@@ -1644,7 +1644,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder addAnalyses(
         org.cyverse.de.protobufs.AnalysisRecord.Builder builderForValue) {
@@ -1658,7 +1658,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder addAnalyses(
         int index, org.cyverse.de.protobufs.AnalysisRecord.Builder builderForValue) {
@@ -1672,7 +1672,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder addAllAnalyses(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.AnalysisRecord> values) {
@@ -1687,7 +1687,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder clearAnalyses() {
       if (analysesBuilder_ == null) {
@@ -1700,7 +1700,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public Builder removeAnalyses(int index) {
       if (analysesBuilder_ == null) {
@@ -1713,14 +1713,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecord.Builder getAnalysesBuilder(
         int index) {
       return getAnalysesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
         int index) {
@@ -1730,7 +1730,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
          getAnalysesOrBuilderList() {
@@ -1741,14 +1741,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecord.Builder addAnalysesBuilder() {
       return getAnalysesFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.AnalysisRecord.getDefaultInstance());
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecord.Builder addAnalysesBuilder(
         int index) {
@@ -1756,7 +1756,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.AnalysisRecord.getDefaultInstance());
     }
     /**
-     * <code>repeated .AnalysisRecord analyses = 2;</code>
+     * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.AnalysisRecord.Builder> 
          getAnalysesBuilderList() {
@@ -1894,7 +1894,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder> statusCountBuilder_;
 
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord> getStatusCountList() {
       if (statusCountBuilder_ == null) {
@@ -1904,7 +1904,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public int getStatusCountCount() {
       if (statusCountBuilder_ == null) {
@@ -1914,7 +1914,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord getStatusCount(int index) {
       if (statusCountBuilder_ == null) {
@@ -1924,7 +1924,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder setStatusCount(
         int index, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord value) {
@@ -1941,7 +1941,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder setStatusCount(
         int index, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder builderForValue) {
@@ -1955,7 +1955,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder addStatusCount(org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord value) {
       if (statusCountBuilder_ == null) {
@@ -1971,7 +1971,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder addStatusCount(
         int index, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord value) {
@@ -1988,7 +1988,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder addStatusCount(
         org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder builderForValue) {
@@ -2002,7 +2002,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder addStatusCount(
         int index, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder builderForValue) {
@@ -2016,7 +2016,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder addAllStatusCount(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord> values) {
@@ -2031,7 +2031,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder clearStatusCount() {
       if (statusCountBuilder_ == null) {
@@ -2044,7 +2044,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public Builder removeStatusCount(int index) {
       if (statusCountBuilder_ == null) {
@@ -2057,14 +2057,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder getStatusCountBuilder(
         int index) {
       return getStatusCountFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder getStatusCountOrBuilder(
         int index) {
@@ -2074,7 +2074,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder> 
          getStatusCountOrBuilderList() {
@@ -2085,14 +2085,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder addStatusCountBuilder() {
       return getStatusCountFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.getDefaultInstance());
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder addStatusCountBuilder(
         int index) {
@@ -2100,7 +2100,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.getDefaultInstance());
     }
     /**
-     * <code>repeated .AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+     * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord.Builder> 
          getStatusCountBuilderList() {
@@ -2125,14 +2125,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> errorBuilder_;
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -2143,7 +2143,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -2159,7 +2159,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -2173,7 +2173,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -2192,7 +2192,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000020;
@@ -2213,7 +2213,7 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -2224,7 +2224,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.ServiceError error = 6;</code>
+     * <code>.debuff.ServiceError error = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -2252,10 +2252,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:AnalysisRecordResponse)
+    // @@protoc_insertion_point(builder_scope:debuff.AnalysisRecordResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:AnalysisRecordResponse)
+  // @@protoc_insertion_point(class_scope:debuff.AnalysisRecordResponse)
   private static final org.cyverse.de.protobufs.AnalysisRecordResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.AnalysisRecordResponse();

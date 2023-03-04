@@ -8,11 +8,11 @@ package org.cyverse.de.protobufs;
  * Since protocol buffers don't have a way to alias messages, we're copying the Analysis definition into Job and deprecating it.
  * </pre>
  *
- * Protobuf type {@code Job}
+ * Protobuf type {@code debuff.Job}
  */
 @java.lang.Deprecated public final class Job extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Job)
+    // @@protoc_insertion_point(message_implements:debuff.Job)
     JobOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Job.newBuilder() to construct.
@@ -68,13 +68,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Job_descriptor;
+    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Job_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Job_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Job_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Job.class, org.cyverse.de.protobufs.Job.Builder.class);
   }
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
    * read all about it
    * </pre>
    *
-   * <code>.Extra extra = 14;</code>
+   * <code>.debuff.Extra extra = 14;</code>
    * @return Whether the extra field is set.
    */
   @java.lang.Override
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
    * read all about it
    * </pre>
    *
-   * <code>.Extra extra = 14;</code>
+   * <code>.debuff.Extra extra = 14;</code>
    * @return The extra.
    */
   @java.lang.Override
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
    * read all about it
    * </pre>
    *
-   * <code>.Extra extra = 14;</code>
+   * <code>.debuff.Extra extra = 14;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ExtraOrBuilder getExtraOrBuilder() {
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.FileMetadata> getFileMetadataList() {
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.FileMetadataOrBuilder> 
@@ -632,7 +632,7 @@ private static final long serialVersionUID = 0L;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   @java.lang.Override
   public int getFileMetadataCount() {
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.FileMetadata getFileMetadata(int index) {
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
    * The - is used instead of _ for backwards compatibility.
    * </pre>
    *
-   * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+   * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.FileMetadataOrBuilder getFileMetadataOrBuilder(
@@ -1219,14 +1219,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.Step> steps_;
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Step> getStepsList() {
     return steps_;
   }
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.StepOrBuilder> 
@@ -1234,21 +1234,21 @@ private static final long serialVersionUID = 0L;
     return steps_;
   }
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   @java.lang.Override
   public int getStepsCount() {
     return steps_.size();
   }
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Step getSteps(int index) {
     return steps_.get(index);
   }
   /**
-   * <code>repeated .Step steps = 36;</code>
+   * <code>repeated .debuff.Step steps = 36;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.StepOrBuilder getStepsOrBuilder(
@@ -2221,21 +2221,21 @@ private static final long serialVersionUID = 0L;
    * Since protocol buffers don't have a way to alias messages, we're copying the Analysis definition into Job and deprecating it.
    * </pre>
    *
-   * Protobuf type {@code Job}
+   * Protobuf type {@code debuff.Job}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Job)
+      // @@protoc_insertion_point(builder_implements:debuff.Job)
       org.cyverse.de.protobufs.JobOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Job_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Job_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Job_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Job_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Job.class, org.cyverse.de.protobufs.Job.Builder.class);
     }
@@ -2335,7 +2335,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_Job_descriptor;
+      return org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.internal_static_debuff_Job_descriptor;
     }
 
     @java.lang.Override
@@ -4116,7 +4116,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      * @return Whether the extra field is set.
      */
     public boolean hasExtra() {
@@ -4127,7 +4127,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      * @return The extra.
      */
     public org.cyverse.de.protobufs.Extra getExtra() {
@@ -4142,7 +4142,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     public Builder setExtra(org.cyverse.de.protobufs.Extra value) {
       if (extraBuilder_ == null) {
@@ -4162,7 +4162,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     public Builder setExtra(
         org.cyverse.de.protobufs.Extra.Builder builderForValue) {
@@ -4180,7 +4180,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     public Builder mergeExtra(org.cyverse.de.protobufs.Extra value) {
       if (extraBuilder_ == null) {
@@ -4203,7 +4203,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     public Builder clearExtra() {
       bitField0_ = (bitField0_ & ~0x00002000);
@@ -4220,7 +4220,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     public org.cyverse.de.protobufs.Extra.Builder getExtraBuilder() {
       bitField0_ |= 0x00002000;
@@ -4232,7 +4232,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     public org.cyverse.de.protobufs.ExtraOrBuilder getExtraOrBuilder() {
       if (extraBuilder_ != null) {
@@ -4247,7 +4247,7 @@ private static final long serialVersionUID = 0L;
      * read all about it
      * </pre>
      *
-     * <code>.Extra extra = 14;</code>
+     * <code>.debuff.Extra extra = 14;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Extra, org.cyverse.de.protobufs.Extra.Builder, org.cyverse.de.protobufs.ExtraOrBuilder> 
@@ -4448,7 +4448,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.FileMetadata> getFileMetadataList() {
       if (fileMetadataBuilder_ == null) {
@@ -4462,7 +4462,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public int getFileMetadataCount() {
       if (fileMetadataBuilder_ == null) {
@@ -4476,7 +4476,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public org.cyverse.de.protobufs.FileMetadata getFileMetadata(int index) {
       if (fileMetadataBuilder_ == null) {
@@ -4490,7 +4490,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder setFileMetadata(
         int index, org.cyverse.de.protobufs.FileMetadata value) {
@@ -4511,7 +4511,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder setFileMetadata(
         int index, org.cyverse.de.protobufs.FileMetadata.Builder builderForValue) {
@@ -4529,7 +4529,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder addFileMetadata(org.cyverse.de.protobufs.FileMetadata value) {
       if (fileMetadataBuilder_ == null) {
@@ -4549,7 +4549,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder addFileMetadata(
         int index, org.cyverse.de.protobufs.FileMetadata value) {
@@ -4570,7 +4570,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder addFileMetadata(
         org.cyverse.de.protobufs.FileMetadata.Builder builderForValue) {
@@ -4588,7 +4588,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder addFileMetadata(
         int index, org.cyverse.de.protobufs.FileMetadata.Builder builderForValue) {
@@ -4606,7 +4606,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder addAllFileMetadata(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.FileMetadata> values) {
@@ -4625,7 +4625,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder clearFileMetadata() {
       if (fileMetadataBuilder_ == null) {
@@ -4642,7 +4642,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public Builder removeFileMetadata(int index) {
       if (fileMetadataBuilder_ == null) {
@@ -4659,7 +4659,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public org.cyverse.de.protobufs.FileMetadata.Builder getFileMetadataBuilder(
         int index) {
@@ -4670,7 +4670,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public org.cyverse.de.protobufs.FileMetadataOrBuilder getFileMetadataOrBuilder(
         int index) {
@@ -4684,7 +4684,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.FileMetadataOrBuilder> 
          getFileMetadataOrBuilderList() {
@@ -4699,7 +4699,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public org.cyverse.de.protobufs.FileMetadata.Builder addFileMetadataBuilder() {
       return getFileMetadataFieldBuilder().addBuilder(
@@ -4710,7 +4710,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public org.cyverse.de.protobufs.FileMetadata.Builder addFileMetadataBuilder(
         int index) {
@@ -4722,7 +4722,7 @@ private static final long serialVersionUID = 0L;
      * The - is used instead of _ for backwards compatibility.
      * </pre>
      *
-     * <code>repeated .FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
+     * <code>repeated .debuff.FileMetadata file_metadata = 19 [json_name = "file-metadata"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.FileMetadata.Builder> 
          getFileMetadataBuilderList() {
@@ -5864,7 +5864,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Step, org.cyverse.de.protobufs.Step.Builder, org.cyverse.de.protobufs.StepOrBuilder> stepsBuilder_;
 
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Step> getStepsList() {
       if (stepsBuilder_ == null) {
@@ -5874,7 +5874,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public int getStepsCount() {
       if (stepsBuilder_ == null) {
@@ -5884,7 +5884,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public org.cyverse.de.protobufs.Step getSteps(int index) {
       if (stepsBuilder_ == null) {
@@ -5894,7 +5894,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder setSteps(
         int index, org.cyverse.de.protobufs.Step value) {
@@ -5911,7 +5911,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder setSteps(
         int index, org.cyverse.de.protobufs.Step.Builder builderForValue) {
@@ -5925,7 +5925,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder addSteps(org.cyverse.de.protobufs.Step value) {
       if (stepsBuilder_ == null) {
@@ -5941,7 +5941,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder addSteps(
         int index, org.cyverse.de.protobufs.Step value) {
@@ -5958,7 +5958,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder addSteps(
         org.cyverse.de.protobufs.Step.Builder builderForValue) {
@@ -5972,7 +5972,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder addSteps(
         int index, org.cyverse.de.protobufs.Step.Builder builderForValue) {
@@ -5986,7 +5986,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder addAllSteps(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Step> values) {
@@ -6001,7 +6001,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder clearSteps() {
       if (stepsBuilder_ == null) {
@@ -6014,7 +6014,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public Builder removeSteps(int index) {
       if (stepsBuilder_ == null) {
@@ -6027,14 +6027,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public org.cyverse.de.protobufs.Step.Builder getStepsBuilder(
         int index) {
       return getStepsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public org.cyverse.de.protobufs.StepOrBuilder getStepsOrBuilder(
         int index) {
@@ -6044,7 +6044,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.StepOrBuilder> 
          getStepsOrBuilderList() {
@@ -6055,14 +6055,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public org.cyverse.de.protobufs.Step.Builder addStepsBuilder() {
       return getStepsFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.Step.getDefaultInstance());
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public org.cyverse.de.protobufs.Step.Builder addStepsBuilder(
         int index) {
@@ -6070,7 +6070,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.Step.getDefaultInstance());
     }
     /**
-     * <code>repeated .Step steps = 36;</code>
+     * <code>repeated .debuff.Step steps = 36;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Step.Builder> 
          getStepsBuilderList() {
@@ -6731,10 +6731,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Job)
+    // @@protoc_insertion_point(builder_scope:debuff.Job)
   }
 
-  // @@protoc_insertion_point(class_scope:Job)
+  // @@protoc_insertion_point(class_scope:debuff.Job)
   private static final org.cyverse.de.protobufs.Job DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Job();

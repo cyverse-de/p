@@ -1,14 +1,18 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub mod gen;
+
+use crate::gen::{header, Header};
+use prost::Message;
 
 #[cfg(test)]
-mod tests {
-    use super::*;
+mod test {
+    use crate::gen::{header, Header};
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn test_header() {
+        let mut h = Header::default();
+        let v = header::Value {
+            value: vec![String::from("value")],
+        };
+        h.map.insert(String::from("foo"), v);
     }
 }

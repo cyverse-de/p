@@ -4,80 +4,80 @@
 ## Table of Contents
 
 - [qms_addons.proto](#qms_addons-proto)
-    - [AddAddonRequest](#-AddAddonRequest)
-    - [Addon](#-Addon)
-    - [AddonListResponse](#-AddonListResponse)
-    - [AddonLookupRequest](#-AddonLookupRequest)
-    - [AddonResponse](#-AddonResponse)
-    - [SubscriptionAddon](#-SubscriptionAddon)
-    - [SubscriptionAddonListResponse](#-SubscriptionAddonListResponse)
-    - [SubscriptionAddonResponse](#-SubscriptionAddonResponse)
-    - [UpdateAddonRequest](#-UpdateAddonRequest)
-    - [UpdateSubscriptionAddonRequest](#-UpdateSubscriptionAddonRequest)
+    - [AddAddonRequest](#debuff-AddAddonRequest)
+    - [Addon](#debuff-Addon)
+    - [AddonListResponse](#debuff-AddonListResponse)
+    - [AddonLookupRequest](#debuff-AddonLookupRequest)
+    - [AddonResponse](#debuff-AddonResponse)
+    - [SubscriptionAddon](#debuff-SubscriptionAddon)
+    - [SubscriptionAddonListResponse](#debuff-SubscriptionAddonListResponse)
+    - [SubscriptionAddonResponse](#debuff-SubscriptionAddonResponse)
+    - [UpdateAddonRequest](#debuff-UpdateAddonRequest)
+    - [UpdateSubscriptionAddonRequest](#debuff-UpdateSubscriptionAddonRequest)
   
 - [qms_overages.proto](#qms_overages-proto)
-    - [IsOverage](#-IsOverage)
-    - [Overage](#-Overage)
-    - [OverageList](#-OverageList)
-    - [OverageResponse](#-OverageResponse)
+    - [IsOverage](#debuff-IsOverage)
+    - [Overage](#debuff-Overage)
+    - [OverageList](#debuff-OverageList)
+    - [OverageResponse](#debuff-OverageResponse)
   
 - [qms_plans.proto](#qms_plans-proto)
-    - [AddPlanQuotaDefaultRequest](#-AddPlanQuotaDefaultRequest)
-    - [AddPlanRequest](#-AddPlanRequest)
-    - [Plan](#-Plan)
-    - [PlanList](#-PlanList)
-    - [PlanRequest](#-PlanRequest)
-    - [PlanResponse](#-PlanResponse)
-    - [QuotaDefault](#-QuotaDefault)
-    - [QuotaDefaultList](#-QuotaDefaultList)
-    - [QuotaDefaultResponse](#-QuotaDefaultResponse)
+    - [AddPlanQuotaDefaultRequest](#debuff-AddPlanQuotaDefaultRequest)
+    - [AddPlanRequest](#debuff-AddPlanRequest)
+    - [Plan](#debuff-Plan)
+    - [PlanList](#debuff-PlanList)
+    - [PlanRequest](#debuff-PlanRequest)
+    - [PlanResponse](#debuff-PlanResponse)
+    - [QuotaDefault](#debuff-QuotaDefault)
+    - [QuotaDefaultList](#debuff-QuotaDefaultList)
+    - [QuotaDefaultResponse](#debuff-QuotaDefaultResponse)
   
 - [qms_quotas.proto](#qms_quotas-proto)
-    - [AddQuotaRequest](#-AddQuotaRequest)
-    - [Quota](#-Quota)
-    - [QuotaList](#-QuotaList)
-    - [QuotaResponse](#-QuotaResponse)
+    - [AddQuotaRequest](#debuff-AddQuotaRequest)
+    - [Quota](#debuff-Quota)
+    - [QuotaList](#debuff-QuotaList)
+    - [QuotaResponse](#debuff-QuotaResponse)
   
 - [qms_requests.proto](#qms_requests-proto)
-    - [AddUsage](#-AddUsage)
-    - [AllUserOveragesRequest](#-AllUserOveragesRequest)
-    - [GetUsages](#-GetUsages)
-    - [IsOverageRequest](#-IsOverageRequest)
-    - [NoParamsRequest](#-NoParamsRequest)
-    - [RequestByUserID](#-RequestByUserID)
-    - [RequestByUsername](#-RequestByUsername)
-    - [UserResourceOveragesRequest](#-UserResourceOveragesRequest)
+    - [AddUsage](#debuff-AddUsage)
+    - [AllUserOveragesRequest](#debuff-AllUserOveragesRequest)
+    - [GetUsages](#debuff-GetUsages)
+    - [IsOverageRequest](#debuff-IsOverageRequest)
+    - [NoParamsRequest](#debuff-NoParamsRequest)
+    - [RequestByUserID](#debuff-RequestByUserID)
+    - [RequestByUsername](#debuff-RequestByUsername)
+    - [UserResourceOveragesRequest](#debuff-UserResourceOveragesRequest)
   
 - [qms_resource_types.proto](#qms_resource_types-proto)
-    - [ResourceType](#-ResourceType)
-    - [ResourceTypeList](#-ResourceTypeList)
-    - [ResourceTypeResponse](#-ResourceTypeResponse)
+    - [ResourceType](#debuff-ResourceType)
+    - [ResourceTypeList](#debuff-ResourceTypeList)
+    - [ResourceTypeResponse](#debuff-ResourceTypeResponse)
   
 - [qms_subscriptions.proto](#qms_subscriptions-proto)
-    - [ChangeSubscriptionRequest](#-ChangeSubscriptionRequest)
-    - [Subscription](#-Subscription)
-    - [SubscriptionList](#-SubscriptionList)
-    - [SubscriptionResponse](#-SubscriptionResponse)
+    - [ChangeSubscriptionRequest](#debuff-ChangeSubscriptionRequest)
+    - [Subscription](#debuff-Subscription)
+    - [SubscriptionList](#debuff-SubscriptionList)
+    - [SubscriptionResponse](#debuff-SubscriptionResponse)
   
 - [qms_updates.proto](#qms_updates-proto)
-    - [AddUpdateRequest](#-AddUpdateRequest)
-    - [AddUpdateResponse](#-AddUpdateResponse)
-    - [Update](#-Update)
-    - [UpdateListRequest](#-UpdateListRequest)
-    - [UpdateListResponse](#-UpdateListResponse)
-    - [UpdateOperation](#-UpdateOperation)
+    - [AddUpdateRequest](#debuff-AddUpdateRequest)
+    - [AddUpdateResponse](#debuff-AddUpdateResponse)
+    - [Update](#debuff-Update)
+    - [UpdateListRequest](#debuff-UpdateListRequest)
+    - [UpdateListResponse](#debuff-UpdateListResponse)
+    - [UpdateOperation](#debuff-UpdateOperation)
   
 - [qms_usages.proto](#qms_usages-proto)
-    - [Usage](#-Usage)
-    - [UsageList](#-UsageList)
-    - [UsageResponse](#-UsageResponse)
+    - [Usage](#debuff-Usage)
+    - [UsageList](#debuff-UsageList)
+    - [UsageResponse](#debuff-UsageResponse)
   
 - [qms_users.proto](#qms_users-proto)
-    - [AddUserRequest](#-AddUserRequest)
-    - [AddUserResponse](#-AddUserResponse)
-    - [QMSUser](#-QMSUser)
-    - [QMSUserList](#-QMSUserList)
-    - [QMSUserResponse](#-QMSUserResponse)
+    - [AddUserRequest](#debuff-AddUserRequest)
+    - [AddUserResponse](#debuff-AddUserResponse)
+    - [QMSUser](#debuff-QMSUser)
+    - [QMSUserList](#debuff-QMSUserList)
+    - [QMSUserResponse](#debuff-QMSUserResponse)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -90,7 +90,7 @@
 
 
 
-<a name="-AddAddonRequest"></a>
+<a name="debuff-AddAddonRequest"></a>
 
 ### AddAddonRequest
 A request to add an add-on to the system.
@@ -98,15 +98,15 @@ A request to add an add-on to the system.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information. |
-| addon | [Addon](#Addon) |  | The add-on to be added. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information. |
+| addon | [Addon](#debuff-Addon) |  | The add-on to be added. |
 
 
 
 
 
 
-<a name="-Addon"></a>
+<a name="debuff-Addon"></a>
 
 ### Addon
 Represents an add-on that can be applied to a subscription to provide a user
@@ -118,7 +118,7 @@ with a change in a resource quota.
 | uuid | [string](#string) |  | The unique identifier. |
 | name | [string](#string) |  | The name of the add-on. |
 | description | [string](#string) |  | The description of the add-on. |
-| resource_type | [ResourceType](#ResourceType) |  | The resource type of the add-on. |
+| resource_type | [ResourceType](#debuff-ResourceType) |  | The resource type of the add-on. |
 | default_amount | [float](#float) |  | How much of the resource type is added to the quota by the add-on. |
 | default_paid | [bool](#bool) |  | Whether a user must pay for the add-on. Not whether the user has paid. |
 
@@ -127,7 +127,7 @@ with a change in a resource quota.
 
 
 
-<a name="-AddonListResponse"></a>
+<a name="debuff-AddonListResponse"></a>
 
 ### AddonListResponse
 A response to an add-on request that contains a list of add-ons.
@@ -135,16 +135,16 @@ A response to an add-on request that contains a list of add-ons.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| addons | [Addon](#Addon) | repeated | The list of add-ons returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| addons | [Addon](#debuff-Addon) | repeated | The list of add-ons returned by the request handler. |
 
 
 
 
 
 
-<a name="-AddonLookupRequest"></a>
+<a name="debuff-AddonLookupRequest"></a>
 
 ### AddonLookupRequest
 A request to get information about an add-on.
@@ -152,7 +152,7 @@ A request to get information about an add-on.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information. |
 | uuid | [string](#string) |  |  |
 | name | [string](#string) |  |  |
 
@@ -161,7 +161,7 @@ A request to get information about an add-on.
 
 
 
-<a name="-AddonResponse"></a>
+<a name="debuff-AddonResponse"></a>
 
 ### AddonResponse
 A response to an add-on request. Contains a single add-on.
@@ -169,16 +169,16 @@ A response to an add-on request. Contains a single add-on.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| addon | [Addon](#Addon) |  | The add-on returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| addon | [Addon](#debuff-Addon) |  | The add-on returned by the request handler. |
 
 
 
 
 
 
-<a name="-SubscriptionAddon"></a>
+<a name="debuff-SubscriptionAddon"></a>
 
 ### SubscriptionAddon
 SubscriptionAddon is an add-on that has been applied to a subscription. It 
@@ -189,8 +189,8 @@ fields in the subscription.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier for the add-on |
-| addon | [Addon](#Addon) |  | The add-on used with the subscription. May only contain the add-on&#39;s UUID in some circumstances. |
-| subscription | [Subscription](#Subscription) |  | The subscription the add-on was applied to. May only contain the add-on&#39;s UUID in some circumstances. |
+| addon | [Addon](#debuff-Addon) |  | The add-on used with the subscription. May only contain the add-on&#39;s UUID in some circumstances. |
+| subscription | [Subscription](#debuff-Subscription) |  | The subscription the add-on was applied to. May only contain the add-on&#39;s UUID in some circumstances. |
 | amount | [float](#float) |  | The amount of the resource applied by the add-on. This should default to the amount contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
 | paid | [bool](#bool) |  | Whether the subscription add-on costs money. This should default to the same paid value contained in the add-on definition, but can be overridden, which is whay it&#39;s a separate field here. |
 
@@ -199,7 +199,7 @@ fields in the subscription.
 
 
 
-<a name="-SubscriptionAddonListResponse"></a>
+<a name="debuff-SubscriptionAddonListResponse"></a>
 
 ### SubscriptionAddonListResponse
 Contains a list of subscription add-ons returned by the request handler.
@@ -207,16 +207,16 @@ Contains a list of subscription add-ons returned by the request handler.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| subscription_addons | [SubscriptionAddon](#SubscriptionAddon) | repeated | The list of subscription add-ons returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| subscription_addons | [SubscriptionAddon](#debuff-SubscriptionAddon) | repeated | The list of subscription add-ons returned by the request handler. |
 
 
 
 
 
 
-<a name="-SubscriptionAddonResponse"></a>
+<a name="debuff-SubscriptionAddonResponse"></a>
 
 ### SubscriptionAddonResponse
 Contains the subscription add-on returned by the request handler.
@@ -224,16 +224,16 @@ Contains the subscription add-on returned by the request handler.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| subscription_addon | [SubscriptionAddon](#SubscriptionAddon) |  | The subscription add-on returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| subscription_addon | [SubscriptionAddon](#debuff-SubscriptionAddon) |  | The subscription add-on returned by the request handler. |
 
 
 
 
 
 
-<a name="-UpdateAddonRequest"></a>
+<a name="debuff-UpdateAddonRequest"></a>
 
 ### UpdateAddonRequest
 A request to update an add-on. The boolean fields are needed because Go (and
@@ -243,8 +243,8 @@ string, since that&#39;s the zero value for a string.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information. |
-| addon | [Addon](#Addon) |  | The values to set in the update. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information. |
+| addon | [Addon](#debuff-Addon) |  | The values to set in the update. |
 | update_name | [bool](#bool) |  | Whether to update the name of the addon. |
 | update_description | [bool](#bool) |  | Whether to update the description of the addon. |
 | update_resource_type | [bool](#bool) |  | Whether to update the resource type of the addon. |
@@ -256,7 +256,7 @@ string, since that&#39;s the zero value for a string.
 
 
 
-<a name="-UpdateSubscriptionAddonRequest"></a>
+<a name="debuff-UpdateSubscriptionAddonRequest"></a>
 
 ### UpdateSubscriptionAddonRequest
 Contains the information needed to update a subscription add-on.
@@ -264,8 +264,8 @@ Contains the information needed to update a subscription add-on.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information. |
-| subscription_addon | [SubscriptionAddon](#SubscriptionAddon) |  | The subscription add-on information being updated. Does not necessarily have all fields set and the UUID field should not be set. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information. |
+| subscription_addon | [SubscriptionAddon](#debuff-SubscriptionAddon) |  | The subscription add-on information being updated. Does not necessarily have all fields set and the UUID field should not be set. |
 | update_addon_id | [bool](#bool) |  | Whether to update the addon_id with the value contained in the subscription addon. The DE backend currently does not support this. Do a delete-&gt;add instead. |
 | update_subscription_id | [bool](#bool) |  | Whether to update the subscription_id field with the value contained in the subscription addon. The DE backend currently does not support this. Do a delete-&gt;add instead. |
 | update_amount | [bool](#bool) |  | Whether to update the amount field with the value contained in the subscription addon. |
@@ -292,7 +292,7 @@ Contains the information needed to update a subscription add-on.
 
 
 
-<a name="-IsOverage"></a>
+<a name="debuff-IsOverage"></a>
 
 ### IsOverage
 A response message returned by handlers in response to overage related requests.
@@ -300,8 +300,8 @@ A response message returned by handlers in response to overage related requests.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | The header userd for passing telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Contains any errors generated by the handler emitting the response. |
+| header | [Header](#debuff-Header) |  | The header userd for passing telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains any errors generated by the handler emitting the response. |
 | is_overage | [bool](#bool) |  | Whether or not there is an overage. |
 
 
@@ -309,7 +309,7 @@ A response message returned by handlers in response to overage related requests.
 
 
 
-<a name="-Overage"></a>
+<a name="debuff-Overage"></a>
 
 ### Overage
 Represents when a user&#39;s resource type usage exceeds their configured
@@ -327,7 +327,7 @@ quota. Usually embedded in request and response message types.
 
 
 
-<a name="-OverageList"></a>
+<a name="debuff-OverageList"></a>
 
 ### OverageList
 A response message returned by handlers in response to overage related requests.
@@ -335,16 +335,16 @@ A response message returned by handlers in response to overage related requests.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | The header used for passing telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Contains any errors generated by the handler emitting the response. |
-| overages | [Overage](#Overage) | repeated | The list of overages returned by the handler emitting the response. |
+| header | [Header](#debuff-Header) |  | The header used for passing telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains any errors generated by the handler emitting the response. |
+| overages | [Overage](#debuff-Overage) | repeated | The list of overages returned by the handler emitting the response. |
 
 
 
 
 
 
-<a name="-OverageResponse"></a>
+<a name="debuff-OverageResponse"></a>
 
 ### OverageResponse
 Returned by handlers in response to overage requests.
@@ -352,9 +352,9 @@ Returned by handlers in response to overage requests.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | The header used for passing telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Contains any errors generated by the handler emitting the response. |
-| overage | [Overage](#Overage) |  | The overage returned by the handler emitting the response. |
+| header | [Header](#debuff-Header) |  | The header used for passing telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains any errors generated by the handler emitting the response. |
+| overage | [Overage](#debuff-Overage) |  | The overage returned by the handler emitting the response. |
 
 
 
@@ -377,7 +377,7 @@ Returned by handlers in response to overage requests.
 
 
 
-<a name="-AddPlanQuotaDefaultRequest"></a>
+<a name="debuff-AddPlanQuotaDefaultRequest"></a>
 
 ### AddPlanQuotaDefaultRequest
 A request to add a quota default to an existing plan.
@@ -385,16 +385,16 @@ A request to add a quota default to an existing plan.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
 | plan_name | [string](#string) |  | The name of the plan to add the quota default to. |
-| quota_default | [QuotaDefault](#QuotaDefault) |  | The quota default to add to the plan specified by the plan_name field. |
+| quota_default | [QuotaDefault](#debuff-QuotaDefault) |  | The quota default to add to the plan specified by the plan_name field. |
 
 
 
 
 
 
-<a name="-AddPlanRequest"></a>
+<a name="debuff-AddPlanRequest"></a>
 
 ### AddPlanRequest
 A request to add a new plan to the system.
@@ -402,15 +402,15 @@ A request to add a new plan to the system.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| plan | [Plan](#Plan) |  | The plan to add to the system. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| plan | [Plan](#debuff-Plan) |  | The plan to add to the system. |
 
 
 
 
 
 
-<a name="-Plan"></a>
+<a name="debuff-Plan"></a>
 
 ### Plan
 Represents a subscription plan available to users.
@@ -421,14 +421,14 @@ Represents a subscription plan available to users.
 | uuid | [string](#string) |  | Unique identifier for the plan. |
 | name | [string](#string) |  | The name of the plan. |
 | description | [string](#string) |  | A description of the plan. |
-| plan_quota_defaults | [QuotaDefault](#QuotaDefault) | repeated | A list of quota defaults associated with the plan. |
+| plan_quota_defaults | [QuotaDefault](#debuff-QuotaDefault) | repeated | A list of quota defaults associated with the plan. |
 
 
 
 
 
 
-<a name="-PlanList"></a>
+<a name="debuff-PlanList"></a>
 
 ### PlanList
 A response to a plan request. Contains a list of plans.
@@ -436,16 +436,16 @@ A response to a plan request. Contains a list of plans.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Contains error data returned by the request handler. |
-| plans | [Plan](#Plan) | repeated | A list of plans returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains error data returned by the request handler. |
+| plans | [Plan](#debuff-Plan) | repeated | A list of plans returned by the request handler. |
 
 
 
 
 
 
-<a name="-PlanRequest"></a>
+<a name="debuff-PlanRequest"></a>
 
 ### PlanRequest
 A request for plan information specified by the plan&#39;s unique identifier.
@@ -453,7 +453,7 @@ A request for plan information specified by the plan&#39;s unique identifier.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
 | plan_id | [string](#string) |  | The unique identifier of the plan being requested. |
 
 
@@ -461,7 +461,7 @@ A request for plan information specified by the plan&#39;s unique identifier.
 
 
 
-<a name="-PlanResponse"></a>
+<a name="debuff-PlanResponse"></a>
 
 ### PlanResponse
 A response to a plan request. Contains a single plan.
@@ -469,16 +469,16 @@ A response to a plan request. Contains a single plan.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemtry data. |
-| error | [ServiceError](#ServiceError) |  | Contains error data returned by the request handler. |
-| plan | [Plan](#Plan) |  | The plan returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemtry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains error data returned by the request handler. |
+| plan | [Plan](#debuff-Plan) |  | The plan returned by the request handler. |
 
 
 
 
 
 
-<a name="-QuotaDefault"></a>
+<a name="debuff-QuotaDefault"></a>
 
 ### QuotaDefault
 Represents a default quota value used in plans. Can be overridden on a
@@ -490,14 +490,14 @@ as plan quota defaults.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier/primary key for the quota default. |
 | quota_value | [float](#float) |  | The value of the quota default. |
-| resource_type | [ResourceType](#ResourceType) |  | The resource type the quota applies to. |
+| resource_type | [ResourceType](#debuff-ResourceType) |  | The resource type the quota applies to. |
 
 
 
 
 
 
-<a name="-QuotaDefaultList"></a>
+<a name="debuff-QuotaDefaultList"></a>
 
 ### QuotaDefaultList
 A response type for quota default requests that contains a list of quota
@@ -506,16 +506,16 @@ defaults.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Can contain telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Contains error info from the request handler. |
-| quota_defaults | [QuotaDefault](#QuotaDefault) | repeated | The list of quota default objkects returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Can contain telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains error info from the request handler. |
+| quota_defaults | [QuotaDefault](#debuff-QuotaDefault) | repeated | The list of quota default objkects returned by the request handler. |
 
 
 
 
 
 
-<a name="-QuotaDefaultResponse"></a>
+<a name="debuff-QuotaDefaultResponse"></a>
 
 ### QuotaDefaultResponse
 A response type for quota default requests.
@@ -523,9 +523,9 @@ A response type for quota default requests.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Can container telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Contains error info from the request handler. |
-| quota_default | [QuotaDefault](#QuotaDefault) |  | The quota default object returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Can container telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Contains error info from the request handler. |
+| quota_default | [QuotaDefault](#debuff-QuotaDefault) |  | The quota default object returned by the request handler. |
 
 
 
@@ -548,7 +548,7 @@ A response type for quota default requests.
 
 
 
-<a name="-AddQuotaRequest"></a>
+<a name="debuff-AddQuotaRequest"></a>
 
 ### AddQuotaRequest
 A request to add a quota to a subscription.
@@ -556,15 +556,15 @@ A request to add a quota to a subscription.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| quota | [Quota](#Quota) |  | The quota to be added to the system. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| quota | [Quota](#debuff-Quota) |  | The quota to be added to the system. |
 
 
 
 
 
 
-<a name="-Quota"></a>
+<a name="debuff-Quota"></a>
 
 ### Quota
 Represents a quota in the system, which is the currently configured limit on
@@ -576,7 +576,7 @@ default associated with the plan the user has.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier. |
 | quota | [float](#float) |  | The quota value (aka limit). |
-| resource_type | [ResourceType](#ResourceType) |  | The resource type the quota value applies to. |
+| resource_type | [ResourceType](#debuff-ResourceType) |  | The resource type the quota value applies to. |
 | CreatedBy | [string](#string) |  | A freeform text field containing info about who created the quota. |
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the quota was created. |
 | LastModifiedBy | [string](#string) |  | A freeform text field containing info about who last modified the quota. |
@@ -588,7 +588,7 @@ default associated with the plan the user has.
 
 
 
-<a name="-QuotaList"></a>
+<a name="debuff-QuotaList"></a>
 
 ### QuotaList
 A response to a quota request containing a list of quotas.
@@ -596,16 +596,16 @@ A response to a quota request containing a list of quotas.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| quotas | [Quota](#Quota) | repeated | A list of quotas returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| quotas | [Quota](#debuff-Quota) | repeated | A list of quotas returned by the request handler. |
 
 
 
 
 
 
-<a name="-QuotaResponse"></a>
+<a name="debuff-QuotaResponse"></a>
 
 ### QuotaResponse
 A response to a quota request. Contains a single quota object.
@@ -613,9 +613,9 @@ A response to a quota request. Contains a single quota object.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| quota | [Quota](#Quota) |  | The quota returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| quota | [Quota](#debuff-Quota) |  | The quota returned by the request handler. |
 
 
 
@@ -638,7 +638,7 @@ A response to a quota request. Contains a single quota object.
 
 
 
-<a name="-AddUsage"></a>
+<a name="debuff-AddUsage"></a>
 
 ### AddUsage
 A request to add a usage to the system for a resource type consumed by the
@@ -647,7 +647,7 @@ specified user.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 | resource_name | [string](#string) |  |  |
 | update_type | [string](#string) |  | Possible values are defined in the database, so we can&#39;t use an enum here |
@@ -659,7 +659,7 @@ specified user.
 
 
 
-<a name="-AllUserOveragesRequest"></a>
+<a name="debuff-AllUserOveragesRequest"></a>
 
 ### AllUserOveragesRequest
 A request for all of a user&#39;s current resource type overages.
@@ -667,7 +667,7 @@ A request for all of a user&#39;s current resource type overages.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
 | username | [string](#string) |  | The user&#39;s username in the QMS system. |
 
 
@@ -675,7 +675,7 @@ A request for all of a user&#39;s current resource type overages.
 
 
 
-<a name="-GetUsages"></a>
+<a name="debuff-GetUsages"></a>
 
 ### GetUsages
 
@@ -683,7 +683,7 @@ A request for all of a user&#39;s current resource type overages.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 
 
@@ -691,7 +691,7 @@ A request for all of a user&#39;s current resource type overages.
 
 
 
-<a name="-IsOverageRequest"></a>
+<a name="debuff-IsOverageRequest"></a>
 
 ### IsOverageRequest
 A request to check if a user is in overage for a particular resource.
@@ -699,7 +699,7 @@ A request to check if a user is in overage for a particular resource.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | username | [string](#string) |  | A username. |
 | resource_name | [string](#string) |  | The name of the resource type to check for usage overages by the user. |
 
@@ -708,7 +708,7 @@ A request to check if a user is in overage for a particular resource.
 
 
 
-<a name="-NoParamsRequest"></a>
+<a name="debuff-NoParamsRequest"></a>
 
 ### NoParamsRequest
 
@@ -716,14 +716,14 @@ A request to check if a user is in overage for a particular resource.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 
 
 
 
 
 
-<a name="-RequestByUserID"></a>
+<a name="debuff-RequestByUserID"></a>
 
 ### RequestByUserID
 
@@ -731,7 +731,7 @@ A request to check if a user is in overage for a particular resource.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | user_id | [string](#string) |  |  |
 
 
@@ -739,7 +739,7 @@ A request to check if a user is in overage for a particular resource.
 
 
 
-<a name="-RequestByUsername"></a>
+<a name="debuff-RequestByUsername"></a>
 
 ### RequestByUsername
 
@@ -747,7 +747,7 @@ A request to check if a user is in overage for a particular resource.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 
 
@@ -755,7 +755,7 @@ A request to check if a user is in overage for a particular resource.
 
 
 
-<a name="-UserResourceOveragesRequest"></a>
+<a name="debuff-UserResourceOveragesRequest"></a>
 
 ### UserResourceOveragesRequest
 A request for a user&#39;s overages specific to a particular resource type.
@@ -763,7 +763,7 @@ A request for a user&#39;s overages specific to a particular resource type.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry data. |
+| header | [Header](#debuff-Header) |  | Contains telemetry data. |
 | username | [string](#string) |  | A user&#39;s username. |
 | resource_name | [string](#string) |  | The name of the resource type to look up overages for. |
 
@@ -788,7 +788,7 @@ A request for a user&#39;s overages specific to a particular resource type.
 
 
 
-<a name="-ResourceType"></a>
+<a name="debuff-ResourceType"></a>
 
 ### ResourceType
 Representation of a resource type.
@@ -805,7 +805,7 @@ Representation of a resource type.
 
 
 
-<a name="-ResourceTypeList"></a>
+<a name="debuff-ResourceTypeList"></a>
 
 ### ResourceTypeList
 A response type for the resource type requests that contains a list of 
@@ -814,16 +814,16 @@ resource type definitions.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| resource_types | [ResourceType](#ResourceType) | repeated | A list of resource types returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| resource_types | [ResourceType](#debuff-ResourceType) | repeated | A list of resource types returned by the request handler. |
 
 
 
 
 
 
-<a name="-ResourceTypeResponse"></a>
+<a name="debuff-ResourceTypeResponse"></a>
 
 ### ResourceTypeResponse
 A response type for resource type requests.
@@ -831,9 +831,9 @@ A response type for resource type requests.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| resource_type | [ResourceType](#ResourceType) |  | The resource type returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| resource_type | [ResourceType](#debuff-ResourceType) |  | The resource type returned by the request handler. |
 
 
 
@@ -856,7 +856,7 @@ A response type for resource type requests.
 
 
 
-<a name="-ChangeSubscriptionRequest"></a>
+<a name="debuff-ChangeSubscriptionRequest"></a>
 
 ### ChangeSubscriptionRequest
 A request to change a subscription.
@@ -864,7 +864,7 @@ A request to change a subscription.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | username | [string](#string) |  | A username for the user whose subscription is being changed. |
 | uuid | [string](#string) |  |  |
 | name | [string](#string) |  |  |
@@ -874,7 +874,7 @@ A request to change a subscription.
 
 
 
-<a name="-Subscription"></a>
+<a name="debuff-Subscription"></a>
 
 ### Subscription
 Representation of a subscription.
@@ -885,10 +885,10 @@ Representation of a subscription.
 | uuid | [string](#string) |  | The unique identifier |
 | effective_start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the subscription activates. |
 | effective_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the subscription deactivates/expires. |
-| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the subscription is for. |
-| plan | [Plan](#Plan) |  | The plan the user is subscribed to. |
-| quotas | [Quota](#Quota) | repeated | The list of quotas applied to the subscription. Initially populated by quota defaults, but can be overridden. |
-| usages | [Usage](#Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
+| user | [QMSUser](#debuff-QMSUser) |  | The user in the QMS system that the subscription is for. |
+| plan | [Plan](#debuff-Plan) |  | The plan the user is subscribed to. |
+| quotas | [Quota](#debuff-Quota) | repeated | The list of quotas applied to the subscription. Initially populated by quota defaults, but can be overridden. |
+| usages | [Usage](#debuff-Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
 | paid | [bool](#bool) |  | A flag indicating whether or not the user paid for the subscription. |
 
 
@@ -896,7 +896,7 @@ Representation of a subscription.
 
 
 
-<a name="-SubscriptionList"></a>
+<a name="debuff-SubscriptionList"></a>
 
 ### SubscriptionList
 A response to a request for a list of subscriptions.
@@ -904,16 +904,16 @@ A response to a request for a list of subscriptions.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| subscriptions | [Subscription](#Subscription) | repeated | The subscription list returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| subscriptions | [Subscription](#debuff-Subscription) | repeated | The subscription list returned by the request handler. |
 
 
 
 
 
 
-<a name="-SubscriptionResponse"></a>
+<a name="debuff-SubscriptionResponse"></a>
 
 ### SubscriptionResponse
 A response to a request for a subscription.
@@ -921,9 +921,9 @@ A response to a request for a subscription.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| subscription | [Subscription](#Subscription) |  | The subscription returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| subscription | [Subscription](#debuff-Subscription) |  | The subscription returned by the request handler. |
 
 
 
@@ -946,7 +946,7 @@ A response to a request for a subscription.
 
 
 
-<a name="-AddUpdateRequest"></a>
+<a name="debuff-AddUpdateRequest"></a>
 
 ### AddUpdateRequest
 A request to add an update to the system.
@@ -954,15 +954,15 @@ A request to add an update to the system.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| update | [Update](#Update) |  | The update being added to the system. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| update | [Update](#debuff-Update) |  | The update being added to the system. |
 
 
 
 
 
 
-<a name="-AddUpdateResponse"></a>
+<a name="debuff-AddUpdateResponse"></a>
 
 ### AddUpdateResponse
 A response to requests to add an update to the system.
@@ -970,16 +970,16 @@ A response to requests to add an update to the system.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| update | [Update](#Update) |  | The update added to the system. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| update | [Update](#debuff-Update) |  | The update added to the system. |
 
 
 
 
 
 
-<a name="-Update"></a>
+<a name="debuff-Update"></a>
 
 ### Update
 A representation of an update to a quota or usage value.
@@ -991,16 +991,16 @@ A representation of an update to a quota or usage value.
 | value_type | [string](#string) |  | Determines whether the update is for a &#34;quota&#34; or &#34;usage&#34;. |
 | value | [double](#double) |  | The value being applied to the usage or quota. |
 | effective_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the update takes effect. |
-| operation | [UpdateOperation](#UpdateOperation) |  | The type of operation being done. |
-| resource_type | [ResourceType](#ResourceType) |  | The resource type for the quota or usage being updated. |
-| user | [QMSUser](#QMSUser) |  | The user in the QMS system that the update is for. |
+| operation | [UpdateOperation](#debuff-UpdateOperation) |  | The type of operation being done. |
+| resource_type | [ResourceType](#debuff-ResourceType) |  | The resource type for the quota or usage being updated. |
+| user | [QMSUser](#debuff-QMSUser) |  | The user in the QMS system that the update is for. |
 
 
 
 
 
 
-<a name="-UpdateListRequest"></a>
+<a name="debuff-UpdateListRequest"></a>
 
 ### UpdateListRequest
 A request to get the list of updates generated by the specified user.
@@ -1008,15 +1008,15 @@ A request to get the list of updates generated by the specified user.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| user | [QMSUser](#QMSUser) |  | The user whose updates have been requested. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| user | [QMSUser](#debuff-QMSUser) |  | The user whose updates have been requested. |
 
 
 
 
 
 
-<a name="-UpdateListResponse"></a>
+<a name="debuff-UpdateListResponse"></a>
 
 ### UpdateListResponse
 A response containing the requested list of updates generated by a user.
@@ -1024,16 +1024,16 @@ A response containing the requested list of updates generated by a user.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| updates | [Update](#Update) | repeated | The list of updates returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| updates | [Update](#debuff-Update) | repeated | The list of updates returned by the request handler. |
 
 
 
 
 
 
-<a name="-UpdateOperation"></a>
+<a name="debuff-UpdateOperation"></a>
 
 ### UpdateOperation
 A representation of update operations, which are ways calling code can change
@@ -1066,7 +1066,7 @@ quota and usage value.
 
 
 
-<a name="-Usage"></a>
+<a name="debuff-Usage"></a>
 
 ### Usage
 A representation of how much a user has used a resource type.
@@ -1077,7 +1077,7 @@ A representation of how much a user has used a resource type.
 | uuid | [string](#string) |  | The unique identifier |
 | usage | [double](#double) |  | How much the resource has been used. |
 | subscription_id | [string](#string) |  | The unique identifier for the subscription the usage is associated with. |
-| resource_type | [ResourceType](#ResourceType) |  | The resource type the usage applies to. |
+| resource_type | [ResourceType](#debuff-ResourceType) |  | The resource type the usage applies to. |
 | CreatedBy | [string](#string) |  | Who created the usage record. Probably not the name of a user. |
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the usage record was created. |
 | LastModifiedBy | [string](#string) |  | Who last modified the usage record. Probably not the name of a user. |
@@ -1088,7 +1088,7 @@ A representation of how much a user has used a resource type.
 
 
 
-<a name="-UsageList"></a>
+<a name="debuff-UsageList"></a>
 
 ### UsageList
 A response to a request for usage info containing multiple usage records.
@@ -1096,16 +1096,16 @@ A response to a request for usage info containing multiple usage records.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| usages | [Usage](#Usage) | repeated | A list of usages returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| usages | [Usage](#debuff-Usage) | repeated | A list of usages returned by the request handler. |
 
 
 
 
 
 
-<a name="-UsageResponse"></a>
+<a name="debuff-UsageResponse"></a>
 
 ### UsageResponse
 A response to a request for a usage record.
@@ -1113,9 +1113,9 @@ A response to a request for a usage record.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information returned by the request handler. |
-| usage | [Usage](#Usage) |  | Contains the usage info returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information returned by the request handler. |
+| usage | [Usage](#debuff-Usage) |  | Contains the usage info returned by the request handler. |
 
 
 
@@ -1138,7 +1138,7 @@ A response to a request for a usage record.
 
 
 
-<a name="-AddUserRequest"></a>
+<a name="debuff-AddUserRequest"></a>
 
 ### AddUserRequest
 A request to add a user to the QMS system.
@@ -1146,7 +1146,7 @@ A request to add a user to the QMS system.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
 | username | [string](#string) |  | The username for the user being added to the system. |
 | plan_name | [string](#string) |  | The name of the plan the user should be subscribed to. |
 | paid | [bool](#bool) |  | True if the user paid for the subscription. |
@@ -1156,7 +1156,7 @@ A request to add a user to the QMS system.
 
 
 
-<a name="-AddUserResponse"></a>
+<a name="debuff-AddUserResponse"></a>
 
 ### AddUserResponse
 A response to a request to add a user to the QMS system.
@@ -1164,8 +1164,8 @@ A response to a request to add a user to the QMS system.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
 | uuid | [string](#string) |  | The unique identfier of the newly added user. |
 | username | [string](#string) |  | The username of the newly added user. |
 | plan_name | [string](#string) |  | The name of the plan the newly added user is subscribed to. |
@@ -1176,7 +1176,7 @@ A response to a request to add a user to the QMS system.
 
 
 
-<a name="-QMSUser"></a>
+<a name="debuff-QMSUser"></a>
 
 ### QMSUser
 A representation of a user in the QMS system.
@@ -1192,7 +1192,7 @@ A representation of a user in the QMS system.
 
 
 
-<a name="-QMSUserList"></a>
+<a name="debuff-QMSUserList"></a>
 
 ### QMSUserList
 A response to a request for info about a list of users.
@@ -1200,16 +1200,16 @@ A response to a request for info about a list of users.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| users | [QMSUser](#QMSUser) | repeated | The user list returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| users | [QMSUser](#debuff-QMSUser) | repeated | The user list returned by the request handler. |
 
 
 
 
 
 
-<a name="-QMSUserResponse"></a>
+<a name="debuff-QMSUserResponse"></a>
 
 ### QMSUserResponse
 A response to a request for info about a QMS user.
@@ -1217,9 +1217,9 @@ A response to a request for info about a QMS user.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  | Contains telemetry information |
-| error | [ServiceError](#ServiceError) |  | Error information generated by the request handler. |
-| user | [QMSUser](#QMSUser) |  | The user returned by the request handler. |
+| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| error | [ServiceError](#debuff-ServiceError) |  | Error information generated by the request handler. |
+| user | [QMSUser](#debuff-QMSUser) |  | The user returned by the request handler. |
 
 
 

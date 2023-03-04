@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UsageListOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:UsageList)
+    // @@protoc_insertion_point(interface_extends:debuff.UsageList)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface UsageListOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface UsageListOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface UsageListOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface UsageListOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
@@ -48,7 +48,7 @@ public interface UsageListOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
@@ -57,7 +57,7 @@ public interface UsageListOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.ServiceError error = 2;</code>
+   * <code>.debuff.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
@@ -66,7 +66,7 @@ public interface UsageListOrBuilder extends
    * A list of usages returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Usage usages = 3;</code>
+   * <code>repeated .debuff.Usage usages = 3;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Usage> 
       getUsagesList();
@@ -75,7 +75,7 @@ public interface UsageListOrBuilder extends
    * A list of usages returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Usage usages = 3;</code>
+   * <code>repeated .debuff.Usage usages = 3;</code>
    */
   org.cyverse.de.protobufs.Usage getUsages(int index);
   /**
@@ -83,7 +83,7 @@ public interface UsageListOrBuilder extends
    * A list of usages returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Usage usages = 3;</code>
+   * <code>repeated .debuff.Usage usages = 3;</code>
    */
   int getUsagesCount();
   /**
@@ -91,7 +91,7 @@ public interface UsageListOrBuilder extends
    * A list of usages returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Usage usages = 3;</code>
+   * <code>repeated .debuff.Usage usages = 3;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.UsageOrBuilder> 
       getUsagesOrBuilderList();
@@ -100,7 +100,7 @@ public interface UsageListOrBuilder extends
    * A list of usages returned by the request handler.
    * </pre>
    *
-   * <code>repeated .Usage usages = 3;</code>
+   * <code>repeated .debuff.Usage usages = 3;</code>
    */
   org.cyverse.de.protobufs.UsageOrBuilder getUsagesOrBuilder(
       int index);

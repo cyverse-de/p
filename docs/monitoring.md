@@ -4,13 +4,13 @@
 ## Table of Contents
 
 - [monitoring_dns_check.proto](#monitoring_dns_check-proto)
-    - [DNSCheckResult](#-DNSCheckResult)
-    - [DNSLookup](#-DNSLookup)
+    - [DNSCheckResult](#debuff-DNSCheckResult)
+    - [DNSLookup](#debuff-DNSLookup)
   
-    - [LookupType](#-LookupType)
+    - [LookupType](#debuff-LookupType)
   
 - [monitoring_heartbeat.proto](#monitoring_heartbeat-proto)
-    - [Heartbeat](#-Heartbeat)
+    - [Heartbeat](#debuff-Heartbeat)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -23,7 +23,7 @@
 
 
 
-<a name="-DNSCheckResult"></a>
+<a name="debuff-DNSCheckResult"></a>
 
 ### DNSCheckResult
 
@@ -31,9 +31,9 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
-| lookups | [DNSLookup](#DNSLookup) | repeated |  |
+| header | [Header](#debuff-Header) |  |  |
+| error | [ServiceError](#debuff-ServiceError) |  |  |
+| lookups | [DNSLookup](#debuff-DNSLookup) | repeated |  |
 | node | [string](#string) |  |  |
 | date_sent | [string](#string) |  |  |
 
@@ -42,7 +42,7 @@
 
 
 
-<a name="-DNSLookup"></a>
+<a name="debuff-DNSLookup"></a>
 
 ### DNSLookup
 
@@ -62,7 +62,7 @@
  
 
 
-<a name="-LookupType"></a>
+<a name="debuff-LookupType"></a>
 
 ### LookupType
 
@@ -89,7 +89,7 @@
 
 
 
-<a name="-Heartbeat"></a>
+<a name="debuff-Heartbeat"></a>
 
 ### Heartbeat
 
@@ -97,8 +97,8 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#Header) |  |  |
-| error | [ServiceError](#ServiceError) |  |  |
+| header | [Header](#debuff-Header) |  |  |
+| error | [ServiceError](#debuff-ServiceError) |  |  |
 | node | [string](#string) |  |  |
 | date_sent | [string](#string) |  |  |
 

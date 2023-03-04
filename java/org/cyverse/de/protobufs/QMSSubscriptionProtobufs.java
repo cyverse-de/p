@@ -15,25 +15,25 @@ public final class QMSSubscriptionProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Subscription_descriptor;
+    internal_static_debuff_Subscription_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Subscription_fieldAccessorTable;
+      internal_static_debuff_Subscription_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SubscriptionResponse_descriptor;
+    internal_static_debuff_SubscriptionResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SubscriptionResponse_fieldAccessorTable;
+      internal_static_debuff_SubscriptionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SubscriptionList_descriptor;
+    internal_static_debuff_SubscriptionList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SubscriptionList_fieldAccessorTable;
+      internal_static_debuff_SubscriptionList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ChangeSubscriptionRequest_descriptor;
+    internal_static_debuff_ChangeSubscriptionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ChangeSubscriptionRequest_fieldAccessorTable;
+      internal_static_debuff_ChangeSubscriptionRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -43,29 +43,32 @@ public final class QMSSubscriptionProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027qms_subscriptions.proto\032\037google/protob" +
-      "uf/timestamp.proto\032\014header.proto\032\016svcerr" +
-      "or.proto\032\017qms_users.proto\032\017qms_plans.pro" +
-      "to\032\020qms_quotas.proto\032\020qms_usages.proto\"\243" +
-      "\002\n\014Subscription\022\014\n\004uuid\030\001 \001(\t\022N\n\024effecti" +
-      "ve_start_date\030\002 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\024effective_start_date\022J\n\022effecti" +
-      "ve_end_date\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stampR\022effective_end_date\022\026\n\004user\030\004 \001(\0132" +
-      "\010.QMSUser\022\023\n\004plan\030\005 \001(\0132\005.Plan\022\026\n\006quotas" +
-      "\030\006 \003(\0132\006.Quota\022\026\n\006usages\030\007 \003(\0132\006.Usage\022\014" +
-      "\n\004paid\030\010 \001(\010\"\200\001\n\024SubscriptionResponse\022\027\n" +
-      "\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 \001(\0132\r." +
-      "ServiceError\0221\n\014subscription\030\003 \001(\0132\r.Sub" +
-      "scriptionR\014subscription\"~\n\020SubscriptionL" +
-      "ist\022\027\n\006header\030\001 \001(\0132\007.Header\022\034\n\005error\030\002 " +
-      "\001(\0132\r.ServiceError\0223\n\rsubscriptions\030\003 \003(" +
-      "\0132\r.SubscriptionR\rsubscriptions\"n\n\031Chang" +
-      "eSubscriptionRequest\022\027\n\006header\030\001 \001(\0132\007.H" +
-      "eader\022\020\n\010username\030\002 \001(\t\022\016\n\004uuid\030\003 \001(\tH\000\022" +
-      "\016\n\004name\030\004 \001(\tH\000B\006\n\004planBV\n\030org.cyverse.d" +
-      "e.protobufsB\030QMSSubscriptionProtobufsP\001Z" +
-      "\036github.com/cyverse-de/p/go/qmsb\006proto3"
+      "\n\027qms_subscriptions.proto\022\006debuff\032\037googl" +
+      "e/protobuf/timestamp.proto\032\014header.proto" +
+      "\032\016svcerror.proto\032\017qms_users.proto\032\017qms_p" +
+      "lans.proto\032\020qms_quotas.proto\032\020qms_usages" +
+      ".proto\"\277\002\n\014Subscription\022\014\n\004uuid\030\001 \001(\t\022N\n" +
+      "\024effective_start_date\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\024effective_start_date\022J\n" +
+      "\022effective_end_date\030\003 \001(\0132\032.google.proto" +
+      "buf.TimestampR\022effective_end_date\022\035\n\004use" +
+      "r\030\004 \001(\0132\017.debuff.QMSUser\022\032\n\004plan\030\005 \001(\0132\014" +
+      ".debuff.Plan\022\035\n\006quotas\030\006 \003(\0132\r.debuff.Qu" +
+      "ota\022\035\n\006usages\030\007 \003(\0132\r.debuff.Usage\022\014\n\004pa" +
+      "id\030\010 \001(\010\"\225\001\n\024SubscriptionResponse\022\036\n\006hea" +
+      "der\030\001 \001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(\013" +
+      "2\024.debuff.ServiceError\0228\n\014subscription\030\003" +
+      " \001(\0132\024.debuff.SubscriptionR\014subscription" +
+      "\"\223\001\n\020SubscriptionList\022\036\n\006header\030\001 \001(\0132\016." +
+      "debuff.Header\022#\n\005error\030\002 \001(\0132\024.debuff.Se" +
+      "rviceError\022:\n\rsubscriptions\030\003 \003(\0132\024.debu" +
+      "ff.SubscriptionR\rsubscriptions\"u\n\031Change" +
+      "SubscriptionRequest\022\036\n\006header\030\001 \001(\0132\016.de" +
+      "buff.Header\022\020\n\010username\030\002 \001(\t\022\016\n\004uuid\030\003 " +
+      "\001(\tH\000\022\016\n\004name\030\004 \001(\tH\000B\006\n\004planBV\n\030org.cyv" +
+      "erse.de.protobufsB\030QMSSubscriptionProtob" +
+      "ufsP\001Z\036github.com/cyverse-de/p/go/qmsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,29 +81,29 @@ public final class QMSSubscriptionProtobufs {
           org.cyverse.de.protobufs.QMSQuotaProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSUsageProtobufs.getDescriptor(),
         });
-    internal_static_Subscription_descriptor =
+    internal_static_debuff_Subscription_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_Subscription_fieldAccessorTable = new
+    internal_static_debuff_Subscription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Subscription_descriptor,
+        internal_static_debuff_Subscription_descriptor,
         new java.lang.String[] { "Uuid", "EffectiveStartDate", "EffectiveEndDate", "User", "Plan", "Quotas", "Usages", "Paid", });
-    internal_static_SubscriptionResponse_descriptor =
+    internal_static_debuff_SubscriptionResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_SubscriptionResponse_fieldAccessorTable = new
+    internal_static_debuff_SubscriptionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SubscriptionResponse_descriptor,
+        internal_static_debuff_SubscriptionResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "Subscription", });
-    internal_static_SubscriptionList_descriptor =
+    internal_static_debuff_SubscriptionList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_SubscriptionList_fieldAccessorTable = new
+    internal_static_debuff_SubscriptionList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SubscriptionList_descriptor,
+        internal_static_debuff_SubscriptionList_descriptor,
         new java.lang.String[] { "Header", "Error", "Subscriptions", });
-    internal_static_ChangeSubscriptionRequest_descriptor =
+    internal_static_debuff_ChangeSubscriptionRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_ChangeSubscriptionRequest_fieldAccessorTable = new
+    internal_static_debuff_ChangeSubscriptionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ChangeSubscriptionRequest_descriptor,
+        internal_static_debuff_ChangeSubscriptionRequest_descriptor,
         new java.lang.String[] { "Header", "Username", "Uuid", "Name", "Plan", });
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();

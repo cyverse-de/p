@@ -5,6 +5,12 @@ import "svcerror.proto";
 
 option go_package = "github.com/cyverse-de/p/go/monitoring";
 
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "MonitoringHearbeat";
+
+package debuff;
+
 message Heartbeat {
     Header header = 1;
     ServiceError error = 2;

@@ -4,60 +4,60 @@
 package org.cyverse.de.protobufs;
 
 public interface AnalysisRecordListOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:AnalysisRecordList)
+    // @@protoc_insertion_point(interface_extends:debuff.AnalysisRecordList)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   java.util.List<org.cyverse.de.protobufs.AnalysisRecord> 
       getAnalysesList();
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index);
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   int getAnalysesCount();
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
       getAnalysesOrBuilderList();
   /**
-   * <code>repeated .AnalysisRecord analyses = 2;</code>
+   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
    */
   org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
       int index);
 
   /**
-   * <code>.ServiceError error = 7;</code>
+   * <code>.debuff.ServiceError error = 7;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>.ServiceError error = 7;</code>
+   * <code>.debuff.ServiceError error = 7;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
   /**
-   * <code>.ServiceError error = 7;</code>
+   * <code>.debuff.ServiceError error = 7;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 }

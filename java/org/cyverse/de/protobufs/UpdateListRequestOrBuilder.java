@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UpdateListRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:UpdateListRequest)
+    // @@protoc_insertion_point(interface_extends:debuff.UpdateListRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface UpdateListRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface UpdateListRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface UpdateListRequestOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.Header header = 1;</code>
+   * <code>.debuff.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface UpdateListRequestOrBuilder extends
    * The user whose updates have been requested.
    * </pre>
    *
-   * <code>.QMSUser user = 2;</code>
+   * <code>.debuff.QMSUser user = 2;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
@@ -48,7 +48,7 @@ public interface UpdateListRequestOrBuilder extends
    * The user whose updates have been requested.
    * </pre>
    *
-   * <code>.QMSUser user = 2;</code>
+   * <code>.debuff.QMSUser user = 2;</code>
    * @return The user.
    */
   org.cyverse.de.protobufs.QMSUser getUser();
@@ -57,7 +57,7 @@ public interface UpdateListRequestOrBuilder extends
    * The user whose updates have been requested.
    * </pre>
    *
-   * <code>.QMSUser user = 2;</code>
+   * <code>.debuff.QMSUser user = 2;</code>
    */
   org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder();
 }

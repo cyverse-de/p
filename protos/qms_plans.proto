@@ -10,6 +10,8 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSPlansProtobufs";
 
+package debuff;
+
 /**
  * Represents a default quota value used in plans. Can be overridden on a
  * per-user basis for a subscription to provide customized quotas. Also referred to

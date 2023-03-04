@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A representation of an update to a quota or usage value.
  * </pre>
  *
- * Protobuf type {@code Update}
+ * Protobuf type {@code debuff.Update}
  */
 public final class Update extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Update)
+    // @@protoc_insertion_point(message_implements:debuff.Update)
     UpdateOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Update.newBuilder() to construct.
@@ -39,13 +39,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_Update_descriptor;
+    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_Update_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_Update_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_Update_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Update.class, org.cyverse.de.protobufs.Update.Builder.class);
   }
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * The type of operation being done.
    * </pre>
    *
-   * <code>.UpdateOperation operation = 5;</code>
+   * <code>.debuff.UpdateOperation operation = 5;</code>
    * @return Whether the operation field is set.
    */
   @java.lang.Override
@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
    * The type of operation being done.
    * </pre>
    *
-   * <code>.UpdateOperation operation = 5;</code>
+   * <code>.debuff.UpdateOperation operation = 5;</code>
    * @return The operation.
    */
   @java.lang.Override
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
    * The type of operation being done.
    * </pre>
    *
-   * <code>.UpdateOperation operation = 5;</code>
+   * <code>.debuff.UpdateOperation operation = 5;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.UpdateOperationOrBuilder getOperationOrBuilder() {
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * The resource type for the quota or usage being updated.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   @java.lang.Override
@@ -254,7 +254,7 @@ private static final long serialVersionUID = 0L;
    * The resource type for the quota or usage being updated.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   @java.lang.Override
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
    * The resource type for the quota or usage being updated.
    * </pre>
    *
-   * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+   * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
    * The user in the QMS system that the update is for.
    * </pre>
    *
-   * <code>.QMSUser user = 7;</code>
+   * <code>.debuff.QMSUser user = 7;</code>
    * @return Whether the user field is set.
    */
   @java.lang.Override
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
    * The user in the QMS system that the update is for.
    * </pre>
    *
-   * <code>.QMSUser user = 7;</code>
+   * <code>.debuff.QMSUser user = 7;</code>
    * @return The user.
    */
   @java.lang.Override
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
    * The user in the QMS system that the update is for.
    * </pre>
    *
-   * <code>.QMSUser user = 7;</code>
+   * <code>.debuff.QMSUser user = 7;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder() {
@@ -558,21 +558,21 @@ private static final long serialVersionUID = 0L;
    * A representation of an update to a quota or usage value.
    * </pre>
    *
-   * Protobuf type {@code Update}
+   * Protobuf type {@code debuff.Update}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Update)
+      // @@protoc_insertion_point(builder_implements:debuff.Update)
       org.cyverse.de.protobufs.UpdateOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_Update_descriptor;
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_Update_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_Update_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_Update_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Update.class, org.cyverse.de.protobufs.Update.Builder.class);
     }
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_Update_descriptor;
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_Update_descriptor;
     }
 
     @java.lang.Override
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      * @return Whether the operation field is set.
      */
     public boolean hasOperation() {
@@ -1235,7 +1235,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      * @return The operation.
      */
     public org.cyverse.de.protobufs.UpdateOperation getOperation() {
@@ -1250,7 +1250,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     public Builder setOperation(org.cyverse.de.protobufs.UpdateOperation value) {
       if (operationBuilder_ == null) {
@@ -1270,7 +1270,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     public Builder setOperation(
         org.cyverse.de.protobufs.UpdateOperation.Builder builderForValue) {
@@ -1288,7 +1288,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     public Builder mergeOperation(org.cyverse.de.protobufs.UpdateOperation value) {
       if (operationBuilder_ == null) {
@@ -1311,7 +1311,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     public Builder clearOperation() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     public org.cyverse.de.protobufs.UpdateOperation.Builder getOperationBuilder() {
       bitField0_ |= 0x00000010;
@@ -1340,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     public org.cyverse.de.protobufs.UpdateOperationOrBuilder getOperationOrBuilder() {
       if (operationBuilder_ != null) {
@@ -1355,7 +1355,7 @@ private static final long serialVersionUID = 0L;
      * The type of operation being done.
      * </pre>
      *
-     * <code>.UpdateOperation operation = 5;</code>
+     * <code>.debuff.UpdateOperation operation = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.UpdateOperation, org.cyverse.de.protobufs.UpdateOperation.Builder, org.cyverse.de.protobufs.UpdateOperationOrBuilder> 
@@ -1379,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
     public boolean hasResourceType() {
@@ -1390,7 +1390,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
     public org.cyverse.de.protobufs.ResourceType getResourceType() {
@@ -1405,7 +1405,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypeBuilder_ == null) {
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
         org.cyverse.de.protobufs.ResourceType.Builder builderForValue) {
@@ -1443,7 +1443,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypeBuilder_ == null) {
@@ -1466,7 +1466,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
       bitField0_ |= 0x00000020;
@@ -1495,7 +1495,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
       if (resourceTypeBuilder_ != null) {
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
      * The resource type for the quota or usage being updated.
      * </pre>
      *
-     * <code>.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+     * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> 
@@ -1534,7 +1534,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      * @return Whether the user field is set.
      */
     public boolean hasUser() {
@@ -1545,7 +1545,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      * @return The user.
      */
     public org.cyverse.de.protobufs.QMSUser getUser() {
@@ -1560,7 +1560,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     public Builder setUser(org.cyverse.de.protobufs.QMSUser value) {
       if (userBuilder_ == null) {
@@ -1580,7 +1580,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     public Builder setUser(
         org.cyverse.de.protobufs.QMSUser.Builder builderForValue) {
@@ -1598,7 +1598,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     public Builder mergeUser(org.cyverse.de.protobufs.QMSUser value) {
       if (userBuilder_ == null) {
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     public Builder clearUser() {
       bitField0_ = (bitField0_ & ~0x00000040);
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     public org.cyverse.de.protobufs.QMSUser.Builder getUserBuilder() {
       bitField0_ |= 0x00000040;
@@ -1650,7 +1650,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     public org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
@@ -1665,7 +1665,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the update is for.
      * </pre>
      *
-     * <code>.QMSUser user = 7;</code>
+     * <code>.debuff.QMSUser user = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.QMSUser, org.cyverse.de.protobufs.QMSUser.Builder, org.cyverse.de.protobufs.QMSUserOrBuilder> 
@@ -1693,10 +1693,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Update)
+    // @@protoc_insertion_point(builder_scope:debuff.Update)
   }
 
-  // @@protoc_insertion_point(class_scope:Update)
+  // @@protoc_insertion_point(class_scope:debuff.Update)
   private static final org.cyverse.de.protobufs.Update DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Update();

@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface SubscriptionAddonOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:SubscriptionAddon)
+    // @@protoc_insertion_point(interface_extends:debuff.SubscriptionAddon)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -33,7 +33,7 @@ public interface SubscriptionAddonOrBuilder extends
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.Addon addon = 2;</code>
+   * <code>.debuff.Addon addon = 2;</code>
    * @return Whether the addon field is set.
    */
   boolean hasAddon();
@@ -43,7 +43,7 @@ public interface SubscriptionAddonOrBuilder extends
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.Addon addon = 2;</code>
+   * <code>.debuff.Addon addon = 2;</code>
    * @return The addon.
    */
   org.cyverse.de.protobufs.Addon getAddon();
@@ -53,7 +53,7 @@ public interface SubscriptionAddonOrBuilder extends
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.Addon addon = 2;</code>
+   * <code>.debuff.Addon addon = 2;</code>
    */
   org.cyverse.de.protobufs.AddonOrBuilder getAddonOrBuilder();
 
@@ -63,7 +63,7 @@ public interface SubscriptionAddonOrBuilder extends
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.Subscription subscription = 3;</code>
+   * <code>.debuff.Subscription subscription = 3;</code>
    * @return Whether the subscription field is set.
    */
   boolean hasSubscription();
@@ -73,7 +73,7 @@ public interface SubscriptionAddonOrBuilder extends
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.Subscription subscription = 3;</code>
+   * <code>.debuff.Subscription subscription = 3;</code>
    * @return The subscription.
    */
   org.cyverse.de.protobufs.Subscription getSubscription();
@@ -83,7 +83,7 @@ public interface SubscriptionAddonOrBuilder extends
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.Subscription subscription = 3;</code>
+   * <code>.debuff.Subscription subscription = 3;</code>
    */
   org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionOrBuilder();
 

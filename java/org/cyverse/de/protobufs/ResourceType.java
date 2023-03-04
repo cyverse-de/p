@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * Representation of a resource type.
  * </pre>
  *
- * Protobuf type {@code ResourceType}
+ * Protobuf type {@code debuff.ResourceType}
  */
 public final class ResourceType extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:ResourceType)
+    // @@protoc_insertion_point(message_implements:debuff.ResourceType)
     ResourceTypeOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ResourceType.newBuilder() to construct.
@@ -40,13 +40,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_ResourceType_descriptor;
+    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceType_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_ResourceType_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.ResourceType.class, org.cyverse.de.protobufs.ResourceType.Builder.class);
   }
@@ -372,21 +372,21 @@ private static final long serialVersionUID = 0L;
    * Representation of a resource type.
    * </pre>
    *
-   * Protobuf type {@code ResourceType}
+   * Protobuf type {@code debuff.ResourceType}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ResourceType)
+      // @@protoc_insertion_point(builder_implements:debuff.ResourceType)
       org.cyverse.de.protobufs.ResourceTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_ResourceType_descriptor;
+      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceType_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_ResourceType_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.ResourceType.class, org.cyverse.de.protobufs.ResourceType.Builder.class);
     }
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_ResourceType_descriptor;
+      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceType_descriptor;
     }
 
     @java.lang.Override
@@ -857,10 +857,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:ResourceType)
+    // @@protoc_insertion_point(builder_scope:debuff.ResourceType)
   }
 
-  // @@protoc_insertion_point(class_scope:ResourceType)
+  // @@protoc_insertion_point(class_scope:debuff.ResourceType)
   private static final org.cyverse.de.protobufs.ResourceType DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.ResourceType();
