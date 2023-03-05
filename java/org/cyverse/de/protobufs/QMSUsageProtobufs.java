@@ -15,20 +15,20 @@ public final class QMSUsageProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Usage_descriptor;
+    internal_static_qms_Usage_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Usage_fieldAccessorTable;
+      internal_static_qms_Usage_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_UsageResponse_descriptor;
+    internal_static_qms_UsageResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_UsageResponse_fieldAccessorTable;
+      internal_static_qms_UsageResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_UsageList_descriptor;
+    internal_static_qms_UsageList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_UsageList_fieldAccessorTable;
+      internal_static_qms_UsageList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,26 +38,26 @@ public final class QMSUsageProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020qms_usages.proto\022\006debuff\032\037google/proto" +
-      "buf/timestamp.proto\032\014header.proto\032\016svcer" +
-      "ror.proto\032\030qms_resource_types.proto\"\324\002\n\005" +
-      "Usage\022\014\n\004uuid\030\001 \001(\t\022\r\n\005usage\030\002 \001(\001\022(\n\017su" +
-      "bscription_id\030\003 \001(\tR\017subscription_id\022:\n\r" +
-      "resource_type\030\004 \001(\0132\024.debuff.ResourceTyp" +
-      "eR\rresource_type\022\035\n\tCreatedBy\030\005 \001(\tR\ncre" +
-      "ated_by\0229\n\tCreatedAt\030\006 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\ncreated_at\022(\n\016LastModifi" +
-      "edBy\030\007 \001(\tR\020last_modified_by\022D\n\016LastModi" +
-      "fiedAt\030\010 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\020last_modified_at\"r\n\rUsageResponse\022\036\n\006h" +
-      "eader\030\001 \001(\0132\016.debuff.Header\022#\n\005error\030\002 \001" +
-      "(\0132\024.debuff.ServiceError\022\034\n\005usage\030\003 \001(\0132" +
-      "\r.debuff.Usage\"o\n\tUsageList\022\036\n\006header\030\001 " +
-      "\001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(\0132\024.deb" +
-      "uff.ServiceError\022\035\n\006usages\030\003 \003(\0132\r.debuf" +
-      "f.UsageBO\n\030org.cyverse.de.protobufsB\021QMS" +
-      "UsageProtobufsP\001Z\036github.com/cyverse-de/" +
-      "p/go/qmsb\006proto3"
+      "\n\020qms_usages.proto\022\003qms\032\037google/protobuf" +
+      "/timestamp.proto\032\014header.proto\032\016svcerror" +
+      ".proto\032\030qms_resource_types.proto\"\321\002\n\005Usa" +
+      "ge\022\014\n\004uuid\030\001 \001(\t\022\r\n\005usage\030\002 \001(\001\022(\n\017subsc" +
+      "ription_id\030\003 \001(\tR\017subscription_id\0227\n\rres" +
+      "ource_type\030\004 \001(\0132\021.qms.ResourceTypeR\rres" +
+      "ource_type\022\035\n\tCreatedBy\030\005 \001(\tR\ncreated_b" +
+      "y\0229\n\tCreatedAt\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestampR\ncreated_at\022(\n\016LastModifiedBy\030\007" +
+      " \001(\tR\020last_modified_by\022D\n\016LastModifiedAt" +
+      "\030\010 \001(\0132\032.google.protobuf.TimestampR\020last" +
+      "_modified_at\"q\n\rUsageResponse\022\036\n\006header\030" +
+      "\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.s" +
+      "vcerror.ServiceError\022\031\n\005usage\030\003 \001(\0132\n.qm" +
+      "s.Usage\"n\n\tUsageList\022\036\n\006header\030\001 \001(\0132\016.h" +
+      "eader.Header\022%\n\005error\030\002 \001(\0132\026.svcerror.S" +
+      "erviceError\022\032\n\006usages\030\003 \003(\0132\n.qms.UsageB" +
+      "O\n\030org.cyverse.de.protobufsB\021QMSUsagePro" +
+      "tobufsP\001Z\036github.com/cyverse-de/p/go/qms" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -67,23 +67,23 @@ public final class QMSUsageProtobufs {
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor(),
         });
-    internal_static_debuff_Usage_descriptor =
+    internal_static_qms_Usage_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_Usage_fieldAccessorTable = new
+    internal_static_qms_Usage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Usage_descriptor,
+        internal_static_qms_Usage_descriptor,
         new java.lang.String[] { "Uuid", "Usage", "SubscriptionId", "ResourceType", "CreatedBy", "CreatedAt", "LastModifiedBy", "LastModifiedAt", });
-    internal_static_debuff_UsageResponse_descriptor =
+    internal_static_qms_UsageResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_debuff_UsageResponse_fieldAccessorTable = new
+    internal_static_qms_UsageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_UsageResponse_descriptor,
+        internal_static_qms_UsageResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "Usage", });
-    internal_static_debuff_UsageList_descriptor =
+    internal_static_qms_UsageList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_debuff_UsageList_fieldAccessorTable = new
+    internal_static_qms_UsageList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_UsageList_descriptor,
+        internal_static_qms_UsageList_descriptor,
         new java.lang.String[] { "Header", "Error", "Usages", });
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();

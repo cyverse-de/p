@@ -1,7 +1,11 @@
 go 1.18
 
 use ./go/analysis
+
 use ./go/header
+
 use ./go/qms
+
 use ./go/svcerror
+
 use ./go/user

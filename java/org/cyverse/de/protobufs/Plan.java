@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * Represents a subscription plan available to users.
  * </pre>
  *
- * Protobuf type {@code debuff.Plan}
+ * Protobuf type {@code qms.Plan}
  */
 public final class Plan extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.Plan)
+    // @@protoc_insertion_point(message_implements:qms.Plan)
     PlanOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Plan.newBuilder() to construct.
@@ -41,13 +41,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_Plan_descriptor;
+    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_Plan_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_Plan_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_Plan_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Plan.class, org.cyverse.de.protobufs.Plan.Builder.class);
   }
@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.QuotaDefault> getPlanQuotaDefaultsList() {
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
   public int getPlanQuotaDefaultsCount() {
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QuotaDefault getPlanQuotaDefaults(int index) {
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getPlanQuotaDefaultsOrBuilder(
@@ -447,21 +447,21 @@ private static final long serialVersionUID = 0L;
    * Represents a subscription plan available to users.
    * </pre>
    *
-   * Protobuf type {@code debuff.Plan}
+   * Protobuf type {@code qms.Plan}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.Plan)
+      // @@protoc_insertion_point(builder_implements:qms.Plan)
       org.cyverse.de.protobufs.PlanOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_Plan_descriptor;
+      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_Plan_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_Plan_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_Plan_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Plan.class, org.cyverse.de.protobufs.Plan.Builder.class);
     }
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_Plan_descriptor;
+      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_Plan_descriptor;
     }
 
     @java.lang.Override
@@ -996,7 +996,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.QuotaDefault> getPlanQuotaDefaultsList() {
       if (planQuotaDefaultsBuilder_ == null) {
@@ -1010,7 +1010,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public int getPlanQuotaDefaultsCount() {
       if (planQuotaDefaultsBuilder_ == null) {
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault getPlanQuotaDefaults(int index) {
       if (planQuotaDefaultsBuilder_ == null) {
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder setPlanQuotaDefaults(
         int index, org.cyverse.de.protobufs.QuotaDefault value) {
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder setPlanQuotaDefaults(
         int index, org.cyverse.de.protobufs.QuotaDefault.Builder builderForValue) {
@@ -1077,7 +1077,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(org.cyverse.de.protobufs.QuotaDefault value) {
       if (planQuotaDefaultsBuilder_ == null) {
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(
         int index, org.cyverse.de.protobufs.QuotaDefault value) {
@@ -1118,7 +1118,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(
         org.cyverse.de.protobufs.QuotaDefault.Builder builderForValue) {
@@ -1136,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addPlanQuotaDefaults(
         int index, org.cyverse.de.protobufs.QuotaDefault.Builder builderForValue) {
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder addAllPlanQuotaDefaults(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.QuotaDefault> values) {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder clearPlanQuotaDefaults() {
       if (planQuotaDefaultsBuilder_ == null) {
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public Builder removePlanQuotaDefaults(int index) {
       if (planQuotaDefaultsBuilder_ == null) {
@@ -1207,7 +1207,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder getPlanQuotaDefaultsBuilder(
         int index) {
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getPlanQuotaDefaultsOrBuilder(
         int index) {
@@ -1232,7 +1232,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
          getPlanQuotaDefaultsOrBuilderList() {
@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder addPlanQuotaDefaultsBuilder() {
       return getPlanQuotaDefaultsFieldBuilder().addBuilder(
@@ -1258,7 +1258,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder addPlanQuotaDefaultsBuilder(
         int index) {
@@ -1270,7 +1270,7 @@ private static final long serialVersionUID = 0L;
      * A list of quota defaults associated with the plan.
      * </pre>
      *
-     * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+     * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.QuotaDefault.Builder> 
          getPlanQuotaDefaultsBuilderList() {
@@ -1303,10 +1303,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.Plan)
+    // @@protoc_insertion_point(builder_scope:qms.Plan)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.Plan)
+  // @@protoc_insertion_point(class_scope:qms.Plan)
   private static final org.cyverse.de.protobufs.Plan DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Plan();

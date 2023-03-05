@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code debuff.DNSLookup}
+ * Protobuf type {@code monitoring.DNSLookup}
  */
 public final class DNSLookup extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.DNSLookup)
+    // @@protoc_insertion_point(message_implements:monitoring.DNSLookup)
     DNSLookupOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DNSLookup.newBuilder() to construct.
@@ -36,13 +36,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSLookup_descriptor;
+    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSLookup_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSLookup_fieldAccessorTable
+    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSLookup_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.DNSLookup.class, org.cyverse.de.protobufs.DNSLookup.Builder.class);
   }
@@ -392,21 +392,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code debuff.DNSLookup}
+   * Protobuf type {@code monitoring.DNSLookup}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.DNSLookup)
+      // @@protoc_insertion_point(builder_implements:monitoring.DNSLookup)
       org.cyverse.de.protobufs.DNSLookupOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSLookup_descriptor;
+      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSLookup_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSLookup_fieldAccessorTable
+      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSLookup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.DNSLookup.class, org.cyverse.de.protobufs.DNSLookup.Builder.class);
     }
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSLookup_descriptor;
+      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSLookup_descriptor;
     }
 
     @java.lang.Override
@@ -948,10 +948,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.DNSLookup)
+    // @@protoc_insertion_point(builder_scope:monitoring.DNSLookup)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.DNSLookup)
+  // @@protoc_insertion_point(class_scope:monitoring.DNSLookup)
   private static final org.cyverse.de.protobufs.DNSLookup DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.DNSLookup();

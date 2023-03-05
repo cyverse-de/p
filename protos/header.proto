@@ -1,12 +1,12 @@
 syntax = "proto3";
 
+package header;
+
 option go_package = "github.com/cyverse-de/p/go/header";
 
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "HeaderProtobufs";
-
-package debuff;
 
 message Header {
     message Value {

@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package analysis;
+
 import "header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/analysis";
@@ -7,8 +9,6 @@ option go_package = "github.com/cyverse-de/p/go/analysis";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisContainerProtobufs";
-
-package debuff;
 
 message InteractiveApps {
     string proxy_image = 1;
@@ -22,7 +22,7 @@ message InteractiveApps {
     string websocket_port = 9;
     string websocket_proto = 10;
     string backend_url = 11;
-    Header header = 12;
+    header.Header header = 12;
 }
 
 message Container {
@@ -86,5 +86,5 @@ message Container {
     repeated Port ports = 18;
     bool skip_tmp_mount = 19 [json_name = "skip_tmp_mount"];
     int32 uid = 20 [json_name = "uid"];
-    Header header = 21;
+    header.Header header = 21;
 }

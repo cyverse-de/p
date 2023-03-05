@@ -10,11 +10,11 @@ package org.cyverse.de.protobufs;
  * resource type definitions.
  * </pre>
  *
- * Protobuf type {@code debuff.ResourceTypeList}
+ * Protobuf type {@code qms.ResourceTypeList}
  */
 public final class ResourceTypeList extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.ResourceTypeList)
+    // @@protoc_insertion_point(message_implements:qms.ResourceTypeList)
     ResourceTypeListOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ResourceTypeList.newBuilder() to construct.
@@ -39,13 +39,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceTypeList_descriptor;
+    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_qms_ResourceTypeList_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceTypeList_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_qms_ResourceTypeList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.ResourceTypeList.class, org.cyverse.de.protobufs.ResourceTypeList.Builder.class);
   }
@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.ResourceType> getResourceTypesList() {
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.ResourceTypeOrBuilder> 
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   @java.lang.Override
   public int getResourceTypesCount() {
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ResourceType getResourceTypes(int index) {
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypesOrBuilder(
@@ -383,21 +383,21 @@ private static final long serialVersionUID = 0L;
    * resource type definitions.
    * </pre>
    *
-   * Protobuf type {@code debuff.ResourceTypeList}
+   * Protobuf type {@code qms.ResourceTypeList}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.ResourceTypeList)
+      // @@protoc_insertion_point(builder_implements:qms.ResourceTypeList)
       org.cyverse.de.protobufs.ResourceTypeListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceTypeList_descriptor;
+      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_qms_ResourceTypeList_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceTypeList_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_qms_ResourceTypeList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.ResourceTypeList.class, org.cyverse.de.protobufs.ResourceTypeList.Builder.class);
     }
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_debuff_ResourceTypeList_descriptor;
+      return org.cyverse.de.protobufs.QMSResourceTypeProtobufs.internal_static_qms_ResourceTypeList_descriptor;
     }
 
     @java.lang.Override
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -800,7 +800,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000002;
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
      * Error information returned by the request handler.
      * </pre>
      *
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -964,7 +964,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.ResourceType> getResourceTypesList() {
       if (resourceTypesBuilder_ == null) {
@@ -978,7 +978,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public int getResourceTypesCount() {
       if (resourceTypesBuilder_ == null) {
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType getResourceTypes(int index) {
       if (resourceTypesBuilder_ == null) {
@@ -1006,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder setResourceTypes(
         int index, org.cyverse.de.protobufs.ResourceType value) {
@@ -1027,7 +1027,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder setResourceTypes(
         int index, org.cyverse.de.protobufs.ResourceType.Builder builderForValue) {
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder addResourceTypes(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypesBuilder_ == null) {
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder addResourceTypes(
         int index, org.cyverse.de.protobufs.ResourceType value) {
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder addResourceTypes(
         org.cyverse.de.protobufs.ResourceType.Builder builderForValue) {
@@ -1104,7 +1104,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder addResourceTypes(
         int index, org.cyverse.de.protobufs.ResourceType.Builder builderForValue) {
@@ -1122,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder addAllResourceTypes(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.ResourceType> values) {
@@ -1141,7 +1141,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder clearResourceTypes() {
       if (resourceTypesBuilder_ == null) {
@@ -1158,7 +1158,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public Builder removeResourceTypes(int index) {
       if (resourceTypesBuilder_ == null) {
@@ -1175,7 +1175,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypesBuilder(
         int index) {
@@ -1186,7 +1186,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypesOrBuilder(
         int index) {
@@ -1200,7 +1200,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.ResourceTypeOrBuilder> 
          getResourceTypesOrBuilderList() {
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder addResourceTypesBuilder() {
       return getResourceTypesFieldBuilder().addBuilder(
@@ -1226,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder addResourceTypesBuilder(
         int index) {
@@ -1238,7 +1238,7 @@ private static final long serialVersionUID = 0L;
      * A list of resource types returned by the request handler.
      * </pre>
      *
-     * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+     * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
      */
     public java.util.List<org.cyverse.de.protobufs.ResourceType.Builder> 
          getResourceTypesBuilderList() {
@@ -1271,10 +1271,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.ResourceTypeList)
+    // @@protoc_insertion_point(builder_scope:qms.ResourceTypeList)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.ResourceTypeList)
+  // @@protoc_insertion_point(class_scope:qms.ResourceTypeList)
   private static final org.cyverse.de.protobufs.ResourceTypeList DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.ResourceTypeList();

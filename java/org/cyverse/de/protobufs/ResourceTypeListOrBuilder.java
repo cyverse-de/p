@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface ResourceTypeListOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.ResourceTypeList)
+    // @@protoc_insertion_point(interface_extends:qms.ResourceTypeList)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface ResourceTypeListOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface ResourceTypeListOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface ResourceTypeListOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface ResourceTypeListOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
@@ -48,7 +48,7 @@ public interface ResourceTypeListOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
@@ -57,7 +57,7 @@ public interface ResourceTypeListOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
@@ -66,7 +66,7 @@ public interface ResourceTypeListOrBuilder extends
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.ResourceType> 
       getResourceTypesList();
@@ -75,7 +75,7 @@ public interface ResourceTypeListOrBuilder extends
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   org.cyverse.de.protobufs.ResourceType getResourceTypes(int index);
   /**
@@ -83,7 +83,7 @@ public interface ResourceTypeListOrBuilder extends
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   int getResourceTypesCount();
   /**
@@ -91,7 +91,7 @@ public interface ResourceTypeListOrBuilder extends
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.ResourceTypeOrBuilder> 
       getResourceTypesOrBuilderList();
@@ -100,7 +100,7 @@ public interface ResourceTypeListOrBuilder extends
    * A list of resource types returned by the request handler.
    * </pre>
    *
-   * <code>repeated .debuff.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
+   * <code>repeated .qms.ResourceType resource_types = 3 [json_name = "resource_types"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypesOrBuilder(
       int index);

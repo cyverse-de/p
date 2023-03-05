@@ -15,10 +15,10 @@ public final class AnalysisStatusProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisStatus_descriptor;
+    internal_static_analysis_AnalysisStatus_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisStatus_fieldAccessorTable;
+      internal_static_analysis_AnalysisStatus_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -28,17 +28,17 @@ public final class AnalysisStatusProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025analysis_status.proto\022\006debuff\032\031analysi" +
-      "s_submission.proto\032\014header.proto\032\016svcerr" +
-      "or.proto\"\331\001\n\016AnalysisStatus\022\036\n\006header\030\001 " +
-      "\001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(\0132\024.deb" +
-      "uff.ServiceError\022\'\n\003job\030\003 \001(\0132\032.debuff.A" +
-      "nalysisSubmission\022\017\n\007version\030\004 \001(\005\022\r\n\005st" +
-      "ate\030\005 \001(\t\022\017\n\007message\030\006 \001(\t\022\030\n\007sent_on\030\007 " +
-      "\001(\tR\007sent_on\022\016\n\006sender\030\010 \001(\tBZ\n\030org.cyve" +
-      "rse.de.protobufsB\027AnalysisStatusProtobuf" +
-      "sP\001Z#github.com/cyverse-de/p/go/analysis" +
-      "b\006proto3"
+      "\n\025analysis_status.proto\022\010analysis\032\031analy" +
+      "sis_submission.proto\032\014header.proto\032\016svce" +
+      "rror.proto\"\335\001\n\016AnalysisStatus\022\036\n\006header\030" +
+      "\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.s" +
+      "vcerror.ServiceError\022)\n\003job\030\003 \001(\0132\034.anal" +
+      "ysis.AnalysisSubmission\022\017\n\007version\030\004 \001(\005" +
+      "\022\r\n\005state\030\005 \001(\t\022\017\n\007message\030\006 \001(\t\022\030\n\007sent" +
+      "_on\030\007 \001(\tR\007sent_on\022\016\n\006sender\030\010 \001(\tBZ\n\030or" +
+      "g.cyverse.de.protobufsB\027AnalysisStatusPr" +
+      "otobufsP\001Z#github.com/cyverse-de/p/go/an" +
+      "alysisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -47,11 +47,11 @@ public final class AnalysisStatusProtobufs {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
         });
-    internal_static_debuff_AnalysisStatus_descriptor =
+    internal_static_analysis_AnalysisStatus_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_AnalysisStatus_fieldAccessorTable = new
+    internal_static_analysis_AnalysisStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisStatus_descriptor,
+        internal_static_analysis_AnalysisStatus_descriptor,
         new java.lang.String[] { "Header", "Error", "Job", "Version", "State", "Message", "SentOn", "Sender", });
     org.cyverse.de.protobufs.AnalysisSubmissionProtobufs.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();

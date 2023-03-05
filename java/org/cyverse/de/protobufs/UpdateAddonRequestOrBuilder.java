@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UpdateAddonRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.UpdateAddonRequest)
+    // @@protoc_insertion_point(interface_extends:qms.UpdateAddonRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface UpdateAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface UpdateAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface UpdateAddonRequestOrBuilder extends
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface UpdateAddonRequestOrBuilder extends
    * The values to set in the update.
    * </pre>
    *
-   * <code>.debuff.Addon addon = 2;</code>
+   * <code>.qms.Addon addon = 2;</code>
    * @return Whether the addon field is set.
    */
   boolean hasAddon();
@@ -48,7 +48,7 @@ public interface UpdateAddonRequestOrBuilder extends
    * The values to set in the update.
    * </pre>
    *
-   * <code>.debuff.Addon addon = 2;</code>
+   * <code>.qms.Addon addon = 2;</code>
    * @return The addon.
    */
   org.cyverse.de.protobufs.Addon getAddon();
@@ -57,7 +57,7 @@ public interface UpdateAddonRequestOrBuilder extends
    * The values to set in the update.
    * </pre>
    *
-   * <code>.debuff.Addon addon = 2;</code>
+   * <code>.qms.Addon addon = 2;</code>
    */
   org.cyverse.de.protobufs.AddonOrBuilder getAddonOrBuilder();
 

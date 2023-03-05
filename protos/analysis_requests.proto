@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package analysis;
+
 import "header.proto";
 import "analysis_record.proto";
 import "svcerror.proto";
@@ -10,8 +12,6 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisRequestProtobufs";
 
-package debuff;
-
 message AnalysisRecordLookupRequest {
     oneof lookup_ids {
         string analysis_id = 1;
@@ -20,7 +20,7 @@ message AnalysisRecordLookupRequest {
         string username = 4;
     }
 
-    Header header = 5;
+    header.Header header = 5;
     string requesting_user = 6;
 
 }
@@ -30,17 +30,17 @@ message AnalysisRecordResponse {
         int64 count = 1;
         string status = 2;
     }
-    Header header = 1;
+    header.Header header = 1;
     repeated AnalysisRecord analyses = 2;
     string timestamp = 3;
     int64 total = 4;
     repeated StatusCountRecord status_count = 5 [json_name = "status-count"];
-    ServiceError error = 6;
+    svcerror.ServiceError error = 6;
 
 }
 
 message AnalysisRecordList {
-    Header header = 1;
+    header.Header header = 1;
     repeated AnalysisRecord analyses = 2;
-    ServiceError error = 7;
+    svcerror.ServiceError error = 7;
 }

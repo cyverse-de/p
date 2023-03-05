@@ -4,13 +4,13 @@
 ## Table of Contents
 
 - [user.proto](#user-proto)
-    - [User](#debuff-User)
-    - [User.Login](#debuff-User-Login)
-    - [User.Preferences](#debuff-User-Preferences)
-    - [User.SavedSearches](#debuff-User-SavedSearches)
+    - [User](#user-User)
+    - [User.Login](#user-User-Login)
+    - [User.Preferences](#user-User-Preferences)
+    - [User.SavedSearches](#user-User-SavedSearches)
   
 - [user_requests.proto](#user_requests-proto)
-    - [UserLookupRequest](#debuff-UserLookupRequest)
+    - [UserLookupRequest](#user_requests-UserLookupRequest)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -23,7 +23,7 @@
 
 
 
-<a name="debuff-User"></a>
+<a name="user-User"></a>
 
 ### User
 A user&#39;s information.
@@ -33,19 +33,19 @@ A user&#39;s information.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  |  |
 | username | [string](#string) |  |  |
-| preferences | [User.Preferences](#debuff-User-Preferences) |  |  |
-| logins | [User.Login](#debuff-User-Login) | repeated |  |
+| preferences | [User.Preferences](#user-User-Preferences) |  |  |
+| logins | [User.Login](#user-User-Login) | repeated |  |
 | login_count | [uint32](#uint32) |  |  |
-| saved_searches | [User.SavedSearches](#debuff-User-SavedSearches) |  |  |
-| header | [Header](#debuff-Header) |  |  |
-| error | [ServiceError](#debuff-ServiceError) |  |  |
+| saved_searches | [User.SavedSearches](#user-User-SavedSearches) |  |  |
+| header | [header.Header](#header-Header) |  |  |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
 
 
 
 
 
 
-<a name="debuff-User-Login"></a>
+<a name="user-User-Login"></a>
 
 ### User.Login
 
@@ -64,7 +64,7 @@ A user&#39;s information.
 
 
 
-<a name="debuff-User-Preferences"></a>
+<a name="user-User-Preferences"></a>
 
 ### User.Preferences
 
@@ -80,7 +80,7 @@ A user&#39;s information.
 
 
 
-<a name="debuff-User-SavedSearches"></a>
+<a name="user-User-SavedSearches"></a>
 
 ### User.SavedSearches
 
@@ -112,7 +112,7 @@ A user&#39;s information.
 
 
 
-<a name="debuff-UserLookupRequest"></a>
+<a name="user_requests-UserLookupRequest"></a>
 
 ### UserLookupRequest
 A request for user information.
@@ -128,7 +128,7 @@ A request for user information.
 | include_saved_searches | [bool](#bool) |  | Whether to include saved searches in the response. |
 | login_limit | [uint32](#uint32) |  | Paging limit. |
 | login_offset | [uint32](#uint32) |  | Paging offset |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 
 
 

@@ -15,20 +15,20 @@ public final class HeaderProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Header_descriptor;
+    internal_static_header_Header_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Header_fieldAccessorTable;
+      internal_static_header_Header_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Header_Value_descriptor;
+    internal_static_header_Header_Value_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Header_Value_fieldAccessorTable;
+      internal_static_header_Header_Value_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Header_MapEntry_descriptor;
+    internal_static_header_Header_MapEntry_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Header_MapEntry_fieldAccessorTable;
+      internal_static_header_Header_MapEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,10 +38,10 @@ public final class HeaderProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014header.proto\022\006debuff\"\210\001\n\006Header\022$\n\003map" +
-      "\030\001 \003(\0132\027.debuff.Header.MapEntry\032\026\n\005Value" +
+      "\n\014header.proto\022\006header\"\210\001\n\006Header\022$\n\003map" +
+      "\030\001 \003(\0132\027.header.Header.MapEntry\032\026\n\005Value" +
       "\022\r\n\005value\030\001 \003(\t\032@\n\010MapEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022#\n\005value\030\002 \001(\0132\024.debuff.Header.Value:\0028" +
+      "\022#\n\005value\030\002 \001(\0132\024.header.Header.Value:\0028" +
       "\001BP\n\030org.cyverse.de.protobufsB\017HeaderPro" +
       "tobufsP\001Z!github.com/cyverse-de/p/go/hea" +
       "derb\006proto3"
@@ -50,23 +50,23 @@ public final class HeaderProtobufs {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_debuff_Header_descriptor =
+    internal_static_header_Header_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_Header_fieldAccessorTable = new
+    internal_static_header_Header_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Header_descriptor,
+        internal_static_header_Header_descriptor,
         new java.lang.String[] { "Map", });
-    internal_static_debuff_Header_Value_descriptor =
-      internal_static_debuff_Header_descriptor.getNestedTypes().get(0);
-    internal_static_debuff_Header_Value_fieldAccessorTable = new
+    internal_static_header_Header_Value_descriptor =
+      internal_static_header_Header_descriptor.getNestedTypes().get(0);
+    internal_static_header_Header_Value_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Header_Value_descriptor,
+        internal_static_header_Header_Value_descriptor,
         new java.lang.String[] { "Value", });
-    internal_static_debuff_Header_MapEntry_descriptor =
-      internal_static_debuff_Header_descriptor.getNestedTypes().get(1);
-    internal_static_debuff_Header_MapEntry_fieldAccessorTable = new
+    internal_static_header_Header_MapEntry_descriptor =
+      internal_static_header_Header_descriptor.getNestedTypes().get(1);
+    internal_static_header_Header_MapEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Header_MapEntry_descriptor,
+        internal_static_header_Header_MapEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 

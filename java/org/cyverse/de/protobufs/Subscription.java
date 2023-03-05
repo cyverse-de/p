@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * Representation of a subscription.
  * </pre>
  *
- * Protobuf type {@code debuff.Subscription}
+ * Protobuf type {@code qms.Subscription}
  */
 public final class Subscription extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.Subscription)
+    // @@protoc_insertion_point(message_implements:qms.Subscription)
     SubscriptionOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Subscription.newBuilder() to construct.
@@ -40,13 +40,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_Subscription_descriptor;
+    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_qms_Subscription_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_Subscription_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_qms_Subscription_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Subscription.class, org.cyverse.de.protobufs.Subscription.Builder.class);
   }
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * The user in the QMS system that the subscription is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 4;</code>
+   * <code>.qms.QMSUser user = 4;</code>
    * @return Whether the user field is set.
    */
   @java.lang.Override
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
    * The user in the QMS system that the subscription is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 4;</code>
+   * <code>.qms.QMSUser user = 4;</code>
    * @return The user.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * The user in the QMS system that the subscription is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 4;</code>
+   * <code>.qms.QMSUser user = 4;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder() {
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
    * The plan the user is subscribed to.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 5;</code>
+   * <code>.qms.Plan plan = 5;</code>
    * @return Whether the plan field is set.
    */
   @java.lang.Override
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
    * The plan the user is subscribed to.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 5;</code>
+   * <code>.qms.Plan plan = 5;</code>
    * @return The plan.
    */
   @java.lang.Override
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
    * The plan the user is subscribed to.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 5;</code>
+   * <code>.qms.Plan plan = 5;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.PlanOrBuilder getPlanOrBuilder() {
@@ -259,7 +259,7 @@ private static final long serialVersionUID = 0L;
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Quota> getQuotasList() {
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.QuotaOrBuilder> 
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   @java.lang.Override
   public int getQuotasCount() {
@@ -296,7 +296,7 @@ private static final long serialVersionUID = 0L;
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Quota getQuotas(int index) {
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QuotaOrBuilder getQuotasOrBuilder(
@@ -324,7 +324,7 @@ private static final long serialVersionUID = 0L;
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.Usage> getUsagesList() {
@@ -335,7 +335,7 @@ private static final long serialVersionUID = 0L;
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.UsageOrBuilder> 
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   @java.lang.Override
   public int getUsagesCount() {
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Usage getUsages(int index) {
@@ -369,7 +369,7 @@ private static final long serialVersionUID = 0L;
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.UsageOrBuilder getUsagesOrBuilder(
@@ -654,21 +654,21 @@ private static final long serialVersionUID = 0L;
    * Representation of a subscription.
    * </pre>
    *
-   * Protobuf type {@code debuff.Subscription}
+   * Protobuf type {@code qms.Subscription}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.Subscription)
+      // @@protoc_insertion_point(builder_implements:qms.Subscription)
       org.cyverse.de.protobufs.SubscriptionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_Subscription_descriptor;
+      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_qms_Subscription_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_Subscription_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_qms_Subscription_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Subscription.class, org.cyverse.de.protobufs.Subscription.Builder.class);
     }
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_debuff_Subscription_descriptor;
+      return org.cyverse.de.protobufs.QMSSubscriptionProtobufs.internal_static_qms_Subscription_descriptor;
     }
 
     @java.lang.Override
@@ -1439,7 +1439,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      * @return Whether the user field is set.
      */
     public boolean hasUser() {
@@ -1450,7 +1450,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      * @return The user.
      */
     public org.cyverse.de.protobufs.QMSUser getUser() {
@@ -1465,7 +1465,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     public Builder setUser(org.cyverse.de.protobufs.QMSUser value) {
       if (userBuilder_ == null) {
@@ -1485,7 +1485,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     public Builder setUser(
         org.cyverse.de.protobufs.QMSUser.Builder builderForValue) {
@@ -1503,7 +1503,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     public Builder mergeUser(org.cyverse.de.protobufs.QMSUser value) {
       if (userBuilder_ == null) {
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     public Builder clearUser() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -1543,7 +1543,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     public org.cyverse.de.protobufs.QMSUser.Builder getUserBuilder() {
       bitField0_ |= 0x00000008;
@@ -1555,7 +1555,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     public org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
@@ -1570,7 +1570,7 @@ private static final long serialVersionUID = 0L;
      * The user in the QMS system that the subscription is for.
      * </pre>
      *
-     * <code>.debuff.QMSUser user = 4;</code>
+     * <code>.qms.QMSUser user = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.QMSUser, org.cyverse.de.protobufs.QMSUser.Builder, org.cyverse.de.protobufs.QMSUserOrBuilder> 
@@ -1594,7 +1594,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      * @return Whether the plan field is set.
      */
     public boolean hasPlan() {
@@ -1605,7 +1605,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      * @return The plan.
      */
     public org.cyverse.de.protobufs.Plan getPlan() {
@@ -1620,7 +1620,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     public Builder setPlan(org.cyverse.de.protobufs.Plan value) {
       if (planBuilder_ == null) {
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     public Builder setPlan(
         org.cyverse.de.protobufs.Plan.Builder builderForValue) {
@@ -1658,7 +1658,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     public Builder mergePlan(org.cyverse.de.protobufs.Plan value) {
       if (planBuilder_ == null) {
@@ -1681,7 +1681,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     public Builder clearPlan() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -1698,7 +1698,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     public org.cyverse.de.protobufs.Plan.Builder getPlanBuilder() {
       bitField0_ |= 0x00000010;
@@ -1710,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     public org.cyverse.de.protobufs.PlanOrBuilder getPlanOrBuilder() {
       if (planBuilder_ != null) {
@@ -1725,7 +1725,7 @@ private static final long serialVersionUID = 0L;
      * The plan the user is subscribed to.
      * </pre>
      *
-     * <code>.debuff.Plan plan = 5;</code>
+     * <code>.qms.Plan plan = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Plan, org.cyverse.de.protobufs.Plan.Builder, org.cyverse.de.protobufs.PlanOrBuilder> 
@@ -1759,7 +1759,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Quota> getQuotasList() {
       if (quotasBuilder_ == null) {
@@ -1774,7 +1774,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public int getQuotasCount() {
       if (quotasBuilder_ == null) {
@@ -1789,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public org.cyverse.de.protobufs.Quota getQuotas(int index) {
       if (quotasBuilder_ == null) {
@@ -1804,7 +1804,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder setQuotas(
         int index, org.cyverse.de.protobufs.Quota value) {
@@ -1826,7 +1826,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder setQuotas(
         int index, org.cyverse.de.protobufs.Quota.Builder builderForValue) {
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder addQuotas(org.cyverse.de.protobufs.Quota value) {
       if (quotasBuilder_ == null) {
@@ -1866,7 +1866,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder addQuotas(
         int index, org.cyverse.de.protobufs.Quota value) {
@@ -1888,7 +1888,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder addQuotas(
         org.cyverse.de.protobufs.Quota.Builder builderForValue) {
@@ -1907,7 +1907,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder addQuotas(
         int index, org.cyverse.de.protobufs.Quota.Builder builderForValue) {
@@ -1926,7 +1926,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder addAllQuotas(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Quota> values) {
@@ -1946,7 +1946,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder clearQuotas() {
       if (quotasBuilder_ == null) {
@@ -1964,7 +1964,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public Builder removeQuotas(int index) {
       if (quotasBuilder_ == null) {
@@ -1982,7 +1982,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public org.cyverse.de.protobufs.Quota.Builder getQuotasBuilder(
         int index) {
@@ -1994,7 +1994,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public org.cyverse.de.protobufs.QuotaOrBuilder getQuotasOrBuilder(
         int index) {
@@ -2009,7 +2009,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.QuotaOrBuilder> 
          getQuotasOrBuilderList() {
@@ -2025,7 +2025,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public org.cyverse.de.protobufs.Quota.Builder addQuotasBuilder() {
       return getQuotasFieldBuilder().addBuilder(
@@ -2037,7 +2037,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public org.cyverse.de.protobufs.Quota.Builder addQuotasBuilder(
         int index) {
@@ -2050,7 +2050,7 @@ private static final long serialVersionUID = 0L;
      * by quota defaults, but can be overridden.
      * </pre>
      *
-     * <code>repeated .debuff.Quota quotas = 6;</code>
+     * <code>repeated .qms.Quota quotas = 6;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Quota.Builder> 
          getQuotasBuilderList() {
@@ -2088,7 +2088,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Usage> getUsagesList() {
       if (usagesBuilder_ == null) {
@@ -2102,7 +2102,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public int getUsagesCount() {
       if (usagesBuilder_ == null) {
@@ -2116,7 +2116,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public org.cyverse.de.protobufs.Usage getUsages(int index) {
       if (usagesBuilder_ == null) {
@@ -2130,7 +2130,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder setUsages(
         int index, org.cyverse.de.protobufs.Usage value) {
@@ -2151,7 +2151,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder setUsages(
         int index, org.cyverse.de.protobufs.Usage.Builder builderForValue) {
@@ -2169,7 +2169,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder addUsages(org.cyverse.de.protobufs.Usage value) {
       if (usagesBuilder_ == null) {
@@ -2189,7 +2189,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder addUsages(
         int index, org.cyverse.de.protobufs.Usage value) {
@@ -2210,7 +2210,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder addUsages(
         org.cyverse.de.protobufs.Usage.Builder builderForValue) {
@@ -2228,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder addUsages(
         int index, org.cyverse.de.protobufs.Usage.Builder builderForValue) {
@@ -2246,7 +2246,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder addAllUsages(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.Usage> values) {
@@ -2265,7 +2265,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder clearUsages() {
       if (usagesBuilder_ == null) {
@@ -2282,7 +2282,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public Builder removeUsages(int index) {
       if (usagesBuilder_ == null) {
@@ -2299,7 +2299,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public org.cyverse.de.protobufs.Usage.Builder getUsagesBuilder(
         int index) {
@@ -2310,7 +2310,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public org.cyverse.de.protobufs.UsageOrBuilder getUsagesOrBuilder(
         int index) {
@@ -2324,7 +2324,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.UsageOrBuilder> 
          getUsagesOrBuilderList() {
@@ -2339,7 +2339,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public org.cyverse.de.protobufs.Usage.Builder addUsagesBuilder() {
       return getUsagesFieldBuilder().addBuilder(
@@ -2350,7 +2350,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public org.cyverse.de.protobufs.Usage.Builder addUsagesBuilder(
         int index) {
@@ -2362,7 +2362,7 @@ private static final long serialVersionUID = 0L;
      * The list of resource usages that the user has generated while this plan was active.
      * </pre>
      *
-     * <code>repeated .debuff.Usage usages = 7;</code>
+     * <code>repeated .qms.Usage usages = 7;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.Usage.Builder> 
          getUsagesBuilderList() {
@@ -2439,10 +2439,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.Subscription)
+    // @@protoc_insertion_point(builder_scope:qms.Subscription)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.Subscription)
+  // @@protoc_insertion_point(class_scope:qms.Subscription)
   private static final org.cyverse.de.protobufs.Subscription DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Subscription();

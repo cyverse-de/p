@@ -15,40 +15,40 @@ public final class AnalysisContainerProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_InteractiveApps_descriptor;
+    internal_static_analysis_InteractiveApps_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_InteractiveApps_fieldAccessorTable;
+      internal_static_analysis_InteractiveApps_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Container_descriptor;
+    internal_static_analysis_Container_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Container_fieldAccessorTable;
+      internal_static_analysis_Container_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Container_Volume_descriptor;
+    internal_static_analysis_Container_Volume_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Container_Volume_fieldAccessorTable;
+      internal_static_analysis_Container_Volume_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Container_Port_descriptor;
+    internal_static_analysis_Container_Port_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Container_Port_fieldAccessorTable;
+      internal_static_analysis_Container_Port_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Container_Device_descriptor;
+    internal_static_analysis_Container_Device_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Container_Device_fieldAccessorTable;
+      internal_static_analysis_Container_Device_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Container_VolumesFrom_descriptor;
+    internal_static_analysis_Container_VolumesFrom_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Container_VolumesFrom_fieldAccessorTable;
+      internal_static_analysis_Container_VolumesFrom_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Container_Image_descriptor;
+    internal_static_analysis_Container_Image_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Container_Image_fieldAccessorTable;
+      internal_static_analysis_Container_Image_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -58,103 +58,103 @@ public final class AnalysisContainerProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030analysis_container.proto\022\006debuff\032\014head" +
-      "er.proto\"\242\002\n\017InteractiveApps\022\023\n\013proxy_im" +
-      "age\030\001 \001(\t\022\022\n\nproxy_name\030\002 \001(\t\022\024\n\014fronten" +
-      "d_url\030\003 \001(\t\022\017\n\007cas_url\030\004 \001(\t\022\024\n\014cas_vali" +
-      "date\030\005 \001(\t\022\025\n\rssl_cert_path\030\006 \001(\t\022\024\n\014ssl" +
-      "_key_path\030\007 \001(\t\022\026\n\016websocket_path\030\010 \001(\t\022" +
-      "\026\n\016websocket_port\030\t \001(\t\022\027\n\017websocket_pro" +
-      "to\030\n \001(\t\022\023\n\013backend_url\030\013 \001(\t\022\036\n\006header\030" +
-      "\014 \001(\0132\016.debuff.Header\"\372\013\n\tContainer\022\n\n\002i" +
-      "d\030\001 \001(\t\022<\n\007volumes\030\002 \003(\0132\030.debuff.Contai" +
-      "ner.VolumeR\021container_volumes\022<\n\007devices" +
-      "\030\003 \003(\0132\030.debuff.Container.DeviceR\021contai" +
-      "ner_devices\022K\n\014volumes_from\030\004 \003(\0132\035.debu" +
-      "ff.Container.VolumesFromR\026container_volu" +
-      "mes_from\022\014\n\004name\030\005 \001(\t\022\"\n\014network_mode\030\006" +
-      " \001(\tR\014network_mode\022\036\n\ncpu_shares\030\007 \001(\003R\n" +
-      "cpu_shares\022C\n\020interactive_apps\030\010 \001(\0132\027.d" +
-      "ebuff.InteractiveAppsR\020interactive_apps\022" +
-      "\"\n\014memory_limit\030\t \001(\003R\014memory_limit\022*\n\020m" +
-      "in_memory_limit\030\n \001(\003R\020min_memory_limit\022" +
-      "$\n\rmax_cpu_cores\030\013 \001(\002R\rmax_cpu_cores\022$\n" +
-      "\rmin_cpu_cores\030\014 \001(\002R\rmin_cpu_cores\022&\n\016m" +
-      "in_disk_space\030\r \001(\003R\016min_disk_space\022\036\n\np" +
-      "ids_limit\030\016 \001(\003R\npids_limit\022&\n\005image\030\017 \001" +
-      "(\0132\027.debuff.Container.Image\022\037\n\013entry_poi" +
-      "nt\030\020 \001(\tR\nentrypoint\022&\n\013working_dir\030\021 \001(" +
-      "\tR\021working_directory\022%\n\005ports\030\022 \003(\0132\026.de" +
-      "buff.Container.Port\022&\n\016skip_tmp_mount\030\023 " +
-      "\001(\010R\016skip_tmp_mount\022\020\n\003uid\030\024 \001(\005R\003uid\022\036\n" +
-      "\006header\030\025 \001(\0132\016.debuff.Header\032z\n\006Volume\022" +
-      "\034\n\thost_path\030\001 \001(\tR\thost_path\022&\n\016contain" +
-      "er_path\030\002 \001(\tR\016container_path\022\034\n\tread_on" +
-      "ly\030\003 \001(\010R\tread_only\022\014\n\004mode\030\004 \001(\t\032p\n\004Por" +
-      "t\022\034\n\thost_port\030\001 \001(\005R\thost_port\022&\n\016conta" +
-      "iner_port\030\002 \001(\005R\016container_port\022\"\n\014bind_" +
-      "to_host\030\003 \001(\010R\014bind_to_host\032~\n\006Device\022\034\n" +
-      "\thost_path\030\001 \001(\tR\thost_path\022&\n\016container" +
-      "_path\030\002 \001(\tR\016container_path\022.\n\022cgroup_pe" +
-      "rmissions\030\003 \001(\tR\022cgroup_permissions\032\311\001\n\013" +
-      "VolumesFrom\022\013\n\003tag\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014" +
-      "\n\004auth\030\003 \001(\t\022 \n\013name_prefix\030\004 \001(\tR\013name_" +
-      "prefix\022\013\n\003url\030\005 \001(\t\022\034\n\thost_path\030\006 \001(\tR\t" +
-      "host_path\022&\n\016container_path\030\007 \001(\tR\016conta" +
-      "iner_path\022\034\n\tread_only\030\010 \001(\010R\tread_only\032" +
-      "q\n\005Image\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003ta" +
-      "g\030\003 \001(\t\022\014\n\004auth\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022&\n\016os" +
-      "g_image_path\030\006 \001(\tR\016osg_image_pathB]\n\030or" +
-      "g.cyverse.de.protobufsB\032AnalysisContaine" +
-      "rProtobufsP\001Z#github.com/cyverse-de/p/go" +
-      "/analysisb\006proto3"
+      "\n\030analysis_container.proto\022\010analysis\032\014he" +
+      "ader.proto\"\242\002\n\017InteractiveApps\022\023\n\013proxy_" +
+      "image\030\001 \001(\t\022\022\n\nproxy_name\030\002 \001(\t\022\024\n\014front" +
+      "end_url\030\003 \001(\t\022\017\n\007cas_url\030\004 \001(\t\022\024\n\014cas_va" +
+      "lidate\030\005 \001(\t\022\025\n\rssl_cert_path\030\006 \001(\t\022\024\n\014s" +
+      "sl_key_path\030\007 \001(\t\022\026\n\016websocket_path\030\010 \001(" +
+      "\t\022\026\n\016websocket_port\030\t \001(\t\022\027\n\017websocket_p" +
+      "roto\030\n \001(\t\022\023\n\013backend_url\030\013 \001(\t\022\036\n\006heade" +
+      "r\030\014 \001(\0132\016.header.Header\"\206\014\n\tContainer\022\n\n" +
+      "\002id\030\001 \001(\t\022>\n\007volumes\030\002 \003(\0132\032.analysis.Co" +
+      "ntainer.VolumeR\021container_volumes\022>\n\007dev" +
+      "ices\030\003 \003(\0132\032.analysis.Container.DeviceR\021" +
+      "container_devices\022M\n\014volumes_from\030\004 \003(\0132" +
+      "\037.analysis.Container.VolumesFromR\026contai" +
+      "ner_volumes_from\022\014\n\004name\030\005 \001(\t\022\"\n\014networ" +
+      "k_mode\030\006 \001(\tR\014network_mode\022\036\n\ncpu_shares" +
+      "\030\007 \001(\003R\ncpu_shares\022E\n\020interactive_apps\030\010" +
+      " \001(\0132\031.analysis.InteractiveAppsR\020interac" +
+      "tive_apps\022\"\n\014memory_limit\030\t \001(\003R\014memory_" +
+      "limit\022*\n\020min_memory_limit\030\n \001(\003R\020min_mem" +
+      "ory_limit\022$\n\rmax_cpu_cores\030\013 \001(\002R\rmax_cp" +
+      "u_cores\022$\n\rmin_cpu_cores\030\014 \001(\002R\rmin_cpu_" +
+      "cores\022&\n\016min_disk_space\030\r \001(\003R\016min_disk_" +
+      "space\022\036\n\npids_limit\030\016 \001(\003R\npids_limit\022(\n" +
+      "\005image\030\017 \001(\0132\031.analysis.Container.Image\022" +
+      "\037\n\013entry_point\030\020 \001(\tR\nentrypoint\022&\n\013work" +
+      "ing_dir\030\021 \001(\tR\021working_directory\022\'\n\005port" +
+      "s\030\022 \003(\0132\030.analysis.Container.Port\022&\n\016ski" +
+      "p_tmp_mount\030\023 \001(\010R\016skip_tmp_mount\022\020\n\003uid" +
+      "\030\024 \001(\005R\003uid\022\036\n\006header\030\025 \001(\0132\016.header.Hea" +
+      "der\032z\n\006Volume\022\034\n\thost_path\030\001 \001(\tR\thost_p" +
+      "ath\022&\n\016container_path\030\002 \001(\tR\016container_p" +
+      "ath\022\034\n\tread_only\030\003 \001(\010R\tread_only\022\014\n\004mod" +
+      "e\030\004 \001(\t\032p\n\004Port\022\034\n\thost_port\030\001 \001(\005R\thost" +
+      "_port\022&\n\016container_port\030\002 \001(\005R\016container" +
+      "_port\022\"\n\014bind_to_host\030\003 \001(\010R\014bind_to_hos" +
+      "t\032~\n\006Device\022\034\n\thost_path\030\001 \001(\tR\thost_pat" +
+      "h\022&\n\016container_path\030\002 \001(\tR\016container_pat" +
+      "h\022.\n\022cgroup_permissions\030\003 \001(\tR\022cgroup_pe" +
+      "rmissions\032\311\001\n\013VolumesFrom\022\013\n\003tag\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\014\n\004auth\030\003 \001(\t\022 \n\013name_prefi" +
+      "x\030\004 \001(\tR\013name_prefix\022\013\n\003url\030\005 \001(\t\022\034\n\thos" +
+      "t_path\030\006 \001(\tR\thost_path\022&\n\016container_pat" +
+      "h\030\007 \001(\tR\016container_path\022\034\n\tread_only\030\010 \001" +
+      "(\010R\tread_only\032q\n\005Image\022\n\n\002id\030\001 \001(\t\022\014\n\004na" +
+      "me\030\002 \001(\t\022\013\n\003tag\030\003 \001(\t\022\014\n\004auth\030\004 \001(\t\022\013\n\003u" +
+      "rl\030\005 \001(\t\022&\n\016osg_image_path\030\006 \001(\tR\016osg_im" +
+      "age_pathB]\n\030org.cyverse.de.protobufsB\032An" +
+      "alysisContainerProtobufsP\001Z#github.com/c" +
+      "yverse-de/p/go/analysisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
         });
-    internal_static_debuff_InteractiveApps_descriptor =
+    internal_static_analysis_InteractiveApps_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_InteractiveApps_fieldAccessorTable = new
+    internal_static_analysis_InteractiveApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_InteractiveApps_descriptor,
+        internal_static_analysis_InteractiveApps_descriptor,
         new java.lang.String[] { "ProxyImage", "ProxyName", "FrontendUrl", "CasUrl", "CasValidate", "SslCertPath", "SslKeyPath", "WebsocketPath", "WebsocketPort", "WebsocketProto", "BackendUrl", "Header", });
-    internal_static_debuff_Container_descriptor =
+    internal_static_analysis_Container_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_debuff_Container_fieldAccessorTable = new
+    internal_static_analysis_Container_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Container_descriptor,
+        internal_static_analysis_Container_descriptor,
         new java.lang.String[] { "Id", "Volumes", "Devices", "VolumesFrom", "Name", "NetworkMode", "CpuShares", "InteractiveApps", "MemoryLimit", "MinMemoryLimit", "MaxCpuCores", "MinCpuCores", "MinDiskSpace", "PidsLimit", "Image", "EntryPoint", "WorkingDir", "Ports", "SkipTmpMount", "Uid", "Header", });
-    internal_static_debuff_Container_Volume_descriptor =
-      internal_static_debuff_Container_descriptor.getNestedTypes().get(0);
-    internal_static_debuff_Container_Volume_fieldAccessorTable = new
+    internal_static_analysis_Container_Volume_descriptor =
+      internal_static_analysis_Container_descriptor.getNestedTypes().get(0);
+    internal_static_analysis_Container_Volume_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Container_Volume_descriptor,
+        internal_static_analysis_Container_Volume_descriptor,
         new java.lang.String[] { "HostPath", "ContainerPath", "ReadOnly", "Mode", });
-    internal_static_debuff_Container_Port_descriptor =
-      internal_static_debuff_Container_descriptor.getNestedTypes().get(1);
-    internal_static_debuff_Container_Port_fieldAccessorTable = new
+    internal_static_analysis_Container_Port_descriptor =
+      internal_static_analysis_Container_descriptor.getNestedTypes().get(1);
+    internal_static_analysis_Container_Port_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Container_Port_descriptor,
+        internal_static_analysis_Container_Port_descriptor,
         new java.lang.String[] { "HostPort", "ContainerPort", "BindToHost", });
-    internal_static_debuff_Container_Device_descriptor =
-      internal_static_debuff_Container_descriptor.getNestedTypes().get(2);
-    internal_static_debuff_Container_Device_fieldAccessorTable = new
+    internal_static_analysis_Container_Device_descriptor =
+      internal_static_analysis_Container_descriptor.getNestedTypes().get(2);
+    internal_static_analysis_Container_Device_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Container_Device_descriptor,
+        internal_static_analysis_Container_Device_descriptor,
         new java.lang.String[] { "HostPath", "ContainerPath", "CgroupPermissions", });
-    internal_static_debuff_Container_VolumesFrom_descriptor =
-      internal_static_debuff_Container_descriptor.getNestedTypes().get(3);
-    internal_static_debuff_Container_VolumesFrom_fieldAccessorTable = new
+    internal_static_analysis_Container_VolumesFrom_descriptor =
+      internal_static_analysis_Container_descriptor.getNestedTypes().get(3);
+    internal_static_analysis_Container_VolumesFrom_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Container_VolumesFrom_descriptor,
+        internal_static_analysis_Container_VolumesFrom_descriptor,
         new java.lang.String[] { "Tag", "Name", "Auth", "NamePrefix", "Url", "HostPath", "ContainerPath", "ReadOnly", });
-    internal_static_debuff_Container_Image_descriptor =
-      internal_static_debuff_Container_descriptor.getNestedTypes().get(4);
-    internal_static_debuff_Container_Image_fieldAccessorTable = new
+    internal_static_analysis_Container_Image_descriptor =
+      internal_static_analysis_Container_descriptor.getNestedTypes().get(4);
+    internal_static_analysis_Container_Image_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Container_Image_descriptor,
+        internal_static_analysis_Container_Image_descriptor,
         new java.lang.String[] { "Id", "Name", "Tag", "Auth", "Url", "OsgImagePath", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
   }

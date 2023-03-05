@@ -9,7 +9,7 @@ package org.cyverse.de.protobufs;
  * The types of errors that can be retuned by message handlers.
  * </pre>
  *
- * Protobuf enum {@code debuff.ErrorCode}
+ * Protobuf enum {@code svcerror.ErrorCode}
  */
 public enum ErrorCode
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -248,6 +248,6 @@ public enum ErrorCode
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:debuff.ErrorCode)
+  // @@protoc_insertion_point(enum_scope:svcerror.ErrorCode)
 }
 

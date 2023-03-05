@@ -10,11 +10,11 @@ package org.cyverse.de.protobufs;
  * quota and usage value.
  * </pre>
  *
- * Protobuf type {@code debuff.UpdateOperation}
+ * Protobuf type {@code qms.UpdateOperation}
  */
 public final class UpdateOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.UpdateOperation)
+    // @@protoc_insertion_point(message_implements:qms.UpdateOperation)
     UpdateOperationOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UpdateOperation.newBuilder() to construct.
@@ -40,13 +40,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_UpdateOperation_descriptor;
+    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_qms_UpdateOperation_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_UpdateOperation_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_qms_UpdateOperation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.UpdateOperation.class, org.cyverse.de.protobufs.UpdateOperation.Builder.class);
   }
@@ -316,21 +316,21 @@ private static final long serialVersionUID = 0L;
    * quota and usage value.
    * </pre>
    *
-   * Protobuf type {@code debuff.UpdateOperation}
+   * Protobuf type {@code qms.UpdateOperation}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.UpdateOperation)
+      // @@protoc_insertion_point(builder_implements:qms.UpdateOperation)
       org.cyverse.de.protobufs.UpdateOperationOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_UpdateOperation_descriptor;
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_qms_UpdateOperation_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_UpdateOperation_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_qms_UpdateOperation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.UpdateOperation.class, org.cyverse.de.protobufs.UpdateOperation.Builder.class);
     }
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_debuff_UpdateOperation_descriptor;
+      return org.cyverse.de.protobufs.QMSUpdateProtobufs.internal_static_qms_UpdateOperation_descriptor;
     }
 
     @java.lang.Override
@@ -695,10 +695,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.UpdateOperation)
+    // @@protoc_insertion_point(builder_scope:qms.UpdateOperation)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.UpdateOperation)
+  // @@protoc_insertion_point(class_scope:qms.UpdateOperation)
   private static final org.cyverse.de.protobufs.UpdateOperation DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.UpdateOperation();

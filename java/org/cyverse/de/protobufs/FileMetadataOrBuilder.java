@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface FileMetadataOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.FileMetadata)
+    // @@protoc_insertion_point(interface_extends:analysis.FileMetadata)
     com.google.protobuf.MessageOrBuilder {
 
   /**

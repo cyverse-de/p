@@ -15,15 +15,15 @@ public final class AnalysisRecordProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisRecord_descriptor;
+    internal_static_analysis_AnalysisRecord_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisRecord_fieldAccessorTable;
+      internal_static_analysis_AnalysisRecord_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisRecord_BatchStatus_descriptor;
+    internal_static_analysis_AnalysisRecord_BatchStatus_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisRecord_BatchStatus_fieldAccessorTable;
+      internal_static_analysis_AnalysisRecord_BatchStatus_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,43 +33,43 @@ public final class AnalysisRecordProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025analysis_record.proto\022\006debuff\032\014header." +
-      "proto\"\201\005\n\016AnalysisRecord\022\036\n\006header\030\001 \001(\013" +
-      "2\016.debuff.Header\022\n\n\002id\030\002 \001(\t\022\023\n\013descript" +
-      "ion\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\034\n\tcan_share\030\005 \001" +
-      "(\010R\tcan_share\022\020\n\010username\030\006 \001(\t\022\026\n\006app_i" +
-      "d\030\007 \001(\tR\006app_id\022F\n\014batch_status\030\010 \001(\0132\"." +
-      "debuff.AnalysisRecord.BatchStatusR\014batch" +
-      "_status\022\034\n\tsystem_id\030\t \001(\tR\tsystem_id\022\"\n" +
-      "\014app_disabled\030\n \001(\010R\014app_disabled\022\r\n\005bat" +
-      "ch\030\013 \001(\010\022\017\n\007enddate\030\014 \001(\t\022\021\n\tstartdate\030\r" +
-      " \001(\t\022(\n\017app_description\030\016 \001(\tR\017app_descr" +
-      "iption\022*\n\020interactive_urls\030\017 \003(\tR\020intera" +
-      "ctive_urls\022\032\n\010wiki_url\030\020 \001(\tR\010wiki_url\022\016" +
-      "\n\006notify\030\021 \001(\010\022(\n\020result_folder_id\030\022 \001(\t" +
-      "R\016resultfolderid\022\032\n\010app_name\030\023 \001(\tR\010app_" +
-      "name\032S\n\013BatchStatus\022\r\n\005total\030\001 \001(\003\022\021\n\tco" +
-      "mpleted\030\002 \001(\003\022\017\n\007running\030\003 \001(\003\022\021\n\tsubmit" +
-      "ted\030\004 \001(\003BZ\n\030org.cyverse.de.protobufsB\027A" +
-      "nalysisRecordProtobufsP\001Z#github.com/cyv" +
-      "erse-de/p/go/analysisb\006proto3"
+      "\n\025analysis_record.proto\022\010analysis\032\014heade" +
+      "r.proto\"\203\005\n\016AnalysisRecord\022\036\n\006header\030\001 \001" +
+      "(\0132\016.header.Header\022\n\n\002id\030\002 \001(\t\022\023\n\013descri" +
+      "ption\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\034\n\tcan_share\030\005" +
+      " \001(\010R\tcan_share\022\020\n\010username\030\006 \001(\t\022\026\n\006app" +
+      "_id\030\007 \001(\tR\006app_id\022H\n\014batch_status\030\010 \001(\0132" +
+      "$.analysis.AnalysisRecord.BatchStatusR\014b" +
+      "atch_status\022\034\n\tsystem_id\030\t \001(\tR\tsystem_i" +
+      "d\022\"\n\014app_disabled\030\n \001(\010R\014app_disabled\022\r\n" +
+      "\005batch\030\013 \001(\010\022\017\n\007enddate\030\014 \001(\t\022\021\n\tstartda" +
+      "te\030\r \001(\t\022(\n\017app_description\030\016 \001(\tR\017app_d" +
+      "escription\022*\n\020interactive_urls\030\017 \003(\tR\020in" +
+      "teractive_urls\022\032\n\010wiki_url\030\020 \001(\tR\010wiki_u" +
+      "rl\022\016\n\006notify\030\021 \001(\010\022(\n\020result_folder_id\030\022" +
+      " \001(\tR\016resultfolderid\022\032\n\010app_name\030\023 \001(\tR\010" +
+      "app_name\032S\n\013BatchStatus\022\r\n\005total\030\001 \001(\003\022\021" +
+      "\n\tcompleted\030\002 \001(\003\022\017\n\007running\030\003 \001(\003\022\021\n\tsu" +
+      "bmitted\030\004 \001(\003BZ\n\030org.cyverse.de.protobuf" +
+      "sB\027AnalysisRecordProtobufsP\001Z#github.com" +
+      "/cyverse-de/p/go/analysisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
         });
-    internal_static_debuff_AnalysisRecord_descriptor =
+    internal_static_analysis_AnalysisRecord_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_AnalysisRecord_fieldAccessorTable = new
+    internal_static_analysis_AnalysisRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisRecord_descriptor,
+        internal_static_analysis_AnalysisRecord_descriptor,
         new java.lang.String[] { "Header", "Id", "Description", "Name", "CanShare", "Username", "AppId", "BatchStatus", "SystemId", "AppDisabled", "Batch", "Enddate", "Startdate", "AppDescription", "InteractiveUrls", "WikiUrl", "Notify", "ResultFolderId", "AppName", });
-    internal_static_debuff_AnalysisRecord_BatchStatus_descriptor =
-      internal_static_debuff_AnalysisRecord_descriptor.getNestedTypes().get(0);
-    internal_static_debuff_AnalysisRecord_BatchStatus_fieldAccessorTable = new
+    internal_static_analysis_AnalysisRecord_BatchStatus_descriptor =
+      internal_static_analysis_AnalysisRecord_descriptor.getNestedTypes().get(0);
+    internal_static_analysis_AnalysisRecord_BatchStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisRecord_BatchStatus_descriptor,
+        internal_static_analysis_AnalysisRecord_BatchStatus_descriptor,
         new java.lang.String[] { "Total", "Completed", "Running", "Submitted", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
   }

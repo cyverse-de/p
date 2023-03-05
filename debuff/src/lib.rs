@@ -1,5 +1,9 @@
 pub mod debuff;
 
+pub trait Creator<T> {
+    fn new() -> T;
+}
+
 #[cfg(test)]
 mod test {
     use crate::debuff::{header, Header};
@@ -33,4 +37,7 @@ mod test {
         // make sure the cloned value matches the deserialized value
         assert_eq!(u_val.value[0], v_val.value[0]);
     }
+
+    #[test]
+    fn test_
 }

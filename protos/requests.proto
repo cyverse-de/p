@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package requests;
+
 import "header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/requests";
@@ -8,14 +10,12 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "Requests";
 
-package debuff;
-
 /**
  * Request a resource by the username of a user.
  **/
 message ByUsername {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     string username = 2;
 }
 
@@ -24,7 +24,7 @@ message ByUsername {
  */
 message ByUserID {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     string user_id = 2 [json_name = "user_id"];
 }
 
@@ -34,7 +34,7 @@ message ByUserID {
  */
 message NoParams {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 }
 
 /**
@@ -42,7 +42,7 @@ message NoParams {
  */
 message ByUUID {
     // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // The UUID of the resource being requested.
     string uuid = 2;
@@ -55,7 +55,7 @@ message ByUUID {
  */
 message ByUUIDAndUsername {
     // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // The UUID of the resource being requested
     string uuid = 2;
@@ -70,7 +70,7 @@ message ByUUIDAndUsername {
  */
 message ByUUIDAndUserID {
     // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // The UUID of the resource being requested
     string uuid = 2;
@@ -84,7 +84,7 @@ message ByUUIDAndUserID {
  */
 message AssociateByUUIDs {
     // Contains telemetry information.
-    Header header = 1;
+    header.Header header = 1;
 
     // The UUID of the parent/owner/primary resource.
     string parent_uuid = 2 [json_name = "parent_uuid"];

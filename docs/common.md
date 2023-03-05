@@ -4,14 +4,14 @@
 ## Table of Contents
 
 - [header.proto](#header-proto)
-    - [Header](#debuff-Header)
-    - [Header.MapEntry](#debuff-Header-MapEntry)
-    - [Header.Value](#debuff-Header-Value)
+    - [Header](#header-Header)
+    - [Header.MapEntry](#header-Header-MapEntry)
+    - [Header.Value](#header-Header-Value)
   
 - [svcerror.proto](#svcerror-proto)
-    - [ServiceError](#debuff-ServiceError)
+    - [ServiceError](#svcerror-ServiceError)
   
-    - [ErrorCode](#debuff-ErrorCode)
+    - [ErrorCode](#svcerror-ErrorCode)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -24,7 +24,7 @@
 
 
 
-<a name="debuff-Header"></a>
+<a name="header-Header"></a>
 
 ### Header
 
@@ -32,14 +32,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| map | [Header.MapEntry](#debuff-Header-MapEntry) | repeated |  |
+| map | [Header.MapEntry](#header-Header-MapEntry) | repeated |  |
 
 
 
 
 
 
-<a name="debuff-Header-MapEntry"></a>
+<a name="header-Header-MapEntry"></a>
 
 ### Header.MapEntry
 
@@ -48,14 +48,14 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [Header.Value](#debuff-Header-Value) |  |  |
+| value | [Header.Value](#header-Header-Value) |  |  |
 
 
 
 
 
 
-<a name="debuff-Header-Value"></a>
+<a name="header-Header-Value"></a>
 
 ### Header.Value
 
@@ -86,7 +86,7 @@
 
 
 
-<a name="debuff-ServiceError"></a>
+<a name="svcerror-ServiceError"></a>
 
 ### ServiceError
 An error returned by a request handler.
@@ -94,8 +94,8 @@ An error returned by a request handler.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
-| error_code | [ErrorCode](#debuff-ErrorCode) |  | The numeric error code from the error code enum. |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
+| error_code | [ErrorCode](#svcerror-ErrorCode) |  | The numeric error code from the error code enum. |
 | status_code | [int32](#int32) |  | The status code for the error. |
 | message | [string](#string) |  | The error&#39;s message. |
 
@@ -106,7 +106,7 @@ An error returned by a request handler.
  
 
 
-<a name="debuff-ErrorCode"></a>
+<a name="svcerror-ErrorCode"></a>
 
 ### ErrorCode
 The types of errors that can be retuned by message handlers.

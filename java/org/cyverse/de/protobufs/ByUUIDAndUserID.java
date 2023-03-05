@@ -10,11 +10,11 @@ package org.cyverse.de.protobufs;
  * access to the resource must be verified.
  * </pre>
  *
- * Protobuf type {@code debuff.ByUUIDAndUserID}
+ * Protobuf type {@code requests.ByUUIDAndUserID}
  */
 public final class ByUUIDAndUserID extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.ByUUIDAndUserID)
+    // @@protoc_insertion_point(message_implements:requests.ByUUIDAndUserID)
     ByUUIDAndUserIDOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ByUUIDAndUserID.newBuilder() to construct.
@@ -40,13 +40,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.Requests.internal_static_debuff_ByUUIDAndUserID_descriptor;
+    return org.cyverse.de.protobufs.Requests.internal_static_requests_ByUUIDAndUserID_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.Requests.internal_static_debuff_ByUUIDAndUserID_fieldAccessorTable
+    return org.cyverse.de.protobufs.Requests.internal_static_requests_ByUUIDAndUserID_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.ByUUIDAndUserID.class, org.cyverse.de.protobufs.ByUUIDAndUserID.Builder.class);
   }
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -370,21 +370,21 @@ private static final long serialVersionUID = 0L;
    * access to the resource must be verified.
    * </pre>
    *
-   * Protobuf type {@code debuff.ByUUIDAndUserID}
+   * Protobuf type {@code requests.ByUUIDAndUserID}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.ByUUIDAndUserID)
+      // @@protoc_insertion_point(builder_implements:requests.ByUUIDAndUserID)
       org.cyverse.de.protobufs.ByUUIDAndUserIDOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.Requests.internal_static_debuff_ByUUIDAndUserID_descriptor;
+      return org.cyverse.de.protobufs.Requests.internal_static_requests_ByUUIDAndUserID_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.Requests.internal_static_debuff_ByUUIDAndUserID_fieldAccessorTable
+      return org.cyverse.de.protobufs.Requests.internal_static_requests_ByUUIDAndUserID_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.ByUUIDAndUserID.class, org.cyverse.de.protobufs.ByUUIDAndUserID.Builder.class);
     }
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.Requests.internal_static_debuff_ByUUIDAndUserID_descriptor;
+      return org.cyverse.de.protobufs.Requests.internal_static_requests_ByUUIDAndUserID_descriptor;
     }
 
     @java.lang.Override
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -712,7 +712,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -924,10 +924,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.ByUUIDAndUserID)
+    // @@protoc_insertion_point(builder_scope:requests.ByUUIDAndUserID)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.ByUUIDAndUserID)
+  // @@protoc_insertion_point(class_scope:requests.ByUUIDAndUserID)
   private static final org.cyverse.de.protobufs.ByUUIDAndUserID DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.ByUUIDAndUserID();

@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A user's information.
  * </pre>
  *
- * Protobuf type {@code debuff.User}
+ * Protobuf type {@code user.User}
  */
 public final class User extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.User)
+    // @@protoc_insertion_point(message_implements:user.User)
     UserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use User.newBuilder() to construct.
@@ -40,19 +40,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_descriptor;
+    return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_fieldAccessorTable
+    return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.User.class, org.cyverse.de.protobufs.User.Builder.class);
   }
 
   public interface PreferencesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:debuff.User.Preferences)
+      // @@protoc_insertion_point(interface_extends:user.User.Preferences)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -88,11 +88,11 @@ private static final long serialVersionUID = 0L;
         getPreferencesBytes();
   }
   /**
-   * Protobuf type {@code debuff.User.Preferences}
+   * Protobuf type {@code user.User.Preferences}
    */
   public static final class Preferences extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:debuff.User.Preferences)
+      // @@protoc_insertion_point(message_implements:user.User.Preferences)
       PreferencesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Preferences.newBuilder() to construct.
@@ -118,13 +118,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Preferences_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Preferences_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Preferences_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Preferences_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.User.Preferences.class, org.cyverse.de.protobufs.User.Preferences.Builder.class);
     }
@@ -380,21 +380,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code debuff.User.Preferences}
+     * Protobuf type {@code user.User.Preferences}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:debuff.User.Preferences)
+        // @@protoc_insertion_point(builder_implements:user.User.Preferences)
         org.cyverse.de.protobufs.User.PreferencesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Preferences_descriptor;
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Preferences_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Preferences_fieldAccessorTable
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Preferences_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.User.Preferences.class, org.cyverse.de.protobufs.User.Preferences.Builder.class);
       }
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Preferences_descriptor;
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Preferences_descriptor;
       }
 
       @java.lang.Override
@@ -739,10 +739,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:debuff.User.Preferences)
+      // @@protoc_insertion_point(builder_scope:user.User.Preferences)
     }
 
-    // @@protoc_insertion_point(class_scope:debuff.User.Preferences)
+    // @@protoc_insertion_point(class_scope:user.User.Preferences)
     private static final org.cyverse.de.protobufs.User.Preferences DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.User.Preferences();
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface LoginOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:debuff.User.Login)
+      // @@protoc_insertion_point(interface_extends:user.User.Login)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -861,11 +861,11 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.TimestampOrBuilder getLogoutTimeOrBuilder();
   }
   /**
-   * Protobuf type {@code debuff.User.Login}
+   * Protobuf type {@code user.User.Login}
    */
   public static final class Login extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:debuff.User.Login)
+      // @@protoc_insertion_point(message_implements:user.User.Login)
       LoginOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Login.newBuilder() to construct.
@@ -892,13 +892,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Login_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Login_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Login_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Login_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.User.Login.class, org.cyverse.de.protobufs.User.Login.Builder.class);
     }
@@ -1279,21 +1279,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code debuff.User.Login}
+     * Protobuf type {@code user.User.Login}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:debuff.User.Login)
+        // @@protoc_insertion_point(builder_implements:user.User.Login)
         org.cyverse.de.protobufs.User.LoginOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Login_descriptor;
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Login_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Login_fieldAccessorTable
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Login_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.User.Login.class, org.cyverse.de.protobufs.User.Login.Builder.class);
       }
@@ -1331,7 +1331,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_Login_descriptor;
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_Login_descriptor;
       }
 
       @java.lang.Override
@@ -1982,10 +1982,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:debuff.User.Login)
+      // @@protoc_insertion_point(builder_scope:user.User.Login)
     }
 
-    // @@protoc_insertion_point(class_scope:debuff.User.Login)
+    // @@protoc_insertion_point(class_scope:user.User.Login)
     private static final org.cyverse.de.protobufs.User.Login DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.User.Login();
@@ -2034,7 +2034,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface SavedSearchesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:debuff.User.SavedSearches)
+      // @@protoc_insertion_point(interface_extends:user.User.SavedSearches)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2062,11 +2062,11 @@ private static final long serialVersionUID = 0L;
         getSavedSearchesBytes();
   }
   /**
-   * Protobuf type {@code debuff.User.SavedSearches}
+   * Protobuf type {@code user.User.SavedSearches}
    */
   public static final class SavedSearches extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:debuff.User.SavedSearches)
+      // @@protoc_insertion_point(message_implements:user.User.SavedSearches)
       SavedSearchesOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SavedSearches.newBuilder() to construct.
@@ -2092,13 +2092,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_SavedSearches_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_SavedSearches_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_SavedSearches_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_SavedSearches_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.User.SavedSearches.class, org.cyverse.de.protobufs.User.SavedSearches.Builder.class);
     }
@@ -2346,21 +2346,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code debuff.User.SavedSearches}
+     * Protobuf type {@code user.User.SavedSearches}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:debuff.User.SavedSearches)
+        // @@protoc_insertion_point(builder_implements:user.User.SavedSearches)
         org.cyverse.de.protobufs.User.SavedSearchesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_SavedSearches_descriptor;
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_SavedSearches_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_SavedSearches_fieldAccessorTable
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_SavedSearches_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.User.SavedSearches.class, org.cyverse.de.protobufs.User.SavedSearches.Builder.class);
       }
@@ -2387,7 +2387,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_SavedSearches_descriptor;
+        return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_SavedSearches_descriptor;
       }
 
       @java.lang.Override
@@ -2685,10 +2685,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:debuff.User.SavedSearches)
+      // @@protoc_insertion_point(builder_scope:user.User.SavedSearches)
     }
 
-    // @@protoc_insertion_point(class_scope:debuff.User.SavedSearches)
+    // @@protoc_insertion_point(class_scope:user.User.SavedSearches)
     private static final org.cyverse.de.protobufs.User.SavedSearches DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.User.SavedSearches();
@@ -2817,7 +2817,7 @@ private static final long serialVersionUID = 0L;
   public static final int PREFERENCES_FIELD_NUMBER = 3;
   private org.cyverse.de.protobufs.User.Preferences preferences_;
   /**
-   * <code>.debuff.User.Preferences preferences = 3;</code>
+   * <code>.user.User.Preferences preferences = 3;</code>
    * @return Whether the preferences field is set.
    */
   @java.lang.Override
@@ -2825,7 +2825,7 @@ private static final long serialVersionUID = 0L;
     return preferences_ != null;
   }
   /**
-   * <code>.debuff.User.Preferences preferences = 3;</code>
+   * <code>.user.User.Preferences preferences = 3;</code>
    * @return The preferences.
    */
   @java.lang.Override
@@ -2833,7 +2833,7 @@ private static final long serialVersionUID = 0L;
     return preferences_ == null ? org.cyverse.de.protobufs.User.Preferences.getDefaultInstance() : preferences_;
   }
   /**
-   * <code>.debuff.User.Preferences preferences = 3;</code>
+   * <code>.user.User.Preferences preferences = 3;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.User.PreferencesOrBuilder getPreferencesOrBuilder() {
@@ -2844,14 +2844,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.User.Login> logins_;
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.User.Login> getLoginsList() {
     return logins_;
   }
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.User.LoginOrBuilder> 
@@ -2859,21 +2859,21 @@ private static final long serialVersionUID = 0L;
     return logins_;
   }
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   @java.lang.Override
   public int getLoginsCount() {
     return logins_.size();
   }
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.User.Login getLogins(int index) {
     return logins_.get(index);
   }
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.User.LoginOrBuilder getLoginsOrBuilder(
@@ -2895,7 +2895,7 @@ private static final long serialVersionUID = 0L;
   public static final int SAVED_SEARCHES_FIELD_NUMBER = 8;
   private org.cyverse.de.protobufs.User.SavedSearches savedSearches_;
   /**
-   * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+   * <code>.user.User.SavedSearches saved_searches = 8;</code>
    * @return Whether the savedSearches field is set.
    */
   @java.lang.Override
@@ -2903,7 +2903,7 @@ private static final long serialVersionUID = 0L;
     return savedSearches_ != null;
   }
   /**
-   * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+   * <code>.user.User.SavedSearches saved_searches = 8;</code>
    * @return The savedSearches.
    */
   @java.lang.Override
@@ -2911,7 +2911,7 @@ private static final long serialVersionUID = 0L;
     return savedSearches_ == null ? org.cyverse.de.protobufs.User.SavedSearches.getDefaultInstance() : savedSearches_;
   }
   /**
-   * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+   * <code>.user.User.SavedSearches saved_searches = 8;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.User.SavedSearchesOrBuilder getSavedSearchesOrBuilder() {
@@ -2921,7 +2921,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 9;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.debuff.Header header = 9;</code>
+   * <code>.header.Header header = 9;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -2929,7 +2929,7 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
-   * <code>.debuff.Header header = 9;</code>
+   * <code>.header.Header header = 9;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -2937,7 +2937,7 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.debuff.Header header = 9;</code>
+   * <code>.header.Header header = 9;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -2947,7 +2947,7 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 10;
   private org.cyverse.de.protobufs.ServiceError error_;
   /**
-   * <code>.debuff.ServiceError error = 10;</code>
+   * <code>.svcerror.ServiceError error = 10;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -2955,7 +2955,7 @@ private static final long serialVersionUID = 0L;
     return error_ != null;
   }
   /**
-   * <code>.debuff.ServiceError error = 10;</code>
+   * <code>.svcerror.ServiceError error = 10;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -2963,7 +2963,7 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
   }
   /**
-   * <code>.debuff.ServiceError error = 10;</code>
+   * <code>.svcerror.ServiceError error = 10;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -3228,21 +3228,21 @@ private static final long serialVersionUID = 0L;
    * A user's information.
    * </pre>
    *
-   * Protobuf type {@code debuff.User}
+   * Protobuf type {@code user.User}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.User)
+      // @@protoc_insertion_point(builder_implements:user.User)
       org.cyverse.de.protobufs.UserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.User.class, org.cyverse.de.protobufs.User.Builder.class);
     }
@@ -3297,7 +3297,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_debuff_User_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_User_descriptor;
     }
 
     @java.lang.Override
@@ -3710,14 +3710,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.User.Preferences, org.cyverse.de.protobufs.User.Preferences.Builder, org.cyverse.de.protobufs.User.PreferencesOrBuilder> preferencesBuilder_;
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      * @return Whether the preferences field is set.
      */
     public boolean hasPreferences() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      * @return The preferences.
      */
     public org.cyverse.de.protobufs.User.Preferences getPreferences() {
@@ -3728,7 +3728,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     public Builder setPreferences(org.cyverse.de.protobufs.User.Preferences value) {
       if (preferencesBuilder_ == null) {
@@ -3744,7 +3744,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     public Builder setPreferences(
         org.cyverse.de.protobufs.User.Preferences.Builder builderForValue) {
@@ -3758,7 +3758,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     public Builder mergePreferences(org.cyverse.de.protobufs.User.Preferences value) {
       if (preferencesBuilder_ == null) {
@@ -3777,7 +3777,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     public Builder clearPreferences() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -3790,7 +3790,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     public org.cyverse.de.protobufs.User.Preferences.Builder getPreferencesBuilder() {
       bitField0_ |= 0x00000004;
@@ -3798,7 +3798,7 @@ private static final long serialVersionUID = 0L;
       return getPreferencesFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     public org.cyverse.de.protobufs.User.PreferencesOrBuilder getPreferencesOrBuilder() {
       if (preferencesBuilder_ != null) {
@@ -3809,7 +3809,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.User.Preferences preferences = 3;</code>
+     * <code>.user.User.Preferences preferences = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.User.Preferences, org.cyverse.de.protobufs.User.Preferences.Builder, org.cyverse.de.protobufs.User.PreferencesOrBuilder> 
@@ -3838,7 +3838,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.User.Login, org.cyverse.de.protobufs.User.Login.Builder, org.cyverse.de.protobufs.User.LoginOrBuilder> loginsBuilder_;
 
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.User.Login> getLoginsList() {
       if (loginsBuilder_ == null) {
@@ -3848,7 +3848,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public int getLoginsCount() {
       if (loginsBuilder_ == null) {
@@ -3858,7 +3858,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public org.cyverse.de.protobufs.User.Login getLogins(int index) {
       if (loginsBuilder_ == null) {
@@ -3868,7 +3868,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder setLogins(
         int index, org.cyverse.de.protobufs.User.Login value) {
@@ -3885,7 +3885,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder setLogins(
         int index, org.cyverse.de.protobufs.User.Login.Builder builderForValue) {
@@ -3899,7 +3899,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder addLogins(org.cyverse.de.protobufs.User.Login value) {
       if (loginsBuilder_ == null) {
@@ -3915,7 +3915,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder addLogins(
         int index, org.cyverse.de.protobufs.User.Login value) {
@@ -3932,7 +3932,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder addLogins(
         org.cyverse.de.protobufs.User.Login.Builder builderForValue) {
@@ -3946,7 +3946,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder addLogins(
         int index, org.cyverse.de.protobufs.User.Login.Builder builderForValue) {
@@ -3960,7 +3960,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder addAllLogins(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.User.Login> values) {
@@ -3975,7 +3975,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder clearLogins() {
       if (loginsBuilder_ == null) {
@@ -3988,7 +3988,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public Builder removeLogins(int index) {
       if (loginsBuilder_ == null) {
@@ -4001,14 +4001,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public org.cyverse.de.protobufs.User.Login.Builder getLoginsBuilder(
         int index) {
       return getLoginsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public org.cyverse.de.protobufs.User.LoginOrBuilder getLoginsOrBuilder(
         int index) {
@@ -4018,7 +4018,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.User.LoginOrBuilder> 
          getLoginsOrBuilderList() {
@@ -4029,14 +4029,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public org.cyverse.de.protobufs.User.Login.Builder addLoginsBuilder() {
       return getLoginsFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.User.Login.getDefaultInstance());
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public org.cyverse.de.protobufs.User.Login.Builder addLoginsBuilder(
         int index) {
@@ -4044,7 +4044,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.User.Login.getDefaultInstance());
     }
     /**
-     * <code>repeated .debuff.User.Login logins = 4;</code>
+     * <code>repeated .user.User.Login logins = 4;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.User.Login.Builder> 
          getLoginsBuilderList() {
@@ -4101,14 +4101,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.User.SavedSearches, org.cyverse.de.protobufs.User.SavedSearches.Builder, org.cyverse.de.protobufs.User.SavedSearchesOrBuilder> savedSearchesBuilder_;
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      * @return Whether the savedSearches field is set.
      */
     public boolean hasSavedSearches() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      * @return The savedSearches.
      */
     public org.cyverse.de.protobufs.User.SavedSearches getSavedSearches() {
@@ -4119,7 +4119,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     public Builder setSavedSearches(org.cyverse.de.protobufs.User.SavedSearches value) {
       if (savedSearchesBuilder_ == null) {
@@ -4135,7 +4135,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     public Builder setSavedSearches(
         org.cyverse.de.protobufs.User.SavedSearches.Builder builderForValue) {
@@ -4149,7 +4149,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     public Builder mergeSavedSearches(org.cyverse.de.protobufs.User.SavedSearches value) {
       if (savedSearchesBuilder_ == null) {
@@ -4168,7 +4168,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     public Builder clearSavedSearches() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -4181,7 +4181,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     public org.cyverse.de.protobufs.User.SavedSearches.Builder getSavedSearchesBuilder() {
       bitField0_ |= 0x00000020;
@@ -4189,7 +4189,7 @@ private static final long serialVersionUID = 0L;
       return getSavedSearchesFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     public org.cyverse.de.protobufs.User.SavedSearchesOrBuilder getSavedSearchesOrBuilder() {
       if (savedSearchesBuilder_ != null) {
@@ -4200,7 +4200,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+     * <code>.user.User.SavedSearches saved_searches = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.User.SavedSearches, org.cyverse.de.protobufs.User.SavedSearches.Builder, org.cyverse.de.protobufs.User.SavedSearchesOrBuilder> 
@@ -4220,14 +4220,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -4238,7 +4238,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -4254,7 +4254,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -4268,7 +4268,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -4287,7 +4287,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000040);
@@ -4300,7 +4300,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000040;
@@ -4308,7 +4308,7 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -4319,7 +4319,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 9;</code>
+     * <code>.header.Header header = 9;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -4339,14 +4339,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> errorBuilder_;
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -4357,7 +4357,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -4373,7 +4373,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -4387,7 +4387,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -4406,7 +4406,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000080);
@@ -4419,7 +4419,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000080;
@@ -4427,7 +4427,7 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -4438,7 +4438,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.ServiceError error = 10;</code>
+     * <code>.svcerror.ServiceError error = 10;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -4466,10 +4466,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.User)
+    // @@protoc_insertion_point(builder_scope:user.User)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.User)
+  // @@protoc_insertion_point(class_scope:user.User)
   private static final org.cyverse.de.protobufs.User DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.User();

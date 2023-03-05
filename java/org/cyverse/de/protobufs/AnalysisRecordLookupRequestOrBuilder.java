@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface AnalysisRecordLookupRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.AnalysisRecordLookupRequest)
+    // @@protoc_insertion_point(interface_extends:analysis.AnalysisRecordLookupRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -76,17 +76,17 @@ public interface AnalysisRecordLookupRequestOrBuilder extends
       getUsernameBytes();
 
   /**
-   * <code>.debuff.Header header = 5;</code>
+   * <code>.header.Header header = 5;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.debuff.Header header = 5;</code>
+   * <code>.header.Header header = 5;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.debuff.Header header = 5;</code>
+   * <code>.header.Header header = 5;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 

@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code debuff.AnalysisStatus}
+ * Protobuf type {@code analysis.AnalysisStatus}
  */
 public final class AnalysisStatus extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.AnalysisStatus)
+    // @@protoc_insertion_point(message_implements:analysis.AnalysisStatus)
     AnalysisStatusOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AnalysisStatus.newBuilder() to construct.
@@ -36,13 +36,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_debuff_AnalysisStatus_descriptor;
+    return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_analysis_AnalysisStatus_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_debuff_AnalysisStatus_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_analysis_AnalysisStatus_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.AnalysisStatus.class, org.cyverse.de.protobufs.AnalysisStatus.Builder.class);
   }
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -66,7 +66,7 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 2;
   private org.cyverse.de.protobufs.ServiceError error_;
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
     return error_ != null;
   }
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -92,7 +92,7 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
   }
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   public static final int JOB_FIELD_NUMBER = 3;
   private org.cyverse.de.protobufs.AnalysisSubmission job_;
   /**
-   * <code>.debuff.AnalysisSubmission job = 3;</code>
+   * <code>.analysis.AnalysisSubmission job = 3;</code>
    * @return Whether the job field is set.
    */
   @java.lang.Override
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
     return job_ != null;
   }
   /**
-   * <code>.debuff.AnalysisSubmission job = 3;</code>
+   * <code>.analysis.AnalysisSubmission job = 3;</code>
    * @return The job.
    */
   @java.lang.Override
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
     return job_ == null ? org.cyverse.de.protobufs.AnalysisSubmission.getDefaultInstance() : job_;
   }
   /**
-   * <code>.debuff.AnalysisSubmission job = 3;</code>
+   * <code>.analysis.AnalysisSubmission job = 3;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AnalysisSubmissionOrBuilder getJobOrBuilder() {
@@ -536,21 +536,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code debuff.AnalysisStatus}
+   * Protobuf type {@code analysis.AnalysisStatus}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.AnalysisStatus)
+      // @@protoc_insertion_point(builder_implements:analysis.AnalysisStatus)
       org.cyverse.de.protobufs.AnalysisStatusOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_debuff_AnalysisStatus_descriptor;
+      return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_analysis_AnalysisStatus_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_debuff_AnalysisStatus_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_analysis_AnalysisStatus_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.AnalysisStatus.class, org.cyverse.de.protobufs.AnalysisStatus.Builder.class);
     }
@@ -595,7 +595,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_debuff_AnalysisStatus_descriptor;
+      return org.cyverse.de.protobufs.AnalysisStatusProtobufs.internal_static_analysis_AnalysisStatus_descriptor;
     }
 
     @java.lang.Override
@@ -823,14 +823,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -942,14 +942,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> errorBuilder_;
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -960,7 +960,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -1009,7 +1009,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000002;
@@ -1030,7 +1030,7 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -1041,7 +1041,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -1061,14 +1061,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.AnalysisSubmission, org.cyverse.de.protobufs.AnalysisSubmission.Builder, org.cyverse.de.protobufs.AnalysisSubmissionOrBuilder> jobBuilder_;
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      * @return Whether the job field is set.
      */
     public boolean hasJob() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      * @return The job.
      */
     public org.cyverse.de.protobufs.AnalysisSubmission getJob() {
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     public Builder setJob(org.cyverse.de.protobufs.AnalysisSubmission value) {
       if (jobBuilder_ == null) {
@@ -1095,7 +1095,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     public Builder setJob(
         org.cyverse.de.protobufs.AnalysisSubmission.Builder builderForValue) {
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     public Builder mergeJob(org.cyverse.de.protobufs.AnalysisSubmission value) {
       if (jobBuilder_ == null) {
@@ -1128,7 +1128,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     public Builder clearJob() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -1141,7 +1141,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     public org.cyverse.de.protobufs.AnalysisSubmission.Builder getJobBuilder() {
       bitField0_ |= 0x00000004;
@@ -1149,7 +1149,7 @@ private static final long serialVersionUID = 0L;
       return getJobFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     public org.cyverse.de.protobufs.AnalysisSubmissionOrBuilder getJobOrBuilder() {
       if (jobBuilder_ != null) {
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.AnalysisSubmission job = 3;</code>
+     * <code>.analysis.AnalysisSubmission job = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.AnalysisSubmission, org.cyverse.de.protobufs.AnalysisSubmission.Builder, org.cyverse.de.protobufs.AnalysisSubmissionOrBuilder> 
@@ -1508,10 +1508,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.AnalysisStatus)
+    // @@protoc_insertion_point(builder_scope:analysis.AnalysisStatus)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.AnalysisStatus)
+  // @@protoc_insertion_point(class_scope:analysis.AnalysisStatus)
   private static final org.cyverse.de.protobufs.AnalysisStatus DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.AnalysisStatus();

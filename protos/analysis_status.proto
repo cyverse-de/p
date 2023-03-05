@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package analysis;
+
 import "analysis_submission.proto";
 import "header.proto";
 import "svcerror.proto";
@@ -9,11 +11,9 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisStatusProtobufs";
 
-package debuff;
-
 message AnalysisStatus {
-    Header header = 1;
-    ServiceError error = 2;
+    header.Header header = 1;
+    svcerror.ServiceError error = 2;
     AnalysisSubmission job = 3;
     int32 version = 4;
     string state = 5;

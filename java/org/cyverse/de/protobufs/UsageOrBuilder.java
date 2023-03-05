@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UsageOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.Usage)
+    // @@protoc_insertion_point(interface_extends:qms.Usage)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -62,7 +62,7 @@ public interface UsageOrBuilder extends
    * The resource type the usage applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
@@ -71,7 +71,7 @@ public interface UsageOrBuilder extends
    * The resource type the usage applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
@@ -80,7 +80,7 @@ public interface UsageOrBuilder extends
    * The resource type the usage applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 4 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
 

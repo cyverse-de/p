@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A request to get information about an add-on.
  * </pre>
  *
- * Protobuf type {@code debuff.AddonLookupRequest}
+ * Protobuf type {@code qms.AddonLookupRequest}
  */
 public final class AddonLookupRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.AddonLookupRequest)
+    // @@protoc_insertion_point(message_implements:qms.AddonLookupRequest)
     AddonLookupRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AddonLookupRequest.newBuilder() to construct.
@@ -37,13 +37,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_AddonLookupRequest_descriptor;
+    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_AddonLookupRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_AddonLookupRequest_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_AddonLookupRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.AddonLookupRequest.class, org.cyverse.de.protobufs.AddonLookupRequest.Builder.class);
   }
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -434,21 +434,21 @@ private static final long serialVersionUID = 0L;
    * A request to get information about an add-on.
    * </pre>
    *
-   * Protobuf type {@code debuff.AddonLookupRequest}
+   * Protobuf type {@code qms.AddonLookupRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.AddonLookupRequest)
+      // @@protoc_insertion_point(builder_implements:qms.AddonLookupRequest)
       org.cyverse.de.protobufs.AddonLookupRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_AddonLookupRequest_descriptor;
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_AddonLookupRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_AddonLookupRequest_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_AddonLookupRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.AddonLookupRequest.class, org.cyverse.de.protobufs.AddonLookupRequest.Builder.class);
     }
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_AddonLookupRequest_descriptor;
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_AddonLookupRequest_descriptor;
     }
 
     @java.lang.Override
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -733,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -800,7 +800,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -1014,10 +1014,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.AddonLookupRequest)
+    // @@protoc_insertion_point(builder_scope:qms.AddonLookupRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.AddonLookupRequest)
+  // @@protoc_insertion_point(class_scope:qms.AddonLookupRequest)
   private static final org.cyverse.de.protobufs.AddonLookupRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.AddonLookupRequest();

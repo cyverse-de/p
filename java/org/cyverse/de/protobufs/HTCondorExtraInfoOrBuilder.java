@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface HTCondorExtraInfoOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.HTCondorExtraInfo)
+    // @@protoc_insertion_point(interface_extends:analysis.HTCondorExtraInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**

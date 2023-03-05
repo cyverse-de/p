@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package qms;
+
 import "google/protobuf/timestamp.proto";
 
 import "header.proto";
@@ -11,8 +13,6 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSUpdateProtobufs";
-
-package debuff;
 
 /**
  * A representation of update operations, which are ways calling code can change
@@ -57,7 +57,7 @@ message Update {
  */
 message AddUpdateRequest {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // The update being added to the system.
     Update update = 2;
@@ -68,10 +68,10 @@ message AddUpdateRequest {
  */
 message AddUpdateResponse {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The update added to the system.
     Update update = 3;
@@ -82,7 +82,7 @@ message AddUpdateResponse {
  */
 message UpdateListRequest {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // The user whose updates have been requested.
     QMSUser user = 2;
@@ -93,10 +93,10 @@ message UpdateListRequest {
  */
 message UpdateListResponse {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The list of updates returned by the request handler.
     repeated Update updates = 3;

@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.User)
+    // @@protoc_insertion_point(interface_extends:user.User)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -32,40 +32,40 @@ public interface UserOrBuilder extends
       getUsernameBytes();
 
   /**
-   * <code>.debuff.User.Preferences preferences = 3;</code>
+   * <code>.user.User.Preferences preferences = 3;</code>
    * @return Whether the preferences field is set.
    */
   boolean hasPreferences();
   /**
-   * <code>.debuff.User.Preferences preferences = 3;</code>
+   * <code>.user.User.Preferences preferences = 3;</code>
    * @return The preferences.
    */
   org.cyverse.de.protobufs.User.Preferences getPreferences();
   /**
-   * <code>.debuff.User.Preferences preferences = 3;</code>
+   * <code>.user.User.Preferences preferences = 3;</code>
    */
   org.cyverse.de.protobufs.User.PreferencesOrBuilder getPreferencesOrBuilder();
 
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   java.util.List<org.cyverse.de.protobufs.User.Login> 
       getLoginsList();
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   org.cyverse.de.protobufs.User.Login getLogins(int index);
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   int getLoginsCount();
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.User.LoginOrBuilder> 
       getLoginsOrBuilderList();
   /**
-   * <code>repeated .debuff.User.Login logins = 4;</code>
+   * <code>repeated .user.User.Login logins = 4;</code>
    */
   org.cyverse.de.protobufs.User.LoginOrBuilder getLoginsOrBuilder(
       int index);
@@ -77,47 +77,47 @@ public interface UserOrBuilder extends
   int getLoginCount();
 
   /**
-   * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+   * <code>.user.User.SavedSearches saved_searches = 8;</code>
    * @return Whether the savedSearches field is set.
    */
   boolean hasSavedSearches();
   /**
-   * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+   * <code>.user.User.SavedSearches saved_searches = 8;</code>
    * @return The savedSearches.
    */
   org.cyverse.de.protobufs.User.SavedSearches getSavedSearches();
   /**
-   * <code>.debuff.User.SavedSearches saved_searches = 8;</code>
+   * <code>.user.User.SavedSearches saved_searches = 8;</code>
    */
   org.cyverse.de.protobufs.User.SavedSearchesOrBuilder getSavedSearchesOrBuilder();
 
   /**
-   * <code>.debuff.Header header = 9;</code>
+   * <code>.header.Header header = 9;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.debuff.Header header = 9;</code>
+   * <code>.header.Header header = 9;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.debuff.Header header = 9;</code>
+   * <code>.header.Header header = 9;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
-   * <code>.debuff.ServiceError error = 10;</code>
+   * <code>.svcerror.ServiceError error = 10;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>.debuff.ServiceError error = 10;</code>
+   * <code>.svcerror.ServiceError error = 10;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
   /**
-   * <code>.debuff.ServiceError error = 10;</code>
+   * <code>.svcerror.ServiceError error = 10;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 }

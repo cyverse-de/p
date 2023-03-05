@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface DNSLookupOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.DNSLookup)
+    // @@protoc_insertion_point(interface_extends:monitoring.DNSLookup)
     com.google.protobuf.MessageOrBuilder {
 
   /**

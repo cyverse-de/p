@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package svcerror;
+
 import "header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/svcerror";
@@ -7,8 +9,6 @@ option go_package = "github.com/cyverse-de/p/go/svcerror";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "ServiceErrorProtobufs";
-
-package debuff;
 
 /**
  * The types of errors that can be retuned by message handlers.
@@ -30,7 +30,7 @@ enum ErrorCode {
  */
 message ServiceError {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     
     // The numeric error code from the error code enum.
     ErrorCode error_code = 2 [json_name = "error_code"];

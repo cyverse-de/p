@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface SubscriptionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.Subscription)
+    // @@protoc_insertion_point(interface_extends:qms.Subscription)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -86,7 +86,7 @@ public interface SubscriptionOrBuilder extends
    * The user in the QMS system that the subscription is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 4;</code>
+   * <code>.qms.QMSUser user = 4;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
@@ -95,7 +95,7 @@ public interface SubscriptionOrBuilder extends
    * The user in the QMS system that the subscription is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 4;</code>
+   * <code>.qms.QMSUser user = 4;</code>
    * @return The user.
    */
   org.cyverse.de.protobufs.QMSUser getUser();
@@ -104,7 +104,7 @@ public interface SubscriptionOrBuilder extends
    * The user in the QMS system that the subscription is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 4;</code>
+   * <code>.qms.QMSUser user = 4;</code>
    */
   org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder();
 
@@ -113,7 +113,7 @@ public interface SubscriptionOrBuilder extends
    * The plan the user is subscribed to.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 5;</code>
+   * <code>.qms.Plan plan = 5;</code>
    * @return Whether the plan field is set.
    */
   boolean hasPlan();
@@ -122,7 +122,7 @@ public interface SubscriptionOrBuilder extends
    * The plan the user is subscribed to.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 5;</code>
+   * <code>.qms.Plan plan = 5;</code>
    * @return The plan.
    */
   org.cyverse.de.protobufs.Plan getPlan();
@@ -131,7 +131,7 @@ public interface SubscriptionOrBuilder extends
    * The plan the user is subscribed to.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 5;</code>
+   * <code>.qms.Plan plan = 5;</code>
    */
   org.cyverse.de.protobufs.PlanOrBuilder getPlanOrBuilder();
 
@@ -141,7 +141,7 @@ public interface SubscriptionOrBuilder extends
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Quota> 
       getQuotasList();
@@ -151,7 +151,7 @@ public interface SubscriptionOrBuilder extends
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   org.cyverse.de.protobufs.Quota getQuotas(int index);
   /**
@@ -160,7 +160,7 @@ public interface SubscriptionOrBuilder extends
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   int getQuotasCount();
   /**
@@ -169,7 +169,7 @@ public interface SubscriptionOrBuilder extends
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.QuotaOrBuilder> 
       getQuotasOrBuilderList();
@@ -179,7 +179,7 @@ public interface SubscriptionOrBuilder extends
    * by quota defaults, but can be overridden.
    * </pre>
    *
-   * <code>repeated .debuff.Quota quotas = 6;</code>
+   * <code>repeated .qms.Quota quotas = 6;</code>
    */
   org.cyverse.de.protobufs.QuotaOrBuilder getQuotasOrBuilder(
       int index);
@@ -189,7 +189,7 @@ public interface SubscriptionOrBuilder extends
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   java.util.List<org.cyverse.de.protobufs.Usage> 
       getUsagesList();
@@ -198,7 +198,7 @@ public interface SubscriptionOrBuilder extends
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   org.cyverse.de.protobufs.Usage getUsages(int index);
   /**
@@ -206,7 +206,7 @@ public interface SubscriptionOrBuilder extends
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   int getUsagesCount();
   /**
@@ -214,7 +214,7 @@ public interface SubscriptionOrBuilder extends
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.UsageOrBuilder> 
       getUsagesOrBuilderList();
@@ -223,7 +223,7 @@ public interface SubscriptionOrBuilder extends
    * The list of resource usages that the user has generated while this plan was active.
    * </pre>
    *
-   * <code>repeated .debuff.Usage usages = 7;</code>
+   * <code>repeated .qms.Usage usages = 7;</code>
    */
   org.cyverse.de.protobufs.UsageOrBuilder getUsagesOrBuilder(
       int index);

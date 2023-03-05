@@ -10,11 +10,11 @@ package org.cyverse.de.protobufs;
  * quota. Usually embedded in request and response message types.
  * </pre>
  *
- * Protobuf type {@code debuff.Overage}
+ * Protobuf type {@code qms.Overage}
  */
 public final class Overage extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.Overage)
+    // @@protoc_insertion_point(message_implements:qms.Overage)
     OverageOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Overage.newBuilder() to construct.
@@ -39,13 +39,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_debuff_Overage_descriptor;
+    return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_qms_Overage_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_debuff_Overage_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_qms_Overage_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Overage.class, org.cyverse.de.protobufs.Overage.Builder.class);
   }
@@ -314,21 +314,21 @@ private static final long serialVersionUID = 0L;
    * quota. Usually embedded in request and response message types.
    * </pre>
    *
-   * Protobuf type {@code debuff.Overage}
+   * Protobuf type {@code qms.Overage}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.Overage)
+      // @@protoc_insertion_point(builder_implements:qms.Overage)
       org.cyverse.de.protobufs.OverageOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_debuff_Overage_descriptor;
+      return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_qms_Overage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_debuff_Overage_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_qms_Overage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Overage.class, org.cyverse.de.protobufs.Overage.Builder.class);
     }
@@ -356,7 +356,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_debuff_Overage_descriptor;
+      return org.cyverse.de.protobufs.QMSOveragesProtobufs.internal_static_qms_Overage_descriptor;
     }
 
     @java.lang.Override
@@ -699,10 +699,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.Overage)
+    // @@protoc_insertion_point(builder_scope:qms.Overage)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.Overage)
+  // @@protoc_insertion_point(class_scope:qms.Overage)
   private static final org.cyverse.de.protobufs.Overage DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Overage();

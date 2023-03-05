@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code debuff.DNSCheckResult}
+ * Protobuf type {@code monitoring.DNSCheckResult}
  */
 public final class DNSCheckResult extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.DNSCheckResult)
+    // @@protoc_insertion_point(message_implements:monitoring.DNSCheckResult)
     DNSCheckResultOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DNSCheckResult.newBuilder() to construct.
@@ -35,13 +35,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSCheckResult_descriptor;
+    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSCheckResult_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSCheckResult_fieldAccessorTable
+    return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSCheckResult_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.DNSCheckResult.class, org.cyverse.de.protobufs.DNSCheckResult.Builder.class);
   }
@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 1;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
   public static final int ERROR_FIELD_NUMBER = 2;
   private org.cyverse.de.protobufs.ServiceError error_;
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
     return error_ != null;
   }
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -91,7 +91,7 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? org.cyverse.de.protobufs.ServiceError.getDefaultInstance() : error_;
   }
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
@@ -102,14 +102,14 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<org.cyverse.de.protobufs.DNSLookup> lookups_;
   /**
-   * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+   * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
    */
   @java.lang.Override
   public java.util.List<org.cyverse.de.protobufs.DNSLookup> getLookupsList() {
     return lookups_;
   }
   /**
-   * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+   * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
    */
   @java.lang.Override
   public java.util.List<? extends org.cyverse.de.protobufs.DNSLookupOrBuilder> 
@@ -117,21 +117,21 @@ private static final long serialVersionUID = 0L;
     return lookups_;
   }
   /**
-   * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+   * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
    */
   @java.lang.Override
   public int getLookupsCount() {
     return lookups_.size();
   }
   /**
-   * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+   * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.DNSLookup getLookups(int index) {
     return lookups_.get(index);
   }
   /**
-   * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+   * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.DNSLookupOrBuilder getLookupsOrBuilder(
@@ -427,21 +427,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code debuff.DNSCheckResult}
+   * Protobuf type {@code monitoring.DNSCheckResult}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.DNSCheckResult)
+      // @@protoc_insertion_point(builder_implements:monitoring.DNSCheckResult)
       org.cyverse.de.protobufs.DNSCheckResultOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSCheckResult_descriptor;
+      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSCheckResult_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSCheckResult_fieldAccessorTable
+      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSCheckResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.DNSCheckResult.class, org.cyverse.de.protobufs.DNSCheckResult.Builder.class);
     }
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_debuff_DNSCheckResult_descriptor;
+      return org.cyverse.de.protobufs.MonitoringDNSCheck.internal_static_monitoring_DNSCheckResult_descriptor;
     }
 
     @java.lang.Override
@@ -713,14 +713,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -780,7 +780,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -832,14 +832,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> errorBuilder_;
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.ServiceError getError() {
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.ServiceError.Builder builderForValue) {
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.ServiceError value) {
       if (errorBuilder_ == null) {
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public Builder clearError() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceError.Builder getErrorBuilder() {
       bitField0_ |= 0x00000002;
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     public org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.ServiceError error = 2;</code>
+     * <code>.svcerror.ServiceError error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ServiceError, org.cyverse.de.protobufs.ServiceError.Builder, org.cyverse.de.protobufs.ServiceErrorOrBuilder> 
@@ -960,7 +960,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.DNSLookup, org.cyverse.de.protobufs.DNSLookup.Builder, org.cyverse.de.protobufs.DNSLookupOrBuilder> lookupsBuilder_;
 
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.DNSLookup> getLookupsList() {
       if (lookupsBuilder_ == null) {
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public int getLookupsCount() {
       if (lookupsBuilder_ == null) {
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public org.cyverse.de.protobufs.DNSLookup getLookups(int index) {
       if (lookupsBuilder_ == null) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder setLookups(
         int index, org.cyverse.de.protobufs.DNSLookup value) {
@@ -1007,7 +1007,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder setLookups(
         int index, org.cyverse.de.protobufs.DNSLookup.Builder builderForValue) {
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder addLookups(org.cyverse.de.protobufs.DNSLookup value) {
       if (lookupsBuilder_ == null) {
@@ -1037,7 +1037,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder addLookups(
         int index, org.cyverse.de.protobufs.DNSLookup value) {
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder addLookups(
         org.cyverse.de.protobufs.DNSLookup.Builder builderForValue) {
@@ -1068,7 +1068,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder addLookups(
         int index, org.cyverse.de.protobufs.DNSLookup.Builder builderForValue) {
@@ -1082,7 +1082,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder addAllLookups(
         java.lang.Iterable<? extends org.cyverse.de.protobufs.DNSLookup> values) {
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder clearLookups() {
       if (lookupsBuilder_ == null) {
@@ -1110,7 +1110,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public Builder removeLookups(int index) {
       if (lookupsBuilder_ == null) {
@@ -1123,14 +1123,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public org.cyverse.de.protobufs.DNSLookup.Builder getLookupsBuilder(
         int index) {
       return getLookupsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public org.cyverse.de.protobufs.DNSLookupOrBuilder getLookupsOrBuilder(
         int index) {
@@ -1140,7 +1140,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public java.util.List<? extends org.cyverse.de.protobufs.DNSLookupOrBuilder> 
          getLookupsOrBuilderList() {
@@ -1151,14 +1151,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public org.cyverse.de.protobufs.DNSLookup.Builder addLookupsBuilder() {
       return getLookupsFieldBuilder().addBuilder(
           org.cyverse.de.protobufs.DNSLookup.getDefaultInstance());
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public org.cyverse.de.protobufs.DNSLookup.Builder addLookupsBuilder(
         int index) {
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
           index, org.cyverse.de.protobufs.DNSLookup.getDefaultInstance());
     }
     /**
-     * <code>repeated .debuff.DNSLookup lookups = 3;</code>
+     * <code>repeated .monitoring.DNSLookup lookups = 3;</code>
      */
     public java.util.List<org.cyverse.de.protobufs.DNSLookup.Builder> 
          getLookupsBuilderList() {
@@ -1343,10 +1343,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.DNSCheckResult)
+    // @@protoc_insertion_point(builder_scope:monitoring.DNSCheckResult)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.DNSCheckResult)
+  // @@protoc_insertion_point(class_scope:monitoring.DNSCheckResult)
   private static final org.cyverse.de.protobufs.DNSCheckResult DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.DNSCheckResult();

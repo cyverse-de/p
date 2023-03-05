@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code debuff.InteractiveApps}
+ * Protobuf type {@code analysis.InteractiveApps}
  */
 public final class InteractiveApps extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.InteractiveApps)
+    // @@protoc_insertion_point(message_implements:analysis.InteractiveApps)
     InteractiveAppsOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use InteractiveApps.newBuilder() to construct.
@@ -43,13 +43,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_InteractiveApps_descriptor;
+    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_analysis_InteractiveApps_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_InteractiveApps_fieldAccessorTable
+    return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_analysis_InteractiveApps_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.InteractiveApps.class, org.cyverse.de.protobufs.InteractiveApps.Builder.class);
   }
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
   public static final int HEADER_FIELD_NUMBER = 12;
   private org.cyverse.de.protobufs.Header header_;
   /**
-   * <code>.debuff.Header header = 12;</code>
+   * <code>.header.Header header = 12;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
     return header_ != null;
   }
   /**
-   * <code>.debuff.Header header = 12;</code>
+   * <code>.header.Header header = 12;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
     return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
   }
   /**
-   * <code>.debuff.Header header = 12;</code>
+   * <code>.header.Header header = 12;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -780,21 +780,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code debuff.InteractiveApps}
+   * Protobuf type {@code analysis.InteractiveApps}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.InteractiveApps)
+      // @@protoc_insertion_point(builder_implements:analysis.InteractiveApps)
       org.cyverse.de.protobufs.InteractiveAppsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_InteractiveApps_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_analysis_InteractiveApps_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_InteractiveApps_fieldAccessorTable
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_analysis_InteractiveApps_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.InteractiveApps.class, org.cyverse.de.protobufs.InteractiveApps.Builder.class);
     }
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_debuff_InteractiveApps_descriptor;
+      return org.cyverse.de.protobufs.AnalysisContainerProtobufs.internal_static_analysis_InteractiveApps_descriptor;
     }
 
     @java.lang.Override
@@ -1905,14 +1905,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return ((bitField0_ & 0x00000800) != 0);
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -1923,7 +1923,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -1939,7 +1939,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -1953,7 +1953,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -1972,7 +1972,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000800);
@@ -1985,7 +1985,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000800;
@@ -1993,7 +1993,7 @@ private static final long serialVersionUID = 0L;
       return getHeaderFieldBuilder().getBuilder();
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -2004,7 +2004,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.debuff.Header header = 12;</code>
+     * <code>.header.Header header = 12;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -2032,10 +2032,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.InteractiveApps)
+    // @@protoc_insertion_point(builder_scope:analysis.InteractiveApps)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.InteractiveApps)
+  // @@protoc_insertion_point(class_scope:analysis.InteractiveApps)
   private static final org.cyverse.de.protobufs.InteractiveApps DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.InteractiveApps();

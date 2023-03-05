@@ -11,11 +11,11 @@ package org.cyverse.de.protobufs;
  * default associated with the plan the user has.
  * </pre>
  *
- * Protobuf type {@code debuff.Quota}
+ * Protobuf type {@code qms.Quota}
  */
 public final class Quota extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.Quota)
+    // @@protoc_insertion_point(message_implements:qms.Quota)
     QuotaOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Quota.newBuilder() to construct.
@@ -43,13 +43,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_debuff_Quota_descriptor;
+    return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_qms_Quota_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_debuff_Quota_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_qms_Quota_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Quota.class, org.cyverse.de.protobufs.Quota.Builder.class);
   }
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * The resource type the quota value applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   @java.lang.Override
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    * The resource type the quota value applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * The resource type the quota value applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
@@ -624,21 +624,21 @@ private static final long serialVersionUID = 0L;
    * default associated with the plan the user has.
    * </pre>
    *
-   * Protobuf type {@code debuff.Quota}
+   * Protobuf type {@code qms.Quota}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.Quota)
+      // @@protoc_insertion_point(builder_implements:qms.Quota)
       org.cyverse.de.protobufs.QuotaOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_debuff_Quota_descriptor;
+      return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_qms_Quota_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_debuff_Quota_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_qms_Quota_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Quota.class, org.cyverse.de.protobufs.Quota.Builder.class);
     }
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_debuff_Quota_descriptor;
+      return org.cyverse.de.protobufs.QMSQuotaProtobufs.internal_static_qms_Quota_descriptor;
     }
 
     @java.lang.Override
@@ -1051,7 +1051,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      * @return Whether the resourceType field is set.
      */
     public boolean hasResourceType() {
@@ -1062,7 +1062,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      * @return The resourceType.
      */
     public org.cyverse.de.protobufs.ResourceType getResourceType() {
@@ -1077,7 +1077,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypeBuilder_ == null) {
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder setResourceType(
         org.cyverse.de.protobufs.ResourceType.Builder builderForValue) {
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder mergeResourceType(org.cyverse.de.protobufs.ResourceType value) {
       if (resourceTypeBuilder_ == null) {
@@ -1138,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public Builder clearResourceType() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceType.Builder getResourceTypeBuilder() {
       bitField0_ |= 0x00000004;
@@ -1167,7 +1167,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     public org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder() {
       if (resourceTypeBuilder_ != null) {
@@ -1182,7 +1182,7 @@ private static final long serialVersionUID = 0L;
      * The resource type the quota value applies to.
      * </pre>
      *
-     * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+     * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.ResourceType, org.cyverse.de.protobufs.ResourceType.Builder, org.cyverse.de.protobufs.ResourceTypeOrBuilder> 
@@ -1796,10 +1796,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.Quota)
+    // @@protoc_insertion_point(builder_scope:qms.Quota)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.Quota)
+  // @@protoc_insertion_point(class_scope:qms.Quota)
   private static final org.cyverse.de.protobufs.Quota DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Quota();

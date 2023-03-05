@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface PlanOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.Plan)
+    // @@protoc_insertion_point(interface_extends:qms.Plan)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -72,7 +72,7 @@ public interface PlanOrBuilder extends
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.QuotaDefault> 
       getPlanQuotaDefaultsList();
@@ -81,7 +81,7 @@ public interface PlanOrBuilder extends
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefault getPlanQuotaDefaults(int index);
   /**
@@ -89,7 +89,7 @@ public interface PlanOrBuilder extends
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   int getPlanQuotaDefaultsCount();
   /**
@@ -97,7 +97,7 @@ public interface PlanOrBuilder extends
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
       getPlanQuotaDefaultsOrBuilderList();
@@ -106,7 +106,7 @@ public interface PlanOrBuilder extends
    * A list of quota defaults associated with the plan.
    * </pre>
    *
-   * <code>repeated .debuff.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
+   * <code>repeated .qms.QuotaDefault plan_quota_defaults = 4 [json_name = "plan_quota_defaults"];</code>
    */
   org.cyverse.de.protobufs.QuotaDefaultOrBuilder getPlanQuotaDefaultsOrBuilder(
       int index);

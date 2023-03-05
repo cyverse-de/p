@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * Contains the information needed to update a subscription add-on.
  * </pre>
  *
- * Protobuf type {@code debuff.UpdateSubscriptionAddonRequest}
+ * Protobuf type {@code qms.UpdateSubscriptionAddonRequest}
  */
 public final class UpdateSubscriptionAddonRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.UpdateSubscriptionAddonRequest)
+    // @@protoc_insertion_point(message_implements:qms.UpdateSubscriptionAddonRequest)
     UpdateSubscriptionAddonRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UpdateSubscriptionAddonRequest.newBuilder() to construct.
@@ -37,13 +37,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_UpdateSubscriptionAddonRequest_descriptor;
+    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_UpdateSubscriptionAddonRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_UpdateSubscriptionAddonRequest_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_UpdateSubscriptionAddonRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.UpdateSubscriptionAddonRequest.class, org.cyverse.de.protobufs.UpdateSubscriptionAddonRequest.Builder.class);
   }
@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -67,7 +67,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
    * have all fields set and the UUID field should not be set.
    * </pre>
    *
-   * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+   * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
    * @return Whether the subscriptionAddon field is set.
    */
   @java.lang.Override
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * have all fields set and the UUID field should not be set.
    * </pre>
    *
-   * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+   * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
    * @return The subscriptionAddon.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * have all fields set and the UUID field should not be set.
    * </pre>
    *
-   * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+   * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getSubscriptionAddonOrBuilder() {
@@ -423,21 +423,21 @@ private static final long serialVersionUID = 0L;
    * Contains the information needed to update a subscription add-on.
    * </pre>
    *
-   * Protobuf type {@code debuff.UpdateSubscriptionAddonRequest}
+   * Protobuf type {@code qms.UpdateSubscriptionAddonRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.UpdateSubscriptionAddonRequest)
+      // @@protoc_insertion_point(builder_implements:qms.UpdateSubscriptionAddonRequest)
       org.cyverse.de.protobufs.UpdateSubscriptionAddonRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_UpdateSubscriptionAddonRequest_descriptor;
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_UpdateSubscriptionAddonRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_UpdateSubscriptionAddonRequest_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_UpdateSubscriptionAddonRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.UpdateSubscriptionAddonRequest.class, org.cyverse.de.protobufs.UpdateSubscriptionAddonRequest.Builder.class);
     }
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_UpdateSubscriptionAddonRequest_descriptor;
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_UpdateSubscriptionAddonRequest_descriptor;
     }
 
     @java.lang.Override
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -790,7 +790,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -805,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -830,7 +830,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      * @return Whether the subscriptionAddon field is set.
      */
     public boolean hasSubscriptionAddon() {
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      * @return The subscriptionAddon.
      */
     public org.cyverse.de.protobufs.SubscriptionAddon getSubscriptionAddon() {
@@ -858,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     public Builder setSubscriptionAddon(org.cyverse.de.protobufs.SubscriptionAddon value) {
       if (subscriptionAddonBuilder_ == null) {
@@ -879,7 +879,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     public Builder setSubscriptionAddon(
         org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     public Builder mergeSubscriptionAddon(org.cyverse.de.protobufs.SubscriptionAddon value) {
       if (subscriptionAddonBuilder_ == null) {
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     public Builder clearSubscriptionAddon() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -940,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddon.Builder getSubscriptionAddonBuilder() {
       bitField0_ |= 0x00000002;
@@ -953,7 +953,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     public org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getSubscriptionAddonOrBuilder() {
       if (subscriptionAddonBuilder_ != null) {
@@ -969,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * have all fields set and the UUID field should not be set.
      * </pre>
      *
-     * <code>.debuff.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
+     * <code>.qms.SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.SubscriptionAddon, org.cyverse.de.protobufs.SubscriptionAddon.Builder, org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
@@ -1191,10 +1191,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.UpdateSubscriptionAddonRequest)
+    // @@protoc_insertion_point(builder_scope:qms.UpdateSubscriptionAddonRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.UpdateSubscriptionAddonRequest)
+  // @@protoc_insertion_point(class_scope:qms.UpdateSubscriptionAddonRequest)
   private static final org.cyverse.de.protobufs.UpdateSubscriptionAddonRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.UpdateSubscriptionAddonRequest();

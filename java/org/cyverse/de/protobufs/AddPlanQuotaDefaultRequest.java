@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A request to add a quota default to an existing plan.
  * </pre>
  *
- * Protobuf type {@code debuff.AddPlanQuotaDefaultRequest}
+ * Protobuf type {@code qms.AddPlanQuotaDefaultRequest}
  */
 public final class AddPlanQuotaDefaultRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.AddPlanQuotaDefaultRequest)
+    // @@protoc_insertion_point(message_implements:qms.AddPlanQuotaDefaultRequest)
     AddPlanQuotaDefaultRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use AddPlanQuotaDefaultRequest.newBuilder() to construct.
@@ -38,13 +38,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_AddPlanQuotaDefaultRequest_descriptor;
+    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_AddPlanQuotaDefaultRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_AddPlanQuotaDefaultRequest_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_AddPlanQuotaDefaultRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest.class, org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest.Builder.class);
   }
@@ -56,7 +56,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * The quota default to add to the plan specified by the plan_name field.
    * </pre>
    *
-   * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+   * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    * @return Whether the quotaDefault field is set.
    */
   @java.lang.Override
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * The quota default to add to the plan specified by the plan_name field.
    * </pre>
    *
-   * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+   * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    * @return The quotaDefault.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * The quota default to add to the plan specified by the plan_name field.
    * </pre>
    *
-   * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+   * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultOrBuilder() {
@@ -364,21 +364,21 @@ private static final long serialVersionUID = 0L;
    * A request to add a quota default to an existing plan.
    * </pre>
    *
-   * Protobuf type {@code debuff.AddPlanQuotaDefaultRequest}
+   * Protobuf type {@code qms.AddPlanQuotaDefaultRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.AddPlanQuotaDefaultRequest)
+      // @@protoc_insertion_point(builder_implements:qms.AddPlanQuotaDefaultRequest)
       org.cyverse.de.protobufs.AddPlanQuotaDefaultRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_AddPlanQuotaDefaultRequest_descriptor;
+      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_AddPlanQuotaDefaultRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_AddPlanQuotaDefaultRequest_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_AddPlanQuotaDefaultRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest.class, org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest.Builder.class);
     }
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_debuff_AddPlanQuotaDefaultRequest_descriptor;
+      return org.cyverse.de.protobufs.QMSPlansProtobufs.internal_static_qms_AddPlanQuotaDefaultRequest_descriptor;
     }
 
     @java.lang.Override
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000001;
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -712,7 +712,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry data.
      * </pre>
      *
-     * <code>.debuff.Header header = 1;</code>
+     * <code>.header.Header header = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -828,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      * @return Whether the quotaDefault field is set.
      */
     public boolean hasQuotaDefault() {
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      * @return The quotaDefault.
      */
     public org.cyverse.de.protobufs.QuotaDefault getQuotaDefault() {
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public Builder setQuotaDefault(org.cyverse.de.protobufs.QuotaDefault value) {
       if (quotaDefaultBuilder_ == null) {
@@ -874,7 +874,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public Builder setQuotaDefault(
         org.cyverse.de.protobufs.QuotaDefault.Builder builderForValue) {
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public Builder mergeQuotaDefault(org.cyverse.de.protobufs.QuotaDefault value) {
       if (quotaDefaultBuilder_ == null) {
@@ -915,7 +915,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public Builder clearQuotaDefault() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefault.Builder getQuotaDefaultBuilder() {
       bitField0_ |= 0x00000004;
@@ -944,7 +944,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     public org.cyverse.de.protobufs.QuotaDefaultOrBuilder getQuotaDefaultOrBuilder() {
       if (quotaDefaultBuilder_ != null) {
@@ -959,7 +959,7 @@ private static final long serialVersionUID = 0L;
      * The quota default to add to the plan specified by the plan_name field.
      * </pre>
      *
-     * <code>.debuff.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
+     * <code>.qms.QuotaDefault quota_default = 3 [json_name = "quota_default"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.QuotaDefault, org.cyverse.de.protobufs.QuotaDefault.Builder, org.cyverse.de.protobufs.QuotaDefaultOrBuilder> 
@@ -987,10 +987,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.AddPlanQuotaDefaultRequest)
+    // @@protoc_insertion_point(builder_scope:qms.AddPlanQuotaDefaultRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.AddPlanQuotaDefaultRequest)
+  // @@protoc_insertion_point(class_scope:qms.AddPlanQuotaDefaultRequest)
   private static final org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.AddPlanQuotaDefaultRequest();

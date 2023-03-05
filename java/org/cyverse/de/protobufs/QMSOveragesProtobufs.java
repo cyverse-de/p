@@ -15,25 +15,25 @@ public final class QMSOveragesProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Overage_descriptor;
+    internal_static_qms_Overage_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Overage_fieldAccessorTable;
+      internal_static_qms_Overage_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_OverageResponse_descriptor;
+    internal_static_qms_OverageResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_OverageResponse_fieldAccessorTable;
+      internal_static_qms_OverageResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_OverageList_descriptor;
+    internal_static_qms_OverageList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_OverageList_fieldAccessorTable;
+      internal_static_qms_OverageList_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_IsOverage_descriptor;
+    internal_static_qms_IsOverage_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_IsOverage_fieldAccessorTable;
+      internal_static_qms_IsOverage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -43,21 +43,21 @@ public final class QMSOveragesProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022qms_overages.proto\022\006debuff\032\014header.pro" +
-      "to\032\016svcerror.proto\"M\n\007Overage\022$\n\rresourc" +
-      "e_name\030\001 \001(\tR\rresource_name\022\r\n\005quota\030\002 \001" +
-      "(\002\022\r\n\005usage\030\003 \001(\002\"x\n\017OverageResponse\022\036\n\006" +
-      "header\030\001 \001(\0132\016.debuff.Header\022#\n\005error\030\002 " +
-      "\001(\0132\024.debuff.ServiceError\022 \n\007overage\030\003 \001" +
-      "(\0132\017.debuff.Overage\"u\n\013OverageList\022\036\n\006he" +
-      "ader\030\001 \001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(" +
-      "\0132\024.debuff.ServiceError\022!\n\010overages\030\003 \003(" +
-      "\0132\017.debuff.Overage\"p\n\tIsOverage\022\036\n\006heade" +
-      "r\030\001 \001(\0132\016.debuff.Header\022#\n\005error\030\002 \001(\0132\024" +
-      ".debuff.ServiceError\022\036\n\nis_overage\030\003 \001(\010" +
-      "R\nis_overageBR\n\030org.cyverse.de.protobufs" +
-      "B\024QMSOveragesProtobufsP\001Z\036github.com/cyv" +
-      "erse-de/p/go/qmsb\006proto3"
+      "\n\022qms_overages.proto\022\003qms\032\014header.proto\032" +
+      "\016svcerror.proto\"M\n\007Overage\022$\n\rresource_n" +
+      "ame\030\001 \001(\tR\rresource_name\022\r\n\005quota\030\002 \001(\002\022" +
+      "\r\n\005usage\030\003 \001(\002\"w\n\017OverageResponse\022\036\n\006hea" +
+      "der\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\013" +
+      "2\026.svcerror.ServiceError\022\035\n\007overage\030\003 \001(" +
+      "\0132\014.qms.Overage\"t\n\013OverageList\022\036\n\006header" +
+      "\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026." +
+      "svcerror.ServiceError\022\036\n\010overages\030\003 \003(\0132" +
+      "\014.qms.Overage\"r\n\tIsOverage\022\036\n\006header\030\001 \001" +
+      "(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svce" +
+      "rror.ServiceError\022\036\n\nis_overage\030\003 \001(\010R\ni" +
+      "s_overageBR\n\030org.cyverse.de.protobufsB\024Q" +
+      "MSOveragesProtobufsP\001Z\036github.com/cyvers" +
+      "e-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -65,29 +65,29 @@ public final class QMSOveragesProtobufs {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
         });
-    internal_static_debuff_Overage_descriptor =
+    internal_static_qms_Overage_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_Overage_fieldAccessorTable = new
+    internal_static_qms_Overage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Overage_descriptor,
+        internal_static_qms_Overage_descriptor,
         new java.lang.String[] { "ResourceName", "Quota", "Usage", });
-    internal_static_debuff_OverageResponse_descriptor =
+    internal_static_qms_OverageResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_debuff_OverageResponse_fieldAccessorTable = new
+    internal_static_qms_OverageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_OverageResponse_descriptor,
+        internal_static_qms_OverageResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "Overage", });
-    internal_static_debuff_OverageList_descriptor =
+    internal_static_qms_OverageList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_debuff_OverageList_fieldAccessorTable = new
+    internal_static_qms_OverageList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_OverageList_descriptor,
+        internal_static_qms_OverageList_descriptor,
         new java.lang.String[] { "Header", "Error", "Overages", });
-    internal_static_debuff_IsOverage_descriptor =
+    internal_static_qms_IsOverage_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_debuff_IsOverage_fieldAccessorTable = new
+    internal_static_qms_IsOverage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_IsOverage_descriptor,
+        internal_static_qms_IsOverage_descriptor,
         new java.lang.String[] { "Header", "Error", "IsOverage", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

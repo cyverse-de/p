@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface QuotaOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.Quota)
+    // @@protoc_insertion_point(interface_extends:qms.Quota)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -42,7 +42,7 @@ public interface QuotaOrBuilder extends
    * The resource type the quota value applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
@@ -51,7 +51,7 @@ public interface QuotaOrBuilder extends
    * The resource type the quota value applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
@@ -60,7 +60,7 @@ public interface QuotaOrBuilder extends
    * The resource type the quota value applies to.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 3 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
 

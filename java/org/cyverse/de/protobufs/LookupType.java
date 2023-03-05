@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf enum {@code debuff.LookupType}
+ * Protobuf enum {@code monitoring.LookupType}
  */
 public enum LookupType
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -117,6 +117,6 @@ public enum LookupType
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:debuff.LookupType)
+  // @@protoc_insertion_point(enum_scope:monitoring.LookupType)
 }
 

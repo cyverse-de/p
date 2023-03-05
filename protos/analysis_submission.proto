@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package analysis;
+
 import "google/protobuf/timestamp.proto";
 import "analysis_container.proto";
 import "header.proto";
@@ -9,8 +11,6 @@ option go_package = "github.com/cyverse-de/p/go/analysis";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisSubmissionProtobufs";
-
-package debuff;
 
 message HTCondorExtraInfo {
     string extra_requirements = 1;
@@ -83,7 +83,7 @@ message Step {
     map<string, string> environment = 8;
     repeated Input input = 9; // It's really annoying, but this is singular for backwards compatibility.
     repeated Output output = 10; // It's really annoying, but this is singular for backwards compatibility.
-    Header header = 11;
+    header.Header header = 11;
 }
 
 message AnalysisSubmission {
@@ -131,7 +131,7 @@ message AnalysisSubmission {
     string user_home = 42 [json_name = "user_home"];
     string wiki_url = 43 [json_name = "wiki_url"];
     string config_file = 44 [json_name = "config_file"];
-    Header header = 45;
+    header.Header header = 45;
 }
 
 

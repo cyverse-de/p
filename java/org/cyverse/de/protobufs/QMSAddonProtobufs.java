@@ -15,55 +15,55 @@ public final class QMSAddonProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Addon_descriptor;
+    internal_static_qms_Addon_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Addon_fieldAccessorTable;
+      internal_static_qms_Addon_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AddonResponse_descriptor;
+    internal_static_qms_AddonResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AddonResponse_fieldAccessorTable;
+      internal_static_qms_AddonResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AddonListResponse_descriptor;
+    internal_static_qms_AddonListResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AddonListResponse_fieldAccessorTable;
+      internal_static_qms_AddonListResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AddAddonRequest_descriptor;
+    internal_static_qms_AddAddonRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AddAddonRequest_fieldAccessorTable;
+      internal_static_qms_AddAddonRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AddonLookupRequest_descriptor;
+    internal_static_qms_AddonLookupRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AddonLookupRequest_fieldAccessorTable;
+      internal_static_qms_AddonLookupRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_UpdateAddonRequest_descriptor;
+    internal_static_qms_UpdateAddonRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_UpdateAddonRequest_fieldAccessorTable;
+      internal_static_qms_UpdateAddonRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_SubscriptionAddon_descriptor;
+    internal_static_qms_SubscriptionAddon_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_SubscriptionAddon_fieldAccessorTable;
+      internal_static_qms_SubscriptionAddon_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_UpdateSubscriptionAddonRequest_descriptor;
+    internal_static_qms_UpdateSubscriptionAddonRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_UpdateSubscriptionAddonRequest_fieldAccessorTable;
+      internal_static_qms_UpdateSubscriptionAddonRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_SubscriptionAddonResponse_descriptor;
+    internal_static_qms_SubscriptionAddonResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_SubscriptionAddonResponse_fieldAccessorTable;
+      internal_static_qms_SubscriptionAddonResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_SubscriptionAddonListResponse_descriptor;
+    internal_static_qms_SubscriptionAddonListResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_SubscriptionAddonListResponse_fieldAccessorTable;
+      internal_static_qms_SubscriptionAddonListResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -73,52 +73,52 @@ public final class QMSAddonProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020qms_addons.proto\022\006debuff\032\014header.proto" +
-      "\032\016svcerror.proto\032\030qms_resource_types.pro" +
-      "to\032\027qms_subscriptions.proto\"\300\001\n\005Addon\022\014\n" +
-      "\004uuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description" +
-      "\030\003 \001(\t\022:\n\rresource_type\030\004 \001(\0132\024.debuff.R" +
-      "esourceTypeR\rresource_type\022&\n\016default_am" +
-      "ount\030\005 \001(\002R\016default_amount\022\"\n\014default_pa" +
-      "id\030\006 \001(\010R\014default_paid\"r\n\rAddonResponse\022" +
-      "\036\n\006header\030\001 \001(\0132\016.debuff.Header\022#\n\005error" +
-      "\030\002 \001(\0132\024.debuff.ServiceError\022\034\n\005addon\030\003 " +
-      "\001(\0132\r.debuff.Addon\"w\n\021AddonListResponse\022" +
-      "\036\n\006header\030\001 \001(\0132\016.debuff.Header\022#\n\005error" +
-      "\030\002 \001(\0132\024.debuff.ServiceError\022\035\n\006addons\030\003" +
-      " \003(\0132\r.debuff.Addon\"O\n\017AddAddonRequest\022\036" +
-      "\n\006header\030\001 \001(\0132\016.debuff.Header\022\034\n\005addon\030" +
-      "\002 \001(\0132\r.debuff.Addon\"]\n\022AddonLookupReque" +
-      "st\022\036\n\006header\030\001 \001(\0132\016.debuff.Header\022\016\n\004uu" +
-      "id\030\002 \001(\tH\000\022\016\n\004name\030\003 \001(\tH\000B\007\n\005addon\"\335\001\n\022" +
-      "UpdateAddonRequest\022\036\n\006header\030\001 \001(\0132\016.deb" +
-      "uff.Header\022\034\n\005addon\030\002 \001(\0132\r.debuff.Addon" +
-      "\022\023\n\013update_name\030\003 \001(\010\022\032\n\022update_descript" +
-      "ion\030\004 \001(\010\022\034\n\024update_resource_type\030\005 \001(\010\022" +
-      "\035\n\025update_default_amount\030\006 \001(\010\022\033\n\023update" +
-      "_default_paid\030\007 \001(\010\"\211\001\n\021SubscriptionAddo" +
-      "n\022\014\n\004uuid\030\001 \001(\t\022\034\n\005addon\030\002 \001(\0132\r.debuff." +
-      "Addon\022*\n\014subscription\030\003 \001(\0132\024.debuff.Sub" +
-      "scription\022\016\n\006amount\030\004 \001(\002\022\014\n\004paid\030\005 \001(\010\"" +
-      "\265\002\n\036UpdateSubscriptionAddonRequest\022\036\n\006he" +
-      "ader\030\001 \001(\0132\016.debuff.Header\022I\n\022subscripti" +
-      "on_addon\030\002 \001(\0132\031.debuff.SubscriptionAddo" +
-      "nR\022subscription_addon\022(\n\017update_addon_id" +
-      "\030\003 \001(\010R\017update_addon_id\0226\n\026update_subscr" +
-      "iption_id\030\004 \001(\010R\026update_subscription_id\022" +
-      "$\n\rupdate_amount\030\005 \001(\010R\rupdate_amount\022 \n" +
-      "\013update_paid\030\006 \001(\010R\013update_paid\"\253\001\n\031Subs" +
-      "criptionAddonResponse\022\036\n\006header\030\001 \001(\0132\016." +
-      "debuff.Header\022#\n\005error\030\002 \001(\0132\024.debuff.Se" +
-      "rviceError\022I\n\022subscription_addon\030\003 \001(\0132\031" +
-      ".debuff.SubscriptionAddonR\022subscription_" +
-      "addon\"\261\001\n\035SubscriptionAddonListResponse\022" +
-      "\036\n\006header\030\001 \001(\0132\016.debuff.Header\022#\n\005error" +
-      "\030\002 \001(\0132\024.debuff.ServiceError\022K\n\023subscrip" +
-      "tion_addons\030\003 \003(\0132\031.debuff.SubscriptionA" +
-      "ddonR\023subscription_addonsBO\n\030org.cyverse" +
-      ".de.protobufsB\021QMSAddonProtobufsP\001Z\036gith" +
-      "ub.com/cyverse-de/p/go/qmsb\006proto3"
+      "\n\020qms_addons.proto\022\003qms\032\014header.proto\032\016s" +
+      "vcerror.proto\032\030qms_resource_types.proto\032" +
+      "\027qms_subscriptions.proto\"\275\001\n\005Addon\022\014\n\004uu" +
+      "id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 " +
+      "\001(\t\0227\n\rresource_type\030\004 \001(\0132\021.qms.Resourc" +
+      "eTypeR\rresource_type\022&\n\016default_amount\030\005" +
+      " \001(\002R\016default_amount\022\"\n\014default_paid\030\006 \001" +
+      "(\010R\014default_paid\"q\n\rAddonResponse\022\036\n\006hea" +
+      "der\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\013" +
+      "2\026.svcerror.ServiceError\022\031\n\005addon\030\003 \001(\0132" +
+      "\n.qms.Addon\"v\n\021AddonListResponse\022\036\n\006head" +
+      "er\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132" +
+      "\026.svcerror.ServiceError\022\032\n\006addons\030\003 \003(\0132" +
+      "\n.qms.Addon\"L\n\017AddAddonRequest\022\036\n\006header" +
+      "\030\001 \001(\0132\016.header.Header\022\031\n\005addon\030\002 \001(\0132\n." +
+      "qms.Addon\"]\n\022AddonLookupRequest\022\036\n\006heade" +
+      "r\030\001 \001(\0132\016.header.Header\022\016\n\004uuid\030\002 \001(\tH\000\022" +
+      "\016\n\004name\030\003 \001(\tH\000B\007\n\005addon\"\332\001\n\022UpdateAddon" +
+      "Request\022\036\n\006header\030\001 \001(\0132\016.header.Header\022" +
+      "\031\n\005addon\030\002 \001(\0132\n.qms.Addon\022\023\n\013update_nam" +
+      "e\030\003 \001(\010\022\032\n\022update_description\030\004 \001(\010\022\034\n\024u" +
+      "pdate_resource_type\030\005 \001(\010\022\035\n\025update_defa" +
+      "ult_amount\030\006 \001(\010\022\033\n\023update_default_paid\030" +
+      "\007 \001(\010\"\203\001\n\021SubscriptionAddon\022\014\n\004uuid\030\001 \001(" +
+      "\t\022\031\n\005addon\030\002 \001(\0132\n.qms.Addon\022\'\n\014subscrip" +
+      "tion\030\003 \001(\0132\021.qms.Subscription\022\016\n\006amount\030" +
+      "\004 \001(\002\022\014\n\004paid\030\005 \001(\010\"\262\002\n\036UpdateSubscripti" +
+      "onAddonRequest\022\036\n\006header\030\001 \001(\0132\016.header." +
+      "Header\022F\n\022subscription_addon\030\002 \001(\0132\026.qms" +
+      ".SubscriptionAddonR\022subscription_addon\022(" +
+      "\n\017update_addon_id\030\003 \001(\010R\017update_addon_id" +
+      "\0226\n\026update_subscription_id\030\004 \001(\010R\026update" +
+      "_subscription_id\022$\n\rupdate_amount\030\005 \001(\010R" +
+      "\rupdate_amount\022 \n\013update_paid\030\006 \001(\010R\013upd" +
+      "ate_paid\"\252\001\n\031SubscriptionAddonResponse\022\036" +
+      "\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005error\030" +
+      "\002 \001(\0132\026.svcerror.ServiceError\022F\n\022subscri" +
+      "ption_addon\030\003 \001(\0132\026.qms.SubscriptionAddo" +
+      "nR\022subscription_addon\"\260\001\n\035SubscriptionAd" +
+      "donListResponse\022\036\n\006header\030\001 \001(\0132\016.header" +
+      ".Header\022%\n\005error\030\002 \001(\0132\026.svcerror.Servic" +
+      "eError\022H\n\023subscription_addons\030\003 \003(\0132\026.qm" +
+      "s.SubscriptionAddonR\023subscription_addons" +
+      "BO\n\030org.cyverse.de.protobufsB\021QMSAddonPr" +
+      "otobufsP\001Z\036github.com/cyverse-de/p/go/qm" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -128,65 +128,65 @@ public final class QMSAddonProtobufs {
           org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSSubscriptionProtobufs.getDescriptor(),
         });
-    internal_static_debuff_Addon_descriptor =
+    internal_static_qms_Addon_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_Addon_fieldAccessorTable = new
+    internal_static_qms_Addon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Addon_descriptor,
+        internal_static_qms_Addon_descriptor,
         new java.lang.String[] { "Uuid", "Name", "Description", "ResourceType", "DefaultAmount", "DefaultPaid", });
-    internal_static_debuff_AddonResponse_descriptor =
+    internal_static_qms_AddonResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_debuff_AddonResponse_fieldAccessorTable = new
+    internal_static_qms_AddonResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AddonResponse_descriptor,
+        internal_static_qms_AddonResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "Addon", });
-    internal_static_debuff_AddonListResponse_descriptor =
+    internal_static_qms_AddonListResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_debuff_AddonListResponse_fieldAccessorTable = new
+    internal_static_qms_AddonListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AddonListResponse_descriptor,
+        internal_static_qms_AddonListResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "Addons", });
-    internal_static_debuff_AddAddonRequest_descriptor =
+    internal_static_qms_AddAddonRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_debuff_AddAddonRequest_fieldAccessorTable = new
+    internal_static_qms_AddAddonRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AddAddonRequest_descriptor,
+        internal_static_qms_AddAddonRequest_descriptor,
         new java.lang.String[] { "Header", "Addon", });
-    internal_static_debuff_AddonLookupRequest_descriptor =
+    internal_static_qms_AddonLookupRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_debuff_AddonLookupRequest_fieldAccessorTable = new
+    internal_static_qms_AddonLookupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AddonLookupRequest_descriptor,
+        internal_static_qms_AddonLookupRequest_descriptor,
         new java.lang.String[] { "Header", "Uuid", "Name", "Addon", });
-    internal_static_debuff_UpdateAddonRequest_descriptor =
+    internal_static_qms_UpdateAddonRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_debuff_UpdateAddonRequest_fieldAccessorTable = new
+    internal_static_qms_UpdateAddonRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_UpdateAddonRequest_descriptor,
+        internal_static_qms_UpdateAddonRequest_descriptor,
         new java.lang.String[] { "Header", "Addon", "UpdateName", "UpdateDescription", "UpdateResourceType", "UpdateDefaultAmount", "UpdateDefaultPaid", });
-    internal_static_debuff_SubscriptionAddon_descriptor =
+    internal_static_qms_SubscriptionAddon_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_debuff_SubscriptionAddon_fieldAccessorTable = new
+    internal_static_qms_SubscriptionAddon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_SubscriptionAddon_descriptor,
+        internal_static_qms_SubscriptionAddon_descriptor,
         new java.lang.String[] { "Uuid", "Addon", "Subscription", "Amount", "Paid", });
-    internal_static_debuff_UpdateSubscriptionAddonRequest_descriptor =
+    internal_static_qms_UpdateSubscriptionAddonRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_debuff_UpdateSubscriptionAddonRequest_fieldAccessorTable = new
+    internal_static_qms_UpdateSubscriptionAddonRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_UpdateSubscriptionAddonRequest_descriptor,
+        internal_static_qms_UpdateSubscriptionAddonRequest_descriptor,
         new java.lang.String[] { "Header", "SubscriptionAddon", "UpdateAddonId", "UpdateSubscriptionId", "UpdateAmount", "UpdatePaid", });
-    internal_static_debuff_SubscriptionAddonResponse_descriptor =
+    internal_static_qms_SubscriptionAddonResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_debuff_SubscriptionAddonResponse_fieldAccessorTable = new
+    internal_static_qms_SubscriptionAddonResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_SubscriptionAddonResponse_descriptor,
+        internal_static_qms_SubscriptionAddonResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "SubscriptionAddon", });
-    internal_static_debuff_SubscriptionAddonListResponse_descriptor =
+    internal_static_qms_SubscriptionAddonListResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_debuff_SubscriptionAddonListResponse_fieldAccessorTable = new
+    internal_static_qms_SubscriptionAddonListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_SubscriptionAddonListResponse_descriptor,
+        internal_static_qms_SubscriptionAddonListResponse_descriptor,
         new java.lang.String[] { "Header", "Error", "SubscriptionAddons", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

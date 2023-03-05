@@ -4,11 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code debuff.Header}
+ * Protobuf type {@code header.Header}
  */
 public final class Header extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.Header)
+    // @@protoc_insertion_point(message_implements:header.Header)
     HeaderOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Header.newBuilder() to construct.
@@ -32,7 +32,7 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_descriptor;
+    return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -50,13 +50,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_fieldAccessorTable
+    return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.Header.class, org.cyverse.de.protobufs.Header.Builder.class);
   }
 
   public interface ValueOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:debuff.Header.Value)
+      // @@protoc_insertion_point(interface_extends:header.Header.Value)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -85,11 +85,11 @@ private static final long serialVersionUID = 0L;
         getValueBytes(int index);
   }
   /**
-   * Protobuf type {@code debuff.Header.Value}
+   * Protobuf type {@code header.Header.Value}
    */
   public static final class Value extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:debuff.Header.Value)
+      // @@protoc_insertion_point(message_implements:header.Header.Value)
       ValueOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Value.newBuilder() to construct.
@@ -114,13 +114,13 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_Value_descriptor;
+      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_Value_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_Value_fieldAccessorTable
+      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_Value_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Header.Value.class, org.cyverse.de.protobufs.Header.Value.Builder.class);
     }
@@ -323,21 +323,21 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code debuff.Header.Value}
+     * Protobuf type {@code header.Header.Value}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:debuff.Header.Value)
+        // @@protoc_insertion_point(builder_implements:header.Header.Value)
         org.cyverse.de.protobufs.Header.ValueOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_Value_descriptor;
+        return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_Value_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_Value_fieldAccessorTable
+        return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_Value_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.cyverse.de.protobufs.Header.Value.class, org.cyverse.de.protobufs.Header.Value.Builder.class);
       }
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_Value_descriptor;
+        return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_Value_descriptor;
       }
 
       @java.lang.Override
@@ -621,10 +621,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:debuff.Header.Value)
+      // @@protoc_insertion_point(builder_scope:header.Header.Value)
     }
 
-    // @@protoc_insertion_point(class_scope:debuff.Header.Value)
+    // @@protoc_insertion_point(class_scope:header.Header.Value)
     private static final org.cyverse.de.protobufs.Header.Value DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Header.Value();
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, org.cyverse.de.protobufs.Header.Value> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, org.cyverse.de.protobufs.Header.Value>newDefaultInstance(
-                org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_MapEntry_descriptor, 
+                org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_MapEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
     return internalGetMap().getMap().size();
   }
   /**
-   * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+   * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
    */
   @java.lang.Override
   public boolean containsMap(
@@ -716,14 +716,14 @@ private static final long serialVersionUID = 0L;
     return getMapMap();
   }
   /**
-   * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+   * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
    */
   @java.lang.Override
   public java.util.Map<java.lang.String, org.cyverse.de.protobufs.Header.Value> getMapMap() {
     return internalGetMap().getMap();
   }
   /**
-   * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+   * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
    */
   @java.lang.Override
   public /* nullable */
@@ -737,7 +737,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+   * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.Header.Value getMapOrThrow(
@@ -918,15 +918,15 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
     return builder;
   }
   /**
-   * Protobuf type {@code debuff.Header}
+   * Protobuf type {@code header.Header}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.Header)
+      // @@protoc_insertion_point(builder_implements:header.Header)
       org.cyverse.de.protobufs.HeaderOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_descriptor;
+      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -954,7 +954,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_fieldAccessorTable
+      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.Header.class, org.cyverse.de.protobufs.Header.Builder.class);
     }
@@ -980,7 +980,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_debuff_Header_descriptor;
+      return org.cyverse.de.protobufs.HeaderProtobufs.internal_static_header_Header_descriptor;
     }
 
     @java.lang.Override
@@ -1139,7 +1139,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
       return internalGetMap().getMap().size();
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     @java.lang.Override
     public boolean containsMap(
@@ -1156,14 +1156,14 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
       return getMapMap();
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     @java.lang.Override
     public java.util.Map<java.lang.String, org.cyverse.de.protobufs.Header.Value> getMapMap() {
       return internalGetMap().getMap();
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     @java.lang.Override
     public /* nullable */
@@ -1177,7 +1177,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.Header.Value getMapOrThrow(
@@ -1197,7 +1197,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
       return this;
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     public Builder removeMap(
         java.lang.String key) {
@@ -1216,7 +1216,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
       return internalGetMutableMap().getMutableMap();
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     public Builder putMap(
         java.lang.String key,
@@ -1229,7 +1229,7 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
       return this;
     }
     /**
-     * <code>map&lt;string, .debuff.Header.Value&gt; map = 1;</code>
+     * <code>map&lt;string, .header.Header.Value&gt; map = 1;</code>
      */
     public Builder putAllMap(
         java.util.Map<java.lang.String, org.cyverse.de.protobufs.Header.Value> values) {
@@ -1251,10 +1251,10 @@ org.cyverse.de.protobufs.Header.Value defaultValue) {
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.Header)
+    // @@protoc_insertion_point(builder_scope:header.Header)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.Header)
+  // @@protoc_insertion_point(class_scope:header.Header)
   private static final org.cyverse.de.protobufs.Header DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Header();

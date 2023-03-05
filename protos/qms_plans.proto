@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package qms;
+
 import "header.proto";
 import "svcerror.proto";
 import "qms_resource_types.proto";
@@ -9,8 +11,6 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSPlansProtobufs";
-
-package debuff;
 
 /**
  * Represents a default quota value used in plans. Can be overridden on a
@@ -33,10 +33,10 @@ message QuotaDefault {
  */
 message QuotaDefaultResponse {
     // Can container telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // Contains error info from the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The quota default object returned by the request handler.
     QuotaDefault quota_default = 3 [json_name = "quota_default"];
@@ -48,10 +48,10 @@ message QuotaDefaultResponse {
  */
 message QuotaDefaultList {
     // Can contain telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // Contains error info from the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The list of quota default objkects returned by the request handler.
     repeated QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];
@@ -79,10 +79,10 @@ message Plan {
  */
 message PlanResponse {
     // Contains telemtry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // Contains error data returned by the request handler.
-    ServiceError error  = 2;
+    svcerror.ServiceError error  = 2;
 
     // The plan returned by the request handler.
     Plan plan = 3;
@@ -93,10 +93,10 @@ message PlanResponse {
  */
 message PlanList {
     // Contains telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // Contains error data returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // A list of plans returned by the request handler.
     repeated Plan plans = 3;
@@ -107,7 +107,7 @@ message PlanList {
  */
 message PlanRequest {
     // Contains telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // The unique identifier of the plan being requested.
     string plan_id = 2 [json_name = "plan_id"];
@@ -118,7 +118,7 @@ message PlanRequest {
  */
 message AddPlanRequest {
     // Contains telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // The plan to add to the system.
     Plan plan = 2;
@@ -129,7 +129,7 @@ message AddPlanRequest {
  */
 message AddPlanQuotaDefaultRequest {
     // Contains telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // The name of the plan to add the quota default to.
     string plan_name = 2 [json_name = "plan_name"];

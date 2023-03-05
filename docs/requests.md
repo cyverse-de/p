@@ -4,13 +4,13 @@
 ## Table of Contents
 
 - [requests.proto](#requests-proto)
-    - [AssociateByUUIDs](#debuff-AssociateByUUIDs)
-    - [ByUUID](#debuff-ByUUID)
-    - [ByUUIDAndUserID](#debuff-ByUUIDAndUserID)
-    - [ByUUIDAndUsername](#debuff-ByUUIDAndUsername)
-    - [ByUserID](#debuff-ByUserID)
-    - [ByUsername](#debuff-ByUsername)
-    - [NoParams](#debuff-NoParams)
+    - [AssociateByUUIDs](#requests-AssociateByUUIDs)
+    - [ByUUID](#requests-ByUUID)
+    - [ByUUIDAndUserID](#requests-ByUUIDAndUserID)
+    - [ByUUIDAndUsername](#requests-ByUUIDAndUsername)
+    - [ByUserID](#requests-ByUserID)
+    - [ByUsername](#requests-ByUsername)
+    - [NoParams](#requests-NoParams)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -23,7 +23,7 @@
 
 
 
-<a name="debuff-AssociateByUUIDs"></a>
+<a name="requests-AssociateByUUIDs"></a>
 
 ### AssociateByUUIDs
 Request that two resources be associated.
@@ -31,7 +31,7 @@ Request that two resources be associated.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information. |
+| header | [header.Header](#header-Header) |  | Contains telemetry information. |
 | parent_uuid | [string](#string) |  | The UUID of the parent/owner/primary resource. |
 | child_uuid | [string](#string) |  | The UUID of the child/object/secondary resource. |
 
@@ -40,7 +40,7 @@ Request that two resources be associated.
 
 
 
-<a name="debuff-ByUUID"></a>
+<a name="requests-ByUUID"></a>
 
 ### ByUUID
 Request a resource by its UUID.
@@ -48,7 +48,7 @@ Request a resource by its UUID.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 | uuid | [string](#string) |  | The UUID of the resource being requested. |
 
 
@@ -56,7 +56,7 @@ Request a resource by its UUID.
 
 
 
-<a name="debuff-ByUUIDAndUserID"></a>
+<a name="requests-ByUUIDAndUserID"></a>
 
 ### ByUUIDAndUserID
 Request a resource by its UUID and a user&#39;s UUID. Useful when the user&#39;s 
@@ -65,7 +65,7 @@ access to the resource must be verified.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 | uuid | [string](#string) |  | The UUID of the resource being requested |
 | user_id | [string](#string) |  | The user ID of the user associated with the request. |
 
@@ -74,7 +74,7 @@ access to the resource must be verified.
 
 
 
-<a name="debuff-ByUUIDAndUsername"></a>
+<a name="requests-ByUUIDAndUsername"></a>
 
 ### ByUUIDAndUsername
 Request a resource by its UUID and a username. Useful in situations where a
@@ -84,7 +84,7 @@ request handler logic.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 | uuid | [string](#string) |  | The UUID of the resource being requested |
 | username | [string](#string) |  | The username associated with the request. |
 
@@ -93,7 +93,7 @@ request handler logic.
 
 
 
-<a name="debuff-ByUserID"></a>
+<a name="requests-ByUserID"></a>
 
 ### ByUserID
 Request a resource by the user ID of a user.
@@ -101,7 +101,7 @@ Request a resource by the user ID of a user.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 | user_id | [string](#string) |  |  |
 
 
@@ -109,7 +109,7 @@ Request a resource by the user ID of a user.
 
 
 
-<a name="debuff-ByUsername"></a>
+<a name="requests-ByUsername"></a>
 
 ### ByUsername
 Request a resource by the username of a user.
@@ -117,7 +117,7 @@ Request a resource by the username of a user.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 | username | [string](#string) |  |  |
 
 
@@ -125,7 +125,7 @@ Request a resource by the username of a user.
 
 
 
-<a name="debuff-NoParams"></a>
+<a name="requests-NoParams"></a>
 
 ### NoParams
 Send a message that does not request any parameters. Common for triggering
@@ -134,7 +134,7 @@ side-effects or for retrieving lists of resources as an administrator.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  | Contains telemetry information |
+| header | [header.Header](#header-Header) |  | Contains telemetry information |
 
 
 

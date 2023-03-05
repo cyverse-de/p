@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package user;
+
 import "google/protobuf/timestamp.proto";
 import "header.proto";
 import "svcerror.proto";
@@ -9,8 +11,6 @@ option go_package = "github.com/cyverse-de/p/go/user";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "UserProtobufs";
-
-package debuff;
 
 /**
  * A user's information.
@@ -42,8 +42,8 @@ message User {
     repeated Login logins = 4;
     uint32 login_count = 7;
     SavedSearches saved_searches = 8;
-    Header header = 9;
-    ServiceError error = 10;
+    header.Header header = 9;
+    svcerror.ServiceError error = 10;
 
     
 }

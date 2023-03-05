@@ -9,11 +9,11 @@ package org.cyverse.de.protobufs;
  * A request for user information.
  * </pre>
  *
- * Protobuf type {@code debuff.UserLookupRequest}
+ * Protobuf type {@code user_requests.UserLookupRequest}
  */
 public final class UserLookupRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.UserLookupRequest)
+    // @@protoc_insertion_point(message_implements:user_requests.UserLookupRequest)
     UserLookupRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UserLookupRequest.newBuilder() to construct.
@@ -37,13 +37,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_debuff_UserLookupRequest_descriptor;
+    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_UserLookupRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_debuff_UserLookupRequest_fieldAccessorTable
+    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_UserLookupRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.UserLookupRequest.class, org.cyverse.de.protobufs.UserLookupRequest.Builder.class);
   }
@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 10;</code>
+   * <code>.header.Header header = 10;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -341,7 +341,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 10;</code>
+   * <code>.header.Header header = 10;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 10;</code>
+   * <code>.header.Header header = 10;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
@@ -635,21 +635,21 @@ private static final long serialVersionUID = 0L;
    * A request for user information.
    * </pre>
    *
-   * Protobuf type {@code debuff.UserLookupRequest}
+   * Protobuf type {@code user_requests.UserLookupRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.UserLookupRequest)
+      // @@protoc_insertion_point(builder_implements:user_requests.UserLookupRequest)
       org.cyverse.de.protobufs.UserLookupRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_debuff_UserLookupRequest_descriptor;
+      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_UserLookupRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_debuff_UserLookupRequest_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_UserLookupRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.UserLookupRequest.class, org.cyverse.de.protobufs.UserLookupRequest.Builder.class);
     }
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_debuff_UserLookupRequest_descriptor;
+      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_UserLookupRequest_descriptor;
     }
 
     @java.lang.Override
@@ -1441,7 +1441,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -1452,7 +1452,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      * @return The header.
      */
     public org.cyverse.de.protobufs.Header getHeader() {
@@ -1467,7 +1467,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     public Builder setHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -1487,7 +1487,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     public Builder setHeader(
         org.cyverse.de.protobufs.Header.Builder builderForValue) {
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
       if (headerBuilder_ == null) {
@@ -1528,7 +1528,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     public Builder clearHeader() {
       bitField0_ = (bitField0_ & ~0x00000100);
@@ -1545,7 +1545,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
       bitField0_ |= 0x00000100;
@@ -1557,7 +1557,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
       if (headerBuilder_ != null) {
@@ -1572,7 +1572,7 @@ private static final long serialVersionUID = 0L;
      * Contains telemetry information
      * </pre>
      *
-     * <code>.debuff.Header header = 10;</code>
+     * <code>.header.Header header = 10;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
@@ -1600,10 +1600,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.UserLookupRequest)
+    // @@protoc_insertion_point(builder_scope:user_requests.UserLookupRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.UserLookupRequest)
+  // @@protoc_insertion_point(class_scope:user_requests.UserLookupRequest)
   private static final org.cyverse.de.protobufs.UserLookupRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.UserLookupRequest();

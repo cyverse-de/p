@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface InteractiveAppsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.InteractiveApps)
+    // @@protoc_insertion_point(interface_extends:analysis.InteractiveApps)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -140,17 +140,17 @@ public interface InteractiveAppsOrBuilder extends
       getBackendUrlBytes();
 
   /**
-   * <code>.debuff.Header header = 12;</code>
+   * <code>.header.Header header = 12;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.debuff.Header header = 12;</code>
+   * <code>.header.Header header = 12;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.debuff.Header header = 12;</code>
+   * <code>.header.Header header = 12;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }

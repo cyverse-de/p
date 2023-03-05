@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package qms;
+
 import "header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/qms";
@@ -8,14 +10,12 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSRequestProtobufs";
 
-package debuff;
-
 /**
  * A request for all of a user's current resource type overages.
  */
 message AllUserOveragesRequest {
     // Contains telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // The user's username in the QMS system.
     string username = 2;
@@ -26,7 +26,7 @@ message AllUserOveragesRequest {
  */
 message UserResourceOveragesRequest {
     // Contains telemetry data.
-    Header header = 1;
+    header.Header header = 1;
 
     // A user's username.
     string username = 2;
@@ -40,7 +40,7 @@ message UserResourceOveragesRequest {
  */
 message IsOverageRequest {
     // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // A username.
     string username = 2;
@@ -55,7 +55,7 @@ message IsOverageRequest {
  */
 message AddUsage {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     string username = 2;
     string resource_name = 3 [json_name = "resource_name"];
 
@@ -69,23 +69,23 @@ message AddUsage {
 
 message GetUsages {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     string username = 2;
 }
 
 message RequestByUsername {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     string username = 2;
 }
 
 message RequestByUserID {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
     string user_id = 2 [json_name = "user_id"];
 }
 
 message NoParamsRequest {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 }

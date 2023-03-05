@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface AddPlanRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.AddPlanRequest)
+    // @@protoc_insertion_point(interface_extends:qms.AddPlanRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface AddPlanRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface AddPlanRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface AddPlanRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface AddPlanRequestOrBuilder extends
    * The plan to add to the system.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 2;</code>
+   * <code>.qms.Plan plan = 2;</code>
    * @return Whether the plan field is set.
    */
   boolean hasPlan();
@@ -48,7 +48,7 @@ public interface AddPlanRequestOrBuilder extends
    * The plan to add to the system.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 2;</code>
+   * <code>.qms.Plan plan = 2;</code>
    * @return The plan.
    */
   org.cyverse.de.protobufs.Plan getPlan();
@@ -57,7 +57,7 @@ public interface AddPlanRequestOrBuilder extends
    * The plan to add to the system.
    * </pre>
    *
-   * <code>.debuff.Plan plan = 2;</code>
+   * <code>.qms.Plan plan = 2;</code>
    */
   org.cyverse.de.protobufs.PlanOrBuilder getPlanOrBuilder();
 }

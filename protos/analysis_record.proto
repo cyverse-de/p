@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package analysis;
+
 import "header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/analysis";
@@ -7,8 +9,6 @@ option go_package = "github.com/cyverse-de/p/go/analysis";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisRecordProtobufs";
-
-package debuff;
 
 message AnalysisRecord {
     message BatchStatus {
@@ -18,7 +18,7 @@ message AnalysisRecord {
         int64 submitted = 4;
     }
 
-    Header header = 1;
+    header.Header header = 1;
     string id = 2;
     string description = 3;
     string name = 4;

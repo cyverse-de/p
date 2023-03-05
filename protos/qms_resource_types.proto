@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package qms;
+
 import "header.proto";
 import "svcerror.proto";
 
@@ -8,8 +10,6 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSResourceTypeProtobufs";
-
-package debuff;
 
 /**
  * Representation of a resource type.
@@ -30,10 +30,10 @@ message ResourceType {
  */
 message ResourceTypeResponse {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The resource type returned by the request handler.
     ResourceType resource_type  = 3 [json_name = "resource_type"];
@@ -45,10 +45,10 @@ message ResourceTypeResponse {
  */
 message ResourceTypeList {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // A list of resource types returned by the request handler.
     repeated ResourceType resource_types = 3 [json_name = "resource_types"];

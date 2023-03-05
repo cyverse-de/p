@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface ServiceErrorOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.ServiceError)
+    // @@protoc_insertion_point(interface_extends:svcerror.ServiceError)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface ServiceErrorOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface ServiceErrorOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface ServiceErrorOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface ServiceErrorOrBuilder extends
    * The numeric error code from the error code enum.
    * </pre>
    *
-   * <code>.debuff.ErrorCode error_code = 2 [json_name = "error_code"];</code>
+   * <code>.svcerror.ErrorCode error_code = 2 [json_name = "error_code"];</code>
    * @return The enum numeric value on the wire for errorCode.
    */
   int getErrorCodeValue();
@@ -48,7 +48,7 @@ public interface ServiceErrorOrBuilder extends
    * The numeric error code from the error code enum.
    * </pre>
    *
-   * <code>.debuff.ErrorCode error_code = 2 [json_name = "error_code"];</code>
+   * <code>.svcerror.ErrorCode error_code = 2 [json_name = "error_code"];</code>
    * @return The errorCode.
    */
   org.cyverse.de.protobufs.ErrorCode getErrorCode();

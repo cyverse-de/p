@@ -4,51 +4,51 @@
 package org.cyverse.de.protobufs;
 
 public interface AnalysisStatusOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.AnalysisStatus)
+    // @@protoc_insertion_point(interface_extends:analysis.AnalysisStatus)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
   /**
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
   /**
-   * <code>.debuff.AnalysisSubmission job = 3;</code>
+   * <code>.analysis.AnalysisSubmission job = 3;</code>
    * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
-   * <code>.debuff.AnalysisSubmission job = 3;</code>
+   * <code>.analysis.AnalysisSubmission job = 3;</code>
    * @return The job.
    */
   org.cyverse.de.protobufs.AnalysisSubmission getJob();
   /**
-   * <code>.debuff.AnalysisSubmission job = 3;</code>
+   * <code>.analysis.AnalysisSubmission job = 3;</code>
    */
   org.cyverse.de.protobufs.AnalysisSubmissionOrBuilder getJobOrBuilder();
 

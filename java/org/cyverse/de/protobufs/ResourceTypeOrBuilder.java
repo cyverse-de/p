@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface ResourceTypeOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.ResourceType)
+    // @@protoc_insertion_point(interface_extends:qms.ResourceType)
     com.google.protobuf.MessageOrBuilder {
 
   /**

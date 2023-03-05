@@ -4,40 +4,40 @@
 ## Table of Contents
 
 - [analysis_container.proto](#analysis_container-proto)
-    - [Container](#debuff-Container)
-    - [Container.Device](#debuff-Container-Device)
-    - [Container.Image](#debuff-Container-Image)
-    - [Container.Port](#debuff-Container-Port)
-    - [Container.Volume](#debuff-Container-Volume)
-    - [Container.VolumesFrom](#debuff-Container-VolumesFrom)
-    - [InteractiveApps](#debuff-InteractiveApps)
+    - [Container](#analysis-Container)
+    - [Container.Device](#analysis-Container-Device)
+    - [Container.Image](#analysis-Container-Image)
+    - [Container.Port](#analysis-Container-Port)
+    - [Container.Volume](#analysis-Container-Volume)
+    - [Container.VolumesFrom](#analysis-Container-VolumesFrom)
+    - [InteractiveApps](#analysis-InteractiveApps)
   
 - [analysis_record.proto](#analysis_record-proto)
-    - [AnalysisRecord](#debuff-AnalysisRecord)
-    - [AnalysisRecord.BatchStatus](#debuff-AnalysisRecord-BatchStatus)
+    - [AnalysisRecord](#analysis-AnalysisRecord)
+    - [AnalysisRecord.BatchStatus](#analysis-AnalysisRecord-BatchStatus)
   
 - [analysis_requests.proto](#analysis_requests-proto)
-    - [AnalysisRecordList](#debuff-AnalysisRecordList)
-    - [AnalysisRecordLookupRequest](#debuff-AnalysisRecordLookupRequest)
-    - [AnalysisRecordResponse](#debuff-AnalysisRecordResponse)
-    - [AnalysisRecordResponse.StatusCountRecord](#debuff-AnalysisRecordResponse-StatusCountRecord)
+    - [AnalysisRecordList](#analysis-AnalysisRecordList)
+    - [AnalysisRecordLookupRequest](#analysis-AnalysisRecordLookupRequest)
+    - [AnalysisRecordResponse](#analysis-AnalysisRecordResponse)
+    - [AnalysisRecordResponse.StatusCountRecord](#analysis-AnalysisRecordResponse-StatusCountRecord)
   
 - [analysis_status.proto](#analysis_status-proto)
-    - [AnalysisStatus](#debuff-AnalysisStatus)
+    - [AnalysisStatus](#analysis-AnalysisStatus)
   
 - [analysis_submission.proto](#analysis_submission-proto)
-    - [AnalysisSubmission](#debuff-AnalysisSubmission)
-    - [Extra](#debuff-Extra)
-    - [FileMetadata](#debuff-FileMetadata)
-    - [HTCondorExtraInfo](#debuff-HTCondorExtraInfo)
-    - [Job](#debuff-Job)
-    - [Step](#debuff-Step)
-    - [Step.Component](#debuff-Step-Component)
-    - [Step.Config](#debuff-Step-Config)
-    - [Step.EnvironmentEntry](#debuff-Step-EnvironmentEntry)
-    - [Step.Input](#debuff-Step-Input)
-    - [Step.Output](#debuff-Step-Output)
-    - [Step.Param](#debuff-Step-Param)
+    - [AnalysisSubmission](#analysis-AnalysisSubmission)
+    - [Extra](#analysis-Extra)
+    - [FileMetadata](#analysis-FileMetadata)
+    - [HTCondorExtraInfo](#analysis-HTCondorExtraInfo)
+    - [Job](#analysis-Job)
+    - [Step](#analysis-Step)
+    - [Step.Component](#analysis-Step-Component)
+    - [Step.Config](#analysis-Step-Config)
+    - [Step.EnvironmentEntry](#analysis-Step-EnvironmentEntry)
+    - [Step.Input](#analysis-Step-Input)
+    - [Step.Output](#analysis-Step-Output)
+    - [Step.Param](#analysis-Step-Param)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -50,7 +50,7 @@
 
 
 
-<a name="debuff-Container"></a>
+<a name="analysis-Container"></a>
 
 ### Container
 
@@ -59,33 +59,33 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | id | [string](#string) |  |  |
-| volumes | [Container.Volume](#debuff-Container-Volume) | repeated |  |
-| devices | [Container.Device](#debuff-Container-Device) | repeated |  |
-| volumes_from | [Container.VolumesFrom](#debuff-Container-VolumesFrom) | repeated |  |
+| volumes | [Container.Volume](#analysis-Container-Volume) | repeated |  |
+| devices | [Container.Device](#analysis-Container-Device) | repeated |  |
+| volumes_from | [Container.VolumesFrom](#analysis-Container-VolumesFrom) | repeated |  |
 | name | [string](#string) |  |  |
 | network_mode | [string](#string) |  |  |
 | cpu_shares | [int64](#int64) |  |  |
-| interactive_apps | [InteractiveApps](#debuff-InteractiveApps) |  |  |
+| interactive_apps | [InteractiveApps](#analysis-InteractiveApps) |  |  |
 | memory_limit | [int64](#int64) |  |  |
 | min_memory_limit | [int64](#int64) |  |  |
 | max_cpu_cores | [float](#float) |  |  |
 | min_cpu_cores | [float](#float) |  |  |
 | min_disk_space | [int64](#int64) |  |  |
 | pids_limit | [int64](#int64) |  |  |
-| image | [Container.Image](#debuff-Container-Image) |  |  |
+| image | [Container.Image](#analysis-Container-Image) |  |  |
 | entry_point | [string](#string) |  |  |
 | working_dir | [string](#string) |  |  |
-| ports | [Container.Port](#debuff-Container-Port) | repeated |  |
+| ports | [Container.Port](#analysis-Container-Port) | repeated |  |
 | skip_tmp_mount | [bool](#bool) |  |  |
 | uid | [int32](#int32) |  |  |
-| header | [Header](#debuff-Header) |  |  |
+| header | [header.Header](#header-Header) |  |  |
 
 
 
 
 
 
-<a name="debuff-Container-Device"></a>
+<a name="analysis-Container-Device"></a>
 
 ### Container.Device
 
@@ -102,7 +102,7 @@
 
 
 
-<a name="debuff-Container-Image"></a>
+<a name="analysis-Container-Image"></a>
 
 ### Container.Image
 
@@ -122,7 +122,7 @@
 
 
 
-<a name="debuff-Container-Port"></a>
+<a name="analysis-Container-Port"></a>
 
 ### Container.Port
 
@@ -139,7 +139,7 @@
 
 
 
-<a name="debuff-Container-Volume"></a>
+<a name="analysis-Container-Volume"></a>
 
 ### Container.Volume
 
@@ -157,7 +157,7 @@
 
 
 
-<a name="debuff-Container-VolumesFrom"></a>
+<a name="analysis-Container-VolumesFrom"></a>
 
 ### Container.VolumesFrom
 
@@ -179,7 +179,7 @@
 
 
 
-<a name="debuff-InteractiveApps"></a>
+<a name="analysis-InteractiveApps"></a>
 
 ### InteractiveApps
 
@@ -198,7 +198,7 @@
 | websocket_port | [string](#string) |  |  |
 | websocket_proto | [string](#string) |  |  |
 | backend_url | [string](#string) |  |  |
-| header | [Header](#debuff-Header) |  |  |
+| header | [header.Header](#header-Header) |  |  |
 
 
 
@@ -221,7 +221,7 @@
 
 
 
-<a name="debuff-AnalysisRecord"></a>
+<a name="analysis-AnalysisRecord"></a>
 
 ### AnalysisRecord
 
@@ -229,14 +229,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  |  |
+| header | [header.Header](#header-Header) |  |  |
 | id | [string](#string) |  |  |
 | description | [string](#string) |  |  |
 | name | [string](#string) |  |  |
 | can_share | [bool](#bool) |  |  |
 | username | [string](#string) |  |  |
 | app_id | [string](#string) |  |  |
-| batch_status | [AnalysisRecord.BatchStatus](#debuff-AnalysisRecord-BatchStatus) |  |  |
+| batch_status | [AnalysisRecord.BatchStatus](#analysis-AnalysisRecord-BatchStatus) |  |  |
 | system_id | [string](#string) |  |  |
 | app_disabled | [bool](#bool) |  |  |
 | batch | [bool](#bool) |  |  |
@@ -254,7 +254,7 @@
 
 
 
-<a name="debuff-AnalysisRecord-BatchStatus"></a>
+<a name="analysis-AnalysisRecord-BatchStatus"></a>
 
 ### AnalysisRecord.BatchStatus
 
@@ -288,7 +288,7 @@
 
 
 
-<a name="debuff-AnalysisRecordList"></a>
+<a name="analysis-AnalysisRecordList"></a>
 
 ### AnalysisRecordList
 
@@ -296,16 +296,16 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  |  |
-| analyses | [AnalysisRecord](#debuff-AnalysisRecord) | repeated |  |
-| error | [ServiceError](#debuff-ServiceError) |  |  |
+| header | [header.Header](#header-Header) |  |  |
+| analyses | [AnalysisRecord](#analysis-AnalysisRecord) | repeated |  |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
 
 
 
 
 
 
-<a name="debuff-AnalysisRecordLookupRequest"></a>
+<a name="analysis-AnalysisRecordLookupRequest"></a>
 
 ### AnalysisRecordLookupRequest
 
@@ -317,7 +317,7 @@
 | external_id | [string](#string) |  |  |
 | user_id | [string](#string) |  |  |
 | username | [string](#string) |  |  |
-| header | [Header](#debuff-Header) |  |  |
+| header | [header.Header](#header-Header) |  |  |
 | requesting_user | [string](#string) |  |  |
 
 
@@ -325,7 +325,7 @@
 
 
 
-<a name="debuff-AnalysisRecordResponse"></a>
+<a name="analysis-AnalysisRecordResponse"></a>
 
 ### AnalysisRecordResponse
 
@@ -333,19 +333,19 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  |  |
-| analyses | [AnalysisRecord](#debuff-AnalysisRecord) | repeated |  |
+| header | [header.Header](#header-Header) |  |  |
+| analyses | [AnalysisRecord](#analysis-AnalysisRecord) | repeated |  |
 | timestamp | [string](#string) |  |  |
 | total | [int64](#int64) |  |  |
-| status_count | [AnalysisRecordResponse.StatusCountRecord](#debuff-AnalysisRecordResponse-StatusCountRecord) | repeated |  |
-| error | [ServiceError](#debuff-ServiceError) |  |  |
+| status_count | [AnalysisRecordResponse.StatusCountRecord](#analysis-AnalysisRecordResponse-StatusCountRecord) | repeated |  |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
 
 
 
 
 
 
-<a name="debuff-AnalysisRecordResponse-StatusCountRecord"></a>
+<a name="analysis-AnalysisRecordResponse-StatusCountRecord"></a>
 
 ### AnalysisRecordResponse.StatusCountRecord
 
@@ -377,7 +377,7 @@
 
 
 
-<a name="debuff-AnalysisStatus"></a>
+<a name="analysis-AnalysisStatus"></a>
 
 ### AnalysisStatus
 
@@ -385,9 +385,9 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [Header](#debuff-Header) |  |  |
-| error | [ServiceError](#debuff-ServiceError) |  |  |
-| job | [AnalysisSubmission](#debuff-AnalysisSubmission) |  |  |
+| header | [header.Header](#header-Header) |  |  |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
+| job | [AnalysisSubmission](#analysis-AnalysisSubmission) |  |  |
 | version | [int32](#int32) |  |  |
 | state | [string](#string) |  |  |
 | message | [string](#string) |  |  |
@@ -415,7 +415,7 @@
 
 
 
-<a name="debuff-AnalysisSubmission"></a>
+<a name="analysis-AnalysisSubmission"></a>
 
 ### AnalysisSubmission
 
@@ -436,12 +436,12 @@
 | date_completed | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
 | description | [string](#string) |  |  |
 | email | [string](#string) |  |  |
-| extra | [Extra](#debuff-Extra) |  | read all about it |
+| extra | [Extra](#analysis-Extra) |  | read all about it |
 | execution_target | [string](#string) |  |  |
 | exit_code | [int32](#int32) |  |  |
 | failure_count | [int64](#int64) |  |  |
 | failure_threshold | [int64](#int64) |  |  |
-| file_metadata | [FileMetadata](#debuff-FileMetadata) | repeated | The - is used instead of _ for backwards compatibility. |
+| file_metadata | [FileMetadata](#analysis-FileMetadata) | repeated | The - is used instead of _ for backwards compatibility. |
 | filter_files | [string](#string) | repeated |  |
 | group | [string](#string) |  |  |
 | input_path_list_file | [string](#string) |  |  |
@@ -458,7 +458,7 @@
 | request_type | [string](#string) |  |  |
 | run_on_nfs | [bool](#bool) |  | The - is on purpose. |
 | skip_parent_metadata | [bool](#bool) |  | The - is on purpose. |
-| steps | [Step](#debuff-Step) | repeated |  |
+| steps | [Step](#analysis-Step) | repeated |  |
 | submission_date | [string](#string) |  |  |
 | submitter | [string](#string) |  | Yup, the JSON name is completely different from the field name. |
 | type | [string](#string) |  |  |
@@ -467,14 +467,14 @@
 | user_home | [string](#string) |  |  |
 | wiki_url | [string](#string) |  |  |
 | config_file | [string](#string) |  |  |
-| header | [Header](#debuff-Header) |  |  |
+| header | [header.Header](#header-Header) |  |  |
 
 
 
 
 
 
-<a name="debuff-Extra"></a>
+<a name="analysis-Extra"></a>
 
 ### Extra
 
@@ -482,14 +482,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| ht_condor | [HTCondorExtraInfo](#debuff-HTCondorExtraInfo) |  |  |
+| ht_condor | [HTCondorExtraInfo](#analysis-HTCondorExtraInfo) |  |  |
 
 
 
 
 
 
-<a name="debuff-FileMetadata"></a>
+<a name="analysis-FileMetadata"></a>
 
 ### FileMetadata
 
@@ -506,7 +506,7 @@
 
 
 
-<a name="debuff-HTCondorExtraInfo"></a>
+<a name="analysis-HTCondorExtraInfo"></a>
 
 ### HTCondorExtraInfo
 
@@ -521,7 +521,7 @@
 
 
 
-<a name="debuff-Job"></a>
+<a name="analysis-Job"></a>
 
 ### Job
 Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying the Analysis definition into Job and deprecating it.
@@ -542,12 +542,12 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 | date_completed | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  |  |
 | description | [string](#string) |  |  |
 | email | [string](#string) |  |  |
-| extra | [Extra](#debuff-Extra) |  | read all about it |
+| extra | [Extra](#analysis-Extra) |  | read all about it |
 | execution_target | [string](#string) |  |  |
 | exit_code | [int32](#int32) |  |  |
 | failure_count | [int64](#int64) |  |  |
 | failure_threshold | [int64](#int64) |  |  |
-| file_metadata | [FileMetadata](#debuff-FileMetadata) | repeated | The - is used instead of _ for backwards compatibility. |
+| file_metadata | [FileMetadata](#analysis-FileMetadata) | repeated | The - is used instead of _ for backwards compatibility. |
 | filter_files | [string](#string) | repeated |  |
 | group | [string](#string) |  |  |
 | input_path_list_file | [string](#string) |  |  |
@@ -564,7 +564,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 | request_type | [string](#string) |  |  |
 | run_on_nfs | [bool](#bool) |  | The - is on purpose. |
 | skip_parent_metadata | [bool](#bool) |  | The - is on purpose. |
-| steps | [Step](#debuff-Step) | repeated |  |
+| steps | [Step](#analysis-Step) | repeated |  |
 | submission_date | [string](#string) |  |  |
 | submitter | [string](#string) |  | Yup, the JSON name is completely different from the field name. |
 | type | [string](#string) |  |  |
@@ -579,7 +579,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 
 
-<a name="debuff-Step"></a>
+<a name="analysis-Step"></a>
 
 ### Step
 
@@ -587,24 +587,24 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| component | [Step.Component](#debuff-Step-Component) |  |  |
-| config | [Step.Config](#debuff-Step-Config) |  |  |
+| component | [Step.Component](#analysis-Step-Component) |  |  |
+| config | [Step.Config](#analysis-Step-Config) |  |  |
 | type | [string](#string) |  |  |
 | stdin_path | [string](#string) |  |  |
 | stdout_path | [string](#string) |  |  |
 | stderr_path | [string](#string) |  |  |
 | log_file | [string](#string) |  |  |
-| environment | [Step.EnvironmentEntry](#debuff-Step-EnvironmentEntry) | repeated |  |
-| input | [Step.Input](#debuff-Step-Input) | repeated | It&#39;s really annoying, but this is singular for backwards compatibility. |
-| output | [Step.Output](#debuff-Step-Output) | repeated | It&#39;s really annoying, but this is singular for backwards compatibility. |
-| header | [Header](#debuff-Header) |  |  |
+| environment | [Step.EnvironmentEntry](#analysis-Step-EnvironmentEntry) | repeated |  |
+| input | [Step.Input](#analysis-Step-Input) | repeated | It&#39;s really annoying, but this is singular for backwards compatibility. |
+| output | [Step.Output](#analysis-Step-Output) | repeated | It&#39;s really annoying, but this is singular for backwards compatibility. |
+| header | [header.Header](#header-Header) |  |  |
 
 
 
 
 
 
-<a name="debuff-Step-Component"></a>
+<a name="analysis-Step-Component"></a>
 
 ### Step.Component
 
@@ -612,7 +612,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| container | [Container](#debuff-Container) |  |  |
+| container | [Container](#analysis-Container) |  |  |
 | type | [string](#string) |  |  |
 | name | [string](#string) |  |  |
 | location | [string](#string) |  |  |
@@ -626,7 +626,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 
 
-<a name="debuff-Step-Config"></a>
+<a name="analysis-Step-Config"></a>
 
 ### Step.Config
 
@@ -634,16 +634,16 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| params | [Step.Param](#debuff-Step-Param) | repeated |  |
-| inputs | [Step.Input](#debuff-Step-Input) | repeated | Keep it singular in the JSON for backwards-compatibility. |
-| outputs | [Step.Output](#debuff-Step-Output) | repeated | Keep it singular in the JSON for backwards-compatibility. |
+| params | [Step.Param](#analysis-Step-Param) | repeated |  |
+| inputs | [Step.Input](#analysis-Step-Input) | repeated | Keep it singular in the JSON for backwards-compatibility. |
+| outputs | [Step.Output](#analysis-Step-Output) | repeated | Keep it singular in the JSON for backwards-compatibility. |
 
 
 
 
 
 
-<a name="debuff-Step-EnvironmentEntry"></a>
+<a name="analysis-Step-EnvironmentEntry"></a>
 
 ### Step.EnvironmentEntry
 
@@ -659,7 +659,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 
 
-<a name="debuff-Step-Input"></a>
+<a name="analysis-Step-Input"></a>
 
 ### Step.Input
 
@@ -681,7 +681,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 
 
-<a name="debuff-Step-Output"></a>
+<a name="analysis-Step-Output"></a>
 
 ### Step.Output
 
@@ -701,7 +701,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 
 
 
-<a name="debuff-Step-Param"></a>
+<a name="analysis-Step-Param"></a>
 
 ### Step.Param
 

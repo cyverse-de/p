@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UpdateOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.Update)
+    // @@protoc_insertion_point(interface_extends:qms.Update)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -89,7 +89,7 @@ public interface UpdateOrBuilder extends
    * The type of operation being done.
    * </pre>
    *
-   * <code>.debuff.UpdateOperation operation = 5;</code>
+   * <code>.qms.UpdateOperation operation = 5;</code>
    * @return Whether the operation field is set.
    */
   boolean hasOperation();
@@ -98,7 +98,7 @@ public interface UpdateOrBuilder extends
    * The type of operation being done.
    * </pre>
    *
-   * <code>.debuff.UpdateOperation operation = 5;</code>
+   * <code>.qms.UpdateOperation operation = 5;</code>
    * @return The operation.
    */
   org.cyverse.de.protobufs.UpdateOperation getOperation();
@@ -107,7 +107,7 @@ public interface UpdateOrBuilder extends
    * The type of operation being done.
    * </pre>
    *
-   * <code>.debuff.UpdateOperation operation = 5;</code>
+   * <code>.qms.UpdateOperation operation = 5;</code>
    */
   org.cyverse.de.protobufs.UpdateOperationOrBuilder getOperationOrBuilder();
 
@@ -116,7 +116,7 @@ public interface UpdateOrBuilder extends
    * The resource type for the quota or usage being updated.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return Whether the resourceType field is set.
    */
   boolean hasResourceType();
@@ -125,7 +125,7 @@ public interface UpdateOrBuilder extends
    * The resource type for the quota or usage being updated.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    * @return The resourceType.
    */
   org.cyverse.de.protobufs.ResourceType getResourceType();
@@ -134,7 +134,7 @@ public interface UpdateOrBuilder extends
    * The resource type for the quota or usage being updated.
    * </pre>
    *
-   * <code>.debuff.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
+   * <code>.qms.ResourceType resource_type = 6 [json_name = "resource_type"];</code>
    */
   org.cyverse.de.protobufs.ResourceTypeOrBuilder getResourceTypeOrBuilder();
 
@@ -143,7 +143,7 @@ public interface UpdateOrBuilder extends
    * The user in the QMS system that the update is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 7;</code>
+   * <code>.qms.QMSUser user = 7;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
@@ -152,7 +152,7 @@ public interface UpdateOrBuilder extends
    * The user in the QMS system that the update is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 7;</code>
+   * <code>.qms.QMSUser user = 7;</code>
    * @return The user.
    */
   org.cyverse.de.protobufs.QMSUser getUser();
@@ -161,7 +161,7 @@ public interface UpdateOrBuilder extends
    * The user in the QMS system that the update is for.
    * </pre>
    *
-   * <code>.debuff.QMSUser user = 7;</code>
+   * <code>.qms.QMSUser user = 7;</code>
    */
   org.cyverse.de.protobufs.QMSUserOrBuilder getUserOrBuilder();
 }

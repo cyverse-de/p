@@ -15,10 +15,10 @@ public final class MonitoringHearbeat {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_Heartbeat_descriptor;
+    internal_static_monitoring_Heartbeat_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_Heartbeat_fieldAccessorTable;
+      internal_static_monitoring_Heartbeat_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -28,14 +28,14 @@ public final class MonitoringHearbeat {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032monitoring_heartbeat.proto\022\006debuff\032\014he" +
-      "ader.proto\032\016svcerror.proto\"|\n\tHeartbeat\022" +
-      "\036\n\006header\030\001 \001(\0132\016.debuff.Header\022#\n\005error" +
-      "\030\002 \001(\0132\024.debuff.ServiceError\022\014\n\004node\030\003 \001" +
-      "(\t\022\034\n\tdate_sent\030\004 \001(\tR\tdate_sentBW\n\030org." +
-      "cyverse.de.protobufsB\022MonitoringHearbeat" +
-      "P\001Z%github.com/cyverse-de/p/go/monitorin" +
-      "gb\006proto3"
+      "\n\032monitoring_heartbeat.proto\022\nmonitoring" +
+      "\032\014header.proto\032\016svcerror.proto\"~\n\tHeartb" +
+      "eat\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005e" +
+      "rror\030\002 \001(\0132\026.svcerror.ServiceError\022\014\n\004no" +
+      "de\030\003 \001(\t\022\034\n\tdate_sent\030\004 \001(\tR\tdate_sentBW" +
+      "\n\030org.cyverse.de.protobufsB\022MonitoringHe" +
+      "arbeatP\001Z%github.com/cyverse-de/p/go/mon" +
+      "itoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43,11 +43,11 @@ public final class MonitoringHearbeat {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
         });
-    internal_static_debuff_Heartbeat_descriptor =
+    internal_static_monitoring_Heartbeat_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_Heartbeat_fieldAccessorTable = new
+    internal_static_monitoring_Heartbeat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_Heartbeat_descriptor,
+        internal_static_monitoring_Heartbeat_descriptor,
         new java.lang.String[] { "Header", "Error", "Node", "DateSent", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

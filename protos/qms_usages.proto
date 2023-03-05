@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package qms;
+
 import "google/protobuf/timestamp.proto";
 
 import "header.proto";
@@ -11,8 +13,6 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSUsageProtobufs";
-
-package debuff;
 
 /**
  * A representation of how much a user has used a resource type.
@@ -48,10 +48,10 @@ message Usage {
  */
 message UsageResponse {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // Contains the usage info returned by the request handler.
     Usage usage = 3;
@@ -62,10 +62,10 @@ message UsageResponse {
  */
 message UsageList {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // A list of usages returned by the request handler.
     repeated Usage usages = 3;

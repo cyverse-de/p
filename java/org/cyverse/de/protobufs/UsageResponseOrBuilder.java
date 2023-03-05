@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface UsageResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.UsageResponse)
+    // @@protoc_insertion_point(interface_extends:qms.UsageResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface UsageResponseOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface UsageResponseOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface UsageResponseOrBuilder extends
    * Contains telemetry information
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
@@ -39,7 +39,7 @@ public interface UsageResponseOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
@@ -48,7 +48,7 @@ public interface UsageResponseOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
@@ -57,7 +57,7 @@ public interface UsageResponseOrBuilder extends
    * Error information returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.ServiceError error = 2;</code>
+   * <code>.svcerror.ServiceError error = 2;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 
@@ -66,7 +66,7 @@ public interface UsageResponseOrBuilder extends
    * Contains the usage info returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.Usage usage = 3;</code>
+   * <code>.qms.Usage usage = 3;</code>
    * @return Whether the usage field is set.
    */
   boolean hasUsage();
@@ -75,7 +75,7 @@ public interface UsageResponseOrBuilder extends
    * Contains the usage info returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.Usage usage = 3;</code>
+   * <code>.qms.Usage usage = 3;</code>
    * @return The usage.
    */
   org.cyverse.de.protobufs.Usage getUsage();
@@ -84,7 +84,7 @@ public interface UsageResponseOrBuilder extends
    * Contains the usage info returned by the request handler.
    * </pre>
    *
-   * <code>.debuff.Usage usage = 3;</code>
+   * <code>.qms.Usage usage = 3;</code>
    */
   org.cyverse.de.protobufs.UsageOrBuilder getUsageOrBuilder();
 }

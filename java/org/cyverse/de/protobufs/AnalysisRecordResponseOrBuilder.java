@@ -4,44 +4,44 @@
 package org.cyverse.de.protobufs;
 
 public interface AnalysisRecordResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.AnalysisRecordResponse)
+    // @@protoc_insertion_point(interface_extends:analysis.AnalysisRecordResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
   /**
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
-   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
    */
   java.util.List<org.cyverse.de.protobufs.AnalysisRecord> 
       getAnalysesList();
   /**
-   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
    */
   org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index);
   /**
-   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
    */
   int getAnalysesCount();
   /**
-   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
       getAnalysesOrBuilderList();
   /**
-   * <code>repeated .debuff.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
    */
   org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
       int index);
@@ -65,41 +65,41 @@ public interface AnalysisRecordResponseOrBuilder extends
   long getTotal();
 
   /**
-   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .analysis.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   java.util.List<org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord> 
       getStatusCountList();
   /**
-   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .analysis.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecord getStatusCount(int index);
   /**
-   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .analysis.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   int getStatusCountCount();
   /**
-   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .analysis.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder> 
       getStatusCountOrBuilderList();
   /**
-   * <code>repeated .debuff.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
+   * <code>repeated .analysis.AnalysisRecordResponse.StatusCountRecord status_count = 5 [json_name = "status-count"];</code>
    */
   org.cyverse.de.protobufs.AnalysisRecordResponse.StatusCountRecordOrBuilder getStatusCountOrBuilder(
       int index);
 
   /**
-   * <code>.debuff.ServiceError error = 6;</code>
+   * <code>.svcerror.ServiceError error = 6;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>.debuff.ServiceError error = 6;</code>
+   * <code>.svcerror.ServiceError error = 6;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.ServiceError getError();
   /**
-   * <code>.debuff.ServiceError error = 6;</code>
+   * <code>.svcerror.ServiceError error = 6;</code>
    */
   org.cyverse.de.protobufs.ServiceErrorOrBuilder getErrorOrBuilder();
 }

@@ -4,7 +4,7 @@
 package org.cyverse.de.protobufs;
 
 public interface PlanRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:debuff.PlanRequest)
+    // @@protoc_insertion_point(interface_extends:qms.PlanRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,7 +12,7 @@ public interface PlanRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface PlanRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    * @return The header.
    */
   org.cyverse.de.protobufs.Header getHeader();
@@ -30,7 +30,7 @@ public interface PlanRequestOrBuilder extends
    * Contains telemetry data.
    * </pre>
    *
-   * <code>.debuff.Header header = 1;</code>
+   * <code>.header.Header header = 1;</code>
    */
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 

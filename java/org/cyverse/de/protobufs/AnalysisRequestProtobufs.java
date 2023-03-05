@@ -15,25 +15,25 @@ public final class AnalysisRequestProtobufs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisRecordLookupRequest_descriptor;
+    internal_static_analysis_AnalysisRecordLookupRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisRecordLookupRequest_fieldAccessorTable;
+      internal_static_analysis_AnalysisRecordLookupRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisRecordResponse_descriptor;
+    internal_static_analysis_AnalysisRecordResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisRecordResponse_fieldAccessorTable;
+      internal_static_analysis_AnalysisRecordResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_descriptor;
+    internal_static_analysis_AnalysisRecordResponse_StatusCountRecord_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable;
+      internal_static_analysis_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_debuff_AnalysisRecordList_descriptor;
+    internal_static_analysis_AnalysisRecordList_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_debuff_AnalysisRecordList_fieldAccessorTable;
+      internal_static_analysis_AnalysisRecordList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -43,27 +43,27 @@ public final class AnalysisRequestProtobufs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027analysis_requests.proto\022\006debuff\032\014heade" +
-      "r.proto\032\025analysis_record.proto\032\016svcerror" +
-      ".proto\"\271\001\n\033AnalysisRecordLookupRequest\022\025" +
-      "\n\013analysis_id\030\001 \001(\tH\000\022\025\n\013external_id\030\002 \001" +
-      "(\tH\000\022\021\n\007user_id\030\003 \001(\tH\000\022\022\n\010username\030\004 \001(" +
-      "\tH\000\022\036\n\006header\030\005 \001(\0132\016.debuff.Header\022\027\n\017r" +
-      "equesting_user\030\006 \001(\tB\014\n\nlookup_ids\"\263\002\n\026A" +
-      "nalysisRecordResponse\022\036\n\006header\030\001 \001(\0132\016." +
-      "debuff.Header\022(\n\010analyses\030\002 \003(\0132\026.debuff" +
-      ".AnalysisRecord\022\021\n\ttimestamp\030\003 \001(\t\022\r\n\005to" +
-      "tal\030\004 \001(\003\022T\n\014status_count\030\005 \003(\01320.debuff" +
-      ".AnalysisRecordResponse.StatusCountRecor" +
-      "dR\014status-count\022#\n\005error\030\006 \001(\0132\024.debuff." +
-      "ServiceError\0322\n\021StatusCountRecord\022\r\n\005cou" +
-      "nt\030\001 \001(\003\022\016\n\006status\030\002 \001(\t\"\203\001\n\022AnalysisRec" +
-      "ordList\022\036\n\006header\030\001 \001(\0132\016.debuff.Header\022" +
-      "(\n\010analyses\030\002 \003(\0132\026.debuff.AnalysisRecor" +
-      "d\022#\n\005error\030\007 \001(\0132\024.debuff.ServiceErrorB[" +
-      "\n\030org.cyverse.de.protobufsB\030AnalysisRequ" +
-      "estProtobufsP\001Z#github.com/cyverse-de/p/" +
-      "go/analysisb\006proto3"
+      "\n\027analysis_requests.proto\022\010analysis\032\014hea" +
+      "der.proto\032\025analysis_record.proto\032\016svcerr" +
+      "or.proto\"\271\001\n\033AnalysisRecordLookupRequest" +
+      "\022\025\n\013analysis_id\030\001 \001(\tH\000\022\025\n\013external_id\030\002" +
+      " \001(\tH\000\022\021\n\007user_id\030\003 \001(\tH\000\022\022\n\010username\030\004 " +
+      "\001(\tH\000\022\036\n\006header\030\005 \001(\0132\016.header.Header\022\027\n" +
+      "\017requesting_user\030\006 \001(\tB\014\n\nlookup_ids\"\271\002\n" +
+      "\026AnalysisRecordResponse\022\036\n\006header\030\001 \001(\0132" +
+      "\016.header.Header\022*\n\010analyses\030\002 \003(\0132\030.anal" +
+      "ysis.AnalysisRecord\022\021\n\ttimestamp\030\003 \001(\t\022\r" +
+      "\n\005total\030\004 \001(\003\022V\n\014status_count\030\005 \003(\01322.an" +
+      "alysis.AnalysisRecordResponse.StatusCoun" +
+      "tRecordR\014status-count\022%\n\005error\030\006 \001(\0132\026.s" +
+      "vcerror.ServiceError\0322\n\021StatusCountRecor" +
+      "d\022\r\n\005count\030\001 \001(\003\022\016\n\006status\030\002 \001(\t\"\207\001\n\022Ana" +
+      "lysisRecordList\022\036\n\006header\030\001 \001(\0132\016.header" +
+      ".Header\022*\n\010analyses\030\002 \003(\0132\030.analysis.Ana" +
+      "lysisRecord\022%\n\005error\030\007 \001(\0132\026.svcerror.Se" +
+      "rviceErrorB[\n\030org.cyverse.de.protobufsB\030" +
+      "AnalysisRequestProtobufsP\001Z#github.com/c" +
+      "yverse-de/p/go/analysisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,29 +72,29 @@ public final class AnalysisRequestProtobufs {
           org.cyverse.de.protobufs.AnalysisRecordProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
         });
-    internal_static_debuff_AnalysisRecordLookupRequest_descriptor =
+    internal_static_analysis_AnalysisRecordLookupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_debuff_AnalysisRecordLookupRequest_fieldAccessorTable = new
+    internal_static_analysis_AnalysisRecordLookupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisRecordLookupRequest_descriptor,
+        internal_static_analysis_AnalysisRecordLookupRequest_descriptor,
         new java.lang.String[] { "AnalysisId", "ExternalId", "UserId", "Username", "Header", "RequestingUser", "LookupIds", });
-    internal_static_debuff_AnalysisRecordResponse_descriptor =
+    internal_static_analysis_AnalysisRecordResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_debuff_AnalysisRecordResponse_fieldAccessorTable = new
+    internal_static_analysis_AnalysisRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisRecordResponse_descriptor,
+        internal_static_analysis_AnalysisRecordResponse_descriptor,
         new java.lang.String[] { "Header", "Analyses", "Timestamp", "Total", "StatusCount", "Error", });
-    internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_descriptor =
-      internal_static_debuff_AnalysisRecordResponse_descriptor.getNestedTypes().get(0);
-    internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable = new
+    internal_static_analysis_AnalysisRecordResponse_StatusCountRecord_descriptor =
+      internal_static_analysis_AnalysisRecordResponse_descriptor.getNestedTypes().get(0);
+    internal_static_analysis_AnalysisRecordResponse_StatusCountRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisRecordResponse_StatusCountRecord_descriptor,
+        internal_static_analysis_AnalysisRecordResponse_StatusCountRecord_descriptor,
         new java.lang.String[] { "Count", "Status", });
-    internal_static_debuff_AnalysisRecordList_descriptor =
+    internal_static_analysis_AnalysisRecordList_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_debuff_AnalysisRecordList_fieldAccessorTable = new
+    internal_static_analysis_AnalysisRecordList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_debuff_AnalysisRecordList_descriptor,
+        internal_static_analysis_AnalysisRecordList_descriptor,
         new java.lang.String[] { "Header", "Analyses", "Error", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.AnalysisRecordProtobufs.getDescriptor();

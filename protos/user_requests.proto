@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package user_requests;
+
 import "header.proto";
 
 option go_package = "github.com/cyverse-de/p/go/user";
@@ -8,7 +10,6 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "UserRequestsProtobufs";
 
-package debuff;
 
 /**
  * A request for user information.
@@ -39,5 +40,5 @@ message UserLookupRequest {
     uint32 login_offset = 9;
 
      // Contains telemetry information
-    Header header = 10;
+    header.Header header = 10;
 }

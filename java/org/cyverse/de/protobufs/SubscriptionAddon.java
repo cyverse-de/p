@@ -11,11 +11,11 @@ package org.cyverse.de.protobufs;
  * fields in the subscription.
  * </pre>
  *
- * Protobuf type {@code debuff.SubscriptionAddon}
+ * Protobuf type {@code qms.SubscriptionAddon}
  */
 public final class SubscriptionAddon extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:debuff.SubscriptionAddon)
+    // @@protoc_insertion_point(message_implements:qms.SubscriptionAddon)
     SubscriptionAddonOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use SubscriptionAddon.newBuilder() to construct.
@@ -40,13 +40,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_SubscriptionAddon_descriptor;
+    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_SubscriptionAddon_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_SubscriptionAddon_fieldAccessorTable
+    return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_SubscriptionAddon_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.cyverse.de.protobufs.SubscriptionAddon.class, org.cyverse.de.protobufs.SubscriptionAddon.Builder.class);
   }
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.debuff.Addon addon = 2;</code>
+   * <code>.qms.Addon addon = 2;</code>
    * @return Whether the addon field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.debuff.Addon addon = 2;</code>
+   * <code>.qms.Addon addon = 2;</code>
    * @return The addon.
    */
   @java.lang.Override
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.debuff.Addon addon = 2;</code>
+   * <code>.qms.Addon addon = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AddonOrBuilder getAddonOrBuilder() {
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.debuff.Subscription subscription = 3;</code>
+   * <code>.qms.Subscription subscription = 3;</code>
    * @return Whether the subscription field is set.
    */
   @java.lang.Override
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.debuff.Subscription subscription = 3;</code>
+   * <code>.qms.Subscription subscription = 3;</code>
    * @return The subscription.
    */
   @java.lang.Override
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * UUID in some circumstances.
    * </pre>
    *
-   * <code>.debuff.Subscription subscription = 3;</code>
+   * <code>.qms.Subscription subscription = 3;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionOrBuilder() {
@@ -433,21 +433,21 @@ private static final long serialVersionUID = 0L;
    * fields in the subscription.
    * </pre>
    *
-   * Protobuf type {@code debuff.SubscriptionAddon}
+   * Protobuf type {@code qms.SubscriptionAddon}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:debuff.SubscriptionAddon)
+      // @@protoc_insertion_point(builder_implements:qms.SubscriptionAddon)
       org.cyverse.de.protobufs.SubscriptionAddonOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_SubscriptionAddon_descriptor;
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_SubscriptionAddon_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_SubscriptionAddon_fieldAccessorTable
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_SubscriptionAddon_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.cyverse.de.protobufs.SubscriptionAddon.class, org.cyverse.de.protobufs.SubscriptionAddon.Builder.class);
     }
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_debuff_SubscriptionAddon_descriptor;
+      return org.cyverse.de.protobufs.QMSAddonProtobufs.internal_static_qms_SubscriptionAddon_descriptor;
     }
 
     @java.lang.Override
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      * @return Whether the addon field is set.
      */
     public boolean hasAddon() {
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      * @return The addon.
      */
     public org.cyverse.de.protobufs.Addon getAddon() {
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     public Builder setAddon(org.cyverse.de.protobufs.Addon value) {
       if (addonBuilder_ == null) {
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     public Builder setAddon(
         org.cyverse.de.protobufs.Addon.Builder builderForValue) {
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     public Builder mergeAddon(org.cyverse.de.protobufs.Addon value) {
       if (addonBuilder_ == null) {
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     public Builder clearAddon() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     public org.cyverse.de.protobufs.Addon.Builder getAddonBuilder() {
       bitField0_ |= 0x00000002;
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     public org.cyverse.de.protobufs.AddonOrBuilder getAddonOrBuilder() {
       if (addonBuilder_ != null) {
@@ -906,7 +906,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Addon addon = 2;</code>
+     * <code>.qms.Addon addon = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Addon, org.cyverse.de.protobufs.Addon.Builder, org.cyverse.de.protobufs.AddonOrBuilder> 
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      * @return Whether the subscription field is set.
      */
     public boolean hasSubscription() {
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      * @return The subscription.
      */
     public org.cyverse.de.protobufs.Subscription getSubscription() {
@@ -959,7 +959,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     public Builder setSubscription(org.cyverse.de.protobufs.Subscription value) {
       if (subscriptionBuilder_ == null) {
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     public Builder setSubscription(
         org.cyverse.de.protobufs.Subscription.Builder builderForValue) {
@@ -999,7 +999,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     public Builder mergeSubscription(org.cyverse.de.protobufs.Subscription value) {
       if (subscriptionBuilder_ == null) {
@@ -1023,7 +1023,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     public Builder clearSubscription() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -1041,7 +1041,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     public org.cyverse.de.protobufs.Subscription.Builder getSubscriptionBuilder() {
       bitField0_ |= 0x00000004;
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     public org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionOrBuilder() {
       if (subscriptionBuilder_ != null) {
@@ -1070,7 +1070,7 @@ private static final long serialVersionUID = 0L;
      * UUID in some circumstances.
      * </pre>
      *
-     * <code>.debuff.Subscription subscription = 3;</code>
+     * <code>.qms.Subscription subscription = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Subscription, org.cyverse.de.protobufs.Subscription.Builder, org.cyverse.de.protobufs.SubscriptionOrBuilder> 
@@ -1198,10 +1198,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:debuff.SubscriptionAddon)
+    // @@protoc_insertion_point(builder_scope:qms.SubscriptionAddon)
   }
 
-  // @@protoc_insertion_point(class_scope:debuff.SubscriptionAddon)
+  // @@protoc_insertion_point(class_scope:qms.SubscriptionAddon)
   private static final org.cyverse.de.protobufs.SubscriptionAddon DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.cyverse.de.protobufs.SubscriptionAddon();

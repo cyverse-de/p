@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package qms;
+
 import "google/protobuf/timestamp.proto";
 import "header.proto";
 import "svcerror.proto";
@@ -13,8 +15,6 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSSubscriptionProtobufs";
-
-package debuff;
 
 /**
  * Representation of a subscription.
@@ -51,10 +51,10 @@ message Subscription {
  */
 message SubscriptionResponse {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The subscription returned by the request handler.
     Subscription subscription = 3 [json_name = "subscription"];
@@ -65,10 +65,10 @@ message SubscriptionResponse {
  */
 message SubscriptionList {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // Error information returned by the request handler.
-    ServiceError error = 2;
+    svcerror.ServiceError error = 2;
 
     // The subscription list returned by the request handler.
     repeated Subscription subscriptions = 3 [json_name = "subscriptions"];
@@ -79,7 +79,7 @@ message SubscriptionList {
  */
 message ChangeSubscriptionRequest {
      // Contains telemetry information
-    Header header = 1;
+    header.Header header = 1;
 
     // A username for the user whose subscription is being changed.
     string username = 2;
