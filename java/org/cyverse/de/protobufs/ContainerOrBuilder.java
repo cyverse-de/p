@@ -246,19 +246,4 @@ public interface ContainerOrBuilder extends
    * @return The uid.
    */
   int getUid();
-
-  /**
-   * <code>.header.Header header = 21;</code>
-   * @return Whether the header field is set.
-   */
-  boolean hasHeader();
-  /**
-   * <code>.header.Header header = 21;</code>
-   * @return The header.
-   */
-  org.cyverse.de.protobufs.Header getHeader();
-  /**
-   * <code>.header.Header header = 21;</code>
-   */
-  org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }

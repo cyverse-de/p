@@ -483,32 +483,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int HEADER_FIELD_NUMBER = 12;
-  private org.cyverse.de.protobufs.Header header_;
-  /**
-   * <code>.header.Header header = 12;</code>
-   * @return Whether the header field is set.
-   */
-  @java.lang.Override
-  public boolean hasHeader() {
-    return header_ != null;
-  }
-  /**
-   * <code>.header.Header header = 12;</code>
-   * @return The header.
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.Header getHeader() {
-    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-  }
-  /**
-   * <code>.header.Header header = 12;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -556,9 +530,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, backendUrl_);
     }
-    if (header_ != null) {
-      output.writeMessage(12, getHeader());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -601,10 +572,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, backendUrl_);
     }
-    if (header_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, getHeader());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -642,11 +609,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getWebsocketProto())) return false;
     if (!getBackendUrl()
         .equals(other.getBackendUrl())) return false;
-    if (hasHeader() != other.hasHeader()) return false;
-    if (hasHeader()) {
-      if (!getHeader()
-          .equals(other.getHeader())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -680,10 +642,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getWebsocketProto().hashCode();
     hash = (37 * hash) + BACKEND_URL_FIELD_NUMBER;
     hash = (53 * hash) + getBackendUrl().hashCode();
-    if (hasHeader()) {
-      hash = (37 * hash) + HEADER_FIELD_NUMBER;
-      hash = (53 * hash) + getHeader().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -824,11 +782,6 @@ private static final long serialVersionUID = 0L;
       websocketPort_ = "";
       websocketProto_ = "";
       backendUrl_ = "";
-      header_ = null;
-      if (headerBuilder_ != null) {
-        headerBuilder_.dispose();
-        headerBuilder_ = null;
-      }
       return this;
     }
 
@@ -894,11 +847,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.backendUrl_ = backendUrl_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.header_ = headerBuilder_ == null
-            ? header_
-            : headerBuilder_.build();
       }
     }
 
@@ -1001,9 +949,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000400;
         onChanged();
       }
-      if (other.hasHeader()) {
-        mergeHeader(other.getHeader());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1085,13 +1030,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 90
-            case 98: {
-              input.readMessage(
-                  getHeaderFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1899,125 +1837,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000400;
       onChanged();
       return this;
-    }
-
-    private org.cyverse.de.protobufs.Header header_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
-    /**
-     * <code>.header.Header header = 12;</code>
-     * @return Whether the header field is set.
-     */
-    public boolean hasHeader() {
-      return ((bitField0_ & 0x00000800) != 0);
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     * @return The header.
-     */
-    public org.cyverse.de.protobufs.Header getHeader() {
-      if (headerBuilder_ == null) {
-        return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-      } else {
-        return headerBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    public Builder setHeader(org.cyverse.de.protobufs.Header value) {
-      if (headerBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        header_ = value;
-      } else {
-        headerBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    public Builder setHeader(
-        org.cyverse.de.protobufs.Header.Builder builderForValue) {
-      if (headerBuilder_ == null) {
-        header_ = builderForValue.build();
-      } else {
-        headerBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
-      if (headerBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
-          header_ != null &&
-          header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
-          getHeaderBuilder().mergeFrom(value);
-        } else {
-          header_ = value;
-        }
-      } else {
-        headerBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    public Builder clearHeader() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      header_ = null;
-      if (headerBuilder_ != null) {
-        headerBuilder_.dispose();
-        headerBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return getHeaderFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-      if (headerBuilder_ != null) {
-        return headerBuilder_.getMessageOrBuilder();
-      } else {
-        return header_ == null ?
-            org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-      }
-    }
-    /**
-     * <code>.header.Header header = 12;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
-        getHeaderFieldBuilder() {
-      if (headerBuilder_ == null) {
-        headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder>(
-                getHeader(),
-                getParentForChildren(),
-                isClean());
-        header_ = null;
-      }
-      return headerBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

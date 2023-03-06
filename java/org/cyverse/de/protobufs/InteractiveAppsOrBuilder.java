@@ -138,19 +138,4 @@ public interface InteractiveAppsOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBackendUrlBytes();
-
-  /**
-   * <code>.header.Header header = 12;</code>
-   * @return Whether the header field is set.
-   */
-  boolean hasHeader();
-  /**
-   * <code>.header.Header header = 12;</code>
-   * @return The header.
-   */
-  org.cyverse.de.protobufs.Header getHeader();
-  /**
-   * <code>.header.Header header = 12;</code>
-   */
-  org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }
