@@ -22,7 +22,7 @@ message QuotaDefault {
     string uuid = 1;
 
     // The value of the quota default.
-    float quota_value = 2 [json_name = "quota_value"];
+    double quota_value = 2 [json_name = "quota_value"];
 
     // The resource type the quota applies to.
     ResourceType resource_type = 3 [json_name = "resource_type"];

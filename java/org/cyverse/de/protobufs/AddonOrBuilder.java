@@ -99,10 +99,10 @@ public interface AddonOrBuilder extends
    * How much of the resource type is added to the quota by the add-on.
    * </pre>
    *
-   * <code>float default_amount = 5 [json_name = "default_amount"];</code>
+   * <code>double default_amount = 5 [json_name = "default_amount"];</code>
    * @return The defaultAmount.
    */
-  float getDefaultAmount();
+  double getDefaultAmount();
 
   /**
    * <pre>

@@ -98,32 +98,32 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUOTA_FIELD_NUMBER = 2;
-  private float quota_ = 0F;
+  private double quota_ = 0D;
   /**
    * <pre>
    * The configured quota value for the resource type.
    * </pre>
    *
-   * <code>float quota = 2;</code>
+   * <code>double quota = 2;</code>
    * @return The quota.
    */
   @java.lang.Override
-  public float getQuota() {
+  public double getQuota() {
     return quota_;
   }
 
   public static final int USAGE_FIELD_NUMBER = 3;
-  private float usage_ = 0F;
+  private double usage_ = 0D;
   /**
    * <pre>
    * The actual usage value for the resource type.
    * </pre>
    *
-   * <code>float usage = 3;</code>
+   * <code>double usage = 3;</code>
    * @return The usage.
    */
   @java.lang.Override
-  public float getUsage() {
+  public double getUsage() {
     return usage_;
   }
 
@@ -144,11 +144,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
-    if (java.lang.Float.floatToRawIntBits(quota_) != 0) {
-      output.writeFloat(2, quota_);
+    if (java.lang.Double.doubleToRawLongBits(quota_) != 0) {
+      output.writeDouble(2, quota_);
     }
-    if (java.lang.Float.floatToRawIntBits(usage_) != 0) {
-      output.writeFloat(3, usage_);
+    if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
+      output.writeDouble(3, usage_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -162,13 +162,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
-    if (java.lang.Float.floatToRawIntBits(quota_) != 0) {
+    if (java.lang.Double.doubleToRawLongBits(quota_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(2, quota_);
+        .computeDoubleSize(2, quota_);
     }
-    if (java.lang.Float.floatToRawIntBits(usage_) != 0) {
+    if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(3, usage_);
+        .computeDoubleSize(3, usage_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -187,11 +187,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
-    if (java.lang.Float.floatToIntBits(getQuota())
-        != java.lang.Float.floatToIntBits(
+    if (java.lang.Double.doubleToLongBits(getQuota())
+        != java.lang.Double.doubleToLongBits(
             other.getQuota())) return false;
-    if (java.lang.Float.floatToIntBits(getUsage())
-        != java.lang.Float.floatToIntBits(
+    if (java.lang.Double.doubleToLongBits(getUsage())
+        != java.lang.Double.doubleToLongBits(
             other.getUsage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -207,11 +207,11 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
     hash = (37 * hash) + QUOTA_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getQuota());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getQuota()));
     hash = (37 * hash) + USAGE_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getUsage());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getUsage()));
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -348,8 +348,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       resourceName_ = "";
-      quota_ = 0F;
-      usage_ = 0F;
+      quota_ = 0D;
+      usage_ = 0D;
       return this;
     }
 
@@ -443,10 +443,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.getQuota() != 0F) {
+      if (other.getQuota() != 0D) {
         setQuota(other.getQuota());
       }
-      if (other.getUsage() != 0F) {
+      if (other.getUsage() != 0D) {
         setUsage(other.getUsage());
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -480,16 +480,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 21: {
-              quota_ = input.readFloat();
+            case 17: {
+              quota_ = input.readDouble();
               bitField0_ |= 0x00000002;
               break;
-            } // case 21
-            case 29: {
-              usage_ = input.readFloat();
+            } // case 17
+            case 25: {
+              usage_ = input.readDouble();
               bitField0_ |= 0x00000004;
               break;
-            } // case 29
+            } // case 25
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -599,17 +599,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private float quota_ ;
+    private double quota_ ;
     /**
      * <pre>
      * The configured quota value for the resource type.
      * </pre>
      *
-     * <code>float quota = 2;</code>
+     * <code>double quota = 2;</code>
      * @return The quota.
      */
     @java.lang.Override
-    public float getQuota() {
+    public double getQuota() {
       return quota_;
     }
     /**
@@ -617,11 +617,11 @@ private static final long serialVersionUID = 0L;
      * The configured quota value for the resource type.
      * </pre>
      *
-     * <code>float quota = 2;</code>
+     * <code>double quota = 2;</code>
      * @param value The quota to set.
      * @return This builder for chaining.
      */
-    public Builder setQuota(float value) {
+    public Builder setQuota(double value) {
       
       quota_ = value;
       bitField0_ |= 0x00000002;
@@ -633,27 +633,27 @@ private static final long serialVersionUID = 0L;
      * The configured quota value for the resource type.
      * </pre>
      *
-     * <code>float quota = 2;</code>
+     * <code>double quota = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearQuota() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      quota_ = 0F;
+      quota_ = 0D;
       onChanged();
       return this;
     }
 
-    private float usage_ ;
+    private double usage_ ;
     /**
      * <pre>
      * The actual usage value for the resource type.
      * </pre>
      *
-     * <code>float usage = 3;</code>
+     * <code>double usage = 3;</code>
      * @return The usage.
      */
     @java.lang.Override
-    public float getUsage() {
+    public double getUsage() {
       return usage_;
     }
     /**
@@ -661,11 +661,11 @@ private static final long serialVersionUID = 0L;
      * The actual usage value for the resource type.
      * </pre>
      *
-     * <code>float usage = 3;</code>
+     * <code>double usage = 3;</code>
      * @param value The usage to set.
      * @return This builder for chaining.
      */
-    public Builder setUsage(float value) {
+    public Builder setUsage(double value) {
       
       usage_ = value;
       bitField0_ |= 0x00000004;
@@ -677,12 +677,12 @@ private static final long serialVersionUID = 0L;
      * The actual usage value for the resource type.
      * </pre>
      *
-     * <code>float usage = 3;</code>
+     * <code>double usage = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearUsage() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      usage_ = 0F;
+      usage_ = 0D;
       onChanged();
       return this;
     }

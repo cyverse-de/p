@@ -94,10 +94,10 @@ public interface SubscriptionAddonOrBuilder extends
    * which is why it's a separate field here.
    * </pre>
    *
-   * <code>float amount = 4;</code>
+   * <code>double amount = 4;</code>
    * @return The amount.
    */
-  float getAmount();
+  double getAmount();
 
   /**
    * <pre>

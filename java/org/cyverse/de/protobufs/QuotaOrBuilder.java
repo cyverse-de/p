@@ -32,10 +32,10 @@ public interface QuotaOrBuilder extends
    * The quota value (aka limit).
    * </pre>
    *
-   * <code>float quota = 2;</code>
+   * <code>double quota = 2;</code>
    * @return The quota.
    */
-  float getQuota();
+  double getQuota();
 
   /**
    * <pre>

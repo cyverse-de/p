@@ -71,7 +71,7 @@ public final class QMSPlansProtobufs {
       "\n\017qms_plans.proto\022\003qms\032\014header.proto\032\016sv" +
       "cerror.proto\032\030qms_resource_types.proto\"w" +
       "\n\014QuotaDefault\022\014\n\004uuid\030\001 \001(\t\022 \n\013quota_va" +
-      "lue\030\002 \001(\002R\013quota_value\0227\n\rresource_type\030" +
+      "lue\030\002 \001(\001R\013quota_value\0227\n\rresource_type\030" +
       "\003 \001(\0132\021.qms.ResourceTypeR\rresource_type\"" +
       "\226\001\n\024QuotaDefaultResponse\022\036\n\006header\030\001 \001(\013" +
       "2\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svcerr" +

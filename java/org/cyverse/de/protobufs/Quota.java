@@ -102,17 +102,17 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUOTA_FIELD_NUMBER = 2;
-  private float quota_ = 0F;
+  private double quota_ = 0D;
   /**
    * <pre>
    * The quota value (aka limit).
    * </pre>
    *
-   * <code>float quota = 2;</code>
+   * <code>double quota = 2;</code>
    * @return The quota.
    */
   @java.lang.Override
-  public float getQuota() {
+  public double getQuota() {
     return quota_;
   }
 
@@ -388,8 +388,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
     }
-    if (java.lang.Float.floatToRawIntBits(quota_) != 0) {
-      output.writeFloat(2, quota_);
+    if (java.lang.Double.doubleToRawLongBits(quota_) != 0) {
+      output.writeDouble(2, quota_);
     }
     if (resourceType_ != null) {
       output.writeMessage(3, getResourceType());
@@ -421,9 +421,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
     }
-    if (java.lang.Float.floatToRawIntBits(quota_) != 0) {
+    if (java.lang.Double.doubleToRawLongBits(quota_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(2, quota_);
+        .computeDoubleSize(2, quota_);
     }
     if (resourceType_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -463,8 +463,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getUuid()
         .equals(other.getUuid())) return false;
-    if (java.lang.Float.floatToIntBits(getQuota())
-        != java.lang.Float.floatToIntBits(
+    if (java.lang.Double.doubleToLongBits(getQuota())
+        != java.lang.Double.doubleToLongBits(
             other.getQuota())) return false;
     if (hasResourceType() != other.hasResourceType()) return false;
     if (hasResourceType()) {
@@ -501,8 +501,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + UUID_FIELD_NUMBER;
     hash = (53 * hash) + getUuid().hashCode();
     hash = (37 * hash) + QUOTA_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getQuota());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getQuota()));
     if (hasResourceType()) {
       hash = (37 * hash) + RESOURCE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getResourceType().hashCode();
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       uuid_ = "";
-      quota_ = 0F;
+      quota_ = 0D;
       resourceType_ = null;
       if (resourceTypeBuilder_ != null) {
         resourceTypeBuilder_.dispose();
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.getQuota() != 0F) {
+      if (other.getQuota() != 0D) {
         setQuota(other.getQuota());
       }
       if (other.hasResourceType()) {
@@ -849,11 +849,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 21: {
-              quota_ = input.readFloat();
+            case 17: {
+              quota_ = input.readDouble();
               bitField0_ |= 0x00000002;
               break;
-            } // case 21
+            } // case 17
             case 26: {
               input.readMessage(
                   getResourceTypeFieldBuilder().getBuilder(),
@@ -999,17 +999,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private float quota_ ;
+    private double quota_ ;
     /**
      * <pre>
      * The quota value (aka limit).
      * </pre>
      *
-     * <code>float quota = 2;</code>
+     * <code>double quota = 2;</code>
      * @return The quota.
      */
     @java.lang.Override
-    public float getQuota() {
+    public double getQuota() {
       return quota_;
     }
     /**
@@ -1017,11 +1017,11 @@ private static final long serialVersionUID = 0L;
      * The quota value (aka limit).
      * </pre>
      *
-     * <code>float quota = 2;</code>
+     * <code>double quota = 2;</code>
      * @param value The quota to set.
      * @return This builder for chaining.
      */
-    public Builder setQuota(float value) {
+    public Builder setQuota(double value) {
       
       quota_ = value;
       bitField0_ |= 0x00000002;
@@ -1033,12 +1033,12 @@ private static final long serialVersionUID = 0L;
      * The quota value (aka limit).
      * </pre>
      *
-     * <code>float quota = 2;</code>
+     * <code>double quota = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearQuota() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      quota_ = 0F;
+      quota_ = 0D;
       onChanged();
       return this;
     }

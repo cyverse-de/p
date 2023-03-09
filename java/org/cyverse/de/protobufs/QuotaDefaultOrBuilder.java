@@ -32,10 +32,10 @@ public interface QuotaDefaultOrBuilder extends
    * The value of the quota default.
    * </pre>
    *
-   * <code>float quota_value = 2 [json_name = "quota_value"];</code>
+   * <code>double quota_value = 2 [json_name = "quota_value"];</code>
    * @return The quotaValue.
    */
-  float getQuotaValue();
+  double getQuotaValue();
 
   /**
    * <pre>

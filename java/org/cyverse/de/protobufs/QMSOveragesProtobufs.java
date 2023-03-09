@@ -45,8 +45,8 @@ public final class QMSOveragesProtobufs {
     java.lang.String[] descriptorData = {
       "\n\022qms_overages.proto\022\003qms\032\014header.proto\032" +
       "\016svcerror.proto\"M\n\007Overage\022$\n\rresource_n" +
-      "ame\030\001 \001(\tR\rresource_name\022\r\n\005quota\030\002 \001(\002\022" +
-      "\r\n\005usage\030\003 \001(\002\"w\n\017OverageResponse\022\036\n\006hea" +
+      "ame\030\001 \001(\tR\rresource_name\022\r\n\005quota\030\002 \001(\001\022" +
+      "\r\n\005usage\030\003 \001(\001\"w\n\017OverageResponse\022\036\n\006hea" +
       "der\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\013" +
       "2\026.svcerror.ServiceError\022\035\n\007overage\030\003 \001(" +
       "\0132\014.qms.Overage\"t\n\013OverageList\022\036\n\006header" +

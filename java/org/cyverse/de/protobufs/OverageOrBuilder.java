@@ -32,18 +32,18 @@ public interface OverageOrBuilder extends
    * The configured quota value for the resource type.
    * </pre>
    *
-   * <code>float quota = 2;</code>
+   * <code>double quota = 2;</code>
    * @return The quota.
    */
-  float getQuota();
+  double getQuota();
 
   /**
    * <pre>
    * The actual usage value for the resource type.
    * </pre>
    *
-   * <code>float usage = 3;</code>
+   * <code>double usage = 3;</code>
    * @return The usage.
    */
-  float getUsage();
+  double getUsage();
 }

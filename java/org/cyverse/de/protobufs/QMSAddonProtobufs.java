@@ -79,7 +79,7 @@ public final class QMSAddonProtobufs {
       "id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 " +
       "\001(\t\0227\n\rresource_type\030\004 \001(\0132\021.qms.Resourc" +
       "eTypeR\rresource_type\022&\n\016default_amount\030\005" +
-      " \001(\002R\016default_amount\022\"\n\014default_paid\030\006 \001" +
+      " \001(\001R\016default_amount\022\"\n\014default_paid\030\006 \001" +
       "(\010R\014default_paid\"q\n\rAddonResponse\022\036\n\006hea" +
       "der\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\013" +
       "2\026.svcerror.ServiceError\022\031\n\005addon\030\003 \001(\0132" +
@@ -99,7 +99,7 @@ public final class QMSAddonProtobufs {
       "\007 \001(\010\"\203\001\n\021SubscriptionAddon\022\014\n\004uuid\030\001 \001(" +
       "\t\022\031\n\005addon\030\002 \001(\0132\n.qms.Addon\022\'\n\014subscrip" +
       "tion\030\003 \001(\0132\021.qms.Subscription\022\016\n\006amount\030" +
-      "\004 \001(\002\022\014\n\004paid\030\005 \001(\010\"\262\002\n\036UpdateSubscripti" +
+      "\004 \001(\001\022\014\n\004paid\030\005 \001(\010\"\262\002\n\036UpdateSubscripti" +
       "onAddonRequest\022\036\n\006header\030\001 \001(\0132\016.header." +
       "Header\022F\n\022subscription_addon\030\002 \001(\0132\026.qms" +
       ".SubscriptionAddonR\022subscription_addon\022(" +

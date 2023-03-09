@@ -232,17 +232,17 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_AMOUNT_FIELD_NUMBER = 5;
-  private float defaultAmount_ = 0F;
+  private double defaultAmount_ = 0D;
   /**
    * <pre>
    * How much of the resource type is added to the quota by the add-on.
    * </pre>
    *
-   * <code>float default_amount = 5 [json_name = "default_amount"];</code>
+   * <code>double default_amount = 5 [json_name = "default_amount"];</code>
    * @return The defaultAmount.
    */
   @java.lang.Override
-  public float getDefaultAmount() {
+  public double getDefaultAmount() {
     return defaultAmount_;
   }
 
@@ -287,8 +287,8 @@ private static final long serialVersionUID = 0L;
     if (resourceType_ != null) {
       output.writeMessage(4, getResourceType());
     }
-    if (java.lang.Float.floatToRawIntBits(defaultAmount_) != 0) {
-      output.writeFloat(5, defaultAmount_);
+    if (java.lang.Double.doubleToRawLongBits(defaultAmount_) != 0) {
+      output.writeDouble(5, defaultAmount_);
     }
     if (defaultPaid_ != false) {
       output.writeBool(6, defaultPaid_);
@@ -315,9 +315,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getResourceType());
     }
-    if (java.lang.Float.floatToRawIntBits(defaultAmount_) != 0) {
+    if (java.lang.Double.doubleToRawLongBits(defaultAmount_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(5, defaultAmount_);
+        .computeDoubleSize(5, defaultAmount_);
     }
     if (defaultPaid_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -349,8 +349,8 @@ private static final long serialVersionUID = 0L;
       if (!getResourceType()
           .equals(other.getResourceType())) return false;
     }
-    if (java.lang.Float.floatToIntBits(getDefaultAmount())
-        != java.lang.Float.floatToIntBits(
+    if (java.lang.Double.doubleToLongBits(getDefaultAmount())
+        != java.lang.Double.doubleToLongBits(
             other.getDefaultAmount())) return false;
     if (getDefaultPaid()
         != other.getDefaultPaid()) return false;
@@ -376,8 +376,8 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getResourceType().hashCode();
     }
     hash = (37 * hash) + DEFAULT_AMOUNT_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getDefaultAmount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getDefaultAmount()));
     hash = (37 * hash) + DEFAULT_PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDefaultPaid());
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
         resourceTypeBuilder_.dispose();
         resourceTypeBuilder_ = null;
       }
-      defaultAmount_ = 0F;
+      defaultAmount_ = 0D;
       defaultPaid_ = false;
       return this;
     }
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasResourceType()) {
         mergeResourceType(other.getResourceType());
       }
-      if (other.getDefaultAmount() != 0F) {
+      if (other.getDefaultAmount() != 0D) {
         setDefaultAmount(other.getDefaultAmount());
       }
       if (other.getDefaultPaid() != false) {
@@ -697,11 +697,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 45: {
-              defaultAmount_ = input.readFloat();
+            case 41: {
+              defaultAmount_ = input.readDouble();
               bitField0_ |= 0x00000010;
               break;
-            } // case 45
+            } // case 41
             case 48: {
               defaultPaid_ = input.readBool();
               bitField0_ |= 0x00000020;
@@ -1155,17 +1155,17 @@ private static final long serialVersionUID = 0L;
       return resourceTypeBuilder_;
     }
 
-    private float defaultAmount_ ;
+    private double defaultAmount_ ;
     /**
      * <pre>
      * How much of the resource type is added to the quota by the add-on.
      * </pre>
      *
-     * <code>float default_amount = 5 [json_name = "default_amount"];</code>
+     * <code>double default_amount = 5 [json_name = "default_amount"];</code>
      * @return The defaultAmount.
      */
     @java.lang.Override
-    public float getDefaultAmount() {
+    public double getDefaultAmount() {
       return defaultAmount_;
     }
     /**
@@ -1173,11 +1173,11 @@ private static final long serialVersionUID = 0L;
      * How much of the resource type is added to the quota by the add-on.
      * </pre>
      *
-     * <code>float default_amount = 5 [json_name = "default_amount"];</code>
+     * <code>double default_amount = 5 [json_name = "default_amount"];</code>
      * @param value The defaultAmount to set.
      * @return This builder for chaining.
      */
-    public Builder setDefaultAmount(float value) {
+    public Builder setDefaultAmount(double value) {
       
       defaultAmount_ = value;
       bitField0_ |= 0x00000010;
@@ -1189,12 +1189,12 @@ private static final long serialVersionUID = 0L;
      * How much of the resource type is added to the quota by the add-on.
      * </pre>
      *
-     * <code>float default_amount = 5 [json_name = "default_amount"];</code>
+     * <code>double default_amount = 5 [json_name = "default_amount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDefaultAmount() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      defaultAmount_ = 0F;
+      defaultAmount_ = 0D;
       onChanged();
       return this;
     }

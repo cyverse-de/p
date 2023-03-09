@@ -24,7 +24,7 @@ message Quota {
     string uuid = 1;
 
     // The quota value (aka limit).
-    float quota = 2;
+    double quota = 2;
 
     // The resource type the quota value applies to.
     ResourceType resource_type = 3 [json_name = "resource_type"];

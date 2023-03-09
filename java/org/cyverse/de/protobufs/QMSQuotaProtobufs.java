@@ -46,7 +46,7 @@ public final class QMSQuotaProtobufs {
       "\n\020qms_quotas.proto\022\003qms\032\037google/protobuf" +
       "/timestamp.proto\032\014header.proto\032\016svcerror" +
       ".proto\032\030qms_resource_types.proto\"\321\002\n\005Quo" +
-      "ta\022\014\n\004uuid\030\001 \001(\t\022\r\n\005quota\030\002 \001(\002\0227\n\rresou" +
+      "ta\022\014\n\004uuid\030\001 \001(\t\022\r\n\005quota\030\002 \001(\001\0227\n\rresou" +
       "rce_type\030\003 \001(\0132\021.qms.ResourceTypeR\rresou" +
       "rce_type\022\035\n\tCreatedBy\030\004 \001(\tR\ncreated_by\022" +
       "9\n\tCreatedAt\030\005 \001(\0132\032.google.protobuf.Tim" +

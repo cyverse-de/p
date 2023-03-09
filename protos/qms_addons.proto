@@ -31,7 +31,7 @@ message Addon {
     ResourceType resource_type = 4 [json_name = "resource_type"];
 
     // How much of the resource type is added to the quota by the add-on.
-    float default_amount = 5 [json_name = "default_amount"];
+    double default_amount = 5 [json_name = "default_amount"];
 
     // Whether a user must pay for the add-on. Not whether the user has paid.
     bool default_paid = 6 [json_name = "default_paid"];
@@ -138,7 +138,7 @@ message SubscriptionAddon {
     // The amount of the resource applied by the add-on. This should default to
     // the amount contained in the add-on definition, but can be overridden, 
     // which is why it's a separate field here.
-    float amount = 4;
+    double amount = 4;
 
     // Whether the subscription add-on costs money. This should default to the 
     // same paid value contained in the add-on definition, but can be overridden,

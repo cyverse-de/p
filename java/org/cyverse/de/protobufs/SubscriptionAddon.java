@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AMOUNT_FIELD_NUMBER = 4;
-  private float amount_ = 0F;
+  private double amount_ = 0D;
   /**
    * <pre>
    * The amount of the resource applied by the add-on. This should default to
@@ -189,11 +189,11 @@ private static final long serialVersionUID = 0L;
    * which is why it's a separate field here.
    * </pre>
    *
-   * <code>float amount = 4;</code>
+   * <code>double amount = 4;</code>
    * @return The amount.
    */
   @java.lang.Override
-  public float getAmount() {
+  public double getAmount() {
     return amount_;
   }
 
@@ -237,8 +237,8 @@ private static final long serialVersionUID = 0L;
     if (subscription_ != null) {
       output.writeMessage(3, getSubscription());
     }
-    if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
-      output.writeFloat(4, amount_);
+    if (java.lang.Double.doubleToRawLongBits(amount_) != 0) {
+      output.writeDouble(4, amount_);
     }
     if (paid_ != false) {
       output.writeBool(5, paid_);
@@ -263,9 +263,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSubscription());
     }
-    if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
+    if (java.lang.Double.doubleToRawLongBits(amount_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(4, amount_);
+        .computeDoubleSize(4, amount_);
     }
     if (paid_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -298,8 +298,8 @@ private static final long serialVersionUID = 0L;
       if (!getSubscription()
           .equals(other.getSubscription())) return false;
     }
-    if (java.lang.Float.floatToIntBits(getAmount())
-        != java.lang.Float.floatToIntBits(
+    if (java.lang.Double.doubleToLongBits(getAmount())
+        != java.lang.Double.doubleToLongBits(
             other.getAmount())) return false;
     if (getPaid()
         != other.getPaid()) return false;
@@ -325,8 +325,8 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getSubscription().hashCode();
     }
     hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getAmount());
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        java.lang.Double.doubleToLongBits(getAmount()));
     hash = (37 * hash) + PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPaid());
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
         subscriptionBuilder_.dispose();
         subscriptionBuilder_ = null;
       }
-      amount_ = 0F;
+      amount_ = 0D;
       paid_ = false;
       return this;
     }
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSubscription()) {
         mergeSubscription(other.getSubscription());
       }
-      if (other.getAmount() != 0F) {
+      if (other.getAmount() != 0D) {
         setAmount(other.getAmount());
       }
       if (other.getPaid() != false) {
@@ -639,11 +639,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 37: {
-              amount_ = input.readFloat();
+            case 33: {
+              amount_ = input.readDouble();
               bitField0_ |= 0x00000008;
               break;
-            } // case 37
+            } // case 33
             case 40: {
               paid_ = input.readBool();
               bitField0_ |= 0x00000010;
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
       return subscriptionBuilder_;
     }
 
-    private float amount_ ;
+    private double amount_ ;
     /**
      * <pre>
      * The amount of the resource applied by the add-on. This should default to
@@ -1094,11 +1094,11 @@ private static final long serialVersionUID = 0L;
      * which is why it's a separate field here.
      * </pre>
      *
-     * <code>float amount = 4;</code>
+     * <code>double amount = 4;</code>
      * @return The amount.
      */
     @java.lang.Override
-    public float getAmount() {
+    public double getAmount() {
       return amount_;
     }
     /**
@@ -1108,11 +1108,11 @@ private static final long serialVersionUID = 0L;
      * which is why it's a separate field here.
      * </pre>
      *
-     * <code>float amount = 4;</code>
+     * <code>double amount = 4;</code>
      * @param value The amount to set.
      * @return This builder for chaining.
      */
-    public Builder setAmount(float value) {
+    public Builder setAmount(double value) {
       
       amount_ = value;
       bitField0_ |= 0x00000008;
@@ -1126,12 +1126,12 @@ private static final long serialVersionUID = 0L;
      * which is why it's a separate field here.
      * </pre>
      *
-     * <code>float amount = 4;</code>
+     * <code>double amount = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmount() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      amount_ = 0F;
+      amount_ = 0D;
       onChanged();
       return this;
     }
