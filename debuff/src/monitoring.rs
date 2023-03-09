@@ -1,4 +1,5 @@
 // @generated
+#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DnsLookup {
@@ -11,6 +12,7 @@ pub struct DnsLookup {
     #[prost(string, tag="4")]
     pub error: ::prost::alloc::string::String,
 }
+#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DnsCheckResult {
@@ -54,6 +56,7 @@ impl LookupType {
         }
     }
 }
+#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Heartbeat {

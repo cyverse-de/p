@@ -1,6 +1,7 @@
 // @generated
 /// *
 /// An error returned by a request handler.
+#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ServiceError {

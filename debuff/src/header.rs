@@ -1,4 +1,5 @@
 // @generated
+#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Header {
@@ -7,6 +8,7 @@ pub struct Header {
 }
 /// Nested message and enum types in `Header`.
 pub mod header {
+    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Value {

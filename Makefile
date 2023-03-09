@@ -1,6 +1,7 @@
 .PHONY: all compile go-tidy go-init clean java-jar
 
 all: clean compile go-init go-tidy java-jar documentation
+comma:=
 
 compile:
 	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
@@ -9,6 +10,25 @@ compile:
 		--prost_opt=default_package_filename=gen.rs \
 		--prost_opt=compile_well_known_types \
 		--prost_opt=extern_path=.google.protobuf=::pbjson_types \
+		--prost_opt=message_attribute=.='#[derive(validator::Validate)]' \
+		--prost_opt=type_attribute=lookup_ids='#[derive(validator::Validate)]' \
+		--prost_opt=field_attribute=id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=subscription_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=plan_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=AnalysisSubmission.user_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=Job.user_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=RequestByUserID.user_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=ByUserID.user_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=ByUUIDAndUserID.user_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=analysis_id='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=uuid='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=plan_uuid='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=parent_uuid='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=child_uuid='#[validate(custom = "crate::custom_validator::validate_uuid")]' \
+		--prost_opt=field_attribute=url='#[validate(url)]' \
+		--prost_opt=field_attribute=cas_url='#[validate(url)]' \
+		--prost_opt=field_attribute=frontend_url='#[validate(url)]' \
+		--prost_opt=field_attribute=backend_url='#[validate(url)]' \
 		--prost_out=debuff/src/ \
 		--prost-serde_out=debuff/src \
 		protos/*.proto
