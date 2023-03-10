@@ -3,6 +3,14 @@ pub mod header;
 pub mod qms;
 pub mod svcerror;
 
+use std::fmt;
+
+impl fmt::Display for svcerror::ErrorCode {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.as_str_name())
+    }
+}
+
 pub mod vice {
     use crate::analysis::*;
     pub type VICE = InteractiveApps;
