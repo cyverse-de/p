@@ -1,13 +1,11 @@
 // @generated
 /// *
 /// Representation of a resource type.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResourceType {
     /// The unique identifier.
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The name of the resource. Will usually be "data.size" and "cpu.hours".
     #[prost(string, tag="2")]
@@ -18,7 +16,6 @@ pub struct ResourceType {
 }
 /// *
 /// A response type for resource type requests.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResourceTypeResponse {
@@ -35,7 +32,6 @@ pub struct ResourceTypeResponse {
 /// *
 /// A response type for the resource type requests that contains a list of 
 /// resource type definitions.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ResourceTypeList {
@@ -51,13 +47,11 @@ pub struct ResourceTypeList {
 }
 /// *
 /// A representation of a user in the QMS system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QmsUser {
     /// A user's unique identifier in QMS.
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// A user's username in QMS.
     #[prost(string, tag="2")]
@@ -65,7 +59,6 @@ pub struct QmsUser {
 }
 /// *
 /// A response to a request for info about a QMS user.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QmsUserResponse {
@@ -81,7 +74,6 @@ pub struct QmsUserResponse {
 }
 /// *
 ///   A response to a request for info about a list of users.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QmsUserList {
@@ -97,7 +89,6 @@ pub struct QmsUserList {
 }
 /// *
 /// A request to add a user to the QMS system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddUserRequest {
@@ -116,7 +107,6 @@ pub struct AddUserRequest {
 }
 /// *
 /// A response to a request to add a user to the QMS system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddUserResponse {
@@ -128,7 +118,6 @@ pub struct AddUserResponse {
     pub error: ::core::option::Option<super::svcerror::ServiceError>,
     /// The unique identfier of the newly added user.
     #[prost(string, tag="3")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The username of the newly added user.
     #[prost(string, tag="4")]
@@ -138,20 +127,17 @@ pub struct AddUserResponse {
     pub plan_name: ::prost::alloc::string::String,
     /// The unique identifier for the plan the newly added user is subscribed to.
     #[prost(string, tag="6")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub plan_uuid: ::prost::alloc::string::String,
 }
 /// *
 /// Represents a default quota value used in plans. Can be overridden on a
 /// per-user basis for a subscription to provide customized quotas. Also referred to
 /// as plan quota defaults.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuotaDefault {
     /// The unique identifier/primary key for the quota default.
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The value of the quota default.
     #[prost(double, tag="2")]
@@ -162,7 +148,6 @@ pub struct QuotaDefault {
 }
 /// *
 /// A response type for quota default requests.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuotaDefaultResponse {
@@ -179,7 +164,6 @@ pub struct QuotaDefaultResponse {
 /// *
 /// A response type for quota default requests that contains a list of quota
 /// defaults.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuotaDefaultList {
@@ -195,13 +179,11 @@ pub struct QuotaDefaultList {
 }
 /// *
 /// Represents a subscription plan available to users.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Plan {
     /// Unique identifier for the plan.
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The name of the plan.
     #[prost(string, tag="2")]
@@ -215,7 +197,6 @@ pub struct Plan {
 }
 /// *
 /// A response to a plan request. Contains a single plan.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlanResponse {
@@ -231,7 +212,6 @@ pub struct PlanResponse {
 }
 /// *
 /// A response to a plan request. Contains a list of plans.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlanList {
@@ -247,7 +227,6 @@ pub struct PlanList {
 }
 /// *
 /// A request for plan information specified by the plan's unique identifier.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PlanRequest {
@@ -256,12 +235,10 @@ pub struct PlanRequest {
     pub header: ::core::option::Option<super::header::Header>,
     /// The unique identifier of the plan being requested.
     #[prost(string, tag="2")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub plan_id: ::prost::alloc::string::String,
 }
 /// *
 /// A request to add a new plan to the system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddPlanRequest {
@@ -274,7 +251,6 @@ pub struct AddPlanRequest {
 }
 /// *
 /// A request to add a quota default to an existing plan.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddPlanQuotaDefaultRequest {
@@ -292,13 +268,11 @@ pub struct AddPlanQuotaDefaultRequest {
 /// Represents a quota in the system, which is the currently configured limit on
 /// a resource type a user has associated with their plan. Overrides the quota
 /// default associated with the plan the user has.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Quota {
     /// The unique identifier.
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The quota value (aka limit).
     #[prost(double, tag="2")]
@@ -320,12 +294,10 @@ pub struct Quota {
     pub last_modified_at: ::core::option::Option<::pbjson_types::Timestamp>,
     /// The unique identifier of the subscription that the quota is associated with.
     #[prost(string, tag="8")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub subscription_id: ::prost::alloc::string::String,
 }
 /// *
 /// A response to a quota request. Contains a single quota object.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuotaResponse {
@@ -341,7 +313,6 @@ pub struct QuotaResponse {
 }
 /// *
 /// A response to a quota request containing a list of quotas.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QuotaList {
@@ -357,7 +328,6 @@ pub struct QuotaList {
 }
 /// *
 /// A request to add a quota to a subscription.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddQuotaRequest {
@@ -370,20 +340,17 @@ pub struct AddQuotaRequest {
 }
 /// *
 /// A representation of how much a user has used a resource type.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Usage {
     /// The unique identifier
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// How much the resource has been used.
     #[prost(double, tag="2")]
     pub usage: f64,
     /// The unique identifier for the subscription the usage is associated with.
     #[prost(string, tag="3")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub subscription_id: ::prost::alloc::string::String,
     /// The resource type the usage applies to.
     #[prost(message, optional, tag="4")]
@@ -403,7 +370,6 @@ pub struct Usage {
 }
 /// *
 /// A response to a request for a usage record.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UsageResponse {
@@ -419,7 +385,6 @@ pub struct UsageResponse {
 }
 /// *
 /// A response to a request for usage info containing multiple usage records.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UsageList {
@@ -435,13 +400,11 @@ pub struct UsageList {
 }
 /// *
 /// Representation of a subscription.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Subscription {
     /// The unique identifier 
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The date the subscription activates.
     #[prost(message, optional, tag="2")]
@@ -468,7 +431,6 @@ pub struct Subscription {
 }
 /// *
 /// A response to a request for a subscription.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscriptionResponse {
@@ -484,7 +446,6 @@ pub struct SubscriptionResponse {
 }
 /// *
 /// A response to a request for a list of subscriptions.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscriptionList {
@@ -500,7 +461,6 @@ pub struct SubscriptionList {
 }
 /// *
 /// A request to change a subscription.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ChangeSubscriptionRequest {
@@ -521,7 +481,6 @@ pub mod change_subscription_request {
 #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Plan {
         #[prost(string, tag="3")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         Uuid(::prost::alloc::string::String),
         #[prost(string, tag="4")]
         Name(::prost::alloc::string::String),
@@ -530,13 +489,11 @@ pub mod change_subscription_request {
 /// *
 /// Represents an add-on that can be applied to a subscription to provide a user
 /// with a change in a resource quota.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Addon {
     /// The unique identifier.
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The name of the add-on.
     #[prost(string, tag="2")]
@@ -556,7 +513,6 @@ pub struct Addon {
 }
 /// *
 /// A response to an add-on request. Contains a single add-on.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddonResponse {
@@ -572,7 +528,6 @@ pub struct AddonResponse {
 }
 /// *
 /// A response to an add-on request that contains a list of add-ons.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddonListResponse {
@@ -588,7 +543,6 @@ pub struct AddonListResponse {
 }
 /// *
 /// A request to add an add-on to the system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddAddonRequest {
@@ -601,7 +555,6 @@ pub struct AddAddonRequest {
 }
 /// *
 /// A request to get information about an add-on.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddonLookupRequest {
@@ -619,7 +572,6 @@ pub mod addon_lookup_request {
 #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Addon {
         #[prost(string, tag="2")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         Uuid(::prost::alloc::string::String),
         #[prost(string, tag="3")]
         Name(::prost::alloc::string::String),
@@ -629,7 +581,6 @@ pub mod addon_lookup_request {
 /// A request to update an add-on. The boolean fields are needed because Go (and
 /// probably other languages) needs a way to tell when to set a field to an empty
 /// string, since that's the zero value for a string.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateAddonRequest {
@@ -659,13 +610,11 @@ pub struct UpdateAddonRequest {
 /// SubscriptionAddon is an add-on that has been applied to a subscription. It 
 /// contains fields that can override the the default_amount and default_paid 
 /// fields in the subscription.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscriptionAddon {
     /// The unique identifier for the add-on
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The add-on used with the subscription. May only contain the add-on's 
     /// UUID in some circumstances.
@@ -688,7 +637,6 @@ pub struct SubscriptionAddon {
 }
 /// *
 /// Contains the information needed to update a subscription add-on.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateSubscriptionAddonRequest {
@@ -720,7 +668,6 @@ pub struct UpdateSubscriptionAddonRequest {
 }
 /// *
 /// Contains the subscription add-on returned by the request handler.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscriptionAddonResponse {
@@ -736,7 +683,6 @@ pub struct SubscriptionAddonResponse {
 }
 /// *
 /// Contains a list of subscription add-ons returned by the request handler.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SubscriptionAddonListResponse {
@@ -753,7 +699,6 @@ pub struct SubscriptionAddonListResponse {
 /// *
 /// Represents when a user's resource type usage exceeds their configured
 /// quota. Usually embedded in request and response message types.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Overage {
@@ -769,7 +714,6 @@ pub struct Overage {
 }
 /// *
 /// Returned by handlers in response to overage requests.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OverageResponse {
@@ -785,7 +729,6 @@ pub struct OverageResponse {
 }
 /// *
 /// A response message returned by handlers in response to overage related requests.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OverageList {
@@ -801,7 +744,6 @@ pub struct OverageList {
 }
 /// *
 /// A response message returned by handlers in response to overage related requests.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IsOverage {
@@ -817,7 +759,6 @@ pub struct IsOverage {
 }
 /// *
 /// A request for all of a user's current resource type overages.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AllUserOveragesRequest {
@@ -830,7 +771,6 @@ pub struct AllUserOveragesRequest {
 }
 /// *
 /// A request for a user's overages specific to a particular resource type.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserResourceOveragesRequest {
@@ -846,7 +786,6 @@ pub struct UserResourceOveragesRequest {
 }
 /// *
 /// A request to check if a user is in overage for a particular resource.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IsOverageRequest {
@@ -863,7 +802,6 @@ pub struct IsOverageRequest {
 /// *
 /// A request to add a usage to the system for a resource type consumed by the
 /// specified user.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddUsage {
@@ -882,7 +820,6 @@ pub struct AddUsage {
     #[prost(string, tag="6")]
     pub resource_unit: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUsages {
@@ -892,7 +829,6 @@ pub struct GetUsages {
     #[prost(string, tag="2")]
     pub username: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RequestByUsername {
@@ -902,7 +838,6 @@ pub struct RequestByUsername {
     #[prost(string, tag="2")]
     pub username: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RequestByUserId {
@@ -910,10 +845,8 @@ pub struct RequestByUserId {
     #[prost(message, optional, tag="1")]
     pub header: ::core::option::Option<super::header::Header>,
     #[prost(string, tag="2")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub user_id: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NoParamsRequest {
@@ -924,13 +857,11 @@ pub struct NoParamsRequest {
 /// *
 /// A representation of update operations, which are ways calling code can change
 /// quota and usage value.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateOperation {
     /// The unique identifier 
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// The name of the update operation
     #[prost(string, tag="2")]
@@ -938,13 +869,11 @@ pub struct UpdateOperation {
 }
 /// *
 /// A representation of an update to a quota or usage value.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Update {
     /// The unique identifier
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     /// Determines whether the update is for a "quota" or "usage". 
     #[prost(string, tag="2")]
@@ -967,7 +896,6 @@ pub struct Update {
 }
 /// *
 /// A request to add an update to the system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddUpdateRequest {
@@ -980,7 +908,6 @@ pub struct AddUpdateRequest {
 }
 /// *
 /// A response to requests to add an update to the system.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddUpdateResponse {
@@ -996,7 +923,6 @@ pub struct AddUpdateResponse {
 }
 /// *
 /// A request to get the list of updates generated by the specified user.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateListRequest {
@@ -1009,7 +935,6 @@ pub struct UpdateListRequest {
 }
 /// *
 /// A response containing the requested list of updates generated by a user.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateListResponse {

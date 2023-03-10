@@ -1,12 +1,10 @@
 // @generated
 /// *
 /// A user's information.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct User {
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub uuid: ::prost::alloc::string::String,
     #[prost(string, tag="2")]
     pub username: ::prost::alloc::string::String,
@@ -25,23 +23,19 @@ pub struct User {
 }
 /// Nested message and enum types in `User`.
 pub mod user {
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Preferences {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         pub uuid: ::prost::alloc::string::String,
         /// should come across as JSON.
         #[prost(string, tag="2")]
         pub preferences: ::prost::alloc::string::String,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Login {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         pub uuid: ::prost::alloc::string::String,
         #[prost(string, tag="2")]
         pub ip_address: ::prost::alloc::string::String,
@@ -52,12 +46,10 @@ pub mod user {
         #[prost(message, optional, tag="5")]
         pub logout_time: ::core::option::Option<::pbjson_types::Timestamp>,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct SavedSearches {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         pub uuid: ::prost::alloc::string::String,
         #[prost(string, tag="2")]
         pub saved_searches: ::prost::alloc::string::String,

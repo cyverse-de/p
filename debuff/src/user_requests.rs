@@ -1,7 +1,6 @@
 // @generated
 /// *
 /// A request for user information.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserLookupRequest {
@@ -30,7 +29,6 @@ pub struct UserLookupRequest {
 /// Nested message and enum types in `UserLookupRequest`.
 pub mod user_lookup_request {
     /// How to uniquely identify the user being looked up.
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum LookupIds {
@@ -39,7 +37,6 @@ pub mod user_lookup_request {
         #[prost(string, tag="2")]
         UserId(::prost::alloc::string::String),
         #[prost(string, tag="3")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         AnalysisId(::prost::alloc::string::String),
     }
 }

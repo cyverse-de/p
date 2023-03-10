@@ -1,5 +1,4 @@
 // @generated
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InteractiveApps {
@@ -8,10 +7,8 @@ pub struct InteractiveApps {
     #[prost(string, tag="2")]
     pub proxy_name: ::prost::alloc::string::String,
     #[prost(string, tag="3")]
-    #[validate(url)]
     pub frontend_url: ::prost::alloc::string::String,
     #[prost(string, tag="4")]
-    #[validate(url)]
     pub cas_url: ::prost::alloc::string::String,
     #[prost(string, tag="5")]
     pub cas_validate: ::prost::alloc::string::String,
@@ -26,15 +23,12 @@ pub struct InteractiveApps {
     #[prost(string, tag="10")]
     pub websocket_proto: ::prost::alloc::string::String,
     #[prost(string, tag="11")]
-    #[validate(url)]
     pub backend_url: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Container {
     #[prost(string, tag="1")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub id: ::prost::alloc::string::String,
     #[prost(message, repeated, tag="2")]
     pub volumes: ::prost::alloc::vec::Vec<container::Volume>,
@@ -77,7 +71,6 @@ pub struct Container {
 }
 /// Nested message and enum types in `Container`.
 pub mod container {
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Volume {
@@ -90,7 +83,6 @@ pub mod container {
         #[prost(string, tag="4")]
         pub mode: ::prost::alloc::string::String,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Port {
@@ -101,7 +93,6 @@ pub mod container {
         #[prost(bool, tag="3")]
         pub bind_to_host: bool,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Device {
@@ -112,7 +103,6 @@ pub mod container {
         #[prost(string, tag="3")]
         pub cgroup_permissions: ::prost::alloc::string::String,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct VolumesFrom {
@@ -125,7 +115,6 @@ pub mod container {
         #[prost(string, tag="4")]
         pub name_prefix: ::prost::alloc::string::String,
         #[prost(string, tag="5")]
-        #[validate(url)]
         pub url: ::prost::alloc::string::String,
         #[prost(string, tag="6")]
         pub host_path: ::prost::alloc::string::String,
@@ -134,12 +123,10 @@ pub mod container {
         #[prost(bool, tag="8")]
         pub read_only: bool,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Image {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         pub id: ::prost::alloc::string::String,
         #[prost(string, tag="2")]
         pub name: ::prost::alloc::string::String,
@@ -148,20 +135,17 @@ pub mod container {
         #[prost(string, tag="4")]
         pub auth: ::prost::alloc::string::String,
         #[prost(string, tag="5")]
-        #[validate(url)]
         pub url: ::prost::alloc::string::String,
         #[prost(string, tag="6")]
         pub osg_image_path: ::prost::alloc::string::String,
     }
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AnalysisRecord {
     #[prost(message, optional, tag="1")]
     pub header: ::core::option::Option<super::header::Header>,
     #[prost(string, tag="2")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub id: ::prost::alloc::string::String,
     #[prost(string, tag="3")]
     pub description: ::prost::alloc::string::String,
@@ -200,7 +184,6 @@ pub struct AnalysisRecord {
 }
 /// Nested message and enum types in `AnalysisRecord`.
 pub mod analysis_record {
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct BatchStatus {
@@ -214,7 +197,6 @@ pub mod analysis_record {
         pub submitted: i64,
     }
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AnalysisRecordLookupRequest {
@@ -227,12 +209,10 @@ pub struct AnalysisRecordLookupRequest {
 }
 /// Nested message and enum types in `AnalysisRecordLookupRequest`.
 pub mod analysis_record_lookup_request {
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum LookupIds {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         AnalysisId(::prost::alloc::string::String),
         #[prost(string, tag="2")]
         ExternalId(::prost::alloc::string::String),
@@ -242,7 +222,6 @@ pub mod analysis_record_lookup_request {
         Username(::prost::alloc::string::String),
     }
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AnalysisRecordResponse {
@@ -261,7 +240,6 @@ pub struct AnalysisRecordResponse {
 }
 /// Nested message and enum types in `AnalysisRecordResponse`.
 pub mod analysis_record_response {
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct StatusCountRecord {
@@ -271,7 +249,6 @@ pub mod analysis_record_response {
         pub status: ::prost::alloc::string::String,
     }
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AnalysisRecordList {
@@ -282,21 +259,18 @@ pub struct AnalysisRecordList {
     #[prost(message, optional, tag="7")]
     pub error: ::core::option::Option<super::svcerror::ServiceError>,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HtCondorExtraInfo {
     #[prost(string, tag="1")]
     pub extra_requirements: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Extra {
     #[prost(message, optional, tag="1")]
     pub ht_condor: ::core::option::Option<HtCondorExtraInfo>,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FileMetadata {
@@ -307,7 +281,6 @@ pub struct FileMetadata {
     #[prost(string, tag="3")]
     pub unit: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Step {
@@ -338,7 +311,6 @@ pub struct Step {
 }
 /// Nested message and enum types in `Step`.
 pub mod step {
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Component {
@@ -359,12 +331,10 @@ pub mod step {
         #[prost(bool, tag="8")]
         pub is_interactive: bool,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Param {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         pub id: ::prost::alloc::string::String,
         #[prost(string, tag="2")]
         pub name: ::prost::alloc::string::String,
@@ -377,7 +347,6 @@ pub mod step {
         #[prost(string, tag="6")]
         pub path: ::prost::alloc::string::String,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Config {
@@ -390,12 +359,10 @@ pub mod step {
         #[prost(message, repeated, tag="3")]
         pub outputs: ::prost::alloc::vec::Vec<Output>,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Input {
         #[prost(string, tag="1")]
-        #[validate(custom = "crate::custom_validator::validate_uuid")]
         pub id: ::prost::alloc::string::String,
         #[prost(string, tag="2")]
         pub ticket: ::prost::alloc::string::String,
@@ -412,7 +379,6 @@ pub mod step {
         #[prost(string, tag="8")]
         pub value: ::prost::alloc::string::String,
     }
-    #[derive(validator::Validate)]
     #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Output {
@@ -430,7 +396,6 @@ pub mod step {
         pub r#type: ::prost::alloc::string::String,
     }
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AnalysisSubmission {
@@ -519,7 +484,6 @@ pub struct AnalysisSubmission {
     #[prost(string, tag="39")]
     pub r#type: ::prost::alloc::string::String,
     #[prost(string, tag="40")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub user_id: ::prost::alloc::string::String,
     #[prost(string, repeated, tag="41")]
     pub user_groups: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
@@ -533,7 +497,6 @@ pub struct AnalysisSubmission {
     pub header: ::core::option::Option<super::header::Header>,
 }
 /// Since protocol buffers don't have a way to alias messages, we're copying the Analysis definition into Job and deprecating it.
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Job {
@@ -622,7 +585,6 @@ pub struct Job {
     #[prost(string, tag="39")]
     pub r#type: ::prost::alloc::string::String,
     #[prost(string, tag="40")]
-    #[validate(custom = "crate::custom_validator::validate_uuid")]
     pub user_id: ::prost::alloc::string::String,
     #[prost(string, repeated, tag="41")]
     pub user_groups: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
@@ -633,7 +595,6 @@ pub struct Job {
     #[prost(string, tag="44")]
     pub config_file: ::prost::alloc::string::String,
 }
-#[derive(validator::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AnalysisStatus {
