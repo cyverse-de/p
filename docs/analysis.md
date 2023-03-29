@@ -13,8 +13,9 @@
     - [InteractiveApps](#analysis-InteractiveApps)
   
 - [analysis_record.proto](#analysis_record-proto)
-    - [AnalysisRecord](#analysis-AnalysisRecord)
-    - [AnalysisRecord.BatchStatus](#analysis-AnalysisRecord-BatchStatus)
+    - [Analysis](#analysis-Analysis)
+    - [AnalysisType](#analysis-AnalysisType)
+    - [BatchStatus](#analysis-BatchStatus)
   
 - [analysis_requests.proto](#analysis_requests-proto)
     - [AnalysisRecordList](#analysis-AnalysisRecordList)
@@ -219,42 +220,59 @@
 
 
 
-<a name="analysis-AnalysisRecord"></a>
+<a name="analysis-Analysis"></a>
 
-### AnalysisRecord
+### Analysis
+An analysis in the system.
 
+An analysis is an app that was run by a user.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [header.Header](#header-Header) |  |  |
-| id | [string](#string) |  |  |
-| description | [string](#string) |  |  |
-| name | [string](#string) |  |  |
-| can_share | [bool](#bool) |  |  |
-| username | [string](#string) |  |  |
-| app_id | [string](#string) |  |  |
-| batch_status | [AnalysisRecord.BatchStatus](#analysis-AnalysisRecord-BatchStatus) |  |  |
-| system_id | [string](#string) |  |  |
-| app_disabled | [bool](#bool) |  |  |
-| batch | [bool](#bool) |  |  |
-| enddate | [string](#string) |  |  |
-| startdate | [string](#string) |  |  |
-| app_description | [string](#string) |  |  |
-| interactive_urls | [string](#string) | repeated |  |
-| wiki_url | [string](#string) |  |  |
-| notify | [bool](#bool) |  |  |
-| result_folder_id | [string](#string) |  |  |
-| app_name | [string](#string) |  |  |
+| id | [string](#string) |  | The UUID for the analysis |
+| description | [string](#string) |  | The description of the analysis provided by the user. |
+| name | [string](#string) |  | The name of the analysis provided by the user. |
+| app | [apps.App](#apps-App) |  | App information about the analysis. |
+| app_version | [apps.AppVersion](#apps-AppVersion) |  | App version information for the analysis. |
+| type | [AnalysisType](#analysis-AnalysisType) |  | The analysis type, which tells which environment to run the analysis in. |
+| result_folder_path | [string](#string) |  | The path to the folder containing analysis outputs. |
+| start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the analysis was submitted. |
+| end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the analyses finished. |
+| planned_end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the analysis was scheduled to end. |
+| status | [string](#string) |  | The status of the analysis |
+| deleted | [bool](#bool) |  | Whether the analysis was deleted. |
+| notify | [bool](#bool) |  | Whether notifications should be emitted on status changes. |
+| user | [user.User](#user-User) |  | The user that submitted the analysis. |
+| subdomain | [string](#string) |  | The subdomain assigned to the analysis for VICE. |
+| parent_id | [string](#string) |  | The UUID of the analysis that spawned this analysis. Used for batch analyses. |
+| millicores_reserved | [double](#double) |  | The number of millicores reserved for the analysis. |
 
 
 
 
 
 
-<a name="analysis-AnalysisRecord-BatchStatus"></a>
+<a name="analysis-AnalysisType"></a>
 
-### AnalysisRecord.BatchStatus
+### AnalysisType
+Corresponds to the job_types table in the database.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| id | [string](#string) |  | The UUID for the analysis type. |
+| name | [string](#string) |  | The name of the analysis type. |
+| system_id | [string](#string) |  | The kind of system the analysis should run on. |
+
+
+
+
+
+
+<a name="analysis-BatchStatus"></a>
+
+### BatchStatus
 
 
 
@@ -295,7 +313,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | header | [header.Header](#header-Header) |  |  |
-| analyses | [AnalysisRecord](#analysis-AnalysisRecord) | repeated |  |
+| analyses | [Analysis](#analysis-Analysis) | repeated |  |
 | error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
 
 
@@ -332,7 +350,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | header | [header.Header](#header-Header) |  |  |
-| analyses | [AnalysisRecord](#analysis-AnalysisRecord) | repeated |  |
+| analyses | [Analysis](#analysis-Analysis) | repeated |  |
 | timestamp | [string](#string) |  |  |
 | total | [int64](#int64) |  |  |
 | status_count | [AnalysisRecordResponse.StatusCountRecord](#analysis-AnalysisRecordResponse-StatusCountRecord) | repeated |  |

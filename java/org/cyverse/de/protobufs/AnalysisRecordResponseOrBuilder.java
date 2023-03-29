@@ -23,27 +23,27 @@ public interface AnalysisRecordResponseOrBuilder extends
   org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
-  java.util.List<org.cyverse.de.protobufs.AnalysisRecord> 
+  java.util.List<org.cyverse.de.protobufs.Analysis> 
       getAnalysesList();
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
-  org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index);
+  org.cyverse.de.protobufs.Analysis getAnalyses(int index);
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
   int getAnalysesCount();
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
-  java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
+  java.util.List<? extends org.cyverse.de.protobufs.AnalysisOrBuilder> 
       getAnalysesOrBuilderList();
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
-  org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
+  org.cyverse.de.protobufs.AnalysisOrBuilder getAnalysesOrBuilder(
       int index);
 
   /**

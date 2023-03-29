@@ -72,41 +72,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int ANALYSES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<org.cyverse.de.protobufs.AnalysisRecord> analyses_;
+  private java.util.List<org.cyverse.de.protobufs.Analysis> analyses_;
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<org.cyverse.de.protobufs.AnalysisRecord> getAnalysesList() {
+  public java.util.List<org.cyverse.de.protobufs.Analysis> getAnalysesList() {
     return analyses_;
   }
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
+  public java.util.List<? extends org.cyverse.de.protobufs.AnalysisOrBuilder> 
       getAnalysesOrBuilderList() {
     return analyses_;
   }
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
   @java.lang.Override
   public int getAnalysesCount() {
     return analyses_.size();
   }
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index) {
+  public org.cyverse.de.protobufs.Analysis getAnalyses(int index) {
     return analyses_.get(index);
   }
   /**
-   * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+   * <code>repeated .analysis.Analysis analyses = 2;</code>
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
+  public org.cyverse.de.protobufs.AnalysisOrBuilder getAnalysesOrBuilder(
       int index) {
     return analyses_.get(index);
   }
@@ -545,9 +545,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              org.cyverse.de.protobufs.AnalysisRecord m =
+              org.cyverse.de.protobufs.Analysis m =
                   input.readMessage(
-                      org.cyverse.de.protobufs.AnalysisRecord.parser(),
+                      org.cyverse.de.protobufs.Analysis.parser(),
                       extensionRegistry);
               if (analysesBuilder_ == null) {
                 ensureAnalysesIsMutable();
@@ -700,22 +700,22 @@ private static final long serialVersionUID = 0L;
       return headerBuilder_;
     }
 
-    private java.util.List<org.cyverse.de.protobufs.AnalysisRecord> analyses_ =
+    private java.util.List<org.cyverse.de.protobufs.Analysis> analyses_ =
       java.util.Collections.emptyList();
     private void ensureAnalysesIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        analyses_ = new java.util.ArrayList<org.cyverse.de.protobufs.AnalysisRecord>(analyses_);
+        analyses_ = new java.util.ArrayList<org.cyverse.de.protobufs.Analysis>(analyses_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.cyverse.de.protobufs.AnalysisRecord, org.cyverse.de.protobufs.AnalysisRecord.Builder, org.cyverse.de.protobufs.AnalysisRecordOrBuilder> analysesBuilder_;
+        org.cyverse.de.protobufs.Analysis, org.cyverse.de.protobufs.Analysis.Builder, org.cyverse.de.protobufs.AnalysisOrBuilder> analysesBuilder_;
 
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public java.util.List<org.cyverse.de.protobufs.AnalysisRecord> getAnalysesList() {
+    public java.util.List<org.cyverse.de.protobufs.Analysis> getAnalysesList() {
       if (analysesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(analyses_);
       } else {
@@ -723,7 +723,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public int getAnalysesCount() {
       if (analysesBuilder_ == null) {
@@ -733,9 +733,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public org.cyverse.de.protobufs.AnalysisRecord getAnalyses(int index) {
+    public org.cyverse.de.protobufs.Analysis getAnalyses(int index) {
       if (analysesBuilder_ == null) {
         return analyses_.get(index);
       } else {
@@ -743,10 +743,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder setAnalyses(
-        int index, org.cyverse.de.protobufs.AnalysisRecord value) {
+        int index, org.cyverse.de.protobufs.Analysis value) {
       if (analysesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -760,10 +760,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder setAnalyses(
-        int index, org.cyverse.de.protobufs.AnalysisRecord.Builder builderForValue) {
+        int index, org.cyverse.de.protobufs.Analysis.Builder builderForValue) {
       if (analysesBuilder_ == null) {
         ensureAnalysesIsMutable();
         analyses_.set(index, builderForValue.build());
@@ -774,9 +774,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public Builder addAnalyses(org.cyverse.de.protobufs.AnalysisRecord value) {
+    public Builder addAnalyses(org.cyverse.de.protobufs.Analysis value) {
       if (analysesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -790,10 +790,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder addAnalyses(
-        int index, org.cyverse.de.protobufs.AnalysisRecord value) {
+        int index, org.cyverse.de.protobufs.Analysis value) {
       if (analysesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -807,10 +807,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder addAnalyses(
-        org.cyverse.de.protobufs.AnalysisRecord.Builder builderForValue) {
+        org.cyverse.de.protobufs.Analysis.Builder builderForValue) {
       if (analysesBuilder_ == null) {
         ensureAnalysesIsMutable();
         analyses_.add(builderForValue.build());
@@ -821,10 +821,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder addAnalyses(
-        int index, org.cyverse.de.protobufs.AnalysisRecord.Builder builderForValue) {
+        int index, org.cyverse.de.protobufs.Analysis.Builder builderForValue) {
       if (analysesBuilder_ == null) {
         ensureAnalysesIsMutable();
         analyses_.add(index, builderForValue.build());
@@ -835,10 +835,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder addAllAnalyses(
-        java.lang.Iterable<? extends org.cyverse.de.protobufs.AnalysisRecord> values) {
+        java.lang.Iterable<? extends org.cyverse.de.protobufs.Analysis> values) {
       if (analysesBuilder_ == null) {
         ensureAnalysesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder clearAnalyses() {
       if (analysesBuilder_ == null) {
@@ -863,7 +863,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
     public Builder removeAnalyses(int index) {
       if (analysesBuilder_ == null) {
@@ -876,16 +876,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public org.cyverse.de.protobufs.AnalysisRecord.Builder getAnalysesBuilder(
+    public org.cyverse.de.protobufs.Analysis.Builder getAnalysesBuilder(
         int index) {
       return getAnalysesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public org.cyverse.de.protobufs.AnalysisRecordOrBuilder getAnalysesOrBuilder(
+    public org.cyverse.de.protobufs.AnalysisOrBuilder getAnalysesOrBuilder(
         int index) {
       if (analysesBuilder_ == null) {
         return analyses_.get(index);  } else {
@@ -893,9 +893,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public java.util.List<? extends org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
+    public java.util.List<? extends org.cyverse.de.protobufs.AnalysisOrBuilder> 
          getAnalysesOrBuilderList() {
       if (analysesBuilder_ != null) {
         return analysesBuilder_.getMessageOrBuilderList();
@@ -904,33 +904,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public org.cyverse.de.protobufs.AnalysisRecord.Builder addAnalysesBuilder() {
+    public org.cyverse.de.protobufs.Analysis.Builder addAnalysesBuilder() {
       return getAnalysesFieldBuilder().addBuilder(
-          org.cyverse.de.protobufs.AnalysisRecord.getDefaultInstance());
+          org.cyverse.de.protobufs.Analysis.getDefaultInstance());
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public org.cyverse.de.protobufs.AnalysisRecord.Builder addAnalysesBuilder(
+    public org.cyverse.de.protobufs.Analysis.Builder addAnalysesBuilder(
         int index) {
       return getAnalysesFieldBuilder().addBuilder(
-          index, org.cyverse.de.protobufs.AnalysisRecord.getDefaultInstance());
+          index, org.cyverse.de.protobufs.Analysis.getDefaultInstance());
     }
     /**
-     * <code>repeated .analysis.AnalysisRecord analyses = 2;</code>
+     * <code>repeated .analysis.Analysis analyses = 2;</code>
      */
-    public java.util.List<org.cyverse.de.protobufs.AnalysisRecord.Builder> 
+    public java.util.List<org.cyverse.de.protobufs.Analysis.Builder> 
          getAnalysesBuilderList() {
       return getAnalysesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.cyverse.de.protobufs.AnalysisRecord, org.cyverse.de.protobufs.AnalysisRecord.Builder, org.cyverse.de.protobufs.AnalysisRecordOrBuilder> 
+        org.cyverse.de.protobufs.Analysis, org.cyverse.de.protobufs.Analysis.Builder, org.cyverse.de.protobufs.AnalysisOrBuilder> 
         getAnalysesFieldBuilder() {
       if (analysesBuilder_ == null) {
         analysesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            org.cyverse.de.protobufs.AnalysisRecord, org.cyverse.de.protobufs.AnalysisRecord.Builder, org.cyverse.de.protobufs.AnalysisRecordOrBuilder>(
+            org.cyverse.de.protobufs.Analysis, org.cyverse.de.protobufs.Analysis.Builder, org.cyverse.de.protobufs.AnalysisOrBuilder>(
                 analyses_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),

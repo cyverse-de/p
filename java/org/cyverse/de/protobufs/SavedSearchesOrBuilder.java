@@ -3,8 +3,8 @@
 
 package org.cyverse.de.protobufs;
 
-public interface UserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:user.User)
+public interface SavedSearchesOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:user.SavedSearches)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -20,14 +20,14 @@ public interface UserOrBuilder extends
       getUuidBytes();
 
   /**
-   * <code>string username = 2;</code>
-   * @return The username.
+   * <code>string saved_searches = 2;</code>
+   * @return The savedSearches.
    */
-  java.lang.String getUsername();
+  java.lang.String getSavedSearches();
   /**
-   * <code>string username = 2;</code>
-   * @return The bytes for username.
+   * <code>string saved_searches = 2;</code>
+   * @return The bytes for savedSearches.
    */
   com.google.protobuf.ByteString
-      getUsernameBytes();
+      getSavedSearchesBytes();
 }

@@ -3,8 +3,8 @@
 
 package org.cyverse.de.protobufs;
 
-public interface UserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:user.User)
+public interface PreferencesOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:user.Preferences)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -20,14 +20,22 @@ public interface UserOrBuilder extends
       getUuidBytes();
 
   /**
-   * <code>string username = 2;</code>
-   * @return The username.
+   * <pre>
+   * should come across as JSON.
+   * </pre>
+   *
+   * <code>string preferences = 2;</code>
+   * @return The preferences.
    */
-  java.lang.String getUsername();
+  java.lang.String getPreferences();
   /**
-   * <code>string username = 2;</code>
-   * @return The bytes for username.
+   * <pre>
+   * should come across as JSON.
+   * </pre>
+   *
+   * <code>string preferences = 2;</code>
+   * @return The bytes for preferences.
    */
   com.google.protobuf.ByteString
-      getUsernameBytes();
+      getPreferencesBytes();
 }

@@ -142,60 +142,89 @@ pub mod container {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct AnalysisRecord {
-    #[prost(message, optional, tag="1")]
-    pub header: ::core::option::Option<super::header::Header>,
-    #[prost(string, tag="2")]
-    pub id: ::prost::alloc::string::String,
-    #[prost(string, tag="3")]
-    pub description: ::prost::alloc::string::String,
-    #[prost(string, tag="4")]
-    pub name: ::prost::alloc::string::String,
-    #[prost(bool, tag="5")]
-    pub can_share: bool,
-    #[prost(string, tag="6")]
-    pub username: ::prost::alloc::string::String,
-    #[prost(string, tag="7")]
-    pub app_id: ::prost::alloc::string::String,
-    #[prost(message, optional, tag="8")]
-    pub batch_status: ::core::option::Option<analysis_record::BatchStatus>,
-    #[prost(string, tag="9")]
-    pub system_id: ::prost::alloc::string::String,
-    #[prost(bool, tag="10")]
-    pub app_disabled: bool,
-    #[prost(bool, tag="11")]
-    pub batch: bool,
-    #[prost(string, tag="12")]
-    pub enddate: ::prost::alloc::string::String,
-    #[prost(string, tag="13")]
-    pub startdate: ::prost::alloc::string::String,
-    #[prost(string, tag="14")]
-    pub app_description: ::prost::alloc::string::String,
-    #[prost(string, repeated, tag="15")]
-    pub interactive_urls: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
-    #[prost(string, tag="16")]
-    pub wiki_url: ::prost::alloc::string::String,
-    #[prost(bool, tag="17")]
-    pub notify: bool,
-    #[prost(string, tag="18")]
-    pub result_folder_id: ::prost::alloc::string::String,
-    #[prost(string, tag="19")]
-    pub app_name: ::prost::alloc::string::String,
+pub struct BatchStatus {
+    #[prost(int64, tag="1")]
+    pub total: i64,
+    #[prost(int64, tag="2")]
+    pub completed: i64,
+    #[prost(int64, tag="3")]
+    pub running: i64,
+    #[prost(int64, tag="4")]
+    pub submitted: i64,
 }
-/// Nested message and enum types in `AnalysisRecord`.
-pub mod analysis_record {
-    #[allow(clippy::derive_partial_eq_without_eq)]
+/// *
+/// Corresponds to the job_types table in the database.
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
-    pub struct BatchStatus {
-        #[prost(int64, tag="1")]
-        pub total: i64,
-        #[prost(int64, tag="2")]
-        pub completed: i64,
-        #[prost(int64, tag="3")]
-        pub running: i64,
-        #[prost(int64, tag="4")]
-        pub submitted: i64,
-    }
+pub struct AnalysisType {
+    /// The UUID for the analysis type.
+    #[prost(string, tag="1")]
+    pub id: ::prost::alloc::string::String,
+    /// The name of the analysis type.
+    #[prost(string, tag="2")]
+    pub name: ::prost::alloc::string::String,
+    /// The kind of system the analysis should run on.
+    #[prost(string, tag="3")]
+    pub system_id: ::prost::alloc::string::String,
+}
+/// *
+/// An analysis in the system.
+///
+/// An analysis is an app that was run by a user.
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Analysis {
+    /// The UUID for the analysis
+    #[prost(string, tag="1")]
+    pub id: ::prost::alloc::string::String,
+    /// The description of the analysis provided by the user.
+    #[prost(string, tag="2")]
+    pub description: ::prost::alloc::string::String,
+    /// The name of the analysis provided by the user.
+    #[prost(string, tag="3")]
+    pub name: ::prost::alloc::string::String,
+    /// App information about the analysis.
+    #[prost(message, optional, tag="4")]
+    pub app: ::core::option::Option<super::apps::App>,
+    /// App version information for the analysis.
+    #[prost(message, optional, tag="5")]
+    pub app_version: ::core::option::Option<super::apps::AppVersion>,
+    /// The analysis type, which tells which environment to run the analysis in.
+    #[prost(message, optional, tag="6")]
+    pub r#type: ::core::option::Option<AnalysisType>,
+    /// The path to the folder containing analysis outputs.
+    #[prost(string, tag="7")]
+    pub result_folder_path: ::prost::alloc::string::String,
+    /// The date the analysis was submitted.
+    #[prost(message, optional, tag="8")]
+    pub start_date: ::core::option::Option<::pbjson_types::Timestamp>,
+    /// The date the analyses finished.
+    #[prost(message, optional, tag="9")]
+    pub end_date: ::core::option::Option<::pbjson_types::Timestamp>,
+    /// The date the analysis was scheduled to end.
+    #[prost(message, optional, tag="10")]
+    pub planned_end_date: ::core::option::Option<::pbjson_types::Timestamp>,
+    /// The status of the analysis
+    #[prost(string, tag="11")]
+    pub status: ::prost::alloc::string::String,
+    /// Whether the analysis was deleted.
+    #[prost(bool, tag="12")]
+    pub deleted: bool,
+    /// Whether notifications should be emitted on status changes.
+    #[prost(bool, tag="13")]
+    pub notify: bool,
+    /// The user that submitted the analysis.
+    #[prost(message, optional, tag="14")]
+    pub user: ::core::option::Option<super::user::User>,
+    /// The subdomain assigned to the analysis for VICE.
+    #[prost(string, tag="15")]
+    pub subdomain: ::prost::alloc::string::String,
+    /// The UUID of the analysis that spawned this analysis. Used for batch analyses.
+    #[prost(string, tag="16")]
+    pub parent_id: ::prost::alloc::string::String,
+    /// The number of millicores reserved for the analysis.
+    #[prost(double, tag="17")]
+    pub millicores_reserved: f64,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -228,7 +257,7 @@ pub struct AnalysisRecordResponse {
     #[prost(message, optional, tag="1")]
     pub header: ::core::option::Option<super::header::Header>,
     #[prost(message, repeated, tag="2")]
-    pub analyses: ::prost::alloc::vec::Vec<AnalysisRecord>,
+    pub analyses: ::prost::alloc::vec::Vec<Analysis>,
     #[prost(string, tag="3")]
     pub timestamp: ::prost::alloc::string::String,
     #[prost(int64, tag="4")]
@@ -255,7 +284,7 @@ pub struct AnalysisRecordList {
     #[prost(message, optional, tag="1")]
     pub header: ::core::option::Option<super::header::Header>,
     #[prost(message, repeated, tag="2")]
-    pub analyses: ::prost::alloc::vec::Vec<AnalysisRecord>,
+    pub analyses: ::prost::alloc::vec::Vec<Analysis>,
     #[prost(message, optional, tag="7")]
     pub error: ::core::option::Option<super::svcerror::ServiceError>,
 }

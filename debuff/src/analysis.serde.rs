@@ -1,5 +1,5 @@
 // @generated
-impl serde::Serialize for AnalysisRecord {
+impl serde::Serialize for Analysis {
     #[allow(deprecated)]
     fn serialize<S>(&self, serializer: S) -> std::result::Result<S::Ok, S::Error>
     where
@@ -7,9 +7,6 @@ impl serde::Serialize for AnalysisRecord {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.header.is_some() {
-            len += 1;
-        }
         if !self.id.is_empty() {
             len += 1;
         }
@@ -19,55 +16,49 @@ impl serde::Serialize for AnalysisRecord {
         if !self.name.is_empty() {
             len += 1;
         }
-        if self.can_share {
+        if self.app.is_some() {
             len += 1;
         }
-        if !self.username.is_empty() {
+        if self.app_version.is_some() {
             len += 1;
         }
-        if !self.app_id.is_empty() {
+        if self.r#type.is_some() {
             len += 1;
         }
-        if self.batch_status.is_some() {
+        if !self.result_folder_path.is_empty() {
             len += 1;
         }
-        if !self.system_id.is_empty() {
+        if self.start_date.is_some() {
             len += 1;
         }
-        if self.app_disabled {
+        if self.end_date.is_some() {
             len += 1;
         }
-        if self.batch {
+        if self.planned_end_date.is_some() {
             len += 1;
         }
-        if !self.enddate.is_empty() {
+        if !self.status.is_empty() {
             len += 1;
         }
-        if !self.startdate.is_empty() {
-            len += 1;
-        }
-        if !self.app_description.is_empty() {
-            len += 1;
-        }
-        if !self.interactive_urls.is_empty() {
-            len += 1;
-        }
-        if !self.wiki_url.is_empty() {
+        if self.deleted {
             len += 1;
         }
         if self.notify {
             len += 1;
         }
-        if !self.result_folder_id.is_empty() {
+        if self.user.is_some() {
             len += 1;
         }
-        if !self.app_name.is_empty() {
+        if !self.subdomain.is_empty() {
             len += 1;
         }
-        let mut struct_ser = serializer.serialize_struct("analysis.AnalysisRecord", len)?;
-        if let Some(v) = self.header.as_ref() {
-            struct_ser.serialize_field("header", v)?;
+        if !self.parent_id.is_empty() {
+            len += 1;
         }
+        if self.millicores_reserved != 0. {
+            len += 1;
+        }
+        let mut struct_ser = serializer.serialize_struct("analysis.Analysis", len)?;
         if !self.id.is_empty() {
             struct_ser.serialize_field("id", &self.id)?;
         }
@@ -77,104 +68,97 @@ impl serde::Serialize for AnalysisRecord {
         if !self.name.is_empty() {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if self.can_share {
-            struct_ser.serialize_field("can_share", &self.can_share)?;
+        if let Some(v) = self.app.as_ref() {
+            struct_ser.serialize_field("app", v)?;
         }
-        if !self.username.is_empty() {
-            struct_ser.serialize_field("username", &self.username)?;
+        if let Some(v) = self.app_version.as_ref() {
+            struct_ser.serialize_field("app_version", v)?;
         }
-        if !self.app_id.is_empty() {
-            struct_ser.serialize_field("app_id", &self.app_id)?;
+        if let Some(v) = self.r#type.as_ref() {
+            struct_ser.serialize_field("type", v)?;
         }
-        if let Some(v) = self.batch_status.as_ref() {
-            struct_ser.serialize_field("batch_status", v)?;
+        if !self.result_folder_path.is_empty() {
+            struct_ser.serialize_field("result_folder_path", &self.result_folder_path)?;
         }
-        if !self.system_id.is_empty() {
-            struct_ser.serialize_field("system_id", &self.system_id)?;
+        if let Some(v) = self.start_date.as_ref() {
+            struct_ser.serialize_field("start_date", v)?;
         }
-        if self.app_disabled {
-            struct_ser.serialize_field("app_disabled", &self.app_disabled)?;
+        if let Some(v) = self.end_date.as_ref() {
+            struct_ser.serialize_field("end_date", v)?;
         }
-        if self.batch {
-            struct_ser.serialize_field("batch", &self.batch)?;
+        if let Some(v) = self.planned_end_date.as_ref() {
+            struct_ser.serialize_field("planned_end_date", v)?;
         }
-        if !self.enddate.is_empty() {
-            struct_ser.serialize_field("enddate", &self.enddate)?;
+        if !self.status.is_empty() {
+            struct_ser.serialize_field("status", &self.status)?;
         }
-        if !self.startdate.is_empty() {
-            struct_ser.serialize_field("startdate", &self.startdate)?;
-        }
-        if !self.app_description.is_empty() {
-            struct_ser.serialize_field("app_description", &self.app_description)?;
-        }
-        if !self.interactive_urls.is_empty() {
-            struct_ser.serialize_field("interactive_urls", &self.interactive_urls)?;
-        }
-        if !self.wiki_url.is_empty() {
-            struct_ser.serialize_field("wiki_url", &self.wiki_url)?;
+        if self.deleted {
+            struct_ser.serialize_field("deleted", &self.deleted)?;
         }
         if self.notify {
             struct_ser.serialize_field("notify", &self.notify)?;
         }
-        if !self.result_folder_id.is_empty() {
-            struct_ser.serialize_field("resultfolderid", &self.result_folder_id)?;
+        if let Some(v) = self.user.as_ref() {
+            struct_ser.serialize_field("user", v)?;
         }
-        if !self.app_name.is_empty() {
-            struct_ser.serialize_field("app_name", &self.app_name)?;
+        if !self.subdomain.is_empty() {
+            struct_ser.serialize_field("subdomain", &self.subdomain)?;
+        }
+        if !self.parent_id.is_empty() {
+            struct_ser.serialize_field("parent_id", &self.parent_id)?;
+        }
+        if self.millicores_reserved != 0. {
+            struct_ser.serialize_field("millicore_reserved", &self.millicores_reserved)?;
         }
         struct_ser.end()
     }
 }
-impl<'de> serde::Deserialize<'de> for AnalysisRecord {
+impl<'de> serde::Deserialize<'de> for Analysis {
     #[allow(deprecated)]
     fn deserialize<D>(deserializer: D) -> std::result::Result<Self, D::Error>
     where
         D: serde::Deserializer<'de>,
     {
         const FIELDS: &[&str] = &[
-            "header",
             "id",
             "description",
             "name",
-            "can_share",
-            "username",
-            "app_id",
-            "batch_status",
-            "system_id",
-            "app_disabled",
-            "batch",
-            "enddate",
-            "startdate",
-            "app_description",
-            "interactive_urls",
-            "wiki_url",
+            "app",
+            "app_version",
+            "type",
+            "result_folder_path",
+            "start_date",
+            "end_date",
+            "planned_end_date",
+            "status",
+            "deleted",
             "notify",
-            "result_folder_id",
-            "resultfolderid",
-            "app_name",
+            "user",
+            "subdomain",
+            "parent_id",
+            "millicores_reserved",
+            "millicore_reserved",
         ];
 
         #[allow(clippy::enum_variant_names)]
         enum GeneratedField {
-            Header,
             Id,
             Description,
             Name,
-            CanShare,
-            Username,
-            AppId,
-            BatchStatus,
-            SystemId,
-            AppDisabled,
-            Batch,
-            Enddate,
-            Startdate,
-            AppDescription,
-            InteractiveUrls,
-            WikiUrl,
+            App,
+            AppVersion,
+            Type,
+            ResultFolderPath,
+            StartDate,
+            EndDate,
+            PlannedEndDate,
+            Status,
+            Deleted,
             Notify,
-            ResultFolderId,
-            AppName,
+            User,
+            Subdomain,
+            ParentId,
+            MillicoresReserved,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -196,25 +180,23 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecord {
                         E: serde::de::Error,
                     {
                         match value {
-                            "header" => Ok(GeneratedField::Header),
                             "id" => Ok(GeneratedField::Id),
                             "description" => Ok(GeneratedField::Description),
                             "name" => Ok(GeneratedField::Name),
-                            "can_share" => Ok(GeneratedField::CanShare),
-                            "username" => Ok(GeneratedField::Username),
-                            "app_id" => Ok(GeneratedField::AppId),
-                            "batch_status" => Ok(GeneratedField::BatchStatus),
-                            "system_id" => Ok(GeneratedField::SystemId),
-                            "app_disabled" => Ok(GeneratedField::AppDisabled),
-                            "batch" => Ok(GeneratedField::Batch),
-                            "enddate" => Ok(GeneratedField::Enddate),
-                            "startdate" => Ok(GeneratedField::Startdate),
-                            "app_description" => Ok(GeneratedField::AppDescription),
-                            "interactive_urls" => Ok(GeneratedField::InteractiveUrls),
-                            "wiki_url" => Ok(GeneratedField::WikiUrl),
+                            "app" => Ok(GeneratedField::App),
+                            "app_version" => Ok(GeneratedField::AppVersion),
+                            "type" => Ok(GeneratedField::Type),
+                            "result_folder_path" => Ok(GeneratedField::ResultFolderPath),
+                            "start_date" => Ok(GeneratedField::StartDate),
+                            "end_date" => Ok(GeneratedField::EndDate),
+                            "planned_end_date" => Ok(GeneratedField::PlannedEndDate),
+                            "status" => Ok(GeneratedField::Status),
+                            "deleted" => Ok(GeneratedField::Deleted),
                             "notify" => Ok(GeneratedField::Notify),
-                            "resultfolderid" | "result_folder_id" => Ok(GeneratedField::ResultFolderId),
-                            "app_name" => Ok(GeneratedField::AppName),
+                            "user" => Ok(GeneratedField::User),
+                            "subdomain" => Ok(GeneratedField::Subdomain),
+                            "parent_id" => Ok(GeneratedField::ParentId),
+                            "millicore_reserved" | "millicores_reserved" => Ok(GeneratedField::MillicoresReserved),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
                         }
                     }
@@ -224,43 +206,35 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecord {
         }
         struct GeneratedVisitor;
         impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
-            type Value = AnalysisRecord;
+            type Value = Analysis;
 
             fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                formatter.write_str("struct analysis.AnalysisRecord")
+                formatter.write_str("struct analysis.Analysis")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisRecord, V::Error>
+            fn visit_map<V>(self, mut map: V) -> std::result::Result<Analysis, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
-                let mut header__ = None;
                 let mut id__ = None;
                 let mut description__ = None;
                 let mut name__ = None;
-                let mut can_share__ = None;
-                let mut username__ = None;
-                let mut app_id__ = None;
-                let mut batch_status__ = None;
-                let mut system_id__ = None;
-                let mut app_disabled__ = None;
-                let mut batch__ = None;
-                let mut enddate__ = None;
-                let mut startdate__ = None;
-                let mut app_description__ = None;
-                let mut interactive_urls__ = None;
-                let mut wiki_url__ = None;
+                let mut app__ = None;
+                let mut app_version__ = None;
+                let mut r#type__ = None;
+                let mut result_folder_path__ = None;
+                let mut start_date__ = None;
+                let mut end_date__ = None;
+                let mut planned_end_date__ = None;
+                let mut status__ = None;
+                let mut deleted__ = None;
                 let mut notify__ = None;
-                let mut result_folder_id__ = None;
-                let mut app_name__ = None;
+                let mut user__ = None;
+                let mut subdomain__ = None;
+                let mut parent_id__ = None;
+                let mut millicores_reserved__ = None;
                 while let Some(k) = map.next_key()? {
                     match k {
-                        GeneratedField::Header => {
-                            if header__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("header"));
-                            }
-                            header__ = map.next_value()?;
-                        }
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
@@ -279,77 +253,59 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecord {
                             }
                             name__ = Some(map.next_value()?);
                         }
-                        GeneratedField::CanShare => {
-                            if can_share__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("can_share"));
+                        GeneratedField::App => {
+                            if app__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("app"));
                             }
-                            can_share__ = Some(map.next_value()?);
+                            app__ = map.next_value()?;
                         }
-                        GeneratedField::Username => {
-                            if username__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("username"));
+                        GeneratedField::AppVersion => {
+                            if app_version__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("app_version"));
                             }
-                            username__ = Some(map.next_value()?);
+                            app_version__ = map.next_value()?;
                         }
-                        GeneratedField::AppId => {
-                            if app_id__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("app_id"));
+                        GeneratedField::Type => {
+                            if r#type__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            app_id__ = Some(map.next_value()?);
+                            r#type__ = map.next_value()?;
                         }
-                        GeneratedField::BatchStatus => {
-                            if batch_status__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("batch_status"));
+                        GeneratedField::ResultFolderPath => {
+                            if result_folder_path__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("result_folder_path"));
                             }
-                            batch_status__ = map.next_value()?;
+                            result_folder_path__ = Some(map.next_value()?);
                         }
-                        GeneratedField::SystemId => {
-                            if system_id__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("system_id"));
+                        GeneratedField::StartDate => {
+                            if start_date__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("start_date"));
                             }
-                            system_id__ = Some(map.next_value()?);
+                            start_date__ = map.next_value()?;
                         }
-                        GeneratedField::AppDisabled => {
-                            if app_disabled__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("app_disabled"));
+                        GeneratedField::EndDate => {
+                            if end_date__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("end_date"));
                             }
-                            app_disabled__ = Some(map.next_value()?);
+                            end_date__ = map.next_value()?;
                         }
-                        GeneratedField::Batch => {
-                            if batch__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("batch"));
+                        GeneratedField::PlannedEndDate => {
+                            if planned_end_date__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("planned_end_date"));
                             }
-                            batch__ = Some(map.next_value()?);
+                            planned_end_date__ = map.next_value()?;
                         }
-                        GeneratedField::Enddate => {
-                            if enddate__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("enddate"));
+                        GeneratedField::Status => {
+                            if status__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("status"));
                             }
-                            enddate__ = Some(map.next_value()?);
+                            status__ = Some(map.next_value()?);
                         }
-                        GeneratedField::Startdate => {
-                            if startdate__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("startdate"));
+                        GeneratedField::Deleted => {
+                            if deleted__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("deleted"));
                             }
-                            startdate__ = Some(map.next_value()?);
-                        }
-                        GeneratedField::AppDescription => {
-                            if app_description__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("app_description"));
-                            }
-                            app_description__ = Some(map.next_value()?);
-                        }
-                        GeneratedField::InteractiveUrls => {
-                            if interactive_urls__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("interactive_urls"));
-                            }
-                            interactive_urls__ = Some(map.next_value()?);
-                        }
-                        GeneratedField::WikiUrl => {
-                            if wiki_url__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("wiki_url"));
-                            }
-                            wiki_url__ = Some(map.next_value()?);
+                            deleted__ = Some(map.next_value()?);
                         }
                         GeneratedField::Notify => {
                             if notify__.is_some() {
@@ -357,194 +313,56 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecord {
                             }
                             notify__ = Some(map.next_value()?);
                         }
-                        GeneratedField::ResultFolderId => {
-                            if result_folder_id__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("resultfolderid"));
+                        GeneratedField::User => {
+                            if user__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            result_folder_id__ = Some(map.next_value()?);
+                            user__ = map.next_value()?;
                         }
-                        GeneratedField::AppName => {
-                            if app_name__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("app_name"));
+                        GeneratedField::Subdomain => {
+                            if subdomain__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("subdomain"));
                             }
-                            app_name__ = Some(map.next_value()?);
+                            subdomain__ = Some(map.next_value()?);
+                        }
+                        GeneratedField::ParentId => {
+                            if parent_id__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("parent_id"));
+                            }
+                            parent_id__ = Some(map.next_value()?);
+                        }
+                        GeneratedField::MillicoresReserved => {
+                            if millicores_reserved__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("millicore_reserved"));
+                            }
+                            millicores_reserved__ = 
+                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
                         }
                     }
                 }
-                Ok(AnalysisRecord {
-                    header: header__,
+                Ok(Analysis {
                     id: id__.unwrap_or_default(),
                     description: description__.unwrap_or_default(),
                     name: name__.unwrap_or_default(),
-                    can_share: can_share__.unwrap_or_default(),
-                    username: username__.unwrap_or_default(),
-                    app_id: app_id__.unwrap_or_default(),
-                    batch_status: batch_status__,
-                    system_id: system_id__.unwrap_or_default(),
-                    app_disabled: app_disabled__.unwrap_or_default(),
-                    batch: batch__.unwrap_or_default(),
-                    enddate: enddate__.unwrap_or_default(),
-                    startdate: startdate__.unwrap_or_default(),
-                    app_description: app_description__.unwrap_or_default(),
-                    interactive_urls: interactive_urls__.unwrap_or_default(),
-                    wiki_url: wiki_url__.unwrap_or_default(),
+                    app: app__,
+                    app_version: app_version__,
+                    r#type: r#type__,
+                    result_folder_path: result_folder_path__.unwrap_or_default(),
+                    start_date: start_date__,
+                    end_date: end_date__,
+                    planned_end_date: planned_end_date__,
+                    status: status__.unwrap_or_default(),
+                    deleted: deleted__.unwrap_or_default(),
                     notify: notify__.unwrap_or_default(),
-                    result_folder_id: result_folder_id__.unwrap_or_default(),
-                    app_name: app_name__.unwrap_or_default(),
+                    user: user__,
+                    subdomain: subdomain__.unwrap_or_default(),
+                    parent_id: parent_id__.unwrap_or_default(),
+                    millicores_reserved: millicores_reserved__.unwrap_or_default(),
                 })
             }
         }
-        deserializer.deserialize_struct("analysis.AnalysisRecord", FIELDS, GeneratedVisitor)
-    }
-}
-impl serde::Serialize for analysis_record::BatchStatus {
-    #[allow(deprecated)]
-    fn serialize<S>(&self, serializer: S) -> std::result::Result<S::Ok, S::Error>
-    where
-        S: serde::Serializer,
-    {
-        use serde::ser::SerializeStruct;
-        let mut len = 0;
-        if self.total != 0 {
-            len += 1;
-        }
-        if self.completed != 0 {
-            len += 1;
-        }
-        if self.running != 0 {
-            len += 1;
-        }
-        if self.submitted != 0 {
-            len += 1;
-        }
-        let mut struct_ser = serializer.serialize_struct("analysis.AnalysisRecord.BatchStatus", len)?;
-        if self.total != 0 {
-            struct_ser.serialize_field("total", ToString::to_string(&self.total).as_str())?;
-        }
-        if self.completed != 0 {
-            struct_ser.serialize_field("completed", ToString::to_string(&self.completed).as_str())?;
-        }
-        if self.running != 0 {
-            struct_ser.serialize_field("running", ToString::to_string(&self.running).as_str())?;
-        }
-        if self.submitted != 0 {
-            struct_ser.serialize_field("submitted", ToString::to_string(&self.submitted).as_str())?;
-        }
-        struct_ser.end()
-    }
-}
-impl<'de> serde::Deserialize<'de> for analysis_record::BatchStatus {
-    #[allow(deprecated)]
-    fn deserialize<D>(deserializer: D) -> std::result::Result<Self, D::Error>
-    where
-        D: serde::Deserializer<'de>,
-    {
-        const FIELDS: &[&str] = &[
-            "total",
-            "completed",
-            "running",
-            "submitted",
-        ];
-
-        #[allow(clippy::enum_variant_names)]
-        enum GeneratedField {
-            Total,
-            Completed,
-            Running,
-            Submitted,
-        }
-        impl<'de> serde::Deserialize<'de> for GeneratedField {
-            fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
-            where
-                D: serde::Deserializer<'de>,
-            {
-                struct GeneratedVisitor;
-
-                impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
-                    type Value = GeneratedField;
-
-                    fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                        write!(formatter, "expected one of: {:?}", &FIELDS)
-                    }
-
-                    #[allow(unused_variables)]
-                    fn visit_str<E>(self, value: &str) -> std::result::Result<GeneratedField, E>
-                    where
-                        E: serde::de::Error,
-                    {
-                        match value {
-                            "total" => Ok(GeneratedField::Total),
-                            "completed" => Ok(GeneratedField::Completed),
-                            "running" => Ok(GeneratedField::Running),
-                            "submitted" => Ok(GeneratedField::Submitted),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
-                        }
-                    }
-                }
-                deserializer.deserialize_identifier(GeneratedVisitor)
-            }
-        }
-        struct GeneratedVisitor;
-        impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
-            type Value = analysis_record::BatchStatus;
-
-            fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                formatter.write_str("struct analysis.AnalysisRecord.BatchStatus")
-            }
-
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<analysis_record::BatchStatus, V::Error>
-                where
-                    V: serde::de::MapAccess<'de>,
-            {
-                let mut total__ = None;
-                let mut completed__ = None;
-                let mut running__ = None;
-                let mut submitted__ = None;
-                while let Some(k) = map.next_key()? {
-                    match k {
-                        GeneratedField::Total => {
-                            if total__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("total"));
-                            }
-                            total__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
-                            ;
-                        }
-                        GeneratedField::Completed => {
-                            if completed__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("completed"));
-                            }
-                            completed__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
-                            ;
-                        }
-                        GeneratedField::Running => {
-                            if running__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("running"));
-                            }
-                            running__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
-                            ;
-                        }
-                        GeneratedField::Submitted => {
-                            if submitted__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("submitted"));
-                            }
-                            submitted__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
-                            ;
-                        }
-                    }
-                }
-                Ok(analysis_record::BatchStatus {
-                    total: total__.unwrap_or_default(),
-                    completed: completed__.unwrap_or_default(),
-                    running: running__.unwrap_or_default(),
-                    submitted: submitted__.unwrap_or_default(),
-                })
-            }
-        }
-        deserializer.deserialize_struct("analysis.AnalysisRecord.BatchStatus", FIELDS, GeneratedVisitor)
+        deserializer.deserialize_struct("analysis.Analysis", FIELDS, GeneratedVisitor)
     }
 }
 impl serde::Serialize for AnalysisRecordList {
@@ -2191,6 +2009,281 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
             }
         }
         deserializer.deserialize_struct("analysis.AnalysisSubmission", FIELDS, GeneratedVisitor)
+    }
+}
+impl serde::Serialize for AnalysisType {
+    #[allow(deprecated)]
+    fn serialize<S>(&self, serializer: S) -> std::result::Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        use serde::ser::SerializeStruct;
+        let mut len = 0;
+        if !self.id.is_empty() {
+            len += 1;
+        }
+        if !self.name.is_empty() {
+            len += 1;
+        }
+        if !self.system_id.is_empty() {
+            len += 1;
+        }
+        let mut struct_ser = serializer.serialize_struct("analysis.AnalysisType", len)?;
+        if !self.id.is_empty() {
+            struct_ser.serialize_field("id", &self.id)?;
+        }
+        if !self.name.is_empty() {
+            struct_ser.serialize_field("name", &self.name)?;
+        }
+        if !self.system_id.is_empty() {
+            struct_ser.serialize_field("system_id", &self.system_id)?;
+        }
+        struct_ser.end()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AnalysisType {
+    #[allow(deprecated)]
+    fn deserialize<D>(deserializer: D) -> std::result::Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        const FIELDS: &[&str] = &[
+            "id",
+            "name",
+            "system_id",
+        ];
+
+        #[allow(clippy::enum_variant_names)]
+        enum GeneratedField {
+            Id,
+            Name,
+            SystemId,
+        }
+        impl<'de> serde::Deserialize<'de> for GeneratedField {
+            fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
+            where
+                D: serde::Deserializer<'de>,
+            {
+                struct GeneratedVisitor;
+
+                impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
+                    type Value = GeneratedField;
+
+                    fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                        write!(formatter, "expected one of: {:?}", &FIELDS)
+                    }
+
+                    #[allow(unused_variables)]
+                    fn visit_str<E>(self, value: &str) -> std::result::Result<GeneratedField, E>
+                    where
+                        E: serde::de::Error,
+                    {
+                        match value {
+                            "id" => Ok(GeneratedField::Id),
+                            "name" => Ok(GeneratedField::Name),
+                            "system_id" => Ok(GeneratedField::SystemId),
+                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                        }
+                    }
+                }
+                deserializer.deserialize_identifier(GeneratedVisitor)
+            }
+        }
+        struct GeneratedVisitor;
+        impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
+            type Value = AnalysisType;
+
+            fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                formatter.write_str("struct analysis.AnalysisType")
+            }
+
+            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisType, V::Error>
+                where
+                    V: serde::de::MapAccess<'de>,
+            {
+                let mut id__ = None;
+                let mut name__ = None;
+                let mut system_id__ = None;
+                while let Some(k) = map.next_key()? {
+                    match k {
+                        GeneratedField::Id => {
+                            if id__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("id"));
+                            }
+                            id__ = Some(map.next_value()?);
+                        }
+                        GeneratedField::Name => {
+                            if name__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("name"));
+                            }
+                            name__ = Some(map.next_value()?);
+                        }
+                        GeneratedField::SystemId => {
+                            if system_id__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("system_id"));
+                            }
+                            system_id__ = Some(map.next_value()?);
+                        }
+                    }
+                }
+                Ok(AnalysisType {
+                    id: id__.unwrap_or_default(),
+                    name: name__.unwrap_or_default(),
+                    system_id: system_id__.unwrap_or_default(),
+                })
+            }
+        }
+        deserializer.deserialize_struct("analysis.AnalysisType", FIELDS, GeneratedVisitor)
+    }
+}
+impl serde::Serialize for BatchStatus {
+    #[allow(deprecated)]
+    fn serialize<S>(&self, serializer: S) -> std::result::Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        use serde::ser::SerializeStruct;
+        let mut len = 0;
+        if self.total != 0 {
+            len += 1;
+        }
+        if self.completed != 0 {
+            len += 1;
+        }
+        if self.running != 0 {
+            len += 1;
+        }
+        if self.submitted != 0 {
+            len += 1;
+        }
+        let mut struct_ser = serializer.serialize_struct("analysis.BatchStatus", len)?;
+        if self.total != 0 {
+            struct_ser.serialize_field("total", ToString::to_string(&self.total).as_str())?;
+        }
+        if self.completed != 0 {
+            struct_ser.serialize_field("completed", ToString::to_string(&self.completed).as_str())?;
+        }
+        if self.running != 0 {
+            struct_ser.serialize_field("running", ToString::to_string(&self.running).as_str())?;
+        }
+        if self.submitted != 0 {
+            struct_ser.serialize_field("submitted", ToString::to_string(&self.submitted).as_str())?;
+        }
+        struct_ser.end()
+    }
+}
+impl<'de> serde::Deserialize<'de> for BatchStatus {
+    #[allow(deprecated)]
+    fn deserialize<D>(deserializer: D) -> std::result::Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        const FIELDS: &[&str] = &[
+            "total",
+            "completed",
+            "running",
+            "submitted",
+        ];
+
+        #[allow(clippy::enum_variant_names)]
+        enum GeneratedField {
+            Total,
+            Completed,
+            Running,
+            Submitted,
+        }
+        impl<'de> serde::Deserialize<'de> for GeneratedField {
+            fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
+            where
+                D: serde::Deserializer<'de>,
+            {
+                struct GeneratedVisitor;
+
+                impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
+                    type Value = GeneratedField;
+
+                    fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                        write!(formatter, "expected one of: {:?}", &FIELDS)
+                    }
+
+                    #[allow(unused_variables)]
+                    fn visit_str<E>(self, value: &str) -> std::result::Result<GeneratedField, E>
+                    where
+                        E: serde::de::Error,
+                    {
+                        match value {
+                            "total" => Ok(GeneratedField::Total),
+                            "completed" => Ok(GeneratedField::Completed),
+                            "running" => Ok(GeneratedField::Running),
+                            "submitted" => Ok(GeneratedField::Submitted),
+                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                        }
+                    }
+                }
+                deserializer.deserialize_identifier(GeneratedVisitor)
+            }
+        }
+        struct GeneratedVisitor;
+        impl<'de> serde::de::Visitor<'de> for GeneratedVisitor {
+            type Value = BatchStatus;
+
+            fn expecting(&self, formatter: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                formatter.write_str("struct analysis.BatchStatus")
+            }
+
+            fn visit_map<V>(self, mut map: V) -> std::result::Result<BatchStatus, V::Error>
+                where
+                    V: serde::de::MapAccess<'de>,
+            {
+                let mut total__ = None;
+                let mut completed__ = None;
+                let mut running__ = None;
+                let mut submitted__ = None;
+                while let Some(k) = map.next_key()? {
+                    match k {
+                        GeneratedField::Total => {
+                            if total__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("total"));
+                            }
+                            total__ = 
+                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
+                        }
+                        GeneratedField::Completed => {
+                            if completed__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("completed"));
+                            }
+                            completed__ = 
+                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
+                        }
+                        GeneratedField::Running => {
+                            if running__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("running"));
+                            }
+                            running__ = 
+                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
+                        }
+                        GeneratedField::Submitted => {
+                            if submitted__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("submitted"));
+                            }
+                            submitted__ = 
+                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
+                        }
+                    }
+                }
+                Ok(BatchStatus {
+                    total: total__.unwrap_or_default(),
+                    completed: completed__.unwrap_or_default(),
+                    running: running__.unwrap_or_default(),
+                    submitted: submitted__.unwrap_or_default(),
+                })
+            }
+        }
+        deserializer.deserialize_struct("analysis.BatchStatus", FIELDS, GeneratedVisitor)
     }
 }
 impl serde::Serialize for Container {

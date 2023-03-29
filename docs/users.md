@@ -4,10 +4,10 @@
 ## Table of Contents
 
 - [user.proto](#user-proto)
+    - [Login](#user-Login)
+    - [Preferences](#user-Preferences)
+    - [SavedSearches](#user-SavedSearches)
     - [User](#user-User)
-    - [User.Login](#user-User-Login)
-    - [User.Preferences](#user-User-Preferences)
-    - [User.SavedSearches](#user-User-SavedSearches)
   
 - [user_requests.proto](#user_requests-proto)
     - [UserLookupRequest](#user_requests-UserLookupRequest)
@@ -23,31 +23,9 @@
 
 
 
-<a name="user-User"></a>
+<a name="user-Login"></a>
 
-### User
-A user&#39;s information.
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
-| username | [string](#string) |  |  |
-| preferences | [User.Preferences](#user-User-Preferences) |  |  |
-| logins | [User.Login](#user-User-Login) | repeated |  |
-| login_count | [uint32](#uint32) |  |  |
-| saved_searches | [User.SavedSearches](#user-User-SavedSearches) |  |  |
-| header | [header.Header](#header-Header) |  |  |
-| error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
-
-
-
-
-
-
-<a name="user-User-Login"></a>
-
-### User.Login
+### Login
 
 
 
@@ -64,9 +42,9 @@ A user&#39;s information.
 
 
 
-<a name="user-User-Preferences"></a>
+<a name="user-Preferences"></a>
 
-### User.Preferences
+### Preferences
 
 
 
@@ -80,9 +58,9 @@ A user&#39;s information.
 
 
 
-<a name="user-User-SavedSearches"></a>
+<a name="user-SavedSearches"></a>
 
-### User.SavedSearches
+### SavedSearches
 
 
 
@@ -90,6 +68,22 @@ A user&#39;s information.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  |  |
 | saved_searches | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="user-User"></a>
+
+### User
+A user&#39;s information.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) |  |  |
+| username | [string](#string) |  |  |
 
 
 

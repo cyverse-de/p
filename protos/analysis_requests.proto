@@ -31,7 +31,7 @@ message AnalysisRecordResponse {
         string status = 2;
     }
     header.Header header = 1;
-    repeated AnalysisRecord analyses = 2;
+    repeated Analysis analyses = 2;
     string timestamp = 3;
     int64 total = 4;
     repeated StatusCountRecord status_count = 5 [json_name = "status-count"];
@@ -41,6 +41,6 @@ message AnalysisRecordResponse {
 
 message AnalysisRecordList {
     header.Header header = 1;
-    repeated AnalysisRecord analyses = 2;
+    repeated Analysis analyses = 2;
     svcerror.ServiceError error = 7;
 }
