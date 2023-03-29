@@ -1,4 +1,4 @@
-mod analysis;
+pub mod analysis;
 pub mod header;
 pub mod qms;
 pub mod svcerror;
