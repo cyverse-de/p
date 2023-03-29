@@ -119,7 +119,7 @@ with a change in a resource quota.
 | name | [string](#string) |  | The name of the add-on. |
 | description | [string](#string) |  | The description of the add-on. |
 | resource_type | [ResourceType](#qms-ResourceType) |  | The resource type of the add-on. |
-| default_amount | [float](#float) |  | How much of the resource type is added to the quota by the add-on. |
+| default_amount | [double](#double) |  | How much of the resource type is added to the quota by the add-on. |
 | default_paid | [bool](#bool) |  | Whether a user must pay for the add-on. Not whether the user has paid. |
 
 
@@ -191,7 +191,7 @@ fields in the subscription.
 | uuid | [string](#string) |  | The unique identifier for the add-on |
 | addon | [Addon](#qms-Addon) |  | The add-on used with the subscription. May only contain the add-on&#39;s UUID in some circumstances. |
 | subscription | [Subscription](#qms-Subscription) |  | The subscription the add-on was applied to. May only contain the add-on&#39;s UUID in some circumstances. |
-| amount | [float](#float) |  | The amount of the resource applied by the add-on. This should default to the amount contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
+| amount | [double](#double) |  | The amount of the resource applied by the add-on. This should default to the amount contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
 | paid | [bool](#bool) |  | Whether the subscription add-on costs money. This should default to the same paid value contained in the add-on definition, but can be overridden, which is whay it&#39;s a separate field here. |
 
 
@@ -319,8 +319,8 @@ quota. Usually embedded in request and response message types.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | resource_name | [string](#string) |  | The type of resource that is in overage. Usually data.size of cpu.hours. |
-| quota | [float](#float) |  | The configured quota value for the resource type. |
-| usage | [float](#float) |  | The actual usage value for the resource type. |
+| quota | [double](#double) |  | The configured quota value for the resource type. |
+| usage | [double](#double) |  | The actual usage value for the resource type. |
 
 
 
@@ -489,7 +489,7 @@ as plan quota defaults.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier/primary key for the quota default. |
-| quota_value | [float](#float) |  | The value of the quota default. |
+| quota_value | [double](#double) |  | The value of the quota default. |
 | resource_type | [ResourceType](#qms-ResourceType) |  | The resource type the quota applies to. |
 
 
@@ -575,7 +575,7 @@ default associated with the plan the user has.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier. |
-| quota | [float](#float) |  | The quota value (aka limit). |
+| quota | [double](#double) |  | The quota value (aka limit). |
 | resource_type | [ResourceType](#qms-ResourceType) |  | The resource type the quota value applies to. |
 | CreatedBy | [string](#string) |  | A freeform text field containing info about who created the quota. |
 | CreatedAt | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | When the quota was created. |

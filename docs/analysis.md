@@ -78,7 +78,6 @@
 | ports | [Container.Port](#analysis-Container-Port) | repeated |  |
 | skip_tmp_mount | [bool](#bool) |  |  |
 | uid | [int32](#int32) |  |  |
-| header | [header.Header](#header-Header) |  |  |
 
 
 
@@ -198,7 +197,6 @@
 | websocket_port | [string](#string) |  |  |
 | websocket_proto | [string](#string) |  |  |
 | backend_url | [string](#string) |  |  |
-| header | [header.Header](#header-Header) |  |  |
 
 
 

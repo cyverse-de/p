@@ -37,6 +37,7 @@ You can install `protoc-gen-doc` with the `go install` command:
 go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
 ```
 
+
 ### Install Rust and Cargo on MacOS with zsh
 
 Instructions originally found at https://stackoverflow.com/a/68617314.
@@ -76,6 +77,10 @@ cargo install protoc-gen-prost
 
 That will install the `protoc-gen-prost` binary in `~/.cargo/bin`. You'll want to
 put that directory in your `$PATH` if it isn't already there.
+
+Next, install `protoc-gen-prost-serde` with Cargo:
+```bash
+cargo install protoc-gen-prost-serde```
 
 ## Repo Layout
 

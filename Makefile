@@ -48,8 +48,6 @@ clean:
 	rm -rf ./go/*
 	rm -rf ./java/*
 	rm -rf ./docs/*
-	rm ./debuff/src/debuff.rs
-	rm ./debuff/src/debuff.serde.rs
 	lein clean
 
 godirs: $(ls ./go/)
