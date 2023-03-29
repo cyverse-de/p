@@ -22,7 +22,7 @@ impl serde::Serialize for Analysis {
         if self.app_version.is_some() {
             len += 1;
         }
-        if self.r#type.is_some() {
+        if self.kind.is_some() {
             len += 1;
         }
         if !self.result_folder_path.is_empty() {
@@ -74,7 +74,7 @@ impl serde::Serialize for Analysis {
         if let Some(v) = self.app_version.as_ref() {
             struct_ser.serialize_field("app_version", v)?;
         }
-        if let Some(v) = self.r#type.as_ref() {
+        if let Some(v) = self.kind.as_ref() {
             struct_ser.serialize_field("type", v)?;
         }
         if !self.result_folder_path.is_empty() {
@@ -125,6 +125,7 @@ impl<'de> serde::Deserialize<'de> for Analysis {
             "name",
             "app",
             "app_version",
+            "kind",
             "type",
             "result_folder_path",
             "start_date",
@@ -147,7 +148,7 @@ impl<'de> serde::Deserialize<'de> for Analysis {
             Name,
             App,
             AppVersion,
-            Type,
+            Kind,
             ResultFolderPath,
             StartDate,
             EndDate,
@@ -185,7 +186,7 @@ impl<'de> serde::Deserialize<'de> for Analysis {
                             "name" => Ok(GeneratedField::Name),
                             "app" => Ok(GeneratedField::App),
                             "app_version" => Ok(GeneratedField::AppVersion),
-                            "type" => Ok(GeneratedField::Type),
+                            "type" | "kind" => Ok(GeneratedField::Kind),
                             "result_folder_path" => Ok(GeneratedField::ResultFolderPath),
                             "start_date" => Ok(GeneratedField::StartDate),
                             "end_date" => Ok(GeneratedField::EndDate),
@@ -221,7 +222,7 @@ impl<'de> serde::Deserialize<'de> for Analysis {
                 let mut name__ = None;
                 let mut app__ = None;
                 let mut app_version__ = None;
-                let mut r#type__ = None;
+                let mut kind__ = None;
                 let mut result_folder_path__ = None;
                 let mut start_date__ = None;
                 let mut end_date__ = None;
@@ -265,11 +266,11 @@ impl<'de> serde::Deserialize<'de> for Analysis {
                             }
                             app_version__ = map.next_value()?;
                         }
-                        GeneratedField::Type => {
-                            if r#type__.is_some() {
+                        GeneratedField::Kind => {
+                            if kind__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = map.next_value()?;
+                            kind__ = map.next_value()?;
                         }
                         GeneratedField::ResultFolderPath => {
                             if result_folder_path__.is_some() {
@@ -347,7 +348,7 @@ impl<'de> serde::Deserialize<'de> for Analysis {
                     name: name__.unwrap_or_default(),
                     app: app__,
                     app_version: app_version__,
-                    r#type: r#type__,
+                    kind: kind__,
                     result_folder_path: result_folder_path__.unwrap_or_default(),
                     start_date: start_date__,
                     end_date: end_date__,

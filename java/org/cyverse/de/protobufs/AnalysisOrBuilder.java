@@ -126,27 +126,27 @@ public interface AnalysisOrBuilder extends
    * The analysis type, which tells which environment to run the analysis in.
    * </pre>
    *
-   * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
-   * @return Whether the type field is set.
+   * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
+   * @return Whether the kind field is set.
    */
-  boolean hasType();
+  boolean hasKind();
   /**
    * <pre>
    * The analysis type, which tells which environment to run the analysis in.
    * </pre>
    *
-   * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
-   * @return The type.
+   * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
+   * @return The kind.
    */
-  org.cyverse.de.protobufs.AnalysisType getType();
+  org.cyverse.de.protobufs.AnalysisType getKind();
   /**
    * <pre>
    * The analysis type, which tells which environment to run the analysis in.
    * </pre>
    *
-   * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+   * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
    */
-  org.cyverse.de.protobufs.AnalysisTypeOrBuilder getTypeOrBuilder();
+  org.cyverse.de.protobufs.AnalysisTypeOrBuilder getKindOrBuilder();
 
   /**
    * <pre>

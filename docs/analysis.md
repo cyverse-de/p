@@ -235,7 +235,7 @@ An analysis is an app that was run by a user.
 | name | [string](#string) |  | The name of the analysis provided by the user. |
 | app | [apps.App](#apps-App) |  | App information about the analysis. |
 | app_version | [apps.AppVersion](#apps-AppVersion) |  | App version information for the analysis. |
-| type | [AnalysisType](#analysis-AnalysisType) |  | The analysis type, which tells which environment to run the analysis in. |
+| kind | [AnalysisType](#analysis-AnalysisType) |  | The analysis type, which tells which environment to run the analysis in. |
 | result_folder_path | [string](#string) |  | The path to the folder containing analysis outputs. |
 | start_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the analysis was submitted. |
 | end_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date the analyses finished. |

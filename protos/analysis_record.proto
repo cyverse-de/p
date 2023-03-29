@@ -55,7 +55,7 @@ message Analysis {
     apps.AppVersion app_version = 5 [json_name = "app_version"];
 
     // The analysis type, which tells which environment to run the analysis in.
-    AnalysisType type = 6 [json_name = "type"];
+    AnalysisType kind = 6 [json_name = "type"];
 
     // The path to the folder containing analysis outputs.
     string result_folder_path = 7 [json_name = "result_folder_path"];

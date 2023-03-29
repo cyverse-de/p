@@ -191,7 +191,7 @@ pub struct Analysis {
     pub app_version: ::core::option::Option<super::apps::AppVersion>,
     /// The analysis type, which tells which environment to run the analysis in.
     #[prost(message, optional, tag="6")]
-    pub r#type: ::core::option::Option<AnalysisType>,
+    pub kind: ::core::option::Option<AnalysisType>,
     /// The path to the folder containing analysis outputs.
     #[prost(string, tag="7")]
     pub result_folder_path: ::prost::alloc::string::String,

@@ -47,7 +47,7 @@ public final class AnalysisRecordProtobufs {
       "stem_id\"\312\004\n\010Analysis\022\n\n\002id\030\001 \001(\t\022\023\n\013desc" +
       "ription\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\026\n\003app\030\004 \001(\013" +
       "2\t.apps.App\0222\n\013app_version\030\005 \001(\0132\020.apps." +
-      "AppVersionR\013app_version\022*\n\004type\030\006 \001(\0132\026." +
+      "AppVersionR\013app_version\022*\n\004kind\030\006 \001(\0132\026." +
       "analysis.AnalysisTypeR\004type\022.\n\022result_fo" +
       "lder_path\030\007 \001(\tR\022result_folder_path\022:\n\ns" +
       "tart_date\030\010 \001(\0132\032.google.protobuf.Timest" +
@@ -87,7 +87,7 @@ public final class AnalysisRecordProtobufs {
     internal_static_analysis_Analysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_analysis_Analysis_descriptor,
-        new java.lang.String[] { "Id", "Description", "Name", "App", "AppVersion", "Type", "ResultFolderPath", "StartDate", "EndDate", "PlannedEndDate", "Status", "Deleted", "Notify", "User", "Subdomain", "ParentId", "MillicoresReserved", });
+        new java.lang.String[] { "Id", "Description", "Name", "App", "AppVersion", "Kind", "ResultFolderPath", "StartDate", "EndDate", "PlannedEndDate", "Status", "Deleted", "Notify", "User", "Subdomain", "ParentId", "MillicoresReserved", });
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.UserProtobufs.getDescriptor();
     org.cyverse.de.protobufs.AppsProtobufs.getDescriptor();

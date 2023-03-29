@@ -273,42 +273,42 @@ private static final long serialVersionUID = 0L;
     return appVersion_ == null ? org.cyverse.de.protobufs.AppVersion.getDefaultInstance() : appVersion_;
   }
 
-  public static final int TYPE_FIELD_NUMBER = 6;
-  private org.cyverse.de.protobufs.AnalysisType type_;
+  public static final int KIND_FIELD_NUMBER = 6;
+  private org.cyverse.de.protobufs.AnalysisType kind_;
   /**
    * <pre>
    * The analysis type, which tells which environment to run the analysis in.
    * </pre>
    *
-   * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
-   * @return Whether the type field is set.
+   * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
+   * @return Whether the kind field is set.
    */
   @java.lang.Override
-  public boolean hasType() {
-    return type_ != null;
+  public boolean hasKind() {
+    return kind_ != null;
   }
   /**
    * <pre>
    * The analysis type, which tells which environment to run the analysis in.
    * </pre>
    *
-   * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
-   * @return The type.
+   * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
+   * @return The kind.
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.AnalysisType getType() {
-    return type_ == null ? org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : type_;
+  public org.cyverse.de.protobufs.AnalysisType getKind() {
+    return kind_ == null ? org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : kind_;
   }
   /**
    * <pre>
    * The analysis type, which tells which environment to run the analysis in.
    * </pre>
    *
-   * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+   * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.AnalysisTypeOrBuilder getTypeOrBuilder() {
-    return type_ == null ? org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : type_;
+  public org.cyverse.de.protobufs.AnalysisTypeOrBuilder getKindOrBuilder() {
+    return kind_ == null ? org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : kind_;
   }
 
   public static final int RESULT_FOLDER_PATH_FIELD_NUMBER = 7;
@@ -725,8 +725,8 @@ private static final long serialVersionUID = 0L;
     if (appVersion_ != null) {
       output.writeMessage(5, getAppVersion());
     }
-    if (type_ != null) {
-      output.writeMessage(6, getType());
+    if (kind_ != null) {
+      output.writeMessage(6, getKind());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resultFolderPath_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, resultFolderPath_);
@@ -787,9 +787,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getAppVersion());
     }
-    if (type_ != null) {
+    if (kind_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getType());
+        .computeMessageSize(6, getKind());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resultFolderPath_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, resultFolderPath_);
@@ -862,10 +862,10 @@ private static final long serialVersionUID = 0L;
       if (!getAppVersion()
           .equals(other.getAppVersion())) return false;
     }
-    if (hasType() != other.hasType()) return false;
-    if (hasType()) {
-      if (!getType()
-          .equals(other.getType())) return false;
+    if (hasKind() != other.hasKind()) return false;
+    if (hasKind()) {
+      if (!getKind()
+          .equals(other.getKind())) return false;
     }
     if (!getResultFolderPath()
         .equals(other.getResultFolderPath())) return false;
@@ -927,9 +927,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + APP_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getAppVersion().hashCode();
     }
-    if (hasType()) {
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
+    if (hasKind()) {
+      hash = (37 * hash) + KIND_FIELD_NUMBER;
+      hash = (53 * hash) + getKind().hashCode();
     }
     hash = (37 * hash) + RESULT_FOLDER_PATH_FIELD_NUMBER;
     hash = (53 * hash) + getResultFolderPath().hashCode();
@@ -1112,10 +1112,10 @@ private static final long serialVersionUID = 0L;
         appVersionBuilder_.dispose();
         appVersionBuilder_ = null;
       }
-      type_ = null;
-      if (typeBuilder_ != null) {
-        typeBuilder_.dispose();
-        typeBuilder_ = null;
+      kind_ = null;
+      if (kindBuilder_ != null) {
+        kindBuilder_.dispose();
+        kindBuilder_ = null;
       }
       resultFolderPath_ = "";
       startDate_ = null;
@@ -1197,9 +1197,9 @@ private static final long serialVersionUID = 0L;
             : appVersionBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.type_ = typeBuilder_ == null
-            ? type_
-            : typeBuilder_.build();
+        result.kind_ = kindBuilder_ == null
+            ? kind_
+            : kindBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.resultFolderPath_ = resultFolderPath_;
@@ -1309,8 +1309,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasAppVersion()) {
         mergeAppVersion(other.getAppVersion());
       }
-      if (other.hasType()) {
-        mergeType(other.getType());
+      if (other.hasKind()) {
+        mergeKind(other.getKind());
       }
       if (!other.getResultFolderPath().isEmpty()) {
         resultFolderPath_ = other.resultFolderPath_;
@@ -1410,7 +1410,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               input.readMessage(
-                  getTypeFieldBuilder().getBuilder(),
+                  getKindFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
@@ -2081,18 +2081,18 @@ private static final long serialVersionUID = 0L;
       return appVersionBuilder_;
     }
 
-    private org.cyverse.de.protobufs.AnalysisType type_;
+    private org.cyverse.de.protobufs.AnalysisType kind_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        org.cyverse.de.protobufs.AnalysisType, org.cyverse.de.protobufs.AnalysisType.Builder, org.cyverse.de.protobufs.AnalysisTypeOrBuilder> typeBuilder_;
+        org.cyverse.de.protobufs.AnalysisType, org.cyverse.de.protobufs.AnalysisType.Builder, org.cyverse.de.protobufs.AnalysisTypeOrBuilder> kindBuilder_;
     /**
      * <pre>
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
-     * @return Whether the type field is set.
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
+     * @return Whether the kind field is set.
      */
-    public boolean hasType() {
+    public boolean hasKind() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
@@ -2100,14 +2100,14 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
-     * @return The type.
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
+     * @return The kind.
      */
-    public org.cyverse.de.protobufs.AnalysisType getType() {
-      if (typeBuilder_ == null) {
-        return type_ == null ? org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : type_;
+    public org.cyverse.de.protobufs.AnalysisType getKind() {
+      if (kindBuilder_ == null) {
+        return kind_ == null ? org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : kind_;
       } else {
-        return typeBuilder_.getMessage();
+        return kindBuilder_.getMessage();
       }
     }
     /**
@@ -2115,16 +2115,16 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
-    public Builder setType(org.cyverse.de.protobufs.AnalysisType value) {
-      if (typeBuilder_ == null) {
+    public Builder setKind(org.cyverse.de.protobufs.AnalysisType value) {
+      if (kindBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        type_ = value;
+        kind_ = value;
       } else {
-        typeBuilder_.setMessage(value);
+        kindBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000020;
       onChanged();
@@ -2135,14 +2135,14 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
-    public Builder setType(
+    public Builder setKind(
         org.cyverse.de.protobufs.AnalysisType.Builder builderForValue) {
-      if (typeBuilder_ == null) {
-        type_ = builderForValue.build();
+      if (kindBuilder_ == null) {
+        kind_ = builderForValue.build();
       } else {
-        typeBuilder_.setMessage(builderForValue.build());
+        kindBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000020;
       onChanged();
@@ -2153,19 +2153,19 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
-    public Builder mergeType(org.cyverse.de.protobufs.AnalysisType value) {
-      if (typeBuilder_ == null) {
+    public Builder mergeKind(org.cyverse.de.protobufs.AnalysisType value) {
+      if (kindBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
-          type_ != null &&
-          type_ != org.cyverse.de.protobufs.AnalysisType.getDefaultInstance()) {
-          getTypeBuilder().mergeFrom(value);
+          kind_ != null &&
+          kind_ != org.cyverse.de.protobufs.AnalysisType.getDefaultInstance()) {
+          getKindBuilder().mergeFrom(value);
         } else {
-          type_ = value;
+          kind_ = value;
         }
       } else {
-        typeBuilder_.mergeFrom(value);
+        kindBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000020;
       onChanged();
@@ -2176,14 +2176,14 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
-    public Builder clearType() {
+    public Builder clearKind() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      type_ = null;
-      if (typeBuilder_ != null) {
-        typeBuilder_.dispose();
-        typeBuilder_ = null;
+      kind_ = null;
+      if (kindBuilder_ != null) {
+        kindBuilder_.dispose();
+        kindBuilder_ = null;
       }
       onChanged();
       return this;
@@ -2193,26 +2193,26 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
-    public org.cyverse.de.protobufs.AnalysisType.Builder getTypeBuilder() {
+    public org.cyverse.de.protobufs.AnalysisType.Builder getKindBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
-      return getTypeFieldBuilder().getBuilder();
+      return getKindFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
-    public org.cyverse.de.protobufs.AnalysisTypeOrBuilder getTypeOrBuilder() {
-      if (typeBuilder_ != null) {
-        return typeBuilder_.getMessageOrBuilder();
+    public org.cyverse.de.protobufs.AnalysisTypeOrBuilder getKindOrBuilder() {
+      if (kindBuilder_ != null) {
+        return kindBuilder_.getMessageOrBuilder();
       } else {
-        return type_ == null ?
-            org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : type_;
+        return kind_ == null ?
+            org.cyverse.de.protobufs.AnalysisType.getDefaultInstance() : kind_;
       }
     }
     /**
@@ -2220,20 +2220,20 @@ private static final long serialVersionUID = 0L;
      * The analysis type, which tells which environment to run the analysis in.
      * </pre>
      *
-     * <code>.analysis.AnalysisType type = 6 [json_name = "type"];</code>
+     * <code>.analysis.AnalysisType kind = 6 [json_name = "type"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.AnalysisType, org.cyverse.de.protobufs.AnalysisType.Builder, org.cyverse.de.protobufs.AnalysisTypeOrBuilder> 
-        getTypeFieldBuilder() {
-      if (typeBuilder_ == null) {
-        typeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getKindFieldBuilder() {
+      if (kindBuilder_ == null) {
+        kindBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             org.cyverse.de.protobufs.AnalysisType, org.cyverse.de.protobufs.AnalysisType.Builder, org.cyverse.de.protobufs.AnalysisTypeOrBuilder>(
-                getType(),
+                getKind(),
                 getParentForChildren(),
                 isClean());
-        type_ = null;
+        kind_ = null;
       }
-      return typeBuilder_;
+      return kindBuilder_;
     }
 
     private java.lang.Object resultFolderPath_ = "";
