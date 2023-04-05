@@ -2,6 +2,7 @@ pub mod analysis;
 pub mod apps;
 pub mod header;
 pub mod qms;
+pub mod requests;
 pub mod svcerror;
 pub mod user;
 
