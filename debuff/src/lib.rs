@@ -8,6 +8,16 @@ pub mod user;
 
 use std::fmt;
 
+pub trait SetError {
+    fn set_error(&mut self, e: svcerror::ServiceError);
+}
+
+impl SetError for analysis::AnalysisRecordList {
+    fn set_error(&mut self, e: svcerror::ServiceError) {
+        self.error = Some(e);
+    }
+}
+
 impl fmt::Display for svcerror::ErrorCode {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{}", self.as_str_name())
