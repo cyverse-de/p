@@ -32,14 +32,16 @@ public final class ServiceErrorProtobufs {
       "\"\226\001\n\014ServiceError\022\036\n\006header\030\001 \001(\0132\016.head" +
       "er.Header\0223\n\nerror_code\030\002 \001(\0162\023.svcerror" +
       ".ErrorCodeR\nerror_code\022 \n\013status_code\030\003 " +
-      "\001(\005R\013status_code\022\017\n\007message\030\004 \001(\t*\257\001\n\tEr" +
+      "\001(\005R\013status_code\022\017\n\007message\030\004 \001(\t*\204\002\n\tEr" +
       "rorCode\022\t\n\005UNSET\020\000\022\017\n\013UNSPECIFIED\020\001\022\014\n\010I" +
       "NTERNAL\020\002\022\r\n\tNOT_FOUND\020\003\022\017\n\013BAD_REQUEST\020" +
       "\004\022\023\n\017MARSHAL_FAILURE\020\005\022\025\n\021UNMARSHAL_FAIL" +
       "URE\020\006\022\025\n\021PARAMETER_MISSING\020\007\022\025\n\021PARAMETE" +
-      "R_INVALID\020\010BX\n\030org.cyverse.de.protobufsB" +
-      "\025ServiceErrorProtobufsP\001Z#github.com/cyv" +
-      "erse-de/p/go/svcerrorb\006proto3"
+      "R_INVALID\020\010\022\023\n\017UNAUTHENTICATED\020\t\022\r\n\tFORB" +
+      "IDDEN\020\n\022\013\n\007TIMEOUT\020\013\022\017\n\013UNSUPPORTED\020\014\022\021\n" +
+      "\rUNIMPLEMENTED\020\rBX\n\030org.cyverse.de.proto" +
+      "bufsB\025ServiceErrorProtobufsP\001Z#github.co" +
+      "m/cyverse-de/p/go/svcerrorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

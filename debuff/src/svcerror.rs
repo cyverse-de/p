@@ -40,6 +40,16 @@ pub enum ErrorCode {
     ParameterMissing = 7,
     /// / A parameter is invalid.
     ParameterInvalid = 8,
+    /// / Operation requires authentication, which was not provided.
+    Unauthenticated = 9,
+    /// / Operation is no allowed.
+    Forbidden = 10,
+    /// / Operation timed out.
+    Timeout = 11,
+    /// / Operation is not supported.
+    Unsupported = 12,
+    /// / Operation has not been implemented.
+    Unimplemented = 13,
 }
 impl ErrorCode {
     /// String value of the enum field names used in the ProtoBuf definition.
@@ -57,6 +67,11 @@ impl ErrorCode {
             ErrorCode::UnmarshalFailure => "UNMARSHAL_FAILURE",
             ErrorCode::ParameterMissing => "PARAMETER_MISSING",
             ErrorCode::ParameterInvalid => "PARAMETER_INVALID",
+            ErrorCode::Unauthenticated => "UNAUTHENTICATED",
+            ErrorCode::Forbidden => "FORBIDDEN",
+            ErrorCode::Timeout => "TIMEOUT",
+            ErrorCode::Unsupported => "UNSUPPORTED",
+            ErrorCode::Unimplemented => "UNIMPLEMENTED",
         }
     }
     /// Creates an enum from field names used in the ProtoBuf definition.
@@ -71,6 +86,11 @@ impl ErrorCode {
             "UNMARSHAL_FAILURE" => Some(Self::UnmarshalFailure),
             "PARAMETER_MISSING" => Some(Self::ParameterMissing),
             "PARAMETER_INVALID" => Some(Self::ParameterInvalid),
+            "UNAUTHENTICATED" => Some(Self::Unauthenticated),
+            "FORBIDDEN" => Some(Self::Forbidden),
+            "TIMEOUT" => Some(Self::Timeout),
+            "UNSUPPORTED" => Some(Self::Unsupported),
+            "UNIMPLEMENTED" => Some(Self::Unimplemented),
             _ => None,
         }
     }

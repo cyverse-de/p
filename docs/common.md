@@ -122,6 +122,11 @@ The types of errors that can be retuned by message handlers.
 | UNMARSHAL_FAILURE | 6 | A failure to unmarshal a request. |
 | PARAMETER_MISSING | 7 | A parameter is missing. |
 | PARAMETER_INVALID | 8 | A parameter is invalid. |
+| UNAUTHENTICATED | 9 | Operation requires authentication, which was not provided. |
+| FORBIDDEN | 10 | Operation is no allowed. |
+| TIMEOUT | 11 | Operation timed out. |
+| UNSUPPORTED | 12 | Operation is not supported. |
+| UNIMPLEMENTED | 13 | Operation has not been implemented. |
 
 
  

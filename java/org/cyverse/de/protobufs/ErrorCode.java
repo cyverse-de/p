@@ -85,6 +85,46 @@ public enum ErrorCode
    * <code>PARAMETER_INVALID = 8;</code>
    */
   PARAMETER_INVALID(8),
+  /**
+   * <pre>
+   *&#47; Operation requires authentication, which was not provided.
+   * </pre>
+   *
+   * <code>UNAUTHENTICATED = 9;</code>
+   */
+  UNAUTHENTICATED(9),
+  /**
+   * <pre>
+   *&#47; Operation is no allowed.
+   * </pre>
+   *
+   * <code>FORBIDDEN = 10;</code>
+   */
+  FORBIDDEN(10),
+  /**
+   * <pre>
+   *&#47; Operation timed out.
+   * </pre>
+   *
+   * <code>TIMEOUT = 11;</code>
+   */
+  TIMEOUT(11),
+  /**
+   * <pre>
+   *&#47; Operation is not supported.
+   * </pre>
+   *
+   * <code>UNSUPPORTED = 12;</code>
+   */
+  UNSUPPORTED(12),
+  /**
+   * <pre>
+   *&#47; Operation has not been implemented.
+   * </pre>
+   *
+   * <code>UNIMPLEMENTED = 13;</code>
+   */
+  UNIMPLEMENTED(13),
   UNRECOGNIZED(-1),
   ;
 
@@ -160,6 +200,46 @@ public enum ErrorCode
    * <code>PARAMETER_INVALID = 8;</code>
    */
   public static final int PARAMETER_INVALID_VALUE = 8;
+  /**
+   * <pre>
+   *&#47; Operation requires authentication, which was not provided.
+   * </pre>
+   *
+   * <code>UNAUTHENTICATED = 9;</code>
+   */
+  public static final int UNAUTHENTICATED_VALUE = 9;
+  /**
+   * <pre>
+   *&#47; Operation is no allowed.
+   * </pre>
+   *
+   * <code>FORBIDDEN = 10;</code>
+   */
+  public static final int FORBIDDEN_VALUE = 10;
+  /**
+   * <pre>
+   *&#47; Operation timed out.
+   * </pre>
+   *
+   * <code>TIMEOUT = 11;</code>
+   */
+  public static final int TIMEOUT_VALUE = 11;
+  /**
+   * <pre>
+   *&#47; Operation is not supported.
+   * </pre>
+   *
+   * <code>UNSUPPORTED = 12;</code>
+   */
+  public static final int UNSUPPORTED_VALUE = 12;
+  /**
+   * <pre>
+   *&#47; Operation has not been implemented.
+   * </pre>
+   *
+   * <code>UNIMPLEMENTED = 13;</code>
+   */
+  public static final int UNIMPLEMENTED_VALUE = 13;
 
 
   public final int getNumber() {
@@ -195,6 +275,11 @@ public enum ErrorCode
       case 6: return UNMARSHAL_FAILURE;
       case 7: return PARAMETER_MISSING;
       case 8: return PARAMETER_INVALID;
+      case 9: return UNAUTHENTICATED;
+      case 10: return FORBIDDEN;
+      case 11: return TIMEOUT;
+      case 12: return UNSUPPORTED;
+      case 13: return UNIMPLEMENTED;
       default: return null;
     }
   }

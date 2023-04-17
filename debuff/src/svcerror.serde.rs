@@ -15,6 +15,11 @@ impl serde::Serialize for ErrorCode {
             Self::UnmarshalFailure => "UNMARSHAL_FAILURE",
             Self::ParameterMissing => "PARAMETER_MISSING",
             Self::ParameterInvalid => "PARAMETER_INVALID",
+            Self::Unauthenticated => "UNAUTHENTICATED",
+            Self::Forbidden => "FORBIDDEN",
+            Self::Timeout => "TIMEOUT",
+            Self::Unsupported => "UNSUPPORTED",
+            Self::Unimplemented => "UNIMPLEMENTED",
         };
         serializer.serialize_str(variant)
     }
@@ -35,6 +40,11 @@ impl<'de> serde::Deserialize<'de> for ErrorCode {
             "UNMARSHAL_FAILURE",
             "PARAMETER_MISSING",
             "PARAMETER_INVALID",
+            "UNAUTHENTICATED",
+            "FORBIDDEN",
+            "TIMEOUT",
+            "UNSUPPORTED",
+            "UNIMPLEMENTED",
         ];
 
         struct GeneratedVisitor;
@@ -86,6 +96,11 @@ impl<'de> serde::Deserialize<'de> for ErrorCode {
                     "UNMARSHAL_FAILURE" => Ok(ErrorCode::UnmarshalFailure),
                     "PARAMETER_MISSING" => Ok(ErrorCode::ParameterMissing),
                     "PARAMETER_INVALID" => Ok(ErrorCode::ParameterInvalid),
+                    "UNAUTHENTICATED" => Ok(ErrorCode::Unauthenticated),
+                    "FORBIDDEN" => Ok(ErrorCode::Forbidden),
+                    "TIMEOUT" => Ok(ErrorCode::Timeout),
+                    "UNSUPPORTED" => Ok(ErrorCode::Unsupported),
+                    "UNIMPLEMENTED" => Ok(ErrorCode::Unimplemented),
                     _ => Err(serde::de::Error::unknown_variant(value, FIELDS)),
                 }
             }
