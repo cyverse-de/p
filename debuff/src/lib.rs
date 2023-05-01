@@ -1,9 +1,11 @@
 pub mod analysis;
 pub mod apps;
+pub mod containers;
 pub mod header;
 pub mod qms;
 pub mod requests;
 pub mod svcerror;
+pub mod tools;
 pub mod user;
 
 use std::fmt;
@@ -25,7 +27,7 @@ impl fmt::Display for svcerror::ErrorCode {
 }
 
 pub mod vice {
-    use crate::analysis::*;
+    use crate::containers::*;
     pub type VICE = InteractiveApps;
 
     #[cfg(test)]
