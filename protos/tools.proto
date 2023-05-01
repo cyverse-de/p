@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package tools;
+
+import "apps.proto";
+import "containers.proto";
+
+option go_package = "github.com/cyverse-de/p/go/tools";
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "ToolsProtobufs";
+
+/**
+ * A tool integrated into the system.
+ *
+ * A tool is part of an app and can run in an execution environment.
+ * Mostly correllates to the 'tools' table in the 'de' database.
+ */
+message Tool {
+  // The UUID for the tool.
+  string uuid = 1;
+
+  // The name of the tool.
+  string name = 2;
+
+  // The version of the tool.
+  string version = 3;
+
+  // Attribution information for the tool.
+  string attribution = 4;
+
+  // The description of the tool.
+  string description = 5;
+
+  // The time limit the tool is allowed to run for by default. Unit is seconds.
+  uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];
+
+  // Whether the tool is restricted.
+  bool restricted = 7;
+
+  // Whether the tool is interactive (i.e. whether it is intended for use in VICE).
+  bool interactive = 8;
+
+  // Whether the tool requires a GPU.
+  bool gpu_enabled = 9 [json_name = "gpu_enabled"];
+
+  // Integration data associated with the tool.
+  apps.IntegrationData integration_data = 10 [json_name = "integration_data"];
+
+  // The container image to use when running the tool.
+  containers.Image container_image = 11 [json_name = "container_image"];
+}

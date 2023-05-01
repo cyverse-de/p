@@ -84,131 +84,131 @@ public final class AnalysisSubmissionProtobufs {
   static {
     java.lang.String[] descriptorData = {
       "\n\031analysis_submission.proto\022\010analysis\032\037g" +
-      "oogle/protobuf/timestamp.proto\032\030analysis" +
-      "_container.proto\032\014header.proto\"/\n\021HTCond" +
-      "orExtraInfo\022\032\n\022extra_requirements\030\001 \001(\t\"" +
-      "7\n\005Extra\022.\n\tht_condor\030\001 \001(\0132\033.analysis.H" +
-      "TCondorExtraInfo\">\n\014FileMetadata\022\021\n\tattr" +
-      "ibute\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\022\014\n\004unit\030\003 \001(\t" +
-      "\"\365\010\n\004Step\022+\n\tcomponent\030\001 \001(\0132\030.analysis." +
-      "Step.Component\022%\n\006config\030\002 \001(\0132\025.analysi" +
-      "s.Step.Config\022\014\n\004type\030\003 \001(\t\022\031\n\nstdin_pat" +
-      "h\030\004 \001(\tR\005stdin\022\033\n\013stdout_path\030\005 \001(\tR\006std" +
-      "out\022\033\n\013stderr_path\030\006 \001(\tR\006stderr\022\032\n\010log_" +
-      "file\030\007 \001(\tR\010log-file\0224\n\013environment\030\010 \003(" +
-      "\0132\037.analysis.Step.EnvironmentEntry\022#\n\005in" +
-      "put\030\t \003(\0132\024.analysis.Step.Input\022%\n\006outpu" +
-      "t\030\n \003(\0132\025.analysis.Step.Output\022\036\n\006header" +
-      "\030\013 \001(\0132\016.header.Header\032\327\001\n\tComponent\022&\n\t" +
-      "container\030\001 \001(\0132\023.analysis.Container\022\014\n\004" +
-      "type\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\020\n\010location\030\004 \001" +
-      "(\t\022\023\n\013description\030\005 \001(\t\022&\n\ntime_limit\030\006 " +
-      "\001(\005R\022time_limit_seconds\022\022\n\nrestricted\030\007 " +
-      "\001(\010\022#\n\016is_interactive\030\010 \001(\010R\013interactive" +
-      "\032[\n\005Param\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005v" +
-      "alue\030\003 \001(\t\022\r\n\005order\030\004 \001(\005\022\014\n\004type\030\005 \001(\t\022" +
-      "\014\n\004path\030\006 \001(\t\032\213\001\n\006Config\022$\n\006params\030\001 \003(\013" +
-      "2\024.analysis.Step.Param\022+\n\006inputs\030\002 \003(\0132\024" +
-      ".analysis.Step.InputR\005input\022.\n\007outputs\030\003" +
-      " \003(\0132\025.analysis.Step.OutputR\006output\032\206\001\n\005" +
-      "Input\022\n\n\002id\030\001 \001(\t\022\016\n\006ticket\030\002 \001(\t\022\024\n\014mul" +
-      "tiplicity\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\020\n\010propert" +
-      "y\030\005 \001(\t\022\016\n\006retain\030\006 \001(\010\022\014\n\004type\030\007 \001(\t\022\r\n" +
-      "\005value\030\010 \001(\t\032v\n\006Output\022\024\n\014multiplicity\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022\020\n\010property\030\003 \001(\t\022\030\n\007" +
-      "qual_id\030\004 \001(\tR\007qual-id\022\016\n\006retain\030\005 \001(\010\022\014" +
-      "\n\004type\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\341\014\n\022AnalysisSub" +
-      "mission\022(\n\017app_description\030\001 \001(\tR\017app_de" +
-      "scription\022\026\n\006app_id\030\002 \001(\tR\006app_id\022\032\n\010app" +
-      "_name\030\003 \001(\tR\010app_name\022\"\n\014archive_logs\030\004 " +
-      "\001(\010R\014archive_logs\022\032\n\010batch_id\030\005 \001(\tR\010bat" +
-      "ch_id\022\034\n\tcondor_id\030\006 \001(\tR\tcondor_id\022(\n\017c" +
-      "ondor_log_path\030\007 \001(\tR\017condor_log_path\0222\n" +
-      "\024create_output_subdir\030\010 \001(\010R\024create_outp" +
-      "ut_subdir\022B\n\016date_submitted\030\t \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\016date_submitted\022>\n" +
-      "\014date_started\030\n \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\014date_started\022B\n\016date_completed\030" +
-      "\013 \001(\0132\032.google.protobuf.TimestampR\016date_" +
-      "completed\022\023\n\013description\030\014 \001(\t\022\r\n\005email\030" +
-      "\r \001(\t\022\036\n\005extra\030\016 \001(\0132\017.analysis.Extra\022*\n" +
-      "\020execution_target\030\017 \001(\tR\020execution_targe" +
-      "t\022\034\n\texit_code\030\020 \001(\005R\texit_code\022$\n\rfailu" +
-      "re_count\030\021 \001(\003R\rfailure_count\022,\n\021failure" +
-      "_threshold\030\022 \001(\003R\021failure_threshold\022<\n\rf" +
-      "ile_metadata\030\023 \003(\0132\026.analysis.FileMetada" +
-      "taR\rfile-metadata\022\"\n\014filter_files\030\024 \003(\tR" +
-      "\014filter_files\022\r\n\005group\030\025 \001(\t\022-\n\024input_pa" +
-      "th_list_file\030\026 \001(\tR\017input_path_list\022-\n\022i" +
-      "nput_tickets_file\030\027 \001(\tR\021input_ticket_li" +
-      "st\022$\n\rinvocation_id\030\030 \001(\tR\rinvocation_id" +
-      "\022\036\n\nirods_base\030\031 \001(\tR\nirods_base\022\014\n\004name" +
-      "\030\032 \001(\t\022\032\n\010nfs_base\030\033 \001(\tR\010nfs_base\022\016\n\006no" +
-      "tify\030\034 \001(\010\022\032\n\010now_date\030\035 \001(\tR\010now_date\022\036" +
-      "\n\noutput_dir\030\036 \001(\tR\noutput_dir\022,\n\021output" +
-      "_dir_ticket\030\037 \001(\tR\021output_dir_ticket\022.\n\022" +
-      "output_ticket_file\030  \001(\tR\022output_ticket_" +
-      "file\022\"\n\014request_type\030! \001(\tR\014request_type" +
-      "\022\036\n\nrun_on_nfs\030\" \001(\010R\nrun-on-nfs\022.\n\024skip" +
-      "_parent_metadata\030# \001(\010R\020skip-parent-meta" +
-      "\022\035\n\005steps\030$ \003(\0132\016.analysis.Step\022(\n\017submi" +
-      "ssion_date\030% \001(\tR\017submission_date\022\033\n\tsub" +
-      "mitter\030& \001(\tR\010username\022\014\n\004type\030\' \001(\t\022\030\n\007" +
-      "user_id\030( \001(\tR\007user_id\022 \n\013user_groups\030) " +
-      "\003(\tR\013user_groups\022\034\n\tuser_home\030* \001(\tR\tuse" +
-      "r_home\022\032\n\010wiki_url\030+ \001(\tR\010wiki_url\022 \n\013co" +
-      "nfig_file\030, \001(\tR\013config_file\022\036\n\006header\030-" +
-      " \001(\0132\016.header.Header\"\266\014\n\003Job\022(\n\017app_desc" +
-      "ription\030\001 \001(\tR\017app_description\022\026\n\006app_id" +
-      "\030\002 \001(\tR\006app_id\022\032\n\010app_name\030\003 \001(\tR\010app_na" +
-      "me\022\"\n\014archive_logs\030\004 \001(\010R\014archive_logs\022\032" +
-      "\n\010batch_id\030\005 \001(\tR\010batch_id\022\034\n\tcondor_id\030" +
-      "\006 \001(\tR\tcondor_id\022(\n\017condor_log_path\030\007 \001(" +
-      "\tR\017condor_log_path\0222\n\024create_output_subd" +
-      "ir\030\010 \001(\010R\024create_output_subdir\022B\n\016date_s" +
-      "ubmitted\030\t \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\016date_submitted\022>\n\014date_started\030\n \001(\013" +
-      "2\032.google.protobuf.TimestampR\014date_start" +
-      "ed\022B\n\016date_completed\030\013 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\016date_completed\022\023\n\013descri" +
-      "ption\030\014 \001(\t\022\r\n\005email\030\r \001(\t\022\036\n\005extra\030\016 \001(" +
-      "\0132\017.analysis.Extra\022*\n\020execution_target\030\017" +
-      " \001(\tR\020execution_target\022\034\n\texit_code\030\020 \001(" +
-      "\005R\texit_code\022$\n\rfailure_count\030\021 \001(\003R\rfai" +
-      "lure_count\022,\n\021failure_threshold\030\022 \001(\003R\021f" +
-      "ailure_threshold\022<\n\rfile_metadata\030\023 \003(\0132" +
-      "\026.analysis.FileMetadataR\rfile-metadata\022\"" +
-      "\n\014filter_files\030\024 \003(\tR\014filter_files\022\r\n\005gr" +
-      "oup\030\025 \001(\t\022-\n\024input_path_list_file\030\026 \001(\tR" +
-      "\017input_path_list\022-\n\022input_tickets_file\030\027" +
-      " \001(\tR\021input_ticket_list\022$\n\rinvocation_id" +
-      "\030\030 \001(\tR\rinvocation_id\022\036\n\nirods_base\030\031 \001(" +
-      "\tR\nirods_base\022\014\n\004name\030\032 \001(\t\022\032\n\010nfs_base\030" +
-      "\033 \001(\tR\010nfs_base\022\016\n\006notify\030\034 \001(\010\022\032\n\010now_d" +
-      "ate\030\035 \001(\tR\010now_date\022\036\n\noutput_dir\030\036 \001(\tR" +
-      "\noutput_dir\022,\n\021output_dir_ticket\030\037 \001(\tR\021" +
-      "output_dir_ticket\022.\n\022output_ticket_file\030" +
-      "  \001(\tR\022output_ticket_file\022\"\n\014request_typ" +
-      "e\030! \001(\tR\014request_type\022\036\n\nrun_on_nfs\030\" \001(" +
-      "\010R\nrun-on-nfs\022.\n\024skip_parent_metadata\030# " +
-      "\001(\010R\020skip-parent-meta\022\035\n\005steps\030$ \003(\0132\016.a" +
-      "nalysis.Step\022(\n\017submission_date\030% \001(\tR\017s" +
-      "ubmission_date\022\033\n\tsubmitter\030& \001(\tR\010usern" +
-      "ame\022\014\n\004type\030\' \001(\t\022\030\n\007user_id\030( \001(\tR\007user" +
-      "_id\022 \n\013user_groups\030) \003(\tR\013user_groups\022\034\n" +
-      "\tuser_home\030* \001(\tR\tuser_home\022\032\n\010wiki_url\030" +
-      "+ \001(\tR\010wiki_url\022 \n\013config_file\030, \001(\tR\013co" +
-      "nfig_file:\002\030\001B^\n\030org.cyverse.de.protobuf" +
-      "sB\033AnalysisSubmissionProtobufsP\001Z#github" +
-      ".com/cyverse-de/p/go/analysisb\006proto3"
+      "oogle/protobuf/timestamp.proto\032\014header.p" +
+      "roto\032\020containers.proto\"/\n\021HTCondorExtraI" +
+      "nfo\022\032\n\022extra_requirements\030\001 \001(\t\"7\n\005Extra" +
+      "\022.\n\tht_condor\030\001 \001(\0132\033.analysis.HTCondorE" +
+      "xtraInfo\">\n\014FileMetadata\022\021\n\tattribute\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t\022\014\n\004unit\030\003 \001(\t\"\367\010\n\004Ste" +
+      "p\022+\n\tcomponent\030\001 \001(\0132\030.analysis.Step.Com" +
+      "ponent\022%\n\006config\030\002 \001(\0132\025.analysis.Step.C" +
+      "onfig\022\014\n\004type\030\003 \001(\t\022\031\n\nstdin_path\030\004 \001(\tR" +
+      "\005stdin\022\033\n\013stdout_path\030\005 \001(\tR\006stdout\022\033\n\013s" +
+      "tderr_path\030\006 \001(\tR\006stderr\022\032\n\010log_file\030\007 \001" +
+      "(\tR\010log-file\0224\n\013environment\030\010 \003(\0132\037.anal" +
+      "ysis.Step.EnvironmentEntry\022#\n\005input\030\t \003(" +
+      "\0132\024.analysis.Step.Input\022%\n\006output\030\n \003(\0132" +
+      "\025.analysis.Step.Output\022\036\n\006header\030\013 \001(\0132\016" +
+      ".header.Header\032\331\001\n\tComponent\022(\n\tcontaine" +
+      "r\030\001 \001(\0132\025.containers.Container\022\014\n\004type\030\002" +
+      " \001(\t\022\014\n\004name\030\003 \001(\t\022\020\n\010location\030\004 \001(\t\022\023\n\013" +
+      "description\030\005 \001(\t\022&\n\ntime_limit\030\006 \001(\005R\022t" +
+      "ime_limit_seconds\022\022\n\nrestricted\030\007 \001(\010\022#\n" +
+      "\016is_interactive\030\010 \001(\010R\013interactive\032[\n\005Pa" +
+      "ram\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005value\030\003" +
+      " \001(\t\022\r\n\005order\030\004 \001(\005\022\014\n\004type\030\005 \001(\t\022\014\n\004pat" +
+      "h\030\006 \001(\t\032\213\001\n\006Config\022$\n\006params\030\001 \003(\0132\024.ana" +
+      "lysis.Step.Param\022+\n\006inputs\030\002 \003(\0132\024.analy" +
+      "sis.Step.InputR\005input\022.\n\007outputs\030\003 \003(\0132\025" +
+      ".analysis.Step.OutputR\006output\032\206\001\n\005Input\022" +
+      "\n\n\002id\030\001 \001(\t\022\016\n\006ticket\030\002 \001(\t\022\024\n\014multiplic" +
+      "ity\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\020\n\010property\030\005 \001(" +
+      "\t\022\016\n\006retain\030\006 \001(\010\022\014\n\004type\030\007 \001(\t\022\r\n\005value" +
+      "\030\010 \001(\t\032v\n\006Output\022\024\n\014multiplicity\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\020\n\010property\030\003 \001(\t\022\030\n\007qual_i" +
+      "d\030\004 \001(\tR\007qual-id\022\016\n\006retain\030\005 \001(\010\022\014\n\004type" +
+      "\030\006 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"\341\014\n\022AnalysisSubmissio" +
+      "n\022(\n\017app_description\030\001 \001(\tR\017app_descript" +
+      "ion\022\026\n\006app_id\030\002 \001(\tR\006app_id\022\032\n\010app_name\030" +
+      "\003 \001(\tR\010app_name\022\"\n\014archive_logs\030\004 \001(\010R\014a" +
+      "rchive_logs\022\032\n\010batch_id\030\005 \001(\tR\010batch_id\022" +
+      "\034\n\tcondor_id\030\006 \001(\tR\tcondor_id\022(\n\017condor_" +
+      "log_path\030\007 \001(\tR\017condor_log_path\0222\n\024creat" +
+      "e_output_subdir\030\010 \001(\010R\024create_output_sub" +
+      "dir\022B\n\016date_submitted\030\t \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\016date_submitted\022>\n\014date_" +
+      "started\030\n \001(\0132\032.google.protobuf.Timestam" +
+      "pR\014date_started\022B\n\016date_completed\030\013 \001(\0132" +
+      "\032.google.protobuf.TimestampR\016date_comple" +
+      "ted\022\023\n\013description\030\014 \001(\t\022\r\n\005email\030\r \001(\t\022" +
+      "\036\n\005extra\030\016 \001(\0132\017.analysis.Extra\022*\n\020execu" +
+      "tion_target\030\017 \001(\tR\020execution_target\022\034\n\te" +
+      "xit_code\030\020 \001(\005R\texit_code\022$\n\rfailure_cou" +
+      "nt\030\021 \001(\003R\rfailure_count\022,\n\021failure_thres" +
+      "hold\030\022 \001(\003R\021failure_threshold\022<\n\rfile_me" +
+      "tadata\030\023 \003(\0132\026.analysis.FileMetadataR\rfi" +
+      "le-metadata\022\"\n\014filter_files\030\024 \003(\tR\014filte" +
+      "r_files\022\r\n\005group\030\025 \001(\t\022-\n\024input_path_lis" +
+      "t_file\030\026 \001(\tR\017input_path_list\022-\n\022input_t" +
+      "ickets_file\030\027 \001(\tR\021input_ticket_list\022$\n\r" +
+      "invocation_id\030\030 \001(\tR\rinvocation_id\022\036\n\nir" +
+      "ods_base\030\031 \001(\tR\nirods_base\022\014\n\004name\030\032 \001(\t" +
+      "\022\032\n\010nfs_base\030\033 \001(\tR\010nfs_base\022\016\n\006notify\030\034" +
+      " \001(\010\022\032\n\010now_date\030\035 \001(\tR\010now_date\022\036\n\noutp" +
+      "ut_dir\030\036 \001(\tR\noutput_dir\022,\n\021output_dir_t" +
+      "icket\030\037 \001(\tR\021output_dir_ticket\022.\n\022output" +
+      "_ticket_file\030  \001(\tR\022output_ticket_file\022\"" +
+      "\n\014request_type\030! \001(\tR\014request_type\022\036\n\nru" +
+      "n_on_nfs\030\" \001(\010R\nrun-on-nfs\022.\n\024skip_paren" +
+      "t_metadata\030# \001(\010R\020skip-parent-meta\022\035\n\005st" +
+      "eps\030$ \003(\0132\016.analysis.Step\022(\n\017submission_" +
+      "date\030% \001(\tR\017submission_date\022\033\n\tsubmitter" +
+      "\030& \001(\tR\010username\022\014\n\004type\030\' \001(\t\022\030\n\007user_i" +
+      "d\030( \001(\tR\007user_id\022 \n\013user_groups\030) \003(\tR\013u" +
+      "ser_groups\022\034\n\tuser_home\030* \001(\tR\tuser_home" +
+      "\022\032\n\010wiki_url\030+ \001(\tR\010wiki_url\022 \n\013config_f" +
+      "ile\030, \001(\tR\013config_file\022\036\n\006header\030- \001(\0132\016" +
+      ".header.Header\"\266\014\n\003Job\022(\n\017app_descriptio" +
+      "n\030\001 \001(\tR\017app_description\022\026\n\006app_id\030\002 \001(\t" +
+      "R\006app_id\022\032\n\010app_name\030\003 \001(\tR\010app_name\022\"\n\014" +
+      "archive_logs\030\004 \001(\010R\014archive_logs\022\032\n\010batc" +
+      "h_id\030\005 \001(\tR\010batch_id\022\034\n\tcondor_id\030\006 \001(\tR" +
+      "\tcondor_id\022(\n\017condor_log_path\030\007 \001(\tR\017con" +
+      "dor_log_path\0222\n\024create_output_subdir\030\010 \001" +
+      "(\010R\024create_output_subdir\022B\n\016date_submitt" +
+      "ed\030\t \001(\0132\032.google.protobuf.TimestampR\016da" +
+      "te_submitted\022>\n\014date_started\030\n \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\014date_started\022B\n\016" +
+      "date_completed\030\013 \001(\0132\032.google.protobuf.T" +
+      "imestampR\016date_completed\022\023\n\013description\030" +
+      "\014 \001(\t\022\r\n\005email\030\r \001(\t\022\036\n\005extra\030\016 \001(\0132\017.an" +
+      "alysis.Extra\022*\n\020execution_target\030\017 \001(\tR\020" +
+      "execution_target\022\034\n\texit_code\030\020 \001(\005R\texi" +
+      "t_code\022$\n\rfailure_count\030\021 \001(\003R\rfailure_c" +
+      "ount\022,\n\021failure_threshold\030\022 \001(\003R\021failure" +
+      "_threshold\022<\n\rfile_metadata\030\023 \003(\0132\026.anal" +
+      "ysis.FileMetadataR\rfile-metadata\022\"\n\014filt" +
+      "er_files\030\024 \003(\tR\014filter_files\022\r\n\005group\030\025 " +
+      "\001(\t\022-\n\024input_path_list_file\030\026 \001(\tR\017input" +
+      "_path_list\022-\n\022input_tickets_file\030\027 \001(\tR\021" +
+      "input_ticket_list\022$\n\rinvocation_id\030\030 \001(\t" +
+      "R\rinvocation_id\022\036\n\nirods_base\030\031 \001(\tR\niro" +
+      "ds_base\022\014\n\004name\030\032 \001(\t\022\032\n\010nfs_base\030\033 \001(\tR" +
+      "\010nfs_base\022\016\n\006notify\030\034 \001(\010\022\032\n\010now_date\030\035 " +
+      "\001(\tR\010now_date\022\036\n\noutput_dir\030\036 \001(\tR\noutpu" +
+      "t_dir\022,\n\021output_dir_ticket\030\037 \001(\tR\021output" +
+      "_dir_ticket\022.\n\022output_ticket_file\030  \001(\tR" +
+      "\022output_ticket_file\022\"\n\014request_type\030! \001(" +
+      "\tR\014request_type\022\036\n\nrun_on_nfs\030\" \001(\010R\nrun" +
+      "-on-nfs\022.\n\024skip_parent_metadata\030# \001(\010R\020s" +
+      "kip-parent-meta\022\035\n\005steps\030$ \003(\0132\016.analysi" +
+      "s.Step\022(\n\017submission_date\030% \001(\tR\017submiss" +
+      "ion_date\022\033\n\tsubmitter\030& \001(\tR\010username\022\014\n" +
+      "\004type\030\' \001(\t\022\030\n\007user_id\030( \001(\tR\007user_id\022 \n" +
+      "\013user_groups\030) \003(\tR\013user_groups\022\034\n\tuser_" +
+      "home\030* \001(\tR\tuser_home\022\032\n\010wiki_url\030+ \001(\tR" +
+      "\010wiki_url\022 \n\013config_file\030, \001(\tR\013config_f" +
+      "ile:\002\030\001B^\n\030org.cyverse.de.protobufsB\033Ana" +
+      "lysisSubmissionProtobufsP\001Z#github.com/c" +
+      "yverse-de/p/go/analysisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          org.cyverse.de.protobufs.AnalysisContainerProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
+          org.cyverse.de.protobufs.ContainersProtobufs.getDescriptor(),
         });
     internal_static_analysis_HTCondorExtraInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -283,8 +283,8 @@ public final class AnalysisSubmissionProtobufs {
         internal_static_analysis_Job_descriptor,
         new java.lang.String[] { "AppDescription", "AppId", "AppName", "ArchiveLogs", "BatchId", "CondorId", "CondorLogPath", "CreateOutputSubdir", "DateSubmitted", "DateStarted", "DateCompleted", "Description", "Email", "Extra", "ExecutionTarget", "ExitCode", "FailureCount", "FailureThreshold", "FileMetadata", "FilterFiles", "Group", "InputPathListFile", "InputTicketsFile", "InvocationId", "IrodsBase", "Name", "NfsBase", "Notify", "NowDate", "OutputDir", "OutputDirTicket", "OutputTicketFile", "RequestType", "RunOnNfs", "SkipParentMetadata", "Steps", "SubmissionDate", "Submitter", "Type", "UserId", "UserGroups", "UserHome", "WikiUrl", "ConfigFile", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    org.cyverse.de.protobufs.AnalysisContainerProtobufs.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
+    org.cyverse.de.protobufs.ContainersProtobufs.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

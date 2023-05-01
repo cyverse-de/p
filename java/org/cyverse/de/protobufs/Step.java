@@ -67,17 +67,17 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.analysis.Container container = 1;</code>
+     * <code>.containers.Container container = 1;</code>
      * @return Whether the container field is set.
      */
     boolean hasContainer();
     /**
-     * <code>.analysis.Container container = 1;</code>
+     * <code>.containers.Container container = 1;</code>
      * @return The container.
      */
     org.cyverse.de.protobufs.Container getContainer();
     /**
-     * <code>.analysis.Container container = 1;</code>
+     * <code>.containers.Container container = 1;</code>
      */
     org.cyverse.de.protobufs.ContainerOrBuilder getContainerOrBuilder();
 
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
     public static final int CONTAINER_FIELD_NUMBER = 1;
     private org.cyverse.de.protobufs.Container container_;
     /**
-     * <code>.analysis.Container container = 1;</code>
+     * <code>.containers.Container container = 1;</code>
      * @return Whether the container field is set.
      */
     @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
       return container_ != null;
     }
     /**
-     * <code>.analysis.Container container = 1;</code>
+     * <code>.containers.Container container = 1;</code>
      * @return The container.
      */
     @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
       return container_ == null ? org.cyverse.de.protobufs.Container.getDefaultInstance() : container_;
     }
     /**
-     * <code>.analysis.Container container = 1;</code>
+     * <code>.containers.Container container = 1;</code>
      */
     @java.lang.Override
     public org.cyverse.de.protobufs.ContainerOrBuilder getContainerOrBuilder() {
@@ -913,14 +913,14 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.cyverse.de.protobufs.Container, org.cyverse.de.protobufs.Container.Builder, org.cyverse.de.protobufs.ContainerOrBuilder> containerBuilder_;
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        * @return Whether the container field is set.
        */
       public boolean hasContainer() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        * @return The container.
        */
       public org.cyverse.de.protobufs.Container getContainer() {
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       public Builder setContainer(org.cyverse.de.protobufs.Container value) {
         if (containerBuilder_ == null) {
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       public Builder setContainer(
           org.cyverse.de.protobufs.Container.Builder builderForValue) {
@@ -961,7 +961,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       public Builder mergeContainer(org.cyverse.de.protobufs.Container value) {
         if (containerBuilder_ == null) {
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       public Builder clearContainer() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -993,7 +993,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       public org.cyverse.de.protobufs.Container.Builder getContainerBuilder() {
         bitField0_ |= 0x00000001;
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
         return getContainerFieldBuilder().getBuilder();
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       public org.cyverse.de.protobufs.ContainerOrBuilder getContainerOrBuilder() {
         if (containerBuilder_ != null) {
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
-       * <code>.analysis.Container container = 1;</code>
+       * <code>.containers.Container container = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           org.cyverse.de.protobufs.Container, org.cyverse.de.protobufs.Container.Builder, org.cyverse.de.protobufs.ContainerOrBuilder> 

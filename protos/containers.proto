@@ -1,0 +1,183 @@
+syntax = "proto3";
+
+package containers;
+
+option go_package = "github.com/cyverse-de/p/go/containers";
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "ContainersProtobufs";
+
+/**
+ * A container volume. Used for mapping host paths into a container.
+ * 
+ * Correlates to the 'container_volumes' table in the 'de' database.
+ */
+message Volume {
+    // The absolute path to a file/directory on the container host/k8s node.
+    string host_path = 1 [json_name = "host_path"];
+
+    // The path to mount the host path to inside of the container.
+    string container_path = 2 [json_name = "container_path"];
+
+    // Whether the mount point in the container should be read only.
+    bool read_only = 3 [json_name = "read_only"];
+
+    // The mode the mount point should have once mounted.
+    string mode = 4;
+}
+
+/**
+ * A port the container exposes.
+ *
+ * Correlates to the 'container_ports' table in the 'de' database.
+ */
+message Port {
+    // The port on the host that the container port should be mapped to. Usually unset.
+    int32 host_port = 1 [json_name = "host_port"];
+
+    // The port the contained process needs to have open.
+    int32 container_port = 2 [json_name = "container_port"];
+
+    // Whether to bind the container port to the host port. Normally left to false/null/None.
+    bool bind_to_host = 3 [json_name = "bind_to_host"];
+}
+
+/**
+ * A host device that the container needs access to.
+ *
+ * Correlates to the 'container_devices' table in the 'de' database.
+ */
+message Device {
+    // The path to the device on the host.
+    string host_path = 1 [json_name = "host_path"];
+
+    // The path to the device in the container.
+    string container_path = 2 [json_name = "container_path"];
+
+    // The permissions needed to mount the device.
+    string cgroup_permissions = 3 [json_name = "cgroup_permissions"];
+}
+
+/**
+ * Another container from which the container should mount volumes.
+ *
+ * Correlates to the 'container_volumes_from' table in the 'de' database.
+ */
+message VolumesFrom {
+    // The image tag for the mountee container.
+    string tag = 1;
+
+    // The name of the mountee container.
+    string name = 2;
+
+    // Authentication information needed to pull the mountee container image.
+    string auth = 3;
+
+    // The prefix that should be given to the name of the container.
+    string name_prefix = 4 [json_name = "name_prefix"];
+
+    // The URL to the mountee container image.
+    string url = 5;
+
+    // The path inside the mountee container that should be mounted.
+    string host_path = 6 [json_name = "host_path"];
+
+    // The path to the mount point inside the mounting container.
+    string container_path = 7 [json_name = "container_path"];
+
+    // Whether the mount point is read only.
+    bool read_only = 8 [json_name = "read_only"];
+}
+
+/**
+ * Information about a container image.
+ *
+ * Correlates to the 'container_images' table in the 'de' database.
+ */
+message Image {
+    // The UUID of the container image.
+    string id = 1;
+
+    // The name of the container image.
+    string name = 2;
+
+    // The container image's tag.
+    string tag = 3;
+
+    // Authentication information needed to pull the image.
+    string auth = 4;
+
+    // The URL for the image.
+    string url = 5;
+
+    // The path to the image in OSG. Might be blank.
+    string osg_image_path = 6 [json_name = "osg_image_path"];
+}
+
+/**
+ * Contains information needed to launch an app in VICE.
+ * 
+ * Corresponds roughly to to the 'interactive_apps_proxy_settings' table in the 'de' database.
+ */
+message InteractiveApps {
+    // The image containing the proxy application that requests to a VICE app flow through.
+    string proxy_image = 1;
+
+    // The name of the proxy container.
+    string proxy_name = 2;
+
+    // The URL the proxy will redirect users to when necessary.
+    string frontend_url = 3;
+
+    // The URL to the CAS instance needed for authentication.
+    string cas_url = 4;
+
+    // The URL to the CAS authentication validation.
+    string cas_validate = 5;
+
+    // The path to the SSL cert in the container.
+    string ssl_cert_path = 6;
+
+    // The path to the SSL key in the container.
+    string ssl_key_path = 7;
+
+    // Unused.
+    string websocket_path = 8;
+
+    // Unused.
+    string websocket_port = 9;
+
+    // Unused.
+    string websocket_proto = 10;
+
+    // Unused.
+    string backend_url = 11;
+}
+
+/**
+ * A representation of a container for an analysis.
+ * 
+ * Correlates to the 'container_settings' table in the 'de' database..
+ */
+message Container {
+    string id = 1;
+    repeated Volume volumes = 2 [json_name = "container_volumes"];
+    repeated Device devices = 3 [json_name = "container_devices"];
+    repeated VolumesFrom volumes_from = 4 [json_name = "container_volumes_from"];
+    string name = 5;
+    string network_mode = 6 [json_name = "network_mode"];
+    int64 cpu_shares = 7 [json_name = "cpu_shares"];
+    InteractiveApps interactive_apps = 8 [json_name = "interactive_apps"];
+    int64 memory_limit = 9 [json_name = "memory_limit"];
+    int64 min_memory_limit = 10 [json_name = "min_memory_limit"];
+    float max_cpu_cores = 11 [json_name = "max_cpu_cores"];
+    float min_cpu_cores = 12 [json_name = "min_cpu_cores"];
+    int64 min_disk_space = 13 [json_name = "min_disk_space"];
+    int64 pids_limit = 14 [json_name = "pids_limit"];
+    Image image = 15;
+    string entry_point = 16 [json_name = "entrypoint"];
+    string working_dir = 17 [json_name = "working_directory"];
+    repeated Port ports = 18;
+    bool skip_tmp_mount = 19 [json_name = "skip_tmp_mount"];
+    int32 uid = 20 [json_name = "uid"];
+}

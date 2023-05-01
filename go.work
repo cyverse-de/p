@@ -1,5 +1,9 @@
 go 1.18
 
+use ./go/tools
+
+use ./go/containers
+
 use ./go/analysis
 
 use ./go/header

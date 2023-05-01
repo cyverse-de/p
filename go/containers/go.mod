@@ -1,4 +1,4 @@
-module github.com/cyverse-de/p/go/header
+module github.com/cyverse-de/p/go/containers
 
 go 1.20
 

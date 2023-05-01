@@ -3,8 +3,8 @@ syntax = "proto3";
 package analysis;
 
 import "google/protobuf/timestamp.proto";
-import "analysis_container.proto";
 import "header.proto";
+import "containers.proto";
 
 option go_package = "github.com/cyverse-de/p/go/analysis";
 
@@ -28,7 +28,7 @@ message FileMetadata {
 
 message Step {
     message Component {
-        Container container = 1;
+        containers.Container container = 1;
         string type = 2;
         string name = 3;
         string location = 4;
