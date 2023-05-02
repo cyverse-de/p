@@ -50,44 +50,6 @@ private static final long serialVersionUID = 0L;
             org.cyverse.de.protobufs.ServiceError.class, org.cyverse.de.protobufs.ServiceError.Builder.class);
   }
 
-  public static final int HEADER_FIELD_NUMBER = 1;
-  private org.cyverse.de.protobufs.Header header_;
-  /**
-   * <pre>
-   * Contains telemetry information
-   * </pre>
-   *
-   * <code>.header.Header header = 1;</code>
-   * @return Whether the header field is set.
-   */
-  @java.lang.Override
-  public boolean hasHeader() {
-    return header_ != null;
-  }
-  /**
-   * <pre>
-   * Contains telemetry information
-   * </pre>
-   *
-   * <code>.header.Header header = 1;</code>
-   * @return The header.
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.Header getHeader() {
-    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-  }
-  /**
-   * <pre>
-   * Contains telemetry information
-   * </pre>
-   *
-   * <code>.header.Header header = 1;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-    return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-  }
-
   public static final int ERROR_CODE_FIELD_NUMBER = 2;
   private int errorCode_ = 0;
   /**
@@ -190,9 +152,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (header_ != null) {
-      output.writeMessage(1, getHeader());
-    }
     if (errorCode_ != org.cyverse.de.protobufs.ErrorCode.UNSET.getNumber()) {
       output.writeEnum(2, errorCode_);
     }
@@ -211,10 +170,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (header_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getHeader());
-    }
     if (errorCode_ != org.cyverse.de.protobufs.ErrorCode.UNSET.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, errorCode_);
@@ -241,11 +196,6 @@ private static final long serialVersionUID = 0L;
     }
     org.cyverse.de.protobufs.ServiceError other = (org.cyverse.de.protobufs.ServiceError) obj;
 
-    if (hasHeader() != other.hasHeader()) return false;
-    if (hasHeader()) {
-      if (!getHeader()
-          .equals(other.getHeader())) return false;
-    }
     if (errorCode_ != other.errorCode_) return false;
     if (getStatusCode()
         != other.getStatusCode()) return false;
@@ -262,10 +212,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasHeader()) {
-      hash = (37 * hash) + HEADER_FIELD_NUMBER;
-      hash = (53 * hash) + getHeader().hashCode();
-    }
     hash = (37 * hash) + ERROR_CODE_FIELD_NUMBER;
     hash = (53 * hash) + errorCode_;
     hash = (37 * hash) + STATUS_CODE_FIELD_NUMBER;
@@ -406,11 +352,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      header_ = null;
-      if (headerBuilder_ != null) {
-        headerBuilder_.dispose();
-        headerBuilder_ = null;
-      }
       errorCode_ = 0;
       statusCode_ = 0;
       message_ = "";
@@ -448,17 +389,12 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(org.cyverse.de.protobufs.ServiceError result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.header_ = headerBuilder_ == null
-            ? header_
-            : headerBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.errorCode_ = errorCode_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.statusCode_ = statusCode_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.message_ = message_;
       }
     }
@@ -507,9 +443,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.cyverse.de.protobufs.ServiceError other) {
       if (other == org.cyverse.de.protobufs.ServiceError.getDefaultInstance()) return this;
-      if (other.hasHeader()) {
-        mergeHeader(other.getHeader());
-      }
       if (other.errorCode_ != 0) {
         setErrorCodeValue(other.getErrorCodeValue());
       }
@@ -518,7 +451,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getMessage().isEmpty()) {
         message_ = other.message_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -547,26 +480,19 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              input.readMessage(
-                  getHeaderFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 16: {
               errorCode_ = input.readEnum();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 16
             case 24: {
               statusCode_ = input.readInt32();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             case 34: {
               message_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             default: {
@@ -585,161 +511,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
-
-    private org.cyverse.de.protobufs.Header header_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> headerBuilder_;
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     * @return Whether the header field is set.
-     */
-    public boolean hasHeader() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     * @return The header.
-     */
-    public org.cyverse.de.protobufs.Header getHeader() {
-      if (headerBuilder_ == null) {
-        return header_ == null ? org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-      } else {
-        return headerBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    public Builder setHeader(org.cyverse.de.protobufs.Header value) {
-      if (headerBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        header_ = value;
-      } else {
-        headerBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    public Builder setHeader(
-        org.cyverse.de.protobufs.Header.Builder builderForValue) {
-      if (headerBuilder_ == null) {
-        header_ = builderForValue.build();
-      } else {
-        headerBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    public Builder mergeHeader(org.cyverse.de.protobufs.Header value) {
-      if (headerBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          header_ != null &&
-          header_ != org.cyverse.de.protobufs.Header.getDefaultInstance()) {
-          getHeaderBuilder().mergeFrom(value);
-        } else {
-          header_ = value;
-        }
-      } else {
-        headerBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    public Builder clearHeader() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      header_ = null;
-      if (headerBuilder_ != null) {
-        headerBuilder_.dispose();
-        headerBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    public org.cyverse.de.protobufs.Header.Builder getHeaderBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getHeaderFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    public org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder() {
-      if (headerBuilder_ != null) {
-        return headerBuilder_.getMessageOrBuilder();
-      } else {
-        return header_ == null ?
-            org.cyverse.de.protobufs.Header.getDefaultInstance() : header_;
-      }
-    }
-    /**
-     * <pre>
-     * Contains telemetry information
-     * </pre>
-     *
-     * <code>.header.Header header = 1;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder> 
-        getHeaderFieldBuilder() {
-      if (headerBuilder_ == null) {
-        headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            org.cyverse.de.protobufs.Header, org.cyverse.de.protobufs.Header.Builder, org.cyverse.de.protobufs.HeaderOrBuilder>(
-                getHeader(),
-                getParentForChildren(),
-                isClean());
-        header_ = null;
-      }
-      return headerBuilder_;
-    }
 
     private int errorCode_ = 0;
     /**
@@ -764,7 +535,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setErrorCodeValue(int value) {
       errorCode_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -794,7 +565,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       errorCode_ = value.getNumber();
       onChanged();
       return this;
@@ -808,7 +579,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearErrorCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       errorCode_ = 0;
       onChanged();
       return this;
@@ -839,7 +610,7 @@ private static final long serialVersionUID = 0L;
     public Builder setStatusCode(int value) {
       
       statusCode_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -852,7 +623,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatusCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       statusCode_ = 0;
       onChanged();
       return this;
@@ -913,7 +684,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       message_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -927,7 +698,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMessage() {
       message_ = getDefaultInstance().getMessage();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -945,7 +716,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       message_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

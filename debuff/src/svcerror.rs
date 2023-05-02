@@ -4,9 +4,6 @@
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ServiceError {
-    /// Contains telemetry information
-    #[prost(message, optional, tag="1")]
-    pub header: ::core::option::Option<super::header::Header>,
     /// The numeric error code from the error code enum.
     #[prost(enumeration="ErrorCode", tag="2")]
     pub error_code: i32,

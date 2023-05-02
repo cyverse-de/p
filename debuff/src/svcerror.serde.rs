@@ -116,9 +116,6 @@ impl serde::Serialize for ServiceError {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.header.is_some() {
-            len += 1;
-        }
         if self.error_code != 0 {
             len += 1;
         }
@@ -129,9 +126,6 @@ impl serde::Serialize for ServiceError {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("svcerror.ServiceError", len)?;
-        if let Some(v) = self.header.as_ref() {
-            struct_ser.serialize_field("header", v)?;
-        }
         if self.error_code != 0 {
             let v = ErrorCode::from_i32(self.error_code)
                 .ok_or_else(|| serde::ser::Error::custom(format!("Invalid variant {}", self.error_code)))?;
@@ -153,7 +147,6 @@ impl<'de> serde::Deserialize<'de> for ServiceError {
         D: serde::Deserializer<'de>,
     {
         const FIELDS: &[&str] = &[
-            "header",
             "error_code",
             "status_code",
             "message",
@@ -161,7 +154,6 @@ impl<'de> serde::Deserialize<'de> for ServiceError {
 
         #[allow(clippy::enum_variant_names)]
         enum GeneratedField {
-            Header,
             ErrorCode,
             StatusCode,
             Message,
@@ -186,7 +178,6 @@ impl<'de> serde::Deserialize<'de> for ServiceError {
                         E: serde::de::Error,
                     {
                         match value {
-                            "header" => Ok(GeneratedField::Header),
                             "error_code" => Ok(GeneratedField::ErrorCode),
                             "status_code" => Ok(GeneratedField::StatusCode),
                             "message" => Ok(GeneratedField::Message),
@@ -209,18 +200,11 @@ impl<'de> serde::Deserialize<'de> for ServiceError {
                 where
                     V: serde::de::MapAccess<'de>,
             {
-                let mut header__ = None;
                 let mut error_code__ = None;
                 let mut status_code__ = None;
                 let mut message__ = None;
                 while let Some(k) = map.next_key()? {
                     match k {
-                        GeneratedField::Header => {
-                            if header__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("header"));
-                            }
-                            header__ = map.next_value()?;
-                        }
                         GeneratedField::ErrorCode => {
                             if error_code__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error_code"));
@@ -244,7 +228,6 @@ impl<'de> serde::Deserialize<'de> for ServiceError {
                     }
                 }
                 Ok(ServiceError {
-                    header: header__,
                     error_code: error_code__.unwrap_or_default(),
                     status_code: status_code__.unwrap_or_default(),
                     message: message__.unwrap_or_default(),

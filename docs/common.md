@@ -94,7 +94,6 @@ An error returned by a request handler.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [header.Header](#header-Header) |  | Contains telemetry information |
 | error_code | [ErrorCode](#svcerror-ErrorCode) |  | The numeric error code from the error code enum. |
 | status_code | [int32](#int32) |  | The status code for the error. |
 | message | [string](#string) |  | The error&#39;s message. |

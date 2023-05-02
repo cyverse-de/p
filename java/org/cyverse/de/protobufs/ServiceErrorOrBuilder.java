@@ -9,33 +9,6 @@ public interface ServiceErrorOrBuilder extends
 
   /**
    * <pre>
-   * Contains telemetry information
-   * </pre>
-   *
-   * <code>.header.Header header = 1;</code>
-   * @return Whether the header field is set.
-   */
-  boolean hasHeader();
-  /**
-   * <pre>
-   * Contains telemetry information
-   * </pre>
-   *
-   * <code>.header.Header header = 1;</code>
-   * @return The header.
-   */
-  org.cyverse.de.protobufs.Header getHeader();
-  /**
-   * <pre>
-   * Contains telemetry information
-   * </pre>
-   *
-   * <code>.header.Header header = 1;</code>
-   */
-  org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
-
-  /**
-   * <pre>
    * The numeric error code from the error code enum.
    * </pre>
    *
