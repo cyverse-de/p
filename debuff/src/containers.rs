@@ -101,9 +101,6 @@ pub struct Image {
     /// The container image's tag.
     #[prost(string, tag="3")]
     pub tag: ::prost::alloc::string::String,
-    /// Authentication information needed to pull the image.
-    #[prost(string, tag="4")]
-    pub auth: ::prost::alloc::string::String,
     /// The URL for the image.
     #[prost(string, tag="5")]
     pub url: ::prost::alloc::string::String,

@@ -73,38 +73,38 @@ public final class ContainersProtobufs {
       "_prefix\022\013\n\003url\030\005 \001(\t\022\034\n\thost_path\030\006 \001(\tR" +
       "\thost_path\022&\n\016container_path\030\007 \001(\tR\016cont" +
       "ainer_path\022\034\n\tread_only\030\010 \001(\010R\tread_only" +
-      "\"q\n\005Image\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003t" +
-      "ag\030\003 \001(\t\022\014\n\004auth\030\004 \001(\t\022\013\n\003url\030\005 \001(\t\022&\n\016o" +
-      "sg_image_path\030\006 \001(\tR\016osg_image_path\"\202\002\n\017" +
-      "InteractiveApps\022\023\n\013proxy_image\030\001 \001(\t\022\022\n\n" +
-      "proxy_name\030\002 \001(\t\022\024\n\014frontend_url\030\003 \001(\t\022\017" +
-      "\n\007cas_url\030\004 \001(\t\022\024\n\014cas_validate\030\005 \001(\t\022\025\n" +
-      "\rssl_cert_path\030\006 \001(\t\022\024\n\014ssl_key_path\030\007 \001" +
-      "(\t\022\026\n\016websocket_path\030\010 \001(\t\022\026\n\016websocket_" +
-      "port\030\t \001(\t\022\027\n\017websocket_proto\030\n \001(\t\022\023\n\013b" +
-      "ackend_url\030\013 \001(\t\"\223\006\n\tContainer\022\n\n\002id\030\001 \001" +
-      "(\t\0226\n\007volumes\030\002 \003(\0132\022.containers.VolumeR" +
-      "\021container_volumes\0226\n\007devices\030\003 \003(\0132\022.co" +
-      "ntainers.DeviceR\021container_devices\022E\n\014vo" +
-      "lumes_from\030\004 \003(\0132\027.containers.VolumesFro" +
-      "mR\026container_volumes_from\022\014\n\004name\030\005 \001(\t\022" +
-      "\"\n\014network_mode\030\006 \001(\tR\014network_mode\022\036\n\nc" +
-      "pu_shares\030\007 \001(\003R\ncpu_shares\022G\n\020interacti" +
-      "ve_apps\030\010 \001(\0132\033.containers.InteractiveAp" +
-      "psR\020interactive_apps\022\"\n\014memory_limit\030\t \001" +
-      "(\003R\014memory_limit\022*\n\020min_memory_limit\030\n \001" +
-      "(\003R\020min_memory_limit\022$\n\rmax_cpu_cores\030\013 " +
-      "\001(\002R\rmax_cpu_cores\022$\n\rmin_cpu_cores\030\014 \001(" +
-      "\002R\rmin_cpu_cores\022&\n\016min_disk_space\030\r \001(\003" +
-      "R\016min_disk_space\022\036\n\npids_limit\030\016 \001(\003R\npi" +
-      "ds_limit\022 \n\005image\030\017 \001(\0132\021.containers.Ima" +
-      "ge\022\037\n\013entry_point\030\020 \001(\tR\nentrypoint\022&\n\013w" +
-      "orking_dir\030\021 \001(\tR\021working_directory\022\037\n\005p" +
-      "orts\030\022 \003(\0132\020.containers.Port\022&\n\016skip_tmp" +
-      "_mount\030\023 \001(\010R\016skip_tmp_mount\022\020\n\003uid\030\024 \001(" +
-      "\005R\003uidBX\n\030org.cyverse.de.protobufsB\023Cont" +
-      "ainersProtobufsP\001Z%github.com/cyverse-de" +
-      "/p/go/containersb\006proto3"
+      "\"i\n\005Image\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003t" +
+      "ag\030\003 \001(\t\022\013\n\003url\030\005 \001(\t\022&\n\016osg_image_path\030" +
+      "\006 \001(\tR\016osg_image_pathJ\004\010\004\020\005\"\202\002\n\017Interact" +
+      "iveApps\022\023\n\013proxy_image\030\001 \001(\t\022\022\n\nproxy_na" +
+      "me\030\002 \001(\t\022\024\n\014frontend_url\030\003 \001(\t\022\017\n\007cas_ur" +
+      "l\030\004 \001(\t\022\024\n\014cas_validate\030\005 \001(\t\022\025\n\rssl_cer" +
+      "t_path\030\006 \001(\t\022\024\n\014ssl_key_path\030\007 \001(\t\022\026\n\016we" +
+      "bsocket_path\030\010 \001(\t\022\026\n\016websocket_port\030\t \001" +
+      "(\t\022\027\n\017websocket_proto\030\n \001(\t\022\023\n\013backend_u" +
+      "rl\030\013 \001(\t\"\223\006\n\tContainer\022\n\n\002id\030\001 \001(\t\0226\n\007vo" +
+      "lumes\030\002 \003(\0132\022.containers.VolumeR\021contain" +
+      "er_volumes\0226\n\007devices\030\003 \003(\0132\022.containers" +
+      ".DeviceR\021container_devices\022E\n\014volumes_fr" +
+      "om\030\004 \003(\0132\027.containers.VolumesFromR\026conta" +
+      "iner_volumes_from\022\014\n\004name\030\005 \001(\t\022\"\n\014netwo" +
+      "rk_mode\030\006 \001(\tR\014network_mode\022\036\n\ncpu_share" +
+      "s\030\007 \001(\003R\ncpu_shares\022G\n\020interactive_apps\030" +
+      "\010 \001(\0132\033.containers.InteractiveAppsR\020inte" +
+      "ractive_apps\022\"\n\014memory_limit\030\t \001(\003R\014memo" +
+      "ry_limit\022*\n\020min_memory_limit\030\n \001(\003R\020min_" +
+      "memory_limit\022$\n\rmax_cpu_cores\030\013 \001(\002R\rmax" +
+      "_cpu_cores\022$\n\rmin_cpu_cores\030\014 \001(\002R\rmin_c" +
+      "pu_cores\022&\n\016min_disk_space\030\r \001(\003R\016min_di" +
+      "sk_space\022\036\n\npids_limit\030\016 \001(\003R\npids_limit" +
+      "\022 \n\005image\030\017 \001(\0132\021.containers.Image\022\037\n\013en" +
+      "try_point\030\020 \001(\tR\nentrypoint\022&\n\013working_d" +
+      "ir\030\021 \001(\tR\021working_directory\022\037\n\005ports\030\022 \003" +
+      "(\0132\020.containers.Port\022&\n\016skip_tmp_mount\030\023" +
+      " \001(\010R\016skip_tmp_mount\022\020\n\003uid\030\024 \001(\005R\003uidBX" +
+      "\n\030org.cyverse.de.protobufsB\023ContainersPr" +
+      "otobufsP\001Z%github.com/cyverse-de/p/go/co" +
+      "ntainersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -139,7 +139,7 @@ public final class ContainersProtobufs {
     internal_static_containers_Image_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_containers_Image_descriptor,
-        new java.lang.String[] { "Id", "Name", "Tag", "Auth", "Url", "OsgImagePath", });
+        new java.lang.String[] { "Id", "Name", "Tag", "Url", "OsgImagePath", });
     internal_static_containers_InteractiveApps_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_containers_InteractiveApps_fieldAccessorTable = new

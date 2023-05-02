@@ -25,7 +25,6 @@ private static final long serialVersionUID = 0L;
     id_ = "";
     name_ = "";
     tag_ = "";
-    auth_ = "";
     url_ = "";
     osgImagePath_ = "";
   }
@@ -196,53 +195,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int AUTH_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object auth_ = "";
-  /**
-   * <pre>
-   * Authentication information needed to pull the image.
-   * </pre>
-   *
-   * <code>string auth = 4;</code>
-   * @return The auth.
-   */
-  @java.lang.Override
-  public java.lang.String getAuth() {
-    java.lang.Object ref = auth_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      auth_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Authentication information needed to pull the image.
-   * </pre>
-   *
-   * <code>string auth = 4;</code>
-   * @return The bytes for auth.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAuthBytes() {
-    java.lang.Object ref = auth_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      auth_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int URL_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object url_ = "";
@@ -360,9 +312,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tag_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auth_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, auth_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, url_);
     }
@@ -386,9 +335,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tag_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auth_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, auth_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, url_);
@@ -417,8 +363,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getTag()
         .equals(other.getTag())) return false;
-    if (!getAuth()
-        .equals(other.getAuth())) return false;
     if (!getUrl()
         .equals(other.getUrl())) return false;
     if (!getOsgImagePath()
@@ -440,8 +384,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + TAG_FIELD_NUMBER;
     hash = (53 * hash) + getTag().hashCode();
-    hash = (37 * hash) + AUTH_FIELD_NUMBER;
-    hash = (53 * hash) + getAuth().hashCode();
     hash = (37 * hash) + URL_FIELD_NUMBER;
     hash = (53 * hash) + getUrl().hashCode();
     hash = (37 * hash) + OSG_IMAGE_PATH_FIELD_NUMBER;
@@ -584,7 +526,6 @@ private static final long serialVersionUID = 0L;
       id_ = "";
       name_ = "";
       tag_ = "";
-      auth_ = "";
       url_ = "";
       osgImagePath_ = "";
       return this;
@@ -630,12 +571,9 @@ private static final long serialVersionUID = 0L;
         result.tag_ = tag_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.auth_ = auth_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.url_ = url_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.osgImagePath_ = osgImagePath_;
       }
     }
@@ -699,19 +637,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (!other.getAuth().isEmpty()) {
-        auth_ = other.auth_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
       if (!other.getUrl().isEmpty()) {
         url_ = other.url_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getOsgImagePath().isEmpty()) {
         osgImagePath_ = other.osgImagePath_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -755,19 +688,14 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
-              auth_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             case 42: {
               url_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               osgImagePath_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             default: {
@@ -1063,98 +991,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object auth_ = "";
-    /**
-     * <pre>
-     * Authentication information needed to pull the image.
-     * </pre>
-     *
-     * <code>string auth = 4;</code>
-     * @return The auth.
-     */
-    public java.lang.String getAuth() {
-      java.lang.Object ref = auth_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        auth_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Authentication information needed to pull the image.
-     * </pre>
-     *
-     * <code>string auth = 4;</code>
-     * @return The bytes for auth.
-     */
-    public com.google.protobuf.ByteString
-        getAuthBytes() {
-      java.lang.Object ref = auth_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        auth_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Authentication information needed to pull the image.
-     * </pre>
-     *
-     * <code>string auth = 4;</code>
-     * @param value The auth to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAuth(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      auth_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Authentication information needed to pull the image.
-     * </pre>
-     *
-     * <code>string auth = 4;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAuth() {
-      auth_ = getDefaultInstance().getAuth();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Authentication information needed to pull the image.
-     * </pre>
-     *
-     * <code>string auth = 4;</code>
-     * @param value The bytes for auth to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAuthBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      auth_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object url_ = "";
     /**
      * <pre>
@@ -1210,7 +1046,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       url_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1224,7 +1060,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearUrl() {
       url_ = getDefaultInstance().getUrl();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1242,7 +1078,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       url_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1302,7 +1138,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       osgImagePath_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1316,7 +1152,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearOsgImagePath() {
       osgImagePath_ = getDefaultInstance().getOsgImagePath();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1334,7 +1170,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       osgImagePath_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

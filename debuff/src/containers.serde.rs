@@ -576,9 +576,6 @@ impl serde::Serialize for Image {
         if !self.tag.is_empty() {
             len += 1;
         }
-        if !self.auth.is_empty() {
-            len += 1;
-        }
         if !self.url.is_empty() {
             len += 1;
         }
@@ -594,9 +591,6 @@ impl serde::Serialize for Image {
         }
         if !self.tag.is_empty() {
             struct_ser.serialize_field("tag", &self.tag)?;
-        }
-        if !self.auth.is_empty() {
-            struct_ser.serialize_field("auth", &self.auth)?;
         }
         if !self.url.is_empty() {
             struct_ser.serialize_field("url", &self.url)?;
@@ -617,7 +611,6 @@ impl<'de> serde::Deserialize<'de> for Image {
             "id",
             "name",
             "tag",
-            "auth",
             "url",
             "osg_image_path",
         ];
@@ -627,7 +620,6 @@ impl<'de> serde::Deserialize<'de> for Image {
             Id,
             Name,
             Tag,
-            Auth,
             Url,
             OsgImagePath,
         }
@@ -654,7 +646,6 @@ impl<'de> serde::Deserialize<'de> for Image {
                             "id" => Ok(GeneratedField::Id),
                             "name" => Ok(GeneratedField::Name),
                             "tag" => Ok(GeneratedField::Tag),
-                            "auth" => Ok(GeneratedField::Auth),
                             "url" => Ok(GeneratedField::Url),
                             "osg_image_path" => Ok(GeneratedField::OsgImagePath),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
@@ -679,7 +670,6 @@ impl<'de> serde::Deserialize<'de> for Image {
                 let mut id__ = None;
                 let mut name__ = None;
                 let mut tag__ = None;
-                let mut auth__ = None;
                 let mut url__ = None;
                 let mut osg_image_path__ = None;
                 while let Some(k) = map.next_key()? {
@@ -702,12 +692,6 @@ impl<'de> serde::Deserialize<'de> for Image {
                             }
                             tag__ = Some(map.next_value()?);
                         }
-                        GeneratedField::Auth => {
-                            if auth__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("auth"));
-                            }
-                            auth__ = Some(map.next_value()?);
-                        }
                         GeneratedField::Url => {
                             if url__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("url"));
@@ -726,7 +710,6 @@ impl<'de> serde::Deserialize<'de> for Image {
                     id: id__.unwrap_or_default(),
                     name: name__.unwrap_or_default(),
                     tag: tag__.unwrap_or_default(),
-                    auth: auth__.unwrap_or_default(),
                     url: url__.unwrap_or_default(),
                     osg_image_path: osg_image_path__.unwrap_or_default(),
                 })

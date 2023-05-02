@@ -69,26 +69,6 @@ public interface ImageOrBuilder extends
 
   /**
    * <pre>
-   * Authentication information needed to pull the image.
-   * </pre>
-   *
-   * <code>string auth = 4;</code>
-   * @return The auth.
-   */
-  java.lang.String getAuth();
-  /**
-   * <pre>
-   * Authentication information needed to pull the image.
-   * </pre>
-   *
-   * <code>string auth = 4;</code>
-   * @return The bytes for auth.
-   */
-  com.google.protobuf.ByteString
-      getAuthBytes();
-
-  /**
-   * <pre>
    * The URL for the image.
    * </pre>
    *

@@ -95,6 +95,8 @@ message VolumesFrom {
  * Correlates to the 'container_images' table in the 'de' database.
  */
 message Image {
+    reserved 4;
+  
     // The UUID of the container image.
     string id = 1;
 
@@ -103,9 +105,6 @@ message Image {
 
     // The container image's tag.
     string tag = 3;
-
-    // Authentication information needed to pull the image.
-    string auth = 4;
 
     // The URL for the image.
     string url = 5;
