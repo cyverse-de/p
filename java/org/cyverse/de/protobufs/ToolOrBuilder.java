@@ -112,7 +112,7 @@ public interface ToolOrBuilder extends
    * The time limit the tool is allowed to run for by default. Unit is seconds.
    * </pre>
    *
-   * <code>uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
+   * <code>int32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
    * @return The timeLimitSeconds.
    */
   int getTimeLimitSeconds();

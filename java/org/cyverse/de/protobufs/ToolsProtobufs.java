@@ -32,7 +32,7 @@ public final class ToolsProtobufs {
       "ners.proto\"\330\002\n\004Tool\022\014\n\004uuid\030\001 \001(\t\022\014\n\004nam" +
       "e\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023\n\013attribution\030" +
       "\004 \001(\t\022\023\n\013description\030\005 \001(\t\022.\n\022time_limit" +
-      "_seconds\030\006 \001(\rR\022time_limit_seconds\022\022\n\nre" +
+      "_seconds\030\006 \001(\005R\022time_limit_seconds\022\022\n\nre" +
       "stricted\030\007 \001(\010\022\023\n\013interactive\030\010 \001(\010\022 \n\013g" +
       "pu_enabled\030\t \001(\010R\013gpu_enabled\022A\n\020integra" +
       "tion_data\030\n \001(\0132\025.apps.IntegrationDataR\020" +

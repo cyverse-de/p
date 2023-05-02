@@ -33,7 +33,7 @@ Mostly correllates to the &#39;tools&#39; table in the &#39;de&#39; database.
 | version | [string](#string) |  | The version of the tool. |
 | attribution | [string](#string) |  | Attribution information for the tool. |
 | description | [string](#string) |  | The description of the tool. |
-| time_limit_seconds | [uint32](#uint32) |  | The time limit the tool is allowed to run for by default. Unit is seconds. |
+| time_limit_seconds | [int32](#int32) |  | The time limit the tool is allowed to run for by default. Unit is seconds. |
 | restricted | [bool](#bool) |  | Whether the tool is restricted. |
 | interactive | [bool](#bool) |  | Whether the tool is interactive (i.e. whether it is intended for use in VICE). |
 | gpu_enabled | [bool](#bool) |  | Whether the tool requires a GPU. |

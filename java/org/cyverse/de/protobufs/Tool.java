@@ -297,7 +297,7 @@ private static final long serialVersionUID = 0L;
    * The time limit the tool is allowed to run for by default. Unit is seconds.
    * </pre>
    *
-   * <code>uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
+   * <code>int32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
    * @return The timeLimitSeconds.
    */
   @java.lang.Override
@@ -456,7 +456,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
     }
     if (timeLimitSeconds_ != 0) {
-      output.writeUInt32(6, timeLimitSeconds_);
+      output.writeInt32(6, timeLimitSeconds_);
     }
     if (restricted_ != false) {
       output.writeBool(7, restricted_);
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
     }
     if (timeLimitSeconds_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(6, timeLimitSeconds_);
+        .computeInt32Size(6, timeLimitSeconds_);
     }
     if (restricted_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 42
             case 48: {
-              timeLimitSeconds_ = input.readUInt32();
+              timeLimitSeconds_ = input.readInt32();
               bitField0_ |= 0x00000020;
               break;
             } // case 48
@@ -1486,7 +1486,7 @@ private static final long serialVersionUID = 0L;
      * The time limit the tool is allowed to run for by default. Unit is seconds.
      * </pre>
      *
-     * <code>uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
+     * <code>int32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
      * @return The timeLimitSeconds.
      */
     @java.lang.Override
@@ -1498,7 +1498,7 @@ private static final long serialVersionUID = 0L;
      * The time limit the tool is allowed to run for by default. Unit is seconds.
      * </pre>
      *
-     * <code>uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
+     * <code>int32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
      * @param value The timeLimitSeconds to set.
      * @return This builder for chaining.
      */
@@ -1514,7 +1514,7 @@ private static final long serialVersionUID = 0L;
      * The time limit the tool is allowed to run for by default. Unit is seconds.
      * </pre>
      *
-     * <code>uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
+     * <code>int32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTimeLimitSeconds() {

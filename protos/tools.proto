@@ -33,7 +33,7 @@ message Tool {
   string description = 5;
 
   // The time limit the tool is allowed to run for by default. Unit is seconds.
-  uint32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];
+  int32 time_limit_seconds = 6 [json_name = "time_limit_seconds"];
 
   // Whether the tool is restricted.
   bool restricted = 7;

@@ -23,8 +23,8 @@ pub struct Tool {
     #[prost(string, tag="5")]
     pub description: ::prost::alloc::string::String,
     /// The time limit the tool is allowed to run for by default. Unit is seconds.
-    #[prost(uint32, tag="6")]
-    pub time_limit_seconds: u32,
+    #[prost(int32, tag="6")]
+    pub time_limit_seconds: i32,
     /// Whether the tool is restricted.
     #[prost(bool, tag="7")]
     pub restricted: bool,
