@@ -604,19 +604,4 @@ public interface AnalysisSubmissionOrBuilder extends
    */
   com.google.protobuf.ByteString
       getConfigFileBytes();
-
-  /**
-   * <code>.header.Header header = 45;</code>
-   * @return Whether the header field is set.
-   */
-  boolean hasHeader();
-  /**
-   * <code>.header.Header header = 45;</code>
-   * @return The header.
-   */
-  org.cyverse.de.protobufs.Header getHeader();
-  /**
-   * <code>.header.Header header = 45;</code>
-   */
-  org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }

@@ -194,8 +194,6 @@ pub struct Step {
     /// It's really annoying, but this is singular for backwards compatibility.
     #[prost(message, repeated, tag="10")]
     pub output: ::prost::alloc::vec::Vec<step::Output>,
-    #[prost(message, optional, tag="11")]
-    pub header: ::core::option::Option<super::header::Header>,
 }
 /// Nested message and enum types in `Step`.
 pub mod step {
@@ -381,8 +379,6 @@ pub struct AnalysisSubmission {
     pub wiki_url: ::prost::alloc::string::String,
     #[prost(string, tag="44")]
     pub config_file: ::prost::alloc::string::String,
-    #[prost(message, optional, tag="45")]
-    pub header: ::core::option::Option<super::header::Header>,
 }
 /// Since protocol buffers don't have a way to alias messages, we're copying the Analysis definition into Job and deprecating it.
 #[allow(clippy::derive_partial_eq_without_eq)]

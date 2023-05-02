@@ -218,19 +218,4 @@ java.lang.String defaultValue);
    */
   org.cyverse.de.protobufs.Step.OutputOrBuilder getOutputOrBuilder(
       int index);
-
-  /**
-   * <code>.header.Header header = 11;</code>
-   * @return Whether the header field is set.
-   */
-  boolean hasHeader();
-  /**
-   * <code>.header.Header header = 11;</code>
-   * @return The header.
-   */
-  org.cyverse.de.protobufs.Header getHeader();
-  /**
-   * <code>.header.Header header = 11;</code>
-   */
-  org.cyverse.de.protobufs.HeaderOrBuilder getHeaderOrBuilder();
 }

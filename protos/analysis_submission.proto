@@ -3,7 +3,6 @@ syntax = "proto3";
 package analysis;
 
 import "google/protobuf/timestamp.proto";
-import "header.proto";
 import "containers.proto";
 
 option go_package = "github.com/cyverse-de/p/go/analysis";
@@ -83,7 +82,6 @@ message Step {
     map<string, string> environment = 8;
     repeated Input input = 9; // It's really annoying, but this is singular for backwards compatibility.
     repeated Output output = 10; // It's really annoying, but this is singular for backwards compatibility.
-    header.Header header = 11;
 }
 
 message AnalysisSubmission {
@@ -131,7 +129,6 @@ message AnalysisSubmission {
     string user_home = 42 [json_name = "user_home"];
     string wiki_url = 43 [json_name = "wiki_url"];
     string config_file = 44 [json_name = "config_file"];
-    header.Header header = 45;
 }
 
 

@@ -305,7 +305,6 @@ Corresponds to the job_types table in the database.
 | user_home | [string](#string) |  |  |
 | wiki_url | [string](#string) |  |  |
 | config_file | [string](#string) |  |  |
-| header | [header.Header](#header-Header) |  |  |
 
 
 
@@ -435,7 +434,6 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 | environment | [Step.EnvironmentEntry](#analysis-Step-EnvironmentEntry) | repeated |  |
 | input | [Step.Input](#analysis-Step-Input) | repeated | It&#39;s really annoying, but this is singular for backwards compatibility. |
 | output | [Step.Output](#analysis-Step-Output) | repeated | It&#39;s really annoying, but this is singular for backwards compatibility. |
-| header | [header.Header](#header-Header) |  |  |
 
 
 

@@ -1301,9 +1301,6 @@ impl serde::Serialize for AnalysisSubmission {
         if !self.config_file.is_empty() {
             len += 1;
         }
-        if self.header.is_some() {
-            len += 1;
-        }
         let mut struct_ser = serializer.serialize_struct("analysis.AnalysisSubmission", len)?;
         if !self.app_description.is_empty() {
             struct_ser.serialize_field("app_description", &self.app_description)?;
@@ -1437,9 +1434,6 @@ impl serde::Serialize for AnalysisSubmission {
         if !self.config_file.is_empty() {
             struct_ser.serialize_field("config_file", &self.config_file)?;
         }
-        if let Some(v) = self.header.as_ref() {
-            struct_ser.serialize_field("header", v)?;
-        }
         struct_ser.end()
     }
 }
@@ -1500,7 +1494,6 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
             "user_home",
             "wiki_url",
             "config_file",
-            "header",
         ];
 
         #[allow(clippy::enum_variant_names)]
@@ -1549,7 +1542,6 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
             UserHome,
             WikiUrl,
             ConfigFile,
-            Header,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1615,7 +1607,6 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                             "user_home" => Ok(GeneratedField::UserHome),
                             "wiki_url" => Ok(GeneratedField::WikiUrl),
                             "config_file" => Ok(GeneratedField::ConfigFile),
-                            "header" => Ok(GeneratedField::Header),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
                         }
                     }
@@ -1679,7 +1670,6 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                 let mut user_home__ = None;
                 let mut wiki_url__ = None;
                 let mut config_file__ = None;
-                let mut header__ = None;
                 while let Some(k) = map.next_key()? {
                     match k {
                         GeneratedField::AppDescription => {
@@ -1952,12 +1942,6 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                             }
                             config_file__ = Some(map.next_value()?);
                         }
-                        GeneratedField::Header => {
-                            if header__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("header"));
-                            }
-                            header__ = map.next_value()?;
-                        }
                     }
                 }
                 Ok(AnalysisSubmission {
@@ -2005,7 +1989,6 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                     user_home: user_home__.unwrap_or_default(),
                     wiki_url: wiki_url__.unwrap_or_default(),
                     config_file: config_file__.unwrap_or_default(),
-                    header: header__,
                 })
             }
         }
@@ -3468,9 +3451,6 @@ impl serde::Serialize for Step {
         if !self.output.is_empty() {
             len += 1;
         }
-        if self.header.is_some() {
-            len += 1;
-        }
         let mut struct_ser = serializer.serialize_struct("analysis.Step", len)?;
         if let Some(v) = self.component.as_ref() {
             struct_ser.serialize_field("component", v)?;
@@ -3502,9 +3482,6 @@ impl serde::Serialize for Step {
         if !self.output.is_empty() {
             struct_ser.serialize_field("output", &self.output)?;
         }
-        if let Some(v) = self.header.as_ref() {
-            struct_ser.serialize_field("header", v)?;
-        }
         struct_ser.end()
     }
 }
@@ -3529,7 +3506,6 @@ impl<'de> serde::Deserialize<'de> for Step {
             "environment",
             "input",
             "output",
-            "header",
         ];
 
         #[allow(clippy::enum_variant_names)]
@@ -3544,7 +3520,6 @@ impl<'de> serde::Deserialize<'de> for Step {
             Environment,
             Input,
             Output,
-            Header,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3576,7 +3551,6 @@ impl<'de> serde::Deserialize<'de> for Step {
                             "environment" => Ok(GeneratedField::Environment),
                             "input" => Ok(GeneratedField::Input),
                             "output" => Ok(GeneratedField::Output),
-                            "header" => Ok(GeneratedField::Header),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
                         }
                     }
@@ -3606,7 +3580,6 @@ impl<'de> serde::Deserialize<'de> for Step {
                 let mut environment__ = None;
                 let mut input__ = None;
                 let mut output__ = None;
-                let mut header__ = None;
                 while let Some(k) = map.next_key()? {
                     match k {
                         GeneratedField::Component => {
@@ -3671,12 +3644,6 @@ impl<'de> serde::Deserialize<'de> for Step {
                             }
                             output__ = Some(map.next_value()?);
                         }
-                        GeneratedField::Header => {
-                            if header__.is_some() {
-                                return Err(serde::de::Error::duplicate_field("header"));
-                            }
-                            header__ = map.next_value()?;
-                        }
                     }
                 }
                 Ok(Step {
@@ -3690,7 +3657,6 @@ impl<'de> serde::Deserialize<'de> for Step {
                     environment: environment__.unwrap_or_default(),
                     input: input__.unwrap_or_default(),
                     output: output__.unwrap_or_default(),
-                    header: header__,
                 })
             }
         }
