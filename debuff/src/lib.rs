@@ -1,6 +1,7 @@
 pub mod analysis;
 pub mod apps;
 pub mod containers;
+pub mod groups;
 pub mod header;
 pub mod qms;
 pub mod requests;

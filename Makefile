@@ -10,6 +10,8 @@ compile:
 		--prost_opt=default_package_filename=gen.rs \
 		--prost_opt=compile_well_known_types \
 		--prost_opt=extern_path=.google.protobuf=::pbjson_types \
+		--prost_opt=type_attribute=.groups.ServiceInfo='#[derive(garde::Validate)]' \
+		--prost_opt=field_attribute=.groups.ServiceInfo='#[garde(length(min=1))]' \
 		--prost_out=debuff/src/ \
 		--prost-serde_out=debuff/src \
 		protos/*.proto
