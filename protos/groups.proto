@@ -1,0 +1,235 @@
+syntax = "proto3";
+
+package groups;
+
+option go_package = "github.com/cyverse-de/p/go/groups";
+option java_multiple_files = true;
+option java_package = "org.cyverse.de.protobufs";
+option java_outer_classname = "GroupsProtobufs";
+
+message GroupInfo {
+  string id = 1;
+  string name = 2;
+}
+
+/**
+ * Information about a service.
+ */
+message ServiceInfo {
+  // A brief description of the service.
+  string description = 1;
+
+  // The name of the service.
+  string service = 2;
+
+  // The service's version number.
+  string version = 3;
+}
+
+/**
+ * An incoming resource type.
+ */
+message ResourceTypeIn {
+  // The name of the resource type.
+  string name = 1;
+
+  // A brief description of the resource type.
+  string description = 2;
+}
+
+/**
+ * An outgoing resource type.
+ */
+message ResourceTypeOut {
+  // The resource type identifier.
+  string id = 1;
+
+  // The name of the resource type.
+  string name = 2;
+
+  // A brief description of the resource type.
+  string description = 3;
+}
+
+/**
+ * A list of resource types.
+ */
+message ResourceTypesOut {
+  // The list of resource types.
+  repeated ResourceTypeOut resource_types = 1 [json_name = "resource_types"];
+}
+
+/**
+ * An incoming resource.
+ */
+message ResourceIn {
+  // The resource name.
+  string name = 1;
+
+  // The resource type name.
+  string resource_type = 2 [json_name = "resource_type"];
+}
+
+/**
+ * A modification to a resource.
+ */
+message ResourceUpdate {
+  // The new resource name.
+  string name = 1;
+}
+
+/**
+ * An outgoing resource.
+ */
+message ResourceOut {
+  // The resource identifier.
+  string id = 1;
+
+  // The resource name.
+  string name = 2;
+
+  // The resource type name.
+  string resource_type = 3 [json_name = "resource_type"];
+}
+
+/**
+ * A list of resource.
+ */
+message ResourcesOut {
+  // The list of resources.
+  repeated ResourceOut resources = 1;
+}
+
+/**
+ * The subject type.
+ */
+enum SubjectType {
+  user = 0;
+  group = 1;
+}
+
+/**
+ * An incoming subject.
+ */
+message SubjectIn {
+  // The external subject identifier.
+  string subject_id = 1 [json_name = "subject_id"];
+
+  // The subject type.
+  string subject_type = 2 [json_name = "subject_type"];
+}
+
+/**
+ * A list of incoming subjects.
+ */
+message SubjectsIn {
+  // The list of subjects.
+  repeated SubjectIn subjects = 1;
+}
+
+/**
+ * An outgoing subject.
+ */
+message SubjectOut {
+  //The internal subject id.
+  string id = 1;
+
+  // The external subject id.
+  string subject_id = 2 [json_name = "subject_id"];
+
+  // The subject type.
+  string subject_type = 3 [json_name = "subject_type"];
+
+  // The subject source ID.
+  string subject_source_id = 4 [json_name = "subject_source_id"];
+}
+
+/**
+ * A list of outgoing subjects.
+ */
+message SubjectsOut {
+  // The list of subjects.
+  repeated SubjectOut subjects = 1;
+}
+
+/**
+ * A permission level name.
+ */
+enum PermissionLevel {
+  read = 0;
+  admin = 1;
+  write = 2;
+  own = 3;
+}
+
+/**
+ * Information for granting permission to a user.
+ */
+message PermissionGrantRequest {
+  // The incoming subject.
+  SubjectIn subject = 1;
+
+  // The incoming resource.
+  ResourceIn resource = 2;
+
+  // The permission level.
+  PermissionLevel permission_level = 3 [json_name = "permission_level"];
+}
+
+
+/**
+ * Specifies the permission level to assign.
+ */
+message PermissionPutRequest {
+  PermissionLevel permission_level = 1 [json_name = "permission_level"];
+}
+
+/**
+ * Information about permissions granted to a user.
+ */
+message Permission {
+  // The permission id.
+  string id = 1;
+
+  // The outgoing subject.
+  SubjectOut subject = 2;
+
+  // The outgoing resource.
+  ResourceOut resource = 3;
+
+  // The permission level.
+  PermissionLevel permission_level = 4 [json_name = "permission_level"];
+}
+
+/**
+ * A list of matching permissions.
+ */
+message PermissionList {
+  // A list of matching permissions.
+  repeated Permission permissions = 1;
+}
+
+/**
+ * Abbreviated information about permissions granted to a user.
+ */
+message AbbreviatedPermission {
+  // The permission identifier.
+  string permission_id = 1 [json_name = "permission_id"];
+
+  // The name of the resource.
+  string resource_name = 2 [json_name = "resource_name"];
+
+  // The type of the resource.
+  string resource_type = 3 [json_name = "resource_type"];
+
+  // The permission level.
+  PermissionLevel permission_level = 4 [json_name = "permission_level"];
+}
+
+/**
+ * A list of abbreviated permissions granted to a user.
+ */
+message AbbreviatedPermissionList {
+  // The list of permissions.
+  repeated AbbreviatedPermission permissions = 1;
+}
