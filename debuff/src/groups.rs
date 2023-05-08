@@ -9,21 +9,17 @@ pub struct GroupInfo {
 }
 /// *
 /// Information about a service.
-#[derive(garde::Validate)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ServiceInfo {
     /// A brief description of the service.
     #[prost(string, tag="1")]
-    #[garde(length(min=1))]
     pub description: ::prost::alloc::string::String,
     /// The name of the service.
     #[prost(string, tag="2")]
-    #[garde(length(min=1))]
     pub service: ::prost::alloc::string::String,
     /// The service's version number.
     #[prost(string, tag="3")]
-    #[garde(length(min=1))]
     pub version: ::prost::alloc::string::String,
 }
 /// *

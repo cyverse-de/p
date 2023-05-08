@@ -1,5 +1,7 @@
-github.com/cyverse-de/p/go/apps v0.0.0-20230417204035-621d538d8e56 h1:XLOjyKDnzf8/X64rxaLO8wR5GCELu3jHxAYMANfNpsk=
-github.com/cyverse-de/p/go/apps v0.0.0-20230417204035-621d538d8e56/go.mod h1:CfOTzBRo5GyLjxijsae0wngzSBeHA0AFKnVSJVjP5M4=
+github.com/cyverse-de/p/go/apps v0.0.0-20230502212328-4e1dc5b6faec h1:87ipJgkZiNj9hY79YHfkTm/JiissgGojF9k6RWOQAZY=
+github.com/cyverse-de/p/go/apps v0.0.0-20230502212328-4e1dc5b6faec/go.mod h1:CfOTzBRo5GyLjxijsae0wngzSBeHA0AFKnVSJVjP5M4=
+github.com/cyverse-de/p/go/containers v0.0.1 h1:wt9peoUcQaUFnoDH8hkCJ9/c1aMFImRlObpezFEMlCg=
+github.com/cyverse-de/p/go/containers v0.0.1/go.mod h1:ZgQ3ZGGpmOgW/LgDPfZMoVTwonMa5gXexyeJ4apb1SA=
 github.com/cyverse-de/p/go/header v0.0.3 h1:d0IBiG7nDrFxvetSnxL0tB2j7yIgumvYaRkoUg/uA9Q=
 github.com/cyverse-de/p/go/header v0.0.3/go.mod h1:zGaCg//IpJ2f6P4jRAjEYPoFgokgtELI6+aojhG2eNw=
 github.com/cyverse-de/p/go/svcerror v0.0.7 h1:PScx8ctSBtnkER6ypgWsuxe8p3/jgfh6t/Dy5J9tg48=
