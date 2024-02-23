@@ -23,6 +23,9 @@ message ResourceType {
 
     // The units used for the resource. Usually "bytes" or "cpu hours".
     string unit = 3;
+
+    // Whether or not using the resource consumes a portion of the allocation permanently.
+    string consumable = 4;
 }
 
 /**

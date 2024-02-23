@@ -13,6 +13,9 @@ pub struct ResourceType {
     /// The units used for the resource. Usually "bytes" or "cpu hours".
     #[prost(string, tag="3")]
     pub unit: ::prost::alloc::string::String,
+    /// Whether or not using the resource consumes a portion of the allocation permanently.
+    #[prost(string, tag="4")]
+    pub consumable: ::prost::alloc::string::String,
 }
 /// *
 /// A response type for resource type requests.
@@ -470,6 +473,17 @@ pub struct ChangeSubscriptionRequest {
     /// A username for the user whose subscription is being changed.
     #[prost(string, tag="2")]
     pub username: ::prost::alloc::string::String,
+    /// The number of subscription periods that the subscription will be good for. The subscription period is one year,
+    /// so purchasing a subscription for 3 periods will create a subscription for 3 years. Consumable resources are also
+    /// allocated based on the number of periods, so if a subscription plan comes with 2000 CPU Hours, for example, then
+    /// a user who purchases 3 subscription periods will get 6000 CPU hours to use over the course of three years.
+    #[prost(int32, tag="5")]
+    pub periods: i32,
+    /// The end-date of the subscription. Accepted formats are `YYYY-MM-DD`, `YYYY-MM-DDThh:mm:ss`,
+    /// `YYYY-MM-DDThh:mm:ssZ` and `YYYY-MM-DDThh:mm:ss+hh:mm`. Date and tiestamps without time zones are assumed to
+    /// be in the time zone used by the CyVerse Discovery Environment itself.
+    #[prost(string, tag="6")]
+    pub end_date: ::prost::alloc::string::String,
     /// Either a plan's unique identifier or name.
     #[prost(oneof="change_subscription_request::Plan", tags="3, 4")]
     pub plan: ::core::option::Option<change_subscription_request::Plan>,

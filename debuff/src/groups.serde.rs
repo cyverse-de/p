@@ -30,8 +30,8 @@ impl serde::Serialize for AbbreviatedPermission {
             struct_ser.serialize_field("resource_type", &self.resource_type)?;
         }
         if self.permission_level != 0 {
-            let v = PermissionLevel::from_i32(self.permission_level)
-                .ok_or_else(|| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
+            let v = PermissionLevel::try_from(self.permission_level)
+                .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
             struct_ser.serialize_field("permission_level", &v)?;
         }
         struct_ser.end()
@@ -96,7 +96,7 @@ impl<'de> serde::Deserialize<'de> for AbbreviatedPermission {
                 formatter.write_str("struct groups.AbbreviatedPermission")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AbbreviatedPermission, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AbbreviatedPermission, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -104,31 +104,31 @@ impl<'de> serde::Deserialize<'de> for AbbreviatedPermission {
                 let mut resource_name__ = None;
                 let mut resource_type__ = None;
                 let mut permission_level__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::PermissionId => {
                             if permission_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permission_id"));
                             }
-                            permission_id__ = Some(map.next_value()?);
+                            permission_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceName => {
                             if resource_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_name"));
                             }
-                            resource_name__ = Some(map.next_value()?);
+                            resource_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = Some(map.next_value()?);
+                            resource_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::PermissionLevel => {
                             if permission_level__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permission_level"));
                             }
-                            permission_level__ = Some(map.next_value::<PermissionLevel>()? as i32);
+                            permission_level__ = Some(map_.next_value::<PermissionLevel>()? as i32);
                         }
                     }
                 }
@@ -211,18 +211,18 @@ impl<'de> serde::Deserialize<'de> for AbbreviatedPermissionList {
                 formatter.write_str("struct groups.AbbreviatedPermissionList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AbbreviatedPermissionList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AbbreviatedPermissionList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut permissions__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Permissions => {
                             if permissions__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permissions"));
                             }
-                            permissions__ = Some(map.next_value()?);
+                            permissions__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -311,25 +311,25 @@ impl<'de> serde::Deserialize<'de> for GroupInfo {
                 formatter.write_str("struct groups.GroupInfo")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<GroupInfo, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<GroupInfo, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut id__ = None;
                 let mut name__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -373,8 +373,8 @@ impl serde::Serialize for Permission {
             struct_ser.serialize_field("resource", v)?;
         }
         if self.permission_level != 0 {
-            let v = PermissionLevel::from_i32(self.permission_level)
-                .ok_or_else(|| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
+            let v = PermissionLevel::try_from(self.permission_level)
+                .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
             struct_ser.serialize_field("permission_level", &v)?;
         }
         struct_ser.end()
@@ -439,7 +439,7 @@ impl<'de> serde::Deserialize<'de> for Permission {
                 formatter.write_str("struct groups.Permission")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Permission, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Permission, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -447,31 +447,31 @@ impl<'de> serde::Deserialize<'de> for Permission {
                 let mut subject__ = None;
                 let mut resource__ = None;
                 let mut permission_level__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Subject => {
                             if subject__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject"));
                             }
-                            subject__ = map.next_value()?;
+                            subject__ = map_.next_value()?;
                         }
                         GeneratedField::Resource => {
                             if resource__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource"));
                             }
-                            resource__ = map.next_value()?;
+                            resource__ = map_.next_value()?;
                         }
                         GeneratedField::PermissionLevel => {
                             if permission_level__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permission_level"));
                             }
-                            permission_level__ = Some(map.next_value::<PermissionLevel>()? as i32);
+                            permission_level__ = Some(map_.next_value::<PermissionLevel>()? as i32);
                         }
                     }
                 }
@@ -511,8 +511,8 @@ impl serde::Serialize for PermissionGrantRequest {
             struct_ser.serialize_field("resource", v)?;
         }
         if self.permission_level != 0 {
-            let v = PermissionLevel::from_i32(self.permission_level)
-                .ok_or_else(|| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
+            let v = PermissionLevel::try_from(self.permission_level)
+                .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
             struct_ser.serialize_field("permission_level", &v)?;
         }
         struct_ser.end()
@@ -574,32 +574,32 @@ impl<'de> serde::Deserialize<'de> for PermissionGrantRequest {
                 formatter.write_str("struct groups.PermissionGrantRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<PermissionGrantRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<PermissionGrantRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut subject__ = None;
                 let mut resource__ = None;
                 let mut permission_level__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Subject => {
                             if subject__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject"));
                             }
-                            subject__ = map.next_value()?;
+                            subject__ = map_.next_value()?;
                         }
                         GeneratedField::Resource => {
                             if resource__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource"));
                             }
-                            resource__ = map.next_value()?;
+                            resource__ = map_.next_value()?;
                         }
                         GeneratedField::PermissionLevel => {
                             if permission_level__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permission_level"));
                             }
-                            permission_level__ = Some(map.next_value::<PermissionLevel>()? as i32);
+                            permission_level__ = Some(map_.next_value::<PermissionLevel>()? as i32);
                         }
                     }
                 }
@@ -654,10 +654,9 @@ impl<'de> serde::Deserialize<'de> for PermissionLevel {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(PermissionLevel::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Signed(v), &self)
                     })
@@ -667,10 +666,9 @@ impl<'de> serde::Deserialize<'de> for PermissionLevel {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(PermissionLevel::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Unsigned(v), &self)
                     })
@@ -760,18 +758,18 @@ impl<'de> serde::Deserialize<'de> for PermissionList {
                 formatter.write_str("struct groups.PermissionList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<PermissionList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<PermissionList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut permissions__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Permissions => {
                             if permissions__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permissions"));
                             }
-                            permissions__ = Some(map.next_value()?);
+                            permissions__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -796,8 +794,8 @@ impl serde::Serialize for PermissionPutRequest {
         }
         let mut struct_ser = serializer.serialize_struct("groups.PermissionPutRequest", len)?;
         if self.permission_level != 0 {
-            let v = PermissionLevel::from_i32(self.permission_level)
-                .ok_or_else(|| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
+            let v = PermissionLevel::try_from(self.permission_level)
+                .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.permission_level)))?;
             struct_ser.serialize_field("permission_level", &v)?;
         }
         struct_ser.end()
@@ -853,18 +851,18 @@ impl<'de> serde::Deserialize<'de> for PermissionPutRequest {
                 formatter.write_str("struct groups.PermissionPutRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<PermissionPutRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<PermissionPutRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut permission_level__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::PermissionLevel => {
                             if permission_level__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("permission_level"));
                             }
-                            permission_level__ = Some(map.next_value::<PermissionLevel>()? as i32);
+                            permission_level__ = Some(map_.next_value::<PermissionLevel>()? as i32);
                         }
                     }
                 }
@@ -953,25 +951,25 @@ impl<'de> serde::Deserialize<'de> for ResourceIn {
                 formatter.write_str("struct groups.ResourceIn")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceIn, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceIn, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut name__ = None;
                 let mut resource_type__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = Some(map.next_value()?);
+                            resource_type__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1070,32 +1068,32 @@ impl<'de> serde::Deserialize<'de> for ResourceOut {
                 formatter.write_str("struct groups.ResourceOut")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceOut, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceOut, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut id__ = None;
                 let mut name__ = None;
                 let mut resource_type__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = Some(map.next_value()?);
+                            resource_type__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1186,25 +1184,25 @@ impl<'de> serde::Deserialize<'de> for ResourceTypeIn {
                 formatter.write_str("struct groups.ResourceTypeIn")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceTypeIn, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceTypeIn, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut name__ = None;
                 let mut description__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1303,32 +1301,32 @@ impl<'de> serde::Deserialize<'de> for ResourceTypeOut {
                 formatter.write_str("struct groups.ResourceTypeOut")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceTypeOut, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceTypeOut, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut id__ = None;
                 let mut name__ = None;
                 let mut description__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1410,18 +1408,18 @@ impl<'de> serde::Deserialize<'de> for ResourceTypesOut {
                 formatter.write_str("struct groups.ResourceTypesOut")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceTypesOut, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceTypesOut, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut resource_types__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::ResourceTypes => {
                             if resource_types__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_types"));
                             }
-                            resource_types__ = Some(map.next_value()?);
+                            resource_types__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1501,18 +1499,18 @@ impl<'de> serde::Deserialize<'de> for ResourceUpdate {
                 formatter.write_str("struct groups.ResourceUpdate")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceUpdate, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceUpdate, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut name__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1592,18 +1590,18 @@ impl<'de> serde::Deserialize<'de> for ResourcesOut {
                 formatter.write_str("struct groups.ResourcesOut")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourcesOut, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourcesOut, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut resources__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Resources => {
                             if resources__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resources"));
                             }
-                            resources__ = Some(map.next_value()?);
+                            resources__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1701,32 +1699,32 @@ impl<'de> serde::Deserialize<'de> for ServiceInfo {
                 formatter.write_str("struct groups.ServiceInfo")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ServiceInfo, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ServiceInfo, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut description__ = None;
                 let mut service__ = None;
                 let mut version__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Service => {
                             if service__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("service"));
                             }
-                            service__ = Some(map.next_value()?);
+                            service__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Version => {
                             if version__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("version"));
                             }
-                            version__ = Some(map.next_value()?);
+                            version__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1817,25 +1815,25 @@ impl<'de> serde::Deserialize<'de> for SubjectIn {
                 formatter.write_str("struct groups.SubjectIn")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubjectIn, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubjectIn, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut subject_id__ = None;
                 let mut subject_type__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::SubjectId => {
                             if subject_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject_id"));
                             }
-                            subject_id__ = Some(map.next_value()?);
+                            subject_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SubjectType => {
                             if subject_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject_type"));
                             }
-                            subject_type__ = Some(map.next_value()?);
+                            subject_type__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1943,7 +1941,7 @@ impl<'de> serde::Deserialize<'de> for SubjectOut {
                 formatter.write_str("struct groups.SubjectOut")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubjectOut, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubjectOut, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -1951,31 +1949,31 @@ impl<'de> serde::Deserialize<'de> for SubjectOut {
                 let mut subject_id__ = None;
                 let mut subject_type__ = None;
                 let mut subject_source_id__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SubjectId => {
                             if subject_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject_id"));
                             }
-                            subject_id__ = Some(map.next_value()?);
+                            subject_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SubjectType => {
                             if subject_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject_type"));
                             }
-                            subject_type__ = Some(map.next_value()?);
+                            subject_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SubjectSourceId => {
                             if subject_source_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subject_source_id"));
                             }
-                            subject_source_id__ = Some(map.next_value()?);
+                            subject_source_id__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2027,10 +2025,9 @@ impl<'de> serde::Deserialize<'de> for SubjectType {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(SubjectType::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Signed(v), &self)
                     })
@@ -2040,10 +2037,9 @@ impl<'de> serde::Deserialize<'de> for SubjectType {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(SubjectType::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Unsigned(v), &self)
                     })
@@ -2131,18 +2127,18 @@ impl<'de> serde::Deserialize<'de> for SubjectsIn {
                 formatter.write_str("struct groups.SubjectsIn")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubjectsIn, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubjectsIn, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut subjects__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Subjects => {
                             if subjects__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subjects"));
                             }
-                            subjects__ = Some(map.next_value()?);
+                            subjects__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2222,18 +2218,18 @@ impl<'de> serde::Deserialize<'de> for SubjectsOut {
                 formatter.write_str("struct groups.SubjectsOut")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubjectsOut, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubjectsOut, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut subjects__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Subjects => {
                             if subjects__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subjects"));
                             }
-                            subjects__ = Some(map.next_value()?);
+                            subjects__ = Some(map_.next_value()?);
                         }
                     }
                 }

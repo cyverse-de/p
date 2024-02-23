@@ -94,7 +94,7 @@ impl<'de> serde::Deserialize<'de> for App {
                 formatter.write_str("struct apps.App")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<App, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<App, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -102,31 +102,31 @@ impl<'de> serde::Deserialize<'de> for App {
                 let mut name__ = None;
                 let mut description__ = None;
                 let mut wiki_url__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::WikiUrl => {
                             if wiki_url__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("wiki_url"));
                             }
-                            wiki_url__ = Some(map.next_value()?);
+                            wiki_url__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -187,6 +187,7 @@ impl serde::Serialize for AppVersion {
             struct_ser.serialize_field("version", &self.version)?;
         }
         if self.version_order != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("version_order", ToString::to_string(&self.version_order).as_str())?;
         }
         if self.deleted {
@@ -281,7 +282,7 @@ impl<'de> serde::Deserialize<'de> for AppVersion {
                 formatter.write_str("struct apps.AppVersion")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AppVersion, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AppVersion, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -294,63 +295,63 @@ impl<'de> serde::Deserialize<'de> for AppVersion {
                 let mut integration__ = None;
                 let mut integration_date__ = None;
                 let mut edited_date__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::AppId => {
                             if app_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_id"));
                             }
-                            app_id__ = Some(map.next_value()?);
+                            app_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Version => {
                             if version__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("version"));
                             }
-                            version__ = Some(map.next_value()?);
+                            version__ = Some(map_.next_value()?);
                         }
                         GeneratedField::VersionOrder => {
                             if version_order__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("version_order"));
                             }
                             version_order__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Deleted => {
                             if deleted__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("deleted"));
                             }
-                            deleted__ = Some(map.next_value()?);
+                            deleted__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Disabled => {
                             if disabled__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("disabled"));
                             }
-                            disabled__ = Some(map.next_value()?);
+                            disabled__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Integration => {
                             if integration__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("integration"));
                             }
-                            integration__ = map.next_value()?;
+                            integration__ = map_.next_value()?;
                         }
                         GeneratedField::IntegrationDate => {
                             if integration_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("integration_date"));
                             }
-                            integration_date__ = map.next_value()?;
+                            integration_date__ = map_.next_value()?;
                         }
                         GeneratedField::EditedDate => {
                             if edited_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("edited_date"));
                             }
-                            edited_date__ = map.next_value()?;
+                            edited_date__ = map_.next_value()?;
                         }
                     }
                 }
@@ -465,7 +466,7 @@ impl<'de> serde::Deserialize<'de> for IntegrationData {
                 formatter.write_str("struct apps.IntegrationData")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<IntegrationData, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<IntegrationData, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -473,31 +474,31 @@ impl<'de> serde::Deserialize<'de> for IntegrationData {
                 let mut integrator_name__ = None;
                 let mut integrator_email__ = None;
                 let mut user__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IntegratorName => {
                             if integrator_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("integrator_name"));
                             }
-                            integrator_name__ = Some(map.next_value()?);
+                            integrator_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IntegratorEmail => {
                             if integrator_email__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("integrator_email"));
                             }
-                            integrator_email__ = Some(map.next_value()?);
+                            integrator_email__ = Some(map_.next_value()?);
                         }
                         GeneratedField::User => {
                             if user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            user__ = map.next_value()?;
+                            user__ = map_.next_value()?;
                         }
                     }
                 }
