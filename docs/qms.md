@@ -799,6 +799,7 @@ Representation of a resource type.
 | uuid | [string](#string) |  | The unique identifier. |
 | name | [string](#string) |  | The name of the resource. Will usually be &#34;data.size&#34; and &#34;cpu.hours&#34;. |
 | unit | [string](#string) |  | The units used for the resource. Usually &#34;bytes&#34; or &#34;cpu hours&#34;. |
+| consumable | [string](#string) |  | Whether or not using the resource consumes a portion of the allocation permanently. |
 
 
 
@@ -868,6 +869,8 @@ A request to change a subscription.
 | username | [string](#string) |  | A username for the user whose subscription is being changed. |
 | uuid | [string](#string) |  |  |
 | name | [string](#string) |  |  |
+| periods | [int32](#int32) |  | The number of subscription periods that the subscription will be good for. The subscription period is one year, so purchasing a subscription for 3 periods will create a subscription for 3 years. Consumable resources are also allocated based on the number of periods, so if a subscription plan comes with 2000 CPU Hours, for example, then a user who purchases 3 subscription periods will get 6000 CPU hours to use over the course of three years. |
+| end_date | [string](#string) |  | The end-date of the subscription. Accepted formats are `YYYY-MM-DD`, `YYYY-MM-DDThh:mm:ss`, `YYYY-MM-DDThh:mm:ssZ` and `YYYY-MM-DDThh:mm:ss&#43;hh:mm`. Date and tiestamps without time zones are assumed to be in the time zone used by the CyVerse Discovery Environment itself. |
 
 
 

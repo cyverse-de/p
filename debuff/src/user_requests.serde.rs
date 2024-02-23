@@ -144,7 +144,7 @@ impl<'de> serde::Deserialize<'de> for UserLookupRequest {
                 formatter.write_str("struct user_requests.UserLookupRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UserLookupRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UserLookupRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -155,32 +155,32 @@ impl<'de> serde::Deserialize<'de> for UserLookupRequest {
                 let mut login_offset__ = None;
                 let mut header__ = None;
                 let mut lookup_ids__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::IncludeLogins => {
                             if include_logins__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("includeLogins"));
                             }
-                            include_logins__ = Some(map.next_value()?);
+                            include_logins__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IncludePreferences => {
                             if include_preferences__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("includePreferences"));
                             }
-                            include_preferences__ = Some(map.next_value()?);
+                            include_preferences__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IncludeSavedSearches => {
                             if include_saved_searches__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("includeSavedSearches"));
                             }
-                            include_saved_searches__ = Some(map.next_value()?);
+                            include_saved_searches__ = Some(map_.next_value()?);
                         }
                         GeneratedField::LoginLimit => {
                             if login_limit__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("loginLimit"));
                             }
                             login_limit__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::LoginOffset => {
@@ -188,32 +188,32 @@ impl<'de> serde::Deserialize<'de> for UserLookupRequest {
                                 return Err(serde::de::Error::duplicate_field("loginOffset"));
                             }
                             login_offset__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(user_lookup_request::LookupIds::Username);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(user_lookup_request::LookupIds::Username);
                         }
                         GeneratedField::UserId => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("userId"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(user_lookup_request::LookupIds::UserId);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(user_lookup_request::LookupIds::UserId);
                         }
                         GeneratedField::AnalysisId => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("analysisId"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(user_lookup_request::LookupIds::AnalysisId);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(user_lookup_request::LookupIds::AnalysisId);
                         }
                     }
                 }

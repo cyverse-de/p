@@ -213,7 +213,7 @@ impl<'de> serde::Deserialize<'de> for Analysis {
                 formatter.write_str("struct analysis.Analysis")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Analysis, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Analysis, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -234,110 +234,110 @@ impl<'de> serde::Deserialize<'de> for Analysis {
                 let mut subdomain__ = None;
                 let mut parent_id__ = None;
                 let mut millicores_reserved__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::App => {
                             if app__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app"));
                             }
-                            app__ = map.next_value()?;
+                            app__ = map_.next_value()?;
                         }
                         GeneratedField::AppVersion => {
                             if app_version__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_version"));
                             }
-                            app_version__ = map.next_value()?;
+                            app_version__ = map_.next_value()?;
                         }
                         GeneratedField::Kind => {
                             if kind__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            kind__ = map.next_value()?;
+                            kind__ = map_.next_value()?;
                         }
                         GeneratedField::ResultFolderPath => {
                             if result_folder_path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("result_folder_path"));
                             }
-                            result_folder_path__ = Some(map.next_value()?);
+                            result_folder_path__ = Some(map_.next_value()?);
                         }
                         GeneratedField::StartDate => {
                             if start_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("start_date"));
                             }
-                            start_date__ = map.next_value()?;
+                            start_date__ = map_.next_value()?;
                         }
                         GeneratedField::EndDate => {
                             if end_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("end_date"));
                             }
-                            end_date__ = map.next_value()?;
+                            end_date__ = map_.next_value()?;
                         }
                         GeneratedField::PlannedEndDate => {
                             if planned_end_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("planned_end_date"));
                             }
-                            planned_end_date__ = map.next_value()?;
+                            planned_end_date__ = map_.next_value()?;
                         }
                         GeneratedField::Status => {
                             if status__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("status"));
                             }
-                            status__ = Some(map.next_value()?);
+                            status__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Deleted => {
                             if deleted__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("deleted"));
                             }
-                            deleted__ = Some(map.next_value()?);
+                            deleted__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Notify => {
                             if notify__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("notify"));
                             }
-                            notify__ = Some(map.next_value()?);
+                            notify__ = Some(map_.next_value()?);
                         }
                         GeneratedField::User => {
                             if user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            user__ = map.next_value()?;
+                            user__ = map_.next_value()?;
                         }
                         GeneratedField::Subdomain => {
                             if subdomain__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subdomain"));
                             }
-                            subdomain__ = Some(map.next_value()?);
+                            subdomain__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ParentId => {
                             if parent_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("parent_id"));
                             }
-                            parent_id__ = Some(map.next_value()?);
+                            parent_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::MillicoresReserved => {
                             if millicores_reserved__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("millicore_reserved"));
                             }
                             millicores_reserved__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                     }
@@ -452,32 +452,32 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecordList {
                 formatter.write_str("struct analysis.AnalysisRecordList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisRecordList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AnalysisRecordList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut analyses__ = None;
                 let mut error__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Analyses => {
                             if analyses__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("analyses"));
                             }
-                            analyses__ = Some(map.next_value()?);
+                            analyses__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                     }
                 }
@@ -603,50 +603,50 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecordLookupRequest {
                 formatter.write_str("struct analysis.AnalysisRecordLookupRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisRecordLookupRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AnalysisRecordLookupRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut requesting_user__ = None;
                 let mut lookup_ids__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::RequestingUser => {
                             if requesting_user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("requestingUser"));
                             }
-                            requesting_user__ = Some(map.next_value()?);
+                            requesting_user__ = Some(map_.next_value()?);
                         }
                         GeneratedField::AnalysisId => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("analysisId"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::AnalysisId);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::AnalysisId);
                         }
                         GeneratedField::ExternalId => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("externalId"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::ExternalId);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::ExternalId);
                         }
                         GeneratedField::UserId => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("userId"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::UserId);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::UserId);
                         }
                         GeneratedField::Username => {
                             if lookup_ids__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            lookup_ids__ = map.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::Username);
+                            lookup_ids__ = map_.next_value::<::std::option::Option<_>>()?.map(analysis_record_lookup_request::LookupIds::Username);
                         }
                     }
                 }
@@ -697,6 +697,7 @@ impl serde::Serialize for AnalysisRecordResponse {
             struct_ser.serialize_field("timestamp", &self.timestamp)?;
         }
         if self.total != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("total", ToString::to_string(&self.total).as_str())?;
         }
         if !self.status_count.is_empty() {
@@ -774,7 +775,7 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecordResponse {
                 formatter.write_str("struct analysis.AnalysisRecordResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisRecordResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AnalysisRecordResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -784,45 +785,45 @@ impl<'de> serde::Deserialize<'de> for AnalysisRecordResponse {
                 let mut total__ = None;
                 let mut status_count__ = None;
                 let mut error__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Analyses => {
                             if analyses__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("analyses"));
                             }
-                            analyses__ = Some(map.next_value()?);
+                            analyses__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Timestamp => {
                             if timestamp__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("timestamp"));
                             }
-                            timestamp__ = Some(map.next_value()?);
+                            timestamp__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Total => {
                             if total__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("total"));
                             }
                             total__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::StatusCount => {
                             if status_count__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("status-count"));
                             }
-                            status_count__ = Some(map.next_value()?);
+                            status_count__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                     }
                 }
@@ -855,6 +856,7 @@ impl serde::Serialize for analysis_record_response::StatusCountRecord {
         }
         let mut struct_ser = serializer.serialize_struct("analysis.AnalysisRecordResponse.StatusCountRecord", len)?;
         if self.count != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("count", ToString::to_string(&self.count).as_str())?;
         }
         if !self.status.is_empty() {
@@ -916,27 +918,27 @@ impl<'de> serde::Deserialize<'de> for analysis_record_response::StatusCountRecor
                 formatter.write_str("struct analysis.AnalysisRecordResponse.StatusCountRecord")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<analysis_record_response::StatusCountRecord, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<analysis_record_response::StatusCountRecord, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut count__ = None;
                 let mut status__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Count => {
                             if count__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("count"));
                             }
                             count__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Status => {
                             if status__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("status"));
                             }
-                            status__ = Some(map.next_value()?);
+                            status__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1080,7 +1082,7 @@ impl<'de> serde::Deserialize<'de> for AnalysisStatus {
                 formatter.write_str("struct analysis.AnalysisStatus")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisStatus, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AnalysisStatus, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -1092,57 +1094,57 @@ impl<'de> serde::Deserialize<'de> for AnalysisStatus {
                 let mut message__ = None;
                 let mut sent_on__ = None;
                 let mut sender__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Job => {
                             if job__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("job"));
                             }
-                            job__ = map.next_value()?;
+                            job__ = map_.next_value()?;
                         }
                         GeneratedField::Version => {
                             if version__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("version"));
                             }
                             version__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::State => {
                             if state__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("state"));
                             }
-                            state__ = Some(map.next_value()?);
+                            state__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Message => {
                             if message__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("message"));
                             }
-                            message__ = Some(map.next_value()?);
+                            message__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SentOn => {
                             if sent_on__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("sent_on"));
                             }
-                            sent_on__ = Some(map.next_value()?);
+                            sent_on__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Sender => {
                             if sender__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("sender"));
                             }
-                            sender__ = Some(map.next_value()?);
+                            sender__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1351,9 +1353,11 @@ impl serde::Serialize for AnalysisSubmission {
             struct_ser.serialize_field("exit_code", &self.exit_code)?;
         }
         if self.failure_count != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("failure_count", ToString::to_string(&self.failure_count).as_str())?;
         }
         if self.failure_threshold != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("failure_threshold", ToString::to_string(&self.failure_threshold).as_str())?;
         }
         if !self.file_metadata.is_empty() {
@@ -1622,7 +1626,7 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                 formatter.write_str("struct analysis.AnalysisSubmission")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisSubmission, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AnalysisSubmission, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -1670,104 +1674,104 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                 let mut user_home__ = None;
                 let mut wiki_url__ = None;
                 let mut config_file__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::AppDescription => {
                             if app_description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_description"));
                             }
-                            app_description__ = Some(map.next_value()?);
+                            app_description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::AppId => {
                             if app_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_id"));
                             }
-                            app_id__ = Some(map.next_value()?);
+                            app_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::AppName => {
                             if app_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_name"));
                             }
-                            app_name__ = Some(map.next_value()?);
+                            app_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ArchiveLogs => {
                             if archive_logs__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("archive_logs"));
                             }
-                            archive_logs__ = Some(map.next_value()?);
+                            archive_logs__ = Some(map_.next_value()?);
                         }
                         GeneratedField::BatchId => {
                             if batch_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("batch_id"));
                             }
-                            batch_id__ = Some(map.next_value()?);
+                            batch_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CondorId => {
                             if condor_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("condor_id"));
                             }
-                            condor_id__ = Some(map.next_value()?);
+                            condor_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CondorLogPath => {
                             if condor_log_path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("condor_log_path"));
                             }
-                            condor_log_path__ = Some(map.next_value()?);
+                            condor_log_path__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CreateOutputSubdir => {
                             if create_output_subdir__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("create_output_subdir"));
                             }
-                            create_output_subdir__ = Some(map.next_value()?);
+                            create_output_subdir__ = Some(map_.next_value()?);
                         }
                         GeneratedField::DateSubmitted => {
                             if date_submitted__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_submitted"));
                             }
-                            date_submitted__ = map.next_value()?;
+                            date_submitted__ = map_.next_value()?;
                         }
                         GeneratedField::DateStarted => {
                             if date_started__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_started"));
                             }
-                            date_started__ = map.next_value()?;
+                            date_started__ = map_.next_value()?;
                         }
                         GeneratedField::DateCompleted => {
                             if date_completed__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_completed"));
                             }
-                            date_completed__ = map.next_value()?;
+                            date_completed__ = map_.next_value()?;
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Email => {
                             if email__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("email"));
                             }
-                            email__ = Some(map.next_value()?);
+                            email__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Extra => {
                             if extra__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("extra"));
                             }
-                            extra__ = map.next_value()?;
+                            extra__ = map_.next_value()?;
                         }
                         GeneratedField::ExecutionTarget => {
                             if execution_target__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("execution_target"));
                             }
-                            execution_target__ = Some(map.next_value()?);
+                            execution_target__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ExitCode => {
                             if exit_code__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("exit_code"));
                             }
                             exit_code__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::FailureCount => {
@@ -1775,7 +1779,7 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                                 return Err(serde::de::Error::duplicate_field("failure_count"));
                             }
                             failure_count__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::FailureThreshold => {
@@ -1783,164 +1787,164 @@ impl<'de> serde::Deserialize<'de> for AnalysisSubmission {
                                 return Err(serde::de::Error::duplicate_field("failure_threshold"));
                             }
                             failure_threshold__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::FileMetadata => {
                             if file_metadata__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("file-metadata"));
                             }
-                            file_metadata__ = Some(map.next_value()?);
+                            file_metadata__ = Some(map_.next_value()?);
                         }
                         GeneratedField::FilterFiles => {
                             if filter_files__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("filter_files"));
                             }
-                            filter_files__ = Some(map.next_value()?);
+                            filter_files__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Group => {
                             if group__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("group"));
                             }
-                            group__ = Some(map.next_value()?);
+                            group__ = Some(map_.next_value()?);
                         }
                         GeneratedField::InputPathListFile => {
                             if input_path_list_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("input_path_list"));
                             }
-                            input_path_list_file__ = Some(map.next_value()?);
+                            input_path_list_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::InputTicketsFile => {
                             if input_tickets_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("input_ticket_list"));
                             }
-                            input_tickets_file__ = Some(map.next_value()?);
+                            input_tickets_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::InvocationId => {
                             if invocation_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("invocation_id"));
                             }
-                            invocation_id__ = Some(map.next_value()?);
+                            invocation_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IrodsBase => {
                             if irods_base__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("irods_base"));
                             }
-                            irods_base__ = Some(map.next_value()?);
+                            irods_base__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::NfsBase => {
                             if nfs_base__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("nfs_base"));
                             }
-                            nfs_base__ = Some(map.next_value()?);
+                            nfs_base__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Notify => {
                             if notify__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("notify"));
                             }
-                            notify__ = Some(map.next_value()?);
+                            notify__ = Some(map_.next_value()?);
                         }
                         GeneratedField::NowDate => {
                             if now_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("now_date"));
                             }
-                            now_date__ = Some(map.next_value()?);
+                            now_date__ = Some(map_.next_value()?);
                         }
                         GeneratedField::OutputDir => {
                             if output_dir__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output_dir"));
                             }
-                            output_dir__ = Some(map.next_value()?);
+                            output_dir__ = Some(map_.next_value()?);
                         }
                         GeneratedField::OutputDirTicket => {
                             if output_dir_ticket__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output_dir_ticket"));
                             }
-                            output_dir_ticket__ = Some(map.next_value()?);
+                            output_dir_ticket__ = Some(map_.next_value()?);
                         }
                         GeneratedField::OutputTicketFile => {
                             if output_ticket_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output_ticket_file"));
                             }
-                            output_ticket_file__ = Some(map.next_value()?);
+                            output_ticket_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::RequestType => {
                             if request_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("request_type"));
                             }
-                            request_type__ = Some(map.next_value()?);
+                            request_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::RunOnNfs => {
                             if run_on_nfs__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("run-on-nfs"));
                             }
-                            run_on_nfs__ = Some(map.next_value()?);
+                            run_on_nfs__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SkipParentMetadata => {
                             if skip_parent_metadata__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("skip-parent-meta"));
                             }
-                            skip_parent_metadata__ = Some(map.next_value()?);
+                            skip_parent_metadata__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Steps => {
                             if steps__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("steps"));
                             }
-                            steps__ = Some(map.next_value()?);
+                            steps__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SubmissionDate => {
                             if submission_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("submission_date"));
                             }
-                            submission_date__ = Some(map.next_value()?);
+                            submission_date__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Submitter => {
                             if submitter__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            submitter__ = Some(map.next_value()?);
+                            submitter__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UserId => {
                             if user_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_id"));
                             }
-                            user_id__ = Some(map.next_value()?);
+                            user_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UserGroups => {
                             if user_groups__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_groups"));
                             }
-                            user_groups__ = Some(map.next_value()?);
+                            user_groups__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UserHome => {
                             if user_home__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_home"));
                             }
-                            user_home__ = Some(map.next_value()?);
+                            user_home__ = Some(map_.next_value()?);
                         }
                         GeneratedField::WikiUrl => {
                             if wiki_url__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("wiki_url"));
                             }
-                            wiki_url__ = Some(map.next_value()?);
+                            wiki_url__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ConfigFile => {
                             if config_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("config_file"));
                             }
-                            config_file__ = Some(map.next_value()?);
+                            config_file__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2081,32 +2085,32 @@ impl<'de> serde::Deserialize<'de> for AnalysisType {
                 formatter.write_str("struct analysis.AnalysisType")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AnalysisType, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AnalysisType, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut id__ = None;
                 let mut name__ = None;
                 let mut system_id__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SystemId => {
                             if system_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("system_id"));
                             }
-                            system_id__ = Some(map.next_value()?);
+                            system_id__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2142,15 +2146,19 @@ impl serde::Serialize for BatchStatus {
         }
         let mut struct_ser = serializer.serialize_struct("analysis.BatchStatus", len)?;
         if self.total != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("total", ToString::to_string(&self.total).as_str())?;
         }
         if self.completed != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("completed", ToString::to_string(&self.completed).as_str())?;
         }
         if self.running != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("running", ToString::to_string(&self.running).as_str())?;
         }
         if self.submitted != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("submitted", ToString::to_string(&self.submitted).as_str())?;
         }
         struct_ser.end()
@@ -2215,7 +2223,7 @@ impl<'de> serde::Deserialize<'de> for BatchStatus {
                 formatter.write_str("struct analysis.BatchStatus")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<BatchStatus, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<BatchStatus, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -2223,14 +2231,14 @@ impl<'de> serde::Deserialize<'de> for BatchStatus {
                 let mut completed__ = None;
                 let mut running__ = None;
                 let mut submitted__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Total => {
                             if total__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("total"));
                             }
                             total__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Completed => {
@@ -2238,7 +2246,7 @@ impl<'de> serde::Deserialize<'de> for BatchStatus {
                                 return Err(serde::de::Error::duplicate_field("completed"));
                             }
                             completed__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Running => {
@@ -2246,7 +2254,7 @@ impl<'de> serde::Deserialize<'de> for BatchStatus {
                                 return Err(serde::de::Error::duplicate_field("running"));
                             }
                             running__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Submitted => {
@@ -2254,7 +2262,7 @@ impl<'de> serde::Deserialize<'de> for BatchStatus {
                                 return Err(serde::de::Error::duplicate_field("submitted"));
                             }
                             submitted__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                     }
@@ -2339,18 +2347,18 @@ impl<'de> serde::Deserialize<'de> for Extra {
                 formatter.write_str("struct analysis.Extra")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Extra, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Extra, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut ht_condor__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::HtCondor => {
                             if ht_condor__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("htCondor"));
                             }
-                            ht_condor__ = map.next_value()?;
+                            ht_condor__ = map_.next_value()?;
                         }
                     }
                 }
@@ -2448,32 +2456,32 @@ impl<'de> serde::Deserialize<'de> for FileMetadata {
                 formatter.write_str("struct analysis.FileMetadata")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<FileMetadata, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<FileMetadata, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut attribute__ = None;
                 let mut value__ = None;
                 let mut unit__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Attribute => {
                             if attribute__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("attribute"));
                             }
-                            attribute__ = Some(map.next_value()?);
+                            attribute__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Value => {
                             if value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("value"));
                             }
-                            value__ = Some(map.next_value()?);
+                            value__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Unit => {
                             if unit__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("unit"));
                             }
-                            unit__ = Some(map.next_value()?);
+                            unit__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2556,18 +2564,18 @@ impl<'de> serde::Deserialize<'de> for HtCondorExtraInfo {
                 formatter.write_str("struct analysis.HTCondorExtraInfo")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<HtCondorExtraInfo, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<HtCondorExtraInfo, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut extra_requirements__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::ExtraRequirements => {
                             if extra_requirements__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("extraRequirements"));
                             }
-                            extra_requirements__ = Some(map.next_value()?);
+                            extra_requirements__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2769,9 +2777,11 @@ impl serde::Serialize for Job {
             struct_ser.serialize_field("exit_code", &self.exit_code)?;
         }
         if self.failure_count != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("failure_count", ToString::to_string(&self.failure_count).as_str())?;
         }
         if self.failure_threshold != 0 {
+            #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("failure_threshold", ToString::to_string(&self.failure_threshold).as_str())?;
         }
         if !self.file_metadata.is_empty() {
@@ -3040,7 +3050,7 @@ impl<'de> serde::Deserialize<'de> for Job {
                 formatter.write_str("struct analysis.Job")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Job, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Job, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -3088,104 +3098,104 @@ impl<'de> serde::Deserialize<'de> for Job {
                 let mut user_home__ = None;
                 let mut wiki_url__ = None;
                 let mut config_file__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::AppDescription => {
                             if app_description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_description"));
                             }
-                            app_description__ = Some(map.next_value()?);
+                            app_description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::AppId => {
                             if app_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_id"));
                             }
-                            app_id__ = Some(map.next_value()?);
+                            app_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::AppName => {
                             if app_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("app_name"));
                             }
-                            app_name__ = Some(map.next_value()?);
+                            app_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ArchiveLogs => {
                             if archive_logs__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("archive_logs"));
                             }
-                            archive_logs__ = Some(map.next_value()?);
+                            archive_logs__ = Some(map_.next_value()?);
                         }
                         GeneratedField::BatchId => {
                             if batch_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("batch_id"));
                             }
-                            batch_id__ = Some(map.next_value()?);
+                            batch_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CondorId => {
                             if condor_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("condor_id"));
                             }
-                            condor_id__ = Some(map.next_value()?);
+                            condor_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CondorLogPath => {
                             if condor_log_path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("condor_log_path"));
                             }
-                            condor_log_path__ = Some(map.next_value()?);
+                            condor_log_path__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CreateOutputSubdir => {
                             if create_output_subdir__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("create_output_subdir"));
                             }
-                            create_output_subdir__ = Some(map.next_value()?);
+                            create_output_subdir__ = Some(map_.next_value()?);
                         }
                         GeneratedField::DateSubmitted => {
                             if date_submitted__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_submitted"));
                             }
-                            date_submitted__ = map.next_value()?;
+                            date_submitted__ = map_.next_value()?;
                         }
                         GeneratedField::DateStarted => {
                             if date_started__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_started"));
                             }
-                            date_started__ = map.next_value()?;
+                            date_started__ = map_.next_value()?;
                         }
                         GeneratedField::DateCompleted => {
                             if date_completed__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_completed"));
                             }
-                            date_completed__ = map.next_value()?;
+                            date_completed__ = map_.next_value()?;
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Email => {
                             if email__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("email"));
                             }
-                            email__ = Some(map.next_value()?);
+                            email__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Extra => {
                             if extra__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("extra"));
                             }
-                            extra__ = map.next_value()?;
+                            extra__ = map_.next_value()?;
                         }
                         GeneratedField::ExecutionTarget => {
                             if execution_target__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("execution_target"));
                             }
-                            execution_target__ = Some(map.next_value()?);
+                            execution_target__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ExitCode => {
                             if exit_code__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("exit_code"));
                             }
                             exit_code__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::FailureCount => {
@@ -3193,7 +3203,7 @@ impl<'de> serde::Deserialize<'de> for Job {
                                 return Err(serde::de::Error::duplicate_field("failure_count"));
                             }
                             failure_count__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::FailureThreshold => {
@@ -3201,164 +3211,164 @@ impl<'de> serde::Deserialize<'de> for Job {
                                 return Err(serde::de::Error::duplicate_field("failure_threshold"));
                             }
                             failure_threshold__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::FileMetadata => {
                             if file_metadata__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("file-metadata"));
                             }
-                            file_metadata__ = Some(map.next_value()?);
+                            file_metadata__ = Some(map_.next_value()?);
                         }
                         GeneratedField::FilterFiles => {
                             if filter_files__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("filter_files"));
                             }
-                            filter_files__ = Some(map.next_value()?);
+                            filter_files__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Group => {
                             if group__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("group"));
                             }
-                            group__ = Some(map.next_value()?);
+                            group__ = Some(map_.next_value()?);
                         }
                         GeneratedField::InputPathListFile => {
                             if input_path_list_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("input_path_list"));
                             }
-                            input_path_list_file__ = Some(map.next_value()?);
+                            input_path_list_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::InputTicketsFile => {
                             if input_tickets_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("input_ticket_list"));
                             }
-                            input_tickets_file__ = Some(map.next_value()?);
+                            input_tickets_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::InvocationId => {
                             if invocation_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("invocation_id"));
                             }
-                            invocation_id__ = Some(map.next_value()?);
+                            invocation_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IrodsBase => {
                             if irods_base__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("irods_base"));
                             }
-                            irods_base__ = Some(map.next_value()?);
+                            irods_base__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::NfsBase => {
                             if nfs_base__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("nfs_base"));
                             }
-                            nfs_base__ = Some(map.next_value()?);
+                            nfs_base__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Notify => {
                             if notify__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("notify"));
                             }
-                            notify__ = Some(map.next_value()?);
+                            notify__ = Some(map_.next_value()?);
                         }
                         GeneratedField::NowDate => {
                             if now_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("now_date"));
                             }
-                            now_date__ = Some(map.next_value()?);
+                            now_date__ = Some(map_.next_value()?);
                         }
                         GeneratedField::OutputDir => {
                             if output_dir__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output_dir"));
                             }
-                            output_dir__ = Some(map.next_value()?);
+                            output_dir__ = Some(map_.next_value()?);
                         }
                         GeneratedField::OutputDirTicket => {
                             if output_dir_ticket__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output_dir_ticket"));
                             }
-                            output_dir_ticket__ = Some(map.next_value()?);
+                            output_dir_ticket__ = Some(map_.next_value()?);
                         }
                         GeneratedField::OutputTicketFile => {
                             if output_ticket_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output_ticket_file"));
                             }
-                            output_ticket_file__ = Some(map.next_value()?);
+                            output_ticket_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::RequestType => {
                             if request_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("request_type"));
                             }
-                            request_type__ = Some(map.next_value()?);
+                            request_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::RunOnNfs => {
                             if run_on_nfs__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("run-on-nfs"));
                             }
-                            run_on_nfs__ = Some(map.next_value()?);
+                            run_on_nfs__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SkipParentMetadata => {
                             if skip_parent_metadata__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("skip-parent-meta"));
                             }
-                            skip_parent_metadata__ = Some(map.next_value()?);
+                            skip_parent_metadata__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Steps => {
                             if steps__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("steps"));
                             }
-                            steps__ = Some(map.next_value()?);
+                            steps__ = Some(map_.next_value()?);
                         }
                         GeneratedField::SubmissionDate => {
                             if submission_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("submission_date"));
                             }
-                            submission_date__ = Some(map.next_value()?);
+                            submission_date__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Submitter => {
                             if submitter__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            submitter__ = Some(map.next_value()?);
+                            submitter__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UserId => {
                             if user_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_id"));
                             }
-                            user_id__ = Some(map.next_value()?);
+                            user_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UserGroups => {
                             if user_groups__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_groups"));
                             }
-                            user_groups__ = Some(map.next_value()?);
+                            user_groups__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UserHome => {
                             if user_home__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_home"));
                             }
-                            user_home__ = Some(map.next_value()?);
+                            user_home__ = Some(map_.next_value()?);
                         }
                         GeneratedField::WikiUrl => {
                             if wiki_url__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("wiki_url"));
                             }
-                            wiki_url__ = Some(map.next_value()?);
+                            wiki_url__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ConfigFile => {
                             if config_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("config_file"));
                             }
-                            config_file__ = Some(map.next_value()?);
+                            config_file__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3566,7 +3576,7 @@ impl<'de> serde::Deserialize<'de> for Step {
                 formatter.write_str("struct analysis.Step")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Step, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Step, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -3580,69 +3590,69 @@ impl<'de> serde::Deserialize<'de> for Step {
                 let mut environment__ = None;
                 let mut input__ = None;
                 let mut output__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Component => {
                             if component__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("component"));
                             }
-                            component__ = map.next_value()?;
+                            component__ = map_.next_value()?;
                         }
                         GeneratedField::Config => {
                             if config__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("config"));
                             }
-                            config__ = map.next_value()?;
+                            config__ = map_.next_value()?;
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::StdinPath => {
                             if stdin_path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("stdin"));
                             }
-                            stdin_path__ = Some(map.next_value()?);
+                            stdin_path__ = Some(map_.next_value()?);
                         }
                         GeneratedField::StdoutPath => {
                             if stdout_path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("stdout"));
                             }
-                            stdout_path__ = Some(map.next_value()?);
+                            stdout_path__ = Some(map_.next_value()?);
                         }
                         GeneratedField::StderrPath => {
                             if stderr_path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("stderr"));
                             }
-                            stderr_path__ = Some(map.next_value()?);
+                            stderr_path__ = Some(map_.next_value()?);
                         }
                         GeneratedField::LogFile => {
                             if log_file__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("log-file"));
                             }
-                            log_file__ = Some(map.next_value()?);
+                            log_file__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Environment => {
                             if environment__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("environment"));
                             }
                             environment__ = Some(
-                                map.next_value::<std::collections::HashMap<_, _>>()?
+                                map_.next_value::<std::collections::HashMap<_, _>>()?
                             );
                         }
                         GeneratedField::Input => {
                             if input__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("input"));
                             }
-                            input__ = Some(map.next_value()?);
+                            input__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Output => {
                             if output__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output"));
                             }
-                            output__ = Some(map.next_value()?);
+                            output__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3796,7 +3806,7 @@ impl<'de> serde::Deserialize<'de> for step::Component {
                 formatter.write_str("struct analysis.Step.Component")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<step::Component, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<step::Component, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -3808,57 +3818,57 @@ impl<'de> serde::Deserialize<'de> for step::Component {
                 let mut time_limit__ = None;
                 let mut restricted__ = None;
                 let mut is_interactive__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Container => {
                             if container__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("container"));
                             }
-                            container__ = map.next_value()?;
+                            container__ = map_.next_value()?;
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Location => {
                             if location__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("location"));
                             }
-                            location__ = Some(map.next_value()?);
+                            location__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::TimeLimit => {
                             if time_limit__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("time_limit_seconds"));
                             }
                             time_limit__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Restricted => {
                             if restricted__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("restricted"));
                             }
-                            restricted__ = Some(map.next_value()?);
+                            restricted__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IsInteractive => {
                             if is_interactive__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("interactive"));
                             }
-                            is_interactive__ = Some(map.next_value()?);
+                            is_interactive__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3965,32 +3975,32 @@ impl<'de> serde::Deserialize<'de> for step::Config {
                 formatter.write_str("struct analysis.Step.Config")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<step::Config, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<step::Config, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut params__ = None;
                 let mut inputs__ = None;
                 let mut outputs__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Params => {
                             if params__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("params"));
                             }
-                            params__ = Some(map.next_value()?);
+                            params__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Inputs => {
                             if inputs__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("input"));
                             }
-                            inputs__ = Some(map.next_value()?);
+                            inputs__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Outputs => {
                             if outputs__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("output"));
                             }
-                            outputs__ = Some(map.next_value()?);
+                            outputs__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4135,7 +4145,7 @@ impl<'de> serde::Deserialize<'de> for step::Input {
                 formatter.write_str("struct analysis.Step.Input")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<step::Input, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<step::Input, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -4147,55 +4157,55 @@ impl<'de> serde::Deserialize<'de> for step::Input {
                 let mut retain__ = None;
                 let mut r#type__ = None;
                 let mut value__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Ticket => {
                             if ticket__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("ticket"));
                             }
-                            ticket__ = Some(map.next_value()?);
+                            ticket__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Multiplicity => {
                             if multiplicity__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("multiplicity"));
                             }
-                            multiplicity__ = Some(map.next_value()?);
+                            multiplicity__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Property => {
                             if property__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("property"));
                             }
-                            property__ = Some(map.next_value()?);
+                            property__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Retain => {
                             if retain__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("retain"));
                             }
-                            retain__ = Some(map.next_value()?);
+                            retain__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Value => {
                             if value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("value"));
                             }
-                            value__ = Some(map.next_value()?);
+                            value__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4328,7 +4338,7 @@ impl<'de> serde::Deserialize<'de> for step::Output {
                 formatter.write_str("struct analysis.Step.Output")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<step::Output, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<step::Output, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -4338,43 +4348,43 @@ impl<'de> serde::Deserialize<'de> for step::Output {
                 let mut qual_id__ = None;
                 let mut retain__ = None;
                 let mut r#type__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Multiplicity => {
                             if multiplicity__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("multiplicity"));
                             }
-                            multiplicity__ = Some(map.next_value()?);
+                            multiplicity__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Property => {
                             if property__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("property"));
                             }
-                            property__ = Some(map.next_value()?);
+                            property__ = Some(map_.next_value()?);
                         }
                         GeneratedField::QualId => {
                             if qual_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("qual-id"));
                             }
-                            qual_id__ = Some(map.next_value()?);
+                            qual_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Retain => {
                             if retain__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("retain"));
                             }
-                            retain__ = Some(map.next_value()?);
+                            retain__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4504,7 +4514,7 @@ impl<'de> serde::Deserialize<'de> for step::Param {
                 formatter.write_str("struct analysis.Step.Param")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<step::Param, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<step::Param, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -4514,45 +4524,45 @@ impl<'de> serde::Deserialize<'de> for step::Param {
                 let mut order__ = None;
                 let mut r#type__ = None;
                 let mut path__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Id => {
                             if id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("id"));
                             }
-                            id__ = Some(map.next_value()?);
+                            id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Value => {
                             if value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("value"));
                             }
-                            value__ = Some(map.next_value()?);
+                            value__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Order => {
                             if order__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("order"));
                             }
                             order__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Path => {
                             if path__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("path"));
                             }
-                            path__ = Some(map.next_value()?);
+                            path__ = Some(map_.next_value()?);
                         }
                     }
                 }

@@ -76,25 +76,25 @@ impl<'de> serde::Deserialize<'de> for AddAddonRequest {
                 formatter.write_str("struct qms.AddAddonRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddAddonRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddAddonRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut addon__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Addon => {
                             if addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("addon"));
                             }
-                            addon__ = map.next_value()?;
+                            addon__ = map_.next_value()?;
                         }
                     }
                 }
@@ -193,32 +193,32 @@ impl<'de> serde::Deserialize<'de> for AddPlanQuotaDefaultRequest {
                 formatter.write_str("struct qms.AddPlanQuotaDefaultRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddPlanQuotaDefaultRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddPlanQuotaDefaultRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut plan_name__ = None;
                 let mut quota_default__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::PlanName => {
                             if plan_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plan_name"));
                             }
-                            plan_name__ = Some(map.next_value()?);
+                            plan_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::QuotaDefault => {
                             if quota_default__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota_default"));
                             }
-                            quota_default__ = map.next_value()?;
+                            quota_default__ = map_.next_value()?;
                         }
                     }
                 }
@@ -309,25 +309,25 @@ impl<'de> serde::Deserialize<'de> for AddPlanRequest {
                 formatter.write_str("struct qms.AddPlanRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddPlanRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddPlanRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut plan__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Plan => {
                             if plan__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plan"));
                             }
-                            plan__ = map.next_value()?;
+                            plan__ = map_.next_value()?;
                         }
                     }
                 }
@@ -417,25 +417,25 @@ impl<'de> serde::Deserialize<'de> for AddQuotaRequest {
                 formatter.write_str("struct qms.AddQuotaRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddQuotaRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddQuotaRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut quota__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Quota => {
                             if quota__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota"));
                             }
-                            quota__ = map.next_value()?;
+                            quota__ = map_.next_value()?;
                         }
                     }
                 }
@@ -525,25 +525,25 @@ impl<'de> serde::Deserialize<'de> for AddUpdateRequest {
                 formatter.write_str("struct qms.AddUpdateRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddUpdateRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddUpdateRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut update__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Update => {
                             if update__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update"));
                             }
-                            update__ = map.next_value()?;
+                            update__ = map_.next_value()?;
                         }
                     }
                 }
@@ -642,32 +642,32 @@ impl<'de> serde::Deserialize<'de> for AddUpdateResponse {
                 formatter.write_str("struct qms.AddUpdateResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddUpdateResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddUpdateResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut update__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Update => {
                             if update__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update"));
                             }
-                            update__ = map.next_value()?;
+                            update__ = map_.next_value()?;
                         }
                     }
                 }
@@ -794,7 +794,7 @@ impl<'de> serde::Deserialize<'de> for AddUsage {
                 formatter.write_str("struct qms.AddUsage")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddUsage, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddUsage, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -804,45 +804,45 @@ impl<'de> serde::Deserialize<'de> for AddUsage {
                 let mut update_type__ = None;
                 let mut usage_value__ = None;
                 let mut resource_unit__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceName => {
                             if resource_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_name"));
                             }
-                            resource_name__ = Some(map.next_value()?);
+                            resource_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateType => {
                             if update_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update_type"));
                             }
-                            update_type__ = Some(map.next_value()?);
+                            update_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UsageValue => {
                             if usage_value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("usage_value"));
                             }
                             usage_value__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::ResourceUnit => {
                             if resource_unit__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_unit"));
                             }
-                            resource_unit__ = Some(map.next_value()?);
+                            resource_unit__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -955,7 +955,7 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                 formatter.write_str("struct qms.AddUserRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddUserRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddUserRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -963,31 +963,31 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                 let mut username__ = None;
                 let mut plan_name__ = None;
                 let mut paid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                         GeneratedField::PlanName => {
                             if plan_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("planName"));
                             }
-                            plan_name__ = Some(map.next_value()?);
+                            plan_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Paid => {
                             if paid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("paid"));
                             }
-                            paid__ = Some(map.next_value()?);
+                            paid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1117,7 +1117,7 @@ impl<'de> serde::Deserialize<'de> for AddUserResponse {
                 formatter.write_str("struct qms.AddUserResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddUserResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddUserResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -1127,43 +1127,43 @@ impl<'de> serde::Deserialize<'de> for AddUserResponse {
                 let mut username__ = None;
                 let mut plan_name__ = None;
                 let mut plan_uuid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                         GeneratedField::PlanName => {
                             if plan_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("planName"));
                             }
-                            plan_name__ = Some(map.next_value()?);
+                            plan_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::PlanUuid => {
                             if plan_uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("planUuid"));
                             }
-                            plan_uuid__ = Some(map.next_value()?);
+                            plan_uuid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1293,7 +1293,7 @@ impl<'de> serde::Deserialize<'de> for Addon {
                 formatter.write_str("struct qms.Addon")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Addon, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Addon, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -1303,45 +1303,45 @@ impl<'de> serde::Deserialize<'de> for Addon {
                 let mut resource_type__ = None;
                 let mut default_amount__ = None;
                 let mut default_paid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = map.next_value()?;
+                            resource_type__ = map_.next_value()?;
                         }
                         GeneratedField::DefaultAmount => {
                             if default_amount__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("default_amount"));
                             }
                             default_amount__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::DefaultPaid => {
                             if default_paid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("default_paid"));
                             }
-                            default_paid__ = Some(map.next_value()?);
+                            default_paid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1444,32 +1444,32 @@ impl<'de> serde::Deserialize<'de> for AddonListResponse {
                 formatter.write_str("struct qms.AddonListResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddonListResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddonListResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut addons__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Addons => {
                             if addons__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("addons"));
                             }
-                            addons__ = Some(map.next_value()?);
+                            addons__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1570,31 +1570,31 @@ impl<'de> serde::Deserialize<'de> for AddonLookupRequest {
                 formatter.write_str("struct qms.AddonLookupRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddonLookupRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddonLookupRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut addon__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Uuid => {
                             if addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            addon__ = map.next_value::<::std::option::Option<_>>()?.map(addon_lookup_request::Addon::Uuid);
+                            addon__ = map_.next_value::<::std::option::Option<_>>()?.map(addon_lookup_request::Addon::Uuid);
                         }
                         GeneratedField::Name => {
                             if addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            addon__ = map.next_value::<::std::option::Option<_>>()?.map(addon_lookup_request::Addon::Name);
+                            addon__ = map_.next_value::<::std::option::Option<_>>()?.map(addon_lookup_request::Addon::Name);
                         }
                     }
                 }
@@ -1693,32 +1693,32 @@ impl<'de> serde::Deserialize<'de> for AddonResponse {
                 formatter.write_str("struct qms.AddonResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AddonResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AddonResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut addon__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Addon => {
                             if addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("addon"));
                             }
-                            addon__ = map.next_value()?;
+                            addon__ = map_.next_value()?;
                         }
                     }
                 }
@@ -1809,25 +1809,25 @@ impl<'de> serde::Deserialize<'de> for AllUserOveragesRequest {
                 formatter.write_str("struct qms.AllUserOveragesRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<AllUserOveragesRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<AllUserOveragesRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut username__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -1854,6 +1854,12 @@ impl serde::Serialize for ChangeSubscriptionRequest {
         if !self.username.is_empty() {
             len += 1;
         }
+        if self.periods != 0 {
+            len += 1;
+        }
+        if !self.end_date.is_empty() {
+            len += 1;
+        }
         if self.plan.is_some() {
             len += 1;
         }
@@ -1863,6 +1869,12 @@ impl serde::Serialize for ChangeSubscriptionRequest {
         }
         if !self.username.is_empty() {
             struct_ser.serialize_field("username", &self.username)?;
+        }
+        if self.periods != 0 {
+            struct_ser.serialize_field("periods", &self.periods)?;
+        }
+        if !self.end_date.is_empty() {
+            struct_ser.serialize_field("endDate", &self.end_date)?;
         }
         if let Some(v) = self.plan.as_ref() {
             match v {
@@ -1886,6 +1898,9 @@ impl<'de> serde::Deserialize<'de> for ChangeSubscriptionRequest {
         const FIELDS: &[&str] = &[
             "header",
             "username",
+            "periods",
+            "end_date",
+            "endDate",
             "uuid",
             "name",
         ];
@@ -1894,6 +1909,8 @@ impl<'de> serde::Deserialize<'de> for ChangeSubscriptionRequest {
         enum GeneratedField {
             Header,
             Username,
+            Periods,
+            EndDate,
             Uuid,
             Name,
         }
@@ -1919,6 +1936,8 @@ impl<'de> serde::Deserialize<'de> for ChangeSubscriptionRequest {
                         match value {
                             "header" => Ok(GeneratedField::Header),
                             "username" => Ok(GeneratedField::Username),
+                            "periods" => Ok(GeneratedField::Periods),
+                            "endDate" | "end_date" => Ok(GeneratedField::EndDate),
                             "uuid" => Ok(GeneratedField::Uuid),
                             "name" => Ok(GeneratedField::Name),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
@@ -1936,44 +1955,62 @@ impl<'de> serde::Deserialize<'de> for ChangeSubscriptionRequest {
                 formatter.write_str("struct qms.ChangeSubscriptionRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ChangeSubscriptionRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ChangeSubscriptionRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut username__ = None;
+                let mut periods__ = None;
+                let mut end_date__ = None;
                 let mut plan__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
+                        }
+                        GeneratedField::Periods => {
+                            if periods__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("periods"));
+                            }
+                            periods__ = 
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
+                        }
+                        GeneratedField::EndDate => {
+                            if end_date__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("endDate"));
+                            }
+                            end_date__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Uuid => {
                             if plan__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            plan__ = map.next_value::<::std::option::Option<_>>()?.map(change_subscription_request::Plan::Uuid);
+                            plan__ = map_.next_value::<::std::option::Option<_>>()?.map(change_subscription_request::Plan::Uuid);
                         }
                         GeneratedField::Name => {
                             if plan__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            plan__ = map.next_value::<::std::option::Option<_>>()?.map(change_subscription_request::Plan::Name);
+                            plan__ = map_.next_value::<::std::option::Option<_>>()?.map(change_subscription_request::Plan::Name);
                         }
                     }
                 }
                 Ok(ChangeSubscriptionRequest {
                     header: header__,
                     username: username__.unwrap_or_default(),
+                    periods: periods__.unwrap_or_default(),
+                    end_date: end_date__.unwrap_or_default(),
                     plan: plan__,
                 })
             }
@@ -2058,25 +2095,25 @@ impl<'de> serde::Deserialize<'de> for GetUsages {
                 formatter.write_str("struct qms.GetUsages")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<GetUsages, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<GetUsages, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut username__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2175,32 +2212,32 @@ impl<'de> serde::Deserialize<'de> for IsOverage {
                 formatter.write_str("struct qms.IsOverage")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<IsOverage, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<IsOverage, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut is_overage__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::IsOverage => {
                             if is_overage__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("is_overage"));
                             }
-                            is_overage__ = Some(map.next_value()?);
+                            is_overage__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2300,32 +2337,32 @@ impl<'de> serde::Deserialize<'de> for IsOverageRequest {
                 formatter.write_str("struct qms.IsOverageRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<IsOverageRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<IsOverageRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut username__ = None;
                 let mut resource_name__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceName => {
                             if resource_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_name"));
                             }
-                            resource_name__ = Some(map.next_value()?);
+                            resource_name__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2407,18 +2444,18 @@ impl<'de> serde::Deserialize<'de> for NoParamsRequest {
                 formatter.write_str("struct qms.NoParamsRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<NoParamsRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<NoParamsRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                     }
                 }
@@ -2516,27 +2553,27 @@ impl<'de> serde::Deserialize<'de> for Overage {
                 formatter.write_str("struct qms.Overage")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Overage, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Overage, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut resource_name__ = None;
                 let mut quota__ = None;
                 let mut usage__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::ResourceName => {
                             if resource_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_name"));
                             }
-                            resource_name__ = Some(map.next_value()?);
+                            resource_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Quota => {
                             if quota__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota"));
                             }
                             quota__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Usage => {
@@ -2544,7 +2581,7 @@ impl<'de> serde::Deserialize<'de> for Overage {
                                 return Err(serde::de::Error::duplicate_field("usage"));
                             }
                             usage__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                     }
@@ -2645,32 +2682,32 @@ impl<'de> serde::Deserialize<'de> for OverageList {
                 formatter.write_str("struct qms.OverageList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<OverageList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<OverageList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut overages__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Overages => {
                             if overages__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("overages"));
                             }
-                            overages__ = Some(map.next_value()?);
+                            overages__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -2770,32 +2807,32 @@ impl<'de> serde::Deserialize<'de> for OverageResponse {
                 formatter.write_str("struct qms.OverageResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<OverageResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<OverageResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut overage__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Overage => {
                             if overage__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("overage"));
                             }
-                            overage__ = map.next_value()?;
+                            overage__ = map_.next_value()?;
                         }
                     }
                 }
@@ -2904,7 +2941,7 @@ impl<'de> serde::Deserialize<'de> for Plan {
                 formatter.write_str("struct qms.Plan")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Plan, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Plan, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -2912,31 +2949,31 @@ impl<'de> serde::Deserialize<'de> for Plan {
                 let mut name__ = None;
                 let mut description__ = None;
                 let mut plan_quota_defaults__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::PlanQuotaDefaults => {
                             if plan_quota_defaults__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plan_quota_defaults"));
                             }
-                            plan_quota_defaults__ = Some(map.next_value()?);
+                            plan_quota_defaults__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3037,32 +3074,32 @@ impl<'de> serde::Deserialize<'de> for PlanList {
                 formatter.write_str("struct qms.PlanList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<PlanList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<PlanList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut plans__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Plans => {
                             if plans__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plans"));
                             }
-                            plans__ = Some(map.next_value()?);
+                            plans__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3153,25 +3190,25 @@ impl<'de> serde::Deserialize<'de> for PlanRequest {
                 formatter.write_str("struct qms.PlanRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<PlanRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<PlanRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut plan_id__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::PlanId => {
                             if plan_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plan_id"));
                             }
-                            plan_id__ = Some(map.next_value()?);
+                            plan_id__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3270,32 +3307,32 @@ impl<'de> serde::Deserialize<'de> for PlanResponse {
                 formatter.write_str("struct qms.PlanResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<PlanResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<PlanResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut plan__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Plan => {
                             if plan__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plan"));
                             }
-                            plan__ = map.next_value()?;
+                            plan__ = map_.next_value()?;
                         }
                     }
                 }
@@ -3386,25 +3423,25 @@ impl<'de> serde::Deserialize<'de> for QmsUser {
                 formatter.write_str("struct qms.QMSUser")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QmsUser, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QmsUser, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut uuid__ = None;
                 let mut username__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3503,32 +3540,32 @@ impl<'de> serde::Deserialize<'de> for QmsUserList {
                 formatter.write_str("struct qms.QMSUserList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QmsUserList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QmsUserList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut users__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Users => {
                             if users__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("users"));
                             }
-                            users__ = Some(map.next_value()?);
+                            users__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3628,32 +3665,32 @@ impl<'de> serde::Deserialize<'de> for QmsUserResponse {
                 formatter.write_str("struct qms.QMSUserResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QmsUserResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QmsUserResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut user__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::User => {
                             if user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            user__ = map.next_value()?;
+                            user__ = map_.next_value()?;
                         }
                     }
                 }
@@ -3802,7 +3839,7 @@ impl<'de> serde::Deserialize<'de> for Quota {
                 formatter.write_str("struct qms.Quota")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Quota, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Quota, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -3814,57 +3851,57 @@ impl<'de> serde::Deserialize<'de> for Quota {
                 let mut last_modified_by__ = None;
                 let mut last_modified_at__ = None;
                 let mut subscription_id__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Quota => {
                             if quota__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota"));
                             }
                             quota__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = map.next_value()?;
+                            resource_type__ = map_.next_value()?;
                         }
                         GeneratedField::CreatedBy => {
                             if created_by__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("created_by"));
                             }
-                            created_by__ = Some(map.next_value()?);
+                            created_by__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CreatedAt => {
                             if created_at__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("created_at"));
                             }
-                            created_at__ = map.next_value()?;
+                            created_at__ = map_.next_value()?;
                         }
                         GeneratedField::LastModifiedBy => {
                             if last_modified_by__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("last_modified_by"));
                             }
-                            last_modified_by__ = Some(map.next_value()?);
+                            last_modified_by__ = Some(map_.next_value()?);
                         }
                         GeneratedField::LastModifiedAt => {
                             if last_modified_at__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("last_modified_at"));
                             }
-                            last_modified_at__ = map.next_value()?;
+                            last_modified_at__ = map_.next_value()?;
                         }
                         GeneratedField::SubscriptionId => {
                             if subscription_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription_id"));
                             }
-                            subscription_id__ = Some(map.next_value()?);
+                            subscription_id__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -3969,34 +4006,34 @@ impl<'de> serde::Deserialize<'de> for QuotaDefault {
                 formatter.write_str("struct qms.QuotaDefault")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QuotaDefault, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QuotaDefault, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut uuid__ = None;
                 let mut quota_value__ = None;
                 let mut resource_type__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::QuotaValue => {
                             if quota_value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota_value"));
                             }
                             quota_value__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = map.next_value()?;
+                            resource_type__ = map_.next_value()?;
                         }
                     }
                 }
@@ -4096,32 +4133,32 @@ impl<'de> serde::Deserialize<'de> for QuotaDefaultList {
                 formatter.write_str("struct qms.QuotaDefaultList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QuotaDefaultList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QuotaDefaultList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut quota_defaults__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::QuotaDefaults => {
                             if quota_defaults__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota_defaults"));
                             }
-                            quota_defaults__ = Some(map.next_value()?);
+                            quota_defaults__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4221,32 +4258,32 @@ impl<'de> serde::Deserialize<'de> for QuotaDefaultResponse {
                 formatter.write_str("struct qms.QuotaDefaultResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QuotaDefaultResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QuotaDefaultResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut quota_default__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::QuotaDefault => {
                             if quota_default__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota_default"));
                             }
-                            quota_default__ = map.next_value()?;
+                            quota_default__ = map_.next_value()?;
                         }
                     }
                 }
@@ -4346,32 +4383,32 @@ impl<'de> serde::Deserialize<'de> for QuotaList {
                 formatter.write_str("struct qms.QuotaList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QuotaList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QuotaList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut quotas__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Quotas => {
                             if quotas__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quotas"));
                             }
-                            quotas__ = Some(map.next_value()?);
+                            quotas__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4471,32 +4508,32 @@ impl<'de> serde::Deserialize<'de> for QuotaResponse {
                 formatter.write_str("struct qms.QuotaResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<QuotaResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<QuotaResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut quota__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Quota => {
                             if quota__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quota"));
                             }
-                            quota__ = map.next_value()?;
+                            quota__ = map_.next_value()?;
                         }
                     }
                 }
@@ -4587,25 +4624,25 @@ impl<'de> serde::Deserialize<'de> for RequestByUserId {
                 formatter.write_str("struct qms.RequestByUserID")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<RequestByUserId, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<RequestByUserId, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut user_id__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::UserId => {
                             if user_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user_id"));
                             }
-                            user_id__ = Some(map.next_value()?);
+                            user_id__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4695,25 +4732,25 @@ impl<'de> serde::Deserialize<'de> for RequestByUsername {
                 formatter.write_str("struct qms.RequestByUsername")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<RequestByUsername, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<RequestByUsername, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut username__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4743,6 +4780,9 @@ impl serde::Serialize for ResourceType {
         if !self.unit.is_empty() {
             len += 1;
         }
+        if !self.consumable.is_empty() {
+            len += 1;
+        }
         let mut struct_ser = serializer.serialize_struct("qms.ResourceType", len)?;
         if !self.uuid.is_empty() {
             struct_ser.serialize_field("uuid", &self.uuid)?;
@@ -4752,6 +4792,9 @@ impl serde::Serialize for ResourceType {
         }
         if !self.unit.is_empty() {
             struct_ser.serialize_field("unit", &self.unit)?;
+        }
+        if !self.consumable.is_empty() {
+            struct_ser.serialize_field("consumable", &self.consumable)?;
         }
         struct_ser.end()
     }
@@ -4766,6 +4809,7 @@ impl<'de> serde::Deserialize<'de> for ResourceType {
             "uuid",
             "name",
             "unit",
+            "consumable",
         ];
 
         #[allow(clippy::enum_variant_names)]
@@ -4773,6 +4817,7 @@ impl<'de> serde::Deserialize<'de> for ResourceType {
             Uuid,
             Name,
             Unit,
+            Consumable,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4797,6 +4842,7 @@ impl<'de> serde::Deserialize<'de> for ResourceType {
                             "uuid" => Ok(GeneratedField::Uuid),
                             "name" => Ok(GeneratedField::Name),
                             "unit" => Ok(GeneratedField::Unit),
+                            "consumable" => Ok(GeneratedField::Consumable),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
                         }
                     }
@@ -4812,32 +4858,39 @@ impl<'de> serde::Deserialize<'de> for ResourceType {
                 formatter.write_str("struct qms.ResourceType")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceType, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceType, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut uuid__ = None;
                 let mut name__ = None;
                 let mut unit__ = None;
-                while let Some(k) = map.next_key()? {
+                let mut consumable__ = None;
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Unit => {
                             if unit__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("unit"));
                             }
-                            unit__ = Some(map.next_value()?);
+                            unit__ = Some(map_.next_value()?);
+                        }
+                        GeneratedField::Consumable => {
+                            if consumable__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("consumable"));
+                            }
+                            consumable__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -4845,6 +4898,7 @@ impl<'de> serde::Deserialize<'de> for ResourceType {
                     uuid: uuid__.unwrap_or_default(),
                     name: name__.unwrap_or_default(),
                     unit: unit__.unwrap_or_default(),
+                    consumable: consumable__.unwrap_or_default(),
                 })
             }
         }
@@ -4937,32 +4991,32 @@ impl<'de> serde::Deserialize<'de> for ResourceTypeList {
                 formatter.write_str("struct qms.ResourceTypeList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceTypeList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceTypeList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut resource_types__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::ResourceTypes => {
                             if resource_types__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_types"));
                             }
-                            resource_types__ = Some(map.next_value()?);
+                            resource_types__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -5062,32 +5116,32 @@ impl<'de> serde::Deserialize<'de> for ResourceTypeResponse {
                 formatter.write_str("struct qms.ResourceTypeResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ResourceTypeResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ResourceTypeResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut resource_type__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = map.next_value()?;
+                            resource_type__ = map_.next_value()?;
                         }
                     }
                 }
@@ -5232,7 +5286,7 @@ impl<'de> serde::Deserialize<'de> for Subscription {
                 formatter.write_str("struct qms.Subscription")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Subscription, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Subscription, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -5244,55 +5298,55 @@ impl<'de> serde::Deserialize<'de> for Subscription {
                 let mut quotas__ = None;
                 let mut usages__ = None;
                 let mut paid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::EffectiveStartDate => {
                             if effective_start_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("effective_start_date"));
                             }
-                            effective_start_date__ = map.next_value()?;
+                            effective_start_date__ = map_.next_value()?;
                         }
                         GeneratedField::EffectiveEndDate => {
                             if effective_end_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("effective_end_date"));
                             }
-                            effective_end_date__ = map.next_value()?;
+                            effective_end_date__ = map_.next_value()?;
                         }
                         GeneratedField::User => {
                             if user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            user__ = map.next_value()?;
+                            user__ = map_.next_value()?;
                         }
                         GeneratedField::Plan => {
                             if plan__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("plan"));
                             }
-                            plan__ = map.next_value()?;
+                            plan__ = map_.next_value()?;
                         }
                         GeneratedField::Quotas => {
                             if quotas__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("quotas"));
                             }
-                            quotas__ = Some(map.next_value()?);
+                            quotas__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Usages => {
                             if usages__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("usages"));
                             }
-                            usages__ = Some(map.next_value()?);
+                            usages__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Paid => {
                             if paid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("paid"));
                             }
-                            paid__ = Some(map.next_value()?);
+                            paid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -5415,7 +5469,7 @@ impl<'de> serde::Deserialize<'de> for SubscriptionAddon {
                 formatter.write_str("struct qms.SubscriptionAddon")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubscriptionAddon, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubscriptionAddon, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -5424,39 +5478,39 @@ impl<'de> serde::Deserialize<'de> for SubscriptionAddon {
                 let mut subscription__ = None;
                 let mut amount__ = None;
                 let mut paid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Addon => {
                             if addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("addon"));
                             }
-                            addon__ = map.next_value()?;
+                            addon__ = map_.next_value()?;
                         }
                         GeneratedField::Subscription => {
                             if subscription__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription"));
                             }
-                            subscription__ = map.next_value()?;
+                            subscription__ = map_.next_value()?;
                         }
                         GeneratedField::Amount => {
                             if amount__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("amount"));
                             }
                             amount__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Paid => {
                             if paid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("paid"));
                             }
-                            paid__ = Some(map.next_value()?);
+                            paid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -5558,32 +5612,32 @@ impl<'de> serde::Deserialize<'de> for SubscriptionAddonListResponse {
                 formatter.write_str("struct qms.SubscriptionAddonListResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubscriptionAddonListResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubscriptionAddonListResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut subscription_addons__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::SubscriptionAddons => {
                             if subscription_addons__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription_addons"));
                             }
-                            subscription_addons__ = Some(map.next_value()?);
+                            subscription_addons__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -5683,32 +5737,32 @@ impl<'de> serde::Deserialize<'de> for SubscriptionAddonResponse {
                 formatter.write_str("struct qms.SubscriptionAddonResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubscriptionAddonResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubscriptionAddonResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut subscription_addon__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::SubscriptionAddon => {
                             if subscription_addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription_addon"));
                             }
-                            subscription_addon__ = map.next_value()?;
+                            subscription_addon__ = map_.next_value()?;
                         }
                     }
                 }
@@ -5808,32 +5862,32 @@ impl<'de> serde::Deserialize<'de> for SubscriptionList {
                 formatter.write_str("struct qms.SubscriptionList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubscriptionList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubscriptionList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut subscriptions__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Subscriptions => {
                             if subscriptions__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscriptions"));
                             }
-                            subscriptions__ = Some(map.next_value()?);
+                            subscriptions__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -5933,32 +5987,32 @@ impl<'de> serde::Deserialize<'de> for SubscriptionResponse {
                 formatter.write_str("struct qms.SubscriptionResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<SubscriptionResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<SubscriptionResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut subscription__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Subscription => {
                             if subscription__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription"));
                             }
-                            subscription__ = map.next_value()?;
+                            subscription__ = map_.next_value()?;
                         }
                     }
                 }
@@ -6094,7 +6148,7 @@ impl<'de> serde::Deserialize<'de> for Update {
                 formatter.write_str("struct qms.Update")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Update, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Update, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -6105,51 +6159,51 @@ impl<'de> serde::Deserialize<'de> for Update {
                 let mut operation__ = None;
                 let mut resource_type__ = None;
                 let mut user__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ValueType => {
                             if value_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("value_type"));
                             }
-                            value_type__ = Some(map.next_value()?);
+                            value_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Value => {
                             if value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("value"));
                             }
                             value__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::EffectiveDate => {
                             if effective_date__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("effective_date"));
                             }
-                            effective_date__ = map.next_value()?;
+                            effective_date__ = map_.next_value()?;
                         }
                         GeneratedField::Operation => {
                             if operation__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("operation"));
                             }
-                            operation__ = map.next_value()?;
+                            operation__ = map_.next_value()?;
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = map.next_value()?;
+                            resource_type__ = map_.next_value()?;
                         }
                         GeneratedField::User => {
                             if user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            user__ = map.next_value()?;
+                            user__ = map_.next_value()?;
                         }
                     }
                 }
@@ -6294,7 +6348,7 @@ impl<'de> serde::Deserialize<'de> for UpdateAddonRequest {
                 formatter.write_str("struct qms.UpdateAddonRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UpdateAddonRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UpdateAddonRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -6305,49 +6359,49 @@ impl<'de> serde::Deserialize<'de> for UpdateAddonRequest {
                 let mut update_resource_type__ = None;
                 let mut update_default_amount__ = None;
                 let mut update_default_paid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Addon => {
                             if addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("addon"));
                             }
-                            addon__ = map.next_value()?;
+                            addon__ = map_.next_value()?;
                         }
                         GeneratedField::UpdateName => {
                             if update_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("updateName"));
                             }
-                            update_name__ = Some(map.next_value()?);
+                            update_name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateDescription => {
                             if update_description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("updateDescription"));
                             }
-                            update_description__ = Some(map.next_value()?);
+                            update_description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateResourceType => {
                             if update_resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("updateResourceType"));
                             }
-                            update_resource_type__ = Some(map.next_value()?);
+                            update_resource_type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateDefaultAmount => {
                             if update_default_amount__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("updateDefaultAmount"));
                             }
-                            update_default_amount__ = Some(map.next_value()?);
+                            update_default_amount__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateDefaultPaid => {
                             if update_default_paid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("updateDefaultPaid"));
                             }
-                            update_default_paid__ = Some(map.next_value()?);
+                            update_default_paid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -6442,25 +6496,25 @@ impl<'de> serde::Deserialize<'de> for UpdateListRequest {
                 formatter.write_str("struct qms.UpdateListRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UpdateListRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UpdateListRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut user__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::User => {
                             if user__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("user"));
                             }
-                            user__ = map.next_value()?;
+                            user__ = map_.next_value()?;
                         }
                     }
                 }
@@ -6559,32 +6613,32 @@ impl<'de> serde::Deserialize<'de> for UpdateListResponse {
                 formatter.write_str("struct qms.UpdateListResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UpdateListResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UpdateListResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut updates__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Updates => {
                             if updates__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("updates"));
                             }
-                            updates__ = Some(map.next_value()?);
+                            updates__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -6675,25 +6729,25 @@ impl<'de> serde::Deserialize<'de> for UpdateOperation {
                 formatter.write_str("struct qms.UpdateOperation")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UpdateOperation, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UpdateOperation, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut uuid__ = None;
                 let mut name__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -6819,7 +6873,7 @@ impl<'de> serde::Deserialize<'de> for UpdateSubscriptionAddonRequest {
                 formatter.write_str("struct qms.UpdateSubscriptionAddonRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UpdateSubscriptionAddonRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UpdateSubscriptionAddonRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -6829,43 +6883,43 @@ impl<'de> serde::Deserialize<'de> for UpdateSubscriptionAddonRequest {
                 let mut update_subscription_id__ = None;
                 let mut update_amount__ = None;
                 let mut update_paid__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::SubscriptionAddon => {
                             if subscription_addon__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription_addon"));
                             }
-                            subscription_addon__ = map.next_value()?;
+                            subscription_addon__ = map_.next_value()?;
                         }
                         GeneratedField::UpdateAddonId => {
                             if update_addon_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update_addon_id"));
                             }
-                            update_addon_id__ = Some(map.next_value()?);
+                            update_addon_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateSubscriptionId => {
                             if update_subscription_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update_subscription_id"));
                             }
-                            update_subscription_id__ = Some(map.next_value()?);
+                            update_subscription_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdateAmount => {
                             if update_amount__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update_amount"));
                             }
-                            update_amount__ = Some(map.next_value()?);
+                            update_amount__ = Some(map_.next_value()?);
                         }
                         GeneratedField::UpdatePaid => {
                             if update_paid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("update_paid"));
                             }
-                            update_paid__ = Some(map.next_value()?);
+                            update_paid__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -7017,7 +7071,7 @@ impl<'de> serde::Deserialize<'de> for Usage {
                 formatter.write_str("struct qms.Usage")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Usage, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Usage, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -7029,57 +7083,57 @@ impl<'de> serde::Deserialize<'de> for Usage {
                 let mut created_at__ = None;
                 let mut last_modified_by__ = None;
                 let mut last_modified_at__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Usage => {
                             if usage__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("usage"));
                             }
                             usage__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::SubscriptionId => {
                             if subscription_id__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("subscription_id"));
                             }
-                            subscription_id__ = Some(map.next_value()?);
+                            subscription_id__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceType => {
                             if resource_type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_type"));
                             }
-                            resource_type__ = map.next_value()?;
+                            resource_type__ = map_.next_value()?;
                         }
                         GeneratedField::CreatedBy => {
                             if created_by__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("created_by"));
                             }
-                            created_by__ = Some(map.next_value()?);
+                            created_by__ = Some(map_.next_value()?);
                         }
                         GeneratedField::CreatedAt => {
                             if created_at__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("created_at"));
                             }
-                            created_at__ = map.next_value()?;
+                            created_at__ = map_.next_value()?;
                         }
                         GeneratedField::LastModifiedBy => {
                             if last_modified_by__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("last_modified_by"));
                             }
-                            last_modified_by__ = Some(map.next_value()?);
+                            last_modified_by__ = Some(map_.next_value()?);
                         }
                         GeneratedField::LastModifiedAt => {
                             if last_modified_at__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("last_modified_at"));
                             }
-                            last_modified_at__ = map.next_value()?;
+                            last_modified_at__ = map_.next_value()?;
                         }
                     }
                 }
@@ -7184,32 +7238,32 @@ impl<'de> serde::Deserialize<'de> for UsageList {
                 formatter.write_str("struct qms.UsageList")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UsageList, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UsageList, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut usages__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Usages => {
                             if usages__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("usages"));
                             }
-                            usages__ = Some(map.next_value()?);
+                            usages__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -7309,32 +7363,32 @@ impl<'de> serde::Deserialize<'de> for UsageResponse {
                 formatter.write_str("struct qms.UsageResponse")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UsageResponse, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UsageResponse, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut error__ = None;
                 let mut usage__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Usage => {
                             if usage__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("usage"));
                             }
-                            usage__ = map.next_value()?;
+                            usage__ = map_.next_value()?;
                         }
                     }
                 }
@@ -7434,32 +7488,32 @@ impl<'de> serde::Deserialize<'de> for UserResourceOveragesRequest {
                 formatter.write_str("struct qms.UserResourceOveragesRequest")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<UserResourceOveragesRequest, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<UserResourceOveragesRequest, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut header__ = None;
                 let mut username__ = None;
                 let mut resource_name__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Username => {
                             if username__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("username"));
                             }
-                            username__ = Some(map.next_value()?);
+                            username__ = Some(map_.next_value()?);
                         }
                         GeneratedField::ResourceName => {
                             if resource_name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("resource_name"));
                             }
-                            resource_name__ = Some(map.next_value()?);
+                            resource_name__ = Some(map_.next_value()?);
                         }
                     }
                 }

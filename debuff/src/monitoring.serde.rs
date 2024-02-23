@@ -103,7 +103,7 @@ impl<'de> serde::Deserialize<'de> for DnsCheckResult {
                 formatter.write_str("struct monitoring.DNSCheckResult")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<DnsCheckResult, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<DnsCheckResult, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -112,37 +112,37 @@ impl<'de> serde::Deserialize<'de> for DnsCheckResult {
                 let mut lookups__ = None;
                 let mut node__ = None;
                 let mut date_sent__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Lookups => {
                             if lookups__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("lookups"));
                             }
-                            lookups__ = Some(map.next_value()?);
+                            lookups__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Node => {
                             if node__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("node"));
                             }
-                            node__ = Some(map.next_value()?);
+                            node__ = Some(map_.next_value()?);
                         }
                         GeneratedField::DateSent => {
                             if date_sent__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_sent"));
                             }
-                            date_sent__ = Some(map.next_value()?);
+                            date_sent__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -253,7 +253,7 @@ impl<'de> serde::Deserialize<'de> for DnsLookup {
                 formatter.write_str("struct monitoring.DNSLookup")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<DnsLookup, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<DnsLookup, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -261,31 +261,31 @@ impl<'de> serde::Deserialize<'de> for DnsLookup {
                 let mut addresses__ = None;
                 let mut r#type__ = None;
                 let mut error__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Host => {
                             if host__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("host"));
                             }
-                            host__ = Some(map.next_value()?);
+                            host__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Addresses => {
                             if addresses__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("addresses"));
                             }
-                            addresses__ = Some(map.next_value()?);
+                            addresses__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Type => {
                             if r#type__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("type"));
                             }
-                            r#type__ = Some(map.next_value()?);
+                            r#type__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = Some(map.next_value()?);
+                            error__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -395,7 +395,7 @@ impl<'de> serde::Deserialize<'de> for Heartbeat {
                 formatter.write_str("struct monitoring.Heartbeat")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Heartbeat, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Heartbeat, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -403,31 +403,31 @@ impl<'de> serde::Deserialize<'de> for Heartbeat {
                 let mut error__ = None;
                 let mut node__ = None;
                 let mut date_sent__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
                             if header__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("header"));
                             }
-                            header__ = map.next_value()?;
+                            header__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error"));
                             }
-                            error__ = map.next_value()?;
+                            error__ = map_.next_value()?;
                         }
                         GeneratedField::Node => {
                             if node__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("node"));
                             }
-                            node__ = Some(map.next_value()?);
+                            node__ = Some(map_.next_value()?);
                         }
                         GeneratedField::DateSent => {
                             if date_sent__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("date_sent"));
                             }
-                            date_sent__ = Some(map.next_value()?);
+                            date_sent__ = Some(map_.next_value()?);
                         }
                     }
                 }
@@ -481,10 +481,9 @@ impl<'de> serde::Deserialize<'de> for LookupType {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(LookupType::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Signed(v), &self)
                     })
@@ -494,10 +493,9 @@ impl<'de> serde::Deserialize<'de> for LookupType {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(LookupType::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Unsigned(v), &self)
                     })

@@ -67,19 +67,19 @@ impl<'de> serde::Deserialize<'de> for Header {
                 formatter.write_str("struct header.Header")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Header, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Header, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut map__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Map => {
                             if map__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("map"));
                             }
                             map__ = Some(
-                                map.next_value::<std::collections::HashMap<_, _>>()?
+                                map_.next_value::<std::collections::HashMap<_, _>>()?
                             );
                         }
                     }
@@ -160,18 +160,18 @@ impl<'de> serde::Deserialize<'de> for header::Value {
                 formatter.write_str("struct header.Header.Value")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<header::Value, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<header::Value, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut value__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Value => {
                             if value__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("value"));
                             }
-                            value__ = Some(map.next_value()?);
+                            value__ = Some(map_.next_value()?);
                         }
                     }
                 }

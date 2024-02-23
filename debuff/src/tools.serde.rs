@@ -157,7 +157,7 @@ impl<'de> serde::Deserialize<'de> for Tool {
                 formatter.write_str("struct tools.Tool")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<Tool, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<Tool, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
@@ -172,75 +172,75 @@ impl<'de> serde::Deserialize<'de> for Tool {
                 let mut gpu_enabled__ = None;
                 let mut integration_data__ = None;
                 let mut container_image__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Uuid => {
                             if uuid__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("uuid"));
                             }
-                            uuid__ = Some(map.next_value()?);
+                            uuid__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Name => {
                             if name__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("name"));
                             }
-                            name__ = Some(map.next_value()?);
+                            name__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Version => {
                             if version__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("version"));
                             }
-                            version__ = Some(map.next_value()?);
+                            version__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Attribution => {
                             if attribution__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("attribution"));
                             }
-                            attribution__ = Some(map.next_value()?);
+                            attribution__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Description => {
                             if description__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("description"));
                             }
-                            description__ = Some(map.next_value()?);
+                            description__ = Some(map_.next_value()?);
                         }
                         GeneratedField::TimeLimitSeconds => {
                             if time_limit_seconds__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("time_limit_seconds"));
                             }
                             time_limit_seconds__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Restricted => {
                             if restricted__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("restricted"));
                             }
-                            restricted__ = Some(map.next_value()?);
+                            restricted__ = Some(map_.next_value()?);
                         }
                         GeneratedField::Interactive => {
                             if interactive__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("interactive"));
                             }
-                            interactive__ = Some(map.next_value()?);
+                            interactive__ = Some(map_.next_value()?);
                         }
                         GeneratedField::GpuEnabled => {
                             if gpu_enabled__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("gpu_enabled"));
                             }
-                            gpu_enabled__ = Some(map.next_value()?);
+                            gpu_enabled__ = Some(map_.next_value()?);
                         }
                         GeneratedField::IntegrationData => {
                             if integration_data__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("integration_data"));
                             }
-                            integration_data__ = map.next_value()?;
+                            integration_data__ = map_.next_value()?;
                         }
                         GeneratedField::ContainerImage => {
                             if container_image__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("container_image"));
                             }
-                            container_image__ = map.next_value()?;
+                            container_image__ = map_.next_value()?;
                         }
                     }
                 }

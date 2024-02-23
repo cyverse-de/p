@@ -60,10 +60,9 @@ impl<'de> serde::Deserialize<'de> for ErrorCode {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(ErrorCode::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Signed(v), &self)
                     })
@@ -73,10 +72,9 @@ impl<'de> serde::Deserialize<'de> for ErrorCode {
             where
                 E: serde::de::Error,
             {
-                use std::convert::TryFrom;
                 i32::try_from(v)
                     .ok()
-                    .and_then(ErrorCode::from_i32)
+                    .and_then(|x| x.try_into().ok())
                     .ok_or_else(|| {
                         serde::de::Error::invalid_value(serde::de::Unexpected::Unsigned(v), &self)
                     })
@@ -127,8 +125,8 @@ impl serde::Serialize for ServiceError {
         }
         let mut struct_ser = serializer.serialize_struct("svcerror.ServiceError", len)?;
         if self.error_code != 0 {
-            let v = ErrorCode::from_i32(self.error_code)
-                .ok_or_else(|| serde::ser::Error::custom(format!("Invalid variant {}", self.error_code)))?;
+            let v = ErrorCode::try_from(self.error_code)
+                .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.error_code)))?;
             struct_ser.serialize_field("error_code", &v)?;
         }
         if self.status_code != 0 {
@@ -196,34 +194,34 @@ impl<'de> serde::Deserialize<'de> for ServiceError {
                 formatter.write_str("struct svcerror.ServiceError")
             }
 
-            fn visit_map<V>(self, mut map: V) -> std::result::Result<ServiceError, V::Error>
+            fn visit_map<V>(self, mut map_: V) -> std::result::Result<ServiceError, V::Error>
                 where
                     V: serde::de::MapAccess<'de>,
             {
                 let mut error_code__ = None;
                 let mut status_code__ = None;
                 let mut message__ = None;
-                while let Some(k) = map.next_key()? {
+                while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::ErrorCode => {
                             if error_code__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("error_code"));
                             }
-                            error_code__ = Some(map.next_value::<ErrorCode>()? as i32);
+                            error_code__ = Some(map_.next_value::<ErrorCode>()? as i32);
                         }
                         GeneratedField::StatusCode => {
                             if status_code__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("status_code"));
                             }
                             status_code__ = 
-                                Some(map.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
                             ;
                         }
                         GeneratedField::Message => {
                             if message__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("message"));
                             }
-                            message__ = Some(map.next_value()?);
+                            message__ = Some(map_.next_value()?);
                         }
                     }
                 }
