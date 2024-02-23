@@ -25,7 +25,6 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     name_ = "";
     unit_ = "";
-    consumable_ = "";
   }
 
   @java.lang.Override
@@ -190,50 +189,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONSUMABLE_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object consumable_ = "";
+  private boolean consumable_ = false;
   /**
    * <pre>
    * Whether or not using the resource consumes a portion of the allocation permanently.
    * </pre>
    *
-   * <code>string consumable = 4;</code>
+   * <code>bool consumable = 4;</code>
    * @return The consumable.
    */
   @java.lang.Override
-  public java.lang.String getConsumable() {
-    java.lang.Object ref = consumable_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      consumable_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Whether or not using the resource consumes a portion of the allocation permanently.
-   * </pre>
-   *
-   * <code>string consumable = 4;</code>
-   * @return The bytes for consumable.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getConsumableBytes() {
-    java.lang.Object ref = consumable_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      consumable_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean getConsumable() {
+    return consumable_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -259,8 +226,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unit_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, unit_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumable_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, consumable_);
+    if (consumable_ != false) {
+      output.writeBool(4, consumable_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -280,8 +247,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unit_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, unit_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumable_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, consumable_);
+    if (consumable_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, consumable_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -304,8 +272,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getUnit()
         .equals(other.getUnit())) return false;
-    if (!getConsumable()
-        .equals(other.getConsumable())) return false;
+    if (getConsumable()
+        != other.getConsumable()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -324,7 +292,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + UNIT_FIELD_NUMBER;
     hash = (53 * hash) + getUnit().hashCode();
     hash = (37 * hash) + CONSUMABLE_FIELD_NUMBER;
-    hash = (53 * hash) + getConsumable().hashCode();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getConsumable());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -464,7 +433,7 @@ private static final long serialVersionUID = 0L;
       uuid_ = "";
       name_ = "";
       unit_ = "";
-      consumable_ = "";
+      consumable_ = false;
       return this;
     }
 
@@ -571,10 +540,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (!other.getConsumable().isEmpty()) {
-        consumable_ = other.consumable_;
-        bitField0_ |= 0x00000008;
-        onChanged();
+      if (other.getConsumable() != false) {
+        setConsumable(other.getConsumable());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -617,11 +584,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
-              consumable_ = input.readStringRequireUtf8();
+            case 32: {
+              consumable_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
-            } // case 34
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -915,60 +882,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object consumable_ = "";
+    private boolean consumable_ ;
     /**
      * <pre>
      * Whether or not using the resource consumes a portion of the allocation permanently.
      * </pre>
      *
-     * <code>string consumable = 4;</code>
+     * <code>bool consumable = 4;</code>
      * @return The consumable.
      */
-    public java.lang.String getConsumable() {
-      java.lang.Object ref = consumable_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        consumable_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public boolean getConsumable() {
+      return consumable_;
     }
     /**
      * <pre>
      * Whether or not using the resource consumes a portion of the allocation permanently.
      * </pre>
      *
-     * <code>string consumable = 4;</code>
-     * @return The bytes for consumable.
-     */
-    public com.google.protobuf.ByteString
-        getConsumableBytes() {
-      java.lang.Object ref = consumable_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        consumable_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Whether or not using the resource consumes a portion of the allocation permanently.
-     * </pre>
-     *
-     * <code>string consumable = 4;</code>
+     * <code>bool consumable = 4;</code>
      * @param value The consumable to set.
      * @return This builder for chaining.
      */
-    public Builder setConsumable(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+    public Builder setConsumable(boolean value) {
+
       consumable_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -979,30 +916,12 @@ private static final long serialVersionUID = 0L;
      * Whether or not using the resource consumes a portion of the allocation permanently.
      * </pre>
      *
-     * <code>string consumable = 4;</code>
+     * <code>bool consumable = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearConsumable() {
-      consumable_ = getDefaultInstance().getConsumable();
       bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Whether or not using the resource consumes a portion of the allocation permanently.
-     * </pre>
-     *
-     * <code>string consumable = 4;</code>
-     * @param value The bytes for consumable to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConsumableBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      consumable_ = value;
-      bitField0_ |= 0x00000008;
+      consumable_ = false;
       onChanged();
       return this;
     }

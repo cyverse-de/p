@@ -42,7 +42,7 @@ public final class QMSResourceTypeProtobufs {
       "\n\030qms_resource_types.proto\022\003qms\032\014header." +
       "proto\032\016svcerror.proto\"L\n\014ResourceType\022\014\n" +
       "\004uuid\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004unit\030\003 \001(\t\022" +
-      "\022\n\nconsumable\030\004 \001(\t\"\226\001\n\024ResourceTypeResp" +
+      "\022\n\nconsumable\030\004 \001(\010\"\226\001\n\024ResourceTypeResp" +
       "onse\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005" +
       "error\030\002 \001(\0132\026.svcerror.ServiceError\0227\n\rr" +
       "esource_type\030\003 \001(\0132\021.qms.ResourceTypeR\rr" +

@@ -73,18 +73,8 @@ public interface ResourceTypeOrBuilder extends
    * Whether or not using the resource consumes a portion of the allocation permanently.
    * </pre>
    *
-   * <code>string consumable = 4;</code>
+   * <code>bool consumable = 4;</code>
    * @return The consumable.
    */
-  java.lang.String getConsumable();
-  /**
-   * <pre>
-   * Whether or not using the resource consumes a portion of the allocation permanently.
-   * </pre>
-   *
-   * <code>string consumable = 4;</code>
-   * @return The bytes for consumable.
-   */
-  com.google.protobuf.ByteString
-      getConsumableBytes();
+  boolean getConsumable();
 }

@@ -14,8 +14,8 @@ pub struct ResourceType {
     #[prost(string, tag="3")]
     pub unit: ::prost::alloc::string::String,
     /// Whether or not using the resource consumes a portion of the allocation permanently.
-    #[prost(string, tag="4")]
-    pub consumable: ::prost::alloc::string::String,
+    #[prost(bool, tag="4")]
+    pub consumable: bool,
 }
 /// *
 /// A response type for resource type requests.

@@ -799,7 +799,7 @@ Representation of a resource type.
 | uuid | [string](#string) |  | The unique identifier. |
 | name | [string](#string) |  | The name of the resource. Will usually be &#34;data.size&#34; and &#34;cpu.hours&#34;. |
 | unit | [string](#string) |  | The units used for the resource. Usually &#34;bytes&#34; or &#34;cpu hours&#34;. |
-| consumable | [string](#string) |  | Whether or not using the resource consumes a portion of the allocation permanently. |
+| consumable | [bool](#bool) |  | Whether or not using the resource consumes a portion of the allocation permanently. |
 
 
 

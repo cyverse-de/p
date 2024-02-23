@@ -4780,7 +4780,7 @@ impl serde::Serialize for ResourceType {
         if !self.unit.is_empty() {
             len += 1;
         }
-        if !self.consumable.is_empty() {
+        if self.consumable {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("qms.ResourceType", len)?;
@@ -4793,7 +4793,7 @@ impl serde::Serialize for ResourceType {
         if !self.unit.is_empty() {
             struct_ser.serialize_field("unit", &self.unit)?;
         }
-        if !self.consumable.is_empty() {
+        if self.consumable {
             struct_ser.serialize_field("consumable", &self.consumable)?;
         }
         struct_ser.end()

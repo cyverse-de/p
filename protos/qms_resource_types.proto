@@ -25,7 +25,7 @@ message ResourceType {
     string unit = 3;
 
     // Whether or not using the resource consumes a portion of the allocation permanently.
-    string consumable = 4;
+    bool consumable = 4;
 }
 
 /**
