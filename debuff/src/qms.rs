@@ -107,6 +107,17 @@ pub struct AddUserRequest {
     /// True if the user paid for the subscription.
     #[prost(bool, tag="5")]
     pub paid: bool,
+    /// The number of subscription periods that the subscription will be good for. The subscription period is one year,
+    /// so purchasing a subscription for 3 periods will create a subscription for 3 years. Consumable resources are also
+    /// allocated based on the number of periods, so if a subscription plan comes with 2000 CPU Hours, for example, then
+    /// a user who purchases 3 subscription periods will get 6000 CPU hours to use over the course of three years.
+    #[prost(int32, tag="6")]
+    pub periods: i32,
+    /// The end-date of the subscription. Accepted formats are `YYYY-MM-DD`, `YYYY-MM-DDThh:mm:ss`,
+    /// `YYYY-MM-DDThh:mm:ssZ` and `YYYY-MM-DDThh:mm:ss+hh:mm`. Date and tiestamps without time zones are assumed to
+    /// be in the time zone used by the CyVerse Discovery Environment itself.
+    #[prost(string, tag="7")]
+    pub end_date: ::prost::alloc::string::String,
 }
 /// *
 /// A response to a request to add a user to the QMS system.

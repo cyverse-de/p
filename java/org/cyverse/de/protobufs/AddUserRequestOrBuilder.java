@@ -84,4 +84,41 @@ public interface AddUserRequestOrBuilder extends
    * @return The paid.
    */
   boolean getPaid();
+
+  /**
+   * <pre>
+   * The number of subscription periods that the subscription will be good for. The subscription period is one year,
+   * so purchasing a subscription for 3 periods will create a subscription for 3 years. Consumable resources are also
+   * allocated based on the number of periods, so if a subscription plan comes with 2000 CPU Hours, for example, then
+   * a user who purchases 3 subscription periods will get 6000 CPU hours to use over the course of three years.
+   * </pre>
+   *
+   * <code>int32 periods = 6;</code>
+   * @return The periods.
+   */
+  int getPeriods();
+
+  /**
+   * <pre>
+   * The end-date of the subscription. Accepted formats are `YYYY-MM-DD`, `YYYY-MM-DDThh:mm:ss`,
+   * `YYYY-MM-DDThh:mm:ssZ` and `YYYY-MM-DDThh:mm:ss+hh:mm`. Date and tiestamps without time zones are assumed to
+   * be in the time zone used by the CyVerse Discovery Environment itself.
+   * </pre>
+   *
+   * <code>string end_date = 7;</code>
+   * @return The endDate.
+   */
+  java.lang.String getEndDate();
+  /**
+   * <pre>
+   * The end-date of the subscription. Accepted formats are `YYYY-MM-DD`, `YYYY-MM-DDThh:mm:ss`,
+   * `YYYY-MM-DDThh:mm:ssZ` and `YYYY-MM-DDThh:mm:ss+hh:mm`. Date and tiestamps without time zones are assumed to
+   * be in the time zone used by the CyVerse Discovery Environment itself.
+   * </pre>
+   *
+   * <code>string end_date = 7;</code>
+   * @return The bytes for endDate.
+   */
+  com.google.protobuf.ByteString
+      getEndDateBytes();
 }

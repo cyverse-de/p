@@ -879,6 +879,12 @@ impl serde::Serialize for AddUserRequest {
         if self.paid {
             len += 1;
         }
+        if self.periods != 0 {
+            len += 1;
+        }
+        if !self.end_date.is_empty() {
+            len += 1;
+        }
         let mut struct_ser = serializer.serialize_struct("qms.AddUserRequest", len)?;
         if let Some(v) = self.header.as_ref() {
             struct_ser.serialize_field("header", v)?;
@@ -891,6 +897,12 @@ impl serde::Serialize for AddUserRequest {
         }
         if self.paid {
             struct_ser.serialize_field("paid", &self.paid)?;
+        }
+        if self.periods != 0 {
+            struct_ser.serialize_field("periods", &self.periods)?;
+        }
+        if !self.end_date.is_empty() {
+            struct_ser.serialize_field("endDate", &self.end_date)?;
         }
         struct_ser.end()
     }
@@ -907,6 +919,9 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
             "plan_name",
             "planName",
             "paid",
+            "periods",
+            "end_date",
+            "endDate",
         ];
 
         #[allow(clippy::enum_variant_names)]
@@ -915,6 +930,8 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
             Username,
             PlanName,
             Paid,
+            Periods,
+            EndDate,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -940,6 +957,8 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                             "username" => Ok(GeneratedField::Username),
                             "planName" | "plan_name" => Ok(GeneratedField::PlanName),
                             "paid" => Ok(GeneratedField::Paid),
+                            "periods" => Ok(GeneratedField::Periods),
+                            "endDate" | "end_date" => Ok(GeneratedField::EndDate),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
                         }
                     }
@@ -963,6 +982,8 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                 let mut username__ = None;
                 let mut plan_name__ = None;
                 let mut paid__ = None;
+                let mut periods__ = None;
+                let mut end_date__ = None;
                 while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
@@ -989,6 +1010,20 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                             }
                             paid__ = Some(map_.next_value()?);
                         }
+                        GeneratedField::Periods => {
+                            if periods__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("periods"));
+                            }
+                            periods__ = 
+                                Some(map_.next_value::<::pbjson::private::NumberDeserialize<_>>()?.0)
+                            ;
+                        }
+                        GeneratedField::EndDate => {
+                            if end_date__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("endDate"));
+                            }
+                            end_date__ = Some(map_.next_value()?);
+                        }
                     }
                 }
                 Ok(AddUserRequest {
@@ -996,6 +1031,8 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                     username: username__.unwrap_or_default(),
                     plan_name: plan_name__.unwrap_or_default(),
                     paid: paid__.unwrap_or_default(),
+                    periods: periods__.unwrap_or_default(),
+                    end_date: end_date__.unwrap_or_default(),
                 })
             }
         }
