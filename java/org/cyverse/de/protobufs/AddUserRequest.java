@@ -264,6 +264,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FORCE_FIELD_NUMBER = 8;
+  private boolean force_ = false;
+  /**
+   * <pre>
+   * True if the user should get a new subscription even if they already have a subscription with the same plan.
+   * </pre>
+   *
+   * <code>bool force = 8;</code>
+   * @return The force.
+   */
+  @java.lang.Override
+  public boolean getForce() {
+    return force_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -296,6 +311,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, endDate_);
     }
+    if (force_ != false) {
+      output.writeBool(8, force_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -325,6 +343,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, endDate_);
+    }
+    if (force_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, force_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -356,6 +378,8 @@ private static final long serialVersionUID = 0L;
         != other.getPeriods()) return false;
     if (!getEndDate()
         .equals(other.getEndDate())) return false;
+    if (getForce()
+        != other.getForce()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -382,6 +406,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPeriods();
     hash = (37 * hash) + END_DATE_FIELD_NUMBER;
     hash = (53 * hash) + getEndDate().hashCode();
+    hash = (37 * hash) + FORCE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getForce());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -534,6 +561,7 @@ private static final long serialVersionUID = 0L;
       paid_ = false;
       periods_ = 0;
       endDate_ = "";
+      force_ = false;
       return this;
     }
 
@@ -588,6 +616,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.endDate_ = endDate_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.force_ = force_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -660,6 +691,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000020;
         onChanged();
       }
+      if (other.getForce() != false) {
+        setForce(other.getForce());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -718,6 +752,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 58
+            case 64: {
+              force_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1271,6 +1310,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       endDate_ = value;
       bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private boolean force_ ;
+    /**
+     * <pre>
+     * True if the user should get a new subscription even if they already have a subscription with the same plan.
+     * </pre>
+     *
+     * <code>bool force = 8;</code>
+     * @return The force.
+     */
+    @java.lang.Override
+    public boolean getForce() {
+      return force_;
+    }
+    /**
+     * <pre>
+     * True if the user should get a new subscription even if they already have a subscription with the same plan.
+     * </pre>
+     *
+     * <code>bool force = 8;</code>
+     * @param value The force to set.
+     * @return This builder for chaining.
+     */
+    public Builder setForce(boolean value) {
+
+      force_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * True if the user should get a new subscription even if they already have a subscription with the same plan.
+     * </pre>
+     *
+     * <code>bool force = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearForce() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      force_ = false;
       onChanged();
       return this;
     }

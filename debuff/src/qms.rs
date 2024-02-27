@@ -118,6 +118,9 @@ pub struct AddUserRequest {
     /// be in the time zone used by the CyVerse Discovery Environment itself.
     #[prost(string, tag="7")]
     pub end_date: ::prost::alloc::string::String,
+    /// True if the user should get a new subscription even if they already have a subscription with the same plan.
+    #[prost(bool, tag="8")]
+    pub force: bool,
 }
 /// *
 /// A response to a request to add a user to the QMS system.

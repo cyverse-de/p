@@ -121,4 +121,14 @@ public interface AddUserRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEndDateBytes();
+
+  /**
+   * <pre>
+   * True if the user should get a new subscription even if they already have a subscription with the same plan.
+   * </pre>
+   *
+   * <code>bool force = 8;</code>
+   * @return The force.
+   */
+  boolean getForce();
 }

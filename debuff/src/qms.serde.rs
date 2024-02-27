@@ -885,6 +885,9 @@ impl serde::Serialize for AddUserRequest {
         if !self.end_date.is_empty() {
             len += 1;
         }
+        if self.force {
+            len += 1;
+        }
         let mut struct_ser = serializer.serialize_struct("qms.AddUserRequest", len)?;
         if let Some(v) = self.header.as_ref() {
             struct_ser.serialize_field("header", v)?;
@@ -904,6 +907,9 @@ impl serde::Serialize for AddUserRequest {
         if !self.end_date.is_empty() {
             struct_ser.serialize_field("endDate", &self.end_date)?;
         }
+        if self.force {
+            struct_ser.serialize_field("force", &self.force)?;
+        }
         struct_ser.end()
     }
 }
@@ -922,6 +928,7 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
             "periods",
             "end_date",
             "endDate",
+            "force",
         ];
 
         #[allow(clippy::enum_variant_names)]
@@ -932,6 +939,7 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
             Paid,
             Periods,
             EndDate,
+            Force,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -959,6 +967,7 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                             "paid" => Ok(GeneratedField::Paid),
                             "periods" => Ok(GeneratedField::Periods),
                             "endDate" | "end_date" => Ok(GeneratedField::EndDate),
+                            "force" => Ok(GeneratedField::Force),
                             _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
                         }
                     }
@@ -984,6 +993,7 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                 let mut paid__ = None;
                 let mut periods__ = None;
                 let mut end_date__ = None;
+                let mut force__ = None;
                 while let Some(k) = map_.next_key()? {
                     match k {
                         GeneratedField::Header => {
@@ -1024,6 +1034,12 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                             }
                             end_date__ = Some(map_.next_value()?);
                         }
+                        GeneratedField::Force => {
+                            if force__.is_some() {
+                                return Err(serde::de::Error::duplicate_field("force"));
+                            }
+                            force__ = Some(map_.next_value()?);
+                        }
                     }
                 }
                 Ok(AddUserRequest {
@@ -1033,6 +1049,7 @@ impl<'de> serde::Deserialize<'de> for AddUserRequest {
                     paid: paid__.unwrap_or_default(),
                     periods: periods__.unwrap_or_default(),
                     end_date: end_date__.unwrap_or_default(),
+                    force: force__.unwrap_or_default(),
                 })
             }
         }
