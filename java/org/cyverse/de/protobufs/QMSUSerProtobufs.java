@@ -57,15 +57,17 @@ public final class QMSUSerProtobufs {
       "\014.qms.QMSUser\"q\n\013QMSUserList\022\036\n\006header\030\001" +
       " \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.sv" +
       "cerror.ServiceError\022\033\n\005users\030\003 \003(\0132\014.qms" +
-      ".QMSUser\"c\n\016AddUserRequest\022\036\n\006header\030\001 \001" +
-      "(\0132\016.header.Header\022\020\n\010username\030\003 \001(\t\022\021\n\t" +
-      "plan_name\030\004 \001(\t\022\014\n\004paid\030\005 \001(\010\"\236\001\n\017AddUse" +
-      "rResponse\022\036\n\006header\030\001 \001(\0132\016.header.Heade" +
-      "r\022%\n\005error\030\002 \001(\0132\026.svcerror.ServiceError" +
-      "\022\014\n\004uuid\030\003 \001(\t\022\020\n\010username\030\004 \001(\t\022\021\n\tplan" +
-      "_name\030\005 \001(\t\022\021\n\tplan_uuid\030\006 \001(\tBN\n\030org.cy" +
-      "verse.de.protobufsB\020QMSUSerProtobufsP\001Z\036" +
-      "github.com/cyverse-de/p/go/qmsb\006proto3"
+      ".QMSUser\"\225\001\n\016AddUserRequest\022\036\n\006header\030\001 " +
+      "\001(\0132\016.header.Header\022\020\n\010username\030\003 \001(\t\022\021\n" +
+      "\tplan_name\030\004 \001(\t\022\014\n\004paid\030\005 \001(\010\022\017\n\007period" +
+      "s\030\006 \001(\005\022\020\n\010end_date\030\007 \001(\t\022\r\n\005force\030\010 \001(\010" +
+      "\"\236\001\n\017AddUserResponse\022\036\n\006header\030\001 \001(\0132\016.h" +
+      "eader.Header\022%\n\005error\030\002 \001(\0132\026.svcerror.S" +
+      "erviceError\022\014\n\004uuid\030\003 \001(\t\022\020\n\010username\030\004 " +
+      "\001(\t\022\021\n\tplan_name\030\005 \001(\t\022\021\n\tplan_uuid\030\006 \001(" +
+      "\tBN\n\030org.cyverse.de.protobufsB\020QMSUSerPr" +
+      "otobufsP\001Z\036github.com/cyverse-de/p/go/qm" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -96,7 +98,7 @@ public final class QMSUSerProtobufs {
     internal_static_qms_AddUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_qms_AddUserRequest_descriptor,
-        new java.lang.String[] { "Header", "Username", "PlanName", "Paid", });
+        new java.lang.String[] { "Header", "Username", "PlanName", "Paid", "Periods", "EndDate", "Force", });
     internal_static_qms_AddUserResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_qms_AddUserResponse_fieldAccessorTable = new
