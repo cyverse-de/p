@@ -1,4 +1,4 @@
-(defproject org.cyverse/cyverse-de-protobufs "0.0.2"
+(defproject org.cyverse/cyverse-de-protobufs "0.0.3-SNAPSHOT"
   :description "Code generated from the DE protocol buffer definitions"
   :url "https://github.com/cyverse-de/p"
   :license {:name "BSD"
