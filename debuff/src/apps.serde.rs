@@ -188,6 +188,7 @@ impl serde::Serialize for AppVersion {
         }
         if self.version_order != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("version_order", ToString::to_string(&self.version_order).as_str())?;
         }
         if self.deleted {

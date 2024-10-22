@@ -698,6 +698,7 @@ impl serde::Serialize for AnalysisRecordResponse {
         }
         if self.total != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("total", ToString::to_string(&self.total).as_str())?;
         }
         if !self.status_count.is_empty() {
@@ -857,6 +858,7 @@ impl serde::Serialize for analysis_record_response::StatusCountRecord {
         let mut struct_ser = serializer.serialize_struct("analysis.AnalysisRecordResponse.StatusCountRecord", len)?;
         if self.count != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("count", ToString::to_string(&self.count).as_str())?;
         }
         if !self.status.is_empty() {
@@ -1354,10 +1356,12 @@ impl serde::Serialize for AnalysisSubmission {
         }
         if self.failure_count != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("failure_count", ToString::to_string(&self.failure_count).as_str())?;
         }
         if self.failure_threshold != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("failure_threshold", ToString::to_string(&self.failure_threshold).as_str())?;
         }
         if !self.file_metadata.is_empty() {
@@ -2147,18 +2151,22 @@ impl serde::Serialize for BatchStatus {
         let mut struct_ser = serializer.serialize_struct("analysis.BatchStatus", len)?;
         if self.total != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("total", ToString::to_string(&self.total).as_str())?;
         }
         if self.completed != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("completed", ToString::to_string(&self.completed).as_str())?;
         }
         if self.running != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("running", ToString::to_string(&self.running).as_str())?;
         }
         if self.submitted != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("submitted", ToString::to_string(&self.submitted).as_str())?;
         }
         struct_ser.end()
@@ -2778,10 +2786,12 @@ impl serde::Serialize for Job {
         }
         if self.failure_count != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("failure_count", ToString::to_string(&self.failure_count).as_str())?;
         }
         if self.failure_threshold != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("failure_threshold", ToString::to_string(&self.failure_threshold).as_str())?;
         }
         if !self.file_metadata.is_empty() {

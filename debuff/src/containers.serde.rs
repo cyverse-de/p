@@ -88,6 +88,7 @@ impl serde::Serialize for Container {
         }
         if self.cpu_shares != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("cpu_shares", ToString::to_string(&self.cpu_shares).as_str())?;
         }
         if let Some(v) = self.interactive_apps.as_ref() {
@@ -95,10 +96,12 @@ impl serde::Serialize for Container {
         }
         if self.memory_limit != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("memory_limit", ToString::to_string(&self.memory_limit).as_str())?;
         }
         if self.min_memory_limit != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("min_memory_limit", ToString::to_string(&self.min_memory_limit).as_str())?;
         }
         if self.max_cpu_cores != 0. {
@@ -109,10 +112,12 @@ impl serde::Serialize for Container {
         }
         if self.min_disk_space != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("min_disk_space", ToString::to_string(&self.min_disk_space).as_str())?;
         }
         if self.pids_limit != 0 {
             #[allow(clippy::needless_borrow)]
+            #[allow(clippy::needless_borrows_for_generic_args)]
             struct_ser.serialize_field("pids_limit", ToString::to_string(&self.pids_limit).as_str())?;
         }
         if let Some(v) = self.image.as_ref() {
