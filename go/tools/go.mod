@@ -1,11 +1,11 @@
 module github.com/cyverse-de/p/go/tools
 
-go 1.18
+go 1.22.7
 
 require (
-	github.com/cyverse-de/p v0.0.0-20240223231744-42cdee5b16d0
+	github.com/cyverse-de/p v0.0.0-20240820230617-9e063fe10de8
 	github.com/cyverse-de/p/go/containers v0.0.2
-	google.golang.org/protobuf v1.32.0
+	google.golang.org/protobuf v1.35.1
 )
 
 require (
