@@ -1,4 +1,4 @@
-go 1.18
+go 1.22.7
 
 use ./go/tools
 
