@@ -3,7 +3,7 @@
 all: clean compile go-init go-tidy java-jar documentation
 comma:=
 
-export GOTOOLCHAIN=go1.18
+export GOTOOLCHAIN=auto
 
 compile:
 	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
