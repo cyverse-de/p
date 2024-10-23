@@ -11,6 +11,7 @@
   
 - [user_requests.proto](#user_requests-proto)
     - [UserLookupRequest](#user_requests-UserLookupRequest)
+    - [UserLookupResponse](#user_requests-UserLookupResponse)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -123,6 +124,26 @@ A request for user information.
 | login_limit | [uint32](#uint32) |  | Paging limit. |
 | login_offset | [uint32](#uint32) |  | Paging offset |
 | header | [header.Header](#header-Header) |  | Contains telemetry information |
+
+
+
+
+
+
+<a name="user_requests-UserLookupResponse"></a>
+
+### UserLookupResponse
+A response to a request for information about a single user.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [header.Header](#header-Header) |  |  |
+| basic_info | [user.User](#user-User) |  |  |
+| logins | [user.Login](#user-Login) | repeated |  |
+| preferences | [user.Preferences](#user-Preferences) |  |  |
+| saved_searches | [user.SavedSearches](#user-SavedSearches) | repeated |  |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  |  |
 
 
 

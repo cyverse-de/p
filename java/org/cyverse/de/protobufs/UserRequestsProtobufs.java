@@ -19,6 +19,11 @@ public final class UserRequestsProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_requests_UserLookupRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_UserLookupResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_UserLookupResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,21 +34,29 @@ public final class UserRequestsProtobufs {
   static {
     java.lang.String[] descriptorData = {
       "\n\023user_requests.proto\022\ruser_requests\032\014he" +
-      "ader.proto\"\205\002\n\021UserLookupRequest\022\022\n\010user" +
-      "name\030\001 \001(\tH\000\022\021\n\007user_id\030\002 \001(\tH\000\022\025\n\013analy" +
-      "sis_id\030\003 \001(\tH\000\022\026\n\016include_logins\030\005 \001(\010\022\033" +
-      "\n\023include_preferences\030\006 \001(\010\022\036\n\026include_s" +
-      "aved_searches\030\007 \001(\010\022\023\n\013login_limit\030\010 \001(\r" +
-      "\022\024\n\014login_offset\030\t \001(\r\022\036\n\006header\030\n \001(\0132\016" +
-      ".header.HeaderB\014\n\nlookup_idsJ\004\010\004\020\005BT\n\030or" +
-      "g.cyverse.de.protobufsB\025UserRequestsProt" +
-      "obufsP\001Z\037github.com/cyverse-de/p/go/user" +
-      "b\006proto3"
+      "ader.proto\032\nuser.proto\032\016svcerror.proto\"\205" +
+      "\002\n\021UserLookupRequest\022\022\n\010username\030\001 \001(\tH\000" +
+      "\022\021\n\007user_id\030\002 \001(\tH\000\022\025\n\013analysis_id\030\003 \001(\t" +
+      "H\000\022\026\n\016include_logins\030\005 \001(\010\022\033\n\023include_pr" +
+      "eferences\030\006 \001(\010\022\036\n\026include_saved_searche" +
+      "s\030\007 \001(\010\022\023\n\013login_limit\030\010 \001(\r\022\024\n\014login_of" +
+      "fset\030\t \001(\r\022\036\n\006header\030\n \001(\0132\016.header.Head" +
+      "erB\014\n\nlookup_idsJ\004\010\004\020\005\"\355\001\n\022UserLookupRes" +
+      "ponse\022\036\n\006header\030\001 \001(\0132\016.header.Header\022\036\n" +
+      "\nbasic_info\030\002 \001(\0132\n.user.User\022\033\n\006logins\030" +
+      "\003 \003(\0132\013.user.Login\022&\n\013preferences\030\004 \001(\0132" +
+      "\021.user.Preferences\022+\n\016saved_searches\030\005 \003" +
+      "(\0132\023.user.SavedSearches\022%\n\005error\030\007 \001(\0132\026" +
+      ".svcerror.ServiceErrorBT\n\030org.cyverse.de" +
+      ".protobufsB\025UserRequestsProtobufsP\001Z\037git" +
+      "hub.com/cyverse-de/p/go/userb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
+          org.cyverse.de.protobufs.UserProtobufs.getDescriptor(),
+          org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
         });
     internal_static_user_requests_UserLookupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -51,7 +64,15 @@ public final class UserRequestsProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_requests_UserLookupRequest_descriptor,
         new java.lang.String[] { "Username", "UserId", "AnalysisId", "IncludeLogins", "IncludePreferences", "IncludeSavedSearches", "LoginLimit", "LoginOffset", "Header", "LookupIds", });
+    internal_static_user_requests_UserLookupResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_user_requests_UserLookupResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_UserLookupResponse_descriptor,
+        new java.lang.String[] { "Header", "BasicInfo", "Logins", "Preferences", "SavedSearches", "Error", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
+    org.cyverse.de.protobufs.UserProtobufs.getDescriptor();
+    org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

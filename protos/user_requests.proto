@@ -3,6 +3,8 @@ syntax = "proto3";
 package user_requests;
 
 import "header.proto";
+import "user.proto";
+import "svcerror.proto";
 
 option go_package = "github.com/cyverse-de/p/go/user";
 
@@ -41,4 +43,16 @@ message UserLookupRequest {
 
      // Contains telemetry information
     header.Header header = 10;
+}
+
+/**
+ * A response to a request for information about a single user.
+ */
+message UserLookupResponse {
+    header.Header header = 1;
+    user.User basic_info = 2;
+    repeated user.Login logins = 3;
+    user.Preferences preferences = 4;
+    repeated user.SavedSearches saved_searches = 5;
+    svcerror.ServiceError error = 7;
 }

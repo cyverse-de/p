@@ -39,5 +39,22 @@ pub mod user_lookup_request {
         AnalysisId(::prost::alloc::string::String),
     }
 }
+/// *
+/// A response to a request for information about a single user.
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UserLookupResponse {
+    #[prost(message, optional, tag="1")]
+    pub header: ::core::option::Option<super::header::Header>,
+    #[prost(message, optional, tag="2")]
+    pub basic_info: ::core::option::Option<super::user::User>,
+    #[prost(message, repeated, tag="3")]
+    pub logins: ::prost::alloc::vec::Vec<super::user::Login>,
+    #[prost(message, optional, tag="4")]
+    pub preferences: ::core::option::Option<super::user::Preferences>,
+    #[prost(message, repeated, tag="5")]
+    pub saved_searches: ::prost::alloc::vec::Vec<super::user::SavedSearches>,
+    #[prost(message, optional, tag="7")]
+    pub error: ::core::option::Option<super::svcerror::ServiceError>,
+}
 include!("user_requests.serde.rs");
 // @@protoc_insertion_point(module)
