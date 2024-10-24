@@ -67,42 +67,42 @@ private static final long serialVersionUID = 0L;
     return offset_;
   }
 
-  public static final int PAGE_NUMBER_FIELD_NUMBER = 2;
-  private int pageNumber_;
+  public static final int NUMBER_FIELD_NUMBER = 2;
+  private int number_;
   /**
-   * <code>optional int32 page_number = 2;</code>
-   * @return Whether the pageNumber field is set.
+   * <code>optional int32 number = 2;</code>
+   * @return Whether the number field is set.
    */
   @java.lang.Override
-  public boolean hasPageNumber() {
+  public boolean hasNumber() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>optional int32 page_number = 2;</code>
-   * @return The pageNumber.
+   * <code>optional int32 number = 2;</code>
+   * @return The number.
    */
   @java.lang.Override
-  public int getPageNumber() {
-    return pageNumber_;
+  public int getNumber() {
+    return number_;
   }
 
-  public static final int PAGE_SIZE_FIELD_NUMBER = 3;
-  private int pageSize_;
+  public static final int SIZE_FIELD_NUMBER = 3;
+  private int size_;
   /**
-   * <code>optional int32 page_size = 3;</code>
-   * @return Whether the pageSize field is set.
+   * <code>optional int32 size = 3;</code>
+   * @return Whether the size field is set.
    */
   @java.lang.Override
-  public boolean hasPageSize() {
+  public boolean hasSize() {
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>optional int32 page_size = 3;</code>
-   * @return The pageSize.
+   * <code>optional int32 size = 3;</code>
+   * @return The size.
    */
   @java.lang.Override
-  public int getPageSize() {
-    return pageSize_;
+  public int getSize() {
+    return size_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -123,10 +123,10 @@ private static final long serialVersionUID = 0L;
       output.writeInt32(1, offset_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeInt32(2, pageNumber_);
+      output.writeInt32(2, number_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeInt32(3, pageSize_);
+      output.writeInt32(3, size_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -143,11 +143,11 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, pageNumber_);
+        .computeInt32Size(2, number_);
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, pageSize_);
+        .computeInt32Size(3, size_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -169,15 +169,15 @@ private static final long serialVersionUID = 0L;
       if (getOffset()
           != other.getOffset()) return false;
     }
-    if (hasPageNumber() != other.hasPageNumber()) return false;
-    if (hasPageNumber()) {
-      if (getPageNumber()
-          != other.getPageNumber()) return false;
+    if (hasNumber() != other.hasNumber()) return false;
+    if (hasNumber()) {
+      if (getNumber()
+          != other.getNumber()) return false;
     }
-    if (hasPageSize() != other.hasPageSize()) return false;
-    if (hasPageSize()) {
-      if (getPageSize()
-          != other.getPageSize()) return false;
+    if (hasSize() != other.hasSize()) return false;
+    if (hasSize()) {
+      if (getSize()
+          != other.getSize()) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -194,13 +194,13 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OFFSET_FIELD_NUMBER;
       hash = (53 * hash) + getOffset();
     }
-    if (hasPageNumber()) {
-      hash = (37 * hash) + PAGE_NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getPageNumber();
+    if (hasNumber()) {
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber();
     }
-    if (hasPageSize()) {
-      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + getPageSize();
+    if (hasSize()) {
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getSize();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -336,9 +336,9 @@ private static final long serialVersionUID = 0L;
       super.clear();
       offset_ = 0;
       bitField0_ = (bitField0_ & ~0x00000001);
-      pageNumber_ = 0;
+      number_ = 0;
       bitField0_ = (bitField0_ & ~0x00000002);
-      pageSize_ = 0;
+      size_ = 0;
       bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
@@ -373,11 +373,11 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.pageNumber_ = pageNumber_;
+        result.number_ = number_;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.pageSize_ = pageSize_;
+        result.size_ = size_;
         to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ = to_bitField0_;
@@ -432,11 +432,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasOffset()) {
         setOffset(other.getOffset());
       }
-      if (other.hasPageNumber()) {
-        setPageNumber(other.getPageNumber());
+      if (other.hasNumber()) {
+        setNumber(other.getNumber());
       }
-      if (other.hasPageSize()) {
-        setPageSize(other.getPageSize());
+      if (other.hasSize()) {
+        setSize(other.getSize());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -470,12 +470,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              pageNumber_ = input.readInt32();
+              number_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
-              pageSize_ = input.readInt32();
+              size_ = input.readInt32();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
@@ -535,80 +535,80 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int pageNumber_ ;
+    private int number_ ;
     /**
-     * <code>optional int32 page_number = 2;</code>
-     * @return Whether the pageNumber field is set.
+     * <code>optional int32 number = 2;</code>
+     * @return Whether the number field is set.
      */
     @java.lang.Override
-    public boolean hasPageNumber() {
+    public boolean hasNumber() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 page_number = 2;</code>
-     * @return The pageNumber.
+     * <code>optional int32 number = 2;</code>
+     * @return The number.
      */
     @java.lang.Override
-    public int getPageNumber() {
-      return pageNumber_;
+    public int getNumber() {
+      return number_;
     }
     /**
-     * <code>optional int32 page_number = 2;</code>
-     * @param value The pageNumber to set.
+     * <code>optional int32 number = 2;</code>
+     * @param value The number to set.
      * @return This builder for chaining.
      */
-    public Builder setPageNumber(int value) {
+    public Builder setNumber(int value) {
       bitField0_ |= 0x00000002;
-      pageNumber_ = value;
+      number_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 page_number = 2;</code>
+     * <code>optional int32 number = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearPageNumber() {
+    public Builder clearNumber() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      pageNumber_ = 0;
+      number_ = 0;
       onChanged();
       return this;
     }
 
-    private int pageSize_ ;
+    private int size_ ;
     /**
-     * <code>optional int32 page_size = 3;</code>
-     * @return Whether the pageSize field is set.
+     * <code>optional int32 size = 3;</code>
+     * @return Whether the size field is set.
      */
     @java.lang.Override
-    public boolean hasPageSize() {
+    public boolean hasSize() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional int32 page_size = 3;</code>
-     * @return The pageSize.
+     * <code>optional int32 size = 3;</code>
+     * @return The size.
      */
     @java.lang.Override
-    public int getPageSize() {
-      return pageSize_;
+    public int getSize() {
+      return size_;
     }
     /**
-     * <code>optional int32 page_size = 3;</code>
-     * @param value The pageSize to set.
+     * <code>optional int32 size = 3;</code>
+     * @param value The size to set.
      * @return This builder for chaining.
      */
-    public Builder setPageSize(int value) {
+    public Builder setSize(int value) {
       bitField0_ |= 0x00000004;
-      pageSize_ = value;
+      size_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int32 page_size = 3;</code>
+     * <code>optional int32 size = 3;</code>
      * @return This builder for chaining.
      */
-    public Builder clearPageSize() {
+    public Builder clearSize() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      pageSize_ = 0;
+      size_ = 0;
       onChanged();
       return this;
     }

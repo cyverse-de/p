@@ -60,11 +60,13 @@ message UserLookupResponse {
     svcerror.ServiceError error = 7;
 }
 
-enum RequestType {
-    GET = 0;
-    SET = 1;
-    DELETE = 2;
-    ADD = 3;
+message UserRequest {
+    user.UserRef user = 1;
+}
+
+message UserResponse {
+    user.UserRef user = 1;
+    svcerror.Error error = 2;
 }
 
 message GetUserPreferencesRequest {
@@ -81,14 +83,13 @@ message DeleteUserPreferencesRequest {
 }
 
 message UserPreferencesResponse {
-    RequestType type = 1;
-    optional user.UserRef user = 2;
-    optional string preferences = 3;
-    optional svcerror.Error error = 4;
+    optional user.UserRef user = 1;
+    optional string preferences = 2;
+    optional svcerror.Error error = 3;
 }
 
 message PageSettings {
-    int32 record_offset = 1;
+    int32 offset = 1;
     int32 number = 2;
     int32 size = 3;
 }
@@ -96,8 +97,8 @@ message PageSettings {
 // Don't expose this over the wire. 
 message InternalPaginationContinuationToken {
     optional int32 offset = 1;
-    optional int32 page_number = 2;
-    optional int32 page_size = 3;
+    optional int32 number = 2;
+    optional int32 size = 3;
 }
 
 message GetLoginsRequest {
@@ -106,11 +107,29 @@ message GetLoginsRequest {
     optional PageSettings page = 3;
 }
 
-message GetLoginsResponse {
-    repeated user.LoginWire logins = 1;
-    optional svcerror.Error error = 4;
-}
-
 message AddLoginRequest {
     user.LoginWire login = 1;
+}
+
+message LoginsResponse {
+    repeated user.LoginListWire list = 1;
+    optional svcerror.Error error = 2;
+}
+
+message GetSavedSearchesRequest {
+    user.UserRef user = 1;
+}
+
+message SetSavedSearchesRequest {
+    user.UserRef user = 1;
+    user.SavedSearchesWire searches = 2;
+}
+
+message DeleteSavedSearchesRequest {
+    user.UserRef user = 1;
+}
+
+message SavedSearchesResponse {
+    optional user.SavedSearchesWire searches = 1;
+    optional svcerror.Error error = 2;
 }

@@ -60,6 +60,18 @@ pub struct UserLookupResponse {
     pub error: ::core::option::Option<super::svcerror::ServiceError>,
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UserRequest {
+    #[prost(message, optional, tag="1")]
+    pub user: ::core::option::Option<super::user::UserRef>,
+}
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct UserResponse {
+    #[prost(message, optional, tag="1")]
+    pub user: ::core::option::Option<super::user::UserRef>,
+    #[prost(message, optional, tag="2")]
+    pub error: ::core::option::Option<super::svcerror::Error>,
+}
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUserPreferencesRequest {
     #[prost(message, optional, tag="1")]
     pub user: ::core::option::Option<super::user::UserRef>,
@@ -78,19 +90,17 @@ pub struct DeleteUserPreferencesRequest {
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserPreferencesResponse {
-    #[prost(enumeration="RequestType", tag="1")]
-    pub r#type: i32,
-    #[prost(message, optional, tag="2")]
+    #[prost(message, optional, tag="1")]
     pub user: ::core::option::Option<super::user::UserRef>,
-    #[prost(string, optional, tag="3")]
+    #[prost(string, optional, tag="2")]
     pub preferences: ::core::option::Option<::prost::alloc::string::String>,
-    #[prost(message, optional, tag="4")]
+    #[prost(message, optional, tag="3")]
     pub error: ::core::option::Option<super::svcerror::Error>,
 }
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct PageSettings {
     #[prost(int32, tag="1")]
-    pub record_offset: i32,
+    pub offset: i32,
     #[prost(int32, tag="2")]
     pub number: i32,
     #[prost(int32, tag="3")]
@@ -102,9 +112,9 @@ pub struct InternalPaginationContinuationToken {
     #[prost(int32, optional, tag="1")]
     pub offset: ::core::option::Option<i32>,
     #[prost(int32, optional, tag="2")]
-    pub page_number: ::core::option::Option<i32>,
+    pub number: ::core::option::Option<i32>,
     #[prost(int32, optional, tag="3")]
-    pub page_size: ::core::option::Option<i32>,
+    pub size: ::core::option::Option<i32>,
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetLoginsRequest {
@@ -116,48 +126,40 @@ pub struct GetLoginsRequest {
     pub page: ::core::option::Option<PageSettings>,
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
-pub struct GetLoginsResponse {
-    #[prost(message, repeated, tag="1")]
-    pub logins: ::prost::alloc::vec::Vec<super::user::LoginWire>,
-    #[prost(message, optional, tag="4")]
-    pub error: ::core::option::Option<super::svcerror::Error>,
-}
-#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddLoginRequest {
     #[prost(message, optional, tag="1")]
     pub login: ::core::option::Option<super::user::LoginWire>,
 }
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
-#[repr(i32)]
-pub enum RequestType {
-    Get = 0,
-    Set = 1,
-    Delete = 2,
-    Add = 3,
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct LoginsResponse {
+    #[prost(message, repeated, tag="1")]
+    pub list: ::prost::alloc::vec::Vec<super::user::LoginListWire>,
+    #[prost(message, optional, tag="2")]
+    pub error: ::core::option::Option<super::svcerror::Error>,
 }
-impl RequestType {
-    /// String value of the enum field names used in the ProtoBuf definition.
-    ///
-    /// The values are not transformed in any way and thus are considered stable
-    /// (if the ProtoBuf definition does not change) and safe for programmatic use.
-    pub fn as_str_name(&self) -> &'static str {
-        match self {
-            Self::Get => "GET",
-            Self::Set => "SET",
-            Self::Delete => "DELETE",
-            Self::Add => "ADD",
-        }
-    }
-    /// Creates an enum from field names used in the ProtoBuf definition.
-    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
-        match value {
-            "GET" => Some(Self::Get),
-            "SET" => Some(Self::Set),
-            "DELETE" => Some(Self::Delete),
-            "ADD" => Some(Self::Add),
-            _ => None,
-        }
-    }
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct GetSavedSearchesRequest {
+    #[prost(message, optional, tag="1")]
+    pub user: ::core::option::Option<super::user::UserRef>,
+}
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SetSavedSearchesRequest {
+    #[prost(message, optional, tag="1")]
+    pub user: ::core::option::Option<super::user::UserRef>,
+    #[prost(message, optional, tag="2")]
+    pub searches: ::core::option::Option<super::user::SavedSearchesWire>,
+}
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct DeleteSavedSearchesRequest {
+    #[prost(message, optional, tag="1")]
+    pub user: ::core::option::Option<super::user::UserRef>,
+}
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SavedSearchesResponse {
+    #[prost(message, optional, tag="1")]
+    pub searches: ::core::option::Option<super::user::SavedSearchesWire>,
+    #[prost(message, optional, tag="2")]
+    pub error: ::core::option::Option<super::svcerror::Error>,
 }
 include!("user_requests.serde.rs");
 // @@protoc_insertion_point(module)

@@ -90,6 +90,23 @@ pub struct SavedSearches {
     #[prost(string, tag="2")]
     pub saved_searches: ::prost::alloc::string::String,
 }
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SavedSearchesStorage {
+    #[prost(string, tag="1")]
+    pub uuid: ::prost::alloc::string::String,
+    #[prost(string, tag="2")]
+    pub user_id: ::prost::alloc::string::String,
+    #[prost(string, tag="3")]
+    pub saved_searches: ::prost::alloc::string::String,
+}
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct SavedSearchesWire {
+    #[prost(message, optional, tag="1")]
+    pub user: ::core::option::Option<UserRef>,
+    /// Saved searches are stored in a JSON-encoded string.
+    #[prost(string, tag="2")]
+    pub saved_searches: ::prost::alloc::string::String,
+}
 /// *
 /// A user's information. Represents how the user is stored.
 /// Don't use this directly in Request messages.

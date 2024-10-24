@@ -4,14 +4,22 @@ package user;
 
 import "user_requests.proto";
 
-option go_package = "github.com/cyverse-de/p/go/user";
+option go_package = "github.com/cyverse-de/p/go/userservice";
 
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "UserServiceProtobufs";
 
 service UserService {
-    rpc UserLookup(user_requests.UserLookupRequest) returns (user_requests.UserLookupResponse);
+    rpc UserLookup(user_requests.UserRequest) returns (user_requests.UserResponse);
+    rpc GetUserPreferences(user_requests.GetUserPreferencesRequest) returns (user_requests.UserPreferencesResponse);
+    rpc SetUserPreferences(user_requests.SetUserPreferencesRequest) returns (user_requests.UserPreferencesResponse);
+    rpc DeleteUserPreferences(user_requests.DeleteUserPreferencesRequest) returns (user_requests.UserPreferencesResponse);
+    rpc GetLogins(user_requests.GetLoginsRequest) returns (user_requests.LoginsResponse);
+    rpc AddLogin(user_requests.AddLoginRequest) returns (user_requests.LoginsResponse);
+    rpc GetSavedSearches(user_requests.GetSavedSearchesRequest) returns (user_requests.SavedSearchesResponse);
+    rpc SetSavedSearches(user_requests.SetSavedSearchesRequest) returns (user_requests.SavedSearchesResponse);
+    rpc DeleteSavedSearches(user_requests.DeleteSavedSearchesRequest) returns (user_requests.SavedSearchesResponse);
 }
 
 

@@ -24,11 +24,31 @@ public final class UserServiceProtobufs {
   static {
     java.lang.String[] descriptorData = {
       "\n\023user_services.proto\022\004user\032\023user_reques" +
-      "ts.proto2`\n\013UserService\022Q\n\nUserLookup\022 ." +
-      "user_requests.UserLookupRequest\032!.user_r" +
-      "equests.UserLookupResponseBS\n\030org.cyvers" +
-      "e.de.protobufsB\024UserServiceProtobufsP\001Z\037" +
-      "github.com/cyverse-de/p/go/userb\006proto3"
+      "ts.proto2\326\006\n\013UserService\022E\n\nUserLookup\022\032" +
+      ".user_requests.UserRequest\032\033.user_reques" +
+      "ts.UserResponse\022f\n\022GetUserPreferences\022(." +
+      "user_requests.GetUserPreferencesRequest\032" +
+      "&.user_requests.UserPreferencesResponse\022" +
+      "f\n\022SetUserPreferences\022(.user_requests.Se" +
+      "tUserPreferencesRequest\032&.user_requests." +
+      "UserPreferencesResponse\022l\n\025DeleteUserPre" +
+      "ferences\022+.user_requests.DeleteUserPrefe" +
+      "rencesRequest\032&.user_requests.UserPrefer" +
+      "encesResponse\022K\n\tGetLogins\022\037.user_reques" +
+      "ts.GetLoginsRequest\032\035.user_requests.Logi" +
+      "nsResponse\022I\n\010AddLogin\022\036.user_requests.A" +
+      "ddLoginRequest\032\035.user_requests.LoginsRes" +
+      "ponse\022`\n\020GetSavedSearches\022&.user_request" +
+      "s.GetSavedSearchesRequest\032$.user_request" +
+      "s.SavedSearchesResponse\022`\n\020SetSavedSearc" +
+      "hes\022&.user_requests.SetSavedSearchesRequ" +
+      "est\032$.user_requests.SavedSearchesRespons" +
+      "e\022f\n\023DeleteSavedSearches\022).user_requests" +
+      ".DeleteSavedSearchesRequest\032$.user_reque" +
+      "sts.SavedSearchesResponseBZ\n\030org.cyverse" +
+      ".de.protobufsB\024UserServiceProtobufsP\001Z&g" +
+      "ithub.com/cyverse-de/p/go/userserviceb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

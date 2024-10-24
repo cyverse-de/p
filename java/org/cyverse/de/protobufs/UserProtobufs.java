@@ -55,6 +55,16 @@ public final class UserProtobufs {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_SavedSearches_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_SavedSearchesStorage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_SavedSearchesStorage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_SavedSearchesWire_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_SavedSearchesWire_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_user_User_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -96,12 +106,16 @@ public final class UserProtobufs {
       "\n\003_ipB\r\n\013_user_agentB\016\n\014_logout_time\"0\n\r" +
       "LoginListWire\022\037\n\006logins\030\001 \003(\0132\017.user.Log" +
       "inWire\"5\n\rSavedSearches\022\014\n\004uuid\030\001 \001(\t\022\026\n" +
-      "\016saved_searches\030\002 \001(\t\"&\n\004User\022\014\n\004uuid\030\001 " +
-      "\001(\t\022\020\n\010username\030\002 \001(\t\"I\n\007UserRef\022\025\n\010user" +
-      "name\030\001 \001(\tH\000\210\001\001\022\021\n\004uuid\030\002 \001(\tH\001\210\001\001B\013\n\t_u" +
-      "sernameB\007\n\005_uuidBL\n\030org.cyverse.de.proto" +
-      "bufsB\rUserProtobufsP\001Z\037github.com/cyvers" +
-      "e-de/p/go/userb\006proto3"
+      "\016saved_searches\030\002 \001(\t\"M\n\024SavedSearchesSt" +
+      "orage\022\014\n\004uuid\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\026\n\016" +
+      "saved_searches\030\003 \001(\t\"H\n\021SavedSearchesWir" +
+      "e\022\033\n\004user\030\001 \001(\0132\r.user.UserRef\022\026\n\016saved_" +
+      "searches\030\002 \001(\t\"&\n\004User\022\014\n\004uuid\030\001 \001(\t\022\020\n\010" +
+      "username\030\002 \001(\t\"I\n\007UserRef\022\025\n\010username\030\001 " +
+      "\001(\tH\000\210\001\001\022\021\n\004uuid\030\002 \001(\tH\001\210\001\001B\013\n\t_username" +
+      "B\007\n\005_uuidBL\n\030org.cyverse.de.protobufsB\rU" +
+      "serProtobufsP\001Z\037github.com/cyverse-de/p/" +
+      "go/userb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -156,14 +170,26 @@ public final class UserProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_SavedSearches_descriptor,
         new java.lang.String[] { "Uuid", "SavedSearches", });
-    internal_static_user_User_descriptor =
+    internal_static_user_SavedSearchesStorage_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_user_SavedSearchesStorage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_SavedSearchesStorage_descriptor,
+        new java.lang.String[] { "Uuid", "UserId", "SavedSearches", });
+    internal_static_user_SavedSearchesWire_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_user_SavedSearchesWire_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_SavedSearchesWire_descriptor,
+        new java.lang.String[] { "User", "SavedSearches", });
+    internal_static_user_User_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_user_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_User_descriptor,
         new java.lang.String[] { "Uuid", "Username", });
     internal_static_user_UserRef_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_user_UserRef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_UserRef_descriptor,

@@ -19,24 +19,24 @@ public interface InternalPaginationContinuationTokenOrBuilder extends
   int getOffset();
 
   /**
-   * <code>optional int32 page_number = 2;</code>
-   * @return Whether the pageNumber field is set.
+   * <code>optional int32 number = 2;</code>
+   * @return Whether the number field is set.
    */
-  boolean hasPageNumber();
+  boolean hasNumber();
   /**
-   * <code>optional int32 page_number = 2;</code>
-   * @return The pageNumber.
+   * <code>optional int32 number = 2;</code>
+   * @return The number.
    */
-  int getPageNumber();
+  int getNumber();
 
   /**
-   * <code>optional int32 page_size = 3;</code>
-   * @return Whether the pageSize field is set.
+   * <code>optional int32 size = 3;</code>
+   * @return Whether the size field is set.
    */
-  boolean hasPageSize();
+  boolean hasSize();
   /**
-   * <code>optional int32 page_size = 3;</code>
-   * @return The pageSize.
+   * <code>optional int32 size = 3;</code>
+   * @return The size.
    */
-  int getPageSize();
+  int getSize();
 }

@@ -12,23 +12,29 @@
     - [LoginWire](#user-LoginWire)
     - [Preferences](#user-Preferences)
     - [SavedSearches](#user-SavedSearches)
+    - [SavedSearchesStorage](#user-SavedSearchesStorage)
+    - [SavedSearchesWire](#user-SavedSearchesWire)
     - [User](#user-User)
     - [UserRef](#user-UserRef)
   
 - [user_requests.proto](#user_requests-proto)
     - [AddLoginRequest](#user_requests-AddLoginRequest)
+    - [DeleteSavedSearchesRequest](#user_requests-DeleteSavedSearchesRequest)
     - [DeleteUserPreferencesRequest](#user_requests-DeleteUserPreferencesRequest)
     - [GetLoginsRequest](#user_requests-GetLoginsRequest)
-    - [GetLoginsResponse](#user_requests-GetLoginsResponse)
+    - [GetSavedSearchesRequest](#user_requests-GetSavedSearchesRequest)
     - [GetUserPreferencesRequest](#user_requests-GetUserPreferencesRequest)
     - [InternalPaginationContinuationToken](#user_requests-InternalPaginationContinuationToken)
+    - [LoginsResponse](#user_requests-LoginsResponse)
     - [PageSettings](#user_requests-PageSettings)
+    - [SavedSearchesResponse](#user_requests-SavedSearchesResponse)
+    - [SetSavedSearchesRequest](#user_requests-SetSavedSearchesRequest)
     - [SetUserPreferencesRequest](#user_requests-SetUserPreferencesRequest)
     - [UserLookupRequest](#user_requests-UserLookupRequest)
     - [UserLookupResponse](#user_requests-UserLookupResponse)
     - [UserPreferencesResponse](#user_requests-UserPreferencesResponse)
-  
-    - [RequestType](#user_requests-RequestType)
+    - [UserRequest](#user_requests-UserRequest)
+    - [UserResponse](#user_requests-UserResponse)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -179,6 +185,39 @@ for new messages
 
 
 
+<a name="user-SavedSearchesStorage"></a>
+
+### SavedSearchesStorage
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) |  |  |
+| user_id | [string](#string) |  |  |
+| saved_searches | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="user-SavedSearchesWire"></a>
+
+### SavedSearchesWire
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [UserRef](#user-UserRef) |  |  |
+| saved_searches | [string](#string) |  | Saved searches are stored in a JSON-encoded string. |
+
+
+
+
+
+
 <a name="user-User"></a>
 
 ### User
@@ -244,6 +283,21 @@ set. Can be used in Request messages
 
 
 
+<a name="user_requests-DeleteSavedSearchesRequest"></a>
+
+### DeleteSavedSearchesRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+
+
+
+
+
+
 <a name="user_requests-DeleteUserPreferencesRequest"></a>
 
 ### DeleteUserPreferencesRequest
@@ -276,16 +330,15 @@ set. Can be used in Request messages
 
 
 
-<a name="user_requests-GetLoginsResponse"></a>
+<a name="user_requests-GetSavedSearchesRequest"></a>
 
-### GetLoginsResponse
+### GetSavedSearchesRequest
 
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| logins | [user.LoginWire](#user-LoginWire) | repeated |  |
-| error | [svcerror.Error](#svcerror-Error) | optional |  |
+| user | [user.UserRef](#user-UserRef) |  |  |
 
 
 
@@ -316,8 +369,24 @@ Don&#39;t expose this over the wire.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | offset | [int32](#int32) | optional |  |
-| page_number | [int32](#int32) | optional |  |
-| page_size | [int32](#int32) | optional |  |
+| number | [int32](#int32) | optional |  |
+| size | [int32](#int32) | optional |  |
+
+
+
+
+
+
+<a name="user_requests-LoginsResponse"></a>
+
+### LoginsResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| list | [user.LoginListWire](#user-LoginListWire) | repeated |  |
+| error | [svcerror.Error](#svcerror-Error) | optional |  |
 
 
 
@@ -332,9 +401,41 @@ Don&#39;t expose this over the wire.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| record_offset | [int32](#int32) |  |  |
+| offset | [int32](#int32) |  |  |
 | number | [int32](#int32) |  |  |
 | size | [int32](#int32) |  |  |
+
+
+
+
+
+
+<a name="user_requests-SavedSearchesResponse"></a>
+
+### SavedSearchesResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| searches | [user.SavedSearchesWire](#user-SavedSearchesWire) | optional |  |
+| error | [svcerror.Error](#svcerror-Error) | optional |  |
+
+
+
+
+
+
+<a name="user_requests-SetSavedSearchesRequest"></a>
+
+### SetSavedSearchesRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+| searches | [user.SavedSearchesWire](#user-SavedSearchesWire) |  |  |
 
 
 
@@ -411,7 +512,6 @@ Please use the other, smaller requests and responses.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| type | [RequestType](#user_requests-RequestType) |  |  |
 | user | [user.UserRef](#user-UserRef) | optional |  |
 | preferences | [string](#string) | optional |  |
 | error | [svcerror.Error](#svcerror-Error) | optional |  |
@@ -420,21 +520,38 @@ Please use the other, smaller requests and responses.
 
 
 
+
+<a name="user_requests-UserRequest"></a>
+
+### UserRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+
+
+
+
+
+
+<a name="user_requests-UserResponse"></a>
+
+### UserResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+| error | [svcerror.Error](#svcerror-Error) |  |  |
+
+
+
+
+
  
-
-
-<a name="user_requests-RequestType"></a>
-
-### RequestType
-
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| GET | 0 |  |
-| SET | 1 |  |
-| DELETE | 2 |  |
-| ADD | 3 |  |
-
 
  
 

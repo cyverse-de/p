@@ -8,10 +8,10 @@ public interface PageSettingsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 record_offset = 1;</code>
-   * @return The recordOffset.
+   * <code>int32 offset = 1;</code>
+   * @return The offset.
    */
-  int getRecordOffset();
+  int getOffset();
 
   /**
    * <code>int32 number = 2;</code>

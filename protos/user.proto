@@ -83,6 +83,17 @@ message SavedSearches {
   string saved_searches = 2;
 }
 
+message SavedSearchesStorage {
+  string uuid = 1;
+  string user_id = 2;
+  string saved_searches = 3;
+}
+
+message SavedSearchesWire {
+  UserRef user = 1;
+  string saved_searches = 2; // Saved searches are stored in a JSON-encoded string.
+}
+
 /**
  * A user's information. Represents how the user is stored.
  * Don't use this directly in Request messages.

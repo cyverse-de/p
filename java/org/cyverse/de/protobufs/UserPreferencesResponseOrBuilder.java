@@ -8,60 +8,49 @@ public interface UserPreferencesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.user_requests.RequestType type = 1;</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  int getTypeValue();
-  /**
-   * <code>.user_requests.RequestType type = 1;</code>
-   * @return The type.
-   */
-  org.cyverse.de.protobufs.RequestType getType();
-
-  /**
-   * <code>optional .user.UserRef user = 2;</code>
+   * <code>optional .user.UserRef user = 1;</code>
    * @return Whether the user field is set.
    */
   boolean hasUser();
   /**
-   * <code>optional .user.UserRef user = 2;</code>
+   * <code>optional .user.UserRef user = 1;</code>
    * @return The user.
    */
   org.cyverse.de.protobufs.UserRef getUser();
   /**
-   * <code>optional .user.UserRef user = 2;</code>
+   * <code>optional .user.UserRef user = 1;</code>
    */
   org.cyverse.de.protobufs.UserRefOrBuilder getUserOrBuilder();
 
   /**
-   * <code>optional string preferences = 3;</code>
+   * <code>optional string preferences = 2;</code>
    * @return Whether the preferences field is set.
    */
   boolean hasPreferences();
   /**
-   * <code>optional string preferences = 3;</code>
+   * <code>optional string preferences = 2;</code>
    * @return The preferences.
    */
   java.lang.String getPreferences();
   /**
-   * <code>optional string preferences = 3;</code>
+   * <code>optional string preferences = 2;</code>
    * @return The bytes for preferences.
    */
   com.google.protobuf.ByteString
       getPreferencesBytes();
 
   /**
-   * <code>optional .svcerror.Error error = 4;</code>
+   * <code>optional .svcerror.Error error = 3;</code>
    * @return Whether the error field is set.
    */
   boolean hasError();
   /**
-   * <code>optional .svcerror.Error error = 4;</code>
+   * <code>optional .svcerror.Error error = 3;</code>
    * @return The error.
    */
   org.cyverse.de.protobufs.Error getError();
   /**
-   * <code>optional .svcerror.Error error = 4;</code>
+   * <code>optional .svcerror.Error error = 3;</code>
    */
   org.cyverse.de.protobufs.ErrorOrBuilder getErrorOrBuilder();
 }

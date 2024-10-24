@@ -4,26 +4,26 @@
 package org.cyverse.de.protobufs;
 
 /**
- * Protobuf type {@code user_requests.GetLoginsResponse}
+ * Protobuf type {@code user_requests.LoginsResponse}
  */
-public final class GetLoginsResponse extends
+public final class LoginsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:user_requests.GetLoginsResponse)
-    GetLoginsResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:user_requests.LoginsResponse)
+    LoginsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetLoginsResponse.newBuilder() to construct.
-  private GetLoginsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use LoginsResponse.newBuilder() to construct.
+  private LoginsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetLoginsResponse() {
-    logins_ = java.util.Collections.emptyList();
+  private LoginsResponse() {
+    list_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetLoginsResponse();
+    return new LoginsResponse();
   }
 
   @java.lang.Override
@@ -33,62 +33,62 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_GetLoginsResponse_descriptor;
+    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_LoginsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_GetLoginsResponse_fieldAccessorTable
+    return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_LoginsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.cyverse.de.protobufs.GetLoginsResponse.class, org.cyverse.de.protobufs.GetLoginsResponse.Builder.class);
+            org.cyverse.de.protobufs.LoginsResponse.class, org.cyverse.de.protobufs.LoginsResponse.Builder.class);
   }
 
   private int bitField0_;
-  public static final int LOGINS_FIELD_NUMBER = 1;
-  private java.util.List<org.cyverse.de.protobufs.LoginWire> logins_;
+  public static final int LIST_FIELD_NUMBER = 1;
+  private java.util.List<org.cyverse.de.protobufs.LoginListWire> list_;
   /**
-   * <code>repeated .user.LoginWire logins = 1;</code>
+   * <code>repeated .user.LoginListWire list = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<org.cyverse.de.protobufs.LoginWire> getLoginsList() {
-    return logins_;
+  public java.util.List<org.cyverse.de.protobufs.LoginListWire> getListList() {
+    return list_;
   }
   /**
-   * <code>repeated .user.LoginWire logins = 1;</code>
+   * <code>repeated .user.LoginListWire list = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends org.cyverse.de.protobufs.LoginWireOrBuilder> 
-      getLoginsOrBuilderList() {
-    return logins_;
+  public java.util.List<? extends org.cyverse.de.protobufs.LoginListWireOrBuilder> 
+      getListOrBuilderList() {
+    return list_;
   }
   /**
-   * <code>repeated .user.LoginWire logins = 1;</code>
+   * <code>repeated .user.LoginListWire list = 1;</code>
    */
   @java.lang.Override
-  public int getLoginsCount() {
-    return logins_.size();
+  public int getListCount() {
+    return list_.size();
   }
   /**
-   * <code>repeated .user.LoginWire logins = 1;</code>
+   * <code>repeated .user.LoginListWire list = 1;</code>
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.LoginWire getLogins(int index) {
-    return logins_.get(index);
+  public org.cyverse.de.protobufs.LoginListWire getList(int index) {
+    return list_.get(index);
   }
   /**
-   * <code>repeated .user.LoginWire logins = 1;</code>
+   * <code>repeated .user.LoginListWire list = 1;</code>
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.LoginWireOrBuilder getLoginsOrBuilder(
+  public org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder(
       int index) {
-    return logins_.get(index);
+    return list_.get(index);
   }
 
-  public static final int ERROR_FIELD_NUMBER = 4;
+  public static final int ERROR_FIELD_NUMBER = 2;
   private org.cyverse.de.protobufs.Error error_;
   /**
-   * <code>optional .svcerror.Error error = 4;</code>
+   * <code>optional .svcerror.Error error = 2;</code>
    * @return Whether the error field is set.
    */
   @java.lang.Override
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>optional .svcerror.Error error = 4;</code>
+   * <code>optional .svcerror.Error error = 2;</code>
    * @return The error.
    */
   @java.lang.Override
@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
     return error_ == null ? org.cyverse.de.protobufs.Error.getDefaultInstance() : error_;
   }
   /**
-   * <code>optional .svcerror.Error error = 4;</code>
+   * <code>optional .svcerror.Error error = 2;</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.ErrorOrBuilder getErrorOrBuilder() {
@@ -125,11 +125,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < logins_.size(); i++) {
-      output.writeMessage(1, logins_.get(i));
+    for (int i = 0; i < list_.size(); i++) {
+      output.writeMessage(1, list_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(4, getError());
+      output.writeMessage(2, getError());
     }
     getUnknownFields().writeTo(output);
   }
@@ -140,13 +140,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < logins_.size(); i++) {
+    for (int i = 0; i < list_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, logins_.get(i));
+        .computeMessageSize(1, list_.get(i));
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getError());
+        .computeMessageSize(2, getError());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -158,13 +158,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.cyverse.de.protobufs.GetLoginsResponse)) {
+    if (!(obj instanceof org.cyverse.de.protobufs.LoginsResponse)) {
       return super.equals(obj);
     }
-    org.cyverse.de.protobufs.GetLoginsResponse other = (org.cyverse.de.protobufs.GetLoginsResponse) obj;
+    org.cyverse.de.protobufs.LoginsResponse other = (org.cyverse.de.protobufs.LoginsResponse) obj;
 
-    if (!getLoginsList()
-        .equals(other.getLoginsList())) return false;
+    if (!getListList()
+        .equals(other.getListList())) return false;
     if (hasError() != other.hasError()) return false;
     if (hasError()) {
       if (!getError()
@@ -181,9 +181,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getLoginsCount() > 0) {
-      hash = (37 * hash) + LOGINS_FIELD_NUMBER;
-      hash = (53 * hash) + getLoginsList().hashCode();
+    if (getListCount() > 0) {
+      hash = (37 * hash) + LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getListList().hashCode();
     }
     if (hasError()) {
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
@@ -194,69 +194,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(byte[] data)
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(java.io.InputStream input)
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseDelimitedFrom(java.io.InputStream input)
+  public static org.cyverse.de.protobufs.LoginsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseDelimitedFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.cyverse.de.protobufs.GetLoginsResponse parseFrom(
+  public static org.cyverse.de.protobufs.LoginsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.cyverse.de.protobufs.GetLoginsResponse prototype) {
+  public static Builder newBuilder(org.cyverse.de.protobufs.LoginsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -285,26 +285,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code user_requests.GetLoginsResponse}
+   * Protobuf type {@code user_requests.LoginsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:user_requests.GetLoginsResponse)
-      org.cyverse.de.protobufs.GetLoginsResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:user_requests.LoginsResponse)
+      org.cyverse.de.protobufs.LoginsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_GetLoginsResponse_descriptor;
+      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_LoginsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_GetLoginsResponse_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_LoginsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.cyverse.de.protobufs.GetLoginsResponse.class, org.cyverse.de.protobufs.GetLoginsResponse.Builder.class);
+              org.cyverse.de.protobufs.LoginsResponse.class, org.cyverse.de.protobufs.LoginsResponse.Builder.class);
     }
 
-    // Construct using org.cyverse.de.protobufs.GetLoginsResponse.newBuilder()
+    // Construct using org.cyverse.de.protobufs.LoginsResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -317,18 +317,18 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getLoginsFieldBuilder();
+        getListFieldBuilder();
         getErrorFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (loginsBuilder_ == null) {
-        logins_ = java.util.Collections.emptyList();
+      if (listBuilder_ == null) {
+        list_ = java.util.Collections.emptyList();
       } else {
-        logins_ = null;
-        loginsBuilder_.clear();
+        list_ = null;
+        listBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       if (errorBuilder_ == null) {
@@ -343,17 +343,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_GetLoginsResponse_descriptor;
+      return org.cyverse.de.protobufs.UserRequestsProtobufs.internal_static_user_requests_LoginsResponse_descriptor;
     }
 
     @java.lang.Override
-    public org.cyverse.de.protobufs.GetLoginsResponse getDefaultInstanceForType() {
-      return org.cyverse.de.protobufs.GetLoginsResponse.getDefaultInstance();
+    public org.cyverse.de.protobufs.LoginsResponse getDefaultInstanceForType() {
+      return org.cyverse.de.protobufs.LoginsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.cyverse.de.protobufs.GetLoginsResponse build() {
-      org.cyverse.de.protobufs.GetLoginsResponse result = buildPartial();
+    public org.cyverse.de.protobufs.LoginsResponse build() {
+      org.cyverse.de.protobufs.LoginsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -361,18 +361,18 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.cyverse.de.protobufs.GetLoginsResponse buildPartial() {
-      org.cyverse.de.protobufs.GetLoginsResponse result = new org.cyverse.de.protobufs.GetLoginsResponse(this);
+    public org.cyverse.de.protobufs.LoginsResponse buildPartial() {
+      org.cyverse.de.protobufs.LoginsResponse result = new org.cyverse.de.protobufs.LoginsResponse(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
-      if (loginsBuilder_ == null) {
+      if (listBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          logins_ = java.util.Collections.unmodifiableList(logins_);
+          list_ = java.util.Collections.unmodifiableList(list_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.logins_ = logins_;
+        result.list_ = list_;
       } else {
-        result.logins_ = loginsBuilder_.build();
+        result.list_ = listBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         if (errorBuilder_ == null) {
@@ -421,39 +421,39 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.cyverse.de.protobufs.GetLoginsResponse) {
-        return mergeFrom((org.cyverse.de.protobufs.GetLoginsResponse)other);
+      if (other instanceof org.cyverse.de.protobufs.LoginsResponse) {
+        return mergeFrom((org.cyverse.de.protobufs.LoginsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.cyverse.de.protobufs.GetLoginsResponse other) {
-      if (other == org.cyverse.de.protobufs.GetLoginsResponse.getDefaultInstance()) return this;
-      if (loginsBuilder_ == null) {
-        if (!other.logins_.isEmpty()) {
-          if (logins_.isEmpty()) {
-            logins_ = other.logins_;
+    public Builder mergeFrom(org.cyverse.de.protobufs.LoginsResponse other) {
+      if (other == org.cyverse.de.protobufs.LoginsResponse.getDefaultInstance()) return this;
+      if (listBuilder_ == null) {
+        if (!other.list_.isEmpty()) {
+          if (list_.isEmpty()) {
+            list_ = other.list_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureLoginsIsMutable();
-            logins_.addAll(other.logins_);
+            ensureListIsMutable();
+            list_.addAll(other.list_);
           }
           onChanged();
         }
       } else {
-        if (!other.logins_.isEmpty()) {
-          if (loginsBuilder_.isEmpty()) {
-            loginsBuilder_.dispose();
-            loginsBuilder_ = null;
-            logins_ = other.logins_;
+        if (!other.list_.isEmpty()) {
+          if (listBuilder_.isEmpty()) {
+            listBuilder_.dispose();
+            listBuilder_ = null;
+            list_ = other.list_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            loginsBuilder_ = 
+            listBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getLoginsFieldBuilder() : null;
+                 getListFieldBuilder() : null;
           } else {
-            loginsBuilder_.addAllMessages(other.logins_);
+            listBuilder_.addAllMessages(other.list_);
           }
         }
       }
@@ -487,25 +487,25 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              org.cyverse.de.protobufs.LoginWire m =
+              org.cyverse.de.protobufs.LoginListWire m =
                   input.readMessage(
-                      org.cyverse.de.protobufs.LoginWire.parser(),
+                      org.cyverse.de.protobufs.LoginListWire.parser(),
                       extensionRegistry);
-              if (loginsBuilder_ == null) {
-                ensureLoginsIsMutable();
-                logins_.add(m);
+              if (listBuilder_ == null) {
+                ensureListIsMutable();
+                list_.add(m);
               } else {
-                loginsBuilder_.addMessage(m);
+                listBuilder_.addMessage(m);
               }
               break;
             } // case 10
-            case 34: {
+            case 18: {
               input.readMessage(
                   getErrorFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 34
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -523,258 +523,258 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<org.cyverse.de.protobufs.LoginWire> logins_ =
+    private java.util.List<org.cyverse.de.protobufs.LoginListWire> list_ =
       java.util.Collections.emptyList();
-    private void ensureLoginsIsMutable() {
+    private void ensureListIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        logins_ = new java.util.ArrayList<org.cyverse.de.protobufs.LoginWire>(logins_);
+        list_ = new java.util.ArrayList<org.cyverse.de.protobufs.LoginListWire>(list_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.cyverse.de.protobufs.LoginWire, org.cyverse.de.protobufs.LoginWire.Builder, org.cyverse.de.protobufs.LoginWireOrBuilder> loginsBuilder_;
+        org.cyverse.de.protobufs.LoginListWire, org.cyverse.de.protobufs.LoginListWire.Builder, org.cyverse.de.protobufs.LoginListWireOrBuilder> listBuilder_;
 
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public java.util.List<org.cyverse.de.protobufs.LoginWire> getLoginsList() {
-      if (loginsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(logins_);
+    public java.util.List<org.cyverse.de.protobufs.LoginListWire> getListList() {
+      if (listBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(list_);
       } else {
-        return loginsBuilder_.getMessageList();
+        return listBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public int getLoginsCount() {
-      if (loginsBuilder_ == null) {
-        return logins_.size();
+    public int getListCount() {
+      if (listBuilder_ == null) {
+        return list_.size();
       } else {
-        return loginsBuilder_.getCount();
+        return listBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginWire getLogins(int index) {
-      if (loginsBuilder_ == null) {
-        return logins_.get(index);
+    public org.cyverse.de.protobufs.LoginListWire getList(int index) {
+      if (listBuilder_ == null) {
+        return list_.get(index);
       } else {
-        return loginsBuilder_.getMessage(index);
+        return listBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder setLogins(
-        int index, org.cyverse.de.protobufs.LoginWire value) {
-      if (loginsBuilder_ == null) {
+    public Builder setList(
+        int index, org.cyverse.de.protobufs.LoginListWire value) {
+      if (listBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureLoginsIsMutable();
-        logins_.set(index, value);
+        ensureListIsMutable();
+        list_.set(index, value);
         onChanged();
       } else {
-        loginsBuilder_.setMessage(index, value);
+        listBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder setLogins(
-        int index, org.cyverse.de.protobufs.LoginWire.Builder builderForValue) {
-      if (loginsBuilder_ == null) {
-        ensureLoginsIsMutable();
-        logins_.set(index, builderForValue.build());
+    public Builder setList(
+        int index, org.cyverse.de.protobufs.LoginListWire.Builder builderForValue) {
+      if (listBuilder_ == null) {
+        ensureListIsMutable();
+        list_.set(index, builderForValue.build());
         onChanged();
       } else {
-        loginsBuilder_.setMessage(index, builderForValue.build());
+        listBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder addLogins(org.cyverse.de.protobufs.LoginWire value) {
-      if (loginsBuilder_ == null) {
+    public Builder addList(org.cyverse.de.protobufs.LoginListWire value) {
+      if (listBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureLoginsIsMutable();
-        logins_.add(value);
+        ensureListIsMutable();
+        list_.add(value);
         onChanged();
       } else {
-        loginsBuilder_.addMessage(value);
+        listBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder addLogins(
-        int index, org.cyverse.de.protobufs.LoginWire value) {
-      if (loginsBuilder_ == null) {
+    public Builder addList(
+        int index, org.cyverse.de.protobufs.LoginListWire value) {
+      if (listBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureLoginsIsMutable();
-        logins_.add(index, value);
+        ensureListIsMutable();
+        list_.add(index, value);
         onChanged();
       } else {
-        loginsBuilder_.addMessage(index, value);
+        listBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder addLogins(
-        org.cyverse.de.protobufs.LoginWire.Builder builderForValue) {
-      if (loginsBuilder_ == null) {
-        ensureLoginsIsMutable();
-        logins_.add(builderForValue.build());
+    public Builder addList(
+        org.cyverse.de.protobufs.LoginListWire.Builder builderForValue) {
+      if (listBuilder_ == null) {
+        ensureListIsMutable();
+        list_.add(builderForValue.build());
         onChanged();
       } else {
-        loginsBuilder_.addMessage(builderForValue.build());
+        listBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder addLogins(
-        int index, org.cyverse.de.protobufs.LoginWire.Builder builderForValue) {
-      if (loginsBuilder_ == null) {
-        ensureLoginsIsMutable();
-        logins_.add(index, builderForValue.build());
+    public Builder addList(
+        int index, org.cyverse.de.protobufs.LoginListWire.Builder builderForValue) {
+      if (listBuilder_ == null) {
+        ensureListIsMutable();
+        list_.add(index, builderForValue.build());
         onChanged();
       } else {
-        loginsBuilder_.addMessage(index, builderForValue.build());
+        listBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder addAllLogins(
-        java.lang.Iterable<? extends org.cyverse.de.protobufs.LoginWire> values) {
-      if (loginsBuilder_ == null) {
-        ensureLoginsIsMutable();
+    public Builder addAllList(
+        java.lang.Iterable<? extends org.cyverse.de.protobufs.LoginListWire> values) {
+      if (listBuilder_ == null) {
+        ensureListIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, logins_);
+            values, list_);
         onChanged();
       } else {
-        loginsBuilder_.addAllMessages(values);
+        listBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder clearLogins() {
-      if (loginsBuilder_ == null) {
-        logins_ = java.util.Collections.emptyList();
+    public Builder clearList() {
+      if (listBuilder_ == null) {
+        list_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        loginsBuilder_.clear();
+        listBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public Builder removeLogins(int index) {
-      if (loginsBuilder_ == null) {
-        ensureLoginsIsMutable();
-        logins_.remove(index);
+    public Builder removeList(int index) {
+      if (listBuilder_ == null) {
+        ensureListIsMutable();
+        list_.remove(index);
         onChanged();
       } else {
-        loginsBuilder_.remove(index);
+        listBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginWire.Builder getLoginsBuilder(
+    public org.cyverse.de.protobufs.LoginListWire.Builder getListBuilder(
         int index) {
-      return getLoginsFieldBuilder().getBuilder(index);
+      return getListFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginWireOrBuilder getLoginsOrBuilder(
+    public org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder(
         int index) {
-      if (loginsBuilder_ == null) {
-        return logins_.get(index);  } else {
-        return loginsBuilder_.getMessageOrBuilder(index);
+      if (listBuilder_ == null) {
+        return list_.get(index);  } else {
+        return listBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public java.util.List<? extends org.cyverse.de.protobufs.LoginWireOrBuilder> 
-         getLoginsOrBuilderList() {
-      if (loginsBuilder_ != null) {
-        return loginsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends org.cyverse.de.protobufs.LoginListWireOrBuilder> 
+         getListOrBuilderList() {
+      if (listBuilder_ != null) {
+        return listBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(logins_);
+        return java.util.Collections.unmodifiableList(list_);
       }
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginWire.Builder addLoginsBuilder() {
-      return getLoginsFieldBuilder().addBuilder(
-          org.cyverse.de.protobufs.LoginWire.getDefaultInstance());
+    public org.cyverse.de.protobufs.LoginListWire.Builder addListBuilder() {
+      return getListFieldBuilder().addBuilder(
+          org.cyverse.de.protobufs.LoginListWire.getDefaultInstance());
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginWire.Builder addLoginsBuilder(
+    public org.cyverse.de.protobufs.LoginListWire.Builder addListBuilder(
         int index) {
-      return getLoginsFieldBuilder().addBuilder(
-          index, org.cyverse.de.protobufs.LoginWire.getDefaultInstance());
+      return getListFieldBuilder().addBuilder(
+          index, org.cyverse.de.protobufs.LoginListWire.getDefaultInstance());
     }
     /**
-     * <code>repeated .user.LoginWire logins = 1;</code>
+     * <code>repeated .user.LoginListWire list = 1;</code>
      */
-    public java.util.List<org.cyverse.de.protobufs.LoginWire.Builder> 
-         getLoginsBuilderList() {
-      return getLoginsFieldBuilder().getBuilderList();
+    public java.util.List<org.cyverse.de.protobufs.LoginListWire.Builder> 
+         getListBuilderList() {
+      return getListFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.cyverse.de.protobufs.LoginWire, org.cyverse.de.protobufs.LoginWire.Builder, org.cyverse.de.protobufs.LoginWireOrBuilder> 
-        getLoginsFieldBuilder() {
-      if (loginsBuilder_ == null) {
-        loginsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            org.cyverse.de.protobufs.LoginWire, org.cyverse.de.protobufs.LoginWire.Builder, org.cyverse.de.protobufs.LoginWireOrBuilder>(
-                logins_,
+        org.cyverse.de.protobufs.LoginListWire, org.cyverse.de.protobufs.LoginListWire.Builder, org.cyverse.de.protobufs.LoginListWireOrBuilder> 
+        getListFieldBuilder() {
+      if (listBuilder_ == null) {
+        listBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            org.cyverse.de.protobufs.LoginListWire, org.cyverse.de.protobufs.LoginListWire.Builder, org.cyverse.de.protobufs.LoginListWireOrBuilder>(
+                list_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        logins_ = null;
+        list_ = null;
       }
-      return loginsBuilder_;
+      return listBuilder_;
     }
 
     private org.cyverse.de.protobufs.Error error_;
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Error, org.cyverse.de.protobufs.Error.Builder, org.cyverse.de.protobufs.ErrorOrBuilder> errorBuilder_;
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      * @return Whether the error field is set.
      */
     public boolean hasError() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      * @return The error.
      */
     public org.cyverse.de.protobufs.Error getError() {
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     public Builder setError(org.cyverse.de.protobufs.Error value) {
       if (errorBuilder_ == null) {
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     public Builder setError(
         org.cyverse.de.protobufs.Error.Builder builderForValue) {
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     public Builder mergeError(org.cyverse.de.protobufs.Error value) {
       if (errorBuilder_ == null) {
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     public Builder clearError() {
       if (errorBuilder_ == null) {
@@ -848,7 +848,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     public org.cyverse.de.protobufs.Error.Builder getErrorBuilder() {
       bitField0_ |= 0x00000002;
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
       return getErrorFieldBuilder().getBuilder();
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     public org.cyverse.de.protobufs.ErrorOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional .svcerror.Error error = 4;</code>
+     * <code>optional .svcerror.Error error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.Error, org.cyverse.de.protobufs.Error.Builder, org.cyverse.de.protobufs.ErrorOrBuilder> 
@@ -895,23 +895,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:user_requests.GetLoginsResponse)
+    // @@protoc_insertion_point(builder_scope:user_requests.LoginsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:user_requests.GetLoginsResponse)
-  private static final org.cyverse.de.protobufs.GetLoginsResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:user_requests.LoginsResponse)
+  private static final org.cyverse.de.protobufs.LoginsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.cyverse.de.protobufs.GetLoginsResponse();
+    DEFAULT_INSTANCE = new org.cyverse.de.protobufs.LoginsResponse();
   }
 
-  public static org.cyverse.de.protobufs.GetLoginsResponse getDefaultInstance() {
+  public static org.cyverse.de.protobufs.LoginsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetLoginsResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetLoginsResponse>() {
+  private static final com.google.protobuf.Parser<LoginsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<LoginsResponse>() {
     @java.lang.Override
-    public GetLoginsResponse parsePartialFrom(
+    public LoginsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -930,17 +930,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetLoginsResponse> parser() {
+  public static com.google.protobuf.Parser<LoginsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetLoginsResponse> getParserForType() {
+  public com.google.protobuf.Parser<LoginsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public org.cyverse.de.protobufs.GetLoginsResponse getDefaultInstanceForType() {
+  public org.cyverse.de.protobufs.LoginsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -1,13 +1,22 @@
-.PHONY: all compile go-tidy go-init clean java-jar
+.PHONY: all compile go-tidy go-init clean java-jar compile-go compile-java compile-rust documentation clean-go clean-java clean-rust clean-docs
 
 all: clean compile go-init go-tidy java-jar documentation
 comma:=
 
 export GOTOOLCHAIN=auto
 
-compile:
-	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
+compile-go:
+	protoc -I ./protos -I /usr/local/include \
+		--go_out=./go \
+		--go_opt=module=github.com/cyverse-de/p/go \
+		--go-grpc_out=./go \
+		--go-grpc_opt=module=github.com/cyverse-de/p/go \
+		protos/*.proto
+
+compile-java:
 	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto
+
+compile-rust:
 	protoc -I ./protos -I /usr/local/include \
 		--prost_opt=default_package_filename=gen.rs \
 		--prost_opt=compile_well_known_types \
@@ -17,6 +26,8 @@ compile:
 		--prost_out=debuff/src/ \
 		--prost-serde_out=debuff/src \
 		protos/*.proto
+
+compile: compile-go compile-java compile-rust
 
 documentation:
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,analysis.md protos/analysis_*.proto
@@ -41,6 +52,7 @@ go-init:
 	cd ./go/monitoring && go mod init github.com/cyverse-de/p/go/monitoring
 	cd ./go/requests && go mod init github.com/cyverse-de/p/go/requests
 	cd ./go/tools && go mod init github.com/cyverse-de/p/go/tools
+	cd ./go/userservice && go mod init github.com/cyverse-de/p/go/userservice
 
 go-tidy:
 	cd ./go/containers && go mod tidy
@@ -52,11 +64,21 @@ go-tidy:
 	cd ./go/monitoring && go mod tidy
 	cd ./go/requests && go mod tidy
 	cd ./go/tools && go mod tidy
+	cd ./go/userservice && go mod tidy
 
-clean:
+clean-go:
 	rm -rf ./go/*
+
+clean-java:
 	rm -rf ./java/*
-	rm -rf ./docs/*
 	lein clean
+
+clean-docs:
+	rm -rf ./docs/*
+
+clean-rust:
+	rm -rf ./debuff/src/*
+
+clean: clean-go clean-java clean-rust clean-docs
 
 godirs: $(ls ./go/)
