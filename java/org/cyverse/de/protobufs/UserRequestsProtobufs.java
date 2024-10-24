@@ -24,6 +24,51 @@ public final class UserRequestsProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_requests_UserLookupResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_GetUserPreferencesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_GetUserPreferencesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_SetUserPreferencesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_SetUserPreferencesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_DeleteUserPreferencesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_DeleteUserPreferencesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_UserPreferencesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_UserPreferencesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_PageSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_PageSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_InternalPaginationContinuationToken_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_InternalPaginationContinuationToken_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_GetLoginsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_GetLoginsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_GetLoginsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_GetLoginsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_requests_AddLoginRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_requests_AddLoginRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47,9 +92,34 @@ public final class UserRequestsProtobufs {
       "\003 \003(\0132\013.user.Login\022&\n\013preferences\030\004 \001(\0132" +
       "\021.user.Preferences\022+\n\016saved_searches\030\005 \003" +
       "(\0132\023.user.SavedSearches\022%\n\005error\030\007 \001(\0132\026" +
-      ".svcerror.ServiceErrorBT\n\030org.cyverse.de" +
-      ".protobufsB\025UserRequestsProtobufsP\001Z\037git" +
-      "hub.com/cyverse-de/p/go/userb\006proto3"
+      ".svcerror.ServiceError\"8\n\031GetUserPrefere" +
+      "ncesRequest\022\033\n\004user\030\001 \001(\0132\r.user.UserRef" +
+      "\"M\n\031SetUserPreferencesRequest\022\033\n\004user\030\001 " +
+      "\001(\0132\r.user.UserRef\022\023\n\013preferences\030\002 \001(\t\"" +
+      ";\n\034DeleteUserPreferencesRequest\022\033\n\004user\030" +
+      "\001 \001(\0132\r.user.UserRef\"\307\001\n\027UserPreferences" +
+      "Response\022(\n\004type\030\001 \001(\0162\032.user_requests.R" +
+      "equestType\022 \n\004user\030\002 \001(\0132\r.user.UserRefH" +
+      "\000\210\001\001\022\030\n\013preferences\030\003 \001(\tH\001\210\001\001\022#\n\005error\030" +
+      "\004 \001(\0132\017.svcerror.ErrorH\002\210\001\001B\007\n\005_userB\016\n\014" +
+      "_preferencesB\010\n\006_error\"C\n\014PageSettings\022\025" +
+      "\n\rrecord_offset\030\001 \001(\005\022\016\n\006number\030\002 \001(\005\022\014\n" +
+      "\004size\030\003 \001(\005\"\225\001\n#InternalPaginationContin" +
+      "uationToken\022\023\n\006offset\030\001 \001(\005H\000\210\001\001\022\030\n\013page" +
+      "_number\030\002 \001(\005H\001\210\001\001\022\026\n\tpage_size\030\003 \001(\005H\002\210" +
+      "\001\001B\t\n\007_offsetB\016\n\014_page_numberB\014\n\n_page_s" +
+      "ize\"\224\001\n\020GetLoginsRequest\022\033\n\004user\030\001 \001(\0132\r" +
+      ".user.UserRef\022\031\n\014continuation\030\002 \001(\tH\000\210\001\001" +
+      "\022.\n\004page\030\003 \001(\0132\033.user_requests.PageSetti" +
+      "ngsH\001\210\001\001B\017\n\r_continuationB\007\n\005_page\"c\n\021Ge" +
+      "tLoginsResponse\022\037\n\006logins\030\001 \003(\0132\017.user.L" +
+      "oginWire\022#\n\005error\030\004 \001(\0132\017.svcerror.Error" +
+      "H\000\210\001\001B\010\n\006_error\"1\n\017AddLoginRequest\022\036\n\005lo" +
+      "gin\030\001 \001(\0132\017.user.LoginWire*4\n\013RequestTyp" +
+      "e\022\007\n\003GET\020\000\022\007\n\003SET\020\001\022\n\n\006DELETE\020\002\022\007\n\003ADD\020\003" +
+      "BT\n\030org.cyverse.de.protobufsB\025UserReques" +
+      "tsProtobufsP\001Z\037github.com/cyverse-de/p/g" +
+      "o/userb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -70,6 +140,60 @@ public final class UserRequestsProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_requests_UserLookupResponse_descriptor,
         new java.lang.String[] { "Header", "BasicInfo", "Logins", "Preferences", "SavedSearches", "Error", });
+    internal_static_user_requests_GetUserPreferencesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_user_requests_GetUserPreferencesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_GetUserPreferencesRequest_descriptor,
+        new java.lang.String[] { "User", });
+    internal_static_user_requests_SetUserPreferencesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_user_requests_SetUserPreferencesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_SetUserPreferencesRequest_descriptor,
+        new java.lang.String[] { "User", "Preferences", });
+    internal_static_user_requests_DeleteUserPreferencesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_user_requests_DeleteUserPreferencesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_DeleteUserPreferencesRequest_descriptor,
+        new java.lang.String[] { "User", });
+    internal_static_user_requests_UserPreferencesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_user_requests_UserPreferencesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_UserPreferencesResponse_descriptor,
+        new java.lang.String[] { "Type", "User", "Preferences", "Error", "User", "Preferences", "Error", });
+    internal_static_user_requests_PageSettings_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_user_requests_PageSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_PageSettings_descriptor,
+        new java.lang.String[] { "RecordOffset", "Number", "Size", });
+    internal_static_user_requests_InternalPaginationContinuationToken_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_user_requests_InternalPaginationContinuationToken_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_InternalPaginationContinuationToken_descriptor,
+        new java.lang.String[] { "Offset", "PageNumber", "PageSize", "Offset", "PageNumber", "PageSize", });
+    internal_static_user_requests_GetLoginsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_user_requests_GetLoginsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_GetLoginsRequest_descriptor,
+        new java.lang.String[] { "User", "Continuation", "Page", "Continuation", "Page", });
+    internal_static_user_requests_GetLoginsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_user_requests_GetLoginsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_GetLoginsResponse_descriptor,
+        new java.lang.String[] { "Logins", "Error", "Error", });
+    internal_static_user_requests_AddLoginRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_user_requests_AddLoginRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_requests_AddLoginRequest_descriptor,
+        new java.lang.String[] { "Login", });
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.UserProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();

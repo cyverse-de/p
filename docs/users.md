@@ -5,13 +5,30 @@
 
 - [user.proto](#user-proto)
     - [Login](#user-Login)
+    - [LoginIP](#user-LoginIP)
+    - [LoginListWire](#user-LoginListWire)
+    - [LoginStorage](#user-LoginStorage)
+    - [LoginUserAgent](#user-LoginUserAgent)
+    - [LoginWire](#user-LoginWire)
     - [Preferences](#user-Preferences)
     - [SavedSearches](#user-SavedSearches)
     - [User](#user-User)
+    - [UserRef](#user-UserRef)
   
 - [user_requests.proto](#user_requests-proto)
+    - [AddLoginRequest](#user_requests-AddLoginRequest)
+    - [DeleteUserPreferencesRequest](#user_requests-DeleteUserPreferencesRequest)
+    - [GetLoginsRequest](#user_requests-GetLoginsRequest)
+    - [GetLoginsResponse](#user_requests-GetLoginsResponse)
+    - [GetUserPreferencesRequest](#user_requests-GetUserPreferencesRequest)
+    - [InternalPaginationContinuationToken](#user_requests-InternalPaginationContinuationToken)
+    - [PageSettings](#user_requests-PageSettings)
+    - [SetUserPreferencesRequest](#user_requests-SetUserPreferencesRequest)
     - [UserLookupRequest](#user_requests-UserLookupRequest)
     - [UserLookupResponse](#user_requests-UserLookupResponse)
+    - [UserPreferencesResponse](#user_requests-UserPreferencesResponse)
+  
+    - [RequestType](#user_requests-RequestType)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -27,7 +44,8 @@
 <a name="user-Login"></a>
 
 ### Login
-
+Backwards compatibility version. Use LoginStorage and
+LoginWire for new messages.
 
 
 | Field | Type | Label | Description |
@@ -43,10 +61,95 @@
 
 
 
+<a name="user-LoginIP"></a>
+
+### LoginIP
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| address | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="user-LoginListWire"></a>
+
+### LoginListWire
+A list of logins that can go out over the wire.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| logins | [LoginWire](#user-LoginWire) | repeated |  |
+
+
+
+
+
+
+<a name="user-LoginStorage"></a>
+
+### LoginStorage
+How a login is stored in the backend. Don&#39;t send this over the
+wire.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user_id | [string](#string) |  | The UUID of the user. Not the username. Must be set. |
+| ip_address | [string](#string) | optional | The IP address of the user that logged in. |
+| user_agent | [string](#string) | optional | The user agent string of the user that logged in. |
+| login_time | [google.protobuf.Timestamp](#google-protobuf-Timestamp) | optional | The time the user logged in. If you&#39;re adding a login, this will be set automatically by the backend if it&#39;s not set. |
+| logout_time | [google.protobuf.Timestamp](#google-protobuf-Timestamp) | optional | The time the user logged out. Could be unset if the user hasn&#39;t logged out yet. |
+
+
+
+
+
+
+<a name="user-LoginUserAgent"></a>
+
+### LoginUserAgent
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| full | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="user-LoginWire"></a>
+
+### LoginWire
+A wire-safe version of a login record.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [UserRef](#user-UserRef) |  |  |
+| ip | [LoginIP](#user-LoginIP) | optional |  |
+| user_agent | [LoginUserAgent](#user-LoginUserAgent) | optional |  |
+| login_time | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The time the user logged in. If you&#39;re adding a login, this will be set automatically by the backend if it&#39;s not set. |
+| logout_time | [google.protobuf.Timestamp](#google-protobuf-Timestamp) | optional | The time the user logged out. Could be unset if the user hasn&#39;t logged out yet. |
+
+
+
+
+
+
 <a name="user-Preferences"></a>
 
 ### Preferences
-
+How the preferences are stored in the backend. Don&#39;t expose
+this through a service/API.
 
 
 | Field | Type | Label | Description |
@@ -62,7 +165,8 @@
 <a name="user-SavedSearches"></a>
 
 ### SavedSearches
-
+Maintained for backwards compatibility. Use the Wire and Storage versions
+for new messages
 
 
 | Field | Type | Label | Description |
@@ -78,13 +182,31 @@
 <a name="user-User"></a>
 
 ### User
-A user&#39;s information.
+A user&#39;s information. Represents how the user is stored.
+Don&#39;t use this directly in Request messages.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  |  |
 | username | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="user-UserRef"></a>
+
+### UserRef
+How a user can be referred to. Typically only one of them is
+set. Can be used in Request messages
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| username | [string](#string) | optional | The username of the user in the database. Must be unique. It&#39;s more likely for a service to have this, which is why it&#39;s listed first. Writing services to use the username can skip a lookup of the UUID. |
+| uuid | [string](#string) | optional | The UUID of the user in the database. A service can have this, but it&#39;s more likely for it to have the username. |
 
 
 
@@ -107,10 +229,139 @@ A user&#39;s information.
 
 
 
+<a name="user_requests-AddLoginRequest"></a>
+
+### AddLoginRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| login | [user.LoginWire](#user-LoginWire) |  |  |
+
+
+
+
+
+
+<a name="user_requests-DeleteUserPreferencesRequest"></a>
+
+### DeleteUserPreferencesRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+
+
+
+
+
+
+<a name="user_requests-GetLoginsRequest"></a>
+
+### GetLoginsRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+| continuation | [string](#string) | optional |  |
+| page | [PageSettings](#user_requests-PageSettings) | optional |  |
+
+
+
+
+
+
+<a name="user_requests-GetLoginsResponse"></a>
+
+### GetLoginsResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| logins | [user.LoginWire](#user-LoginWire) | repeated |  |
+| error | [svcerror.Error](#svcerror-Error) | optional |  |
+
+
+
+
+
+
+<a name="user_requests-GetUserPreferencesRequest"></a>
+
+### GetUserPreferencesRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+
+
+
+
+
+
+<a name="user_requests-InternalPaginationContinuationToken"></a>
+
+### InternalPaginationContinuationToken
+Don&#39;t expose this over the wire.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| offset | [int32](#int32) | optional |  |
+| page_number | [int32](#int32) | optional |  |
+| page_size | [int32](#int32) | optional |  |
+
+
+
+
+
+
+<a name="user_requests-PageSettings"></a>
+
+### PageSettings
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| record_offset | [int32](#int32) |  |  |
+| number | [int32](#int32) |  |  |
+| size | [int32](#int32) |  |  |
+
+
+
+
+
+
+<a name="user_requests-SetUserPreferencesRequest"></a>
+
+### SetUserPreferencesRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| user | [user.UserRef](#user-UserRef) |  |  |
+| preferences | [string](#string) |  |  |
+
+
+
+
+
+
 <a name="user_requests-UserLookupRequest"></a>
 
 ### UserLookupRequest
-A request for user information.
+A request for user information. This is kept for backwards compatibility,
+you should really use the other request types.
 
 
 | Field | Type | Label | Description |
@@ -135,6 +386,8 @@ A request for user information.
 ### UserLookupResponse
 A response to a request for information about a single user.
 
+Please use the other, smaller requests and responses.
+
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
@@ -149,7 +402,39 @@ A response to a request for information about a single user.
 
 
 
+
+<a name="user_requests-UserPreferencesResponse"></a>
+
+### UserPreferencesResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| type | [RequestType](#user_requests-RequestType) |  |  |
+| user | [user.UserRef](#user-UserRef) | optional |  |
+| preferences | [string](#string) | optional |  |
+| error | [svcerror.Error](#svcerror-Error) | optional |  |
+
+
+
+
+
  
+
+
+<a name="user_requests-RequestType"></a>
+
+### RequestType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| GET | 0 |  |
+| SET | 1 |  |
+| DELETE | 2 |  |
+| ADD | 3 |  |
+
 
  
 

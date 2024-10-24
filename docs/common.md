@@ -9,6 +9,7 @@
     - [Header.Value](#header-Header-Value)
   
 - [svcerror.proto](#svcerror-proto)
+    - [Error](#svcerror-Error)
     - [ServiceError](#svcerror-ServiceError)
   
     - [ErrorCode](#svcerror-ErrorCode)
@@ -86,10 +87,28 @@
 
 
 
+<a name="svcerror-Error"></a>
+
+### Error
+Represents an error that occurred in the backend. Probably
+should not be returned directly by a HTTP&#43;JSON or REST API.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| code | [ErrorCode](#svcerror-ErrorCode) |  | Should roughly correspond to a type of error that can occur in the backend code. |
+| message | [string](#string) |  | The message or stack trace generated when the error occurred. |
+
+
+
+
+
+
 <a name="svcerror-ServiceError"></a>
 
 ### ServiceError
-An error returned by a request handler.
+An error returned by a request handler. Kept around for backwards compatibility,
+please use Error for new messages.
 
 
 | Field | Type | Label | Description |

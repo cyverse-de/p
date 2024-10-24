@@ -4,32 +4,26 @@
 package org.cyverse.de.protobufs;
 
 /**
- * <pre>
- * How the preferences are stored in the backend. Don't expose
- * this through a service/API.
- * </pre>
- *
- * Protobuf type {@code user.Preferences}
+ * Protobuf type {@code user.LoginUserAgent}
  */
-public final class Preferences extends
+public final class LoginUserAgent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:user.Preferences)
-    PreferencesOrBuilder {
+    // @@protoc_insertion_point(message_implements:user.LoginUserAgent)
+    LoginUserAgentOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Preferences.newBuilder() to construct.
-  private Preferences(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use LoginUserAgent.newBuilder() to construct.
+  private LoginUserAgent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Preferences() {
-    uuid_ = "";
-    preferences_ = "";
+  private LoginUserAgent() {
+    full_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Preferences();
+    return new LoginUserAgent();
   }
 
   @java.lang.Override
@@ -39,95 +33,49 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_Preferences_descriptor;
+    return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_LoginUserAgent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_Preferences_fieldAccessorTable
+    return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_LoginUserAgent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.cyverse.de.protobufs.Preferences.class, org.cyverse.de.protobufs.Preferences.Builder.class);
+            org.cyverse.de.protobufs.LoginUserAgent.class, org.cyverse.de.protobufs.LoginUserAgent.Builder.class);
   }
 
-  public static final int UUID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object uuid_;
+  public static final int FULL_FIELD_NUMBER = 1;
+  private volatile java.lang.Object full_;
   /**
-   * <code>string uuid = 1;</code>
-   * @return The uuid.
+   * <code>string full = 1;</code>
+   * @return The full.
    */
   @java.lang.Override
-  public java.lang.String getUuid() {
-    java.lang.Object ref = uuid_;
+  public java.lang.String getFull() {
+    java.lang.Object ref = full_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      uuid_ = s;
+      full_ = s;
       return s;
     }
   }
   /**
-   * <code>string uuid = 1;</code>
-   * @return The bytes for uuid.
+   * <code>string full = 1;</code>
+   * @return The bytes for full.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUuidBytes() {
-    java.lang.Object ref = uuid_;
+      getFullBytes() {
+    java.lang.Object ref = full_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      uuid_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PREFERENCES_FIELD_NUMBER = 2;
-  private volatile java.lang.Object preferences_;
-  /**
-   * <pre>
-   * should come across as JSON.
-   * </pre>
-   *
-   * <code>string preferences = 2;</code>
-   * @return The preferences.
-   */
-  @java.lang.Override
-  public java.lang.String getPreferences() {
-    java.lang.Object ref = preferences_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      preferences_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * should come across as JSON.
-   * </pre>
-   *
-   * <code>string preferences = 2;</code>
-   * @return The bytes for preferences.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPreferencesBytes() {
-    java.lang.Object ref = preferences_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      preferences_ = b;
+      full_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -148,11 +96,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preferences_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, preferences_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(full_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, full_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -163,11 +108,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(preferences_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, preferences_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(full_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, full_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -179,15 +121,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.cyverse.de.protobufs.Preferences)) {
+    if (!(obj instanceof org.cyverse.de.protobufs.LoginUserAgent)) {
       return super.equals(obj);
     }
-    org.cyverse.de.protobufs.Preferences other = (org.cyverse.de.protobufs.Preferences) obj;
+    org.cyverse.de.protobufs.LoginUserAgent other = (org.cyverse.de.protobufs.LoginUserAgent) obj;
 
-    if (!getUuid()
-        .equals(other.getUuid())) return false;
-    if (!getPreferences()
-        .equals(other.getPreferences())) return false;
+    if (!getFull()
+        .equals(other.getFull())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -199,78 +139,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + UUID_FIELD_NUMBER;
-    hash = (53 * hash) + getUuid().hashCode();
-    hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
-    hash = (53 * hash) + getPreferences().hashCode();
+    hash = (37 * hash) + FULL_FIELD_NUMBER;
+    hash = (53 * hash) + getFull().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(byte[] data)
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(java.io.InputStream input)
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.Preferences parseDelimitedFrom(java.io.InputStream input)
+  public static org.cyverse.de.protobufs.LoginUserAgent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.cyverse.de.protobufs.Preferences parseDelimitedFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.cyverse.de.protobufs.Preferences parseFrom(
+  public static org.cyverse.de.protobufs.LoginUserAgent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -283,7 +221,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.cyverse.de.protobufs.Preferences prototype) {
+  public static Builder newBuilder(org.cyverse.de.protobufs.LoginUserAgent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -299,31 +237,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * How the preferences are stored in the backend. Don't expose
-   * this through a service/API.
-   * </pre>
-   *
-   * Protobuf type {@code user.Preferences}
+   * Protobuf type {@code user.LoginUserAgent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:user.Preferences)
-      org.cyverse.de.protobufs.PreferencesOrBuilder {
+      // @@protoc_insertion_point(builder_implements:user.LoginUserAgent)
+      org.cyverse.de.protobufs.LoginUserAgentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_Preferences_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_LoginUserAgent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_Preferences_fieldAccessorTable
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_LoginUserAgent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.cyverse.de.protobufs.Preferences.class, org.cyverse.de.protobufs.Preferences.Builder.class);
+              org.cyverse.de.protobufs.LoginUserAgent.class, org.cyverse.de.protobufs.LoginUserAgent.Builder.class);
     }
 
-    // Construct using org.cyverse.de.protobufs.Preferences.newBuilder()
+    // Construct using org.cyverse.de.protobufs.LoginUserAgent.newBuilder()
     private Builder() {
 
     }
@@ -336,9 +269,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      uuid_ = "";
-
-      preferences_ = "";
+      full_ = "";
 
       return this;
     }
@@ -346,17 +277,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_Preferences_descriptor;
+      return org.cyverse.de.protobufs.UserProtobufs.internal_static_user_LoginUserAgent_descriptor;
     }
 
     @java.lang.Override
-    public org.cyverse.de.protobufs.Preferences getDefaultInstanceForType() {
-      return org.cyverse.de.protobufs.Preferences.getDefaultInstance();
+    public org.cyverse.de.protobufs.LoginUserAgent getDefaultInstanceForType() {
+      return org.cyverse.de.protobufs.LoginUserAgent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.cyverse.de.protobufs.Preferences build() {
-      org.cyverse.de.protobufs.Preferences result = buildPartial();
+    public org.cyverse.de.protobufs.LoginUserAgent build() {
+      org.cyverse.de.protobufs.LoginUserAgent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -364,10 +295,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.cyverse.de.protobufs.Preferences buildPartial() {
-      org.cyverse.de.protobufs.Preferences result = new org.cyverse.de.protobufs.Preferences(this);
-      result.uuid_ = uuid_;
-      result.preferences_ = preferences_;
+    public org.cyverse.de.protobufs.LoginUserAgent buildPartial() {
+      org.cyverse.de.protobufs.LoginUserAgent result = new org.cyverse.de.protobufs.LoginUserAgent(this);
+      result.full_ = full_;
       onBuilt();
       return result;
     }
@@ -406,22 +336,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.cyverse.de.protobufs.Preferences) {
-        return mergeFrom((org.cyverse.de.protobufs.Preferences)other);
+      if (other instanceof org.cyverse.de.protobufs.LoginUserAgent) {
+        return mergeFrom((org.cyverse.de.protobufs.LoginUserAgent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.cyverse.de.protobufs.Preferences other) {
-      if (other == org.cyverse.de.protobufs.Preferences.getDefaultInstance()) return this;
-      if (!other.getUuid().isEmpty()) {
-        uuid_ = other.uuid_;
-        onChanged();
-      }
-      if (!other.getPreferences().isEmpty()) {
-        preferences_ = other.preferences_;
+    public Builder mergeFrom(org.cyverse.de.protobufs.LoginUserAgent other) {
+      if (other == org.cyverse.de.protobufs.LoginUserAgent.getDefaultInstance()) return this;
+      if (!other.getFull().isEmpty()) {
+        full_ = other.full_;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -451,15 +377,10 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              uuid_ = input.readStringRequireUtf8();
+              full_ = input.readStringRequireUtf8();
 
               break;
             } // case 10
-            case 18: {
-              preferences_ = input.readStringRequireUtf8();
-
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -476,174 +397,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object uuid_ = "";
+    private java.lang.Object full_ = "";
     /**
-     * <code>string uuid = 1;</code>
-     * @return The uuid.
+     * <code>string full = 1;</code>
+     * @return The full.
      */
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
+    public java.lang.String getFull() {
+      java.lang.Object ref = full_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
+        full_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string uuid = 1;</code>
-     * @return The bytes for uuid.
+     * <code>string full = 1;</code>
+     * @return The bytes for full.
      */
     public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
+        getFullBytes() {
+      java.lang.Object ref = full_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        uuid_ = b;
+        full_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string uuid = 1;</code>
-     * @param value The uuid to set.
+     * <code>string full = 1;</code>
+     * @param value The full to set.
      * @return This builder for chaining.
      */
-    public Builder setUuid(
+    public Builder setFull(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      uuid_ = value;
+      full_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string uuid = 1;</code>
+     * <code>string full = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearUuid() {
+    public Builder clearFull() {
       
-      uuid_ = getDefaultInstance().getUuid();
+      full_ = getDefaultInstance().getFull();
       onChanged();
       return this;
     }
     /**
-     * <code>string uuid = 1;</code>
-     * @param value The bytes for uuid to set.
+     * <code>string full = 1;</code>
+     * @param value The bytes for full to set.
      * @return This builder for chaining.
      */
-    public Builder setUuidBytes(
+    public Builder setFullBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      uuid_ = value;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object preferences_ = "";
-    /**
-     * <pre>
-     * should come across as JSON.
-     * </pre>
-     *
-     * <code>string preferences = 2;</code>
-     * @return The preferences.
-     */
-    public java.lang.String getPreferences() {
-      java.lang.Object ref = preferences_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        preferences_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * should come across as JSON.
-     * </pre>
-     *
-     * <code>string preferences = 2;</code>
-     * @return The bytes for preferences.
-     */
-    public com.google.protobuf.ByteString
-        getPreferencesBytes() {
-      java.lang.Object ref = preferences_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        preferences_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * should come across as JSON.
-     * </pre>
-     *
-     * <code>string preferences = 2;</code>
-     * @param value The preferences to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPreferences(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      preferences_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * should come across as JSON.
-     * </pre>
-     *
-     * <code>string preferences = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPreferences() {
-      
-      preferences_ = getDefaultInstance().getPreferences();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * should come across as JSON.
-     * </pre>
-     *
-     * <code>string preferences = 2;</code>
-     * @param value The bytes for preferences to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPreferencesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      preferences_ = value;
+      full_ = value;
       onChanged();
       return this;
     }
@@ -660,23 +485,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:user.Preferences)
+    // @@protoc_insertion_point(builder_scope:user.LoginUserAgent)
   }
 
-  // @@protoc_insertion_point(class_scope:user.Preferences)
-  private static final org.cyverse.de.protobufs.Preferences DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:user.LoginUserAgent)
+  private static final org.cyverse.de.protobufs.LoginUserAgent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.cyverse.de.protobufs.Preferences();
+    DEFAULT_INSTANCE = new org.cyverse.de.protobufs.LoginUserAgent();
   }
 
-  public static org.cyverse.de.protobufs.Preferences getDefaultInstance() {
+  public static org.cyverse.de.protobufs.LoginUserAgent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Preferences>
-      PARSER = new com.google.protobuf.AbstractParser<Preferences>() {
+  private static final com.google.protobuf.Parser<LoginUserAgent>
+      PARSER = new com.google.protobuf.AbstractParser<LoginUserAgent>() {
     @java.lang.Override
-    public Preferences parsePartialFrom(
+    public LoginUserAgent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -695,17 +520,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Preferences> parser() {
+  public static com.google.protobuf.Parser<LoginUserAgent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Preferences> getParserForType() {
+  public com.google.protobuf.Parser<LoginUserAgent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public org.cyverse.de.protobufs.Preferences getDefaultInstanceForType() {
+  public org.cyverse.de.protobufs.LoginUserAgent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

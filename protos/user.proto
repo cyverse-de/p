@@ -10,11 +10,15 @@ option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "UserProtobufs";
 
+// How the preferences are stored in the backend. Don't expose
+// this through a service/API.
 message Preferences {
   string uuid = 1;
   string preferences = 2; // should come across as JSON.
 }
 
+// Backwards compatibility version. Use LoginStorage and
+// LoginWire for new messages.
 message Login {
   string uuid = 1;
   string ip_address = 2;
@@ -23,16 +27,82 @@ message Login {
   google.protobuf.Timestamp logout_time = 5;
 }
 
+// How a login is stored in the backend. Don't send this over the
+// wire.
+message LoginStorage {
+  // The UUID of the user. Not the username. Must be set.
+  string user_id = 1;
+
+  // The IP address of the user that logged in.
+  optional string ip_address = 2;
+
+  // The user agent string of the user that logged in.
+  optional string user_agent = 3;
+
+  // The time the user logged in. If you're adding a login, this
+  // will be set automatically by the backend if it's not set.
+  optional google.protobuf.Timestamp login_time = 4;
+
+  // The time the user logged out. Could be unset if the user
+  // hasn't logged out yet.
+  optional google.protobuf.Timestamp logout_time = 5;
+}
+
+message LoginIP {
+  string address = 1;
+}
+
+message LoginUserAgent {
+  string full = 1;
+}
+
+// A wire-safe version of a login record.
+message LoginWire {
+  UserRef user = 1;
+  optional LoginIP ip = 2;
+  optional LoginUserAgent user_agent = 3;
+
+  // The time the user logged in. If you're adding a login, this
+  // will be set automatically by the backend if it's not set.
+  google.protobuf.Timestamp login_time = 4;
+
+  // The time the user logged out. Could be unset if the user
+  // hasn't logged out yet.
+  optional google.protobuf.Timestamp logout_time = 5;
+}
+
+// A list of logins that can go out over the wire.
+message LoginListWire {
+  repeated LoginWire logins = 1;
+}
+
+// Maintained for backwards compatibility. Use the Wire and Storage versions
+// for new messages
 message SavedSearches {
   string uuid = 1;
   string saved_searches = 2;
 }
 
 /**
- * A user's information.
+ * A user's information. Represents how the user is stored.
+ * Don't use this directly in Request messages.
  */
 message User {
   string uuid = 1;
   string username = 2;
+}
+
+// How a user can be referred to. Typically only one of them is
+// set. Can be used in Request messages
+message UserRef {
+  // The username of the user in the database. Must be unique.
+  // It's more likely for a service to have this, which is why
+  // it's listed first. Writing services to use the username
+  // can skip a lookup of the UUID.
+  optional string username = 1;
+
+  // The UUID of the user in the database. A service can have
+  // this, but it's more likely for it to have the username.
+  optional string uuid = 2;
 }
 

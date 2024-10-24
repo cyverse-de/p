@@ -14,7 +14,8 @@ option java_outer_classname = "UserRequestsProtobufs";
 
 
 /**
- * A request for user information.
+ * A request for user information. This is kept for backwards compatibility,
+ * you should really use the other request types.
  */
 message UserLookupRequest {
     reserved 4; // 4 was for sessions, which aren't used anymore.
@@ -47,6 +48,8 @@ message UserLookupRequest {
 
 /**
  * A response to a request for information about a single user.
+ *
+ * Please use the other, smaller requests and responses.
  */
 message UserLookupResponse {
     header.Header header = 1;
@@ -55,4 +58,59 @@ message UserLookupResponse {
     user.Preferences preferences = 4;
     repeated user.SavedSearches saved_searches = 5;
     svcerror.ServiceError error = 7;
+}
+
+enum RequestType {
+    GET = 0;
+    SET = 1;
+    DELETE = 2;
+    ADD = 3;
+}
+
+message GetUserPreferencesRequest {
+    user.UserRef user = 1;
+}
+
+message SetUserPreferencesRequest {
+    user.UserRef user = 1;
+    string preferences = 2;
+}
+
+message DeleteUserPreferencesRequest {
+    user.UserRef user = 1;
+}
+
+message UserPreferencesResponse {
+    RequestType type = 1;
+    optional user.UserRef user = 2;
+    optional string preferences = 3;
+    optional svcerror.Error error = 4;
+}
+
+message PageSettings {
+    int32 record_offset = 1;
+    int32 number = 2;
+    int32 size = 3;
+}
+
+// Don't expose this over the wire. 
+message InternalPaginationContinuationToken {
+    optional int32 offset = 1;
+    optional int32 page_number = 2;
+    optional int32 page_size = 3;
+}
+
+message GetLoginsRequest {
+    user.UserRef user = 1;
+    optional string continuation = 2;
+    optional PageSettings page = 3;
+}
+
+message GetLoginsResponse {
+    repeated user.LoginWire logins = 1;
+    optional svcerror.Error error = 4;
+}
+
+message AddLoginRequest {
+    user.LoginWire login = 1;
 }

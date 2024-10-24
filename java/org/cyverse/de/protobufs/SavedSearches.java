@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ * Maintained for backwards compatibility. Use the Wire and Storage versions
+ * for new messages
+ * </pre>
+ *
  * Protobuf type {@code user.SavedSearches}
  */
 public final class SavedSearches extends
@@ -286,6 +291,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Maintained for backwards compatibility. Use the Wire and Storage versions
+   * for new messages
+   * </pre>
+   *
    * Protobuf type {@code user.SavedSearches}
    */
   public static final class Builder extends

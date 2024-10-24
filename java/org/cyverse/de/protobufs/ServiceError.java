@@ -6,7 +6,8 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  **
- * An error returned by a request handler.
+ * An error returned by a request handler. Kept around for backwards compatibility,
+ * please use Error for new messages.
  * </pre>
  *
  * Protobuf type {@code svcerror.ServiceError}
@@ -316,7 +317,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    **
-   * An error returned by a request handler.
+   * An error returned by a request handler. Kept around for backwards compatibility,
+   * please use Error for new messages.
    * </pre>
    *
    * Protobuf type {@code svcerror.ServiceError}

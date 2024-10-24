@@ -6,7 +6,8 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  **
- * A request for user information.
+ * A request for user information. This is kept for backwards compatibility,
+ * you should really use the other request types.
  * </pre>
  *
  * Protobuf type {@code user_requests.UserLookupRequest}
@@ -632,7 +633,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    **
-   * A request for user information.
+   * A request for user information. This is kept for backwards compatibility,
+   * you should really use the other request types.
    * </pre>
    *
    * Protobuf type {@code user_requests.UserLookupRequest}

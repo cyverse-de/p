@@ -25,6 +25,31 @@ public final class UserProtobufs {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_Login_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_LoginStorage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_LoginStorage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_LoginIP_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_LoginIP_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_LoginUserAgent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_LoginUserAgent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_LoginWire_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_LoginWire_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_LoginListWire_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_LoginListWire_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_user_SavedSearches_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -34,6 +59,11 @@ public final class UserProtobufs {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_User_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_UserRef_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_UserRef_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -49,12 +79,29 @@ public final class UserProtobufs {
       "\001 \001(\t\022\022\n\nip_address\030\002 \001(\t\022\022\n\nuser_agent\030" +
       "\003 \001(\t\022.\n\nlogin_time\030\004 \001(\0132\032.google.proto" +
       "buf.Timestamp\022/\n\013logout_time\030\005 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"5\n\rSavedSearches\022" +
-      "\014\n\004uuid\030\001 \001(\t\022\026\n\016saved_searches\030\002 \001(\t\"&\n" +
-      "\004User\022\014\n\004uuid\030\001 \001(\t\022\020\n\010username\030\002 \001(\tBL\n" +
-      "\030org.cyverse.de.protobufsB\rUserProtobufs" +
-      "P\001Z\037github.com/cyverse-de/p/go/userb\006pro" +
-      "to3"
+      "gle.protobuf.Timestamp\"\371\001\n\014LoginStorage\022" +
+      "\017\n\007user_id\030\001 \001(\t\022\027\n\nip_address\030\002 \001(\tH\000\210\001" +
+      "\001\022\027\n\nuser_agent\030\003 \001(\tH\001\210\001\001\0223\n\nlogin_time" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampH\002\210\001\001\022" +
+      "4\n\013logout_time\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestampH\003\210\001\001B\r\n\013_ip_addressB\r\n\013_user_ag" +
+      "entB\r\n\013_login_timeB\016\n\014_logout_time\"\032\n\007Lo" +
+      "ginIP\022\017\n\007address\030\001 \001(\t\"\036\n\016LoginUserAgent" +
+      "\022\014\n\004full\030\001 \001(\t\"\203\002\n\tLoginWire\022\033\n\004user\030\001 \001" +
+      "(\0132\r.user.UserRef\022\036\n\002ip\030\002 \001(\0132\r.user.Log" +
+      "inIPH\000\210\001\001\022-\n\nuser_agent\030\003 \001(\0132\024.user.Log" +
+      "inUserAgentH\001\210\001\001\022.\n\nlogin_time\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\0224\n\013logout_time\030" +
+      "\005 \001(\0132\032.google.protobuf.TimestampH\002\210\001\001B\005" +
+      "\n\003_ipB\r\n\013_user_agentB\016\n\014_logout_time\"0\n\r" +
+      "LoginListWire\022\037\n\006logins\030\001 \003(\0132\017.user.Log" +
+      "inWire\"5\n\rSavedSearches\022\014\n\004uuid\030\001 \001(\t\022\026\n" +
+      "\016saved_searches\030\002 \001(\t\"&\n\004User\022\014\n\004uuid\030\001 " +
+      "\001(\t\022\020\n\010username\030\002 \001(\t\"I\n\007UserRef\022\025\n\010user" +
+      "name\030\001 \001(\tH\000\210\001\001\022\021\n\004uuid\030\002 \001(\tH\001\210\001\001B\013\n\t_u" +
+      "sernameB\007\n\005_uuidBL\n\030org.cyverse.de.proto" +
+      "bufsB\rUserProtobufsP\001Z\037github.com/cyvers" +
+      "e-de/p/go/userb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,18 +120,54 @@ public final class UserProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_Login_descriptor,
         new java.lang.String[] { "Uuid", "IpAddress", "UserAgent", "LoginTime", "LogoutTime", });
-    internal_static_user_SavedSearches_descriptor =
+    internal_static_user_LoginStorage_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_user_LoginStorage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_LoginStorage_descriptor,
+        new java.lang.String[] { "UserId", "IpAddress", "UserAgent", "LoginTime", "LogoutTime", "IpAddress", "UserAgent", "LoginTime", "LogoutTime", });
+    internal_static_user_LoginIP_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_user_LoginIP_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_LoginIP_descriptor,
+        new java.lang.String[] { "Address", });
+    internal_static_user_LoginUserAgent_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_user_LoginUserAgent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_LoginUserAgent_descriptor,
+        new java.lang.String[] { "Full", });
+    internal_static_user_LoginWire_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_user_LoginWire_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_LoginWire_descriptor,
+        new java.lang.String[] { "User", "Ip", "UserAgent", "LoginTime", "LogoutTime", "Ip", "UserAgent", "LogoutTime", });
+    internal_static_user_LoginListWire_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_user_LoginListWire_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_LoginListWire_descriptor,
+        new java.lang.String[] { "Logins", });
+    internal_static_user_SavedSearches_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_user_SavedSearches_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_SavedSearches_descriptor,
         new java.lang.String[] { "Uuid", "SavedSearches", });
     internal_static_user_User_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_user_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_User_descriptor,
         new java.lang.String[] { "Uuid", "Username", });
+    internal_static_user_UserRef_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_user_UserRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_UserRef_descriptor,
+        new java.lang.String[] { "Username", "Uuid", "Username", "Uuid", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

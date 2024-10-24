@@ -7,6 +7,7 @@ package org.cyverse.de.protobufs;
  * <pre>
  **
  * A response to a request for information about a single user.
+ * Please use the other, smaller requests and responses.
  * </pre>
  *
  * Protobuf type {@code user_requests.UserLookupResponse}
@@ -472,6 +473,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    **
    * A response to a request for information about a single user.
+   * Please use the other, smaller requests and responses.
    * </pre>
    *
    * Protobuf type {@code user_requests.UserLookupResponse}

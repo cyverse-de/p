@@ -29,7 +29,8 @@ enum ErrorCode {
 }
 
 /**
- * An error returned by a request handler.
+ * An error returned by a request handler. Kept around for backwards compatibility,
+ * please use Error for new messages.
  */
 message ServiceError {
     reserved 1;
@@ -43,4 +44,17 @@ message ServiceError {
     // The error's message.
     string message = 4;
 
+}
+
+/**
+ * Represents an error that occurred in the backend. Probably
+ * should not be returned directly by a HTTP+JSON or REST API.
+ **/
+message Error {
+    // Should roughly correspond to a type of error that can
+    // occur in the backend code.
+    ErrorCode code = 1;
+
+    // The message or stack trace generated when the error occurred.
+    string message = 4;
 }
