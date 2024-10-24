@@ -11,16 +11,41 @@ You will need the following:
 
 - `protoc`
 - `protoc-gen-go`
+- `protoc-gen-go-grpc`
 - `protoc-gen-doc`
 - `protoc-gen-prost`
 - A symlink to the protobuf `include/` directory in `/usr/local/include`
 
 ### Installation
 
-On MacOS, you can install `protoc` and `protoc-gen-go` with `homebrew`.
+On MacOS, you can install `protoc` with `homebrew`.
 
 ```
-brew install protobuf protoc-gen-go
+brew install protobuf
+```
+
+On Fedora, you can install `protoc` and header files with the following command:
+
+```
+sudo dnf install protobuf protobuf-devel
+```
+
+You can install `protoc-gen-go` with `go install`:
+
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+```
+
+You can install `protoc-gen-go-grpc` with `go-install`:
+
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go-grpc@latest
+```
+
+You can install `protoc-gen-doc` with the `go install` command:
+
+```
+go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
 ```
 
 Link the `google/` directory from `protobuf` into `/usr/local/include`,
@@ -30,13 +55,6 @@ installed above:
 ```
 sudo ln -sf $HOMEBREW_CELLAR/protobuf/3.19.4/include/google /usr/local/include/google
 ```
-
-You can install `protoc-gen-doc` with the `go install` command:
-
-```
-go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
-```
-
 
 ### Install Rust and Cargo on MacOS with zsh
 
@@ -79,7 +97,8 @@ That will install the `protoc-gen-prost` binary in `~/.cargo/bin`. You'll want t
 put that directory in your `$PATH` if it isn't already there.
 
 Next, install `protoc-gen-prost-serde` with Cargo:
-```bash
+
+````bash
 cargo install protoc-gen-prost-serde```
 
 ## Repo Layout
@@ -125,3 +144,4 @@ both work.
 Sometimes the VSCode Go support thinks that some of the modules needed by the
 `go` package are missing. I've found that reloading the window from the command
 palette fixes that problem.
+````
