@@ -112,7 +112,7 @@ message AddLoginRequest {
 }
 
 message LoginsResponse {
-    repeated user.LoginListWire list = 1;
+    user.LoginListWire list = 1;
     optional svcerror.Error error = 2;
 }
 

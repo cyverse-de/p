@@ -145,7 +145,7 @@ public final class UserRequestsProtobufs {
       "ts.PageSettingsH\001\210\001\001B\017\n\r_continuationB\007\n" +
       "\005_page\"1\n\017AddLoginRequest\022\036\n\005login\030\001 \001(\013" +
       "2\017.user.LoginWire\"b\n\016LoginsResponse\022!\n\004l" +
-      "ist\030\001 \003(\0132\023.user.LoginListWire\022#\n\005error\030" +
+      "ist\030\001 \001(\0132\023.user.LoginListWire\022#\n\005error\030" +
       "\002 \001(\0132\017.svcerror.ErrorH\000\210\001\001B\010\n\006_error\"6\n" +
       "\027GetSavedSearchesRequest\022\033\n\004user\030\001 \001(\0132\r" +
       ".user.UserRef\"a\n\027SetSavedSearchesRequest" +

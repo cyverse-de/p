@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private LoginsResponse() {
-    list_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -46,43 +45,29 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LIST_FIELD_NUMBER = 1;
-  private java.util.List<org.cyverse.de.protobufs.LoginListWire> list_;
+  private org.cyverse.de.protobufs.LoginListWire list_;
   /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
+   * <code>.user.LoginListWire list = 1;</code>
+   * @return Whether the list field is set.
    */
   @java.lang.Override
-  public java.util.List<org.cyverse.de.protobufs.LoginListWire> getListList() {
-    return list_;
+  public boolean hasList() {
+    return list_ != null;
   }
   /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
+   * <code>.user.LoginListWire list = 1;</code>
+   * @return The list.
    */
   @java.lang.Override
-  public java.util.List<? extends org.cyverse.de.protobufs.LoginListWireOrBuilder> 
-      getListOrBuilderList() {
-    return list_;
+  public org.cyverse.de.protobufs.LoginListWire getList() {
+    return list_ == null ? org.cyverse.de.protobufs.LoginListWire.getDefaultInstance() : list_;
   }
   /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
+   * <code>.user.LoginListWire list = 1;</code>
    */
   @java.lang.Override
-  public int getListCount() {
-    return list_.size();
-  }
-  /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.LoginListWire getList(int index) {
-    return list_.get(index);
-  }
-  /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder(
-      int index) {
-    return list_.get(index);
+  public org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder() {
+    return getList();
   }
 
   public static final int ERROR_FIELD_NUMBER = 2;
@@ -125,8 +110,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < list_.size(); i++) {
-      output.writeMessage(1, list_.get(i));
+    if (list_ != null) {
+      output.writeMessage(1, getList());
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getError());
@@ -140,9 +125,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < list_.size(); i++) {
+    if (list_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, list_.get(i));
+        .computeMessageSize(1, getList());
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -163,8 +148,11 @@ private static final long serialVersionUID = 0L;
     }
     org.cyverse.de.protobufs.LoginsResponse other = (org.cyverse.de.protobufs.LoginsResponse) obj;
 
-    if (!getListList()
-        .equals(other.getListList())) return false;
+    if (hasList() != other.hasList()) return false;
+    if (hasList()) {
+      if (!getList()
+          .equals(other.getList())) return false;
+    }
     if (hasError() != other.hasError()) return false;
     if (hasError()) {
       if (!getError()
@@ -181,9 +169,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getListCount() > 0) {
+    if (hasList()) {
       hash = (37 * hash) + LIST_FIELD_NUMBER;
-      hash = (53 * hash) + getListList().hashCode();
+      hash = (53 * hash) + getList().hashCode();
     }
     if (hasError()) {
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
@@ -317,7 +305,6 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getListFieldBuilder();
         getErrorFieldBuilder();
       }
     }
@@ -325,18 +312,17 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       if (listBuilder_ == null) {
-        list_ = java.util.Collections.emptyList();
+        list_ = null;
       } else {
         list_ = null;
-        listBuilder_.clear();
+        listBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (errorBuilder_ == null) {
         error_ = null;
       } else {
         errorBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -366,15 +352,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (listBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          list_ = java.util.Collections.unmodifiableList(list_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
         result.list_ = list_;
       } else {
         result.list_ = listBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000001) != 0)) {
         if (errorBuilder_ == null) {
           result.error_ = error_;
         } else {
@@ -431,31 +413,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(org.cyverse.de.protobufs.LoginsResponse other) {
       if (other == org.cyverse.de.protobufs.LoginsResponse.getDefaultInstance()) return this;
-      if (listBuilder_ == null) {
-        if (!other.list_.isEmpty()) {
-          if (list_.isEmpty()) {
-            list_ = other.list_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureListIsMutable();
-            list_.addAll(other.list_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.list_.isEmpty()) {
-          if (listBuilder_.isEmpty()) {
-            listBuilder_.dispose();
-            listBuilder_ = null;
-            list_ = other.list_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            listBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getListFieldBuilder() : null;
-          } else {
-            listBuilder_.addAllMessages(other.list_);
-          }
-        }
+      if (other.hasList()) {
+        mergeList(other.getList());
       }
       if (other.hasError()) {
         mergeError(other.getError());
@@ -487,23 +446,17 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              org.cyverse.de.protobufs.LoginListWire m =
-                  input.readMessage(
-                      org.cyverse.de.protobufs.LoginListWire.parser(),
-                      extensionRegistry);
-              if (listBuilder_ == null) {
-                ensureListIsMutable();
-                list_.add(m);
-              } else {
-                listBuilder_.addMessage(m);
-              }
+              input.readMessage(
+                  getListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getErrorFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             default: {
@@ -523,239 +476,118 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<org.cyverse.de.protobufs.LoginListWire> list_ =
-      java.util.Collections.emptyList();
-    private void ensureListIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        list_ = new java.util.ArrayList<org.cyverse.de.protobufs.LoginListWire>(list_);
-        bitField0_ |= 0x00000001;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
+    private org.cyverse.de.protobufs.LoginListWire list_;
+    private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.LoginListWire, org.cyverse.de.protobufs.LoginListWire.Builder, org.cyverse.de.protobufs.LoginListWireOrBuilder> listBuilder_;
+    /**
+     * <code>.user.LoginListWire list = 1;</code>
+     * @return Whether the list field is set.
+     */
+    public boolean hasList() {
+      return listBuilder_ != null || list_ != null;
+    }
+    /**
+     * <code>.user.LoginListWire list = 1;</code>
+     * @return The list.
+     */
+    public org.cyverse.de.protobufs.LoginListWire getList() {
+      if (listBuilder_ == null) {
+        return list_ == null ? org.cyverse.de.protobufs.LoginListWire.getDefaultInstance() : list_;
+      } else {
+        return listBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.user.LoginListWire list = 1;</code>
+     */
+    public Builder setList(org.cyverse.de.protobufs.LoginListWire value) {
+      if (listBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        list_ = value;
+        onChanged();
+      } else {
+        listBuilder_.setMessage(value);
+      }
 
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public java.util.List<org.cyverse.de.protobufs.LoginListWire> getListList() {
-      if (listBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(list_);
-      } else {
-        return listBuilder_.getMessageList();
-      }
+      return this;
     }
     /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public int getListCount() {
-      if (listBuilder_ == null) {
-        return list_.size();
-      } else {
-        return listBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public org.cyverse.de.protobufs.LoginListWire getList(int index) {
-      if (listBuilder_ == null) {
-        return list_.get(index);
-      } else {
-        return listBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
+     * <code>.user.LoginListWire list = 1;</code>
      */
     public Builder setList(
-        int index, org.cyverse.de.protobufs.LoginListWire value) {
-      if (listBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureListIsMutable();
-        list_.set(index, value);
-        onChanged();
-      } else {
-        listBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public Builder setList(
-        int index, org.cyverse.de.protobufs.LoginListWire.Builder builderForValue) {
-      if (listBuilder_ == null) {
-        ensureListIsMutable();
-        list_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        listBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public Builder addList(org.cyverse.de.protobufs.LoginListWire value) {
-      if (listBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureListIsMutable();
-        list_.add(value);
-        onChanged();
-      } else {
-        listBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public Builder addList(
-        int index, org.cyverse.de.protobufs.LoginListWire value) {
-      if (listBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureListIsMutable();
-        list_.add(index, value);
-        onChanged();
-      } else {
-        listBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public Builder addList(
         org.cyverse.de.protobufs.LoginListWire.Builder builderForValue) {
       if (listBuilder_ == null) {
-        ensureListIsMutable();
-        list_.add(builderForValue.build());
+        list_ = builderForValue.build();
         onChanged();
       } else {
-        listBuilder_.addMessage(builderForValue.build());
+        listBuilder_.setMessage(builderForValue.build());
       }
+
       return this;
     }
     /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
+     * <code>.user.LoginListWire list = 1;</code>
      */
-    public Builder addList(
-        int index, org.cyverse.de.protobufs.LoginListWire.Builder builderForValue) {
+    public Builder mergeList(org.cyverse.de.protobufs.LoginListWire value) {
       if (listBuilder_ == null) {
-        ensureListIsMutable();
-        list_.add(index, builderForValue.build());
+        if (list_ != null) {
+          list_ =
+            org.cyverse.de.protobufs.LoginListWire.newBuilder(list_).mergeFrom(value).buildPartial();
+        } else {
+          list_ = value;
+        }
         onChanged();
       } else {
-        listBuilder_.addMessage(index, builderForValue.build());
+        listBuilder_.mergeFrom(value);
       }
+
       return this;
     }
     /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public Builder addAllList(
-        java.lang.Iterable<? extends org.cyverse.de.protobufs.LoginListWire> values) {
-      if (listBuilder_ == null) {
-        ensureListIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, list_);
-        onChanged();
-      } else {
-        listBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
+     * <code>.user.LoginListWire list = 1;</code>
      */
     public Builder clearList() {
       if (listBuilder_ == null) {
-        list_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        list_ = null;
         onChanged();
       } else {
-        listBuilder_.clear();
+        list_ = null;
+        listBuilder_ = null;
       }
+
       return this;
     }
     /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
+     * <code>.user.LoginListWire list = 1;</code>
      */
-    public Builder removeList(int index) {
-      if (listBuilder_ == null) {
-        ensureListIsMutable();
-        list_.remove(index);
-        onChanged();
-      } else {
-        listBuilder_.remove(index);
-      }
-      return this;
+    public org.cyverse.de.protobufs.LoginListWire.Builder getListBuilder() {
+      
+      onChanged();
+      return getListFieldBuilder().getBuilder();
     }
     /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
+     * <code>.user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginListWire.Builder getListBuilder(
-        int index) {
-      return getListFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder(
-        int index) {
-      if (listBuilder_ == null) {
-        return list_.get(index);  } else {
-        return listBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public java.util.List<? extends org.cyverse.de.protobufs.LoginListWireOrBuilder> 
-         getListOrBuilderList() {
+    public org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder() {
       if (listBuilder_ != null) {
-        return listBuilder_.getMessageOrBuilderList();
+        return listBuilder_.getMessageOrBuilder();
       } else {
-        return java.util.Collections.unmodifiableList(list_);
+        return list_ == null ?
+            org.cyverse.de.protobufs.LoginListWire.getDefaultInstance() : list_;
       }
     }
     /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
+     * <code>.user.LoginListWire list = 1;</code>
      */
-    public org.cyverse.de.protobufs.LoginListWire.Builder addListBuilder() {
-      return getListFieldBuilder().addBuilder(
-          org.cyverse.de.protobufs.LoginListWire.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public org.cyverse.de.protobufs.LoginListWire.Builder addListBuilder(
-        int index) {
-      return getListFieldBuilder().addBuilder(
-          index, org.cyverse.de.protobufs.LoginListWire.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .user.LoginListWire list = 1;</code>
-     */
-    public java.util.List<org.cyverse.de.protobufs.LoginListWire.Builder> 
-         getListBuilderList() {
-      return getListFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
+    private com.google.protobuf.SingleFieldBuilderV3<
         org.cyverse.de.protobufs.LoginListWire, org.cyverse.de.protobufs.LoginListWire.Builder, org.cyverse.de.protobufs.LoginListWireOrBuilder> 
         getListFieldBuilder() {
       if (listBuilder_ == null) {
-        listBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        listBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             org.cyverse.de.protobufs.LoginListWire, org.cyverse.de.protobufs.LoginListWire.Builder, org.cyverse.de.protobufs.LoginListWireOrBuilder>(
-                list_,
-                ((bitField0_ & 0x00000001) != 0),
+                getList(),
                 getParentForChildren(),
                 isClean());
         list_ = null;
@@ -771,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the error field is set.
      */
     public boolean hasError() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>optional .svcerror.Error error = 2;</code>
@@ -797,7 +629,7 @@ private static final long serialVersionUID = 0L;
       } else {
         errorBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -811,7 +643,7 @@ private static final long serialVersionUID = 0L;
       } else {
         errorBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -819,7 +651,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeError(org.cyverse.de.protobufs.Error value) {
       if (errorBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000001) != 0) &&
             error_ != null &&
             error_ != org.cyverse.de.protobufs.Error.getDefaultInstance()) {
           error_ =
@@ -831,7 +663,7 @@ private static final long serialVersionUID = 0L;
       } else {
         errorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -844,14 +676,14 @@ private static final long serialVersionUID = 0L;
       } else {
         errorBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
     /**
      * <code>optional .svcerror.Error error = 2;</code>
      */
     public org.cyverse.de.protobufs.Error.Builder getErrorBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return getErrorFieldBuilder().getBuilder();
     }

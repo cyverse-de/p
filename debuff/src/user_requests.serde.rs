@@ -718,15 +718,15 @@ impl serde::Serialize for LoginsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.list.is_empty() {
+        if self.list.is_some() {
             len += 1;
         }
         if self.error.is_some() {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("user_requests.LoginsResponse", len)?;
-        if !self.list.is_empty() {
-            struct_ser.serialize_field("list", &self.list)?;
+        if let Some(v) = self.list.as_ref() {
+            struct_ser.serialize_field("list", v)?;
         }
         if let Some(v) = self.error.as_ref() {
             struct_ser.serialize_field("error", v)?;
@@ -799,7 +799,7 @@ impl<'de> serde::Deserialize<'de> for LoginsResponse {
                             if list__.is_some() {
                                 return Err(serde::de::Error::duplicate_field("list"));
                             }
-                            list__ = Some(map_.next_value()?);
+                            list__ = map_.next_value()?;
                         }
                         GeneratedField::Error => {
                             if error__.is_some() {
@@ -810,7 +810,7 @@ impl<'de> serde::Deserialize<'de> for LoginsResponse {
                     }
                 }
                 Ok(LoginsResponse {
-                    list: list__.unwrap_or_default(),
+                    list: list__,
                     error: error__,
                 })
             }

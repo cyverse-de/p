@@ -8,28 +8,19 @@ public interface LoginsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
+   * <code>.user.LoginListWire list = 1;</code>
+   * @return Whether the list field is set.
    */
-  java.util.List<org.cyverse.de.protobufs.LoginListWire> 
-      getListList();
+  boolean hasList();
   /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
+   * <code>.user.LoginListWire list = 1;</code>
+   * @return The list.
    */
-  org.cyverse.de.protobufs.LoginListWire getList(int index);
+  org.cyverse.de.protobufs.LoginListWire getList();
   /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
+   * <code>.user.LoginListWire list = 1;</code>
    */
-  int getListCount();
-  /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
-   */
-  java.util.List<? extends org.cyverse.de.protobufs.LoginListWireOrBuilder> 
-      getListOrBuilderList();
-  /**
-   * <code>repeated .user.LoginListWire list = 1;</code>
-   */
-  org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder(
-      int index);
+  org.cyverse.de.protobufs.LoginListWireOrBuilder getListOrBuilder();
 
   /**
    * <code>optional .svcerror.Error error = 2;</code>

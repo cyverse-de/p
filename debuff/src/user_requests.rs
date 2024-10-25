@@ -132,8 +132,8 @@ pub struct AddLoginRequest {
 }
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LoginsResponse {
-    #[prost(message, repeated, tag="1")]
-    pub list: ::prost::alloc::vec::Vec<super::user::LoginListWire>,
+    #[prost(message, optional, tag="1")]
+    pub list: ::core::option::Option<super::user::LoginListWire>,
     #[prost(message, optional, tag="2")]
     pub error: ::core::option::Option<super::svcerror::Error>,
 }

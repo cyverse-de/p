@@ -385,7 +385,7 @@ Don&#39;t expose this over the wire.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| list | [user.LoginListWire](#user-LoginListWire) | repeated |  |
+| list | [user.LoginListWire](#user-LoginListWire) |  |  |
 | error | [svcerror.Error](#svcerror-Error) | optional |  |
 
 
