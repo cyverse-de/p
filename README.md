@@ -14,7 +14,6 @@ You will need the following:
 - `protoc-gen-go-grpc`
 - `protoc-gen-doc`
 - `protoc-gen-prost`
-- A symlink to the protobuf `include/` directory in `/usr/local/include`
 
 ### Installation
 
@@ -46,14 +45,6 @@ You can install `protoc-gen-doc` with the `go install` command:
 
 ```
 go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
-```
-
-Link the `google/` directory from `protobuf` into `/usr/local/include`,
-replacing the `3.19.4` in the directory path with whichever version got
-installed above:
-
-```
-sudo ln -sf $HOMEBREW_CELLAR/protobuf/3.19.4/include/google /usr/local/include/google
 ```
 
 ### Install Rust and Cargo on MacOS with zsh
