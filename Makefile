@@ -1,84 +1,86 @@
-.PHONY: all compile go-tidy go-init clean java-jar compile-go compile-java compile-rust documentation clean-go clean-java clean-rust clean-docs
-
-all: clean compile go-init go-tidy java-jar documentation
-comma:=
+VENDOR_DIR = ./protos/vendor
+PROTOS_DIR = ./protos
+DOCS_DIR = ./docs
+GO_OUTPUT_DIR = ./go
+JAVA_OUTPUT_DIR = ./java
 
 export GOTOOLCHAIN=auto
 
+.PHONY: all
+all: clean compile go-init go-tidy java-jar documentation
+comma:=
+
+.PHONY: compile-go
 compile-go:
-	protoc -I ./protos -I ./protos/vendor \
-		--go_out=./go \
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) \
+		--go_out=$(GO_OUTPUT_DIR) \
 		--go_opt=module=github.com/cyverse-de/p/go \
-		--go-grpc_out=./go \
+		--go-grpc_out=$(GO_OUTPUT_DIR) \
 		--go-grpc_opt=module=github.com/cyverse-de/p/go \
-		protos/*.proto
+		$(PROTOS_DIR)/*.proto
 
+.PHONY: compile-java
 compile-java:
-	protoc -I ./protos -I ./protos/vendor --java_out=./java protos/*.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --java_out=$(JAVA_OUTPUT_DIR)/ $(PROTOS_DIR)/*.proto
 
-compile-rust:
-	protoc -I ./protos -I ./protos/vendor \
-		--prost_opt=default_package_filename=gen.rs \
-		--prost_opt=compile_well_known_types \
-		--prost_opt=extern_path=.google.protobuf=::pbjson_types \
-		--prost_opt=type_attribute=.groups.ServiceInfo='#[derive(garde::Validate)]' \
-		--prost_opt=field_attribute=.groups.ServiceInfo='#[garde(length(min=1))]' \
-		--prost_out=debuff/src/ \
-		--prost-serde_out=debuff/src \
-		protos/*.proto
+.PHONY: compile
+compile: compile-go compile-java
 
-compile: compile-go compile-java compile-rust
-
+.PHONY: documentation
 documentation:
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,analysis.md protos/analysis_*.proto
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,monitoring.md protos/monitoring_*.proto
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,qms.md protos/qms_*.proto
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,common.md protos/header.proto protos/svcerror.proto
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,users.md protos/user.proto protos/user_requests.proto
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,requests.md protos/requests.proto
-	protoc -I ./protos -I ./protos/vendor --doc_out=./docs --doc_opt=markdown,tools.md protos/tools.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,analysis.md $(PROTOS_DIR)/analysis_*.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,monitoring.md $(PROTOS_DIR)/monitoring_*.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,qms.md $(PROTOS_DIR)/qms_*.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,common.md $(PROTOS_DIR)/header.proto $(PROTOS_DIR)/svcerror.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,users.md $(PROTOS_DIR)/user.proto $(PROTOS_DIR)/user_requests.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,requests.md $(PROTOS_DIR)/requests.proto
+	protoc -I $(PROTOS_DIR) -I $(VENDOR_DIR) --doc_out=$(DOCS_DIR) --doc_opt=markdown,tools.md $(PROTOS_DIR)/tools.proto
 	
-
+.PHONY: java-jar
 java-jar:
 	lein jar
 
+.PHONY: go-init
 go-init:
-	cd ./go/containers && go mod init github.com/cyverse-de/p/go/containers
-	cd ./go/analysis && go mod init github.com/cyverse-de/p/go/analysis
-	cd ./go/user && go mod init github.com/cyverse-de/p/go/user
-	cd ./go/svcerror && go mod init github.com/cyverse-de/p/go/svcerror
-	cd ./go/header && go mod init github.com/cyverse-de/p/go/header
-	cd ./go/qms && go mod init github.com/cyverse-de/p/go/qms
-	cd ./go/monitoring && go mod init github.com/cyverse-de/p/go/monitoring
-	cd ./go/requests && go mod init github.com/cyverse-de/p/go/requests
-	cd ./go/tools && go mod init github.com/cyverse-de/p/go/tools
-	cd ./go/userservice && go mod init github.com/cyverse-de/p/go/userservice
+	cd $(GO_OUTPUT_DIR)/containers && go mod init github.com/cyverse-de/p/go/containers
+	cd $(GO_OUTPUT_DIR)/analysis && go mod init github.com/cyverse-de/p/go/analysis
+	cd $(GO_OUTPUT_DIR)/user && go mod init github.com/cyverse-de/p/go/user
+	cd $(GO_OUTPUT_DIR)/svcerror && go mod init github.com/cyverse-de/p/go/svcerror
+	cd $(GO_OUTPUT_DIR)/header && go mod init github.com/cyverse-de/p/go/header
+	cd $(GO_OUTPUT_DIR)/qms && go mod init github.com/cyverse-de/p/go/qms
+	cd $(GO_OUTPUT_DIR)/monitoring && go mod init github.com/cyverse-de/p/go/monitoring
+	cd $(GO_OUTPUT_DIR)/requests && go mod init github.com/cyverse-de/p/go/requests
+	cd $(GO_OUTPUT_DIR)/tools && go mod init github.com/cyverse-de/p/go/tools
+	cd $(GO_OUTPUT_DIR)/userservice && go mod init github.com/cyverse-de/p/go/userservice
 
+.PHONY: go-tidy
 go-tidy:
-	cd ./go/containers && go mod tidy
-	cd ./go/analysis && go mod tidy
-	cd ./go/user && go mod tidy
-	cd ./go/svcerror && go mod tidy
-	cd ./go/header && go mod tidy
-	cd ./go/qms && go mod tidy
-	cd ./go/monitoring && go mod tidy
-	cd ./go/requests && go mod tidy
-	cd ./go/tools && go mod tidy
-	cd ./go/userservice && go mod tidy
+	cd $(GO_OUTPUT_DIR)/containers && go mod tidy
+	cd $(GO_OUTPUT_DIR)/analysis && go mod tidy
+	cd $(GO_OUTPUT_DIR)/user && go mod tidy
+	cd $(GO_OUTPUT_DIR)/svcerror && go mod tidy
+	cd $(GO_OUTPUT_DIR)/header && go mod tidy
+	cd $(GO_OUTPUT_DIR)/qms && go mod tidy
+	cd $(GO_OUTPUT_DIR)/monitoring && go mod tidy
+	cd $(GO_OUTPUT_DIR)/requests && go mod tidy
+	cd $(GO_OUTPUT_DIR)/tools && go mod tidy
+	cd $(GO_OUTPUT_DIR)/userservice && go mod tidy
 
+.PHONY: clean-go
 clean-go:
-	rm -rf ./go/*
+	rm -rf $(GO_OUTPUT_DIR)/*
 
+.PHONY: clean-java
 clean-java:
-	rm -rf ./java/*
+	rm -rf $(JAVA_OUTPUT_DIR)//*
 	lein clean
 
+.PHONY: clean-docs
 clean-docs:
-	rm -rf ./docs/*
+	rm -rf $(DOCS_DIR)/*
 
-clean-rust:
-	rm -rf ./debuff/src/*
+.PHONY: clean
+clean: clean-go clean-java clean-docs
 
-clean: clean-go clean-java clean-rust clean-docs
-
-godirs: $(ls ./go/)
+.PHONY: godirs
+godirs: $(ls $(GO_OUTPUT_DIR)/)
