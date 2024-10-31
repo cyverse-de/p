@@ -4,6 +4,12 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ * A request to set a user's preferences. Accepts either a user's UUID
+ * or username, along with the new version of the user's preferences,
+ * encoded as JSON.
+ * </pre>
+ *
  * Protobuf type {@code user_requests.SetUserPreferencesRequest}
  */
 public final class SetUserPreferencesRequest extends
@@ -279,6 +285,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A request to set a user's preferences. Accepts either a user's UUID
+   * or username, along with the new version of the user's preferences,
+   * encoded as JSON.
+   * </pre>
+   *
    * Protobuf type {@code user_requests.SetUserPreferencesRequest}
    */
   public static final class Builder extends

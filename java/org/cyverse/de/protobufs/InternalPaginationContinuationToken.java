@@ -5,7 +5,7 @@ package org.cyverse.de.protobufs;
 
 /**
  * <pre>
- * Don't expose this over the wire. 
+ * Don't expose this over the wire.
  * </pre>
  *
  * Protobuf type {@code user_requests.InternalPaginationContinuationToken}
@@ -51,7 +51,11 @@ private static final long serialVersionUID = 0L;
   public static final int OFFSET_FIELD_NUMBER = 1;
   private int offset_;
   /**
-   * <code>optional int32 offset = 1;</code>
+   * <pre>
+   * offset into the result set
+   * </pre>
+   *
+   * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
    * @return Whether the offset field is set.
    */
   @java.lang.Override
@@ -59,7 +63,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>optional int32 offset = 1;</code>
+   * <pre>
+   * offset into the result set
+   * </pre>
+   *
+   * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
    * @return The offset.
    */
   @java.lang.Override
@@ -70,7 +78,11 @@ private static final long serialVersionUID = 0L;
   public static final int NUMBER_FIELD_NUMBER = 2;
   private int number_;
   /**
-   * <code>optional int32 number = 2;</code>
+   * <pre>
+   * page number
+   * </pre>
+   *
+   * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
    * @return Whether the number field is set.
    */
   @java.lang.Override
@@ -78,7 +90,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>optional int32 number = 2;</code>
+   * <pre>
+   * page number
+   * </pre>
+   *
+   * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
    * @return The number.
    */
   @java.lang.Override
@@ -89,7 +105,11 @@ private static final long serialVersionUID = 0L;
   public static final int SIZE_FIELD_NUMBER = 3;
   private int size_;
   /**
-   * <code>optional int32 size = 3;</code>
+   * <pre>
+   * number of results returned in a page.
+   * </pre>
+   *
+   * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
    * @return Whether the size field is set.
    */
   @java.lang.Override
@@ -97,7 +117,11 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
-   * <code>optional int32 size = 3;</code>
+   * <pre>
+   * number of results returned in a page.
+   * </pre>
+   *
+   * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
    * @return The size.
    */
   @java.lang.Override
@@ -299,7 +323,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Don't expose this over the wire. 
+   * Don't expose this over the wire.
    * </pre>
    *
    * Protobuf type {@code user_requests.InternalPaginationContinuationToken}
@@ -498,7 +522,11 @@ private static final long serialVersionUID = 0L;
 
     private int offset_ ;
     /**
-     * <code>optional int32 offset = 1;</code>
+     * <pre>
+     * offset into the result set
+     * </pre>
+     *
+     * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
      * @return Whether the offset field is set.
      */
     @java.lang.Override
@@ -506,7 +534,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional int32 offset = 1;</code>
+     * <pre>
+     * offset into the result set
+     * </pre>
+     *
+     * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
      * @return The offset.
      */
     @java.lang.Override
@@ -514,7 +546,11 @@ private static final long serialVersionUID = 0L;
       return offset_;
     }
     /**
-     * <code>optional int32 offset = 1;</code>
+     * <pre>
+     * offset into the result set
+     * </pre>
+     *
+     * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The offset to set.
      * @return This builder for chaining.
      */
@@ -525,7 +561,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional int32 offset = 1;</code>
+     * <pre>
+     * offset into the result set
+     * </pre>
+     *
+     * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearOffset() {
@@ -537,7 +577,11 @@ private static final long serialVersionUID = 0L;
 
     private int number_ ;
     /**
-     * <code>optional int32 number = 2;</code>
+     * <pre>
+     * page number
+     * </pre>
+     *
+     * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
      * @return Whether the number field is set.
      */
     @java.lang.Override
@@ -545,7 +589,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional int32 number = 2;</code>
+     * <pre>
+     * page number
+     * </pre>
+     *
+     * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
      * @return The number.
      */
     @java.lang.Override
@@ -553,7 +601,11 @@ private static final long serialVersionUID = 0L;
       return number_;
     }
     /**
-     * <code>optional int32 number = 2;</code>
+     * <pre>
+     * page number
+     * </pre>
+     *
+     * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The number to set.
      * @return This builder for chaining.
      */
@@ -564,7 +616,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional int32 number = 2;</code>
+     * <pre>
+     * page number
+     * </pre>
+     *
+     * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearNumber() {
@@ -576,7 +632,11 @@ private static final long serialVersionUID = 0L;
 
     private int size_ ;
     /**
-     * <code>optional int32 size = 3;</code>
+     * <pre>
+     * number of results returned in a page.
+     * </pre>
+     *
+     * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
      * @return Whether the size field is set.
      */
     @java.lang.Override
@@ -584,7 +644,11 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional int32 size = 3;</code>
+     * <pre>
+     * number of results returned in a page.
+     * </pre>
+     *
+     * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
      * @return The size.
      */
     @java.lang.Override
@@ -592,7 +656,11 @@ private static final long serialVersionUID = 0L;
       return size_;
     }
     /**
-     * <code>optional int32 size = 3;</code>
+     * <pre>
+     * number of results returned in a page.
+     * </pre>
+     *
+     * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
      * @param value The size to set.
      * @return This builder for chaining.
      */
@@ -603,7 +671,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional int32 size = 3;</code>
+     * <pre>
+     * number of results returned in a page.
+     * </pre>
+     *
+     * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearSize() {

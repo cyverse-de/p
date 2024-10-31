@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ * A response containing information about a user and/or any errors
+ * encountered while generating the response.
+ * </pre>
+ *
  * Protobuf type {@code user_requests.UserResponse}
  */
 public final class UserResponse extends
@@ -272,6 +277,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A response containing information about a user and/or any errors
+   * encountered while generating the response.
+   * </pre>
+   *
    * Protobuf type {@code user_requests.UserResponse}
    */
   public static final class Builder extends

@@ -4,6 +4,10 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ * A request for information about a user.
+ * </pre>
+ *
  * Protobuf type {@code user_requests.UserRequest}
  */
 public final class UserRequest extends
@@ -230,6 +234,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A request for information about a user.
+   * </pre>
+   *
    * Protobuf type {@code user_requests.UserRequest}
    */
   public static final class Builder extends

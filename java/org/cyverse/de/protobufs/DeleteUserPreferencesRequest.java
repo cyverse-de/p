@@ -4,6 +4,11 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ * A request to delete a user's preferences. Accepts user a user's UUID
+ * or username.
+ * </pre>
+ *
  * Protobuf type {@code user_requests.DeleteUserPreferencesRequest}
  */
 public final class DeleteUserPreferencesRequest extends
@@ -230,6 +235,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A request to delete a user's preferences. Accepts user a user's UUID
+   * or username.
+   * </pre>
+   *
    * Protobuf type {@code user_requests.DeleteUserPreferencesRequest}
    */
   public static final class Builder extends

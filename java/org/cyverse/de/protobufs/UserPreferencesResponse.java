@@ -4,6 +4,13 @@
 package org.cyverse.de.protobufs;
 
 /**
+ * <pre>
+ * A response containing information about a user's preferences. Contains
+ * user information (set according to what was in the request), preferences
+ * information (if it's applicable for the request), and any errors
+ * encountered while processing the request.
+ * </pre>
+ *
  * Protobuf type {@code user_requests.UserPreferencesResponse}
  */
 public final class UserPreferencesResponse extends
@@ -335,6 +342,13 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A response containing information about a user's preferences. Contains
+   * user information (set according to what was in the request), preferences
+   * information (if it's applicable for the request), and any errors
+   * encountered while processing the request.
+   * </pre>
+   *
    * Protobuf type {@code user_requests.UserPreferencesResponse}
    */
   public static final class Builder extends

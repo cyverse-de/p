@@ -5,6 +5,7 @@ package user_requests;
 import "header.proto";
 import "user.proto";
 import "svcerror.proto";
+import "buf/validate/validate.proto";
 
 option go_package = "github.com/cyverse-de/p/go/user";
 
@@ -60,28 +61,42 @@ message UserLookupResponse {
     svcerror.ServiceError error = 7;
 }
 
+// A request for information about a user.
 message UserRequest {
     user.UserRef user = 1;
 }
 
+// A response containing information about a user and/or any errors
+// encountered while generating the response.
 message UserResponse {
     user.UserRef user = 1;
     svcerror.Error error = 2;
 }
 
+// A request for a user's preferences. Accepts either a user's UUID
+// or username.
 message GetUserPreferencesRequest {
     user.UserRef user = 1;
 }
 
+// A request to set a user's preferences. Accepts either a user's UUID
+// or username, along with the new version of the user's preferences,
+// encoded as JSON.
 message SetUserPreferencesRequest {
     user.UserRef user = 1;
     string preferences = 2;
 }
 
+// A request to delete a user's preferences. Accepts user a user's UUID
+// or username.
 message DeleteUserPreferencesRequest {
     user.UserRef user = 1;
 }
 
+// A response containing information about a user's preferences. Contains
+// user information (set according to what was in the request), preferences
+// information (if it's applicable for the request), and any errors
+// encountered while processing the request.
 message UserPreferencesResponse {
     optional user.UserRef user = 1;
     optional string preferences = 2;
@@ -89,16 +104,26 @@ message UserPreferencesResponse {
 }
 
 message PageSettings {
-    int32 offset = 1;
-    int32 number = 2;
-    int32 size = 3;
+    // offset into the result set
+    int32 offset = 1 [(buf.validate.field).int32.gte = 0];
+
+    // page number
+    int32 number = 2 [(buf.validate.field).int32.gt = 0];
+
+    // number of results returned in a page.
+    int32 size = 3 [(buf.validate.field).int32.gt = 0];
 }
 
-// Don't expose this over the wire. 
+// Don't expose this over the wire.
 message InternalPaginationContinuationToken {
-    optional int32 offset = 1;
-    optional int32 number = 2;
-    optional int32 size = 3;
+    // offset into the result set
+    optional int32 offset = 1 [(buf.validate.field).int32.gte = 0];
+
+    // page number
+    optional int32 number = 2 [(buf.validate.field).int32.gt = 0];
+
+    // number of results returned in a page.
+    optional int32 size = 3 [(buf.validate.field).int32.gt = 0];
 }
 
 message GetLoginsRequest {

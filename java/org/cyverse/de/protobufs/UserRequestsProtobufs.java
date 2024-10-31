@@ -109,55 +109,58 @@ public final class UserRequestsProtobufs {
   static {
     java.lang.String[] descriptorData = {
       "\n\023user_requests.proto\022\ruser_requests\032\014he" +
-      "ader.proto\032\nuser.proto\032\016svcerror.proto\"\205" +
-      "\002\n\021UserLookupRequest\022\022\n\010username\030\001 \001(\tH\000" +
-      "\022\021\n\007user_id\030\002 \001(\tH\000\022\025\n\013analysis_id\030\003 \001(\t" +
-      "H\000\022\026\n\016include_logins\030\005 \001(\010\022\033\n\023include_pr" +
-      "eferences\030\006 \001(\010\022\036\n\026include_saved_searche" +
-      "s\030\007 \001(\010\022\023\n\013login_limit\030\010 \001(\r\022\024\n\014login_of" +
-      "fset\030\t \001(\r\022\036\n\006header\030\n \001(\0132\016.header.Head" +
-      "erB\014\n\nlookup_idsJ\004\010\004\020\005\"\355\001\n\022UserLookupRes" +
-      "ponse\022\036\n\006header\030\001 \001(\0132\016.header.Header\022\036\n" +
-      "\nbasic_info\030\002 \001(\0132\n.user.User\022\033\n\006logins\030" +
-      "\003 \003(\0132\013.user.Login\022&\n\013preferences\030\004 \001(\0132" +
-      "\021.user.Preferences\022+\n\016saved_searches\030\005 \003" +
-      "(\0132\023.user.SavedSearches\022%\n\005error\030\007 \001(\0132\026" +
-      ".svcerror.ServiceError\"*\n\013UserRequest\022\033\n" +
-      "\004user\030\001 \001(\0132\r.user.UserRef\"K\n\014UserRespon" +
-      "se\022\033\n\004user\030\001 \001(\0132\r.user.UserRef\022\036\n\005error" +
-      "\030\002 \001(\0132\017.svcerror.Error\"8\n\031GetUserPrefer" +
-      "encesRequest\022\033\n\004user\030\001 \001(\0132\r.user.UserRe" +
-      "f\"M\n\031SetUserPreferencesRequest\022\033\n\004user\030\001" +
-      " \001(\0132\r.user.UserRef\022\023\n\013preferences\030\002 \001(\t" +
-      "\";\n\034DeleteUserPreferencesRequest\022\033\n\004user" +
-      "\030\001 \001(\0132\r.user.UserRef\"\235\001\n\027UserPreference" +
-      "sResponse\022 \n\004user\030\001 \001(\0132\r.user.UserRefH\000" +
-      "\210\001\001\022\030\n\013preferences\030\002 \001(\tH\001\210\001\001\022#\n\005error\030\003" +
-      " \001(\0132\017.svcerror.ErrorH\002\210\001\001B\007\n\005_userB\016\n\014_" +
-      "preferencesB\010\n\006_error\"<\n\014PageSettings\022\016\n" +
-      "\006offset\030\001 \001(\005\022\016\n\006number\030\002 \001(\005\022\014\n\004size\030\003 " +
-      "\001(\005\"\201\001\n#InternalPaginationContinuationTo" +
-      "ken\022\023\n\006offset\030\001 \001(\005H\000\210\001\001\022\023\n\006number\030\002 \001(\005" +
-      "H\001\210\001\001\022\021\n\004size\030\003 \001(\005H\002\210\001\001B\t\n\007_offsetB\t\n\007_" +
-      "numberB\007\n\005_size\"\224\001\n\020GetLoginsRequest\022\033\n\004" +
-      "user\030\001 \001(\0132\r.user.UserRef\022\031\n\014continuatio" +
-      "n\030\002 \001(\tH\000\210\001\001\022.\n\004page\030\003 \001(\0132\033.user_reques" +
-      "ts.PageSettingsH\001\210\001\001B\017\n\r_continuationB\007\n" +
-      "\005_page\"1\n\017AddLoginRequest\022\036\n\005login\030\001 \001(\013" +
-      "2\017.user.LoginWire\"b\n\016LoginsResponse\022!\n\004l" +
-      "ist\030\001 \001(\0132\023.user.LoginListWire\022#\n\005error\030" +
-      "\002 \001(\0132\017.svcerror.ErrorH\000\210\001\001B\010\n\006_error\"6\n" +
-      "\027GetSavedSearchesRequest\022\033\n\004user\030\001 \001(\0132\r" +
-      ".user.UserRef\"a\n\027SetSavedSearchesRequest" +
-      "\022\033\n\004user\030\001 \001(\0132\r.user.UserRef\022)\n\010searche" +
-      "s\030\002 \001(\0132\027.user.SavedSearchesWire\"9\n\032Dele" +
-      "teSavedSearchesRequest\022\033\n\004user\030\001 \001(\0132\r.u" +
-      "ser.UserRef\"\203\001\n\025SavedSearchesResponse\022.\n" +
-      "\010searches\030\001 \001(\0132\027.user.SavedSearchesWire" +
-      "H\000\210\001\001\022#\n\005error\030\002 \001(\0132\017.svcerror.ErrorH\001\210" +
-      "\001\001B\013\n\t_searchesB\010\n\006_errorBT\n\030org.cyverse" +
-      ".de.protobufsB\025UserRequestsProtobufsP\001Z\037" +
-      "github.com/cyverse-de/p/go/userb\006proto3"
+      "ader.proto\032\nuser.proto\032\016svcerror.proto\032\033" +
+      "buf/validate/validate.proto\"\205\002\n\021UserLook" +
+      "upRequest\022\022\n\010username\030\001 \001(\tH\000\022\021\n\007user_id" +
+      "\030\002 \001(\tH\000\022\025\n\013analysis_id\030\003 \001(\tH\000\022\026\n\016inclu" +
+      "de_logins\030\005 \001(\010\022\033\n\023include_preferences\030\006" +
+      " \001(\010\022\036\n\026include_saved_searches\030\007 \001(\010\022\023\n\013" +
+      "login_limit\030\010 \001(\r\022\024\n\014login_offset\030\t \001(\r\022" +
+      "\036\n\006header\030\n \001(\0132\016.header.HeaderB\014\n\nlooku" +
+      "p_idsJ\004\010\004\020\005\"\355\001\n\022UserLookupResponse\022\036\n\006he" +
+      "ader\030\001 \001(\0132\016.header.Header\022\036\n\nbasic_info" +
+      "\030\002 \001(\0132\n.user.User\022\033\n\006logins\030\003 \003(\0132\013.use" +
+      "r.Login\022&\n\013preferences\030\004 \001(\0132\021.user.Pref" +
+      "erences\022+\n\016saved_searches\030\005 \003(\0132\023.user.S" +
+      "avedSearches\022%\n\005error\030\007 \001(\0132\026.svcerror.S" +
+      "erviceError\"*\n\013UserRequest\022\033\n\004user\030\001 \001(\013" +
+      "2\r.user.UserRef\"K\n\014UserResponse\022\033\n\004user\030" +
+      "\001 \001(\0132\r.user.UserRef\022\036\n\005error\030\002 \001(\0132\017.sv" +
+      "cerror.Error\"8\n\031GetUserPreferencesReques" +
+      "t\022\033\n\004user\030\001 \001(\0132\r.user.UserRef\"M\n\031SetUse" +
+      "rPreferencesRequest\022\033\n\004user\030\001 \001(\0132\r.user" +
+      ".UserRef\022\023\n\013preferences\030\002 \001(\t\";\n\034DeleteU" +
+      "serPreferencesRequest\022\033\n\004user\030\001 \001(\0132\r.us" +
+      "er.UserRef\"\235\001\n\027UserPreferencesResponse\022 " +
+      "\n\004user\030\001 \001(\0132\r.user.UserRefH\000\210\001\001\022\030\n\013pref" +
+      "erences\030\002 \001(\tH\001\210\001\001\022#\n\005error\030\003 \001(\0132\017.svce" +
+      "rror.ErrorH\002\210\001\001B\007\n\005_userB\016\n\014_preferences" +
+      "B\010\n\006_error\"W\n\014PageSettings\022\027\n\006offset\030\001 \001" +
+      "(\005B\007\272H\004\032\002(\000\022\027\n\006number\030\002 \001(\005B\007\272H\004\032\002 \000\022\025\n\004" +
+      "size\030\003 \001(\005B\007\272H\004\032\002 \000\"\234\001\n#InternalPaginati" +
+      "onContinuationToken\022\034\n\006offset\030\001 \001(\005B\007\272H\004" +
+      "\032\002(\000H\000\210\001\001\022\034\n\006number\030\002 \001(\005B\007\272H\004\032\002 \000H\001\210\001\001\022" +
+      "\032\n\004size\030\003 \001(\005B\007\272H\004\032\002 \000H\002\210\001\001B\t\n\007_offsetB\t" +
+      "\n\007_numberB\007\n\005_size\"\224\001\n\020GetLoginsRequest\022" +
+      "\033\n\004user\030\001 \001(\0132\r.user.UserRef\022\031\n\014continua" +
+      "tion\030\002 \001(\tH\000\210\001\001\022.\n\004page\030\003 \001(\0132\033.user_req" +
+      "uests.PageSettingsH\001\210\001\001B\017\n\r_continuation" +
+      "B\007\n\005_page\"1\n\017AddLoginRequest\022\036\n\005login\030\001 " +
+      "\001(\0132\017.user.LoginWire\"b\n\016LoginsResponse\022!" +
+      "\n\004list\030\001 \001(\0132\023.user.LoginListWire\022#\n\005err" +
+      "or\030\002 \001(\0132\017.svcerror.ErrorH\000\210\001\001B\010\n\006_error" +
+      "\"6\n\027GetSavedSearchesRequest\022\033\n\004user\030\001 \001(" +
+      "\0132\r.user.UserRef\"a\n\027SetSavedSearchesRequ" +
+      "est\022\033\n\004user\030\001 \001(\0132\r.user.UserRef\022)\n\010sear" +
+      "ches\030\002 \001(\0132\027.user.SavedSearchesWire\"9\n\032D" +
+      "eleteSavedSearchesRequest\022\033\n\004user\030\001 \001(\0132" +
+      "\r.user.UserRef\"\203\001\n\025SavedSearchesResponse" +
+      "\022.\n\010searches\030\001 \001(\0132\027.user.SavedSearchesW" +
+      "ireH\000\210\001\001\022#\n\005error\030\002 \001(\0132\017.svcerror.Error" +
+      "H\001\210\001\001B\013\n\t_searchesB\010\n\006_errorBT\n\030org.cyve" +
+      "rse.de.protobufsB\025UserRequestsProtobufsP" +
+      "\001Z\037github.com/cyverse-de/p/go/userb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -165,6 +168,7 @@ public final class UserRequestsProtobufs {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.UserProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
+          build.buf.validate.ValidateProto.getDescriptor(),
         });
     internal_static_user_requests_UserLookupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -268,9 +272,15 @@ public final class UserRequestsProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_requests_SavedSearchesResponse_descriptor,
         new java.lang.String[] { "Searches", "Error", "Searches", "Error", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(build.buf.validate.ValidateProto.field);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.UserProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
+    build.buf.validate.ValidateProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

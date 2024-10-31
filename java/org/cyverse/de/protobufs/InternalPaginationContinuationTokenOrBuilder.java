@@ -8,34 +8,58 @@ public interface InternalPaginationContinuationTokenOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>optional int32 offset = 1;</code>
+   * <pre>
+   * offset into the result set
+   * </pre>
+   *
+   * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
    * @return Whether the offset field is set.
    */
   boolean hasOffset();
   /**
-   * <code>optional int32 offset = 1;</code>
+   * <pre>
+   * offset into the result set
+   * </pre>
+   *
+   * <code>optional int32 offset = 1 [(.buf.validate.field) = { ... }</code>
    * @return The offset.
    */
   int getOffset();
 
   /**
-   * <code>optional int32 number = 2;</code>
+   * <pre>
+   * page number
+   * </pre>
+   *
+   * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
    * @return Whether the number field is set.
    */
   boolean hasNumber();
   /**
-   * <code>optional int32 number = 2;</code>
+   * <pre>
+   * page number
+   * </pre>
+   *
+   * <code>optional int32 number = 2 [(.buf.validate.field) = { ... }</code>
    * @return The number.
    */
   int getNumber();
 
   /**
-   * <code>optional int32 size = 3;</code>
+   * <pre>
+   * number of results returned in a page.
+   * </pre>
+   *
+   * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
    * @return Whether the size field is set.
    */
   boolean hasSize();
   /**
-   * <code>optional int32 size = 3;</code>
+   * <pre>
+   * number of results returned in a page.
+   * </pre>
+   *
+   * <code>optional int32 size = 3 [(.buf.validate.field) = { ... }</code>
    * @return The size.
    */
   int getSize();
