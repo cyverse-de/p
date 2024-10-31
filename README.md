@@ -38,7 +38,7 @@ go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 You can install `protoc-gen-go-grpc` with `go-install`:
 
 ```
-go install google.golang.org/protobuf/cmd/protoc-gen-go-grpc@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 
 You can install `protoc-gen-doc` with the `go install` command:
@@ -47,51 +47,6 @@ You can install `protoc-gen-doc` with the `go install` command:
 go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
 ```
 
-### Install Rust and Cargo on MacOS with zsh
-
-Instructions originally found at https://stackoverflow.com/a/68617314.
-
-Run the following in a terminal.
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-When prompted, customize the installation. When asked about modifying the PATH,
-select `No`. All of the other questions can be set to their default setting.
-
-Next, open your `.zshrc` file (typically located at `~/.zshrc`) and add:
-
-```
-export PATH PATH="$HOME/.cargo/bin:$PATH"
-```
-
-Finally, source your `.zshrc` file:\
-
-```
-. ~/.zshrc
-```
-
-Run `rustc --version` to make sure the rust compiler is installed.
-
-Run `cargo --version` to make sure that cargo is installed.
-
-### Install protoc-gen-prost
-
-Install `protoc-gen-prost` with Cargo:
-
-```
-cargo install protoc-gen-prost
-```
-
-That will install the `protoc-gen-prost` binary in `~/.cargo/bin`. You'll want to
-put that directory in your `$PATH` if it isn't already there.
-
-Next, install `protoc-gen-prost-serde` with Cargo:
-
-````bash
-cargo install protoc-gen-prost-serde```
-
 ## Repo Layout
 
 `protos/` contains the protocol buffers definitions.
@@ -99,11 +54,6 @@ cargo install protoc-gen-prost-serde```
 `go/` contains the generated Go modules. Do not edit these files directly.
 
 `java/` contains the generated Java packages. Do not edit these files directly.
-
-`debuff/` contains the Rust cargo project containing the generated rust module.
-The file containing the generated code is `debuff/src/gen.rs`. Do not edit that
-file directly. The other files in `debuff` may contain utility code to make the
-generated code
 
 ## Building Go packages
 
