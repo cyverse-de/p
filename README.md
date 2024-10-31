@@ -9,11 +9,13 @@ data types that cross service boundaries in the Discovery Environment.
 
 You will need the following:
 
+- The Go programming language - See [go.dev](https://go.dev)
+- A relatively recent version of Java. Probably OpenJDK.
 - `protoc`
 - `protoc-gen-go`
 - `protoc-gen-go-grpc`
 - `protoc-gen-doc`
-- `protoc-gen-prost`
+- `lein` - See [https://leiningen.org](https://leiningen.org)
 
 ### Installation
 
