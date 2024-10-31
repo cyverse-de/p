@@ -8,24 +8,24 @@ public interface SavedSearchesStorageOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   com.google.protobuf.ByteString
       getUuidBytes();
 
   /**
-   * <code>string user_id = 2;</code>
+   * <code>string user_id = 2 [(.buf.validate.field) = { ... }</code>
    * @return The userId.
    */
   java.lang.String getUserId();
   /**
-   * <code>string user_id = 2;</code>
+   * <code>string user_id = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for userId.
    */
   com.google.protobuf.ByteString

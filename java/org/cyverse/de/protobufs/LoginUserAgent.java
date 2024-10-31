@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
   public static final int FULL_FIELD_NUMBER = 1;
   private volatile java.lang.Object full_;
   /**
-   * <code>string full = 1;</code>
+   * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
    * @return The full.
    */
   @java.lang.Override
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string full = 1;</code>
+   * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for full.
    */
   @java.lang.Override
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object full_ = "";
     /**
-     * <code>string full = 1;</code>
+     * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
      * @return The full.
      */
     public java.lang.String getFull() {
@@ -415,7 +415,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string full = 1;</code>
+     * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for full.
      */
     public com.google.protobuf.ByteString
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string full = 1;</code>
+     * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The full to set.
      * @return This builder for chaining.
      */
@@ -447,7 +447,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string full = 1;</code>
+     * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFull() {
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string full = 1;</code>
+     * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for full to set.
      * @return This builder for chaining.
      */

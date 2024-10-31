@@ -5,6 +5,7 @@
             :url "https://cyverse.org/license"}
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [clojusc/protobuf "3.5.1-v1.1"]
-                 [com.google.protobuf/protobuf-java "3.25.3"]]
+                 [com.google.protobuf/protobuf-java "3.25.3"]
+                 [build.buf/protovalidate "0.4.2"]]
   :plugins [[lein-ancient "0.7.0"]]
   :java-source-paths ["java"])

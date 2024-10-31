@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
    * this, but it's more likely for it to have the username.
    * </pre>
    *
-   * <code>optional string uuid = 2;</code>
+   * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
    * @return Whether the uuid field is set.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * this, but it's more likely for it to have the username.
    * </pre>
    *
-   * <code>optional string uuid = 2;</code>
+   * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   @java.lang.Override
@@ -161,7 +161,7 @@ private static final long serialVersionUID = 0L;
    * this, but it's more likely for it to have the username.
    * </pre>
    *
-   * <code>optional string uuid = 2;</code>
+   * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   @java.lang.Override
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * this, but it's more likely for it to have the username.
      * </pre>
      *
-     * <code>optional string uuid = 2;</code>
+     * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
      * @return Whether the uuid field is set.
      */
     public boolean hasUuid() {
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * this, but it's more likely for it to have the username.
      * </pre>
      *
-     * <code>optional string uuid = 2;</code>
+     * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
      * @return The uuid.
      */
     public java.lang.String getUuid() {
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * this, but it's more likely for it to have the username.
      * </pre>
      *
-     * <code>optional string uuid = 2;</code>
+     * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for uuid.
      */
     public com.google.protobuf.ByteString
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * this, but it's more likely for it to have the username.
      * </pre>
      *
-     * <code>optional string uuid = 2;</code>
+     * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
      */
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * this, but it's more likely for it to have the username.
      * </pre>
      *
-     * <code>optional string uuid = 2;</code>
+     * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearUuid() {
@@ -765,7 +765,7 @@ private static final long serialVersionUID = 0L;
      * this, but it's more likely for it to have the username.
      * </pre>
      *
-     * <code>optional string uuid = 2;</code>
+     * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
      */

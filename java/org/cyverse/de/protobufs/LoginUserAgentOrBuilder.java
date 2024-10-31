@@ -8,12 +8,12 @@ public interface LoginUserAgentOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string full = 1;</code>
+   * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
    * @return The full.
    */
   java.lang.String getFull();
   /**
-   * <code>string full = 1;</code>
+   * <code>string full = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for full.
    */
   com.google.protobuf.ByteString

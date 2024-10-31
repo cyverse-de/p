@@ -58,7 +58,7 @@ public interface LoginWireOrBuilder extends
    * will be set automatically by the backend if it's not set.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return Whether the loginTime field is set.
    */
   boolean hasLoginTime();
@@ -68,7 +68,7 @@ public interface LoginWireOrBuilder extends
    * will be set automatically by the backend if it's not set.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return The loginTime.
    */
   com.google.protobuf.Timestamp getLoginTime();
@@ -78,7 +78,7 @@ public interface LoginWireOrBuilder extends
    * will be set automatically by the backend if it's not set.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    */
   com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder();
 
@@ -88,7 +88,7 @@ public interface LoginWireOrBuilder extends
    * hasn't logged out yet.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>optional .google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return Whether the logoutTime field is set.
    */
   boolean hasLogoutTime();
@@ -98,7 +98,7 @@ public interface LoginWireOrBuilder extends
    * hasn't logged out yet.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>optional .google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return The logoutTime.
    */
   com.google.protobuf.Timestamp getLogoutTime();
@@ -108,7 +108,7 @@ public interface LoginWireOrBuilder extends
    * hasn't logged out yet.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>optional .google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    */
   com.google.protobuf.TimestampOrBuilder getLogoutTimeOrBuilder();
 }

@@ -12,7 +12,7 @@ public interface LoginStorageOrBuilder extends
    * The UUID of the user. Not the username. Must be set.
    * </pre>
    *
-   * <code>string user_id = 1;</code>
+   * <code>string user_id = 1 [(.buf.validate.field) = { ... }</code>
    * @return The userId.
    */
   java.lang.String getUserId();
@@ -21,7 +21,7 @@ public interface LoginStorageOrBuilder extends
    * The UUID of the user. Not the username. Must be set.
    * </pre>
    *
-   * <code>string user_id = 1;</code>
+   * <code>string user_id = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for userId.
    */
   com.google.protobuf.ByteString
@@ -32,7 +32,7 @@ public interface LoginStorageOrBuilder extends
    * The IP address of the user that logged in.
    * </pre>
    *
-   * <code>optional string ip_address = 2;</code>
+   * <code>optional string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return Whether the ipAddress field is set.
    */
   boolean hasIpAddress();
@@ -41,7 +41,7 @@ public interface LoginStorageOrBuilder extends
    * The IP address of the user that logged in.
    * </pre>
    *
-   * <code>optional string ip_address = 2;</code>
+   * <code>optional string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return The ipAddress.
    */
   java.lang.String getIpAddress();
@@ -50,7 +50,7 @@ public interface LoginStorageOrBuilder extends
    * The IP address of the user that logged in.
    * </pre>
    *
-   * <code>optional string ip_address = 2;</code>
+   * <code>optional string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for ipAddress.
    */
   com.google.protobuf.ByteString
@@ -61,7 +61,7 @@ public interface LoginStorageOrBuilder extends
    * The user agent string of the user that logged in.
    * </pre>
    *
-   * <code>optional string user_agent = 3;</code>
+   * <code>optional string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return Whether the userAgent field is set.
    */
   boolean hasUserAgent();
@@ -70,7 +70,7 @@ public interface LoginStorageOrBuilder extends
    * The user agent string of the user that logged in.
    * </pre>
    *
-   * <code>optional string user_agent = 3;</code>
+   * <code>optional string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return The userAgent.
    */
   java.lang.String getUserAgent();
@@ -79,7 +79,7 @@ public interface LoginStorageOrBuilder extends
    * The user agent string of the user that logged in.
    * </pre>
    *
-   * <code>optional string user_agent = 3;</code>
+   * <code>optional string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for userAgent.
    */
   com.google.protobuf.ByteString
@@ -91,7 +91,7 @@ public interface LoginStorageOrBuilder extends
    * will be set automatically by the backend if it's not set.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp login_time = 4;</code>
+   * <code>optional .google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return Whether the loginTime field is set.
    */
   boolean hasLoginTime();
@@ -101,7 +101,7 @@ public interface LoginStorageOrBuilder extends
    * will be set automatically by the backend if it's not set.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp login_time = 4;</code>
+   * <code>optional .google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return The loginTime.
    */
   com.google.protobuf.Timestamp getLoginTime();
@@ -111,7 +111,7 @@ public interface LoginStorageOrBuilder extends
    * will be set automatically by the backend if it's not set.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp login_time = 4;</code>
+   * <code>optional .google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    */
   com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder();
 
@@ -121,7 +121,7 @@ public interface LoginStorageOrBuilder extends
    * hasn't logged out yet.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>optional .google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return Whether the logoutTime field is set.
    */
   boolean hasLogoutTime();
@@ -131,7 +131,7 @@ public interface LoginStorageOrBuilder extends
    * hasn't logged out yet.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>optional .google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return The logoutTime.
    */
   com.google.protobuf.Timestamp getLogoutTime();
@@ -141,7 +141,7 @@ public interface LoginStorageOrBuilder extends
    * hasn't logged out yet.
    * </pre>
    *
-   * <code>optional .google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>optional .google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    */
   com.google.protobuf.TimestampOrBuilder getLogoutTimeOrBuilder();
 }

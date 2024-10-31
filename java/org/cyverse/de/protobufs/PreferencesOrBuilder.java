@@ -8,12 +8,12 @@ public interface PreferencesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   com.google.protobuf.ByteString
@@ -24,7 +24,7 @@ public interface PreferencesOrBuilder extends
    * should come across as JSON.
    * </pre>
    *
-   * <code>string preferences = 2;</code>
+   * <code>string preferences = 2 [(.buf.validate.field) = { ... }</code>
    * @return The preferences.
    */
   java.lang.String getPreferences();
@@ -33,7 +33,7 @@ public interface PreferencesOrBuilder extends
    * should come across as JSON.
    * </pre>
    *
-   * <code>string preferences = 2;</code>
+   * <code>string preferences = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for preferences.
    */
   com.google.protobuf.ByteString

@@ -84,43 +84,57 @@ public final class UserProtobufs {
   static {
     java.lang.String[] descriptorData = {
       "\n\nuser.proto\022\004user\032\037google/protobuf/time" +
-      "stamp.proto\"0\n\013Preferences\022\014\n\004uuid\030\001 \001(\t" +
-      "\022\023\n\013preferences\030\002 \001(\t\"\236\001\n\005Login\022\014\n\004uuid\030" +
-      "\001 \001(\t\022\022\n\nip_address\030\002 \001(\t\022\022\n\nuser_agent\030" +
-      "\003 \001(\t\022.\n\nlogin_time\030\004 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022/\n\013logout_time\030\005 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"\371\001\n\014LoginStorage\022" +
-      "\017\n\007user_id\030\001 \001(\t\022\027\n\nip_address\030\002 \001(\tH\000\210\001" +
-      "\001\022\027\n\nuser_agent\030\003 \001(\tH\001\210\001\001\0223\n\nlogin_time" +
-      "\030\004 \001(\0132\032.google.protobuf.TimestampH\002\210\001\001\022" +
-      "4\n\013logout_time\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampH\003\210\001\001B\r\n\013_ip_addressB\r\n\013_user_ag" +
-      "entB\r\n\013_login_timeB\016\n\014_logout_time\"\032\n\007Lo" +
-      "ginIP\022\017\n\007address\030\001 \001(\t\"\036\n\016LoginUserAgent" +
-      "\022\014\n\004full\030\001 \001(\t\"\203\002\n\tLoginWire\022\033\n\004user\030\001 \001" +
-      "(\0132\r.user.UserRef\022\036\n\002ip\030\002 \001(\0132\r.user.Log" +
-      "inIPH\000\210\001\001\022-\n\nuser_agent\030\003 \001(\0132\024.user.Log" +
-      "inUserAgentH\001\210\001\001\022.\n\nlogin_time\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\0224\n\013logout_time\030" +
-      "\005 \001(\0132\032.google.protobuf.TimestampH\002\210\001\001B\005" +
-      "\n\003_ipB\r\n\013_user_agentB\016\n\014_logout_time\"0\n\r" +
-      "LoginListWire\022\037\n\006logins\030\001 \003(\0132\017.user.Log" +
-      "inWire\"5\n\rSavedSearches\022\014\n\004uuid\030\001 \001(\t\022\026\n" +
-      "\016saved_searches\030\002 \001(\t\"M\n\024SavedSearchesSt" +
-      "orage\022\014\n\004uuid\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\026\n\016" +
-      "saved_searches\030\003 \001(\t\"H\n\021SavedSearchesWir" +
-      "e\022\033\n\004user\030\001 \001(\0132\r.user.UserRef\022\026\n\016saved_" +
-      "searches\030\002 \001(\t\"&\n\004User\022\014\n\004uuid\030\001 \001(\t\022\020\n\010" +
-      "username\030\002 \001(\t\"I\n\007UserRef\022\025\n\010username\030\001 " +
-      "\001(\tH\000\210\001\001\022\021\n\004uuid\030\002 \001(\tH\001\210\001\001B\013\n\t_username" +
-      "B\007\n\005_uuidBL\n\030org.cyverse.de.protobufsB\rU" +
-      "serProtobufsP\001Z\037github.com/cyverse-de/p/" +
-      "go/userb\006proto3"
+      "stamp.proto\032\033buf/validate/validate.proto" +
+      "\"C\n\013Preferences\022\026\n\004uuid\030\001 \001(\tB\010\272H\005r\003\260\001\001\022" +
+      "\034\n\013preferences\030\002 \001(\tB\007\272H\004r\002\020\001\"\251\002\n\005Login\022" +
+      "\026\n\004uuid\030\001 \001(\tB\010\272H\005r\003\260\001\001\022\033\n\nip_address\030\002 " +
+      "\001(\tB\007\272H\004r\002p\001\022\033\n\nuser_agent\030\003 \001(\tB\007\272H\004r\002\020" +
+      "\000\0228\n\nlogin_time\030\004 \001(\0132\032.google.protobuf." +
+      "TimestampB\010\272H\005\262\001\0028\001\0229\n\013logout_time\030\005 \001(\013" +
+      "2\032.google.protobuf.TimestampB\010\272H\005\262\001\0028\001:Y" +
+      "\272HV\032T\n\022logout_after_login\022\032logout must b" +
+      "e after login\032\"this.logout_time > this.l" +
+      "ogin_time\"\222\003\n\014LoginStorage\022\031\n\007user_id\030\001 " +
+      "\001(\tB\010\272H\005r\003\260\001\001\022 \n\nip_address\030\002 \001(\tB\007\272H\004r\002" +
+      "p\001H\000\210\001\001\022 \n\nuser_agent\030\003 \001(\tB\007\272H\004r\002\020\000H\001\210\001" +
+      "\001\022=\n\nlogin_time\030\004 \001(\0132\032.google.protobuf." +
+      "TimestampB\010\272H\005\262\001\0028\001H\002\210\001\001\022>\n\013logout_time\030" +
+      "\005 \001(\0132\032.google.protobuf.TimestampB\010\272H\005\262\001" +
+      "\0028\001H\003\210\001\001:g\272Hd\032b\n login_storage_logout_af" +
+      "ter_login\022\032logout must be after login\032\"t" +
+      "his.logout_time > this.login_timeB\r\n\013_ip" +
+      "_addressB\r\n\013_user_agentB\r\n\013_login_timeB\016" +
+      "\n\014_logout_time\"#\n\007LoginIP\022\030\n\007address\030\001 \001" +
+      "(\tB\007\272H\004r\002p\001\"\'\n\016LoginUserAgent\022\025\n\004full\030\001 " +
+      "\001(\tB\007\272H\004r\002\020\000\"\200\003\n\tLoginWire\022\033\n\004user\030\001 \001(\013" +
+      "2\r.user.UserRef\022\036\n\002ip\030\002 \001(\0132\r.user.Login" +
+      "IPH\000\210\001\001\022-\n\nuser_agent\030\003 \001(\0132\024.user.Login" +
+      "UserAgentH\001\210\001\001\0228\n\nlogin_time\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampB\010\272H\005\262\001\0028\001\022>\n\013logo" +
+      "ut_time\030\005 \001(\0132\032.google.protobuf.Timestam" +
+      "pB\010\272H\005\262\001\0028\001H\002\210\001\001:g\272Hd\032b\n login_storage_l" +
+      "ogout_after_login\022\032logout must be after " +
+      "login\032\"this.logout_time > this.login_tim" +
+      "eB\005\n\003_ipB\r\n\013_user_agentB\016\n\014_logout_time\"" +
+      "0\n\rLoginListWire\022\037\n\006logins\030\001 \003(\0132\017.user." +
+      "LoginWire\"?\n\rSavedSearches\022\026\n\004uuid\030\001 \001(\t" +
+      "B\010\272H\005r\003\260\001\001\022\026\n\016saved_searches\030\002 \001(\t\"a\n\024Sa" +
+      "vedSearchesStorage\022\026\n\004uuid\030\001 \001(\tB\010\272H\005r\003\260" +
+      "\001\001\022\031\n\007user_id\030\002 \001(\tB\010\272H\005r\003\260\001\001\022\026\n\016saved_s" +
+      "earches\030\003 \001(\t\"H\n\021SavedSearchesWire\022\033\n\004us" +
+      "er\030\001 \001(\0132\r.user.UserRef\022\026\n\016saved_searche" +
+      "s\030\002 \001(\t\"0\n\004User\022\026\n\004uuid\030\001 \001(\tB\010\272H\005r\003\260\001\001\022" +
+      "\020\n\010username\030\002 \001(\t\"S\n\007UserRef\022\025\n\010username" +
+      "\030\001 \001(\tH\000\210\001\001\022\033\n\004uuid\030\002 \001(\tB\010\272H\005r\003\260\001\001H\001\210\001\001" +
+      "B\013\n\t_usernameB\007\n\005_uuidBL\n\030org.cyverse.de" +
+      ".protobufsB\rUserProtobufsP\001Z\037github.com/" +
+      "cyverse-de/p/go/userb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          build.buf.validate.ValidateProto.getDescriptor(),
         });
     internal_static_user_Preferences_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -194,7 +208,14 @@ public final class UserProtobufs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_UserRef_descriptor,
         new java.lang.String[] { "Username", "Uuid", "Username", "Uuid", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(build.buf.validate.ValidateProto.field);
+    registry.add(build.buf.validate.ValidateProto.message);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    build.buf.validate.ValidateProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

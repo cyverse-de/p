@@ -8,12 +8,12 @@ public interface UserOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   com.google.protobuf.ByteString

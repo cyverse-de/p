@@ -8,68 +8,68 @@ public interface LoginOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   com.google.protobuf.ByteString
       getUuidBytes();
 
   /**
-   * <code>string ip_address = 2;</code>
+   * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return The ipAddress.
    */
   java.lang.String getIpAddress();
   /**
-   * <code>string ip_address = 2;</code>
+   * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for ipAddress.
    */
   com.google.protobuf.ByteString
       getIpAddressBytes();
 
   /**
-   * <code>string user_agent = 3;</code>
+   * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return The userAgent.
    */
   java.lang.String getUserAgent();
   /**
-   * <code>string user_agent = 3;</code>
+   * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for userAgent.
    */
   com.google.protobuf.ByteString
       getUserAgentBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return Whether the loginTime field is set.
    */
   boolean hasLoginTime();
   /**
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return The loginTime.
    */
   com.google.protobuf.Timestamp getLoginTime();
   /**
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    */
   com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return Whether the logoutTime field is set.
    */
   boolean hasLogoutTime();
   /**
-   * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return The logoutTime.
    */
   com.google.protobuf.Timestamp getLogoutTime();
   /**
-   * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    */
   com.google.protobuf.TimestampOrBuilder getLogoutTimeOrBuilder();
 }

@@ -3,6 +3,7 @@ syntax = "proto3";
 package user;
 
 import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
 
 option go_package = "github.com/cyverse-de/p/go/user";
 
@@ -13,62 +14,79 @@ option java_outer_classname = "UserProtobufs";
 // How the preferences are stored in the backend. Don't expose
 // this through a service/API.
 message Preferences {
-  string uuid = 1;
-  string preferences = 2; // should come across as JSON.
+  string uuid = 1 [(buf.validate.field).string.uuid = true];
+  string preferences = 2 [(buf.validate.field).string.min_len = 1]; // should come across as JSON.
 }
 
 // Backwards compatibility version. Use LoginStorage and
 // LoginWire for new messages.
 message Login {
-  string uuid = 1;
-  string ip_address = 2;
-  string user_agent = 3;
-  google.protobuf.Timestamp login_time = 4;
-  google.protobuf.Timestamp logout_time = 5;
+  option (buf.validate.message).cel = {
+    id: "logout_after_login"
+    message: "logout must be after login",
+    expression: "this.logout_time > this.login_time"
+  };
+  string uuid = 1 [(buf.validate.field).string.uuid = true];
+  string ip_address = 2 [(buf.validate.field).string.ip = true];
+  string user_agent = 3 [(buf.validate.field).string.min_len = 0];
+  google.protobuf.Timestamp login_time = 4 [(buf.validate.field).timestamp.lt_now = true];
+  google.protobuf.Timestamp logout_time = 5 [(buf.validate.field).timestamp.lt_now = true];
 }
 
 // How a login is stored in the backend. Don't send this over the
 // wire.
 message LoginStorage {
+  option (buf.validate.message).cel = {
+    id: "login_storage_logout_after_login",
+    message: "logout must be after login",
+    expression: "this.logout_time > this.login_time"
+  };
+
   // The UUID of the user. Not the username. Must be set.
-  string user_id = 1;
+  string user_id = 1 [(buf.validate.field).string.uuid = true];
 
   // The IP address of the user that logged in.
-  optional string ip_address = 2;
+  optional string ip_address = 2 [(buf.validate.field).string.ip = true];
 
   // The user agent string of the user that logged in.
-  optional string user_agent = 3;
+  optional string user_agent = 3 [(buf.validate.field).string.min_len = 0];
 
   // The time the user logged in. If you're adding a login, this
   // will be set automatically by the backend if it's not set.
-  optional google.protobuf.Timestamp login_time = 4;
+  optional google.protobuf.Timestamp login_time = 4 [(buf.validate.field).timestamp.lt_now = true];
 
   // The time the user logged out. Could be unset if the user
   // hasn't logged out yet.
-  optional google.protobuf.Timestamp logout_time = 5;
+  optional google.protobuf.Timestamp logout_time = 5 [(buf.validate.field).timestamp.lt_now = true];
 }
 
 message LoginIP {
-  string address = 1;
+  string address = 1 [(buf.validate.field).string.ip = true];
 }
 
 message LoginUserAgent {
-  string full = 1;
+  string full = 1 [(buf.validate.field).string.min_len = 0];
 }
 
 // A wire-safe version of a login record.
 message LoginWire {
+  option (buf.validate.message).cel = {
+    id: "login_storage_logout_after_login",
+    message: "logout must be after login",
+    expression: "this.logout_time > this.login_time"
+  };
+
   UserRef user = 1;
   optional LoginIP ip = 2;
   optional LoginUserAgent user_agent = 3;
 
   // The time the user logged in. If you're adding a login, this
   // will be set automatically by the backend if it's not set.
-  google.protobuf.Timestamp login_time = 4;
+  google.protobuf.Timestamp login_time = 4 [(buf.validate.field).timestamp.lt_now = true];
 
   // The time the user logged out. Could be unset if the user
   // hasn't logged out yet.
-  optional google.protobuf.Timestamp logout_time = 5;
+  optional google.protobuf.Timestamp logout_time = 5 [(buf.validate.field).timestamp.lt_now = true];
 }
 
 // A list of logins that can go out over the wire.
@@ -79,13 +97,13 @@ message LoginListWire {
 // Maintained for backwards compatibility. Use the Wire and Storage versions
 // for new messages
 message SavedSearches {
-  string uuid = 1;
+  string uuid = 1 [(buf.validate.field).string.uuid = true];
   string saved_searches = 2;
 }
 
 message SavedSearchesStorage {
-  string uuid = 1;
-  string user_id = 2;
+  string uuid = 1 [(buf.validate.field).string.uuid = true];
+  string user_id = 2 [(buf.validate.field).string.uuid = true];
   string saved_searches = 3;
 }
 
@@ -99,7 +117,7 @@ message SavedSearchesWire {
  * Don't use this directly in Request messages.
  */
 message User {
-  string uuid = 1;
+  string uuid = 1 [(buf.validate.field).string.uuid = true];
   string username = 2;
 }
 
@@ -114,6 +132,5 @@ message UserRef {
 
   // The UUID of the user in the database. A service can have
   // this, but it's more likely for it to have the username.
-  optional string uuid = 2;
+  optional string uuid = 2 [(buf.validate.field).string.uuid = true];
 }
-

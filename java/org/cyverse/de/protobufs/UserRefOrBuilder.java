@@ -51,7 +51,7 @@ public interface UserRefOrBuilder extends
    * this, but it's more likely for it to have the username.
    * </pre>
    *
-   * <code>optional string uuid = 2;</code>
+   * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
    * @return Whether the uuid field is set.
    */
   boolean hasUuid();
@@ -61,7 +61,7 @@ public interface UserRefOrBuilder extends
    * this, but it's more likely for it to have the username.
    * </pre>
    *
-   * <code>optional string uuid = 2;</code>
+   * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   java.lang.String getUuid();
@@ -71,7 +71,7 @@ public interface UserRefOrBuilder extends
    * this, but it's more likely for it to have the username.
    * </pre>
    *
-   * <code>optional string uuid = 2;</code>
+   * <code>optional string uuid = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   com.google.protobuf.ByteString

@@ -8,12 +8,12 @@ public interface LoginIPOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [(.buf.validate.field) = { ... }</code>
    * @return The address.
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 1;</code>
+   * <code>string address = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for address.
    */
   com.google.protobuf.ByteString

@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
   public static final int UUID_FIELD_NUMBER = 1;
   private volatile java.lang.Object uuid_;
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The uuid.
    */
   @java.lang.Override
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string uuid = 1;</code>
+   * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for uuid.
    */
   @java.lang.Override
@@ -92,7 +92,7 @@ private static final long serialVersionUID = 0L;
   public static final int IP_ADDRESS_FIELD_NUMBER = 2;
   private volatile java.lang.Object ipAddress_;
   /**
-   * <code>string ip_address = 2;</code>
+   * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return The ipAddress.
    */
   @java.lang.Override
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string ip_address = 2;</code>
+   * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for ipAddress.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
   public static final int USER_AGENT_FIELD_NUMBER = 3;
   private volatile java.lang.Object userAgent_;
   /**
-   * <code>string user_agent = 3;</code>
+   * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return The userAgent.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string user_agent = 3;</code>
+   * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
    * @return The bytes for userAgent.
    */
   @java.lang.Override
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
   public static final int LOGIN_TIME_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp loginTime_;
   /**
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return Whether the loginTime field is set.
    */
   @java.lang.Override
@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
     return loginTime_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    * @return The loginTime.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
     return loginTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : loginTime_;
   }
   /**
-   * <code>.google.protobuf.Timestamp login_time = 4;</code>
+   * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder() {
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
   public static final int LOGOUT_TIME_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp logoutTime_;
   /**
-   * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return Whether the logoutTime field is set.
    */
   @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
     return logoutTime_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    * @return The logoutTime.
    */
   @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
     return logoutTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : logoutTime_;
   }
   /**
-   * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+   * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLogoutTimeOrBuilder() {
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uuid_ = "";
     /**
-     * <code>string uuid = 1;</code>
+     * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
      * @return The uuid.
      */
     public java.lang.String getUuid() {
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string uuid = 1;</code>
+     * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for uuid.
      */
     public com.google.protobuf.ByteString
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string uuid = 1;</code>
+     * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The uuid to set.
      * @return This builder for chaining.
      */
@@ -705,7 +705,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string uuid = 1;</code>
+     * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearUuid() {
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string uuid = 1;</code>
+     * <code>string uuid = 1 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for uuid to set.
      * @return This builder for chaining.
      */
@@ -733,7 +733,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object ipAddress_ = "";
     /**
-     * <code>string ip_address = 2;</code>
+     * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
      * @return The ipAddress.
      */
     public java.lang.String getIpAddress() {
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string ip_address = 2;</code>
+     * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for ipAddress.
      */
     public com.google.protobuf.ByteString
@@ -766,7 +766,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string ip_address = 2;</code>
+     * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The ipAddress to set.
      * @return This builder for chaining.
      */
@@ -781,7 +781,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string ip_address = 2;</code>
+     * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearIpAddress() {
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string ip_address = 2;</code>
+     * <code>string ip_address = 2 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for ipAddress to set.
      * @return This builder for chaining.
      */
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object userAgent_ = "";
     /**
-     * <code>string user_agent = 3;</code>
+     * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
      * @return The userAgent.
      */
     public java.lang.String getUserAgent() {
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_agent = 3;</code>
+     * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
      * @return The bytes for userAgent.
      */
     public com.google.protobuf.ByteString
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_agent = 3;</code>
+     * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
      * @param value The userAgent to set.
      * @return This builder for chaining.
      */
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_agent = 3;</code>
+     * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearUserAgent() {
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_agent = 3;</code>
+     * <code>string user_agent = 3 [(.buf.validate.field) = { ... }</code>
      * @param value The bytes for userAgent to set.
      * @return This builder for chaining.
      */
@@ -887,14 +887,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> loginTimeBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      * @return Whether the loginTime field is set.
      */
     public boolean hasLoginTime() {
       return loginTimeBuilder_ != null || loginTime_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      * @return The loginTime.
      */
     public com.google.protobuf.Timestamp getLoginTime() {
@@ -905,7 +905,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     public Builder setLoginTime(com.google.protobuf.Timestamp value) {
       if (loginTimeBuilder_ == null) {
@@ -921,7 +921,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     public Builder setLoginTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     public Builder mergeLoginTime(com.google.protobuf.Timestamp value) {
       if (loginTimeBuilder_ == null) {
@@ -953,7 +953,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     public Builder clearLoginTime() {
       if (loginTimeBuilder_ == null) {
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     public com.google.protobuf.Timestamp.Builder getLoginTimeBuilder() {
       
@@ -975,7 +975,7 @@ private static final long serialVersionUID = 0L;
       return getLoginTimeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     public com.google.protobuf.TimestampOrBuilder getLoginTimeOrBuilder() {
       if (loginTimeBuilder_ != null) {
@@ -986,7 +986,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp login_time = 4;</code>
+     * <code>.google.protobuf.Timestamp login_time = 4 [(.buf.validate.field) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1006,14 +1006,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> logoutTimeBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      * @return Whether the logoutTime field is set.
      */
     public boolean hasLogoutTime() {
       return logoutTimeBuilder_ != null || logoutTime_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      * @return The logoutTime.
      */
     public com.google.protobuf.Timestamp getLogoutTime() {
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     public Builder setLogoutTime(com.google.protobuf.Timestamp value) {
       if (logoutTimeBuilder_ == null) {
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     public Builder setLogoutTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     public Builder mergeLogoutTime(com.google.protobuf.Timestamp value) {
       if (logoutTimeBuilder_ == null) {
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     public Builder clearLogoutTime() {
       if (logoutTimeBuilder_ == null) {
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     public com.google.protobuf.Timestamp.Builder getLogoutTimeBuilder() {
       
@@ -1094,7 +1094,7 @@ private static final long serialVersionUID = 0L;
       return getLogoutTimeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     public com.google.protobuf.TimestampOrBuilder getLogoutTimeOrBuilder() {
       if (logoutTimeBuilder_ != null) {
@@ -1105,7 +1105,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp logout_time = 5;</code>
+     * <code>.google.protobuf.Timestamp logout_time = 5 [(.buf.validate.field) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
