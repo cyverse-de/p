@@ -20,7 +20,7 @@ option java_outer_classname = "QMSSubscriptionProtobufs";
  * Representation of a subscription.
  */
 message Subscription {
-    // The unique identifier 
+    // The unique identifier
     string uuid = 1;
 
     // The date the subscription activates.
@@ -28,7 +28,7 @@ message Subscription {
 
     // The date the subscription deactivates/expires.
     google.protobuf.Timestamp effective_end_date = 3 [json_name = "effective_end_date"];
-    
+
     // The user in the QMS system that the subscription is for.
     QMSUser user = 4;
 
@@ -44,6 +44,10 @@ message Subscription {
 
     // A flag indicating whether or not the user paid for the subscription.
     bool paid = 8;
+
+    // Information about the rate that was active when the subscription was purchased. Note that this rate is recorded
+    // whether or not the user paid for the subscription directly.
+    PlanRate plan_rate = 9 [json_name = "plan_rate"];
 }
 
 /**

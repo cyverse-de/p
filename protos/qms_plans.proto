@@ -26,13 +26,18 @@ message QuotaDefault {
 
     // The resource type the quota applies to.
     ResourceType resource_type = 3 [json_name = "resource_type"];
+
+    // The date that quota default becomes effective. There can be multiple quota defaults for the same resource type,
+    // and the quota default that is currently effective is always the one with the most recent effective date that
+    // occurs in the past.
+    google.protobuf.Timestamp effective_date = 4 [json_name = "effective_date"];
 }
 
 /**
  * A response type for quota default requests.
  */
 message QuotaDefaultResponse {
-    // Can container telemetry data.
+    // Can contain telemetry data.
     header.Header header = 1;
 
     // Contains error info from the request handler.
@@ -53,8 +58,51 @@ message QuotaDefaultList {
     // Contains error info from the request handler.
     svcerror.ServiceError error = 2;
 
-    // The list of quota default objkects returned by the request handler.
+    // The list of quota default objects returned by the request handler.
     repeated QuotaDefault quota_defaults = 3 [json_name = "quota_defaults"];
+}
+
+/**
+ * Represents a price for a subscription plan.
+ */
+message PlanRate {
+    // The unique identifier/primary key for the plan rate.
+    string uuid = 1;
+
+    // The subscription plan rate, that is the price for 1 year of service.
+    double rate = 2;
+
+    // The date that the rate becomes effective. There can be multiple rates for a subscription, and the rate that is
+    // currently effective is always the one with the most recent effective date that occurs in the past.
+    google.protobuf.Timestamp effective_date = 3 [json_name = "effective_date"];
+}
+
+/**
+ * A response type for plan rate requests.
+ */
+message PlanRateResponse {
+    // Can contain telemetry data.
+    header.Header header = 1;
+
+    // Contains error info from the request handler.
+    svcerror.ServiceError error = 2;
+
+    // The plan rate object returned by the request handler.
+    PlanRate plan_rate = 3 [plan_rate = "plan_rate"];
+}
+
+/**
+ * A response type for plan rate requests that contains a list of plan rates.
+ */
+message PlanRateList {
+    // Can contain telemetry data.
+    header.Header header = 1;
+
+    // Contains error info from the request handler.
+    svcerror.ServiceError error = 2;
+
+    // The list of plan rate objects returned by the request handler.
+    repeated PlanRate plan_rates = [json_name = "plan_rates"];
 }
 
 /**
@@ -70,8 +118,14 @@ message Plan {
     // A description of the plan.
     string description = 3;
 
-    // A list of quota defaults associated with the plan.
+    // A list of quota defaults associated with the plan. Each resource type can have more than one plan quota
+    // default. The effective quota default for each resource type is the one with the most recent effective date that
+    // occurs in the past.
     repeated QuotaDefault plan_quota_defaults  = 4 [json_name = "plan_quota_defaults"];
+
+    // The list of plan rates. There may be multiple plan rates associated with the plan. The effective rate is always
+    // the rate with the most recent effective date that occurs in the past.
+    repeated PlanRate plan_rates = 5 [json_name = "plan_rates"];
 }
 
 /**
@@ -136,4 +190,18 @@ message AddPlanQuotaDefaultRequest {
 
     // The quota default to add to the plan specified by the plan_name field.
     QuotaDefault quota_default = 3 [json_name = "quota_default"];
+}
+
+/**
+ * A request to add a rate to an existing plan.
+ */
+message AddPlanRateRequest {
+    // Can contain telemetry data.
+    header.Header header = 1;
+
+    // The name of the plan to add the rate to.
+    string plan_name = 2 [json_name = "plan_name"];
+
+    // The rate to add to the plan specified by the plan_name field.
+    PlanRate plan_rate = 3 [json_name = "plan_rate"];
 }
