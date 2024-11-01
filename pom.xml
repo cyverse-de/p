@@ -4,7 +4,7 @@
   <groupId>org.cyverse</groupId>
   <artifactId>cyverse-de-protobufs</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.2</version>
+  <version>0.0.3-SNAPSHOT</version>
   <name>cyverse-de-protobufs</name>
   <description>Code generated from the DE protocol buffer definitions</description>
   <url>https://github.com/cyverse-de/p</url>
@@ -15,7 +15,7 @@
     </license>
   </licenses>
   <scm>
-    <tag>426a6bd80191b3af0f680ebfc49550d98e67a311</tag>
+    <tag>3cfa90598144ec3e2970366bbcae0c2a1a22156d</tag>
   </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -88,7 +88,7 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
-      <version>1.11.1</version>
+      <version>1.12.0</version>
     </dependency>
     <dependency>
       <groupId>clojusc</groupId>
@@ -98,7 +98,7 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
-      <version>3.25.3</version>
+      <version>4.28.3</version>
     </dependency>
   </dependencies>
 </project>
