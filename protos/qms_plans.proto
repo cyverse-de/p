@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package qms;
 
+import "google/protobuf/timestamp.proto";
 import "header.proto";
 import "svcerror.proto";
 import "qms_resource_types.proto";
@@ -88,7 +89,7 @@ message PlanRateResponse {
     svcerror.ServiceError error = 2;
 
     // The plan rate object returned by the request handler.
-    PlanRate plan_rate = 3 [plan_rate = "plan_rate"];
+    PlanRate plan_rate = 3 [json_name = "plan_rate"];
 }
 
 /**
@@ -102,7 +103,7 @@ message PlanRateList {
     svcerror.ServiceError error = 2;
 
     // The list of plan rate objects returned by the request handler.
-    repeated PlanRate plan_rates = [json_name = "plan_rates"];
+    repeated PlanRate plan_rates = 3 [json_name = "plan_rates"];
 }
 
 /**
