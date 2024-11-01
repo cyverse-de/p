@@ -60,8 +60,8 @@ message AddUsage {
     string resource_name = 3 [json_name = "resource_name"];
 
     // Possible values are defined in the database, so we can't use an enum here
-    string update_type = 4 [json_name = "update_type"]; 
-    
+    string update_type = 4 [json_name = "update_type"];
+
     double usage_value = 5 [json_name = "usage_value"];
 
     string resource_unit = 6 [json_name = "resource_unit"];

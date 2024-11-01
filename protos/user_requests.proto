@@ -39,6 +39,6 @@ message UserLookupRequest {
     // Paging offset
     uint32 login_offset = 9;
 
-     // Contains telemetry information
+    // Contains telemetry information
     header.Header header = 10;
 }

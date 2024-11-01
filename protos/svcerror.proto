@@ -33,7 +33,7 @@ enum ErrorCode {
  */
 message ServiceError {
     reserved 1;
-    
+
     // The numeric error code from the error code enum.
     ErrorCode error_code = 2 [json_name = "error_code"];
 

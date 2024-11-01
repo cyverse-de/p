@@ -13,24 +13,24 @@ option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "AnalysisRecordProtobufs";
 
 message BatchStatus {
-  int64 total = 1;
-  int64 completed = 2;
-  int64 running = 3;
-  int64 submitted = 4;
+    int64 total = 1;
+    int64 completed = 2;
+    int64 running = 3;
+    int64 submitted = 4;
 }
 
 /**
  * Corresponds to the job_types table in the database.
  */
 message AnalysisType {
-  // The UUID for the analysis type.
-  string id = 1;
+    // The UUID for the analysis type.
+    string id = 1;
 
-  // The name of the analysis type.
-  string name = 2;
+    // The name of the analysis type.
+    string name = 2;
 
-  // The kind of system the analysis should run on.
-  string system_id = 3 [json_name = "system_id"];
+    // The kind of system the analysis should run on.
+    string system_id = 3 [json_name = "system_id"];
 }
 
 /**
@@ -79,7 +79,7 @@ message Analysis {
     bool notify = 13;
 
     // The user that submitted the analysis.
-   user.User user = 14;
+    user.User user = 14;
 
     // The subdomain assigned to the analysis for VICE.
     string subdomain = 15;
