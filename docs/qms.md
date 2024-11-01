@@ -23,9 +23,13 @@
   
 - [qms_plans.proto](#qms_plans-proto)
     - [AddPlanQuotaDefaultRequest](#qms-AddPlanQuotaDefaultRequest)
+    - [AddPlanRateRequest](#qms-AddPlanRateRequest)
     - [AddPlanRequest](#qms-AddPlanRequest)
     - [Plan](#qms-Plan)
     - [PlanList](#qms-PlanList)
+    - [PlanRate](#qms-PlanRate)
+    - [PlanRateList](#qms-PlanRateList)
+    - [PlanRateResponse](#qms-PlanRateResponse)
     - [PlanRequest](#qms-PlanRequest)
     - [PlanResponse](#qms-PlanResponse)
     - [QuotaDefault](#qms-QuotaDefault)
@@ -394,6 +398,23 @@ A request to add a quota default to an existing plan.
 
 
 
+<a name="qms-AddPlanRateRequest"></a>
+
+### AddPlanRateRequest
+A request to add a rate to an existing plan.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [header.Header](#header-Header) |  | Can contain telemetry data. |
+| plan_name | [string](#string) |  | The name of the plan to add the rate to. |
+| plan_rate | [PlanRate](#qms-PlanRate) |  | The rate to add to the plan specified by the plan_name field. |
+
+
+
+
+
+
 <a name="qms-AddPlanRequest"></a>
 
 ### AddPlanRequest
@@ -421,7 +442,8 @@ Represents a subscription plan available to users.
 | uuid | [string](#string) |  | Unique identifier for the plan. |
 | name | [string](#string) |  | The name of the plan. |
 | description | [string](#string) |  | A description of the plan. |
-| plan_quota_defaults | [QuotaDefault](#qms-QuotaDefault) | repeated | A list of quota defaults associated with the plan. |
+| plan_quota_defaults | [QuotaDefault](#qms-QuotaDefault) | repeated | A list of quota defaults associated with the plan. Each resource type can have more than one plan quota default. The effective quota default for each resource type is the one with the most recent effective date that occurs in the past. |
+| plan_rates | [PlanRate](#qms-PlanRate) | repeated | The list of plan rates. There may be multiple plan rates associated with the plan. The effective rate is always the rate with the most recent effective date that occurs in the past. |
 
 
 
@@ -439,6 +461,57 @@ A response to a plan request. Contains a list of plans.
 | header | [header.Header](#header-Header) |  | Contains telemetry data. |
 | error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error data returned by the request handler. |
 | plans | [Plan](#qms-Plan) | repeated | A list of plans returned by the request handler. |
+
+
+
+
+
+
+<a name="qms-PlanRate"></a>
+
+### PlanRate
+Represents a price for a subscription plan.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) |  | The unique identifier/primary key for the plan rate. |
+| rate | [double](#double) |  | The subscription plan rate, that is the price for 1 year of service. |
+| effective_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date that the rate becomes effective. There can be multiple rates for a subscription, and the rate that is currently effective is always the one with the most recent effective date that occurs in the past. |
+
+
+
+
+
+
+<a name="qms-PlanRateList"></a>
+
+### PlanRateList
+A response type for plan rate requests that contains a list of plan rates.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [header.Header](#header-Header) |  | Can contain telemetry data. |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error info from the request handler. |
+| plan_rates | [PlanRate](#qms-PlanRate) | repeated | The list of plan rate objects returned by the request handler. |
+
+
+
+
+
+
+<a name="qms-PlanRateResponse"></a>
+
+### PlanRateResponse
+A response type for plan rate requests.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [header.Header](#header-Header) |  | Can contain telemetry data. |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error info from the request handler. |
+| plan_rate | [PlanRate](#qms-PlanRate) |  | The plan rate object returned by the request handler. |
 
 
 
@@ -491,6 +564,7 @@ as plan quota defaults.
 | uuid | [string](#string) |  | The unique identifier/primary key for the quota default. |
 | quota_value | [double](#double) |  | The value of the quota default. |
 | resource_type | [ResourceType](#qms-ResourceType) |  | The resource type the quota applies to. |
+| effective_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date that quota default becomes effective. There can be multiple quota defaults for the same resource type, and the quota default that is currently effective is always the one with the most recent effective date that occurs in the past. |
 
 
 
@@ -508,7 +582,7 @@ defaults.
 | ----- | ---- | ----- | ----------- |
 | header | [header.Header](#header-Header) |  | Can contain telemetry data. |
 | error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error info from the request handler. |
-| quota_defaults | [QuotaDefault](#qms-QuotaDefault) | repeated | The list of quota default objkects returned by the request handler. |
+| quota_defaults | [QuotaDefault](#qms-QuotaDefault) | repeated | The list of quota default objects returned by the request handler. |
 
 
 
@@ -523,7 +597,7 @@ A response type for quota default requests.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| header | [header.Header](#header-Header) |  | Can container telemetry data. |
+| header | [header.Header](#header-Header) |  | Can contain telemetry data. |
 | error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error info from the request handler. |
 | quota_default | [QuotaDefault](#qms-QuotaDefault) |  | The quota default object returned by the request handler. |
 
@@ -893,6 +967,7 @@ Representation of a subscription.
 | quotas | [Quota](#qms-Quota) | repeated | The list of quotas applied to the subscription. Initially populated by quota defaults, but can be overridden. |
 | usages | [Usage](#qms-Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
 | paid | [bool](#bool) |  | A flag indicating whether or not the user paid for the subscription. |
+| plan_rate | [PlanRate](#qms-PlanRate) |  | Information about the rate that was active when the subscription was purchased. Note that this rate is recorded whether or not the user paid for the subscription directly. |
 
 
 
