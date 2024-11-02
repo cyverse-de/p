@@ -112,4 +112,48 @@ public interface UpdateAddonRequestOrBuilder extends
    * @return The updateDefaultPaid.
    */
   boolean getUpdateDefaultPaid();
+
+  /**
+   * <pre>
+   * The list of rates to associate with the add-on.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+   */
+  java.util.List<org.cyverse.de.protobufs.AddonRate> 
+      getAddonRatesList();
+  /**
+   * <pre>
+   * The list of rates to associate with the add-on.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+   */
+  org.cyverse.de.protobufs.AddonRate getAddonRates(int index);
+  /**
+   * <pre>
+   * The list of rates to associate with the add-on.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+   */
+  int getAddonRatesCount();
+  /**
+   * <pre>
+   * The list of rates to associate with the add-on.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+   */
+  java.util.List<? extends org.cyverse.de.protobufs.AddonRateOrBuilder> 
+      getAddonRatesOrBuilderList();
+  /**
+   * <pre>
+   * The list of rates to associate with the add-on.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+   */
+  org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRatesOrBuilder(
+      int index);
 }

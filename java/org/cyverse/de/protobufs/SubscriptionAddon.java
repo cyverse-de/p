@@ -8,8 +8,8 @@ package org.cyverse.de.protobufs;
 /**
  * <pre>
  * *
- * SubscriptionAddon is an add-on that has been applied to a subscription. It 
- * contains fields that can override the the default_amount and default_paid 
+ * SubscriptionAddon is an add-on that has been applied to a subscription. It
+ * contains fields that can override the the default_amount and default_paid
  * fields in the subscription.
  * </pre>
  *
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   private org.cyverse.de.protobufs.Addon addon_;
   /**
    * <pre>
-   * The add-on used with the subscription. May only contain the add-on's 
+   * The add-on used with the subscription. May only contain the add-on's
    * UUID in some circumstances.
    * </pre>
    *
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The add-on used with the subscription. May only contain the add-on's 
+   * The add-on used with the subscription. May only contain the add-on's
    * UUID in some circumstances.
    * </pre>
    *
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The add-on used with the subscription. May only contain the add-on's 
+   * The add-on used with the subscription. May only contain the add-on's
    * UUID in some circumstances.
    * </pre>
    *
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The amount of the resource applied by the add-on. This should default to
-   * the amount contained in the add-on definition, but can be overridden, 
+   * the amount contained in the add-on definition, but can be overridden,
    * which is why it's a separate field here.
    * </pre>
    *
@@ -201,9 +201,9 @@ private static final long serialVersionUID = 0L;
   private boolean paid_ = false;
   /**
    * <pre>
-   * Whether the subscription add-on costs money. This should default to the 
+   * Whether the subscription add-on costs money. This should default to the
    * same paid value contained in the add-on definition, but can be overridden,
-   * which is whay it's a separate field here.
+   * which is why it's a separate field here.
    * </pre>
    *
    * <code>bool paid = 5;</code>
@@ -212,6 +212,47 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean getPaid() {
     return paid_;
+  }
+
+  public static final int ADDON_RATE_FIELD_NUMBER = 6;
+  private org.cyverse.de.protobufs.AddonRate addonRate_;
+  /**
+   * <pre>
+   * The amount per year that we expect to have been charged if the user paid
+   * for the add-on.
+   * </pre>
+   *
+   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * @return Whether the addonRate field is set.
+   */
+  @java.lang.Override
+  public boolean hasAddonRate() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * The amount per year that we expect to have been charged if the user paid
+   * for the add-on.
+   * </pre>
+   *
+   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * @return The addonRate.
+   */
+  @java.lang.Override
+  public org.cyverse.de.protobufs.AddonRate getAddonRate() {
+    return addonRate_ == null ? org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
+  }
+  /**
+   * <pre>
+   * The amount per year that we expect to have been charged if the user paid
+   * for the add-on.
+   * </pre>
+   *
+   * <code>.qms.AddonRate addon_rate = 6;</code>
+   */
+  @java.lang.Override
+  public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder() {
+    return addonRate_ == null ? org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -243,6 +284,9 @@ private static final long serialVersionUID = 0L;
     if (paid_ != false) {
       output.writeBool(5, paid_);
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(6, getAddonRate());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -270,6 +314,10 @@ private static final long serialVersionUID = 0L;
     if (paid_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, paid_);
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getAddonRate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -303,6 +351,11 @@ private static final long serialVersionUID = 0L;
             other.getAmount())) return false;
     if (getPaid()
         != other.getPaid()) return false;
+    if (hasAddonRate() != other.hasAddonRate()) return false;
+    if (hasAddonRate()) {
+      if (!getAddonRate()
+          .equals(other.getAddonRate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -330,6 +383,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPaid());
+    if (hasAddonRate()) {
+      hash = (37 * hash) + ADDON_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getAddonRate().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -430,8 +487,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * *
-   * SubscriptionAddon is an add-on that has been applied to a subscription. It 
-   * contains fields that can override the the default_amount and default_paid 
+   * SubscriptionAddon is an add-on that has been applied to a subscription. It
+   * contains fields that can override the the default_amount and default_paid
    * fields in the subscription.
    * </pre>
    *
@@ -469,6 +526,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getAddonFieldBuilder();
         getSubscriptionFieldBuilder();
+        getAddonRateFieldBuilder();
       }
     }
     @java.lang.Override
@@ -488,6 +546,11 @@ private static final long serialVersionUID = 0L;
       }
       amount_ = 0D;
       paid_ = false;
+      addonRate_ = null;
+      if (addonRateBuilder_ != null) {
+        addonRateBuilder_.dispose();
+        addonRateBuilder_ = null;
+      }
       return this;
     }
 
@@ -543,6 +606,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.paid_ = paid_;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.addonRate_ = addonRateBuilder_ == null
+            ? addonRate_
+            : addonRateBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -574,6 +643,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getPaid() != false) {
         setPaid(other.getPaid());
+      }
+      if (other.hasAddonRate()) {
+        mergeAddonRate(other.getAddonRate());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -630,6 +702,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 50: {
+              input.readMessage(
+                  getAddonRateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -744,7 +823,7 @@ private static final long serialVersionUID = 0L;
         org.cyverse.de.protobufs.Addon, org.cyverse.de.protobufs.Addon.Builder, org.cyverse.de.protobufs.AddonOrBuilder> addonBuilder_;
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -756,7 +835,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -772,7 +851,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -793,7 +872,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -812,7 +891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -838,7 +917,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -856,7 +935,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -869,7 +948,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -885,7 +964,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The add-on used with the subscription. May only contain the add-on's 
+     * The add-on used with the subscription. May only contain the add-on's
      * UUID in some circumstances.
      * </pre>
      *
@@ -1075,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The amount of the resource applied by the add-on. This should default to
-     * the amount contained in the add-on definition, but can be overridden, 
+     * the amount contained in the add-on definition, but can be overridden,
      * which is why it's a separate field here.
      * </pre>
      *
@@ -1089,7 +1168,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The amount of the resource applied by the add-on. This should default to
-     * the amount contained in the add-on definition, but can be overridden, 
+     * the amount contained in the add-on definition, but can be overridden,
      * which is why it's a separate field here.
      * </pre>
      *
@@ -1107,7 +1186,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The amount of the resource applied by the add-on. This should default to
-     * the amount contained in the add-on definition, but can be overridden, 
+     * the amount contained in the add-on definition, but can be overridden,
      * which is why it's a separate field here.
      * </pre>
      *
@@ -1124,9 +1203,9 @@ private static final long serialVersionUID = 0L;
     private boolean paid_ ;
     /**
      * <pre>
-     * Whether the subscription add-on costs money. This should default to the 
+     * Whether the subscription add-on costs money. This should default to the
      * same paid value contained in the add-on definition, but can be overridden,
-     * which is whay it's a separate field here.
+     * which is why it's a separate field here.
      * </pre>
      *
      * <code>bool paid = 5;</code>
@@ -1138,9 +1217,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the subscription add-on costs money. This should default to the 
+     * Whether the subscription add-on costs money. This should default to the
      * same paid value contained in the add-on definition, but can be overridden,
-     * which is whay it's a separate field here.
+     * which is why it's a separate field here.
      * </pre>
      *
      * <code>bool paid = 5;</code>
@@ -1156,9 +1235,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the subscription add-on costs money. This should default to the 
+     * Whether the subscription add-on costs money. This should default to the
      * same paid value contained in the add-on definition, but can be overridden,
-     * which is whay it's a separate field here.
+     * which is why it's a separate field here.
      * </pre>
      *
      * <code>bool paid = 5;</code>
@@ -1169,6 +1248,172 @@ private static final long serialVersionUID = 0L;
       paid_ = false;
       onChanged();
       return this;
+    }
+
+    private org.cyverse.de.protobufs.AddonRate addonRate_;
+    private com.google.protobuf.SingleFieldBuilder<
+        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> addonRateBuilder_;
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * @return Whether the addonRate field is set.
+     */
+    public boolean hasAddonRate() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * @return The addonRate.
+     */
+    public org.cyverse.de.protobufs.AddonRate getAddonRate() {
+      if (addonRateBuilder_ == null) {
+        return addonRate_ == null ? org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
+      } else {
+        return addonRateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    public Builder setAddonRate(org.cyverse.de.protobufs.AddonRate value) {
+      if (addonRateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        addonRate_ = value;
+      } else {
+        addonRateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    public Builder setAddonRate(
+        org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
+      if (addonRateBuilder_ == null) {
+        addonRate_ = builderForValue.build();
+      } else {
+        addonRateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    public Builder mergeAddonRate(org.cyverse.de.protobufs.AddonRate value) {
+      if (addonRateBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          addonRate_ != null &&
+          addonRate_ != org.cyverse.de.protobufs.AddonRate.getDefaultInstance()) {
+          getAddonRateBuilder().mergeFrom(value);
+        } else {
+          addonRate_ = value;
+        }
+      } else {
+        addonRateBuilder_.mergeFrom(value);
+      }
+      if (addonRate_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    public Builder clearAddonRate() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      addonRate_ = null;
+      if (addonRateBuilder_ != null) {
+        addonRateBuilder_.dispose();
+        addonRateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    public org.cyverse.de.protobufs.AddonRate.Builder getAddonRateBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getAddonRateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder() {
+      if (addonRateBuilder_ != null) {
+        return addonRateBuilder_.getMessageOrBuilder();
+      } else {
+        return addonRate_ == null ?
+            org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
+      }
+    }
+    /**
+     * <pre>
+     * The amount per year that we expect to have been charged if the user paid
+     * for the add-on.
+     * </pre>
+     *
+     * <code>.qms.AddonRate addon_rate = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> 
+        getAddonRateFieldBuilder() {
+      if (addonRateBuilder_ == null) {
+        addonRateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder>(
+                getAddonRate(),
+                getParentForChildren(),
+                isClean());
+        addonRate_ = null;
+      }
+      return addonRateBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:qms.SubscriptionAddon)

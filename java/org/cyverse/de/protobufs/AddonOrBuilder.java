@@ -115,4 +115,53 @@ public interface AddonOrBuilder extends
    * @return The defaultPaid.
    */
   boolean getDefaultPaid();
+
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  java.util.List<org.cyverse.de.protobufs.AddonRate> 
+      getAddonRatesList();
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  org.cyverse.de.protobufs.AddonRate getAddonRates(int index);
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  int getAddonRatesCount();
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  java.util.List<? extends org.cyverse.de.protobufs.AddonRateOrBuilder> 
+      getAddonRatesOrBuilderList();
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRatesOrBuilder(
+      int index);
 }

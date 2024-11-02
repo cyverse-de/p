@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     name_ = "";
     description_ = "";
+    addonRates_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -261,6 +262,72 @@ private static final long serialVersionUID = 0L;
     return defaultPaid_;
   }
 
+  public static final int ADDON_RATES_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<org.cyverse.de.protobufs.AddonRate> addonRates_;
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<org.cyverse.de.protobufs.AddonRate> getAddonRatesList() {
+    return addonRates_;
+  }
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends org.cyverse.de.protobufs.AddonRateOrBuilder> 
+      getAddonRatesOrBuilderList() {
+    return addonRates_;
+  }
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  @java.lang.Override
+  public int getAddonRatesCount() {
+    return addonRates_.size();
+  }
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  @java.lang.Override
+  public org.cyverse.de.protobufs.AddonRate getAddonRates(int index) {
+    return addonRates_.get(index);
+  }
+  /**
+   * <pre>
+   * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+   * the rate with the most recent effective date that occurs in the past.
+   * </pre>
+   *
+   * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+   */
+  @java.lang.Override
+  public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRatesOrBuilder(
+      int index) {
+    return addonRates_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -293,6 +360,9 @@ private static final long serialVersionUID = 0L;
     if (defaultPaid_ != false) {
       output.writeBool(6, defaultPaid_);
     }
+    for (int i = 0; i < addonRates_.size(); i++) {
+      output.writeMessage(7, addonRates_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -322,6 +392,10 @@ private static final long serialVersionUID = 0L;
     if (defaultPaid_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, defaultPaid_);
+    }
+    for (int i = 0; i < addonRates_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, addonRates_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -354,6 +428,8 @@ private static final long serialVersionUID = 0L;
             other.getDefaultAmount())) return false;
     if (getDefaultPaid()
         != other.getDefaultPaid()) return false;
+    if (!getAddonRatesList()
+        .equals(other.getAddonRatesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -381,6 +457,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DEFAULT_PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDefaultPaid());
+    if (getAddonRatesCount() > 0) {
+      hash = (37 * hash) + ADDON_RATES_FIELD_NUMBER;
+      hash = (53 * hash) + getAddonRatesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -518,6 +598,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getResourceTypeFieldBuilder();
+        getAddonRatesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -534,6 +615,13 @@ private static final long serialVersionUID = 0L;
       }
       defaultAmount_ = 0D;
       defaultPaid_ = false;
+      if (addonRatesBuilder_ == null) {
+        addonRates_ = java.util.Collections.emptyList();
+      } else {
+        addonRates_ = null;
+        addonRatesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -560,9 +648,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.Addon buildPartial() {
       org.cyverse.de.protobufs.Addon result = new org.cyverse.de.protobufs.Addon(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(org.cyverse.de.protobufs.Addon result) {
+      if (addonRatesBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          addonRates_ = java.util.Collections.unmodifiableList(addonRates_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.addonRates_ = addonRates_;
+      } else {
+        result.addonRates_ = addonRatesBuilder_.build();
+      }
     }
 
     private void buildPartial0(org.cyverse.de.protobufs.Addon result) {
@@ -628,6 +729,32 @@ private static final long serialVersionUID = 0L;
       if (other.getDefaultPaid() != false) {
         setDefaultPaid(other.getDefaultPaid());
       }
+      if (addonRatesBuilder_ == null) {
+        if (!other.addonRates_.isEmpty()) {
+          if (addonRates_.isEmpty()) {
+            addonRates_ = other.addonRates_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureAddonRatesIsMutable();
+            addonRates_.addAll(other.addonRates_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.addonRates_.isEmpty()) {
+          if (addonRatesBuilder_.isEmpty()) {
+            addonRatesBuilder_.dispose();
+            addonRatesBuilder_ = null;
+            addonRates_ = other.addonRates_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            addonRatesBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getAddonRatesFieldBuilder() : null;
+          } else {
+            addonRatesBuilder_.addAllMessages(other.addonRates_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -686,6 +813,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
+            case 58: {
+              org.cyverse.de.protobufs.AddonRate m =
+                  input.readMessage(
+                      org.cyverse.de.protobufs.AddonRate.parser(),
+                      extensionRegistry);
+              if (addonRatesBuilder_ == null) {
+                ensureAddonRatesIsMutable();
+                addonRates_.add(m);
+              } else {
+                addonRatesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1222,6 +1362,336 @@ private static final long serialVersionUID = 0L;
       defaultPaid_ = false;
       onChanged();
       return this;
+    }
+
+    private java.util.List<org.cyverse.de.protobufs.AddonRate> addonRates_ =
+      java.util.Collections.emptyList();
+    private void ensureAddonRatesIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        addonRates_ = new java.util.ArrayList<org.cyverse.de.protobufs.AddonRate>(addonRates_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> addonRatesBuilder_;
+
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public java.util.List<org.cyverse.de.protobufs.AddonRate> getAddonRatesList() {
+      if (addonRatesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(addonRates_);
+      } else {
+        return addonRatesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public int getAddonRatesCount() {
+      if (addonRatesBuilder_ == null) {
+        return addonRates_.size();
+      } else {
+        return addonRatesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public org.cyverse.de.protobufs.AddonRate getAddonRates(int index) {
+      if (addonRatesBuilder_ == null) {
+        return addonRates_.get(index);
+      } else {
+        return addonRatesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder setAddonRates(
+        int index, org.cyverse.de.protobufs.AddonRate value) {
+      if (addonRatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAddonRatesIsMutable();
+        addonRates_.set(index, value);
+        onChanged();
+      } else {
+        addonRatesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder setAddonRates(
+        int index, org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
+      if (addonRatesBuilder_ == null) {
+        ensureAddonRatesIsMutable();
+        addonRates_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        addonRatesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder addAddonRates(org.cyverse.de.protobufs.AddonRate value) {
+      if (addonRatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAddonRatesIsMutable();
+        addonRates_.add(value);
+        onChanged();
+      } else {
+        addonRatesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder addAddonRates(
+        int index, org.cyverse.de.protobufs.AddonRate value) {
+      if (addonRatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAddonRatesIsMutable();
+        addonRates_.add(index, value);
+        onChanged();
+      } else {
+        addonRatesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder addAddonRates(
+        org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
+      if (addonRatesBuilder_ == null) {
+        ensureAddonRatesIsMutable();
+        addonRates_.add(builderForValue.build());
+        onChanged();
+      } else {
+        addonRatesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder addAddonRates(
+        int index, org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
+      if (addonRatesBuilder_ == null) {
+        ensureAddonRatesIsMutable();
+        addonRates_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        addonRatesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder addAllAddonRates(
+        java.lang.Iterable<? extends org.cyverse.de.protobufs.AddonRate> values) {
+      if (addonRatesBuilder_ == null) {
+        ensureAddonRatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, addonRates_);
+        onChanged();
+      } else {
+        addonRatesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder clearAddonRates() {
+      if (addonRatesBuilder_ == null) {
+        addonRates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        addonRatesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public Builder removeAddonRates(int index) {
+      if (addonRatesBuilder_ == null) {
+        ensureAddonRatesIsMutable();
+        addonRates_.remove(index);
+        onChanged();
+      } else {
+        addonRatesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public org.cyverse.de.protobufs.AddonRate.Builder getAddonRatesBuilder(
+        int index) {
+      return getAddonRatesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRatesOrBuilder(
+        int index) {
+      if (addonRatesBuilder_ == null) {
+        return addonRates_.get(index);  } else {
+        return addonRatesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public java.util.List<? extends org.cyverse.de.protobufs.AddonRateOrBuilder> 
+         getAddonRatesOrBuilderList() {
+      if (addonRatesBuilder_ != null) {
+        return addonRatesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(addonRates_);
+      }
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public org.cyverse.de.protobufs.AddonRate.Builder addAddonRatesBuilder() {
+      return getAddonRatesFieldBuilder().addBuilder(
+          org.cyverse.de.protobufs.AddonRate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public org.cyverse.de.protobufs.AddonRate.Builder addAddonRatesBuilder(
+        int index) {
+      return getAddonRatesFieldBuilder().addBuilder(
+          index, org.cyverse.de.protobufs.AddonRate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+     * the rate with the most recent effective date that occurs in the past.
+     * </pre>
+     *
+     * <code>repeated .qms.AddonRate addon_rates = 7 [json_name = "addon_rates"];</code>
+     */
+    public java.util.List<org.cyverse.de.protobufs.AddonRate.Builder> 
+         getAddonRatesBuilderList() {
+      return getAddonRatesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> 
+        getAddonRatesFieldBuilder() {
+      if (addonRatesBuilder_ == null) {
+        addonRatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder>(
+                addonRates_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        addonRates_ = null;
+      }
+      return addonRatesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:qms.Addon)

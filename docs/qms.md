@@ -8,6 +8,9 @@
     - [Addon](#qms-Addon)
     - [AddonListResponse](#qms-AddonListResponse)
     - [AddonLookupRequest](#qms-AddonLookupRequest)
+    - [AddonRate](#qms-AddonRate)
+    - [AddonRateList](#qms-AddonRateList)
+    - [AddonRateResponse](#qms-AddonRateResponse)
     - [AddonResponse](#qms-AddonResponse)
     - [SubscriptionAddon](#qms-SubscriptionAddon)
     - [SubscriptionAddonListResponse](#qms-SubscriptionAddonListResponse)
@@ -125,6 +128,7 @@ with a change in a resource quota.
 | resource_type | [ResourceType](#qms-ResourceType) |  | The resource type of the add-on. |
 | default_amount | [double](#double) |  | How much of the resource type is added to the quota by the add-on. |
 | default_paid | [bool](#bool) |  | Whether a user must pay for the add-on. Not whether the user has paid. |
+| addon_rates | [AddonRate](#qms-AddonRate) | repeated | The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always the rate with the most recent effective date that occurs in the past. |
 
 
 
@@ -165,6 +169,57 @@ A request to get information about an add-on.
 
 
 
+<a name="qms-AddonRate"></a>
+
+### AddonRate
+Represents the rate charged for an addon as the prcie for one year of service.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| uuid | [string](#string) |  | The unique identifier. |
+| rate | [double](#double) |  | The rate. |
+| effective_date | [google.protobuf.Timestamp](#google-protobuf-Timestamp) |  | The date that the rate becomes effective. There can be multiple rates for an addon; the rate that is effective at any given time is always the rate with the most recent effective date that occurs in the past. |
+
+
+
+
+
+
+<a name="qms-AddonRateList"></a>
+
+### AddonRateList
+A response type for addon rate requests that contains a list of addon rates.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [header.Header](#header-Header) |  | Can contain telemetry data. |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error info from the request handler. |
+| addon_rates | [AddonRate](#qms-AddonRate) | repeated | The list of addon rate objects returned by the request handler. |
+
+
+
+
+
+
+<a name="qms-AddonRateResponse"></a>
+
+### AddonRateResponse
+A response type for addon rate requests.
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| header | [header.Header](#header-Header) |  | Can contain telemetry data. |
+| error | [svcerror.ServiceError](#svcerror-ServiceError) |  | Contains error info from the request handler. |
+| addon_rate | [AddonRate](#qms-AddonRate) |  | The addon rate object returned by the request handler. |
+
+
+
+
+
+
 <a name="qms-AddonResponse"></a>
 
 ### AddonResponse
@@ -185,8 +240,8 @@ A response to an add-on request. Contains a single add-on.
 <a name="qms-SubscriptionAddon"></a>
 
 ### SubscriptionAddon
-SubscriptionAddon is an add-on that has been applied to a subscription. It 
-contains fields that can override the the default_amount and default_paid 
+SubscriptionAddon is an add-on that has been applied to a subscription. It
+contains fields that can override the the default_amount and default_paid
 fields in the subscription.
 
 
@@ -196,7 +251,8 @@ fields in the subscription.
 | addon | [Addon](#qms-Addon) |  | The add-on used with the subscription. May only contain the add-on&#39;s UUID in some circumstances. |
 | subscription | [Subscription](#qms-Subscription) |  | The subscription the add-on was applied to. May only contain the add-on&#39;s UUID in some circumstances. |
 | amount | [double](#double) |  | The amount of the resource applied by the add-on. This should default to the amount contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
-| paid | [bool](#bool) |  | Whether the subscription add-on costs money. This should default to the same paid value contained in the add-on definition, but can be overridden, which is whay it&#39;s a separate field here. |
+| paid | [bool](#bool) |  | Whether the subscription add-on costs money. This should default to the same paid value contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
+| addon_rate | [AddonRate](#qms-AddonRate) |  | The amount per year that we expect to have been charged if the user paid for the add-on. |
 
 
 
@@ -254,6 +310,7 @@ string, since that&#39;s the zero value for a string.
 | update_resource_type | [bool](#bool) |  | Whether to update the resource type of the addon. |
 | update_default_amount | [bool](#bool) |  | Whether to update the default amount of the addon. |
 | update_default_paid | [bool](#bool) |  | Whether to update the default paid field of the addon. |
+| addon_rates | [AddonRate](#qms-AddonRate) | repeated | The list of rates to associate with the add-on. |
 
 
 
@@ -274,6 +331,7 @@ Contains the information needed to update a subscription add-on.
 | update_subscription_id | [bool](#bool) |  | Whether to update the subscription_id field with the value contained in the subscription addon. The DE backend currently does not support this. Do a delete-&gt;add instead. |
 | update_amount | [bool](#bool) |  | Whether to update the amount field with the value contained in the subscription addon. |
 | update_paid | [bool](#bool) |  | Whether to update the paid fields with the value contained in the subscription addon. |
+| addon_rate | [AddonRate](#qms-AddonRate) |  | The amount per year that we expect to have been charged if the user paid for the add-on. |
 
 
 

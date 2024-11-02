@@ -31,7 +31,7 @@ public interface SubscriptionAddonOrBuilder extends
 
   /**
    * <pre>
-   * The add-on used with the subscription. May only contain the add-on's 
+   * The add-on used with the subscription. May only contain the add-on's
    * UUID in some circumstances.
    * </pre>
    *
@@ -41,7 +41,7 @@ public interface SubscriptionAddonOrBuilder extends
   boolean hasAddon();
   /**
    * <pre>
-   * The add-on used with the subscription. May only contain the add-on's 
+   * The add-on used with the subscription. May only contain the add-on's
    * UUID in some circumstances.
    * </pre>
    *
@@ -51,7 +51,7 @@ public interface SubscriptionAddonOrBuilder extends
   org.cyverse.de.protobufs.Addon getAddon();
   /**
    * <pre>
-   * The add-on used with the subscription. May only contain the add-on's 
+   * The add-on used with the subscription. May only contain the add-on's
    * UUID in some circumstances.
    * </pre>
    *
@@ -92,7 +92,7 @@ public interface SubscriptionAddonOrBuilder extends
   /**
    * <pre>
    * The amount of the resource applied by the add-on. This should default to
-   * the amount contained in the add-on definition, but can be overridden, 
+   * the amount contained in the add-on definition, but can be overridden,
    * which is why it's a separate field here.
    * </pre>
    *
@@ -103,13 +103,43 @@ public interface SubscriptionAddonOrBuilder extends
 
   /**
    * <pre>
-   * Whether the subscription add-on costs money. This should default to the 
+   * Whether the subscription add-on costs money. This should default to the
    * same paid value contained in the add-on definition, but can be overridden,
-   * which is whay it's a separate field here.
+   * which is why it's a separate field here.
    * </pre>
    *
    * <code>bool paid = 5;</code>
    * @return The paid.
    */
   boolean getPaid();
+
+  /**
+   * <pre>
+   * The amount per year that we expect to have been charged if the user paid
+   * for the add-on.
+   * </pre>
+   *
+   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * @return Whether the addonRate field is set.
+   */
+  boolean hasAddonRate();
+  /**
+   * <pre>
+   * The amount per year that we expect to have been charged if the user paid
+   * for the add-on.
+   * </pre>
+   *
+   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * @return The addonRate.
+   */
+  org.cyverse.de.protobufs.AddonRate getAddonRate();
+  /**
+   * <pre>
+   * The amount per year that we expect to have been charged if the user paid
+   * for the add-on.
+   * </pre>
+   *
+   * <code>.qms.AddonRate addon_rate = 6;</code>
+   */
+  org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder();
 }
