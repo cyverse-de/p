@@ -34,7 +34,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateAddonRequest() {
-    addonRates_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -202,65 +201,19 @@ private static final long serialVersionUID = 0L;
     return updateDefaultPaid_;
   }
 
-  public static final int ADDON_RATES_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private java.util.List<org.cyverse.de.protobufs.AddonRate> addonRates_;
+  public static final int UPDATE_ADDON_RATES_FIELD_NUMBER = 8;
+  private boolean updateAddonRates_ = false;
   /**
    * <pre>
-   * The list of rates to associate with the add-on.
+   * Whether to update the addon rates.
    * </pre>
    *
-   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+   * <code>bool update_addon_rates = 8;</code>
+   * @return The updateAddonRates.
    */
   @java.lang.Override
-  public java.util.List<org.cyverse.de.protobufs.AddonRate> getAddonRatesList() {
-    return addonRates_;
-  }
-  /**
-   * <pre>
-   * The list of rates to associate with the add-on.
-   * </pre>
-   *
-   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends org.cyverse.de.protobufs.AddonRateOrBuilder> 
-      getAddonRatesOrBuilderList() {
-    return addonRates_;
-  }
-  /**
-   * <pre>
-   * The list of rates to associate with the add-on.
-   * </pre>
-   *
-   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-   */
-  @java.lang.Override
-  public int getAddonRatesCount() {
-    return addonRates_.size();
-  }
-  /**
-   * <pre>
-   * The list of rates to associate with the add-on.
-   * </pre>
-   *
-   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.AddonRate getAddonRates(int index) {
-    return addonRates_.get(index);
-  }
-  /**
-   * <pre>
-   * The list of rates to associate with the add-on.
-   * </pre>
-   *
-   * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRatesOrBuilder(
-      int index) {
-    return addonRates_.get(index);
+  public boolean getUpdateAddonRates() {
+    return updateAddonRates_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -298,8 +251,8 @@ private static final long serialVersionUID = 0L;
     if (updateDefaultPaid_ != false) {
       output.writeBool(7, updateDefaultPaid_);
     }
-    for (int i = 0; i < addonRates_.size(); i++) {
-      output.writeMessage(8, addonRates_.get(i));
+    if (updateAddonRates_ != false) {
+      output.writeBool(8, updateAddonRates_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -338,9 +291,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, updateDefaultPaid_);
     }
-    for (int i = 0; i < addonRates_.size(); i++) {
+    if (updateAddonRates_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, addonRates_.get(i));
+        .computeBoolSize(8, updateAddonRates_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -377,8 +330,8 @@ private static final long serialVersionUID = 0L;
         != other.getUpdateDefaultAmount()) return false;
     if (getUpdateDefaultPaid()
         != other.getUpdateDefaultPaid()) return false;
-    if (!getAddonRatesList()
-        .equals(other.getAddonRatesList())) return false;
+    if (getUpdateAddonRates()
+        != other.getUpdateAddonRates()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -413,10 +366,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + UPDATE_DEFAULT_PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getUpdateDefaultPaid());
-    if (getAddonRatesCount() > 0) {
-      hash = (37 * hash) + ADDON_RATES_FIELD_NUMBER;
-      hash = (53 * hash) + getAddonRatesList().hashCode();
-    }
+    hash = (37 * hash) + UPDATE_ADDON_RATES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getUpdateAddonRates());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -556,7 +508,6 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getHeaderFieldBuilder();
         getAddonFieldBuilder();
-        getAddonRatesFieldBuilder();
       }
     }
     @java.lang.Override
@@ -578,13 +529,7 @@ private static final long serialVersionUID = 0L;
       updateResourceType_ = false;
       updateDefaultAmount_ = false;
       updateDefaultPaid_ = false;
-      if (addonRatesBuilder_ == null) {
-        addonRates_ = java.util.Collections.emptyList();
-      } else {
-        addonRates_ = null;
-        addonRatesBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000080);
+      updateAddonRates_ = false;
       return this;
     }
 
@@ -611,22 +556,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.cyverse.de.protobufs.UpdateAddonRequest buildPartial() {
       org.cyverse.de.protobufs.UpdateAddonRequest result = new org.cyverse.de.protobufs.UpdateAddonRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(org.cyverse.de.protobufs.UpdateAddonRequest result) {
-      if (addonRatesBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
-          addonRates_ = java.util.Collections.unmodifiableList(addonRates_);
-          bitField0_ = (bitField0_ & ~0x00000080);
-        }
-        result.addonRates_ = addonRates_;
-      } else {
-        result.addonRates_ = addonRatesBuilder_.build();
-      }
     }
 
     private void buildPartial0(org.cyverse.de.protobufs.UpdateAddonRequest result) {
@@ -658,6 +590,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.updateDefaultPaid_ = updateDefaultPaid_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.updateAddonRates_ = updateAddonRates_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -695,31 +630,8 @@ private static final long serialVersionUID = 0L;
       if (other.getUpdateDefaultPaid() != false) {
         setUpdateDefaultPaid(other.getUpdateDefaultPaid());
       }
-      if (addonRatesBuilder_ == null) {
-        if (!other.addonRates_.isEmpty()) {
-          if (addonRates_.isEmpty()) {
-            addonRates_ = other.addonRates_;
-            bitField0_ = (bitField0_ & ~0x00000080);
-          } else {
-            ensureAddonRatesIsMutable();
-            addonRates_.addAll(other.addonRates_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.addonRates_.isEmpty()) {
-          if (addonRatesBuilder_.isEmpty()) {
-            addonRatesBuilder_.dispose();
-            addonRatesBuilder_ = null;
-            addonRates_ = other.addonRates_;
-            bitField0_ = (bitField0_ & ~0x00000080);
-            addonRatesBuilder_ = 
-              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 getAddonRatesFieldBuilder() : null;
-          } else {
-            addonRatesBuilder_.addAllMessages(other.addonRates_);
-          }
-        }
+      if (other.getUpdateAddonRates() != false) {
+        setUpdateAddonRates(other.getUpdateAddonRates());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -786,19 +698,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
-            case 66: {
-              org.cyverse.de.protobufs.AddonRate m =
-                  input.readMessage(
-                      org.cyverse.de.protobufs.AddonRate.parser(),
-                      extensionRegistry);
-              if (addonRatesBuilder_ == null) {
-                ensureAddonRatesIsMutable();
-                addonRates_.add(m);
-              } else {
-                addonRatesBuilder_.addMessage(m);
-              }
+            case 64: {
+              updateAddonRates_ = input.readBool();
+              bitField0_ |= 0x00000080;
               break;
-            } // case 66
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1350,316 +1254,48 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<org.cyverse.de.protobufs.AddonRate> addonRates_ =
-      java.util.Collections.emptyList();
-    private void ensureAddonRatesIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
-        addonRates_ = new java.util.ArrayList<org.cyverse.de.protobufs.AddonRate>(addonRates_);
-        bitField0_ |= 0x00000080;
-       }
+    private boolean updateAddonRates_ ;
+    /**
+     * <pre>
+     * Whether to update the addon rates.
+     * </pre>
+     *
+     * <code>bool update_addon_rates = 8;</code>
+     * @return The updateAddonRates.
+     */
+    @java.lang.Override
+    public boolean getUpdateAddonRates() {
+      return updateAddonRates_;
     }
+    /**
+     * <pre>
+     * Whether to update the addon rates.
+     * </pre>
+     *
+     * <code>bool update_addon_rates = 8;</code>
+     * @param value The updateAddonRates to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUpdateAddonRates(boolean value) {
 
-    private com.google.protobuf.RepeatedFieldBuilder<
-        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> addonRatesBuilder_;
-
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public java.util.List<org.cyverse.de.protobufs.AddonRate> getAddonRatesList() {
-      if (addonRatesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(addonRates_);
-      } else {
-        return addonRatesBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public int getAddonRatesCount() {
-      if (addonRatesBuilder_ == null) {
-        return addonRates_.size();
-      } else {
-        return addonRatesBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRate getAddonRates(int index) {
-      if (addonRatesBuilder_ == null) {
-        return addonRates_.get(index);
-      } else {
-        return addonRatesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder setAddonRates(
-        int index, org.cyverse.de.protobufs.AddonRate value) {
-      if (addonRatesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureAddonRatesIsMutable();
-        addonRates_.set(index, value);
-        onChanged();
-      } else {
-        addonRatesBuilder_.setMessage(index, value);
-      }
+      updateAddonRates_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * The list of rates to associate with the add-on.
+     * Whether to update the addon rates.
      * </pre>
      *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
+     * <code>bool update_addon_rates = 8;</code>
+     * @return This builder for chaining.
      */
-    public Builder setAddonRates(
-        int index, org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
-      if (addonRatesBuilder_ == null) {
-        ensureAddonRatesIsMutable();
-        addonRates_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        addonRatesBuilder_.setMessage(index, builderForValue.build());
-      }
+    public Builder clearUpdateAddonRates() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      updateAddonRates_ = false;
+      onChanged();
       return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder addAddonRates(org.cyverse.de.protobufs.AddonRate value) {
-      if (addonRatesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureAddonRatesIsMutable();
-        addonRates_.add(value);
-        onChanged();
-      } else {
-        addonRatesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder addAddonRates(
-        int index, org.cyverse.de.protobufs.AddonRate value) {
-      if (addonRatesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureAddonRatesIsMutable();
-        addonRates_.add(index, value);
-        onChanged();
-      } else {
-        addonRatesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder addAddonRates(
-        org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
-      if (addonRatesBuilder_ == null) {
-        ensureAddonRatesIsMutable();
-        addonRates_.add(builderForValue.build());
-        onChanged();
-      } else {
-        addonRatesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder addAddonRates(
-        int index, org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
-      if (addonRatesBuilder_ == null) {
-        ensureAddonRatesIsMutable();
-        addonRates_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        addonRatesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder addAllAddonRates(
-        java.lang.Iterable<? extends org.cyverse.de.protobufs.AddonRate> values) {
-      if (addonRatesBuilder_ == null) {
-        ensureAddonRatesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, addonRates_);
-        onChanged();
-      } else {
-        addonRatesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder clearAddonRates() {
-      if (addonRatesBuilder_ == null) {
-        addonRates_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
-        onChanged();
-      } else {
-        addonRatesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public Builder removeAddonRates(int index) {
-      if (addonRatesBuilder_ == null) {
-        ensureAddonRatesIsMutable();
-        addonRates_.remove(index);
-        onChanged();
-      } else {
-        addonRatesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRate.Builder getAddonRatesBuilder(
-        int index) {
-      return getAddonRatesFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRatesOrBuilder(
-        int index) {
-      if (addonRatesBuilder_ == null) {
-        return addonRates_.get(index);  } else {
-        return addonRatesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public java.util.List<? extends org.cyverse.de.protobufs.AddonRateOrBuilder> 
-         getAddonRatesOrBuilderList() {
-      if (addonRatesBuilder_ != null) {
-        return addonRatesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(addonRates_);
-      }
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRate.Builder addAddonRatesBuilder() {
-      return getAddonRatesFieldBuilder().addBuilder(
-          org.cyverse.de.protobufs.AddonRate.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRate.Builder addAddonRatesBuilder(
-        int index) {
-      return getAddonRatesFieldBuilder().addBuilder(
-          index, org.cyverse.de.protobufs.AddonRate.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * The list of rates to associate with the add-on.
-     * </pre>
-     *
-     * <code>repeated .qms.AddonRate addon_rates = 8;</code>
-     */
-    public java.util.List<org.cyverse.de.protobufs.AddonRate.Builder> 
-         getAddonRatesBuilderList() {
-      return getAddonRatesFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilder<
-        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> 
-        getAddonRatesFieldBuilder() {
-      if (addonRatesBuilder_ == null) {
-        addonRatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder>(
-                addonRates_,
-                ((bitField0_ & 0x00000080) != 0),
-                getParentForChildren(),
-                isClean());
-        addonRates_ = null;
-      }
-      return addonRatesBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:qms.UpdateAddonRequest)

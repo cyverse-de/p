@@ -165,8 +165,8 @@ message UpdateAddonRequest {
     // Whether to update the default paid field of the addon.
     bool update_default_paid = 7;
 
-    // The list of rates to associate with the add-on.
-    repeated AddonRate addon_rates = 8;
+    // Whether to update the addon rates.
+    bool update_addon_rates = 8;
 }
 
 /**

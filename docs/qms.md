@@ -310,7 +310,7 @@ string, since that&#39;s the zero value for a string.
 | update_resource_type | [bool](#bool) |  | Whether to update the resource type of the addon. |
 | update_default_amount | [bool](#bool) |  | Whether to update the default amount of the addon. |
 | update_default_paid | [bool](#bool) |  | Whether to update the default paid field of the addon. |
-| addon_rates | [AddonRate](#qms-AddonRate) | repeated | The list of rates to associate with the add-on. |
+| update_addon_rates | [bool](#bool) |  | Whether to update the addon rates. |
 
 
 
