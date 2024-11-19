@@ -138,7 +138,7 @@ public final class QMSAddonProtobufs {
       "onAddon\022\014\n\004uuid\030\001 \001(\t\022\031\n\005addon\030\002 \001(\0132\n.q" +
       "ms.Addon\022\'\n\014subscription\030\003 \001(\0132\021.qms.Sub" +
       "scription\022\016\n\006amount\030\004 \001(\001\022\014\n\004paid\030\005 \001(\010\022" +
-      "\"\n\naddon_rate\030\006 \001(\0132\016.qms.AddonRate\"\326\002\n\036" +
+      "\"\n\naddon_rate\030\006 \001(\0132\016.qms.AddonRate\"\262\002\n\036" +
       "UpdateSubscriptionAddonRequest\022\036\n\006header" +
       "\030\001 \001(\0132\016.header.Header\022F\n\022subscription_a" +
       "ddon\030\002 \001(\0132\026.qms.SubscriptionAddonR\022subs" +
@@ -146,19 +146,18 @@ public final class QMSAddonProtobufs {
       "\017update_addon_id\0226\n\026update_subscription_" +
       "id\030\004 \001(\010R\026update_subscription_id\022$\n\rupda" +
       "te_amount\030\005 \001(\010R\rupdate_amount\022 \n\013update" +
-      "_paid\030\006 \001(\010R\013update_paid\022\"\n\naddon_rate\030\007" +
-      " \001(\0132\016.qms.AddonRate\"\252\001\n\031SubscriptionAdd" +
-      "onResponse\022\036\n\006header\030\001 \001(\0132\016.header.Head" +
-      "er\022%\n\005error\030\002 \001(\0132\026.svcerror.ServiceErro" +
-      "r\022F\n\022subscription_addon\030\003 \001(\0132\026.qms.Subs" +
-      "criptionAddonR\022subscription_addon\"\260\001\n\035Su" +
-      "bscriptionAddonListResponse\022\036\n\006header\030\001 " +
-      "\001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svc" +
-      "error.ServiceError\022H\n\023subscription_addon" +
-      "s\030\003 \003(\0132\026.qms.SubscriptionAddonR\023subscri" +
-      "ption_addonsBO\n\030org.cyverse.de.protobufs" +
-      "B\021QMSAddonProtobufsP\001Z\036github.com/cyvers" +
-      "e-de/p/go/qmsb\006proto3"
+      "_paid\030\006 \001(\010R\013update_paid\"\252\001\n\031Subscriptio" +
+      "nAddonResponse\022\036\n\006header\030\001 \001(\0132\016.header." +
+      "Header\022%\n\005error\030\002 \001(\0132\026.svcerror.Service" +
+      "Error\022F\n\022subscription_addon\030\003 \001(\0132\026.qms." +
+      "SubscriptionAddonR\022subscription_addon\"\260\001" +
+      "\n\035SubscriptionAddonListResponse\022\036\n\006heade" +
+      "r\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026" +
+      ".svcerror.ServiceError\022H\n\023subscription_a" +
+      "ddons\030\003 \003(\0132\026.qms.SubscriptionAddonR\023sub" +
+      "scription_addonsBO\n\030org.cyverse.de.proto" +
+      "bufsB\021QMSAddonProtobufsP\001Z\036github.com/cy" +
+      "verse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -234,7 +233,7 @@ public final class QMSAddonProtobufs {
     internal_static_qms_UpdateSubscriptionAddonRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_qms_UpdateSubscriptionAddonRequest_descriptor,
-        new java.lang.String[] { "Header", "SubscriptionAddon", "UpdateAddonId", "UpdateSubscriptionId", "UpdateAmount", "UpdatePaid", "AddonRate", });
+        new java.lang.String[] { "Header", "SubscriptionAddon", "UpdateAddonId", "UpdateSubscriptionId", "UpdateAmount", "UpdatePaid", });
     internal_static_qms_SubscriptionAddonResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_qms_SubscriptionAddonResponse_fieldAccessorTable = new

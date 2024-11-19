@@ -229,10 +229,6 @@ message UpdateSubscriptionAddonRequest {
     // Whether to update the paid fields with the value contained in the
     // subscription addon.
     bool update_paid = 6 [json_name = "update_paid"];
-
-    // The amount per year that we expect to have been charged if the user paid
-    // for the add-on.
-    AddonRate addon_rate = 7;
 }
 
 /**

@@ -331,7 +331,6 @@ Contains the information needed to update a subscription add-on.
 | update_subscription_id | [bool](#bool) |  | Whether to update the subscription_id field with the value contained in the subscription addon. The DE backend currently does not support this. Do a delete-&gt;add instead. |
 | update_amount | [bool](#bool) |  | Whether to update the amount field with the value contained in the subscription addon. |
 | update_paid | [bool](#bool) |  | Whether to update the paid fields with the value contained in the subscription addon. |
-| addon_rate | [AddonRate](#qms-AddonRate) |  | The amount per year that we expect to have been charged if the user paid for the add-on. |
 
 
 

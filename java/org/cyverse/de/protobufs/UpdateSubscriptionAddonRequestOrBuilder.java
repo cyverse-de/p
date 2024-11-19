@@ -111,34 +111,4 @@ public interface UpdateSubscriptionAddonRequestOrBuilder extends
    * @return The updatePaid.
    */
   boolean getUpdatePaid();
-
-  /**
-   * <pre>
-   * The amount per year that we expect to have been charged if the user paid
-   * for the add-on.
-   * </pre>
-   *
-   * <code>.qms.AddonRate addon_rate = 7;</code>
-   * @return Whether the addonRate field is set.
-   */
-  boolean hasAddonRate();
-  /**
-   * <pre>
-   * The amount per year that we expect to have been charged if the user paid
-   * for the add-on.
-   * </pre>
-   *
-   * <code>.qms.AddonRate addon_rate = 7;</code>
-   * @return The addonRate.
-   */
-  org.cyverse.de.protobufs.AddonRate getAddonRate();
-  /**
-   * <pre>
-   * The amount per year that we expect to have been charged if the user paid
-   * for the add-on.
-   * </pre>
-   *
-   * <code>.qms.AddonRate addon_rate = 7;</code>
-   */
-  org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder();
 }

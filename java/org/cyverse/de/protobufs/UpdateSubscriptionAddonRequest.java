@@ -193,47 +193,6 @@ private static final long serialVersionUID = 0L;
     return updatePaid_;
   }
 
-  public static final int ADDON_RATE_FIELD_NUMBER = 7;
-  private org.cyverse.de.protobufs.AddonRate addonRate_;
-  /**
-   * <pre>
-   * The amount per year that we expect to have been charged if the user paid
-   * for the add-on.
-   * </pre>
-   *
-   * <code>.qms.AddonRate addon_rate = 7;</code>
-   * @return Whether the addonRate field is set.
-   */
-  @java.lang.Override
-  public boolean hasAddonRate() {
-    return ((bitField0_ & 0x00000004) != 0);
-  }
-  /**
-   * <pre>
-   * The amount per year that we expect to have been charged if the user paid
-   * for the add-on.
-   * </pre>
-   *
-   * <code>.qms.AddonRate addon_rate = 7;</code>
-   * @return The addonRate.
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.AddonRate getAddonRate() {
-    return addonRate_ == null ? org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
-  }
-  /**
-   * <pre>
-   * The amount per year that we expect to have been charged if the user paid
-   * for the add-on.
-   * </pre>
-   *
-   * <code>.qms.AddonRate addon_rate = 7;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder() {
-    return addonRate_ == null ? org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -265,9 +224,6 @@ private static final long serialVersionUID = 0L;
     }
     if (updatePaid_ != false) {
       output.writeBool(6, updatePaid_);
-    }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeMessage(7, getAddonRate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -302,10 +258,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, updatePaid_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getAddonRate());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -339,11 +291,6 @@ private static final long serialVersionUID = 0L;
         != other.getUpdateAmount()) return false;
     if (getUpdatePaid()
         != other.getUpdatePaid()) return false;
-    if (hasAddonRate() != other.hasAddonRate()) return false;
-    if (hasAddonRate()) {
-      if (!getAddonRate()
-          .equals(other.getAddonRate())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -375,10 +322,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + UPDATE_PAID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getUpdatePaid());
-    if (hasAddonRate()) {
-      hash = (37 * hash) + ADDON_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + getAddonRate().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -516,7 +459,6 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getHeaderFieldBuilder();
         getSubscriptionAddonFieldBuilder();
-        getAddonRateFieldBuilder();
       }
     }
     @java.lang.Override
@@ -537,11 +479,6 @@ private static final long serialVersionUID = 0L;
       updateSubscriptionId_ = false;
       updateAmount_ = false;
       updatePaid_ = false;
-      addonRate_ = null;
-      if (addonRateBuilder_ != null) {
-        addonRateBuilder_.dispose();
-        addonRateBuilder_ = null;
-      }
       return this;
     }
 
@@ -600,12 +537,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.updatePaid_ = updatePaid_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.addonRate_ = addonRateBuilder_ == null
-            ? addonRate_
-            : addonRateBuilder_.build();
-        to_bitField0_ |= 0x00000004;
-      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -638,9 +569,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getUpdatePaid() != false) {
         setUpdatePaid(other.getUpdatePaid());
-      }
-      if (other.hasAddonRate()) {
-        mergeAddonRate(other.getAddonRate());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -702,13 +630,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 48
-            case 58: {
-              input.readMessage(
-                  getAddonRateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1241,172 +1162,6 @@ private static final long serialVersionUID = 0L;
       updatePaid_ = false;
       onChanged();
       return this;
-    }
-
-    private org.cyverse.de.protobufs.AddonRate addonRate_;
-    private com.google.protobuf.SingleFieldBuilder<
-        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> addonRateBuilder_;
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     * @return Whether the addonRate field is set.
-     */
-    public boolean hasAddonRate() {
-      return ((bitField0_ & 0x00000040) != 0);
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     * @return The addonRate.
-     */
-    public org.cyverse.de.protobufs.AddonRate getAddonRate() {
-      if (addonRateBuilder_ == null) {
-        return addonRate_ == null ? org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
-      } else {
-        return addonRateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    public Builder setAddonRate(org.cyverse.de.protobufs.AddonRate value) {
-      if (addonRateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        addonRate_ = value;
-      } else {
-        addonRateBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    public Builder setAddonRate(
-        org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
-      if (addonRateBuilder_ == null) {
-        addonRate_ = builderForValue.build();
-      } else {
-        addonRateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    public Builder mergeAddonRate(org.cyverse.de.protobufs.AddonRate value) {
-      if (addonRateBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          addonRate_ != null &&
-          addonRate_ != org.cyverse.de.protobufs.AddonRate.getDefaultInstance()) {
-          getAddonRateBuilder().mergeFrom(value);
-        } else {
-          addonRate_ = value;
-        }
-      } else {
-        addonRateBuilder_.mergeFrom(value);
-      }
-      if (addonRate_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    public Builder clearAddonRate() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      addonRate_ = null;
-      if (addonRateBuilder_ != null) {
-        addonRateBuilder_.dispose();
-        addonRateBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRate.Builder getAddonRateBuilder() {
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return getAddonRateFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder() {
-      if (addonRateBuilder_ != null) {
-        return addonRateBuilder_.getMessageOrBuilder();
-      } else {
-        return addonRate_ == null ?
-            org.cyverse.de.protobufs.AddonRate.getDefaultInstance() : addonRate_;
-      }
-    }
-    /**
-     * <pre>
-     * The amount per year that we expect to have been charged if the user paid
-     * for the add-on.
-     * </pre>
-     *
-     * <code>.qms.AddonRate addon_rate = 7;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> 
-        getAddonRateFieldBuilder() {
-      if (addonRateBuilder_ == null) {
-        addonRateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder>(
-                getAddonRate(),
-                getParentForChildren(),
-                isClean());
-        addonRate_ = null;
-      }
-      return addonRateBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:qms.UpdateSubscriptionAddonRequest)
