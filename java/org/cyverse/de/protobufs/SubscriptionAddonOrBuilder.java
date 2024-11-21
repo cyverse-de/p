@@ -119,7 +119,7 @@ public interface SubscriptionAddonOrBuilder extends
    * for the add-on.
    * </pre>
    *
-   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
    * @return Whether the addonRate field is set.
    */
   boolean hasAddonRate();
@@ -129,7 +129,7 @@ public interface SubscriptionAddonOrBuilder extends
    * for the add-on.
    * </pre>
    *
-   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
    * @return The addonRate.
    */
   org.cyverse.de.protobufs.AddonRate getAddonRate();
@@ -139,7 +139,7 @@ public interface SubscriptionAddonOrBuilder extends
    * for the add-on.
    * </pre>
    *
-   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
    */
   org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder();
 }

@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
    * for the add-on.
    * </pre>
    *
-   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
    * @return Whether the addonRate field is set.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * for the add-on.
    * </pre>
    *
-   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
    * @return The addonRate.
    */
   @java.lang.Override
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
    * for the add-on.
    * </pre>
    *
-   * <code>.qms.AddonRate addon_rate = 6;</code>
+   * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
    */
   @java.lang.Override
   public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder() {
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      * @return Whether the addonRate field is set.
      */
     public boolean hasAddonRate() {
@@ -1271,7 +1271,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      * @return The addonRate.
      */
     public org.cyverse.de.protobufs.AddonRate getAddonRate() {
@@ -1287,7 +1287,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     public Builder setAddonRate(org.cyverse.de.protobufs.AddonRate value) {
       if (addonRateBuilder_ == null) {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     public Builder setAddonRate(
         org.cyverse.de.protobufs.AddonRate.Builder builderForValue) {
@@ -1327,7 +1327,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     public Builder mergeAddonRate(org.cyverse.de.protobufs.AddonRate value) {
       if (addonRateBuilder_ == null) {
@@ -1353,7 +1353,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     public Builder clearAddonRate() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -1371,7 +1371,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     public org.cyverse.de.protobufs.AddonRate.Builder getAddonRateBuilder() {
       bitField0_ |= 0x00000020;
@@ -1384,7 +1384,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     public org.cyverse.de.protobufs.AddonRateOrBuilder getAddonRateOrBuilder() {
       if (addonRateBuilder_ != null) {
@@ -1400,7 +1400,7 @@ private static final long serialVersionUID = 0L;
      * for the add-on.
      * </pre>
      *
-     * <code>.qms.AddonRate addon_rate = 6;</code>
+     * <code>.qms.AddonRate addon_rate = 6 [json_name = "addon_rate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         org.cyverse.de.protobufs.AddonRate, org.cyverse.de.protobufs.AddonRate.Builder, org.cyverse.de.protobufs.AddonRateOrBuilder> 

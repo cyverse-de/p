@@ -134,30 +134,30 @@ public final class QMSAddonProtobufs {
       "\032\n\022update_description\030\004 \001(\010\022\034\n\024update_re" +
       "source_type\030\005 \001(\010\022\035\n\025update_default_amou" +
       "nt\030\006 \001(\010\022\033\n\023update_default_paid\030\007 \001(\010\022\032\n" +
-      "\022update_addon_rates\030\010 \001(\010\"\247\001\n\021Subscripti" +
+      "\022update_addon_rates\030\010 \001(\010\"\263\001\n\021Subscripti" +
       "onAddon\022\014\n\004uuid\030\001 \001(\t\022\031\n\005addon\030\002 \001(\0132\n.q" +
       "ms.Addon\022\'\n\014subscription\030\003 \001(\0132\021.qms.Sub" +
       "scription\022\016\n\006amount\030\004 \001(\001\022\014\n\004paid\030\005 \001(\010\022" +
-      "\"\n\naddon_rate\030\006 \001(\0132\016.qms.AddonRate\"\262\002\n\036" +
-      "UpdateSubscriptionAddonRequest\022\036\n\006header" +
-      "\030\001 \001(\0132\016.header.Header\022F\n\022subscription_a" +
-      "ddon\030\002 \001(\0132\026.qms.SubscriptionAddonR\022subs" +
-      "cription_addon\022(\n\017update_addon_id\030\003 \001(\010R" +
-      "\017update_addon_id\0226\n\026update_subscription_" +
-      "id\030\004 \001(\010R\026update_subscription_id\022$\n\rupda" +
-      "te_amount\030\005 \001(\010R\rupdate_amount\022 \n\013update" +
-      "_paid\030\006 \001(\010R\013update_paid\"\252\001\n\031Subscriptio" +
-      "nAddonResponse\022\036\n\006header\030\001 \001(\0132\016.header." +
-      "Header\022%\n\005error\030\002 \001(\0132\026.svcerror.Service" +
-      "Error\022F\n\022subscription_addon\030\003 \001(\0132\026.qms." +
-      "SubscriptionAddonR\022subscription_addon\"\260\001" +
-      "\n\035SubscriptionAddonListResponse\022\036\n\006heade" +
-      "r\030\001 \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026" +
-      ".svcerror.ServiceError\022H\n\023subscription_a" +
-      "ddons\030\003 \003(\0132\026.qms.SubscriptionAddonR\023sub" +
-      "scription_addonsBO\n\030org.cyverse.de.proto" +
-      "bufsB\021QMSAddonProtobufsP\001Z\036github.com/cy" +
-      "verse-de/p/go/qmsb\006proto3"
+      ".\n\naddon_rate\030\006 \001(\0132\016.qms.AddonRateR\nadd" +
+      "on_rate\"\262\002\n\036UpdateSubscriptionAddonReque" +
+      "st\022\036\n\006header\030\001 \001(\0132\016.header.Header\022F\n\022su" +
+      "bscription_addon\030\002 \001(\0132\026.qms.Subscriptio" +
+      "nAddonR\022subscription_addon\022(\n\017update_add" +
+      "on_id\030\003 \001(\010R\017update_addon_id\0226\n\026update_s" +
+      "ubscription_id\030\004 \001(\010R\026update_subscriptio" +
+      "n_id\022$\n\rupdate_amount\030\005 \001(\010R\rupdate_amou" +
+      "nt\022 \n\013update_paid\030\006 \001(\010R\013update_paid\"\252\001\n" +
+      "\031SubscriptionAddonResponse\022\036\n\006header\030\001 \001" +
+      "(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svce" +
+      "rror.ServiceError\022F\n\022subscription_addon\030" +
+      "\003 \001(\0132\026.qms.SubscriptionAddonR\022subscript" +
+      "ion_addon\"\260\001\n\035SubscriptionAddonListRespo" +
+      "nse\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005e" +
+      "rror\030\002 \001(\0132\026.svcerror.ServiceError\022H\n\023su" +
+      "bscription_addons\030\003 \003(\0132\026.qms.Subscripti" +
+      "onAddonR\023subscription_addonsBO\n\030org.cyve" +
+      "rse.de.protobufsB\021QMSAddonProtobufsP\001Z\036g" +
+      "ithub.com/cyverse-de/p/go/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
