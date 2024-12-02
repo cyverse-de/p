@@ -1,6 +1,6 @@
 FROM golang:1.22
 
-ENV protoc_version=28.3
+ENV protoc_version=29.0
 ENV arch=x86_64
 ENV protoc_gen_go_version=v1.35.1
 
