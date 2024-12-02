@@ -15,7 +15,7 @@
     </license>
   </licenses>
   <scm>
-    <tag>3cfa90598144ec3e2970366bbcae0c2a1a22156d</tag>
+    <tag>48b0b0283dacb650144793e2e333bf110a654893</tag>
   </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -98,7 +98,12 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
-      <version>4.28.3</version>
+      <version>4.29.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java-util</artifactId>
+      <version>4.29.0</version>
     </dependency>
   </dependencies>
 </project>

@@ -1,6 +1,6 @@
 module github.com/cyverse-de/p/go/monitoring
 
-go 1.23.2
+go 1.23.3
 
 require (
 	github.com/cyverse-de/p/go/header v0.0.4
