@@ -1,3 +1,4 @@
 .clj-kondo
+.lein*
 .lsp
 target/
