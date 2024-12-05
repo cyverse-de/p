@@ -4,7 +4,7 @@
   <groupId>org.cyverse</groupId>
   <artifactId>cyverse-de-protobufs</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <name>cyverse-de-protobufs</name>
   <description>Code generated from the DE protocol buffer definitions</description>
   <url>https://github.com/cyverse-de/p</url>
@@ -15,7 +15,7 @@
     </license>
   </licenses>
   <scm>
-    <tag>48b0b0283dacb650144793e2e333bf110a654893</tag>
+    <tag>b11d5d2dfed543e3083b0004451e571a9be064d3</tag>
   </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
