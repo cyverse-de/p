@@ -19,7 +19,7 @@ option java_outer_classname = "QMSUpdateProtobufs";
  * quota and usage value.
  */
 message UpdateOperation {
-    // The unique identifier 
+    // The unique identifier
     string uuid = 1;
 
     // The name of the update operation
@@ -33,7 +33,7 @@ message Update {
     // The unique identifier
     string uuid = 1;
 
-    // Determines whether the update is for a "quota" or "usage". 
+    // Determines whether the update is for a "quota" or "usage".
     string value_type = 2 [json_name = "value_type"];
 
     // The value being applied to the usage or quota.

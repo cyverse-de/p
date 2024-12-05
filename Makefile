@@ -8,15 +8,6 @@ export GOTOOLCHAIN=auto
 compile:
 	protoc -I ./protos -I /usr/local/include --go_opt=module=github.com/cyverse-de/p/go --go_out=./go protos/*.proto
 	protoc -I ./protos -I /usr/local/include --java_out=./java protos/*.proto
-	protoc -I ./protos -I /usr/local/include \
-		--prost_opt=default_package_filename=gen.rs \
-		--prost_opt=compile_well_known_types \
-		--prost_opt=extern_path=.google.protobuf=::pbjson_types \
-		--prost_opt=type_attribute=.groups.ServiceInfo='#[derive(garde::Validate)]' \
-		--prost_opt=field_attribute=.groups.ServiceInfo='#[garde(length(min=1))]' \
-		--prost_out=debuff/src/ \
-		--prost-serde_out=debuff/src \
-		protos/*.proto
 
 documentation:
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,analysis.md protos/analysis_*.proto
@@ -26,7 +17,7 @@ documentation:
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,users.md protos/user.proto protos/user_requests.proto
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,requests.md protos/requests.proto
 	protoc -I ./protos -I /usr/local/include --doc_out=./docs --doc_opt=markdown,tools.md protos/tools.proto
-	
+
 
 java-jar:
 	lein jar

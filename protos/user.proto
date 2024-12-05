@@ -11,28 +11,27 @@ option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "UserProtobufs";
 
 message Preferences {
-  string uuid = 1;
-  string preferences = 2; // should come across as JSON.
+    string uuid = 1;
+    string preferences = 2; // should come across as JSON.
 }
 
 message Login {
-  string uuid = 1;
-  string ip_address = 2;
-  string user_agent = 3;
-  google.protobuf.Timestamp login_time = 4;
-  google.protobuf.Timestamp logout_time = 5;
+    string uuid = 1;
+    string ip_address = 2;
+    string user_agent = 3;
+    google.protobuf.Timestamp login_time = 4;
+    google.protobuf.Timestamp logout_time = 5;
 }
 
 message SavedSearches {
-  string uuid = 1;
-  string saved_searches = 2;
+    string uuid = 1;
+    string saved_searches = 2;
 }
 
 /**
  * A user's information.
  */
 message User {
-  string uuid = 1;
-  string username = 2;
+    string uuid = 1;
+    string username = 2;
 }
-

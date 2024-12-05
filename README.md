@@ -80,7 +80,8 @@ put that directory in your `$PATH` if it isn't already there.
 
 Next, install `protoc-gen-prost-serde` with Cargo:
 ```bash
-cargo install protoc-gen-prost-serde```
+cargo install protoc-gen-prost-serde
+```
 
 ## Repo Layout
 

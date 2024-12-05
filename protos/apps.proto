@@ -14,66 +14,66 @@ option java_outer_classname = "AppsProtobufs";
  * An app in the system.
  *
  * An app is a collection of one or more tools that run in an environment to produce outputs.
- */ 
+ */
 message App {
-  // The UUID for the app.
-  string id = 1;
+    // The UUID for the app.
+    string id = 1;
 
-  // The name of the app.
-  string name = 2;
+    // The name of the app.
+    string name = 2;
 
-  // The description of the app.
-  string description = 3;
+    // The description of the app.
+    string description = 3;
 
-  // The wiki URL of the app.
-  string wiki_url = 4 [json_name = "wiki_url"];
+    // The wiki URL of the app.
+    string wiki_url = 4 [json_name = "wiki_url"];
 }
 
 /**
  * Information about when something was integrated.
  */
 message IntegrationData {
-  // The UUID of the integration data.
-  string id = 1;
+    // The UUID of the integration data.
+    string id = 1;
 
-  // The name of the person that integrated stuff.
-  string integrator_name = 2 [json_name = "integrator_name"];
+    // The name of the person that integrated stuff.
+    string integrator_name = 2 [json_name = "integrator_name"];
 
-  // The email of the person that integrated stuff.
-  string integrator_email = 3 [json_name = "integrator_email"];
+    // The email of the person that integrated stuff.
+    string integrator_email = 3 [json_name = "integrator_email"];
 
-  // The user information of the integrator.
-  user.User user = 4;
+    // The user information of the integrator.
+    user.User user = 4;
 }
 
 /**
  * App version information.
- */ 
+ */
 message AppVersion {
-  // The UUID for the app version information.
-  string id = 1;
+    // The UUID for the app version information.
+    string id = 1;
 
-  // The UUID of the app the version information applies to.
-  string app_id = 2 [json_name = "app_id"];
+    // The UUID of the app the version information applies to.
+    string app_id = 2 [json_name = "app_id"];
 
-  // The string representation of the version.
-  string version = 3;
+    // The string representation of the version.
+    string version = 3;
 
-  // The ordering of the version.
-  int64 version_order = 4 [json_name = "version_order"];
+    // The ordering of the version.
+    int64 version_order = 4 [json_name = "version_order"];
 
-  // Whether the version is deleted.
-  bool deleted = 5;
+    // Whether the version is deleted.
+    bool deleted = 5;
 
-  // Whether the version is disabled.
-  bool disabled = 6;
+    // Whether the version is disabled.
+    bool disabled = 6;
 
-  // Integration information for this version.
-  IntegrationData integration = 7;
+    // Integration information for this version.
+    IntegrationData integration = 7;
 
-  // The date the version was integrated.
-  google.protobuf.Timestamp integration_date = 8 [json_name = "integration_date"];
+    // The date the version was integrated.
+    google.protobuf.Timestamp integration_date = 8 [json_name = "integration_date"];
 
-  // The date the app version was last edited.
-  google.protobuf.Timestamp edited_date = 9 [json_name = "edited_date"];
+    // The date the app version was last edited.
+    google.protobuf.Timestamp edited_date = 9 [json_name = "edited_date"];
 }

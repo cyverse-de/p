@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package qms;
 
+import "google/protobuf/timestamp.proto";
 import "header.proto";
 import "svcerror.proto";
 import "qms_resource_types.proto";
@@ -12,6 +13,49 @@ option go_package = "github.com/cyverse-de/p/go/qms";
 option java_multiple_files = true;
 option java_package = "org.cyverse.de.protobufs";
 option java_outer_classname = "QMSAddonProtobufs";
+
+/**
+ * Represents the rate charged for an addon as the prcie for one year of service.
+ */
+message AddonRate {
+    // The unique identifier.
+    string uuid = 1;
+
+    // The rate.
+    double rate = 2;
+
+    // The date that the rate becomes effective. There can be multiple rates for an addon; the rate that is effective at
+    // any given time is always the rate with the most recent effective date that occurs in the past.
+    google.protobuf.Timestamp effective_date = 3 [json_name = "effective_date"];
+}
+
+/**
+ * A response type for addon rate requests.
+ */
+message AddonRateResponse {
+    // Can contain telemetry data.
+    header.Header header = 1;
+
+    // Contains error info from the request handler.
+    svcerror.ServiceError error = 2;
+
+    // The addon rate object returned by the request handler.
+    AddonRate addon_rate = 3 [json_name = "addon_rate"];
+}
+
+/**
+ * A response type for addon rate requests that contains a list of addon rates.
+ */
+message AddonRateList {
+    // Can contain telemetry data.
+    header.Header header = 1;
+
+    // Contains error info from the request handler.
+    svcerror.ServiceError error = 2;
+
+    // The list of addon rate objects returned by the request handler.
+    repeated AddonRate addon_rates = 3 [json_name = "addon_rates"];
+}
 
 /**
  * Represents an add-on that can be applied to a subscription to provide a user
@@ -35,12 +79,16 @@ message Addon {
 
     // Whether a user must pay for the add-on. Not whether the user has paid.
     bool default_paid = 6 [json_name = "default_paid"];
+
+    // The list of addon rates. An addon may have multiple rates; the one that is effective at any given time is always
+    // the rate with the most recent effective date that occurs in the past.
+    repeated AddonRate addon_rates = 7 [json_name = "addon_rates"];
 }
 
 /**
  * A response to an add-on request. Contains a single add-on.
  */
- message AddonResponse {
+message AddonResponse {
     // Contains telemetry data.
     header.Header header = 1;
 
@@ -49,12 +97,12 @@ message Addon {
 
     // The add-on returned by the request handler.
     Addon addon = 3;
- }
+}
 
- /**
-  * A response to an add-on request that contains a list of add-ons.
-  */
-  message AddonListResponse {
+/**
+ * A response to an add-on request that contains a list of add-ons.
+ */
+message AddonListResponse {
     // Contains telemetry data.
     header.Header header = 1;
 
@@ -63,11 +111,11 @@ message Addon {
 
     // The list of add-ons returned by the request handler.
     repeated Addon addons = 3;
-  }
+}
 
 /**
-* A request to add an add-on to the system.
-*/
+ * A request to add an add-on to the system.
+ */
 message AddAddonRequest {
     // Contains telemetry information.
     header.Header header = 1;
@@ -79,7 +127,7 @@ message AddAddonRequest {
 /**
  * A request to get information about an add-on.
  */
- message AddonLookupRequest {
+message AddonLookupRequest {
     // Contains telemetry information.
     header.Header header = 1;
 
@@ -95,7 +143,7 @@ message AddAddonRequest {
  * probably other languages) needs a way to tell when to set a field to an empty
  * string, since that's the zero value for a string.
  */
- message UpdateAddonRequest {
+message UpdateAddonRequest {
     // Contains telemetry information.
     header.Header header = 1;
 
@@ -116,18 +164,21 @@ message AddAddonRequest {
 
     // Whether to update the default paid field of the addon.
     bool update_default_paid = 7;
- }
+
+    // Whether to update the addon rates.
+    bool update_addon_rates = 8;
+}
 
 /**
- * SubscriptionAddon is an add-on that has been applied to a subscription. It 
- * contains fields that can override the the default_amount and default_paid 
+ * SubscriptionAddon is an add-on that has been applied to a subscription. It
+ * contains fields that can override the the default_amount and default_paid
  * fields in the subscription.
  */
 message SubscriptionAddon {
     // The unique identifier for the add-on
     string uuid = 1;
 
-    // The add-on used with the subscription. May only contain the add-on's 
+    // The add-on used with the subscription. May only contain the add-on's
     // UUID in some circumstances.
     Addon addon = 2;
 
@@ -136,14 +187,18 @@ message SubscriptionAddon {
     Subscription subscription = 3;
 
     // The amount of the resource applied by the add-on. This should default to
-    // the amount contained in the add-on definition, but can be overridden, 
+    // the amount contained in the add-on definition, but can be overridden,
     // which is why it's a separate field here.
     double amount = 4;
 
-    // Whether the subscription add-on costs money. This should default to the 
+    // Whether the subscription add-on costs money. This should default to the
     // same paid value contained in the add-on definition, but can be overridden,
-    // which is whay it's a separate field here.
+    // which is why it's a separate field here.
     bool paid = 5;
+
+    // The amount per year that we expect to have been charged if the user paid
+    // for the add-on.
+    AddonRate addon_rate = 6 [json_name = "addon_rate"];
 }
 
 /**
@@ -156,7 +211,7 @@ message UpdateSubscriptionAddonRequest {
     // The subscription add-on information being updated. Does not necessarily
     // have all fields set and the UUID field should not be set.
     SubscriptionAddon subscription_addon = 2 [json_name = "subscription_addon"];
-    
+
     // Whether to update the addon_id with the value contained in the subscription
     // addon. The DE backend currently does not support this. Do a delete->add
     // instead.
@@ -167,11 +222,11 @@ message UpdateSubscriptionAddonRequest {
     // Do a delete->add instead.
     bool update_subscription_id = 4 [json_name = "update_subscription_id"];
 
-    // Whether to update the amount field with the value contained in the 
+    // Whether to update the amount field with the value contained in the
     // subscription addon.
     bool update_amount = 5 [json_name = "update_amount"];
 
-    // Whether to update the paid fields with the value contained in the 
+    // Whether to update the paid fields with the value contained in the
     // subscription addon.
     bool update_paid = 6 [json_name = "update_paid"];
 }
