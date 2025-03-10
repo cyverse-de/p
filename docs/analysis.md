@@ -305,6 +305,7 @@ Corresponds to the job_types table in the database.
 | user_home | [string](#string) |  |  |
 | wiki_url | [string](#string) |  |  |
 | config_file | [string](#string) |  |  |
+| mount_data_store | [bool](#bool) |  |  |
 
 
 
