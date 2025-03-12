@@ -606,4 +606,10 @@ package org.cyverse.de.protobufs;
    */
   com.google.protobuf.ByteString
       getConfigFileBytes();
+
+  /**
+   * <code>bool mount_data_store = 45 [json_name = "mount_data_store"];</code>
+   * @return The mountDataStore.
+   */
+  boolean getMountDataStore();
 }

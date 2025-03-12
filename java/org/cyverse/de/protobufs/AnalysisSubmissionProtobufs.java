@@ -169,7 +169,7 @@ public final class AnalysisSubmissionProtobufs {
       "oups\022\034\n\tuser_home\030* \001(\tR\tuser_home\022\032\n\010wi" +
       "ki_url\030+ \001(\tR\010wiki_url\022 \n\013config_file\030, " +
       "\001(\tR\013config_file\022*\n\020mount_data_store\030- \001" +
-      "(\010R\020mount_data_store\"\266\014\n\003Job\022(\n\017app_desc" +
+      "(\010R\020mount_data_store\"\342\014\n\003Job\022(\n\017app_desc" +
       "ription\030\001 \001(\tR\017app_description\022\026\n\006app_id" +
       "\030\002 \001(\tR\006app_id\022\032\n\010app_name\030\003 \001(\tR\010app_na" +
       "me\022\"\n\014archive_logs\030\004 \001(\010R\014archive_logs\022\032" +
@@ -209,9 +209,11 @@ public final class AnalysisSubmissionProtobufs {
       "_id\022 \n\013user_groups\030) \003(\tR\013user_groups\022\034\n" +
       "\tuser_home\030* \001(\tR\tuser_home\022\032\n\010wiki_url\030" +
       "+ \001(\tR\010wiki_url\022 \n\013config_file\030, \001(\tR\013co" +
-      "nfig_file:\002\030\001B^\n\030org.cyverse.de.protobuf" +
-      "sB\033AnalysisSubmissionProtobufsP\001Z#github" +
-      ".com/cyverse-de/p/go/analysisb\006proto3"
+      "nfig_file\022*\n\020mount_data_store\030- \001(\010R\020mou" +
+      "nt_data_store:\002\030\001B^\n\030org.cyverse.de.prot" +
+      "obufsB\033AnalysisSubmissionProtobufsP\001Z#gi" +
+      "thub.com/cyverse-de/p/go/analysisb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -290,7 +292,7 @@ public final class AnalysisSubmissionProtobufs {
     internal_static_analysis_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_analysis_Job_descriptor,
-        new java.lang.String[] { "AppDescription", "AppId", "AppName", "ArchiveLogs", "BatchId", "CondorId", "CondorLogPath", "CreateOutputSubdir", "DateSubmitted", "DateStarted", "DateCompleted", "Description", "Email", "Extra", "ExecutionTarget", "ExitCode", "FailureCount", "FailureThreshold", "FileMetadata", "FilterFiles", "Group", "InputPathListFile", "InputTicketsFile", "InvocationId", "IrodsBase", "Name", "NfsBase", "Notify", "NowDate", "OutputDir", "OutputDirTicket", "OutputTicketFile", "RequestType", "RunOnNfs", "SkipParentMetadata", "Steps", "SubmissionDate", "Submitter", "Type", "UserId", "UserGroups", "UserHome", "WikiUrl", "ConfigFile", });
+        new java.lang.String[] { "AppDescription", "AppId", "AppName", "ArchiveLogs", "BatchId", "CondorId", "CondorLogPath", "CreateOutputSubdir", "DateSubmitted", "DateStarted", "DateCompleted", "Description", "Email", "Extra", "ExecutionTarget", "ExitCode", "FailureCount", "FailureThreshold", "FileMetadata", "FilterFiles", "Group", "InputPathListFile", "InputTicketsFile", "InvocationId", "IrodsBase", "Name", "NfsBase", "Notify", "NowDate", "OutputDir", "OutputDirTicket", "OutputTicketFile", "RequestType", "RunOnNfs", "SkipParentMetadata", "Steps", "SubmissionDate", "Submitter", "Type", "UserId", "UserGroups", "UserHome", "WikiUrl", "ConfigFile", "MountDataStore", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.ContainersProtobufs.getDescriptor();

@@ -181,4 +181,5 @@ message Job {
     string user_home = 42 [json_name = "user_home"];
     string wiki_url = 43 [json_name = "wiki_url"];
     string config_file = 44 [json_name = "config_file"];
+    bool mount_data_store = 45 [json_name = "mount_data_store"];
 }
