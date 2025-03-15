@@ -305,6 +305,7 @@ Corresponds to the job_types table in the database.
 | user_home | [string](#string) |  |  |
 | wiki_url | [string](#string) |  |  |
 | config_file | [string](#string) |  |  |
+| mount_data_store | [bool](#bool) |  |  |
 
 
 
@@ -410,6 +411,7 @@ Since protocol buffers don&#39;t have a way to alias messages, we&#39;re copying
 | user_home | [string](#string) |  |  |
 | wiki_url | [string](#string) |  |  |
 | config_file | [string](#string) |  |  |
+| mount_data_store | [bool](#bool) |  |  |
 
 
 

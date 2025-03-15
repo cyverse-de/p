@@ -119,16 +119,17 @@ message AnalysisSubmission {
     string output_ticket_file = 32 [json_name = "output_ticket_file"];
     string request_type = 33 [json_name = "request_type"];
     bool run_on_nfs = 34 [json_name = "run-on-nfs"]; // The - is on purpose.
-    bool skip_parent_metadata = 35 [json_name = "skip-parent-meta"]; // The - is on purpose. 
+    bool skip_parent_metadata = 35 [json_name = "skip-parent-meta"]; // The - is on purpose.
     repeated Step steps = 36;
     string submission_date = 37 [json_name = "submission_date"];
     string submitter = 38 [json_name = "username"]; // Yup, the JSON name is completely different from the field name.
     string type = 39;
-    string user_id = 40 [json_name = "user_id"]; 
+    string user_id = 40 [json_name = "user_id"];
     repeated string user_groups = 41 [json_name = "user_groups"];
     string user_home = 42 [json_name = "user_home"];
     string wiki_url = 43 [json_name = "wiki_url"];
     string config_file = 44 [json_name = "config_file"];
+    bool mount_data_store = 45 [json_name = "mount_data_store"];
 }
 
 
@@ -170,14 +171,15 @@ message Job {
     string output_ticket_file = 32 [json_name = "output_ticket_file"];
     string request_type = 33 [json_name = "request_type"];
     bool run_on_nfs = 34 [json_name = "run-on-nfs"]; // The - is on purpose.
-    bool skip_parent_metadata = 35 [json_name = "skip-parent-meta"]; // The - is on purpose. 
+    bool skip_parent_metadata = 35 [json_name = "skip-parent-meta"]; // The - is on purpose.
     repeated Step steps = 36;
     string submission_date = 37 [json_name = "submission_date"];
     string submitter = 38 [json_name = "username"]; // Yup, the JSON name is completely different from the field name.
     string type = 39;
-    string user_id = 40 [json_name = "user_id"]; 
+    string user_id = 40 [json_name = "user_id"];
     repeated string user_groups = 41 [json_name = "user_groups"];
     string user_home = 42 [json_name = "user_home"];
     string wiki_url = 43 [json_name = "wiki_url"];
     string config_file = 44 [json_name = "config_file"];
+    bool mount_data_store = 45 [json_name = "mount_data_store"];
 }
