@@ -1,8 +1,8 @@
-FROM golang:1.22
+FROM golang:1.24
 
 ENV protoc_version=29.0
 ENV arch=x86_64
-ENV protoc_gen_go_version=v1.35.1
+ENV protoc_gen_go_version=v1.36.6
 
 RUN apt-get update -y
 RUN apt-get install -y curl unzip

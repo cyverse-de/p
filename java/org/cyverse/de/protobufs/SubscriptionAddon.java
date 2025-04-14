@@ -35,6 +35,7 @@ private static final long serialVersionUID = 0L;
   }
   private SubscriptionAddon() {
     uuid_ = "";
+    subscriptionId_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -139,45 +140,51 @@ private static final long serialVersionUID = 0L;
     return addon_ == null ? org.cyverse.de.protobufs.Addon.getDefaultInstance() : addon_;
   }
 
-  public static final int SUBSCRIPTION_FIELD_NUMBER = 3;
-  private org.cyverse.de.protobufs.Subscription subscription_;
+  public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object subscriptionId_ = "";
   /**
    * <pre>
-   * The subscription the add-on was applied to. May only contain the add-on's
-   * UUID in some circumstances.
+   * The unique identifier for the subscription the add-on was applied to.
    * </pre>
    *
-   * <code>.qms.Subscription subscription = 3;</code>
-   * @return Whether the subscription field is set.
+   * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+   * @return The subscriptionId.
    */
   @java.lang.Override
-  public boolean hasSubscription() {
-    return ((bitField0_ & 0x00000002) != 0);
+  public java.lang.String getSubscriptionId() {
+    java.lang.Object ref = subscriptionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      subscriptionId_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
-   * The subscription the add-on was applied to. May only contain the add-on's
-   * UUID in some circumstances.
+   * The unique identifier for the subscription the add-on was applied to.
    * </pre>
    *
-   * <code>.qms.Subscription subscription = 3;</code>
-   * @return The subscription.
+   * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+   * @return The bytes for subscriptionId.
    */
   @java.lang.Override
-  public org.cyverse.de.protobufs.Subscription getSubscription() {
-    return subscription_ == null ? org.cyverse.de.protobufs.Subscription.getDefaultInstance() : subscription_;
-  }
-  /**
-   * <pre>
-   * The subscription the add-on was applied to. May only contain the add-on's
-   * UUID in some circumstances.
-   * </pre>
-   *
-   * <code>.qms.Subscription subscription = 3;</code>
-   */
-  @java.lang.Override
-  public org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionOrBuilder() {
-    return subscription_ == null ? org.cyverse.de.protobufs.Subscription.getDefaultInstance() : subscription_;
+  public com.google.protobuf.ByteString
+      getSubscriptionIdBytes() {
+    java.lang.Object ref = subscriptionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      subscriptionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int AMOUNT_FIELD_NUMBER = 4;
@@ -227,7 +234,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAddonRate() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -275,8 +282,8 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getAddon());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(3, getSubscription());
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(subscriptionId_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, subscriptionId_);
     }
     if (java.lang.Double.doubleToRawLongBits(amount_) != 0) {
       output.writeDouble(4, amount_);
@@ -284,7 +291,7 @@ private static final long serialVersionUID = 0L;
     if (paid_ != false) {
       output.writeBool(5, paid_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getAddonRate());
     }
     getUnknownFields().writeTo(output);
@@ -303,9 +310,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAddon());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getSubscription());
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(subscriptionId_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, subscriptionId_);
     }
     if (java.lang.Double.doubleToRawLongBits(amount_) != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -315,7 +321,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, paid_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getAddonRate());
     }
@@ -341,11 +347,8 @@ private static final long serialVersionUID = 0L;
       if (!getAddon()
           .equals(other.getAddon())) return false;
     }
-    if (hasSubscription() != other.hasSubscription()) return false;
-    if (hasSubscription()) {
-      if (!getSubscription()
-          .equals(other.getSubscription())) return false;
-    }
+    if (!getSubscriptionId()
+        .equals(other.getSubscriptionId())) return false;
     if (java.lang.Double.doubleToLongBits(getAmount())
         != java.lang.Double.doubleToLongBits(
             other.getAmount())) return false;
@@ -373,10 +376,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ADDON_FIELD_NUMBER;
       hash = (53 * hash) + getAddon().hashCode();
     }
-    if (hasSubscription()) {
-      hash = (37 * hash) + SUBSCRIPTION_FIELD_NUMBER;
-      hash = (53 * hash) + getSubscription().hashCode();
-    }
+    hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getSubscriptionId().hashCode();
     hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getAmount()));
@@ -525,7 +526,6 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         getAddonFieldBuilder();
-        getSubscriptionFieldBuilder();
         getAddonRateFieldBuilder();
       }
     }
@@ -539,11 +539,7 @@ private static final long serialVersionUID = 0L;
         addonBuilder_.dispose();
         addonBuilder_ = null;
       }
-      subscription_ = null;
-      if (subscriptionBuilder_ != null) {
-        subscriptionBuilder_.dispose();
-        subscriptionBuilder_ = null;
-      }
+      subscriptionId_ = "";
       amount_ = 0D;
       paid_ = false;
       addonRate_ = null;
@@ -595,10 +591,7 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.subscription_ = subscriptionBuilder_ == null
-            ? subscription_
-            : subscriptionBuilder_.build();
-        to_bitField0_ |= 0x00000002;
+        result.subscriptionId_ = subscriptionId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.amount_ = amount_;
@@ -610,7 +603,7 @@ private static final long serialVersionUID = 0L;
         result.addonRate_ = addonRateBuilder_ == null
             ? addonRate_
             : addonRateBuilder_.build();
-        to_bitField0_ |= 0x00000004;
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -635,8 +628,10 @@ private static final long serialVersionUID = 0L;
       if (other.hasAddon()) {
         mergeAddon(other.getAddon());
       }
-      if (other.hasSubscription()) {
-        mergeSubscription(other.getSubscription());
+      if (!other.getSubscriptionId().isEmpty()) {
+        subscriptionId_ = other.subscriptionId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
       }
       if (other.getAmount() != 0D) {
         setAmount(other.getAmount());
@@ -686,9 +681,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 18
             case 26: {
-              input.readMessage(
-                  getSubscriptionFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              subscriptionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
@@ -984,170 +977,96 @@ private static final long serialVersionUID = 0L;
       return addonBuilder_;
     }
 
-    private org.cyverse.de.protobufs.Subscription subscription_;
-    private com.google.protobuf.SingleFieldBuilder<
-        org.cyverse.de.protobufs.Subscription, org.cyverse.de.protobufs.Subscription.Builder, org.cyverse.de.protobufs.SubscriptionOrBuilder> subscriptionBuilder_;
+    private java.lang.Object subscriptionId_ = "";
     /**
      * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
+     * The unique identifier for the subscription the add-on was applied to.
      * </pre>
      *
-     * <code>.qms.Subscription subscription = 3;</code>
-     * @return Whether the subscription field is set.
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @return The subscriptionId.
      */
-    public boolean hasSubscription() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
-     * </pre>
-     *
-     * <code>.qms.Subscription subscription = 3;</code>
-     * @return The subscription.
-     */
-    public org.cyverse.de.protobufs.Subscription getSubscription() {
-      if (subscriptionBuilder_ == null) {
-        return subscription_ == null ? org.cyverse.de.protobufs.Subscription.getDefaultInstance() : subscription_;
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
       } else {
-        return subscriptionBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
      * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
+     * The unique identifier for the subscription the add-on was applied to.
      * </pre>
      *
-     * <code>.qms.Subscription subscription = 3;</code>
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @return The bytes for subscriptionId.
      */
-    public Builder setSubscription(org.cyverse.de.protobufs.Subscription value) {
-      if (subscriptionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        subscription_ = value;
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
       } else {
-        subscriptionBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
+    }
+    /**
+     * <pre>
+     * The unique identifier for the subscription the add-on was applied to.
+     * </pre>
+     *
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @param value The subscriptionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubscriptionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      subscriptionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
+     * The unique identifier for the subscription the add-on was applied to.
      * </pre>
      *
-     * <code>.qms.Subscription subscription = 3;</code>
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @return This builder for chaining.
      */
-    public Builder setSubscription(
-        org.cyverse.de.protobufs.Subscription.Builder builderForValue) {
-      if (subscriptionBuilder_ == null) {
-        subscription_ = builderForValue.build();
-      } else {
-        subscriptionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
-     * </pre>
-     *
-     * <code>.qms.Subscription subscription = 3;</code>
-     */
-    public Builder mergeSubscription(org.cyverse.de.protobufs.Subscription value) {
-      if (subscriptionBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          subscription_ != null &&
-          subscription_ != org.cyverse.de.protobufs.Subscription.getDefaultInstance()) {
-          getSubscriptionBuilder().mergeFrom(value);
-        } else {
-          subscription_ = value;
-        }
-      } else {
-        subscriptionBuilder_.mergeFrom(value);
-      }
-      if (subscription_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
-     * </pre>
-     *
-     * <code>.qms.Subscription subscription = 3;</code>
-     */
-    public Builder clearSubscription() {
+    public Builder clearSubscriptionId() {
+      subscriptionId_ = getDefaultInstance().getSubscriptionId();
       bitField0_ = (bitField0_ & ~0x00000004);
-      subscription_ = null;
-      if (subscriptionBuilder_ != null) {
-        subscriptionBuilder_.dispose();
-        subscriptionBuilder_ = null;
-      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
+     * The unique identifier for the subscription the add-on was applied to.
      * </pre>
      *
-     * <code>.qms.Subscription subscription = 3;</code>
+     * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+     * @param value The bytes for subscriptionId to set.
+     * @return This builder for chaining.
      */
-    public org.cyverse.de.protobufs.Subscription.Builder getSubscriptionBuilder() {
+    public Builder setSubscriptionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      subscriptionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
-      return getSubscriptionFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
-     * </pre>
-     *
-     * <code>.qms.Subscription subscription = 3;</code>
-     */
-    public org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionOrBuilder() {
-      if (subscriptionBuilder_ != null) {
-        return subscriptionBuilder_.getMessageOrBuilder();
-      } else {
-        return subscription_ == null ?
-            org.cyverse.de.protobufs.Subscription.getDefaultInstance() : subscription_;
-      }
-    }
-    /**
-     * <pre>
-     * The subscription the add-on was applied to. May only contain the add-on's
-     * UUID in some circumstances.
-     * </pre>
-     *
-     * <code>.qms.Subscription subscription = 3;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        org.cyverse.de.protobufs.Subscription, org.cyverse.de.protobufs.Subscription.Builder, org.cyverse.de.protobufs.SubscriptionOrBuilder> 
-        getSubscriptionFieldBuilder() {
-      if (subscriptionBuilder_ == null) {
-        subscriptionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            org.cyverse.de.protobufs.Subscription, org.cyverse.de.protobufs.Subscription.Builder, org.cyverse.de.protobufs.SubscriptionOrBuilder>(
-                getSubscription(),
-                getParentForChildren(),
-                isClean());
-        subscription_ = null;
-      }
-      return subscriptionBuilder_;
+      return this;
     }
 
     private double amount_ ;

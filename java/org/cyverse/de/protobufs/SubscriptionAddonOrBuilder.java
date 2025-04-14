@@ -61,33 +61,23 @@ public interface SubscriptionAddonOrBuilder extends
 
   /**
    * <pre>
-   * The subscription the add-on was applied to. May only contain the add-on's
-   * UUID in some circumstances.
+   * The unique identifier for the subscription the add-on was applied to.
    * </pre>
    *
-   * <code>.qms.Subscription subscription = 3;</code>
-   * @return Whether the subscription field is set.
+   * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+   * @return The subscriptionId.
    */
-  boolean hasSubscription();
+  java.lang.String getSubscriptionId();
   /**
    * <pre>
-   * The subscription the add-on was applied to. May only contain the add-on's
-   * UUID in some circumstances.
+   * The unique identifier for the subscription the add-on was applied to.
    * </pre>
    *
-   * <code>.qms.Subscription subscription = 3;</code>
-   * @return The subscription.
+   * <code>string subscription_id = 3 [json_name = "subscription_id"];</code>
+   * @return The bytes for subscriptionId.
    */
-  org.cyverse.de.protobufs.Subscription getSubscription();
-  /**
-   * <pre>
-   * The subscription the add-on was applied to. May only contain the add-on's
-   * UUID in some circumstances.
-   * </pre>
-   *
-   * <code>.qms.Subscription subscription = 3;</code>
-   */
-  org.cyverse.de.protobufs.SubscriptionOrBuilder getSubscriptionOrBuilder();
+  com.google.protobuf.ByteString
+      getSubscriptionIdBytes();
 
   /**
    * <pre>

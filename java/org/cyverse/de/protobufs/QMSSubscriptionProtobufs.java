@@ -56,31 +56,33 @@ public final class QMSSubscriptionProtobufs {
     java.lang.String[] descriptorData = {
       "\n\027qms_subscriptions.proto\022\003qms\032\037google/p" +
       "rotobuf/timestamp.proto\032\014header.proto\032\016s" +
-      "vcerror.proto\032\017qms_users.proto\032\017qms_plan" +
-      "s.proto\032\020qms_quotas.proto\032\020qms_usages.pr" +
-      "oto\"\340\002\n\014Subscription\022\014\n\004uuid\030\001 \001(\t\022N\n\024ef" +
-      "fective_start_date\030\002 \001(\0132\032.google.protob" +
-      "uf.TimestampR\024effective_start_date\022J\n\022ef" +
-      "fective_end_date\030\003 \001(\0132\032.google.protobuf" +
-      ".TimestampR\022effective_end_date\022\032\n\004user\030\004" +
-      " \001(\0132\014.qms.QMSUser\022\027\n\004plan\030\005 \001(\0132\t.qms.P" +
-      "lan\022\032\n\006quotas\030\006 \003(\0132\n.qms.Quota\022\032\n\006usage" +
-      "s\030\007 \003(\0132\n.qms.Usage\022\014\n\004paid\030\010 \001(\010\022+\n\tpla" +
-      "n_rate\030\t \001(\0132\r.qms.PlanRateR\tplan_rate\"\224" +
-      "\001\n\024SubscriptionResponse\022\036\n\006header\030\001 \001(\0132" +
-      "\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svcerro" +
-      "r.ServiceError\0225\n\014subscription\030\003 \001(\0132\021.q" +
-      "ms.SubscriptionR\014subscription\"\222\001\n\020Subscr" +
-      "iptionList\022\036\n\006header\030\001 \001(\0132\016.header.Head" +
-      "er\022%\n\005error\030\002 \001(\0132\026.svcerror.ServiceErro" +
-      "r\0227\n\rsubscriptions\030\003 \003(\0132\021.qms.Subscript" +
-      "ionR\rsubscriptions\"\230\001\n\031ChangeSubscriptio" +
-      "nRequest\022\036\n\006header\030\001 \001(\0132\016.header.Header" +
-      "\022\020\n\010username\030\002 \001(\t\022\016\n\004uuid\030\003 \001(\tH\000\022\016\n\004na" +
-      "me\030\004 \001(\tH\000\022\017\n\007periods\030\005 \001(\005\022\020\n\010end_date\030" +
-      "\006 \001(\tB\006\n\004planBV\n\030org.cyverse.de.protobuf" +
-      "sB\030QMSSubscriptionProtobufsP\001Z\036github.co" +
-      "m/cyverse-de/p/go/qmsb\006proto3"
+      "vcerror.proto\032\020qms_addons.proto\032\017qms_use" +
+      "rs.proto\032\017qms_plans.proto\032\020qms_quotas.pr" +
+      "oto\032\020qms_usages.proto\"\210\003\n\014Subscription\022\014" +
+      "\n\004uuid\030\001 \001(\t\022N\n\024effective_start_date\030\002 \001" +
+      "(\0132\032.google.protobuf.TimestampR\024effectiv" +
+      "e_start_date\022J\n\022effective_end_date\030\003 \001(\013" +
+      "2\032.google.protobuf.TimestampR\022effective_" +
+      "end_date\022\032\n\004user\030\004 \001(\0132\014.qms.QMSUser\022\027\n\004" +
+      "plan\030\005 \001(\0132\t.qms.Plan\022\032\n\006quotas\030\006 \003(\0132\n." +
+      "qms.Quota\022\032\n\006usages\030\007 \003(\0132\n.qms.Usage\022\014\n" +
+      "\004paid\030\010 \001(\010\022+\n\tplan_rate\030\t \001(\0132\r.qms.Pla" +
+      "nRateR\tplan_rate\022&\n\006addons\030\n \003(\0132\026.qms.S" +
+      "ubscriptionAddon\"\224\001\n\024SubscriptionRespons" +
+      "e\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005err" +
+      "or\030\002 \001(\0132\026.svcerror.ServiceError\0225\n\014subs" +
+      "cription\030\003 \001(\0132\021.qms.SubscriptionR\014subsc" +
+      "ription\"\222\001\n\020SubscriptionList\022\036\n\006header\030\001" +
+      " \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.sv" +
+      "cerror.ServiceError\0227\n\rsubscriptions\030\003 \003" +
+      "(\0132\021.qms.SubscriptionR\rsubscriptions\"\230\001\n" +
+      "\031ChangeSubscriptionRequest\022\036\n\006header\030\001 \001" +
+      "(\0132\016.header.Header\022\020\n\010username\030\002 \001(\t\022\016\n\004" +
+      "uuid\030\003 \001(\tH\000\022\016\n\004name\030\004 \001(\tH\000\022\017\n\007periods\030" +
+      "\005 \001(\005\022\020\n\010end_date\030\006 \001(\tB\006\n\004planBV\n\030org.c" +
+      "yverse.de.protobufsB\030QMSSubscriptionProt" +
+      "obufsP\001Z\036github.com/cyverse-de/p/go/qmsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -88,6 +90,7 @@ public final class QMSSubscriptionProtobufs {
           com.google.protobuf.TimestampProto.getDescriptor(),
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
+          org.cyverse.de.protobufs.QMSAddonProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSUSerProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSPlansProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSQuotaProtobufs.getDescriptor(),
@@ -98,7 +101,7 @@ public final class QMSSubscriptionProtobufs {
     internal_static_qms_Subscription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_qms_Subscription_descriptor,
-        new java.lang.String[] { "Uuid", "EffectiveStartDate", "EffectiveEndDate", "User", "Plan", "Quotas", "Usages", "Paid", "PlanRate", });
+        new java.lang.String[] { "Uuid", "EffectiveStartDate", "EffectiveEndDate", "User", "Plan", "Quotas", "Usages", "Paid", "PlanRate", "Addons", });
     internal_static_qms_SubscriptionResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_qms_SubscriptionResponse_fieldAccessorTable = new
@@ -121,6 +124,7 @@ public final class QMSSubscriptionProtobufs {
     com.google.protobuf.TimestampProto.getDescriptor();
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
+    org.cyverse.de.protobufs.QMSAddonProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSUSerProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSPlansProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSQuotaProtobufs.getDescriptor();
