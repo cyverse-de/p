@@ -6,7 +6,6 @@ import "google/protobuf/timestamp.proto";
 import "header.proto";
 import "svcerror.proto";
 import "qms_resource_types.proto";
-import "qms_subscriptions.proto";
 
 option go_package = "github.com/cyverse-de/p/go/qms";
 
@@ -182,9 +181,8 @@ message SubscriptionAddon {
     // UUID in some circumstances.
     Addon addon = 2;
 
-    // The subscription the add-on was applied to. May only contain the add-on's
-    // UUID in some circumstances.
-    Subscription subscription = 3;
+    // The unique identifier for the subscription the add-on was applied to.
+    string subscription_id = 3 [json_name = "subscription_id"];
 
     // The amount of the resource applied by the add-on. This should default to
     // the amount contained in the add-on definition, but can be overridden,
