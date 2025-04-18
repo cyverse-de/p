@@ -5,6 +5,7 @@ package qms;
 import "google/protobuf/timestamp.proto";
 import "header.proto";
 import "svcerror.proto";
+import "qms_addons.proto";
 import "qms_users.proto";
 import "qms_plans.proto";
 import "qms_quotas.proto";
@@ -48,6 +49,9 @@ message Subscription {
     // Information about the rate that was active when the subscription was purchased. Note that this rate is recorded
     // whether or not the user paid for the subscription directly.
     PlanRate plan_rate = 9 [json_name = "plan_rate"];
+
+    // The list of add-ons applied to the subscription.
+    repeated SubscriptionAddon addons = 10;
 }
 
 /**

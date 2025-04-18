@@ -35,6 +35,7 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     quotas_ = java.util.Collections.emptyList();
     usages_ = java.util.Collections.emptyList();
+    addons_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -433,6 +434,67 @@ private static final long serialVersionUID = 0L;
     return planRate_ == null ? org.cyverse.de.protobufs.PlanRate.getDefaultInstance() : planRate_;
   }
 
+  public static final int ADDONS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> addons_;
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> getAddonsList() {
+    return addons_;
+  }
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
+      getAddonsOrBuilderList() {
+    return addons_;
+  }
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  @java.lang.Override
+  public int getAddonsCount() {
+    return addons_.size();
+  }
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  @java.lang.Override
+  public org.cyverse.de.protobufs.SubscriptionAddon getAddons(int index) {
+    return addons_.get(index);
+  }
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  @java.lang.Override
+  public org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getAddonsOrBuilder(
+      int index) {
+    return addons_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -473,6 +535,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(9, getPlanRate());
+    }
+    for (int i = 0; i < addons_.size(); i++) {
+      output.writeMessage(10, addons_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -517,6 +582,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getPlanRate());
+    }
+    for (int i = 0; i < addons_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, addons_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -566,6 +635,8 @@ private static final long serialVersionUID = 0L;
       if (!getPlanRate()
           .equals(other.getPlanRate())) return false;
     }
+    if (!getAddonsList()
+        .equals(other.getAddonsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -609,6 +680,10 @@ private static final long serialVersionUID = 0L;
     if (hasPlanRate()) {
       hash = (37 * hash) + PLAN_RATE_FIELD_NUMBER;
       hash = (53 * hash) + getPlanRate().hashCode();
+    }
+    if (getAddonsCount() > 0) {
+      hash = (37 * hash) + ADDONS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddonsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -752,6 +827,7 @@ private static final long serialVersionUID = 0L;
         getQuotasFieldBuilder();
         getUsagesFieldBuilder();
         getPlanRateFieldBuilder();
+        getAddonsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -799,6 +875,13 @@ private static final long serialVersionUID = 0L;
         planRateBuilder_.dispose();
         planRateBuilder_ = null;
       }
+      if (addonsBuilder_ == null) {
+        addons_ = java.util.Collections.emptyList();
+      } else {
+        addons_ = null;
+        addonsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -849,6 +932,15 @@ private static final long serialVersionUID = 0L;
         result.usages_ = usages_;
       } else {
         result.usages_ = usagesBuilder_.build();
+      }
+      if (addonsBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          addons_ = java.util.Collections.unmodifiableList(addons_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.addons_ = addons_;
+      } else {
+        result.addons_ = addonsBuilder_.build();
       }
     }
 
@@ -981,6 +1073,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasPlanRate()) {
         mergePlanRate(other.getPlanRate());
       }
+      if (addonsBuilder_ == null) {
+        if (!other.addons_.isEmpty()) {
+          if (addons_.isEmpty()) {
+            addons_ = other.addons_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureAddonsIsMutable();
+            addons_.addAll(other.addons_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.addons_.isEmpty()) {
+          if (addonsBuilder_.isEmpty()) {
+            addonsBuilder_.dispose();
+            addonsBuilder_ = null;
+            addons_ = other.addons_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            addonsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getAddonsFieldBuilder() : null;
+          } else {
+            addonsBuilder_.addAllMessages(other.addons_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1078,6 +1196,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 74
+            case 82: {
+              org.cyverse.de.protobufs.SubscriptionAddon m =
+                  input.readMessage(
+                      org.cyverse.de.protobufs.SubscriptionAddon.parser(),
+                      extensionRegistry);
+              if (addonsBuilder_ == null) {
+                ensureAddonsIsMutable();
+                addons_.add(m);
+              } else {
+                addonsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2665,6 +2796,318 @@ private static final long serialVersionUID = 0L;
         planRate_ = null;
       }
       return planRateBuilder_;
+    }
+
+    private java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> addons_ =
+      java.util.Collections.emptyList();
+    private void ensureAddonsIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        addons_ = new java.util.ArrayList<org.cyverse.de.protobufs.SubscriptionAddon>(addons_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        org.cyverse.de.protobufs.SubscriptionAddon, org.cyverse.de.protobufs.SubscriptionAddon.Builder, org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> addonsBuilder_;
+
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> getAddonsList() {
+      if (addonsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(addons_);
+      } else {
+        return addonsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public int getAddonsCount() {
+      if (addonsBuilder_ == null) {
+        return addons_.size();
+      } else {
+        return addonsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public org.cyverse.de.protobufs.SubscriptionAddon getAddons(int index) {
+      if (addonsBuilder_ == null) {
+        return addons_.get(index);
+      } else {
+        return addonsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder setAddons(
+        int index, org.cyverse.de.protobufs.SubscriptionAddon value) {
+      if (addonsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAddonsIsMutable();
+        addons_.set(index, value);
+        onChanged();
+      } else {
+        addonsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder setAddons(
+        int index, org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
+      if (addonsBuilder_ == null) {
+        ensureAddonsIsMutable();
+        addons_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        addonsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder addAddons(org.cyverse.de.protobufs.SubscriptionAddon value) {
+      if (addonsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAddonsIsMutable();
+        addons_.add(value);
+        onChanged();
+      } else {
+        addonsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder addAddons(
+        int index, org.cyverse.de.protobufs.SubscriptionAddon value) {
+      if (addonsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAddonsIsMutable();
+        addons_.add(index, value);
+        onChanged();
+      } else {
+        addonsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder addAddons(
+        org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
+      if (addonsBuilder_ == null) {
+        ensureAddonsIsMutable();
+        addons_.add(builderForValue.build());
+        onChanged();
+      } else {
+        addonsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder addAddons(
+        int index, org.cyverse.de.protobufs.SubscriptionAddon.Builder builderForValue) {
+      if (addonsBuilder_ == null) {
+        ensureAddonsIsMutable();
+        addons_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        addonsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder addAllAddons(
+        java.lang.Iterable<? extends org.cyverse.de.protobufs.SubscriptionAddon> values) {
+      if (addonsBuilder_ == null) {
+        ensureAddonsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, addons_);
+        onChanged();
+      } else {
+        addonsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder clearAddons() {
+      if (addonsBuilder_ == null) {
+        addons_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        addonsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public Builder removeAddons(int index) {
+      if (addonsBuilder_ == null) {
+        ensureAddonsIsMutable();
+        addons_.remove(index);
+        onChanged();
+      } else {
+        addonsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public org.cyverse.de.protobufs.SubscriptionAddon.Builder getAddonsBuilder(
+        int index) {
+      return getAddonsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getAddonsOrBuilder(
+        int index) {
+      if (addonsBuilder_ == null) {
+        return addons_.get(index);  } else {
+        return addonsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public java.util.List<? extends org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
+         getAddonsOrBuilderList() {
+      if (addonsBuilder_ != null) {
+        return addonsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(addons_);
+      }
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public org.cyverse.de.protobufs.SubscriptionAddon.Builder addAddonsBuilder() {
+      return getAddonsFieldBuilder().addBuilder(
+          org.cyverse.de.protobufs.SubscriptionAddon.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public org.cyverse.de.protobufs.SubscriptionAddon.Builder addAddonsBuilder(
+        int index) {
+      return getAddonsFieldBuilder().addBuilder(
+          index, org.cyverse.de.protobufs.SubscriptionAddon.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The list of add-ons applied to the subscription.
+     * </pre>
+     *
+     * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+     */
+    public java.util.List<org.cyverse.de.protobufs.SubscriptionAddon.Builder> 
+         getAddonsBuilderList() {
+      return getAddonsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        org.cyverse.de.protobufs.SubscriptionAddon, org.cyverse.de.protobufs.SubscriptionAddon.Builder, org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
+        getAddonsFieldBuilder() {
+      if (addonsBuilder_ == null) {
+        addonsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            org.cyverse.de.protobufs.SubscriptionAddon, org.cyverse.de.protobufs.SubscriptionAddon.Builder, org.cyverse.de.protobufs.SubscriptionAddonOrBuilder>(
+                addons_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        addons_ = null;
+      }
+      return addonsBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:qms.Subscription)

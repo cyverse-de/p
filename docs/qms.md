@@ -249,7 +249,7 @@ fields in the subscription.
 | ----- | ---- | ----- | ----------- |
 | uuid | [string](#string) |  | The unique identifier for the add-on |
 | addon | [Addon](#qms-Addon) |  | The add-on used with the subscription. May only contain the add-on&#39;s UUID in some circumstances. |
-| subscription | [Subscription](#qms-Subscription) |  | The subscription the add-on was applied to. May only contain the add-on&#39;s UUID in some circumstances. |
+| subscription_id | [string](#string) |  | The unique identifier for the subscription the add-on was applied to. |
 | amount | [double](#double) |  | The amount of the resource applied by the add-on. This should default to the amount contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
 | paid | [bool](#bool) |  | Whether the subscription add-on costs money. This should default to the same paid value contained in the add-on definition, but can be overridden, which is why it&#39;s a separate field here. |
 | addon_rate | [AddonRate](#qms-AddonRate) |  | The amount per year that we expect to have been charged if the user paid for the add-on. |
@@ -1025,6 +1025,7 @@ Representation of a subscription.
 | usages | [Usage](#qms-Usage) | repeated | The list of resource usages that the user has generated while this plan was active. |
 | paid | [bool](#bool) |  | A flag indicating whether or not the user paid for the subscription. |
 | plan_rate | [PlanRate](#qms-PlanRate) |  | Information about the rate that was active when the subscription was purchased. Note that this rate is recorded whether or not the user paid for the subscription directly. |
+| addons | [SubscriptionAddon](#qms-SubscriptionAddon) | repeated | The list of add-ons applied to the subscription. |
 
 
 

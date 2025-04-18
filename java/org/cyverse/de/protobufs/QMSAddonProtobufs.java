@@ -101,63 +101,63 @@ public final class QMSAddonProtobufs {
     java.lang.String[] descriptorData = {
       "\n\020qms_addons.proto\022\003qms\032\037google/protobuf" +
       "/timestamp.proto\032\014header.proto\032\016svcerror" +
-      ".proto\032\030qms_resource_types.proto\032\027qms_su" +
-      "bscriptions.proto\"k\n\tAddonRate\022\014\n\004uuid\030\001" +
-      " \001(\t\022\014\n\004rate\030\002 \001(\001\022B\n\016effective_date\030\003 \001" +
-      "(\0132\032.google.protobuf.TimestampR\016effectiv" +
-      "e_date\"\212\001\n\021AddonRateResponse\022\036\n\006header\030\001" +
-      " \001(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.sv" +
-      "cerror.ServiceError\022.\n\naddon_rate\030\003 \001(\0132" +
-      "\016.qms.AddonRateR\naddon_rate\"\210\001\n\rAddonRat" +
-      "eList\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n" +
-      "\005error\030\002 \001(\0132\026.svcerror.ServiceError\0220\n\013" +
-      "addon_rates\030\003 \003(\0132\016.qms.AddonRateR\013addon" +
-      "_rates\"\357\001\n\005Addon\022\014\n\004uuid\030\001 \001(\t\022\014\n\004name\030\002" +
-      " \001(\t\022\023\n\013description\030\003 \001(\t\0227\n\rresource_ty" +
-      "pe\030\004 \001(\0132\021.qms.ResourceTypeR\rresource_ty" +
-      "pe\022&\n\016default_amount\030\005 \001(\001R\016default_amou" +
-      "nt\022\"\n\014default_paid\030\006 \001(\010R\014default_paid\0220" +
-      "\n\013addon_rates\030\007 \003(\0132\016.qms.AddonRateR\013add" +
-      "on_rates\"q\n\rAddonResponse\022\036\n\006header\030\001 \001(" +
-      "\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svcer" +
-      "ror.ServiceError\022\031\n\005addon\030\003 \001(\0132\n.qms.Ad" +
-      "don\"v\n\021AddonListResponse\022\036\n\006header\030\001 \001(\013" +
-      "2\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svcerr" +
-      "or.ServiceError\022\032\n\006addons\030\003 \003(\0132\n.qms.Ad" +
-      "don\"L\n\017AddAddonRequest\022\036\n\006header\030\001 \001(\0132\016" +
-      ".header.Header\022\031\n\005addon\030\002 \001(\0132\n.qms.Addo" +
-      "n\"]\n\022AddonLookupRequest\022\036\n\006header\030\001 \001(\0132" +
-      "\016.header.Header\022\016\n\004uuid\030\002 \001(\tH\000\022\016\n\004name\030" +
-      "\003 \001(\tH\000B\007\n\005addon\"\366\001\n\022UpdateAddonRequest\022" +
-      "\036\n\006header\030\001 \001(\0132\016.header.Header\022\031\n\005addon" +
-      "\030\002 \001(\0132\n.qms.Addon\022\023\n\013update_name\030\003 \001(\010\022" +
-      "\032\n\022update_description\030\004 \001(\010\022\034\n\024update_re" +
-      "source_type\030\005 \001(\010\022\035\n\025update_default_amou" +
-      "nt\030\006 \001(\010\022\033\n\023update_default_paid\030\007 \001(\010\022\032\n" +
-      "\022update_addon_rates\030\010 \001(\010\"\263\001\n\021Subscripti" +
-      "onAddon\022\014\n\004uuid\030\001 \001(\t\022\031\n\005addon\030\002 \001(\0132\n.q" +
-      "ms.Addon\022\'\n\014subscription\030\003 \001(\0132\021.qms.Sub" +
-      "scription\022\016\n\006amount\030\004 \001(\001\022\014\n\004paid\030\005 \001(\010\022" +
-      ".\n\naddon_rate\030\006 \001(\0132\016.qms.AddonRateR\nadd" +
-      "on_rate\"\262\002\n\036UpdateSubscriptionAddonReque" +
-      "st\022\036\n\006header\030\001 \001(\0132\016.header.Header\022F\n\022su" +
-      "bscription_addon\030\002 \001(\0132\026.qms.Subscriptio" +
-      "nAddonR\022subscription_addon\022(\n\017update_add" +
-      "on_id\030\003 \001(\010R\017update_addon_id\0226\n\026update_s" +
-      "ubscription_id\030\004 \001(\010R\026update_subscriptio" +
-      "n_id\022$\n\rupdate_amount\030\005 \001(\010R\rupdate_amou" +
-      "nt\022 \n\013update_paid\030\006 \001(\010R\013update_paid\"\252\001\n" +
-      "\031SubscriptionAddonResponse\022\036\n\006header\030\001 \001" +
-      "(\0132\016.header.Header\022%\n\005error\030\002 \001(\0132\026.svce" +
-      "rror.ServiceError\022F\n\022subscription_addon\030" +
-      "\003 \001(\0132\026.qms.SubscriptionAddonR\022subscript" +
-      "ion_addon\"\260\001\n\035SubscriptionAddonListRespo" +
+      ".proto\032\030qms_resource_types.proto\"k\n\tAddo" +
+      "nRate\022\014\n\004uuid\030\001 \001(\t\022\014\n\004rate\030\002 \001(\001\022B\n\016eff" +
+      "ective_date\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stampR\016effective_date\"\212\001\n\021AddonRateRespo" +
       "nse\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005e" +
-      "rror\030\002 \001(\0132\026.svcerror.ServiceError\022H\n\023su" +
-      "bscription_addons\030\003 \003(\0132\026.qms.Subscripti" +
-      "onAddonR\023subscription_addonsBO\n\030org.cyve" +
-      "rse.de.protobufsB\021QMSAddonProtobufsP\001Z\036g" +
-      "ithub.com/cyverse-de/p/go/qmsb\006proto3"
+      "rror\030\002 \001(\0132\026.svcerror.ServiceError\022.\n\nad" +
+      "don_rate\030\003 \001(\0132\016.qms.AddonRateR\naddon_ra" +
+      "te\"\210\001\n\rAddonRateList\022\036\n\006header\030\001 \001(\0132\016.h" +
+      "eader.Header\022%\n\005error\030\002 \001(\0132\026.svcerror.S" +
+      "erviceError\0220\n\013addon_rates\030\003 \003(\0132\016.qms.A" +
+      "ddonRateR\013addon_rates\"\357\001\n\005Addon\022\014\n\004uuid\030" +
+      "\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t" +
+      "\0227\n\rresource_type\030\004 \001(\0132\021.qms.ResourceTy" +
+      "peR\rresource_type\022&\n\016default_amount\030\005 \001(" +
+      "\001R\016default_amount\022\"\n\014default_paid\030\006 \001(\010R" +
+      "\014default_paid\0220\n\013addon_rates\030\007 \003(\0132\016.qms" +
+      ".AddonRateR\013addon_rates\"q\n\rAddonResponse" +
+      "\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005erro" +
+      "r\030\002 \001(\0132\026.svcerror.ServiceError\022\031\n\005addon" +
+      "\030\003 \001(\0132\n.qms.Addon\"v\n\021AddonListResponse\022" +
+      "\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005error" +
+      "\030\002 \001(\0132\026.svcerror.ServiceError\022\032\n\006addons" +
+      "\030\003 \003(\0132\n.qms.Addon\"L\n\017AddAddonRequest\022\036\n" +
+      "\006header\030\001 \001(\0132\016.header.Header\022\031\n\005addon\030\002" +
+      " \001(\0132\n.qms.Addon\"]\n\022AddonLookupRequest\022\036" +
+      "\n\006header\030\001 \001(\0132\016.header.Header\022\016\n\004uuid\030\002" +
+      " \001(\tH\000\022\016\n\004name\030\003 \001(\tH\000B\007\n\005addon\"\366\001\n\022Upda" +
+      "teAddonRequest\022\036\n\006header\030\001 \001(\0132\016.header." +
+      "Header\022\031\n\005addon\030\002 \001(\0132\n.qms.Addon\022\023\n\013upd" +
+      "ate_name\030\003 \001(\010\022\032\n\022update_description\030\004 \001" +
+      "(\010\022\034\n\024update_resource_type\030\005 \001(\010\022\035\n\025upda" +
+      "te_default_amount\030\006 \001(\010\022\033\n\023update_defaul" +
+      "t_paid\030\007 \001(\010\022\032\n\022update_addon_rates\030\010 \001(\010" +
+      "\"\264\001\n\021SubscriptionAddon\022\014\n\004uuid\030\001 \001(\t\022\031\n\005" +
+      "addon\030\002 \001(\0132\n.qms.Addon\022(\n\017subscription_" +
+      "id\030\003 \001(\tR\017subscription_id\022\016\n\006amount\030\004 \001(" +
+      "\001\022\014\n\004paid\030\005 \001(\010\022.\n\naddon_rate\030\006 \001(\0132\016.qm" +
+      "s.AddonRateR\naddon_rate\"\262\002\n\036UpdateSubscr" +
+      "iptionAddonRequest\022\036\n\006header\030\001 \001(\0132\016.hea" +
+      "der.Header\022F\n\022subscription_addon\030\002 \001(\0132\026" +
+      ".qms.SubscriptionAddonR\022subscription_add" +
+      "on\022(\n\017update_addon_id\030\003 \001(\010R\017update_addo" +
+      "n_id\0226\n\026update_subscription_id\030\004 \001(\010R\026up" +
+      "date_subscription_id\022$\n\rupdate_amount\030\005 " +
+      "\001(\010R\rupdate_amount\022 \n\013update_paid\030\006 \001(\010R" +
+      "\013update_paid\"\252\001\n\031SubscriptionAddonRespon" +
+      "se\022\036\n\006header\030\001 \001(\0132\016.header.Header\022%\n\005er" +
+      "ror\030\002 \001(\0132\026.svcerror.ServiceError\022F\n\022sub" +
+      "scription_addon\030\003 \001(\0132\026.qms.Subscription" +
+      "AddonR\022subscription_addon\"\260\001\n\035Subscripti" +
+      "onAddonListResponse\022\036\n\006header\030\001 \001(\0132\016.he" +
+      "ader.Header\022%\n\005error\030\002 \001(\0132\026.svcerror.Se" +
+      "rviceError\022H\n\023subscription_addons\030\003 \003(\0132" +
+      "\026.qms.SubscriptionAddonR\023subscription_ad" +
+      "donsBO\n\030org.cyverse.de.protobufsB\021QMSAdd" +
+      "onProtobufsP\001Z\036github.com/cyverse-de/p/g" +
+      "o/qmsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -166,7 +166,6 @@ public final class QMSAddonProtobufs {
           org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor(),
           org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor(),
-          org.cyverse.de.protobufs.QMSSubscriptionProtobufs.getDescriptor(),
         });
     internal_static_qms_AddonRate_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -227,7 +226,7 @@ public final class QMSAddonProtobufs {
     internal_static_qms_SubscriptionAddon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_qms_SubscriptionAddon_descriptor,
-        new java.lang.String[] { "Uuid", "Addon", "Subscription", "Amount", "Paid", "AddonRate", });
+        new java.lang.String[] { "Uuid", "Addon", "SubscriptionId", "Amount", "Paid", "AddonRate", });
     internal_static_qms_UpdateSubscriptionAddonRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_qms_UpdateSubscriptionAddonRequest_fieldAccessorTable = new
@@ -251,7 +250,6 @@ public final class QMSAddonProtobufs {
     org.cyverse.de.protobufs.HeaderProtobufs.getDescriptor();
     org.cyverse.de.protobufs.ServiceErrorProtobufs.getDescriptor();
     org.cyverse.de.protobufs.QMSResourceTypeProtobufs.getDescriptor();
-    org.cyverse.de.protobufs.QMSSubscriptionProtobufs.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

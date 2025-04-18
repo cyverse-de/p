@@ -269,4 +269,48 @@ public interface SubscriptionOrBuilder extends
    * <code>.qms.PlanRate plan_rate = 9 [json_name = "plan_rate"];</code>
    */
   org.cyverse.de.protobufs.PlanRateOrBuilder getPlanRateOrBuilder();
+
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  java.util.List<org.cyverse.de.protobufs.SubscriptionAddon> 
+      getAddonsList();
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  org.cyverse.de.protobufs.SubscriptionAddon getAddons(int index);
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  int getAddonsCount();
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  java.util.List<? extends org.cyverse.de.protobufs.SubscriptionAddonOrBuilder> 
+      getAddonsOrBuilderList();
+  /**
+   * <pre>
+   * The list of add-ons applied to the subscription.
+   * </pre>
+   *
+   * <code>repeated .qms.SubscriptionAddon addons = 10;</code>
+   */
+  org.cyverse.de.protobufs.SubscriptionAddonOrBuilder getAddonsOrBuilder(
+      int index);
 }
