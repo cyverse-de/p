@@ -4,7 +4,7 @@
   <groupId>org.cyverse</groupId>
   <artifactId>cyverse-de-protobufs</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.4</version>
+  <version>0.0.5-SNAPSHOT</version>
   <name>cyverse-de-protobufs</name>
   <description>Code generated from the DE protocol buffer definitions</description>
   <url>https://github.com/cyverse-de/p</url>
@@ -18,7 +18,7 @@
     <url>https://github.com/cyverse-de/p</url>
     <connection>scm:git:git://github.com/cyverse-de/p.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/cyverse-de/p.git</developerConnection>
-    <tag>9671e3c85b81257a6b94fb9d980f8b4074192961</tag>
+    <tag>219994b829fb1346ccbe136c9cc8c624bb2dbf91</tag>
   </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -96,12 +96,12 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
-      <version>4.29.0</version>
+      <version>4.29.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java-util</artifactId>
-      <version>4.29.0</version>
+      <version>4.29.3</version>
     </dependency>
   </dependencies>
 </project>

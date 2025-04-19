@@ -3,7 +3,7 @@ module github.com/cyverse-de/p/go/analysis
 go 1.24.2
 
 require (
-	github.com/cyverse-de/p v0.0.0-20250315004235-80d13fcfc2fa
+	github.com/cyverse-de/p v0.0.0-20250418234247-219994b829fb
 	github.com/cyverse-de/p/go/containers v0.0.2
 	github.com/cyverse-de/p/go/header v0.0.4
 	github.com/cyverse-de/p/go/svcerror v0.0.8
