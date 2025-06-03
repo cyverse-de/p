@@ -50,6 +50,8 @@ message Update {
 
     // The user in the QMS system that the update is for.
     QMSUser user = 7;
+
+    string metadata = 8;
 }
 
 /**
