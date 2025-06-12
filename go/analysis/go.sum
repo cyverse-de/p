@@ -1,5 +1,5 @@
-github.com/cyverse-de/p v0.0.0-20250418234247-219994b829fb h1:GcGXPq5H8oT+kUg7ZA/2ptkfplkW5NeSb2US6k0gfn0=
-github.com/cyverse-de/p v0.0.0-20250418234247-219994b829fb/go.mod h1:JM04cBlOajBkOVfQOEbBD6QwmWyupji9J84wfUA+LTc=
+github.com/cyverse-de/p v0.0.0-20250419020147-88501eaa978e h1:7bjTL0l47CMrdKSUN5WamT5Idam+GLh5x4x04qs+hvE=
+github.com/cyverse-de/p v0.0.0-20250419020147-88501eaa978e/go.mod h1:JM04cBlOajBkOVfQOEbBD6QwmWyupji9J84wfUA+LTc=
 github.com/cyverse-de/p/go/containers v0.0.2 h1:PIpw5KHC6A85KeloHms86zG5ADVAQXjsP05n8KEWeXE=
 github.com/cyverse-de/p/go/containers v0.0.2/go.mod h1:Yzjby5JYINnpPkLadB0G+zFvxAzCx6V2vqyL170E33U=
 github.com/cyverse-de/p/go/header v0.0.4 h1:asY/uixi9rCqbDLq2G21CT7WJRaendBfr1z2YTuK2hk=

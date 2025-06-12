@@ -1130,6 +1130,7 @@ A representation of an update to a quota or usage value.
 | operation | [UpdateOperation](#qms-UpdateOperation) |  | The type of operation being done. |
 | resource_type | [ResourceType](#qms-ResourceType) |  | The resource type for the quota or usage being updated. |
 | user | [QMSUser](#qms-QMSUser) |  | The user in the QMS system that the update is for. |
+| metadata | [string](#string) |  | Arbitrary metadata to associate with the update. JSON is potentially ideal, but it&#39;d need to be wrapped in a string. |
 
 
 

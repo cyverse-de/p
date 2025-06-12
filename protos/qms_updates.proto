@@ -51,6 +51,7 @@ message Update {
     // The user in the QMS system that the update is for.
     QMSUser user = 7;
 
+    // Arbitrary metadata to associate with the update. JSON is potentially ideal, but it'd need to be wrapped in a string.
     string metadata = 8;
 }
 
