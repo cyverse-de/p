@@ -1,5 +1,5 @@
 module github.com/cyverse-de/p/go/header
 
-go 1.24.2
+go 1.25
 
-require google.golang.org/protobuf v1.36.6
+require google.golang.org/protobuf v1.36.11
