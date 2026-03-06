@@ -1,4 +1,4 @@
-.PHONY: all compile go-tidy go-init clean java-jar
+.PHONY: all compile go-tidy go-init clean java-jar tag-go-modules
 
 all: clean compile go-init go-tidy java-jar documentation
 comma:=
