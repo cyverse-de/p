@@ -1,4 +1,4 @@
-module github.com/cyverse-de/go/apps
+module github.com/cyverse-de/p/go/apps
 
 go 1.25.0
 
@@ -7,4 +7,4 @@ require (
 	google.golang.org/protobuf v1.36.11
 )
 
-require github.com/cyverse-de/p/go/header v0.0.4 // indirect
+require github.com/cyverse-de/p/go/header v0.0.5 // indirect
