@@ -176,7 +176,7 @@ func TestKeyInventory(t *testing.T) {
 		walkKeys(t, typ, decodeJSON(t, raw), cov, g.key)
 	}
 	for typ, seen := range cov {
-		for _, tag := range jsonTags(typ) {
+		for tag := range tagFields(typ) {
 			if !seen[tag] {
 				t.Errorf("%s: field %q never exercised by any golden", typ, tag)
 			}
@@ -185,6 +185,26 @@ func TestKeyInventory(t *testing.T) {
 }
 
 var timestampType = reflect.TypeFor[ptypes.Timestamp]()
+
+// fieldsByTag caches the JSON-tag-to-field mapping per struct type; walkKeys
+// visits the same types thousands of times across the goldens.
+var fieldsByTag = map[reflect.Type]map[string]reflect.StructField{}
+
+func tagFields(typ reflect.Type) map[string]reflect.StructField {
+	if m, ok := fieldsByTag[typ]; ok {
+		return m
+	}
+	m := make(map[string]reflect.StructField, typ.NumField())
+	for i := 0; i < typ.NumField(); i++ {
+		f := typ.Field(i)
+		name, _, _ := strings.Cut(f.Tag.Get("json"), ",")
+		if name != "" && name != "-" {
+			m[name] = f
+		}
+	}
+	fieldsByTag[typ] = m
+	return m
+}
 
 func walkKeys(t *testing.T, typ reflect.Type, node any, cov map[reflect.Type]map[string]bool, ctx string) {
 	t.Helper()
@@ -204,11 +224,7 @@ func walkKeys(t *testing.T, typ reflect.Type, node any, cov map[reflect.Type]map
 			t.Errorf("%s: expected object for %s, got %T", ctx, typ, node)
 			return
 		}
-		fieldByTag := map[string]reflect.StructField{}
-		for _, tag := range jsonTags(typ) {
-			f, _ := fieldByJSONTag(typ, tag)
-			fieldByTag[tag] = f
-		}
+		fieldByTag := tagFields(typ)
 		if cov[typ] == nil {
 			cov[typ] = map[string]bool{}
 		}
@@ -240,28 +256,6 @@ func walkKeys(t *testing.T, typ reflect.Type, node any, cov map[reflect.Type]map
 			walkKeys(t, typ.Elem(), v, cov, ctx+"[]")
 		}
 	}
-}
-
-func jsonTags(typ reflect.Type) []string {
-	var tags []string
-	for i := 0; i < typ.NumField(); i++ {
-		tag := typ.Field(i).Tag.Get("json")
-		name, _, _ := strings.Cut(tag, ",")
-		if name != "" && name != "-" {
-			tags = append(tags, name)
-		}
-	}
-	return tags
-}
-
-func fieldByJSONTag(typ reflect.Type, tag string) (reflect.StructField, bool) {
-	for i := 0; i < typ.NumField(); i++ {
-		name, _, _ := strings.Cut(typ.Field(i).Tag.Get("json"), ",")
-		if name == tag {
-			return typ.Field(i), true
-		}
-	}
-	return reflect.StructField{}, false
 }
 
 // semanticEqual compares two decoded JSON trees, tolerating only the

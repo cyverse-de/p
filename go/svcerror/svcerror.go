@@ -4,9 +4,9 @@
 package svcerror
 
 import (
-	"encoding/json"
-	"fmt"
 	"strconv"
+
+	"github.com/cyverse-de/p/go/ptypes"
 )
 
 // The types of errors that can be retuned by message handlers.
@@ -72,28 +72,13 @@ func (x ErrorCode) String() string {
 
 // MarshalJSON emits the value's name, as protojson did for enums.
 func (x ErrorCode) MarshalJSON() ([]byte, error) {
-	if s, ok := ErrorCode_name[int32(x)]; ok {
-		return json.Marshal(s)
-	}
-	return json.Marshal(int32(x))
+	return ptypes.MarshalEnumName(ErrorCode_name, int32(x))
 }
 
 // UnmarshalJSON accepts either a value name or a number.
 func (x *ErrorCode) UnmarshalJSON(b []byte) error {
-	if len(b) > 0 && b[0] == '"' {
-		var s string
-		if err := json.Unmarshal(b, &s); err != nil {
-			return err
-		}
-		v, ok := ErrorCode_value[s]
-		if !ok {
-			return fmt.Errorf("unknown ErrorCode %q", s)
-		}
-		*x = ErrorCode(v)
-		return nil
-	}
-	var v int32
-	if err := json.Unmarshal(b, &v); err != nil {
+	v, err := ptypes.UnmarshalEnumName(ErrorCode_value, "ErrorCode", b)
+	if err != nil {
 		return err
 	}
 	*x = ErrorCode(v)

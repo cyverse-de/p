@@ -4,11 +4,10 @@
 package monitoring
 
 import (
-	"encoding/json"
-	"fmt"
 	"strconv"
 
 	"github.com/cyverse-de/p/go/header"
+	"github.com/cyverse-de/p/go/ptypes"
 	"github.com/cyverse-de/p/go/svcerror"
 )
 
@@ -41,28 +40,13 @@ func (x LookupType) String() string {
 
 // MarshalJSON emits the value's name, as protojson did for enums.
 func (x LookupType) MarshalJSON() ([]byte, error) {
-	if s, ok := LookupType_name[int32(x)]; ok {
-		return json.Marshal(s)
-	}
-	return json.Marshal(int32(x))
+	return ptypes.MarshalEnumName(LookupType_name, int32(x))
 }
 
 // UnmarshalJSON accepts either a value name or a number.
 func (x *LookupType) UnmarshalJSON(b []byte) error {
-	if len(b) > 0 && b[0] == '"' {
-		var s string
-		if err := json.Unmarshal(b, &s); err != nil {
-			return err
-		}
-		v, ok := LookupType_value[s]
-		if !ok {
-			return fmt.Errorf("unknown LookupType %q", s)
-		}
-		*x = LookupType(v)
-		return nil
-	}
-	var v int32
-	if err := json.Unmarshal(b, &v); err != nil {
+	v, err := ptypes.UnmarshalEnumName(LookupType_value, "LookupType", b)
+	if err != nil {
 		return err
 	}
 	*x = LookupType(v)
