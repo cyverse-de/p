@@ -1,0 +1,10 @@
+{
+  "id": "id_v",
+  "multiplicity": "multiplicity_v",
+  "name": "name_v",
+  "property": "property_v",
+  "retain": true,
+  "ticket": "ticket_v",
+  "type": "type_v",
+  "value": "value_v"
+}

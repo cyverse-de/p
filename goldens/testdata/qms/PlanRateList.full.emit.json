@@ -1,0 +1,35 @@
+{
+  "error": {
+    "error_code": "UNSPECIFIED",
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "plan_rates": [
+    {
+      "effective_date": "2024-05-15T12:34:56.789Z",
+      "rate": 2.25,
+      "uuid": "uuid_v"
+    },
+    {
+      "effective_date": "2024-05-15T12:34:56.789Z",
+      "rate": 2.25,
+      "uuid": "uuid_v"
+    }
+  ]
+}

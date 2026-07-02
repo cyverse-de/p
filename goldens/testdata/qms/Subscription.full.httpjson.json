@@ -1,0 +1,250 @@
+{
+  "addons": [
+    {
+      "addon": {
+        "addon_rates": [
+          {
+            "effective_date": {
+              "nanos": 789000000,
+              "seconds": 1715776496
+            },
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          {
+            "effective_date": {
+              "nanos": 789000000,
+              "seconds": 1715776496
+            },
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          }
+        ],
+        "default_amount": 5.25,
+        "default_paid": true,
+        "description": "description_v",
+        "name": "name_v",
+        "resource_type": {
+          "consumable": true,
+          "name": "name_v",
+          "unit": "unit_v",
+          "uuid": "uuid_v"
+        },
+        "uuid": "uuid_v"
+      },
+      "addon_rate": {
+        "effective_date": {
+          "nanos": 789000000,
+          "seconds": 1715776496
+        },
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      "amount": 4.25,
+      "paid": true,
+      "subscription_id": "subscription_id_v",
+      "uuid": "uuid_v"
+    },
+    {
+      "addon": {
+        "addon_rates": [
+          {
+            "effective_date": {
+              "nanos": 789000000,
+              "seconds": 1715776496
+            },
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          {
+            "effective_date": {
+              "nanos": 789000000,
+              "seconds": 1715776496
+            },
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          }
+        ],
+        "default_amount": 5.25,
+        "default_paid": true,
+        "description": "description_v",
+        "name": "name_v",
+        "resource_type": {
+          "consumable": true,
+          "name": "name_v",
+          "unit": "unit_v",
+          "uuid": "uuid_v"
+        },
+        "uuid": "uuid_v"
+      },
+      "addon_rate": {
+        "effective_date": {
+          "nanos": 789000000,
+          "seconds": 1715776496
+        },
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      "amount": 4.25,
+      "paid": true,
+      "subscription_id": "subscription_id_v",
+      "uuid": "uuid_v"
+    }
+  ],
+  "effective_end_date": {
+    "nanos": 789000000,
+    "seconds": 1715776496
+  },
+  "effective_start_date": {
+    "seconds": 1715776496
+  },
+  "paid": true,
+  "plan": {
+    "description": "description_v",
+    "name": "name_v",
+    "plan_quota_defaults": [
+      {
+        "effective_date": {
+          "seconds": 1715776496
+        },
+        "quota_value": 2.25,
+        "resource_type": {
+          "consumable": true,
+          "name": "name_v",
+          "unit": "unit_v",
+          "uuid": "uuid_v"
+        },
+        "uuid": "uuid_v"
+      },
+      {
+        "effective_date": {
+          "seconds": 1715776496
+        },
+        "quota_value": 2.25,
+        "resource_type": {
+          "consumable": true,
+          "name": "name_v",
+          "unit": "unit_v",
+          "uuid": "uuid_v"
+        },
+        "uuid": "uuid_v"
+      }
+    ],
+    "plan_rates": [
+      {
+        "effective_date": {
+          "nanos": 789000000,
+          "seconds": 1715776496
+        },
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      {
+        "effective_date": {
+          "nanos": 789000000,
+          "seconds": 1715776496
+        },
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      }
+    ],
+    "uuid": "uuid_v"
+  },
+  "plan_rate": {
+    "effective_date": {
+      "nanos": 789000000,
+      "seconds": 1715776496
+    },
+    "rate": 2.25,
+    "uuid": "uuid_v"
+  },
+  "quotas": [
+    {
+      "CreatedAt": {
+        "nanos": 789000000,
+        "seconds": 1715776496
+      },
+      "CreatedBy": "CreatedBy_v",
+      "LastModifiedAt": {
+        "nanos": 789000000,
+        "seconds": 1715776496
+      },
+      "LastModifiedBy": "LastModifiedBy_v",
+      "quota": 2.25,
+      "resource_type": {
+        "consumable": true,
+        "name": "name_v",
+        "unit": "unit_v",
+        "uuid": "uuid_v"
+      },
+      "subscription_id": "subscription_id_v",
+      "uuid": "uuid_v"
+    },
+    {
+      "CreatedAt": {
+        "nanos": 789000000,
+        "seconds": 1715776496
+      },
+      "CreatedBy": "CreatedBy_v",
+      "LastModifiedAt": {
+        "nanos": 789000000,
+        "seconds": 1715776496
+      },
+      "LastModifiedBy": "LastModifiedBy_v",
+      "quota": 2.25,
+      "resource_type": {
+        "consumable": true,
+        "name": "name_v",
+        "unit": "unit_v",
+        "uuid": "uuid_v"
+      },
+      "subscription_id": "subscription_id_v",
+      "uuid": "uuid_v"
+    }
+  ],
+  "usages": [
+    {
+      "CreatedAt": {
+        "seconds": 1715776496
+      },
+      "CreatedBy": "CreatedBy_v",
+      "LastModifiedAt": {
+        "seconds": 1715776496
+      },
+      "LastModifiedBy": "LastModifiedBy_v",
+      "resource_type": {
+        "consumable": true,
+        "name": "name_v",
+        "unit": "unit_v",
+        "uuid": "uuid_v"
+      },
+      "subscription_id": "subscription_id_v",
+      "usage": 2.25,
+      "uuid": "uuid_v"
+    },
+    {
+      "CreatedAt": {
+        "seconds": 1715776496
+      },
+      "CreatedBy": "CreatedBy_v",
+      "LastModifiedAt": {
+        "seconds": 1715776496
+      },
+      "LastModifiedBy": "LastModifiedBy_v",
+      "resource_type": {
+        "consumable": true,
+        "name": "name_v",
+        "unit": "unit_v",
+        "uuid": "uuid_v"
+      },
+      "subscription_id": "subscription_id_v",
+      "usage": 2.25,
+      "uuid": "uuid_v"
+    }
+  ],
+  "user": {
+    "username": "username_v",
+    "uuid": "uuid_v"
+  },
+  "uuid": "uuid_v"
+}

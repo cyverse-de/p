@@ -1,0 +1,27 @@
+{
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "plan_name": "plan_name_v",
+  "plan_rate": {
+    "effective_date": {
+      "nanos": 789000000,
+      "seconds": 1715776496
+    },
+    "rate": 2.25,
+    "uuid": "uuid_v"
+  }
+}

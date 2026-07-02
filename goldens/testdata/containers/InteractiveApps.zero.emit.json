@@ -1,0 +1,13 @@
+{
+  "backendUrl": "",
+  "casUrl": "",
+  "casValidate": "",
+  "frontendUrl": "",
+  "proxyImage": "",
+  "proxyName": "",
+  "sslCertPath": "",
+  "sslKeyPath": "",
+  "websocketPath": "",
+  "websocketPort": "",
+  "websocketProto": ""
+}

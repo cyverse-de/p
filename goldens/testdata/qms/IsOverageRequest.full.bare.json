@@ -1,0 +1,20 @@
+{
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "resource_name": "resource_name_v",
+  "username": "username_v"
+}

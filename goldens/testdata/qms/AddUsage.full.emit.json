@@ -1,0 +1,23 @@
+{
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "resource_name": "resource_name_v",
+  "resource_unit": "resource_unit_v",
+  "update_type": "update_type_v",
+  "usage_value": 5.25,
+  "username": "username_v"
+}

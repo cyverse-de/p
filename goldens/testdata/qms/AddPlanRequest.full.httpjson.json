@@ -1,0 +1,69 @@
+{
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "plan": {
+    "description": "description_v",
+    "name": "name_v",
+    "plan_quota_defaults": [
+      {
+        "effective_date": {
+          "seconds": 1715776496
+        },
+        "quota_value": 2.25,
+        "resource_type": {
+          "consumable": true,
+          "name": "name_v",
+          "unit": "unit_v",
+          "uuid": "uuid_v"
+        },
+        "uuid": "uuid_v"
+      },
+      {
+        "effective_date": {
+          "seconds": 1715776496
+        },
+        "quota_value": 2.25,
+        "resource_type": {
+          "consumable": true,
+          "name": "name_v",
+          "unit": "unit_v",
+          "uuid": "uuid_v"
+        },
+        "uuid": "uuid_v"
+      }
+    ],
+    "plan_rates": [
+      {
+        "effective_date": {
+          "nanos": 789000000,
+          "seconds": 1715776496
+        },
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      {
+        "effective_date": {
+          "nanos": 789000000,
+          "seconds": 1715776496
+        },
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      }
+    ],
+    "uuid": "uuid_v"
+  }
+}

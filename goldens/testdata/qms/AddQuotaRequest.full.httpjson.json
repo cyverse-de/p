@@ -1,0 +1,39 @@
+{
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "quota": {
+    "CreatedAt": {
+      "nanos": 789000000,
+      "seconds": 1715776496
+    },
+    "CreatedBy": "CreatedBy_v",
+    "LastModifiedAt": {
+      "nanos": 789000000,
+      "seconds": 1715776496
+    },
+    "LastModifiedBy": "LastModifiedBy_v",
+    "quota": 2.25,
+    "resource_type": {
+      "consumable": true,
+      "name": "name_v",
+      "unit": "unit_v",
+      "uuid": "uuid_v"
+    },
+    "subscription_id": "subscription_id_v",
+    "uuid": "uuid_v"
+  }
+}

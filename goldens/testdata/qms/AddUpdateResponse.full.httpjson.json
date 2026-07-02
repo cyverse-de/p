@@ -1,0 +1,46 @@
+{
+  "error": {
+    "error_code": 1,
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "update": {
+    "effective_date": {
+      "seconds": 1715776496
+    },
+    "metadata": "metadata_v",
+    "operation": {
+      "name": "name_v",
+      "uuid": "uuid_v"
+    },
+    "resource_type": {
+      "consumable": true,
+      "name": "name_v",
+      "unit": "unit_v",
+      "uuid": "uuid_v"
+    },
+    "user": {
+      "username": "username_v",
+      "uuid": "uuid_v"
+    },
+    "uuid": "uuid_v",
+    "value": 3.25,
+    "value_type": "value_type_v"
+  }
+}

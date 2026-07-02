@@ -1,0 +1,96 @@
+{
+  "cpu_shares": 9007199254741000,
+  "devices": [
+    {
+      "cgroup_permissions": "cgroup_permissions_v",
+      "container_path": "container_path_v",
+      "host_path": "host_path_v"
+    },
+    {
+      "cgroup_permissions": "cgroup_permissions_v",
+      "container_path": "container_path_v",
+      "host_path": "host_path_v"
+    }
+  ],
+  "entry_point": "entry_point_v",
+  "id": "id_v",
+  "image": {
+    "id": "id_v",
+    "name": "name_v",
+    "osg_image_path": "osg_image_path_v",
+    "tag": "tag_v",
+    "url": "url_v"
+  },
+  "interactive_apps": {
+    "backend_url": "backend_url_v",
+    "cas_url": "cas_url_v",
+    "cas_validate": "cas_validate_v",
+    "frontend_url": "frontend_url_v",
+    "proxy_image": "proxy_image_v",
+    "proxy_name": "proxy_name_v",
+    "ssl_cert_path": "ssl_cert_path_v",
+    "ssl_key_path": "ssl_key_path_v",
+    "websocket_path": "websocket_path_v",
+    "websocket_port": "websocket_port_v",
+    "websocket_proto": "websocket_proto_v"
+  },
+  "max_cpu_cores": 1.5,
+  "memory_limit": 9007199254741002,
+  "min_cpu_cores": 1.5,
+  "min_disk_space": 9007199254741006,
+  "min_memory_limit": 9007199254741003,
+  "name": "name_v",
+  "network_mode": "network_mode_v",
+  "pids_limit": 9007199254741007,
+  "ports": [
+    {
+      "bind_to_host": true,
+      "container_port": 102,
+      "host_port": 101
+    },
+    {
+      "bind_to_host": true,
+      "container_port": 102,
+      "host_port": 101
+    }
+  ],
+  "skip_tmp_mount": true,
+  "uid": 120,
+  "volumes": [
+    {
+      "container_path": "container_path_v",
+      "host_path": "host_path_v",
+      "mode": "mode_v",
+      "read_only": true
+    },
+    {
+      "container_path": "container_path_v",
+      "host_path": "host_path_v",
+      "mode": "mode_v",
+      "read_only": true
+    }
+  ],
+  "volumes_from": [
+    {
+      "auth": "auth_v",
+      "container_path": "container_path_v",
+      "host_path": "host_path_v",
+      "name": "name_v",
+      "name_prefix": "name_prefix_v",
+      "read_only": true,
+      "tag": "tag_v",
+      "url": "url_v"
+    },
+    {
+      "auth": "auth_v",
+      "container_path": "container_path_v",
+      "host_path": "host_path_v",
+      "name": "name_v",
+      "name_prefix": "name_prefix_v",
+      "read_only": true,
+      "tag": "tag_v",
+      "url": "url_v"
+    }
+  ],
+  "working_dir": "working_dir_v"
+}

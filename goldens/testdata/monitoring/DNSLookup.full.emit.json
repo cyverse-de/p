@@ -1,0 +1,9 @@
+{
+  "addresses": [
+    "addresses_v_0",
+    "addresses_v_1"
+  ],
+  "error": "error_v",
+  "host": "host_v",
+  "type": "type_v"
+}

@@ -1,0 +1,60 @@
+{
+  "input": [
+    {
+      "id": "id_v",
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "retain": true,
+      "ticket": "ticket_v",
+      "type": "type_v",
+      "value": "value_v"
+    },
+    {
+      "id": "id_v",
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "retain": true,
+      "ticket": "ticket_v",
+      "type": "type_v",
+      "value": "value_v"
+    }
+  ],
+  "output": [
+    {
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "qual-id": "qual_id_v",
+      "retain": true,
+      "type": "type_v"
+    },
+    {
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "qual-id": "qual_id_v",
+      "retain": true,
+      "type": "type_v"
+    }
+  ],
+  "params": [
+    {
+      "id": "id_v",
+      "name": "name_v",
+      "order": 104,
+      "path": "path_v",
+      "type": "type_v",
+      "value": "value_v"
+    },
+    {
+      "id": "id_v",
+      "name": "name_v",
+      "order": 104,
+      "path": "path_v",
+      "type": "type_v",
+      "value": "value_v"
+    }
+  ]
+}

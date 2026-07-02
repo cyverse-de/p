@@ -1,0 +1,13 @@
+{
+  "backend_url": "backend_url_v",
+  "cas_url": "cas_url_v",
+  "cas_validate": "cas_validate_v",
+  "frontend_url": "frontend_url_v",
+  "proxy_image": "proxy_image_v",
+  "proxy_name": "proxy_name_v",
+  "ssl_cert_path": "ssl_cert_path_v",
+  "ssl_key_path": "ssl_key_path_v",
+  "websocket_path": "websocket_path_v",
+  "websocket_port": "websocket_port_v",
+  "websocket_proto": "websocket_proto_v"
+}

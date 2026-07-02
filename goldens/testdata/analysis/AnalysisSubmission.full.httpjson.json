@@ -1,0 +1,509 @@
+{
+  "app_description": "app_description_v",
+  "app_id": "app_id_v",
+  "app_name": "app_name_v",
+  "archive_logs": true,
+  "batch_id": "batch_id_v",
+  "condor_id": "condor_id_v",
+  "condor_log_path": "condor_log_path_v",
+  "config_file": "config_file_v",
+  "create_output_subdir": true,
+  "date_completed": {
+    "nanos": 789000000,
+    "seconds": 1715776496
+  },
+  "date_started": {
+    "seconds": 1715776496
+  },
+  "date_submitted": {
+    "nanos": 789000000,
+    "seconds": 1715776496
+  },
+  "description": "description_v",
+  "email": "email_v",
+  "execution_target": "execution_target_v",
+  "exit_code": 116,
+  "extra": {
+    "ht_condor": {
+      "extra_requirements": "extra_requirements_v"
+    }
+  },
+  "failure_count": 9007199254741010,
+  "failure_threshold": 9007199254741011,
+  "file_metadata": [
+    {
+      "attribute": "attribute_v",
+      "unit": "unit_v",
+      "value": "value_v"
+    },
+    {
+      "attribute": "attribute_v",
+      "unit": "unit_v",
+      "value": "value_v"
+    }
+  ],
+  "filter_files": [
+    "filter_files_v_0",
+    "filter_files_v_1"
+  ],
+  "group": "group_v",
+  "input_path_list_file": "input_path_list_file_v",
+  "input_tickets_file": "input_tickets_file_v",
+  "invocation_id": "invocation_id_v",
+  "irods_base": "irods_base_v",
+  "mount_data_store": true,
+  "name": "name_v",
+  "nfs_base": "nfs_base_v",
+  "notify": true,
+  "now_date": "now_date_v",
+  "output_dir": "output_dir_v",
+  "output_dir_ticket": "output_dir_ticket_v",
+  "output_ticket_file": "output_ticket_file_v",
+  "request_type": "request_type_v",
+  "run_on_nfs": true,
+  "skip_parent_metadata": true,
+  "steps": [
+    {
+      "component": {
+        "container": {
+          "cpu_shares": 9007199254741000,
+          "devices": [
+            {
+              "cgroup_permissions": "cgroup_permissions_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v"
+            },
+            {
+              "cgroup_permissions": "cgroup_permissions_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v"
+            }
+          ],
+          "entry_point": "entry_point_v",
+          "id": "id_v",
+          "image": {
+            "id": "id_v",
+            "name": "name_v",
+            "osg_image_path": "osg_image_path_v",
+            "tag": "tag_v",
+            "url": "url_v"
+          },
+          "interactive_apps": {
+            "backend_url": "backend_url_v",
+            "cas_url": "cas_url_v",
+            "cas_validate": "cas_validate_v",
+            "frontend_url": "frontend_url_v",
+            "proxy_image": "proxy_image_v",
+            "proxy_name": "proxy_name_v",
+            "ssl_cert_path": "ssl_cert_path_v",
+            "ssl_key_path": "ssl_key_path_v",
+            "websocket_path": "websocket_path_v",
+            "websocket_port": "websocket_port_v",
+            "websocket_proto": "websocket_proto_v"
+          },
+          "max_cpu_cores": 1.5,
+          "memory_limit": 9007199254741002,
+          "min_cpu_cores": 1.5,
+          "min_disk_space": 9007199254741006,
+          "min_memory_limit": 9007199254741003,
+          "name": "name_v",
+          "network_mode": "network_mode_v",
+          "pids_limit": 9007199254741007,
+          "ports": [
+            {
+              "bind_to_host": true,
+              "container_port": 102,
+              "host_port": 101
+            },
+            {
+              "bind_to_host": true,
+              "container_port": 102,
+              "host_port": 101
+            }
+          ],
+          "skip_tmp_mount": true,
+          "uid": 120,
+          "volumes": [
+            {
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "mode": "mode_v",
+              "read_only": true
+            },
+            {
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "mode": "mode_v",
+              "read_only": true
+            }
+          ],
+          "volumes_from": [
+            {
+              "auth": "auth_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "name": "name_v",
+              "name_prefix": "name_prefix_v",
+              "read_only": true,
+              "tag": "tag_v",
+              "url": "url_v"
+            },
+            {
+              "auth": "auth_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "name": "name_v",
+              "name_prefix": "name_prefix_v",
+              "read_only": true,
+              "tag": "tag_v",
+              "url": "url_v"
+            }
+          ],
+          "working_dir": "working_dir_v"
+        },
+        "description": "description_v",
+        "is_interactive": true,
+        "location": "location_v",
+        "name": "name_v",
+        "restricted": true,
+        "time_limit": 106,
+        "type": "type_v"
+      },
+      "config": {
+        "inputs": [
+          {
+            "id": "id_v",
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "retain": true,
+            "ticket": "ticket_v",
+            "type": "type_v",
+            "value": "value_v"
+          },
+          {
+            "id": "id_v",
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "retain": true,
+            "ticket": "ticket_v",
+            "type": "type_v",
+            "value": "value_v"
+          }
+        ],
+        "outputs": [
+          {
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "qual_id": "qual_id_v",
+            "retain": true,
+            "type": "type_v"
+          },
+          {
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "qual_id": "qual_id_v",
+            "retain": true,
+            "type": "type_v"
+          }
+        ],
+        "params": [
+          {
+            "id": "id_v",
+            "name": "name_v",
+            "order": 104,
+            "path": "path_v",
+            "type": "type_v",
+            "value": "value_v"
+          },
+          {
+            "id": "id_v",
+            "name": "name_v",
+            "order": 104,
+            "path": "path_v",
+            "type": "type_v",
+            "value": "value_v"
+          }
+        ]
+      },
+      "environment": {
+        "alpha": "value_v_alpha",
+        "beta": "value_v_beta"
+      },
+      "input": [
+        {
+          "id": "id_v",
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "retain": true,
+          "ticket": "ticket_v",
+          "type": "type_v",
+          "value": "value_v"
+        },
+        {
+          "id": "id_v",
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "retain": true,
+          "ticket": "ticket_v",
+          "type": "type_v",
+          "value": "value_v"
+        }
+      ],
+      "log_file": "log_file_v",
+      "output": [
+        {
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "qual_id": "qual_id_v",
+          "retain": true,
+          "type": "type_v"
+        },
+        {
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "qual_id": "qual_id_v",
+          "retain": true,
+          "type": "type_v"
+        }
+      ],
+      "stderr_path": "stderr_path_v",
+      "stdin_path": "stdin_path_v",
+      "stdout_path": "stdout_path_v",
+      "type": "type_v"
+    },
+    {
+      "component": {
+        "container": {
+          "cpu_shares": 9007199254741000,
+          "devices": [
+            {
+              "cgroup_permissions": "cgroup_permissions_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v"
+            },
+            {
+              "cgroup_permissions": "cgroup_permissions_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v"
+            }
+          ],
+          "entry_point": "entry_point_v",
+          "id": "id_v",
+          "image": {
+            "id": "id_v",
+            "name": "name_v",
+            "osg_image_path": "osg_image_path_v",
+            "tag": "tag_v",
+            "url": "url_v"
+          },
+          "interactive_apps": {
+            "backend_url": "backend_url_v",
+            "cas_url": "cas_url_v",
+            "cas_validate": "cas_validate_v",
+            "frontend_url": "frontend_url_v",
+            "proxy_image": "proxy_image_v",
+            "proxy_name": "proxy_name_v",
+            "ssl_cert_path": "ssl_cert_path_v",
+            "ssl_key_path": "ssl_key_path_v",
+            "websocket_path": "websocket_path_v",
+            "websocket_port": "websocket_port_v",
+            "websocket_proto": "websocket_proto_v"
+          },
+          "max_cpu_cores": 1.5,
+          "memory_limit": 9007199254741002,
+          "min_cpu_cores": 1.5,
+          "min_disk_space": 9007199254741006,
+          "min_memory_limit": 9007199254741003,
+          "name": "name_v",
+          "network_mode": "network_mode_v",
+          "pids_limit": 9007199254741007,
+          "ports": [
+            {
+              "bind_to_host": true,
+              "container_port": 102,
+              "host_port": 101
+            },
+            {
+              "bind_to_host": true,
+              "container_port": 102,
+              "host_port": 101
+            }
+          ],
+          "skip_tmp_mount": true,
+          "uid": 120,
+          "volumes": [
+            {
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "mode": "mode_v",
+              "read_only": true
+            },
+            {
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "mode": "mode_v",
+              "read_only": true
+            }
+          ],
+          "volumes_from": [
+            {
+              "auth": "auth_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "name": "name_v",
+              "name_prefix": "name_prefix_v",
+              "read_only": true,
+              "tag": "tag_v",
+              "url": "url_v"
+            },
+            {
+              "auth": "auth_v",
+              "container_path": "container_path_v",
+              "host_path": "host_path_v",
+              "name": "name_v",
+              "name_prefix": "name_prefix_v",
+              "read_only": true,
+              "tag": "tag_v",
+              "url": "url_v"
+            }
+          ],
+          "working_dir": "working_dir_v"
+        },
+        "description": "description_v",
+        "is_interactive": true,
+        "location": "location_v",
+        "name": "name_v",
+        "restricted": true,
+        "time_limit": 106,
+        "type": "type_v"
+      },
+      "config": {
+        "inputs": [
+          {
+            "id": "id_v",
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "retain": true,
+            "ticket": "ticket_v",
+            "type": "type_v",
+            "value": "value_v"
+          },
+          {
+            "id": "id_v",
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "retain": true,
+            "ticket": "ticket_v",
+            "type": "type_v",
+            "value": "value_v"
+          }
+        ],
+        "outputs": [
+          {
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "qual_id": "qual_id_v",
+            "retain": true,
+            "type": "type_v"
+          },
+          {
+            "multiplicity": "multiplicity_v",
+            "name": "name_v",
+            "property": "property_v",
+            "qual_id": "qual_id_v",
+            "retain": true,
+            "type": "type_v"
+          }
+        ],
+        "params": [
+          {
+            "id": "id_v",
+            "name": "name_v",
+            "order": 104,
+            "path": "path_v",
+            "type": "type_v",
+            "value": "value_v"
+          },
+          {
+            "id": "id_v",
+            "name": "name_v",
+            "order": 104,
+            "path": "path_v",
+            "type": "type_v",
+            "value": "value_v"
+          }
+        ]
+      },
+      "environment": {
+        "alpha": "value_v_alpha",
+        "beta": "value_v_beta"
+      },
+      "input": [
+        {
+          "id": "id_v",
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "retain": true,
+          "ticket": "ticket_v",
+          "type": "type_v",
+          "value": "value_v"
+        },
+        {
+          "id": "id_v",
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "retain": true,
+          "ticket": "ticket_v",
+          "type": "type_v",
+          "value": "value_v"
+        }
+      ],
+      "log_file": "log_file_v",
+      "output": [
+        {
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "qual_id": "qual_id_v",
+          "retain": true,
+          "type": "type_v"
+        },
+        {
+          "multiplicity": "multiplicity_v",
+          "name": "name_v",
+          "property": "property_v",
+          "qual_id": "qual_id_v",
+          "retain": true,
+          "type": "type_v"
+        }
+      ],
+      "stderr_path": "stderr_path_v",
+      "stdin_path": "stdin_path_v",
+      "stdout_path": "stdout_path_v",
+      "type": "type_v"
+    }
+  ],
+  "submission_date": "submission_date_v",
+  "submitter": "submitter_v",
+  "type": "type_v",
+  "user_groups": [
+    "user_groups_v_0",
+    "user_groups_v_1"
+  ],
+  "user_home": "user_home_v",
+  "user_id": "user_id_v",
+  "wiki_url": "wiki_url_v"
+}

@@ -1,0 +1,5 @@
+{
+  "cgroup_permissions": "cgroup_permissions_v",
+  "container_path": "container_path_v",
+  "host_path": "host_path_v"
+}

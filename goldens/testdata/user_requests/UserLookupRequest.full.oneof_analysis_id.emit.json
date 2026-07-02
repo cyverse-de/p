@@ -1,0 +1,24 @@
+{
+  "analysisId": "analysis_id_v",
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "includeLogins": true,
+  "includePreferences": true,
+  "includeSavedSearches": true,
+  "loginLimit": 208,
+  "loginOffset": 209
+}
