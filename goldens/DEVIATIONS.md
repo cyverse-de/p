@@ -21,6 +21,14 @@ accepted by protojson-based peers, so mixed old/new deployments interoperate.
   nanosecond precision trimmed of trailing zeros; protojson always padded to
   3/6/9 digits. Same instants, occasionally different digit counts.
 
+- **`user/LookupResponse` and the legacy `error.header` field.** The
+  LookupResponse goldens were captured from `go/user/v0.0.10` (the full
+  `user.User` message that discoenv-users still serves; it was removed from
+  user.proto after that version, so `p` now carries it as `LookupResponse`).
+  The svcerror.ServiceError of that era had a since-removed `header` field,
+  stripped from the goldens: old emitters send `"header": null` inside
+  `error` (ignored by encoding/json) and old parsers accept its absence.
+
 The `testdata/` files were generated from the protobuf-generated types before
 their removal; see the repository history (goldens/gen at the commit that
 added the fixtures) for the generator.

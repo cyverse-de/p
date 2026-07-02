@@ -124,6 +124,7 @@ var messages = map[string]func() any{
 	"user/Login":                           func() any { return new(puser.Login) },
 	"user/SavedSearches":                   func() any { return new(puser.SavedSearches) },
 	"user/User":                            func() any { return new(puser.User) },
+	"user/LookupResponse":                  func() any { return new(puser.LookupResponse) },
 	"user_requests/UserLookupRequest":      func() any { return new(puser.UserLookupRequest) },
 }
 
