@@ -1,4 +1,1 @@
-.clj-kondo
-.lein*
-.lsp
-target/
+go.work.sum
