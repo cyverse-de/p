@@ -29,6 +29,16 @@ accepted by protojson-based peers, so mixed old/new deployments interoperate.
   stripped from the goldens: old emitters send `"header": null` inside
   `error` (ignored by encoding/json) and old parsers accept its absence.
 
+- **`analysis/AnalysisRecord` and the record list/response messages.** The
+  deployed discoenv-analyses exchanges the flat AnalysisRecord message from
+  `go/analysis/v0.0.12` (replaced by `Analysis` in later, never-deployed proto
+  revisions), so `AnalysisRecordResponse`/`AnalysisRecordList` carry
+  `AnalysisRecord` and their goldens were regenerated from that version (with
+  the legacy `error.header` stripped, as above). `AnalysisRecord.ResultFolderId`
+  is tagged with the NATS wire name `resultfolderid`, which is also what the
+  apps service's HTTP responses contain; the old generated struct's
+  `result_folder_id` tag never matched the apps output.
+
 The `testdata/` files were generated from the protobuf-generated types before
 their removal; see the repository history (goldens/gen at the commit that
 added the fixtures) for the generator.

@@ -18,6 +18,7 @@ var messages = map[string]func() any{
 	"analysis/BatchStatus":                 func() any { return new(panalysis.BatchStatus) },
 	"analysis/AnalysisType":                func() any { return new(panalysis.AnalysisType) },
 	"analysis/Analysis":                    func() any { return new(panalysis.Analysis) },
+	"analysis/AnalysisRecord":              func() any { return new(panalysis.AnalysisRecord) },
 	"analysis/AnalysisRecordLookupRequest": func() any { return new(panalysis.AnalysisRecordLookupRequest) },
 	"analysis/AnalysisRecordResponse":      func() any { return new(panalysis.AnalysisRecordResponse) },
 	"analysis/StatusCountRecord":           func() any { return new(panalysis.AnalysisRecordResponse_StatusCountRecord) },

@@ -62,7 +62,7 @@ func (x *AnalysisRecordLookupRequest) GetRequestingUser() string {
 
 type AnalysisRecordResponse struct {
 	Header      *header.Header                              `json:"header"`
-	Analyses    []*Analysis                                 `json:"analyses"`
+	Analyses    []*AnalysisRecord                           `json:"analyses"`
 	Timestamp   string                                      `json:"timestamp"`
 	Total       ptypes.Int64                                `json:"total"`
 	StatusCount []*AnalysisRecordResponse_StatusCountRecord `json:"status-count"`
@@ -76,7 +76,7 @@ func (x *AnalysisRecordResponse) GetHeader() *header.Header {
 	return nil
 }
 
-func (x *AnalysisRecordResponse) GetAnalyses() []*Analysis {
+func (x *AnalysisRecordResponse) GetAnalyses() []*AnalysisRecord {
 	if x != nil {
 		return x.Analyses
 	}
@@ -132,7 +132,7 @@ func (x *AnalysisRecordResponse_StatusCountRecord) GetStatus() string {
 
 type AnalysisRecordList struct {
 	Header   *header.Header         `json:"header"`
-	Analyses []*Analysis            `json:"analyses"`
+	Analyses []*AnalysisRecord      `json:"analyses"`
 	Error    *svcerror.ServiceError `json:"error"`
 }
 
@@ -143,7 +143,7 @@ func (x *AnalysisRecordList) GetHeader() *header.Header {
 	return nil
 }
 
-func (x *AnalysisRecordList) GetAnalyses() []*Analysis {
+func (x *AnalysisRecordList) GetAnalyses() []*AnalysisRecord {
 	if x != nil {
 		return x.Analyses
 	}
