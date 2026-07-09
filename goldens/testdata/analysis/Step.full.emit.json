@@ -1,0 +1,216 @@
+{
+  "component": {
+    "container": {
+      "container_devices": [
+        {
+          "cgroup_permissions": "cgroup_permissions_v",
+          "container_path": "container_path_v",
+          "host_path": "host_path_v"
+        },
+        {
+          "cgroup_permissions": "cgroup_permissions_v",
+          "container_path": "container_path_v",
+          "host_path": "host_path_v"
+        }
+      ],
+      "container_volumes": [
+        {
+          "container_path": "container_path_v",
+          "host_path": "host_path_v",
+          "mode": "mode_v",
+          "read_only": true
+        },
+        {
+          "container_path": "container_path_v",
+          "host_path": "host_path_v",
+          "mode": "mode_v",
+          "read_only": true
+        }
+      ],
+      "container_volumes_from": [
+        {
+          "auth": "auth_v",
+          "container_path": "container_path_v",
+          "host_path": "host_path_v",
+          "name": "name_v",
+          "name_prefix": "name_prefix_v",
+          "read_only": true,
+          "tag": "tag_v",
+          "url": "url_v"
+        },
+        {
+          "auth": "auth_v",
+          "container_path": "container_path_v",
+          "host_path": "host_path_v",
+          "name": "name_v",
+          "name_prefix": "name_prefix_v",
+          "read_only": true,
+          "tag": "tag_v",
+          "url": "url_v"
+        }
+      ],
+      "cpu_shares": "9007199254741000",
+      "entrypoint": "entry_point_v",
+      "id": "id_v",
+      "image": {
+        "id": "id_v",
+        "name": "name_v",
+        "osg_image_path": "osg_image_path_v",
+        "tag": "tag_v",
+        "url": "url_v"
+      },
+      "interactive_apps": {
+        "backendUrl": "backend_url_v",
+        "casUrl": "cas_url_v",
+        "casValidate": "cas_validate_v",
+        "frontendUrl": "frontend_url_v",
+        "proxyImage": "proxy_image_v",
+        "proxyName": "proxy_name_v",
+        "sslCertPath": "ssl_cert_path_v",
+        "sslKeyPath": "ssl_key_path_v",
+        "websocketPath": "websocket_path_v",
+        "websocketPort": "websocket_port_v",
+        "websocketProto": "websocket_proto_v"
+      },
+      "max_cpu_cores": 1.5,
+      "memory_limit": "9007199254741002",
+      "min_cpu_cores": 1.5,
+      "min_disk_space": "9007199254741006",
+      "min_memory_limit": "9007199254741003",
+      "name": "name_v",
+      "network_mode": "network_mode_v",
+      "pids_limit": "9007199254741007",
+      "ports": [
+        {
+          "bind_to_host": true,
+          "container_port": 102,
+          "host_port": 101
+        },
+        {
+          "bind_to_host": true,
+          "container_port": 102,
+          "host_port": 101
+        }
+      ],
+      "skip_tmp_mount": true,
+      "uid": 120,
+      "working_directory": "working_dir_v"
+    },
+    "description": "description_v",
+    "interactive": true,
+    "location": "location_v",
+    "name": "name_v",
+    "restricted": true,
+    "time_limit_seconds": 106,
+    "type": "type_v"
+  },
+  "config": {
+    "input": [
+      {
+        "id": "id_v",
+        "multiplicity": "multiplicity_v",
+        "name": "name_v",
+        "property": "property_v",
+        "retain": true,
+        "ticket": "ticket_v",
+        "type": "type_v",
+        "value": "value_v"
+      },
+      {
+        "id": "id_v",
+        "multiplicity": "multiplicity_v",
+        "name": "name_v",
+        "property": "property_v",
+        "retain": true,
+        "ticket": "ticket_v",
+        "type": "type_v",
+        "value": "value_v"
+      }
+    ],
+    "output": [
+      {
+        "multiplicity": "multiplicity_v",
+        "name": "name_v",
+        "property": "property_v",
+        "qual-id": "qual_id_v",
+        "retain": true,
+        "type": "type_v"
+      },
+      {
+        "multiplicity": "multiplicity_v",
+        "name": "name_v",
+        "property": "property_v",
+        "qual-id": "qual_id_v",
+        "retain": true,
+        "type": "type_v"
+      }
+    ],
+    "params": [
+      {
+        "id": "id_v",
+        "name": "name_v",
+        "order": 104,
+        "path": "path_v",
+        "type": "type_v",
+        "value": "value_v"
+      },
+      {
+        "id": "id_v",
+        "name": "name_v",
+        "order": 104,
+        "path": "path_v",
+        "type": "type_v",
+        "value": "value_v"
+      }
+    ]
+  },
+  "environment": {
+    "alpha": "value_v_alpha",
+    "beta": "value_v_beta"
+  },
+  "input": [
+    {
+      "id": "id_v",
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "retain": true,
+      "ticket": "ticket_v",
+      "type": "type_v",
+      "value": "value_v"
+    },
+    {
+      "id": "id_v",
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "retain": true,
+      "ticket": "ticket_v",
+      "type": "type_v",
+      "value": "value_v"
+    }
+  ],
+  "log-file": "log_file_v",
+  "output": [
+    {
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "qual-id": "qual_id_v",
+      "retain": true,
+      "type": "type_v"
+    },
+    {
+      "multiplicity": "multiplicity_v",
+      "name": "name_v",
+      "property": "property_v",
+      "qual-id": "qual_id_v",
+      "retain": true,
+      "type": "type_v"
+    }
+  ],
+  "stderr": "stderr_path_v",
+  "stdin": "stdin_path_v",
+  "stdout": "stdout_path_v",
+  "type": "type_v"
+}

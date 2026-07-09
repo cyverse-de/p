@@ -1,0 +1,19 @@
+{
+  "app": null,
+  "app_version": null,
+  "deleted": false,
+  "description": "",
+  "end_date": null,
+  "id": "",
+  "millicore_reserved": 0,
+  "name": "",
+  "notify": false,
+  "parent_id": "",
+  "planned_end_date": null,
+  "result_folder_path": "",
+  "start_date": null,
+  "status": "",
+  "subdomain": "",
+  "type": null,
+  "user": null
+}

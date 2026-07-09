@@ -1,0 +1,20 @@
+{
+  "child_uuid": "child_uuid_v",
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "parent_uuid": "parent_uuid_v"
+}

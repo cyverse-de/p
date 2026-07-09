@@ -1,0 +1,27 @@
+{
+  "error": {
+    "error_code": 1,
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "plan_name": "plan_name_v",
+  "plan_uuid": "plan_uuid_v",
+  "username": "username_v",
+  "uuid": "uuid_v"
+}

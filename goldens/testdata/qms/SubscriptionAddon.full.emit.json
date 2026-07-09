@@ -1,0 +1,36 @@
+{
+  "addon": {
+    "addon_rates": [
+      {
+        "effective_date": "2024-05-15T12:34:56.789Z",
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      {
+        "effective_date": "2024-05-15T12:34:56.789Z",
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      }
+    ],
+    "default_amount": 5.25,
+    "default_paid": true,
+    "description": "description_v",
+    "name": "name_v",
+    "resource_type": {
+      "consumable": true,
+      "name": "name_v",
+      "unit": "unit_v",
+      "uuid": "uuid_v"
+    },
+    "uuid": "uuid_v"
+  },
+  "addon_rate": {
+    "effective_date": "2024-05-15T12:34:56.789Z",
+    "rate": 2.25,
+    "uuid": "uuid_v"
+  },
+  "amount": 4.25,
+  "paid": true,
+  "subscription_id": "subscription_id_v",
+  "uuid": "uuid_v"
+}

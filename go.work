@@ -1,0 +1,15 @@
+go 1.25.0
+
+use (
+	./go/analysis
+	./go/apps
+	./go/containers
+	./go/header
+	./go/monitoring
+	./go/ptypes
+	./go/qms
+	./go/requests
+	./go/svcerror
+	./go/user
+	./goldens
+)

@@ -1,0 +1,50 @@
+{
+  "error": {
+    "error_code": "UNSPECIFIED",
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "loginCount": 207,
+  "logins": [
+    {
+      "ipAddress": "ip_address_v",
+      "loginTime": "2024-05-15T12:34:56Z",
+      "logoutTime": "2024-05-15T12:34:56.789Z",
+      "userAgent": "user_agent_v",
+      "uuid": "uuid_v"
+    },
+    {
+      "ipAddress": "ip_address_v",
+      "loginTime": "2024-05-15T12:34:56Z",
+      "logoutTime": "2024-05-15T12:34:56.789Z",
+      "userAgent": "user_agent_v",
+      "uuid": "uuid_v"
+    }
+  ],
+  "preferences": {
+    "preferences": "preferences_v",
+    "uuid": "uuid_v"
+  },
+  "savedSearches": {
+    "savedSearches": "saved_searches_v",
+    "uuid": "uuid_v"
+  },
+  "username": "username_v",
+  "uuid": "uuid_v"
+}

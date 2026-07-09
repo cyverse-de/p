@@ -1,0 +1,45 @@
+{
+  "date_sent": "date_sent_v",
+  "error": {
+    "error_code": "UNSPECIFIED",
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "lookups": [
+    {
+      "addresses": [
+        "addresses_v_0",
+        "addresses_v_1"
+      ],
+      "error": "error_v",
+      "host": "host_v",
+      "type": "type_v"
+    },
+    {
+      "addresses": [
+        "addresses_v_0",
+        "addresses_v_1"
+      ],
+      "error": "error_v",
+      "host": "host_v",
+      "type": "type_v"
+    }
+  ],
+  "node": "node_v"
+}

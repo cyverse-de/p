@@ -1,0 +1,413 @@
+{
+  "error": {
+    "error_code": "UNSPECIFIED",
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "subscriptions": [
+    {
+      "addons": [
+        {
+          "addon": {
+            "addon_rates": [
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              },
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              }
+            ],
+            "default_amount": 5.25,
+            "default_paid": true,
+            "description": "description_v",
+            "name": "name_v",
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          },
+          "addon_rate": {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          "amount": 4.25,
+          "paid": true,
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        },
+        {
+          "addon": {
+            "addon_rates": [
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              },
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              }
+            ],
+            "default_amount": 5.25,
+            "default_paid": true,
+            "description": "description_v",
+            "name": "name_v",
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          },
+          "addon_rate": {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          "amount": 4.25,
+          "paid": true,
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        }
+      ],
+      "effective_end_date": "2024-05-15T12:34:56.789Z",
+      "effective_start_date": "2024-05-15T12:34:56Z",
+      "paid": true,
+      "plan": {
+        "description": "description_v",
+        "name": "name_v",
+        "plan_quota_defaults": [
+          {
+            "effective_date": "2024-05-15T12:34:56Z",
+            "quota_value": 2.25,
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          },
+          {
+            "effective_date": "2024-05-15T12:34:56Z",
+            "quota_value": 2.25,
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          }
+        ],
+        "plan_rates": [
+          {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          }
+        ],
+        "uuid": "uuid_v"
+      },
+      "plan_rate": {
+        "effective_date": "2024-05-15T12:34:56.789Z",
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      "quotas": [
+        {
+          "created_at": "2024-05-15T12:34:56.789Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56.789Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "quota": 2.25,
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        },
+        {
+          "created_at": "2024-05-15T12:34:56.789Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56.789Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "quota": 2.25,
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        }
+      ],
+      "usages": [
+        {
+          "created_at": "2024-05-15T12:34:56Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "usage": 2.25,
+          "uuid": "uuid_v"
+        },
+        {
+          "created_at": "2024-05-15T12:34:56Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "usage": 2.25,
+          "uuid": "uuid_v"
+        }
+      ],
+      "user": {
+        "username": "username_v",
+        "uuid": "uuid_v"
+      },
+      "uuid": "uuid_v"
+    },
+    {
+      "addons": [
+        {
+          "addon": {
+            "addon_rates": [
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              },
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              }
+            ],
+            "default_amount": 5.25,
+            "default_paid": true,
+            "description": "description_v",
+            "name": "name_v",
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          },
+          "addon_rate": {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          "amount": 4.25,
+          "paid": true,
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        },
+        {
+          "addon": {
+            "addon_rates": [
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              },
+              {
+                "effective_date": "2024-05-15T12:34:56.789Z",
+                "rate": 2.25,
+                "uuid": "uuid_v"
+              }
+            ],
+            "default_amount": 5.25,
+            "default_paid": true,
+            "description": "description_v",
+            "name": "name_v",
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          },
+          "addon_rate": {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          "amount": 4.25,
+          "paid": true,
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        }
+      ],
+      "effective_end_date": "2024-05-15T12:34:56.789Z",
+      "effective_start_date": "2024-05-15T12:34:56Z",
+      "paid": true,
+      "plan": {
+        "description": "description_v",
+        "name": "name_v",
+        "plan_quota_defaults": [
+          {
+            "effective_date": "2024-05-15T12:34:56Z",
+            "quota_value": 2.25,
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          },
+          {
+            "effective_date": "2024-05-15T12:34:56Z",
+            "quota_value": 2.25,
+            "resource_type": {
+              "consumable": true,
+              "name": "name_v",
+              "unit": "unit_v",
+              "uuid": "uuid_v"
+            },
+            "uuid": "uuid_v"
+          }
+        ],
+        "plan_rates": [
+          {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          },
+          {
+            "effective_date": "2024-05-15T12:34:56.789Z",
+            "rate": 2.25,
+            "uuid": "uuid_v"
+          }
+        ],
+        "uuid": "uuid_v"
+      },
+      "plan_rate": {
+        "effective_date": "2024-05-15T12:34:56.789Z",
+        "rate": 2.25,
+        "uuid": "uuid_v"
+      },
+      "quotas": [
+        {
+          "created_at": "2024-05-15T12:34:56.789Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56.789Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "quota": 2.25,
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        },
+        {
+          "created_at": "2024-05-15T12:34:56.789Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56.789Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "quota": 2.25,
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "uuid": "uuid_v"
+        }
+      ],
+      "usages": [
+        {
+          "created_at": "2024-05-15T12:34:56Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "usage": 2.25,
+          "uuid": "uuid_v"
+        },
+        {
+          "created_at": "2024-05-15T12:34:56Z",
+          "created_by": "CreatedBy_v",
+          "last_modified_at": "2024-05-15T12:34:56Z",
+          "last_modified_by": "LastModifiedBy_v",
+          "resource_type": {
+            "consumable": true,
+            "name": "name_v",
+            "unit": "unit_v",
+            "uuid": "uuid_v"
+          },
+          "subscription_id": "subscription_id_v",
+          "usage": 2.25,
+          "uuid": "uuid_v"
+        }
+      ],
+      "user": {
+        "username": "username_v",
+        "uuid": "uuid_v"
+      },
+      "uuid": "uuid_v"
+    }
+  ]
+}

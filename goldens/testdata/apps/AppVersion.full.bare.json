@@ -1,0 +1,19 @@
+{
+  "app_id": "app_id_v",
+  "deleted": true,
+  "disabled": true,
+  "edited_date": "2024-05-15T12:34:56.789Z",
+  "id": "id_v",
+  "integration": {
+    "id": "id_v",
+    "integrator_email": "integrator_email_v",
+    "integrator_name": "integrator_name_v",
+    "user": {
+      "username": "username_v",
+      "uuid": "uuid_v"
+    }
+  },
+  "integration_date": "2024-05-15T12:34:56Z",
+  "version": "version_v",
+  "version_order": "9007199254740997"
+}

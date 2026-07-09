@@ -1,0 +1,27 @@
+{
+  "error": {
+    "error_code": "UNSPECIFIED",
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "user": {
+    "username": "username_v",
+    "uuid": "uuid_v"
+  }
+}

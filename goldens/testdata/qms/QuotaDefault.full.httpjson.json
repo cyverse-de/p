@@ -1,0 +1,13 @@
+{
+  "effective_date": {
+    "seconds": 1715776496
+  },
+  "quota_value": 2.25,
+  "resource_type": {
+    "consumable": true,
+    "name": "name_v",
+    "unit": "unit_v",
+    "uuid": "uuid_v"
+  },
+  "uuid": "uuid_v"
+}

@@ -1,0 +1,63 @@
+{
+  "error": {
+    "error_code": 1,
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "usages": [
+    {
+      "CreatedAt": {
+        "seconds": 1715776496
+      },
+      "CreatedBy": "CreatedBy_v",
+      "LastModifiedAt": {
+        "seconds": 1715776496
+      },
+      "LastModifiedBy": "LastModifiedBy_v",
+      "resource_type": {
+        "consumable": true,
+        "name": "name_v",
+        "unit": "unit_v",
+        "uuid": "uuid_v"
+      },
+      "subscription_id": "subscription_id_v",
+      "usage": 2.25,
+      "uuid": "uuid_v"
+    },
+    {
+      "CreatedAt": {
+        "seconds": 1715776496
+      },
+      "CreatedBy": "CreatedBy_v",
+      "LastModifiedAt": {
+        "seconds": 1715776496
+      },
+      "LastModifiedBy": "LastModifiedBy_v",
+      "resource_type": {
+        "consumable": true,
+        "name": "name_v",
+        "unit": "unit_v",
+        "uuid": "uuid_v"
+      },
+      "subscription_id": "subscription_id_v",
+      "usage": 2.25,
+      "uuid": "uuid_v"
+    }
+  ]
+}

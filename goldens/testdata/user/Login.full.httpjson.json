@@ -1,0 +1,12 @@
+{
+  "ip_address": "ip_address_v",
+  "login_time": {
+    "seconds": 1715776496
+  },
+  "logout_time": {
+    "nanos": 789000000,
+    "seconds": 1715776496
+  },
+  "user_agent": "user_agent_v",
+  "uuid": "uuid_v"
+}

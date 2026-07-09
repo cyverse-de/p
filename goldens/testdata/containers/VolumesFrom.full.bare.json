@@ -1,0 +1,10 @@
+{
+  "auth": "auth_v",
+  "container_path": "container_path_v",
+  "host_path": "host_path_v",
+  "name": "name_v",
+  "name_prefix": "name_prefix_v",
+  "read_only": true,
+  "tag": "tag_v",
+  "url": "url_v"
+}

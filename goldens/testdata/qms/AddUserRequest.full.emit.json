@@ -1,0 +1,24 @@
+{
+  "endDate": "end_date_v",
+  "force": true,
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "paid": true,
+  "periods": 106,
+  "planName": "plan_name_v",
+  "username": "username_v"
+}

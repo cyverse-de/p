@@ -1,0 +1,11 @@
+{
+  "effective_date": "2024-05-15T12:34:56Z",
+  "quota_value": 2.25,
+  "resource_type": {
+    "consumable": true,
+    "name": "name_v",
+    "unit": "unit_v",
+    "uuid": "uuid_v"
+  },
+  "uuid": "uuid_v"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "id_v",
+  "integrator_email": "integrator_email_v",
+  "integrator_name": "integrator_name_v",
+  "user": {
+    "username": "username_v",
+    "uuid": "uuid_v"
+  }
+}

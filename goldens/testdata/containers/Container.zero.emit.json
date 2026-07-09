@@ -1,0 +1,22 @@
+{
+  "container_devices": [],
+  "container_volumes": [],
+  "container_volumes_from": [],
+  "cpu_shares": "0",
+  "entrypoint": "",
+  "id": "",
+  "image": null,
+  "interactive_apps": null,
+  "max_cpu_cores": 0,
+  "memory_limit": "0",
+  "min_cpu_cores": 0,
+  "min_disk_space": "0",
+  "min_memory_limit": "0",
+  "name": "",
+  "network_mode": "",
+  "pids_limit": "0",
+  "ports": [],
+  "skip_tmp_mount": false,
+  "uid": 0,
+  "working_directory": ""
+}

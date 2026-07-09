@@ -1,0 +1,10 @@
+{
+  "addon": null,
+  "header": null,
+  "updateAddonRates": false,
+  "updateDefaultAmount": false,
+  "updateDefaultPaid": false,
+  "updateDescription": false,
+  "updateName": false,
+  "updateResourceType": false
+}

@@ -1,0 +1,125 @@
+{
+  "analyses": [
+    {
+      "app_description": "app_description_v",
+      "app_disabled": true,
+      "app_id": "app_id_v",
+      "app_name": "app_name_v",
+      "batch": true,
+      "batch_status": {
+        "completed": "9007199254740995",
+        "running": "9007199254740996",
+        "submitted": "9007199254740997",
+        "total": "9007199254740994"
+      },
+      "can_share": true,
+      "description": "description_v",
+      "enddate": "enddate_v",
+      "header": {
+        "map": {
+          "alpha": {
+            "value": [
+              "value_v_0",
+              "value_v_1"
+            ]
+          },
+          "beta": {
+            "value": [
+              "value_v_0",
+              "value_v_1"
+            ]
+          }
+        }
+      },
+      "id": "id_v",
+      "interactive_urls": [
+        "interactive_urls_v_0",
+        "interactive_urls_v_1"
+      ],
+      "name": "name_v",
+      "notify": true,
+      "resultfolderid": "result_folder_id_v",
+      "startdate": "startdate_v",
+      "system_id": "system_id_v",
+      "username": "username_v",
+      "wiki_url": "wiki_url_v"
+    },
+    {
+      "app_description": "app_description_v",
+      "app_disabled": true,
+      "app_id": "app_id_v",
+      "app_name": "app_name_v",
+      "batch": true,
+      "batch_status": {
+        "completed": "9007199254740995",
+        "running": "9007199254740996",
+        "submitted": "9007199254740997",
+        "total": "9007199254740994"
+      },
+      "can_share": true,
+      "description": "description_v",
+      "enddate": "enddate_v",
+      "header": {
+        "map": {
+          "alpha": {
+            "value": [
+              "value_v_0",
+              "value_v_1"
+            ]
+          },
+          "beta": {
+            "value": [
+              "value_v_0",
+              "value_v_1"
+            ]
+          }
+        }
+      },
+      "id": "id_v",
+      "interactive_urls": [
+        "interactive_urls_v_0",
+        "interactive_urls_v_1"
+      ],
+      "name": "name_v",
+      "notify": true,
+      "resultfolderid": "result_folder_id_v",
+      "startdate": "startdate_v",
+      "system_id": "system_id_v",
+      "username": "username_v",
+      "wiki_url": "wiki_url_v"
+    }
+  ],
+  "error": {
+    "error_code": "UNSPECIFIED",
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "status-count": [
+    {
+      "count": "9007199254740999",
+      "status": "status_v"
+    },
+    {
+      "count": "9007199254741000",
+      "status": "status_v"
+    }
+  ],
+  "timestamp": "timestamp_v",
+  "total": "9007199254740998"
+}

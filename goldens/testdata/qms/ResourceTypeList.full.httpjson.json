@@ -1,0 +1,37 @@
+{
+  "error": {
+    "error_code": 1,
+    "message": "message_v",
+    "status_code": 103
+  },
+  "header": {
+    "map": {
+      "alpha": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      },
+      "beta": {
+        "value": [
+          "value_v_0",
+          "value_v_1"
+        ]
+      }
+    }
+  },
+  "resource_types": [
+    {
+      "consumable": true,
+      "name": "name_v",
+      "unit": "unit_v",
+      "uuid": "uuid_v"
+    },
+    {
+      "consumable": true,
+      "name": "name_v",
+      "unit": "unit_v",
+      "uuid": "uuid_v"
+    }
+  ]
+}
