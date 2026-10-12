@@ -12,7 +12,7 @@ import (
 type ResourceType struct {
 	// The unique identifier.
 	Uuid string `json:"uuid"`
-	// The name of the resource. Will usually be "data.size" and "cpu.hours".
+	// The name of the resource. Known values: "cpu.hours", "data.size", "gpu.hours".
 	Name string `json:"name"`
 	// The units used for the resource. Usually "bytes" or "cpu hours".
 	Unit string `json:"unit"`
