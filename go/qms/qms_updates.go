@@ -213,3 +213,57 @@ func (x *UpdateListResponse) GetUpdates() []*Update {
 	}
 	return nil
 }
+
+// A request to add multiple updates atomically. All updates in the batch
+// succeed or fail together.
+type AddUpdatesRequest struct {
+	// Contains telemetry information
+	Header *header.Header `json:"header"`
+	// The updates to apply atomically.
+	Updates []*Update `json:"updates"`
+}
+
+func (x *AddUpdatesRequest) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *AddUpdatesRequest) GetUpdates() []*Update {
+	if x != nil {
+		return x.Updates
+	}
+	return nil
+}
+
+// A response to batch-update requests.
+type AddUpdatesResponse struct {
+	// Contains telemetry information
+	Header *header.Header `json:"header"`
+	// Error information returned by the request handler.
+	Error *svcerror.ServiceError `json:"error"`
+	// The updates that were recorded, in the same order as the request.
+	Updates []*Update `json:"updates"`
+}
+
+func (x *AddUpdatesResponse) GetHeader() *header.Header {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *AddUpdatesResponse) GetError() *svcerror.ServiceError {
+	if x != nil {
+		return x.Error
+	}
+	return nil
+}
+
+func (x *AddUpdatesResponse) GetUpdates() []*Update {
+	if x != nil {
+		return x.Updates
+	}
+	return nil
+}
