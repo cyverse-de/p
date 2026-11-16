@@ -1,6 +1,6 @@
 module github.com/cyverse-de/p/go/analysis
 
-go 1.25
+go 1.27
 
 require (
 	github.com/cyverse-de/p/go/apps v0.1.0
