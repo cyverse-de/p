@@ -373,7 +373,7 @@ func structEqualPath(a, b reflect.Value, path string) error {
 		if a.Type() == timestampType {
 			at := a.Interface().(ptypes.Timestamp)
 			bt := b.Interface().(ptypes.Timestamp)
-			if !at.Time.Equal(bt.Time) {
+			if !at.Equal(bt.Time) {
 				return pathErrf(path, "timestamps %v vs %v", at.Time, bt.Time)
 			}
 			return nil
