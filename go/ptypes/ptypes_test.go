@@ -27,7 +27,7 @@ func TestTimestampUnmarshal(t *testing.T) {
 			if err := json.Unmarshal([]byte(tt.in), &ts); err != nil {
 				t.Fatal(err)
 			}
-			if !ts.Time.Equal(tt.want) {
+			if !ts.Equal(tt.want) {
 				t.Errorf("got %v, want %v", ts.Time, tt.want)
 			}
 		})

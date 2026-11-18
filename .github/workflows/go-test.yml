@@ -1,0 +1,48 @@
+name: go-test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (${{ matrix.module }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        module:
+          - go/analysis
+          - go/apps
+          - go/containers
+          - go/header
+          - go/monitoring
+          - go/ptypes
+          - go/qms
+          - go/requests
+          - go/svcerror
+          - go/user
+          - goldens
+    defaults:
+      run:
+        working-directory: ${{ matrix.module }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.work
+          cache: false
+      # Tidiness is checked against the tagged sibling versions in go.mod, not go.work.
+      - name: Verify go.mod and go.sum are tidy
+        run: go mod tidy -diff
+        env:
+          GOWORK: "off"
+      # Vet and test use go.work so cross-module changes are tested together before tagging.
+      - name: Vet
+        run: go vet ./...
+      - name: Test
+        run: go test -race -count=1 ./...

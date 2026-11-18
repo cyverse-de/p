@@ -34,7 +34,7 @@ var messages = map[string]func() any{
 	"analysis/Input":                       func() any { return new(panalysis.Step_Input) },
 	"analysis/Output":                      func() any { return new(panalysis.Step_Output) },
 	"analysis/AnalysisSubmission":          func() any { return new(panalysis.AnalysisSubmission) },
-	"analysis/Job":                         func() any { return new(panalysis.Job) },
+	"analysis/Job":                         func() any { return new(panalysis.Job) }, //nolint:staticcheck // deprecated type is still part of the wire contract
 	"apps/App":                             func() any { return new(papps.App) },
 	"apps/IntegrationData":                 func() any { return new(papps.IntegrationData) },
 	"apps/AppVersion":                      func() any { return new(papps.AppVersion) },
